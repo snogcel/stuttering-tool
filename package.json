@@ -1,0 +1,25 @@
+{
+  "name": "stuttering-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "lapack": "^0.1.0",
+    "ramda": "^0.23.0",
+    "sentencer": "github:snogcel/Sentencer"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snogcel/stuttering-tool.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snogcel/stuttering-tool/issues"
+  },
+  "homepage": "https://github.com/snogcel/stuttering-tool#readme"
+}
