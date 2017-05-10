@@ -1,5 +1,7 @@
 "use strict";
 
+// Creating a tool to help people who stutter.
+
 // Credits go to https://scotch.io/tutorials/getting-started-with-browserify
 // Credits go to https://github.com/kylestetz/Sentencer
 
