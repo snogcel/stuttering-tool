@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Getting Cozy with Browserify</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+
+    <style>
+        h1, p, div { text-align: center; }
+        html       { background: #fffffe; }
+        #template { width: 800px; }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Welcome to the Client Side.</h2>
+
+    <div class="well">
+        <p>Random Text Goes Here</p>
+
+        <textarea id="template" style="display:none">{{ filtered_adjective }} sentence has {{ a_noun }} and {{ an_adjective }} {{ noun }} in it, including a random {{ number }}. </textarea>
+
+
+        <div id="response">
+        </div>
+
+        <div id="filterOpts">
+
+        </div>
+
+        <br />
+
+        <!-- Primary Goal: create tool that is useful for people who have speech language disabilities -->
+
+        <!-- based on Wells Standard Lexical Sets of UK and US English -->
+        <!-- https://en.wikipedia.org/wiki/Lexical_set -->
+
+        <!-- id = keyword, or example word -->
+        <select id="phoneme">
+
+            <option id="kit" data-name="it" data-limit="5" data-placement="2">kit</option> <!-- TODO: define consonants that work with this sound -->
+            <option id="dress" data-name="es" data-limit="5" data-placement="2">dress</option>  <!-- the issue with this one is that 're' can be used for many different words -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <option id="trap" data-name="ap" data-limit="5" data-placement="2">ap</option>
+            <option id="lot" data-name="ot" data-limit="4" data-placement="1">lot</option>
+            <option id="strut" data-name="ut" data-limit="5" data-placement="3">strut</option>
+            <option id="foot" data-name="oo" data-limit="4" data-placement="2">foot</option> <!-- the issue with this one is that 'oo' can be used for many different words -->
+            <option id="bath" data-name="ath" data-limit="5" data-placement="2">bath</option>
+            <option id="cloth" data-name="oth" data-limit="6" data-placement="3">cloth</option>
+            <option id="nurse" data-name="urs" data-limit="5" data-placement="2">nurse</option>
+
+            <!-- TODO -->
+            <option id="face" data-name="ace" data-limit="5" data-placement="1">face</option>
+            <option id="palm" data-name="alm" data-limit="5" data-placement="2">palm</option>
+            <option id="thought" data-name="hou" data-limit="5" data-placement="2">thought</option>
+            <option id="goat" data-name="oat" data-limit="5" data-placement="2">goat</option>
+            <option id="goose" data-name="oos" data-limit="5" data-placement="2">goose</option> <!-- the issue with this one is that 'oo' can be used for many different words -->
+            <option id="price" data-name="ice" data-limit="5" data-placement="2">price</option>
+            <option id="choice" data-name="oic" data-limit="6" data-placement="2">choice</option>
+            <option id="mouth" data-name="out" data-limit="5" data-placement="2">mouth</option>
+            <option id="near" data-name="ear" data-limit="6" data-placement="2">near</option>
+            <option id="square" data-name="qua" data-limit="5" data-placement="2">square</option>
+            <option id="start" data-name="tar" data-limit="5" data-placement="2">start</option>
+            <option id="north" data-name="ort" data-limit="5" data-placement="2">north</option>
+            <option id="force" data-name="orc" data-limit="5" data-placement="2">force</option>
+            <option id="cure" data-name="ure" data-limit="5" data-placement="2">cure</option>
+
+            <!-- cross referenced lexical set -->
+
+            // TODO: create filtering on the first consonant to allow for more flexibility
+
+            <!-- work in progress -->
+
+            <!-- new key/value pairs-->
+            <option id="great" data-name="rea" data-limit="5" data-placement="2">great</option> <!-- the issue with this one is that 're' can be used for many different words -->
+            <option id="fleece" data-name="lee" data-limit="5" data-placement="2">fleece</option> <!-- insert tenacious d reference here -->
+
+        </select>
+
+        <select id="target">
+            <option id="target_rst" data-name="w,s" >w,s</option>
+            <option id="target_b" data-name="b" >b</option>
+            <option id="target_c" data-name="c" >c</option>
+            <option id="target_d" data-name="d" >d</option>
+            <option id="target_f" data-name="f" >f</option>
+            <option id="target_g" data-name="g" >g</option>
+            <option id="target_h" data-name="h" >h</option>
+            <option id="target_j" data-name="j" >j</option>
+            <option id="target_k" data-name="k" >k</option>
+            <option id="target_l" data-name="l" >l</option>
+            <option id="target_m" data-name="m" >m</option>
+            <option id="target_n" data-name="n" >n</option>
+            <option id="target_p" data-name="p" >p</option>
+            <option id="target_q" data-name="q" >q</option>
+            <option id="target_r" data-name="r" >r</option>
+            <option id="target_s" data-name="s" >s</option>
+            <option id="target_t" data-name="t" >t</option>
+            <option id="target_v" data-name="v" >v</option>
+            <option id="target_w" data-name="w" >w</option>
+            <option id="target_x" data-name="x" >x</option>
+            <option id="target_y" data-name="y" >y</option>
+            <option id="target_z" data-name="z" >z</option>
+        </select>
+
+        <br /><br />
+
+        <div id="generate">
+            <input type="submit" value="Generate New Sentence!" id="generateBtn" />
+        </div>
+
+    </div>
+</div>
+
+<script src="bundle.js"></script>
+</body>
+</html>

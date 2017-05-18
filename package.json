@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "async": "^2.4.0",
     "lapack": "^0.1.0",
     "ramda": "^0.23.0",
     "sentencer": "github:snogcel/Sentencer"

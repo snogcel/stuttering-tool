@@ -7,10 +7,12 @@
 
 var Sentencer = require('./script.js');
 
+
 // TODO: automate browserify using gulp (not sure how to do that)
 
 // TODO: filter word list using regex to focus on specific vowel sounds
 // https://www.npmjs.com/package/regex
+
 
 
 
