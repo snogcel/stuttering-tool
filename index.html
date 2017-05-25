@@ -51,7 +51,7 @@
 
                         <div class="form-group">
                             <label for="template">Template:</label>
-                            <input type="text" class="form-control" id="template" value="{{ filtered_adjective }} sentence has {{ a_noun }} and {{ an_adjective }} {{ noun }} in it, including a random {{ number }}." />
+                            <input type="text" class="form-control" id="template" value="Hello, how are you. A {{ filtered_adjective }} sentence has {{ a_noun }} {{ filtered_adjective }}, it also has {{ an_adjective }} and {{ noun }} in it, including a randomly generated {{ an_adjective }} that was  {{ an_adjective }}." />
                         </div>
 
                     </div>
@@ -65,15 +65,29 @@
                         <div class="form-group">
                             <label for="phoneme">Select vowel sound:</label>
                             <select class="form-control" id="phoneme">
+                                <!-- A -->
                                 <option id="ay" data-name="ay" data-limit="5" data-placement="2">ay</option> <!-- upward inflection -->
                                 <option id="ai" data-name="ai" data-limit="5" data-placement="2">ai</option> <!-- upward inflection -->
                                 <option id="la" data-name="la" data-limit="5" data-placement="2">la</option> <!-- downward inflection -->
 
+                                <!-- E -->
+                                <option id="ee" data-name="ee" data-limit="5" data-placement="2">ee</option>
+                                <option id="ie" data-name="ie" data-limit="5" data-placement="2">ie</option>
+                                <option id="ei" data-name="ei" data-limit="5" data-placement="2">ei</option>
+                                <option id="ea" data-name="ea" data-limit="5" data-placement="2">ea</option>
 
-                                <option id="ee" data-name="ay" data-limit="5" data-placement="2">ee</option>
-                                <option id="ie" data-name="ai" data-limit="5" data-placement="2">ie</option>
-                                <option id="ei" data-name="ai" data-limit="5" data-placement="2">ie</option>
-                                <option id="ea" data-name="la" data-limit="5" data-placement="2">ea</option>
+                                <!-- I -->
+                                <option id="ey" data-name="ey" data-limit="5" data-placement="2">ey</option>
+                                <option id="iy" data-name="iy" data-limit="5" data-placement="2">iy</option>
+
+                                <!-- O -->
+                                <option id="oo" data-name="oo" data-limit="5" data-placement="2">oo</option>
+                                <option id="ou" data-name="ou" data-limit="5" data-placement="2">ou</option>
+
+                                <!-- U -->
+                                <option id="ui" data-name="ui" data-limit="5" data-placement="2">ui</option>
+                                <option id="ou" data-name="ou" data-limit="5" data-placement="2">ou</option>
+                                <option id="uh" data-name="uh" data-limit="5" data-placement="2">uh</option>
 
                             </select>
                         </div>
@@ -88,6 +102,32 @@
                             <select class="form-control" id="target">
                                 <option id="target_plosive" data-name="p,t,c,k,q,b,d,g" >(plosive consonants) p,t,c,k,q,b,d,g</option>
                                 <option id="target_nonplosive" data-name="d,f,h,j,l,m,n,r,s,v,w,x,y,z" >(other consonants) d,f,h,j,l,m,n,r,s,v,w,x,y,z</option>
+
+                                <option>-</option>
+                                <option id="target_p" data-name="p" >p</option>
+                                <option id="target_t" data-name="t" >t</option>
+                                <option id="target_c" data-name="c" >c</option>
+                                <option id="target_k" data-name="k" >k</option>
+                                <option id="target_q" data-name="q" >q</option>
+                                <option id="target_b" data-name="b" >b</option>
+                                <option id="target_d" data-name="d" >d</option>
+                                <option id="target_g" data-name="g" >g</option>
+                                <option>-</option>
+
+                                <option id="target_d" data-name="d" >d</option>
+                                <option id="target_f" data-name="f" >f</option>
+                                <option id="target_h" data-name="h" >h</option>
+                                <option id="target_j" data-name="j" >j</option>
+                                <option id="target_l" data-name="l" >l</option>
+                                <option id="target_m" data-name="m" >m</option>
+                                <option id="target_n" data-name="n" >n</option>
+                                <option id="target_r" data-name="r" >r</option>
+                                <option id="target_s" data-name="s" >s</option>
+                                <option id="target_v" data-name="v" >v</option>
+                                <option id="target_w" data-name="w" >w</option>
+                                <option id="target_x" data-name="x" >x</option>
+                                <option id="target_y" data-name="y" >y</option>
+                                <option id="target_z" data-name="z" >z</option>
 
                             </select>
                         </div>
