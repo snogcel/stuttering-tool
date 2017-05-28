@@ -22,9 +22,15 @@ $(document).ready(function() {
         var refreshRate = 10000; // 10000 = 10 seconds.
 
 
-        setInterval(function() {
-            $('#generateBtn').trigger('click'); //
-        }, refreshRate);
+        setInterval(function(refreshRate) {
+
+
+            var refresh = refreshRate;
+
+            $('#generateBtn').trigger('click'); // this is a callback loop.
+
+
+        }, refreshRate)(refreshRate);
 
 
         // TODO - set up a visualizer that shows decibel level to aid students in utilizing tool.

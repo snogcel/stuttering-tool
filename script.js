@@ -50,6 +50,9 @@ document.getElementById("generateBtn").addEventListener("click", function(){
 
             console.log(Sentencer._filterOpts.vowelPattern.target);
 
+
+
+
             // TODO - configure option on page to control number of sentences to generate
 
             var randomText = '';
