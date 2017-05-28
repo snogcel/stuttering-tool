@@ -21,16 +21,26 @@ $(document).ready(function() {
 
         var refreshRate = 10000; // 10000 = 10 seconds.
 
+        (function(){
 
-        setInterval(function(refreshRate) {
+            setInterval(function() {
+
+                console.log("hello there");
+
+                // Programming = Fun.
+                // This is fine tuning (think of tuning an engine)
+
+                // TODO - cool jQuery stuff
+
+                $('#generateBtn').trigger('click'); // this is a callback loop and also callback hell.
+
+            }, 5000); // 5 second delay.
+
+        })(refreshRate);
 
 
-            var refresh = refreshRate;
-
-            $('#generateBtn').trigger('click'); // this is a callback loop.
 
 
-        }, refreshRate)(refreshRate);
 
 
         // TODO - set up a visualizer that shows decibel level to aid students in utilizing tool.
