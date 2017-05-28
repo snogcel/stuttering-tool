@@ -19,7 +19,7 @@ $(document).ready(function() {
 
         
 
-        var refreshRate = 3000;
+        var refreshRate = 10000; // 10000 = 10 seconds.
 
 
         setInterval(function() {
