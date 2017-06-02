@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -9,10 +10,14 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
     <script src="js/interface.js"></script>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.theme.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -52,6 +57,22 @@
                         <div class="form-group">
                             <label for="template">Template:</label>
                             <input type="text" class="form-control" id="template" value="{{ filtered_adjective }} {{ noun }} has an {{ adjective }} {{ noun }}." />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xs-12">
+
+                        <div class="form-group">
+
+                            Slider goes here.
+
+                            <div id="slider"></div>
+
                         </div>
 
                     </div>
