@@ -31,7 +31,7 @@
 
         <div class="panel panel-primary heading-offset">
 
-            <div class="panel-heading">Welcome to the Stuttering Therapy</div>
+            <div class="panel-heading"><h1>Welcome to the Stuttering Therapy</h1></div>
 
             <div class="panel-body">
 
@@ -51,7 +51,7 @@
 
                         <div class="form-group">
                             <label for="template">Template:</label>
-                            <input type="text" class="form-control" id="template" value="Hello, how are you. A {{ filtered_adjective }} sentence has {{ a_noun }} {{ filtered_adjective }}, it also has {{ an_adjective }} and {{ noun }} in it, including a randomly generated {{ an_adjective }} that was  {{ an_adjective }}." />
+                            <input type="text" class="form-control" id="template" value="{{ filtered_adjective }} {{ noun }} has an {{ adjective }} {{ noun }}." />
                         </div>
 
                     </div>
@@ -153,7 +153,7 @@
     </div>
 
     <!-- TODO - finish debugging this area -->
-    <div class="row">
+    <div class="row" style="display:none">
 
         <div class="col-xs-12">
 

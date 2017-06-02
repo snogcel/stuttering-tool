@@ -4,18 +4,8 @@ $(document).ready(function() {
 
         // TODO - set up a slider on the page that allows the user to control refresh rate
 
-
-
-
-
-
-
         // One step at a time............
-        // 7:45pm rage is a lot easier to handle completely 100%
-
-
-
-
+        // 7:45pm "general malaise" is a lot easier to handle completely 100%
 
         
 
@@ -25,7 +15,7 @@ $(document).ready(function() {
 
             setInterval(function() {
 
-                console.log("hello there");
+                console.log("hello there"); // TODO You Too :-)
 
                 // Programming = Fun.
                 // This is fine tuning (think of tuning an engine)
@@ -37,9 +27,6 @@ $(document).ready(function() {
             }, 5000); // 5 second delay.
 
         })(refreshRate);
-
-
-
 
 
 
