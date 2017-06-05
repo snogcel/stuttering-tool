@@ -3,10 +3,10 @@ $(document).ready(function() {
         $( "#slider" ).slider({
             classes: {
                 "ui-slider": "highlight"
-            });// instantiate jquery ui slider
+            }});// instantiate jquery ui slider
 
 
-    // The rage that boils beneath my skin when people won't look up an anwser for themselves.
+    // The rage that boils beneath my skin when people won't look up an answer (different than Answer) for themselves.
 
     $('#ex1').bootstrapSlider({
         formatter: function(value) {
@@ -37,6 +37,8 @@ $(document).ready(function() {
                     // TODO - cool jQuery stuff
 
                     $('#generateBtn').trigger('click'); // this is a callback loop and also callback hell.
+
+                    clearInterval(refreshRate); // stops after 10 seconds.
 
                 }, 5000); // 5 second delay.
 
