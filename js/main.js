@@ -1,15 +1,21 @@
 "use strict";
 
-// Full Credits go to https://scotch.io/tutorials/getting-started-with-browserify
+// Creating a tool to help people who stutter.
 
-var R = require('ramda');
-// var Sentencer = require('sentencer');
+// Credits go to https://scotch.io/tutorials/getting-started-with-browserify
+// Credits go to https://github.com/kylestetz/Sentencer
 
-var square = function square (x) { return x * x; }
-var squares = R.chain(square, [1, 2, 3, 4, 5]);
+var Sentencer = require('./script.js');
 
-// var randomSentence = Sentencer.make("This sentence has {{ a_noun }} and {{ an_adjective }} {{ noun }} in it.");
 
-document.getElementById('response').innerHTML = randomSentence;
+// TODO: automate browserify using gulp (not sure how to do that)
+
+// TODO: filter word list using regex to focus on specific vowel sounds
+// https://www.npmjs.com/package/regex
+
+
+
+
+// document.getElementById('response').innerHTML = 'test';
 
 // alert(randomSentence);

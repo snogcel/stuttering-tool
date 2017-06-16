@@ -8,11 +8,13 @@ $(document).ready(function() {
 
     // The rage that boils beneath my skin when people won't look up an answer (different than Answer) for themselves.
 
-    $('#ex1').bootstrapSlider({
+    /*
+    $('#ex1').bootstrap/home/jon/Development/stuttering-toolSlider({
         formatter: function(value) {
             return 'Current value: ' + value;
         }
     });
+    */
 
         $('#generateBtn').on("click", function() {
 

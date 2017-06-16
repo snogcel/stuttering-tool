@@ -19,7 +19,7 @@ document.getElementById("generateBtn").addEventListener("click", function(){
 
         // TODO - move settings control here
 
-        var e = document.getElementlById("phoneme");
+        var e = document.getElementById("phoneme");
 
         var phoneme = e.options[e.selectedIndex].dataset['name'];
         var limit = e.options[e.selectedIndex].dataset['limit'];

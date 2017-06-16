@@ -74,7 +74,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":2,"inherits":94,"vm":146}],4:[function(require,module,exports){
+},{"../asn1":2,"inherits":95,"vm":151}],4:[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
 var Buffer = require('buffer').Buffer;
@@ -192,7 +192,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
   return out;
 };
 
-},{"../base":5,"buffer":48,"inherits":94}],5:[function(require,module,exports){
+},{"../base":5,"buffer":47,"inherits":95}],5:[function(require,module,exports){
 var base = exports;
 
 base.Reporter = require('./reporter').Reporter;
@@ -836,7 +836,7 @@ Node.prototype._isPrintstr = function isPrintstr(str) {
   return /^[A-Za-z0-9 '\(\)\+,\-\.\/:=\?]*$/.test(str);
 };
 
-},{"../base":5,"minimalistic-assert":98}],7:[function(require,module,exports){
+},{"../base":5,"minimalistic-assert":99}],7:[function(require,module,exports){
 var inherits = require('inherits');
 
 function Reporter(options) {
@@ -959,7 +959,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
   return this;
 };
 
-},{"inherits":94}],8:[function(require,module,exports){
+},{"inherits":95}],8:[function(require,module,exports){
 var constants = require('../constants');
 
 exports.tagClass = {
@@ -1350,7 +1350,7 @@ function derDecodeLen(buf, primitive, fail) {
   return len;
 }
 
-},{"../../asn1":2,"inherits":94}],11:[function(require,module,exports){
+},{"../../asn1":2,"inherits":95}],11:[function(require,module,exports){
 var decoders = exports;
 
 decoders.der = require('./der');
@@ -1407,7 +1407,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
   return DERDecoder.prototype.decode.call(this, input, options);
 };
 
-},{"./der":10,"buffer":48,"inherits":94}],13:[function(require,module,exports){
+},{"./der":10,"buffer":47,"inherits":95}],13:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -1704,7 +1704,7 @@ function encodeTag(tag, primitive, cls, reporter) {
   return res;
 }
 
-},{"../../asn1":2,"buffer":48,"inherits":94}],14:[function(require,module,exports){
+},{"../../asn1":2,"buffer":47,"inherits":95}],14:[function(require,module,exports){
 var encoders = exports;
 
 encoders.der = require('./der');
@@ -1733,7 +1733,7 @@ PEMEncoder.prototype.encode = function encode(data, options) {
   return out.join('\n');
 };
 
-},{"./der":13,"inherits":94}],16:[function(require,module,exports){
+},{"./der":13,"inherits":95}],16:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -2227,7 +2227,7 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"util/":145}],17:[function(require,module,exports){
+},{"util/":150}],17:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -6022,7 +6022,7 @@ AES.prototype._doCryptBlock = function (M, keySchedule, SUB_MIX, SBOX) {
 exports.AES = AES
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48}],22:[function(require,module,exports){
+},{"buffer":47}],22:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -6123,7 +6123,7 @@ function xorTest (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":21,"./ghash":26,"buffer":48,"buffer-xor":47,"cipher-base":49,"inherits":94}],23:[function(require,module,exports){
+},{"./aes":21,"./ghash":26,"buffer":47,"buffer-xor":46,"cipher-base":48,"inherits":95}],23:[function(require,module,exports){
 var ciphers = require('./encrypter')
 exports.createCipher = exports.Cipher = ciphers.createCipher
 exports.createCipheriv = exports.Cipheriv = ciphers.createCipheriv
@@ -6277,7 +6277,7 @@ exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":21,"./authCipher":22,"./modes":27,"./modes/cbc":28,"./modes/cfb":29,"./modes/cfb1":30,"./modes/cfb8":31,"./modes/ctr":32,"./modes/ecb":33,"./modes/ofb":34,"./streamCipher":35,"buffer":48,"cipher-base":49,"evp_bytestokey":84,"inherits":94}],25:[function(require,module,exports){
+},{"./aes":21,"./authCipher":22,"./modes":27,"./modes/cbc":28,"./modes/cfb":29,"./modes/cfb1":30,"./modes/cfb8":31,"./modes/ctr":32,"./modes/ecb":33,"./modes/ofb":34,"./streamCipher":35,"buffer":47,"cipher-base":48,"evp_bytestokey":84,"inherits":95}],25:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -6403,7 +6403,7 @@ exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":21,"./authCipher":22,"./modes":27,"./modes/cbc":28,"./modes/cfb":29,"./modes/cfb1":30,"./modes/cfb8":31,"./modes/ctr":32,"./modes/ecb":33,"./modes/ofb":34,"./streamCipher":35,"buffer":48,"cipher-base":49,"evp_bytestokey":84,"inherits":94}],26:[function(require,module,exports){
+},{"./aes":21,"./authCipher":22,"./modes":27,"./modes/cbc":28,"./modes/cfb":29,"./modes/cfb1":30,"./modes/cfb8":31,"./modes/ctr":32,"./modes/ecb":33,"./modes/ofb":34,"./streamCipher":35,"buffer":47,"cipher-base":48,"evp_bytestokey":84,"inherits":95}],26:[function(require,module,exports){
 (function (Buffer){
 var zeros = new Buffer(16)
 zeros.fill(0)
@@ -6505,7 +6505,7 @@ function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48}],27:[function(require,module,exports){
+},{"buffer":47}],27:[function(require,module,exports){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
   key: 128,
@@ -6697,7 +6697,7 @@ exports.decrypt = function (self, block) {
   return xor(out, pad)
 }
 
-},{"buffer-xor":47}],29:[function(require,module,exports){
+},{"buffer-xor":46}],29:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -6732,7 +6732,7 @@ function encryptStart (self, data, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"buffer-xor":47}],30:[function(require,module,exports){
+},{"buffer":47,"buffer-xor":46}],30:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -6770,7 +6770,7 @@ function shiftIn (buffer, value) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48}],31:[function(require,module,exports){
+},{"buffer":47}],31:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -6789,7 +6789,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48}],32:[function(require,module,exports){
+},{"buffer":47}],32:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -6824,7 +6824,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"buffer-xor":47}],33:[function(require,module,exports){
+},{"buffer":47,"buffer-xor":46}],33:[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
 }
@@ -6852,7 +6852,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"buffer-xor":47}],35:[function(require,module,exports){
+},{"buffer":47,"buffer-xor":46}],35:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -6881,7 +6881,7 @@ StreamCipher.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":21,"buffer":48,"cipher-base":49,"inherits":94}],36:[function(require,module,exports){
+},{"./aes":21,"buffer":47,"cipher-base":48,"inherits":95}],36:[function(require,module,exports){
 var ebtk = require('evp_bytestokey')
 var aes = require('browserify-aes/browser')
 var DES = require('browserify-des')
@@ -7003,7 +7003,7 @@ DES.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"cipher-base":49,"des.js":57,"inherits":94}],38:[function(require,module,exports){
+},{"buffer":47,"cipher-base":48,"des.js":57,"inherits":95}],38:[function(require,module,exports){
 exports['des-ecb'] = {
   key: 8,
   iv: 0
@@ -7073,7 +7073,7 @@ function getr(priv) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":18,"buffer":48,"randombytes":117}],40:[function(require,module,exports){
+},{"bn.js":18,"buffer":47,"randombytes":121}],40:[function(require,module,exports){
 module.exports = require('./browser/algorithms.json')
 
 },{"./browser/algorithms.json":41}],41:[function(require,module,exports){
@@ -7335,7 +7335,7 @@ module.exports = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./algorithms.json":41,"./sign":44,"./verify":45,"buffer":48,"create-hash":52,"inherits":94,"stream":140}],44:[function(require,module,exports){
+},{"./algorithms.json":41,"./sign":44,"./verify":45,"buffer":47,"create-hash":51,"inherits":95,"stream":145}],44:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var createHmac = require('create-hmac')
@@ -7484,7 +7484,7 @@ module.exports.getKey = getKey
 module.exports.makeKey = makeKey
 
 }).call(this,require("buffer").Buffer)
-},{"./curves.json":42,"bn.js":18,"browserify-rsa":39,"buffer":48,"create-hmac":55,"elliptic":67,"parse-asn1":105}],45:[function(require,module,exports){
+},{"./curves.json":42,"bn.js":18,"browserify-rsa":39,"buffer":47,"create-hmac":54,"elliptic":67,"parse-asn1":106}],45:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var BN = require('bn.js')
@@ -7571,119 +7571,7 @@ function checkValue (b, q) {
 module.exports = verify
 
 }).call(this,require("buffer").Buffer)
-},{"./curves.json":42,"bn.js":18,"buffer":48,"elliptic":67,"parse-asn1":105}],46:[function(require,module,exports){
-(function (global){
-'use strict';
-
-var buffer = require('buffer');
-var Buffer = buffer.Buffer;
-var SlowBuffer = buffer.SlowBuffer;
-var MAX_LEN = buffer.kMaxLength || 2147483647;
-exports.alloc = function alloc(size, fill, encoding) {
-  if (typeof Buffer.alloc === 'function') {
-    return Buffer.alloc(size, fill, encoding);
-  }
-  if (typeof encoding === 'number') {
-    throw new TypeError('encoding must not be number');
-  }
-  if (typeof size !== 'number') {
-    throw new TypeError('size must be a number');
-  }
-  if (size > MAX_LEN) {
-    throw new RangeError('size is too large');
-  }
-  var enc = encoding;
-  var _fill = fill;
-  if (_fill === undefined) {
-    enc = undefined;
-    _fill = 0;
-  }
-  var buf = new Buffer(size);
-  if (typeof _fill === 'string') {
-    var fillBuf = new Buffer(_fill, enc);
-    var flen = fillBuf.length;
-    var i = -1;
-    while (++i < size) {
-      buf[i] = fillBuf[i % flen];
-    }
-  } else {
-    buf.fill(_fill);
-  }
-  return buf;
-}
-exports.allocUnsafe = function allocUnsafe(size) {
-  if (typeof Buffer.allocUnsafe === 'function') {
-    return Buffer.allocUnsafe(size);
-  }
-  if (typeof size !== 'number') {
-    throw new TypeError('size must be a number');
-  }
-  if (size > MAX_LEN) {
-    throw new RangeError('size is too large');
-  }
-  return new Buffer(size);
-}
-exports.from = function from(value, encodingOrOffset, length) {
-  if (typeof Buffer.from === 'function' && (!global.Uint8Array || Uint8Array.from !== Buffer.from)) {
-    return Buffer.from(value, encodingOrOffset, length);
-  }
-  if (typeof value === 'number') {
-    throw new TypeError('"value" argument must not be a number');
-  }
-  if (typeof value === 'string') {
-    return new Buffer(value, encodingOrOffset);
-  }
-  if (typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer) {
-    var offset = encodingOrOffset;
-    if (arguments.length === 1) {
-      return new Buffer(value);
-    }
-    if (typeof offset === 'undefined') {
-      offset = 0;
-    }
-    var len = length;
-    if (typeof len === 'undefined') {
-      len = value.byteLength - offset;
-    }
-    if (offset >= value.byteLength) {
-      throw new RangeError('\'offset\' is out of bounds');
-    }
-    if (len > value.byteLength - offset) {
-      throw new RangeError('\'length\' is out of bounds');
-    }
-    return new Buffer(value.slice(offset, offset + len));
-  }
-  if (Buffer.isBuffer(value)) {
-    var out = new Buffer(value.length);
-    value.copy(out, 0, 0, value.length);
-    return out;
-  }
-  if (value) {
-    if (Array.isArray(value) || (typeof ArrayBuffer !== 'undefined' && value.buffer instanceof ArrayBuffer) || 'length' in value) {
-      return new Buffer(value);
-    }
-    if (value.type === 'Buffer' && Array.isArray(value.data)) {
-      return new Buffer(value.data);
-    }
-  }
-
-  throw new TypeError('First argument must be a string, Buffer, ' + 'ArrayBuffer, Array, or array-like object.');
-}
-exports.allocUnsafeSlow = function allocUnsafeSlow(size) {
-  if (typeof Buffer.allocUnsafeSlow === 'function') {
-    return Buffer.allocUnsafeSlow(size);
-  }
-  if (typeof size !== 'number') {
-    throw new TypeError('size must be a number');
-  }
-  if (size >= MAX_LEN) {
-    throw new RangeError('size is too large');
-  }
-  return new SlowBuffer(size);
-}
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"buffer":48}],47:[function(require,module,exports){
+},{"./curves.json":42,"bn.js":18,"buffer":47,"elliptic":67,"parse-asn1":106}],46:[function(require,module,exports){
 (function (Buffer){
 module.exports = function xor (a, b) {
   var length = Math.min(a.length, b.length)
@@ -7697,7 +7585,7 @@ module.exports = function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48}],48:[function(require,module,exports){
+},{"buffer":47}],47:[function(require,module,exports){
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -9405,7 +9293,7 @@ function numberIsNaN (obj) {
   return obj !== obj // eslint-disable-line no-self-compare
 }
 
-},{"base64-js":17,"ieee754":92}],49:[function(require,module,exports){
+},{"base64-js":17,"ieee754":93}],48:[function(require,module,exports){
 (function (Buffer){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
@@ -9499,7 +9387,7 @@ CipherBase.prototype._toString = function (value, enc, fin) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"inherits":94,"stream":140,"string_decoder":141}],50:[function(require,module,exports){
+},{"buffer":47,"inherits":95,"stream":145,"string_decoder":146}],49:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -9610,7 +9498,7 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":95}],51:[function(require,module,exports){
+},{"../../is-buffer/index.js":96}],50:[function(require,module,exports){
 (function (Buffer){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -9736,17 +9624,17 @@ function formatReturnValue(bn, enc, len) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":18,"buffer":48,"elliptic":67}],52:[function(require,module,exports){
+},{"bn.js":18,"buffer":47,"elliptic":67}],51:[function(require,module,exports){
 (function (Buffer){
-'use strict';
+'use strict'
 var inherits = require('inherits')
 var md5 = require('./md5')
-var rmd160 = require('ripemd160')
+var RIPEMD160 = require('ripemd160')
 var sha = require('sha.js')
 
 var Base = require('cipher-base')
 
-function HashNoConstructor(hash) {
+function HashNoConstructor (hash) {
   Base.call(this, 'digest')
 
   this._hash = hash
@@ -9767,7 +9655,7 @@ HashNoConstructor.prototype._final = function () {
   return r
 }
 
-function Hash(hash) {
+function Hash (hash) {
   Base.call(this, 'digest')
 
   this._hash = hash
@@ -9785,52 +9673,49 @@ Hash.prototype._final = function () {
 
 module.exports = function createHash (alg) {
   alg = alg.toLowerCase()
-  if ('md5' === alg) return new HashNoConstructor(md5)
-  if ('rmd160' === alg || 'ripemd160' === alg) return new HashNoConstructor(rmd160)
+  if (alg === 'md5') return new HashNoConstructor(md5)
+  if (alg === 'rmd160' || alg === 'ripemd160') return new Hash(new RIPEMD160())
 
   return new Hash(sha(alg))
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./md5":54,"buffer":48,"cipher-base":49,"inherits":94,"ripemd160":131,"sha.js":133}],53:[function(require,module,exports){
+},{"./md5":53,"buffer":47,"cipher-base":48,"inherits":95,"ripemd160":135,"sha.js":138}],52:[function(require,module,exports){
 (function (Buffer){
-'use strict';
-var intSize = 4;
-var zeroBuffer = new Buffer(intSize); zeroBuffer.fill(0);
-var chrsz = 8;
+'use strict'
+var intSize = 4
+var zeroBuffer = new Buffer(intSize)
+zeroBuffer.fill(0)
 
-function toArray(buf, bigEndian) {
+var charSize = 8
+var hashSize = 16
+
+function toArray (buf) {
   if ((buf.length % intSize) !== 0) {
-    var len = buf.length + (intSize - (buf.length % intSize));
-    buf = Buffer.concat([buf, zeroBuffer], len);
+    var len = buf.length + (intSize - (buf.length % intSize))
+    buf = Buffer.concat([buf, zeroBuffer], len)
   }
 
-  var arr = [];
-  var fn = bigEndian ? buf.readInt32BE : buf.readInt32LE;
-  for (var i = 0; i < buf.length; i += intSize) {
-    arr.push(fn.call(buf, i));
+  var arr = new Array(buf.length >>> 2)
+  for (var i = 0, j = 0; i < buf.length; i += intSize, j++) {
+    arr[j] = buf.readInt32LE(i)
   }
-  return arr;
+
+  return arr
 }
 
-function toBuffer(arr, size, bigEndian) {
-  var buf = new Buffer(size);
-  var fn = bigEndian ? buf.writeInt32BE : buf.writeInt32LE;
+module.exports = function hash (buf, fn) {
+  var arr = fn(toArray(buf), buf.length * charSize)
+  buf = new Buffer(hashSize)
   for (var i = 0; i < arr.length; i++) {
-    fn.call(buf, arr[i], i * 4, true);
+    buf.writeInt32LE(arr[i], i << 2, true)
   }
-  return buf;
+  return buf
 }
 
-function hash(buf, fn, hashSize, bigEndian) {
-  if (!Buffer.isBuffer(buf)) buf = new Buffer(buf);
-  var arr = fn(toArray(buf, bigEndian), buf.length * chrsz);
-  return toBuffer(arr, hashSize, bigEndian);
-}
-exports.hash = hash;
 }).call(this,require("buffer").Buffer)
-},{"buffer":48}],54:[function(require,module,exports){
-'use strict';
+},{"buffer":47}],53:[function(require,module,exports){
+'use strict'
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
  * Digest Algorithm, as defined in RFC 1321.
@@ -9840,225 +9725,261 @@ exports.hash = hash;
  * See http://pajhome.org.uk/crypt/md5 for more info.
  */
 
-var helpers = require('./helpers');
+var makeHash = require('./make-hash')
 
 /*
  * Calculate the MD5 of an array of little-endian words, and a bit length
  */
-function core_md5(x, len)
-{
+function core_md5 (x, len) {
   /* append padding */
-  x[len >> 5] |= 0x80 << ((len) % 32);
-  x[(((len + 64) >>> 9) << 4) + 14] = len;
+  x[len >> 5] |= 0x80 << ((len) % 32)
+  x[(((len + 64) >>> 9) << 4) + 14] = len
 
-  var a =  1732584193;
-  var b = -271733879;
-  var c = -1732584194;
-  var d =  271733878;
+  var a = 1732584193
+  var b = -271733879
+  var c = -1732584194
+  var d = 271733878
 
-  for(var i = 0; i < x.length; i += 16)
-  {
-    var olda = a;
-    var oldb = b;
-    var oldc = c;
-    var oldd = d;
+  for (var i = 0; i < x.length; i += 16) {
+    var olda = a
+    var oldb = b
+    var oldc = c
+    var oldd = d
 
-    a = md5_ff(a, b, c, d, x[i+ 0], 7 , -680876936);
-    d = md5_ff(d, a, b, c, x[i+ 1], 12, -389564586);
-    c = md5_ff(c, d, a, b, x[i+ 2], 17,  606105819);
-    b = md5_ff(b, c, d, a, x[i+ 3], 22, -1044525330);
-    a = md5_ff(a, b, c, d, x[i+ 4], 7 , -176418897);
-    d = md5_ff(d, a, b, c, x[i+ 5], 12,  1200080426);
-    c = md5_ff(c, d, a, b, x[i+ 6], 17, -1473231341);
-    b = md5_ff(b, c, d, a, x[i+ 7], 22, -45705983);
-    a = md5_ff(a, b, c, d, x[i+ 8], 7 ,  1770035416);
-    d = md5_ff(d, a, b, c, x[i+ 9], 12, -1958414417);
-    c = md5_ff(c, d, a, b, x[i+10], 17, -42063);
-    b = md5_ff(b, c, d, a, x[i+11], 22, -1990404162);
-    a = md5_ff(a, b, c, d, x[i+12], 7 ,  1804603682);
-    d = md5_ff(d, a, b, c, x[i+13], 12, -40341101);
-    c = md5_ff(c, d, a, b, x[i+14], 17, -1502002290);
-    b = md5_ff(b, c, d, a, x[i+15], 22,  1236535329);
+    a = md5_ff(a, b, c, d, x[i + 0], 7, -680876936)
+    d = md5_ff(d, a, b, c, x[i + 1], 12, -389564586)
+    c = md5_ff(c, d, a, b, x[i + 2], 17, 606105819)
+    b = md5_ff(b, c, d, a, x[i + 3], 22, -1044525330)
+    a = md5_ff(a, b, c, d, x[i + 4], 7, -176418897)
+    d = md5_ff(d, a, b, c, x[i + 5], 12, 1200080426)
+    c = md5_ff(c, d, a, b, x[i + 6], 17, -1473231341)
+    b = md5_ff(b, c, d, a, x[i + 7], 22, -45705983)
+    a = md5_ff(a, b, c, d, x[i + 8], 7, 1770035416)
+    d = md5_ff(d, a, b, c, x[i + 9], 12, -1958414417)
+    c = md5_ff(c, d, a, b, x[i + 10], 17, -42063)
+    b = md5_ff(b, c, d, a, x[i + 11], 22, -1990404162)
+    a = md5_ff(a, b, c, d, x[i + 12], 7, 1804603682)
+    d = md5_ff(d, a, b, c, x[i + 13], 12, -40341101)
+    c = md5_ff(c, d, a, b, x[i + 14], 17, -1502002290)
+    b = md5_ff(b, c, d, a, x[i + 15], 22, 1236535329)
 
-    a = md5_gg(a, b, c, d, x[i+ 1], 5 , -165796510);
-    d = md5_gg(d, a, b, c, x[i+ 6], 9 , -1069501632);
-    c = md5_gg(c, d, a, b, x[i+11], 14,  643717713);
-    b = md5_gg(b, c, d, a, x[i+ 0], 20, -373897302);
-    a = md5_gg(a, b, c, d, x[i+ 5], 5 , -701558691);
-    d = md5_gg(d, a, b, c, x[i+10], 9 ,  38016083);
-    c = md5_gg(c, d, a, b, x[i+15], 14, -660478335);
-    b = md5_gg(b, c, d, a, x[i+ 4], 20, -405537848);
-    a = md5_gg(a, b, c, d, x[i+ 9], 5 ,  568446438);
-    d = md5_gg(d, a, b, c, x[i+14], 9 , -1019803690);
-    c = md5_gg(c, d, a, b, x[i+ 3], 14, -187363961);
-    b = md5_gg(b, c, d, a, x[i+ 8], 20,  1163531501);
-    a = md5_gg(a, b, c, d, x[i+13], 5 , -1444681467);
-    d = md5_gg(d, a, b, c, x[i+ 2], 9 , -51403784);
-    c = md5_gg(c, d, a, b, x[i+ 7], 14,  1735328473);
-    b = md5_gg(b, c, d, a, x[i+12], 20, -1926607734);
+    a = md5_gg(a, b, c, d, x[i + 1], 5, -165796510)
+    d = md5_gg(d, a, b, c, x[i + 6], 9, -1069501632)
+    c = md5_gg(c, d, a, b, x[i + 11], 14, 643717713)
+    b = md5_gg(b, c, d, a, x[i + 0], 20, -373897302)
+    a = md5_gg(a, b, c, d, x[i + 5], 5, -701558691)
+    d = md5_gg(d, a, b, c, x[i + 10], 9, 38016083)
+    c = md5_gg(c, d, a, b, x[i + 15], 14, -660478335)
+    b = md5_gg(b, c, d, a, x[i + 4], 20, -405537848)
+    a = md5_gg(a, b, c, d, x[i + 9], 5, 568446438)
+    d = md5_gg(d, a, b, c, x[i + 14], 9, -1019803690)
+    c = md5_gg(c, d, a, b, x[i + 3], 14, -187363961)
+    b = md5_gg(b, c, d, a, x[i + 8], 20, 1163531501)
+    a = md5_gg(a, b, c, d, x[i + 13], 5, -1444681467)
+    d = md5_gg(d, a, b, c, x[i + 2], 9, -51403784)
+    c = md5_gg(c, d, a, b, x[i + 7], 14, 1735328473)
+    b = md5_gg(b, c, d, a, x[i + 12], 20, -1926607734)
 
-    a = md5_hh(a, b, c, d, x[i+ 5], 4 , -378558);
-    d = md5_hh(d, a, b, c, x[i+ 8], 11, -2022574463);
-    c = md5_hh(c, d, a, b, x[i+11], 16,  1839030562);
-    b = md5_hh(b, c, d, a, x[i+14], 23, -35309556);
-    a = md5_hh(a, b, c, d, x[i+ 1], 4 , -1530992060);
-    d = md5_hh(d, a, b, c, x[i+ 4], 11,  1272893353);
-    c = md5_hh(c, d, a, b, x[i+ 7], 16, -155497632);
-    b = md5_hh(b, c, d, a, x[i+10], 23, -1094730640);
-    a = md5_hh(a, b, c, d, x[i+13], 4 ,  681279174);
-    d = md5_hh(d, a, b, c, x[i+ 0], 11, -358537222);
-    c = md5_hh(c, d, a, b, x[i+ 3], 16, -722521979);
-    b = md5_hh(b, c, d, a, x[i+ 6], 23,  76029189);
-    a = md5_hh(a, b, c, d, x[i+ 9], 4 , -640364487);
-    d = md5_hh(d, a, b, c, x[i+12], 11, -421815835);
-    c = md5_hh(c, d, a, b, x[i+15], 16,  530742520);
-    b = md5_hh(b, c, d, a, x[i+ 2], 23, -995338651);
+    a = md5_hh(a, b, c, d, x[i + 5], 4, -378558)
+    d = md5_hh(d, a, b, c, x[i + 8], 11, -2022574463)
+    c = md5_hh(c, d, a, b, x[i + 11], 16, 1839030562)
+    b = md5_hh(b, c, d, a, x[i + 14], 23, -35309556)
+    a = md5_hh(a, b, c, d, x[i + 1], 4, -1530992060)
+    d = md5_hh(d, a, b, c, x[i + 4], 11, 1272893353)
+    c = md5_hh(c, d, a, b, x[i + 7], 16, -155497632)
+    b = md5_hh(b, c, d, a, x[i + 10], 23, -1094730640)
+    a = md5_hh(a, b, c, d, x[i + 13], 4, 681279174)
+    d = md5_hh(d, a, b, c, x[i + 0], 11, -358537222)
+    c = md5_hh(c, d, a, b, x[i + 3], 16, -722521979)
+    b = md5_hh(b, c, d, a, x[i + 6], 23, 76029189)
+    a = md5_hh(a, b, c, d, x[i + 9], 4, -640364487)
+    d = md5_hh(d, a, b, c, x[i + 12], 11, -421815835)
+    c = md5_hh(c, d, a, b, x[i + 15], 16, 530742520)
+    b = md5_hh(b, c, d, a, x[i + 2], 23, -995338651)
 
-    a = md5_ii(a, b, c, d, x[i+ 0], 6 , -198630844);
-    d = md5_ii(d, a, b, c, x[i+ 7], 10,  1126891415);
-    c = md5_ii(c, d, a, b, x[i+14], 15, -1416354905);
-    b = md5_ii(b, c, d, a, x[i+ 5], 21, -57434055);
-    a = md5_ii(a, b, c, d, x[i+12], 6 ,  1700485571);
-    d = md5_ii(d, a, b, c, x[i+ 3], 10, -1894986606);
-    c = md5_ii(c, d, a, b, x[i+10], 15, -1051523);
-    b = md5_ii(b, c, d, a, x[i+ 1], 21, -2054922799);
-    a = md5_ii(a, b, c, d, x[i+ 8], 6 ,  1873313359);
-    d = md5_ii(d, a, b, c, x[i+15], 10, -30611744);
-    c = md5_ii(c, d, a, b, x[i+ 6], 15, -1560198380);
-    b = md5_ii(b, c, d, a, x[i+13], 21,  1309151649);
-    a = md5_ii(a, b, c, d, x[i+ 4], 6 , -145523070);
-    d = md5_ii(d, a, b, c, x[i+11], 10, -1120210379);
-    c = md5_ii(c, d, a, b, x[i+ 2], 15,  718787259);
-    b = md5_ii(b, c, d, a, x[i+ 9], 21, -343485551);
+    a = md5_ii(a, b, c, d, x[i + 0], 6, -198630844)
+    d = md5_ii(d, a, b, c, x[i + 7], 10, 1126891415)
+    c = md5_ii(c, d, a, b, x[i + 14], 15, -1416354905)
+    b = md5_ii(b, c, d, a, x[i + 5], 21, -57434055)
+    a = md5_ii(a, b, c, d, x[i + 12], 6, 1700485571)
+    d = md5_ii(d, a, b, c, x[i + 3], 10, -1894986606)
+    c = md5_ii(c, d, a, b, x[i + 10], 15, -1051523)
+    b = md5_ii(b, c, d, a, x[i + 1], 21, -2054922799)
+    a = md5_ii(a, b, c, d, x[i + 8], 6, 1873313359)
+    d = md5_ii(d, a, b, c, x[i + 15], 10, -30611744)
+    c = md5_ii(c, d, a, b, x[i + 6], 15, -1560198380)
+    b = md5_ii(b, c, d, a, x[i + 13], 21, 1309151649)
+    a = md5_ii(a, b, c, d, x[i + 4], 6, -145523070)
+    d = md5_ii(d, a, b, c, x[i + 11], 10, -1120210379)
+    c = md5_ii(c, d, a, b, x[i + 2], 15, 718787259)
+    b = md5_ii(b, c, d, a, x[i + 9], 21, -343485551)
 
-    a = safe_add(a, olda);
-    b = safe_add(b, oldb);
-    c = safe_add(c, oldc);
-    d = safe_add(d, oldd);
+    a = safe_add(a, olda)
+    b = safe_add(b, oldb)
+    c = safe_add(c, oldc)
+    d = safe_add(d, oldd)
   }
-  return Array(a, b, c, d);
 
+  return [a, b, c, d]
 }
 
 /*
  * These functions implement the four basic operations the algorithm uses.
  */
-function md5_cmn(q, a, b, x, s, t)
-{
-  return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s),b);
+function md5_cmn (q, a, b, x, s, t) {
+  return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s), b)
 }
-function md5_ff(a, b, c, d, x, s, t)
-{
-  return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t);
+
+function md5_ff (a, b, c, d, x, s, t) {
+  return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t)
 }
-function md5_gg(a, b, c, d, x, s, t)
-{
-  return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t);
+
+function md5_gg (a, b, c, d, x, s, t) {
+  return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t)
 }
-function md5_hh(a, b, c, d, x, s, t)
-{
-  return md5_cmn(b ^ c ^ d, a, b, x, s, t);
+
+function md5_hh (a, b, c, d, x, s, t) {
+  return md5_cmn(b ^ c ^ d, a, b, x, s, t)
 }
-function md5_ii(a, b, c, d, x, s, t)
-{
-  return md5_cmn(c ^ (b | (~d)), a, b, x, s, t);
+
+function md5_ii (a, b, c, d, x, s, t) {
+  return md5_cmn(c ^ (b | (~d)), a, b, x, s, t)
 }
 
 /*
  * Add integers, wrapping at 2^32. This uses 16-bit operations internally
  * to work around bugs in some JS interpreters.
  */
-function safe_add(x, y)
-{
-  var lsw = (x & 0xFFFF) + (y & 0xFFFF);
-  var msw = (x >> 16) + (y >> 16) + (lsw >> 16);
-  return (msw << 16) | (lsw & 0xFFFF);
+function safe_add (x, y) {
+  var lsw = (x & 0xFFFF) + (y & 0xFFFF)
+  var msw = (x >> 16) + (y >> 16) + (lsw >> 16)
+  return (msw << 16) | (lsw & 0xFFFF)
 }
 
 /*
  * Bitwise rotate a 32-bit number to the left.
  */
-function bit_rol(num, cnt)
-{
-  return (num << cnt) | (num >>> (32 - cnt));
+function bit_rol (num, cnt) {
+  return (num << cnt) | (num >>> (32 - cnt))
 }
 
-module.exports = function md5(buf) {
-  return helpers.hash(buf, core_md5, 16);
-};
-},{"./helpers":53}],55:[function(require,module,exports){
-(function (Buffer){
-'use strict';
-var createHash = require('create-hash/browser');
+module.exports = function md5 (buf) {
+  return makeHash(buf, core_md5)
+}
+
+},{"./make-hash":52}],54:[function(require,module,exports){
+'use strict'
 var inherits = require('inherits')
+var Legacy = require('./legacy')
+var Base = require('cipher-base')
+var Buffer = require('safe-buffer').Buffer
+var md5 = require('create-hash/md5')
+var RIPEMD160 = require('ripemd160')
 
-var Transform = require('stream').Transform
+var sha = require('sha.js')
 
-var ZEROS = new Buffer(128)
-ZEROS.fill(0)
+var ZEROS = Buffer.alloc(128)
 
-function Hmac(alg, key) {
-  Transform.call(this)
-  alg = alg.toLowerCase()
+function Hmac (alg, key) {
+  Base.call(this, 'digest')
   if (typeof key === 'string') {
-    key = new Buffer(key)
+    key = Buffer.from(key)
   }
 
   var blocksize = (alg === 'sha512' || alg === 'sha384') ? 128 : 64
 
   this._alg = alg
   this._key = key
-
   if (key.length > blocksize) {
-    key = createHash(alg).update(key).digest()
-
+    var hash = alg === 'rmd160' ? new RIPEMD160() : sha(alg)
+    key = hash.update(key).digest()
   } else if (key.length < blocksize) {
     key = Buffer.concat([key, ZEROS], blocksize)
   }
 
-  var ipad = this._ipad = new Buffer(blocksize)
-  var opad = this._opad = new Buffer(blocksize)
+  var ipad = this._ipad = Buffer.allocUnsafe(blocksize)
+  var opad = this._opad = Buffer.allocUnsafe(blocksize)
+
+  for (var i = 0; i < blocksize; i++) {
+    ipad[i] = key[i] ^ 0x36
+    opad[i] = key[i] ^ 0x5C
+  }
+  this._hash = alg === 'rmd160' ? new RIPEMD160() : sha(alg)
+  this._hash.update(ipad)
+}
+
+inherits(Hmac, Base)
+
+Hmac.prototype._update = function (data) {
+  this._hash.update(data)
+}
+
+Hmac.prototype._final = function () {
+  var h = this._hash.digest()
+  var hash = this._alg === 'rmd160' ? new RIPEMD160() : sha(this._alg)
+  return hash.update(this._opad).update(h).digest()
+}
+
+module.exports = function createHmac (alg, key) {
+  alg = alg.toLowerCase()
+  if (alg === 'rmd160' || alg === 'ripemd160') {
+    return new Hmac('rmd160', key)
+  }
+  if (alg === 'md5') {
+    return new Legacy(md5, key)
+  }
+  return new Hmac(alg, key)
+}
+
+},{"./legacy":55,"cipher-base":48,"create-hash/md5":53,"inherits":95,"ripemd160":135,"safe-buffer":136,"sha.js":138}],55:[function(require,module,exports){
+'use strict'
+var inherits = require('inherits')
+var Buffer = require('safe-buffer').Buffer
+
+var Base = require('cipher-base')
+
+var ZEROS = Buffer.alloc(128)
+var blocksize = 64
+
+function Hmac (alg, key) {
+  Base.call(this, 'digest')
+  if (typeof key === 'string') {
+    key = Buffer.from(key)
+  }
+
+  this._alg = alg
+  this._key = key
+
+  if (key.length > blocksize) {
+    key = alg(key)
+  } else if (key.length < blocksize) {
+    key = Buffer.concat([key, ZEROS], blocksize)
+  }
+
+  var ipad = this._ipad = Buffer.allocUnsafe(blocksize)
+  var opad = this._opad = Buffer.allocUnsafe(blocksize)
 
   for (var i = 0; i < blocksize; i++) {
     ipad[i] = key[i] ^ 0x36
     opad[i] = key[i] ^ 0x5C
   }
 
-  this._hash = createHash(alg).update(ipad)
+  this._hash = [ipad]
 }
 
-inherits(Hmac, Transform)
+inherits(Hmac, Base)
 
-Hmac.prototype.update = function (data, enc) {
-  this._hash.update(data, enc)
-
-  return this
+Hmac.prototype._update = function (data) {
+  this._hash.push(data)
 }
 
-Hmac.prototype._transform = function (data, _, next) {
-  this._hash.update(data)
-
-  next()
+Hmac.prototype._final = function () {
+  var h = this._alg(Buffer.concat(this._hash))
+  return this._alg(Buffer.concat([this._opad, h]))
 }
+module.exports = Hmac
 
-Hmac.prototype._flush = function (next) {
-  this.push(this.digest())
-
-  next()
-}
-
-Hmac.prototype.digest = function (enc) {
-  var h = this._hash.digest()
-
-  return createHash(this._alg).update(this._opad).update(h).digest(enc)
-}
-
-module.exports = function createHmac(alg, key) {
-  return new Hmac(alg, key)
-}
-
-}).call(this,require("buffer").Buffer)
-},{"buffer":48,"create-hash/browser":52,"inherits":94,"stream":140}],56:[function(require,module,exports){
+},{"cipher-base":48,"inherits":95,"safe-buffer":136}],56:[function(require,module,exports){
 'use strict'
 
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require('randombytes')
@@ -10137,7 +10058,7 @@ var publicEncrypt = require('public-encrypt')
   }
 })
 
-},{"browserify-cipher":36,"browserify-sign":43,"browserify-sign/algos":40,"create-ecdh":51,"create-hash":52,"create-hmac":55,"diffie-hellman":63,"pbkdf2":107,"public-encrypt":111,"randombytes":117}],57:[function(require,module,exports){
+},{"browserify-cipher":36,"browserify-sign":43,"browserify-sign/algos":40,"create-ecdh":50,"create-hash":51,"create-hmac":54,"diffie-hellman":63,"pbkdf2":108,"public-encrypt":115,"randombytes":121}],57:[function(require,module,exports){
 'use strict';
 
 exports.utils = require('./des/utils');
@@ -10213,7 +10134,7 @@ proto._update = function _update(inp, inOff, out, outOff) {
   }
 };
 
-},{"inherits":94,"minimalistic-assert":98}],59:[function(require,module,exports){
+},{"inherits":95,"minimalistic-assert":99}],59:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -10356,7 +10277,7 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
   return this._unpad(out);
 };
 
-},{"minimalistic-assert":98}],60:[function(require,module,exports){
+},{"minimalistic-assert":99}],60:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -10501,7 +10422,7 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
   utils.rip(l, r, out, off);
 };
 
-},{"../des":57,"inherits":94,"minimalistic-assert":98}],61:[function(require,module,exports){
+},{"../des":57,"inherits":95,"minimalistic-assert":99}],61:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -10558,7 +10479,7 @@ EDE.prototype._update = function _update(inp, inOff, out, outOff) {
 EDE.prototype._pad = DES.prototype._pad;
 EDE.prototype._unpad = DES.prototype._unpad;
 
-},{"../des":57,"inherits":94,"minimalistic-assert":98}],62:[function(require,module,exports){
+},{"../des":57,"inherits":95,"minimalistic-assert":99}],62:[function(require,module,exports){
 'use strict';
 
 exports.readUInt32BE = function readUInt32BE(bytes, off) {
@@ -10862,7 +10783,7 @@ exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffi
 exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
 
 }).call(this,require("buffer").Buffer)
-},{"./lib/dh":64,"./lib/generatePrime":65,"./lib/primes.json":66,"buffer":48}],64:[function(require,module,exports){
+},{"./lib/dh":64,"./lib/generatePrime":65,"./lib/primes.json":66,"buffer":47}],64:[function(require,module,exports){
 (function (Buffer){
 var BN = require('bn.js');
 var MillerRabin = require('miller-rabin');
@@ -11030,7 +10951,7 @@ function formatReturnValue(bn, enc) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./generatePrime":65,"bn.js":18,"buffer":48,"miller-rabin":97,"randombytes":117}],65:[function(require,module,exports){
+},{"./generatePrime":65,"bn.js":18,"buffer":47,"miller-rabin":98,"randombytes":121}],65:[function(require,module,exports){
 var randomBytes = require('randombytes');
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
@@ -11137,7 +11058,7 @@ function findPrime(bits, gen) {
 
 }
 
-},{"bn.js":18,"miller-rabin":97,"randombytes":117}],66:[function(require,module,exports){
+},{"bn.js":18,"miller-rabin":98,"randombytes":121}],66:[function(require,module,exports){
 module.exports={
     "modp1": {
         "gen": "02",
@@ -11999,7 +11920,7 @@ Point.prototype.eqXToP = function eqXToP(x) {
 Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
-},{"../../elliptic":67,"../curve":70,"bn.js":18,"inherits":94}],70:[function(require,module,exports){
+},{"../../elliptic":67,"../curve":70,"bn.js":18,"inherits":95}],70:[function(require,module,exports){
 'use strict';
 
 var curve = exports;
@@ -12191,7 +12112,7 @@ Point.prototype.getX = function getX() {
   return this.x.fromRed();
 };
 
-},{"../../elliptic":67,"../curve":70,"bn.js":18,"inherits":94}],72:[function(require,module,exports){
+},{"../../elliptic":67,"../curve":70,"bn.js":18,"inherits":95}],72:[function(require,module,exports){
 'use strict';
 
 var curve = require('../curve');
@@ -13131,7 +13052,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
   return this.z.cmpn(0) === 0;
 };
 
-},{"../../elliptic":67,"../curve":70,"bn.js":18,"inherits":94}],73:[function(require,module,exports){
+},{"../../elliptic":67,"../curve":70,"bn.js":18,"inherits":95}],73:[function(require,module,exports){
 'use strict';
 
 var curves = exports;
@@ -13338,7 +13259,7 @@ defineCurve('secp256k1', {
   ]
 });
 
-},{"../elliptic":67,"./precomputed/secp256k1":80,"hash.js":85}],74:[function(require,module,exports){
+},{"../elliptic":67,"./precomputed/secp256k1":80,"hash.js":86}],74:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -13580,7 +13501,7 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
   throw new Error('Unable to find valid recovery factor');
 };
 
-},{"../../elliptic":67,"./key":75,"./signature":76,"bn.js":18,"hmac-drbg":91}],75:[function(require,module,exports){
+},{"../../elliptic":67,"./key":75,"./signature":76,"bn.js":18,"hmac-drbg":92}],75:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -13958,7 +13879,7 @@ EDDSA.prototype.isPoint = function isPoint(val) {
   return val instanceof this.pointClass;
 };
 
-},{"../../elliptic":67,"./key":78,"./signature":79,"hash.js":85}],78:[function(require,module,exports){
+},{"../../elliptic":67,"./key":78,"./signature":79,"hash.js":86}],78:[function(require,module,exports){
 'use strict';
 
 var elliptic = require('../../elliptic');
@@ -15028,25 +14949,18 @@ function intFromLE(bytes) {
 utils.intFromLE = intFromLE;
 
 
-},{"bn.js":18,"minimalistic-assert":98,"minimalistic-crypto-utils":99}],82:[function(require,module,exports){
+},{"bn.js":18,"minimalistic-assert":99,"minimalistic-crypto-utils":100}],82:[function(require,module,exports){
 module.exports={
   "_args": [
     [
-      {
-        "raw": "elliptic@^6.0.0",
-        "scope": null,
-        "escapedName": "elliptic",
-        "name": "elliptic",
-        "rawSpec": "^6.0.0",
-        "spec": ">=6.0.0 <7.0.0",
-        "type": "range"
-      },
-      "/home/jon/.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/browserify-sign"
+      "elliptic@^6.0.0",
+      "/home/jon/.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/browserify-sign"
     ]
   ],
   "_from": "elliptic@>=6.0.0 <7.0.0",
   "_id": "elliptic@6.4.0",
   "_inCache": true,
+  "_installable": true,
   "_location": "/browserify/elliptic",
   "_nodeVersion": "7.0.0",
   "_npmOperationalInternal": {
@@ -15054,17 +14968,16 @@ module.exports={
     "tmp": "tmp/elliptic-6.4.0.tgz_1487798866428_0.30510620190761983"
   },
   "_npmUser": {
-    "name": "indutny",
-    "email": "fedor@indutny.com"
+    "email": "fedor@indutny.com",
+    "name": "indutny"
   },
   "_npmVersion": "3.10.8",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "elliptic@^6.0.0",
-    "scope": null,
-    "escapedName": "elliptic",
     "name": "elliptic",
+    "raw": "elliptic@^6.0.0",
     "rawSpec": "^6.0.0",
+    "scope": null,
     "spec": ">=6.0.0 <7.0.0",
     "type": "range"
   },
@@ -15076,10 +14989,10 @@ module.exports={
   "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
   "_shrinkwrap": null,
   "_spec": "elliptic@^6.0.0",
-  "_where": "/home/jon/.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/browserify-sign",
+  "_where": "/home/jon/.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/browserify-sign",
   "author": {
-    "name": "Fedor Indutny",
-    "email": "fedor@indutny.com"
+    "email": "fedor@indutny.com",
+    "name": "Fedor Indutny"
   },
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
@@ -15130,8 +15043,8 @@ module.exports={
   "main": "lib/elliptic.js",
   "maintainers": [
     {
-      "name": "indutny",
-      "email": "fedor@indutny.com"
+      "email": "fedor@indutny.com",
+      "name": "indutny"
     }
   ],
   "name": "elliptic",
@@ -15528,7 +15441,94 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"create-hash/md5":54}],85:[function(require,module,exports){
+},{"buffer":47,"create-hash/md5":53}],85:[function(require,module,exports){
+(function (Buffer){
+'use strict'
+var Transform = require('stream').Transform
+var inherits = require('inherits')
+
+function HashBase (blockSize) {
+  Transform.call(this)
+
+  this._block = new Buffer(blockSize)
+  this._blockSize = blockSize
+  this._blockOffset = 0
+  this._length = [0, 0, 0, 0]
+
+  this._finalized = false
+}
+
+inherits(HashBase, Transform)
+
+HashBase.prototype._transform = function (chunk, encoding, callback) {
+  var error = null
+  try {
+    if (encoding !== 'buffer') chunk = new Buffer(chunk, encoding)
+    this.update(chunk)
+  } catch (err) {
+    error = err
+  }
+
+  callback(error)
+}
+
+HashBase.prototype._flush = function (callback) {
+  var error = null
+  try {
+    this.push(this._digest())
+  } catch (err) {
+    error = err
+  }
+
+  callback(error)
+}
+
+HashBase.prototype.update = function (data, encoding) {
+  if (!Buffer.isBuffer(data) && typeof data !== 'string') throw new TypeError('Data must be a string or a buffer')
+  if (this._finalized) throw new Error('Digest already called')
+  if (!Buffer.isBuffer(data)) data = new Buffer(data, encoding || 'binary')
+
+  // consume data
+  var block = this._block
+  var offset = 0
+  while (this._blockOffset + data.length - offset >= this._blockSize) {
+    for (var i = this._blockOffset; i < this._blockSize;) block[i++] = data[offset++]
+    this._update()
+    this._blockOffset = 0
+  }
+  while (offset < data.length) block[this._blockOffset++] = data[offset++]
+
+  // update length
+  for (var j = 0, carry = data.length * 8; carry > 0; ++j) {
+    this._length[j] += carry
+    carry = (this._length[j] / 0x0100000000) | 0
+    if (carry > 0) this._length[j] -= 0x0100000000 * carry
+  }
+
+  return this
+}
+
+HashBase.prototype._update = function (data) {
+  throw new Error('_update is not implemented')
+}
+
+HashBase.prototype.digest = function (encoding) {
+  if (this._finalized) throw new Error('Digest already called')
+  this._finalized = true
+
+  var digest = this._digest()
+  if (encoding !== undefined) digest = digest.toString(encoding)
+  return digest
+}
+
+HashBase.prototype._digest = function () {
+  throw new Error('_digest is not implemented')
+}
+
+module.exports = HashBase
+
+}).call(this,require("buffer").Buffer)
+},{"buffer":47,"inherits":95,"stream":145}],86:[function(require,module,exports){
 var hash = exports;
 
 hash.utils = require('./hash/utils');
@@ -15545,7 +15545,7 @@ hash.sha384 = hash.sha.sha384;
 hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
-},{"./hash/common":86,"./hash/hmac":87,"./hash/ripemd":88,"./hash/sha":89,"./hash/utils":90}],86:[function(require,module,exports){
+},{"./hash/common":87,"./hash/hmac":88,"./hash/ripemd":89,"./hash/sha":90,"./hash/utils":91}],87:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -15638,7 +15638,7 @@ BlockHash.prototype._pad = function pad() {
   return res;
 };
 
-},{"../hash":85}],87:[function(require,module,exports){
+},{"../hash":86}],88:[function(require,module,exports){
 var hmac = exports;
 
 var hash = require('../hash');
@@ -15688,7 +15688,7 @@ Hmac.prototype.digest = function digest(enc) {
   return this.outer.digest(enc);
 };
 
-},{"../hash":85}],88:[function(require,module,exports){
+},{"../hash":86}],89:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 
@@ -15834,7 +15834,7 @@ var sh = [
   8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
 ];
 
-},{"../hash":85}],89:[function(require,module,exports){
+},{"../hash":86}],90:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -16400,7 +16400,7 @@ function g1_512_lo(xh, xl) {
   return r;
 }
 
-},{"../hash":85}],90:[function(require,module,exports){
+},{"../hash":86}],91:[function(require,module,exports){
 var utils = exports;
 var inherits = require('inherits');
 
@@ -16659,7 +16659,7 @@ function shr64_lo(ah, al, num) {
 };
 exports.shr64_lo = shr64_lo;
 
-},{"inherits":94}],91:[function(require,module,exports){
+},{"inherits":95}],92:[function(require,module,exports){
 'use strict';
 
 var hash = require('hash.js');
@@ -16774,7 +16774,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
   return utils.encode(res, enc);
 };
 
-},{"hash.js":85,"minimalistic-assert":98,"minimalistic-crypto-utils":99}],92:[function(require,module,exports){
+},{"hash.js":86,"minimalistic-assert":99,"minimalistic-crypto-utils":100}],93:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -16860,7 +16860,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],93:[function(require,module,exports){
+},{}],94:[function(require,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -16871,7 +16871,7 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],94:[function(require,module,exports){
+},{}],95:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -16896,7 +16896,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],95:[function(require,module,exports){
+},{}],96:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -16919,14 +16919,14 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],96:[function(require,module,exports){
+},{}],97:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],97:[function(require,module,exports){
+},{}],98:[function(require,module,exports){
 var bn = require('bn.js');
 var brorand = require('brorand');
 
@@ -17041,7 +17041,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return false;
 };
 
-},{"bn.js":18,"brorand":19}],98:[function(require,module,exports){
+},{"bn.js":18,"brorand":19}],99:[function(require,module,exports){
 module.exports = assert;
 
 function assert(val, msg) {
@@ -17054,7 +17054,7 @@ assert.equal = function assertEqual(l, r, msg) {
     throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
 };
 
-},{}],99:[function(require,module,exports){
+},{}],100:[function(require,module,exports){
 'use strict';
 
 var utils = exports;
@@ -17114,7 +17114,7 @@ utils.encode = function encode(arr, enc) {
     return arr;
 };
 
-},{}],100:[function(require,module,exports){
+},{}],101:[function(require,module,exports){
 exports.endianness = function () { return 'LE' };
 
 exports.hostname = function () {
@@ -17161,7 +17161,7 @@ exports.tmpdir = exports.tmpDir = function () {
 
 exports.EOL = '\n';
 
-},{}],101:[function(require,module,exports){
+},{}],102:[function(require,module,exports){
 module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 "2.16.840.1.101.3.4.1.3": "aes-128-ofb",
@@ -17175,7 +17175,7 @@ module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.43": "aes-256-ofb",
 "2.16.840.1.101.3.4.1.44": "aes-256-cfb"
 }
-},{}],102:[function(require,module,exports){
+},{}],103:[function(require,module,exports){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
 'use strict'
@@ -17299,7 +17299,7 @@ exports.signature = asn1.define('signature', function () {
   )
 })
 
-},{"./certificate":103,"asn1.js":2}],103:[function(require,module,exports){
+},{"./certificate":104,"asn1.js":2}],104:[function(require,module,exports){
 // from https://github.com/Rantanen/node-dtls/blob/25a7dc861bda38cfeac93a723500eea4f0ac2e86/Certificate.js
 // thanks to @Rantanen
 
@@ -17389,7 +17389,7 @@ var X509Certificate = asn.define('X509Certificate', function () {
 
 module.exports = X509Certificate
 
-},{"asn1.js":2}],104:[function(require,module,exports){
+},{"asn1.js":2}],105:[function(require,module,exports){
 (function (Buffer){
 // adapted from https://github.com/apatil/pemstrip
 var findProc = /Proc-Type: 4,ENCRYPTED\n\r?DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\n\r?\n\r?([0-9A-z\n\r\+\/\=]+)\n\r?/m
@@ -17423,7 +17423,7 @@ module.exports = function (okey, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"browserify-aes":23,"buffer":48,"evp_bytestokey":84}],105:[function(require,module,exports){
+},{"browserify-aes":23,"buffer":47,"evp_bytestokey":84}],106:[function(require,module,exports){
 (function (Buffer){
 var asn1 = require('./asn1')
 var aesid = require('./aesid.json')
@@ -17533,7 +17533,7 @@ function decrypt (data, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aesid.json":101,"./asn1":102,"./fixProc":104,"browserify-aes":23,"buffer":48,"pbkdf2":107}],106:[function(require,module,exports){
+},{"./aesid.json":102,"./asn1":103,"./fixProc":105,"browserify-aes":23,"buffer":47,"pbkdf2":108}],107:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -17761,26 +17761,118 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":110}],107:[function(require,module,exports){
-(function (process,Buffer){
-var createHmac = require('create-hmac')
-var checkParameters = require('./precondition')
+},{"_process":114}],108:[function(require,module,exports){
 
-exports.pbkdf2 = function (password, salt, iterations, keylen, digest, callback) {
+exports.pbkdf2 = require('./lib/async')
+
+exports.pbkdf2Sync = require('./lib/sync')
+
+},{"./lib/async":109,"./lib/sync":112}],109:[function(require,module,exports){
+(function (process,global){
+var checkParameters = require('./precondition')
+var defaultEncoding = require('./default-encoding')
+var sync = require('./sync')
+var Buffer = require('safe-buffer').Buffer
+
+var ZERO_BUF
+var subtle = global.crypto && global.crypto.subtle
+var toBrowser = {
+  'sha': 'SHA-1',
+  'sha-1': 'SHA-1',
+  'sha1': 'SHA-1',
+  'sha256': 'SHA-256',
+  'sha-256': 'SHA-256',
+  'sha384': 'SHA-384',
+  'sha-384': 'SHA-384',
+  'sha-512': 'SHA-512',
+  'sha512': 'SHA-512'
+}
+var checks = []
+function checkNative (algo) {
+  if (global.process && !global.process.browser) {
+    return Promise.resolve(false)
+  }
+  if (!subtle || !subtle.importKey || !subtle.deriveBits) {
+    return Promise.resolve(false)
+  }
+  if (checks[algo] !== undefined) {
+    return checks[algo]
+  }
+  ZERO_BUF = ZERO_BUF || Buffer.alloc(8)
+  var prom = browserPbkdf2(ZERO_BUF, ZERO_BUF, 10, 128, algo)
+    .then(function () {
+      return true
+    }).catch(function () {
+      return false
+    })
+  checks[algo] = prom
+  return prom
+}
+function browserPbkdf2 (password, salt, iterations, length, algo) {
+  return subtle.importKey(
+    'raw', password, {name: 'PBKDF2'}, false, ['deriveBits']
+  ).then(function (key) {
+    return subtle.deriveBits({
+      name: 'PBKDF2',
+      salt: salt,
+      iterations: iterations,
+      hash: {
+        name: algo
+      }
+    }, key, length << 3)
+  }).then(function (res) {
+    return Buffer.from(res)
+  })
+}
+function resolvePromise (promise, callback) {
+  promise.then(function (out) {
+    process.nextTick(function () {
+      callback(null, out)
+    })
+  }, function (e) {
+    process.nextTick(function () {
+      callback(e)
+    })
+  })
+}
+module.exports = function (password, salt, iterations, keylen, digest, callback) {
+  if (!Buffer.isBuffer(password)) password = Buffer.from(password, defaultEncoding)
+  if (!Buffer.isBuffer(salt)) salt = Buffer.from(salt, defaultEncoding)
+
+  checkParameters(iterations, keylen)
   if (typeof digest === 'function') {
     callback = digest
     digest = undefined
   }
-
-  checkParameters(iterations, keylen)
   if (typeof callback !== 'function') throw new Error('No callback provided to pbkdf2')
 
-  setTimeout(function () {
-    callback(null, exports.pbkdf2Sync(password, salt, iterations, keylen, digest))
-  })
+  digest = digest || 'sha1'
+  var algo = toBrowser[digest.toLowerCase()]
+  if (!algo || typeof global.Promise !== 'function') {
+    return process.nextTick(function () {
+      var out
+      try {
+        out = sync(password, salt, iterations, keylen, digest)
+      } catch (e) {
+        return callback(e)
+      }
+      callback(null, out)
+    })
+  }
+  resolvePromise(checkNative(algo).then(function (resp) {
+    if (resp) {
+      return browserPbkdf2(password, salt, iterations, keylen, algo)
+    } else {
+      return sync(password, salt, iterations, keylen, digest)
+    }
+  }), callback)
 }
 
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./default-encoding":110,"./precondition":111,"./sync":112,"_process":114,"safe-buffer":136}],110:[function(require,module,exports){
+(function (process){
 var defaultEncoding
+/* istanbul ignore next */
 if (process.browser) {
   defaultEncoding = 'utf-8'
 } else {
@@ -17788,52 +17880,10 @@ if (process.browser) {
 
   defaultEncoding = pVersionMajor >= 6 ? 'utf-8' : 'binary'
 }
+module.exports = defaultEncoding
 
-exports.pbkdf2Sync = function (password, salt, iterations, keylen, digest) {
-  if (!Buffer.isBuffer(password)) password = new Buffer(password, defaultEncoding)
-  if (!Buffer.isBuffer(salt)) salt = new Buffer(salt, defaultEncoding)
-
-  checkParameters(iterations, keylen)
-
-  digest = digest || 'sha1'
-
-  var hLen
-  var l = 1
-  var DK = new Buffer(keylen)
-  var block1 = new Buffer(salt.length + 4)
-  salt.copy(block1, 0, 0, salt.length)
-
-  var r
-  var T
-
-  for (var i = 1; i <= l; i++) {
-    block1.writeUInt32BE(i, salt.length)
-    var U = createHmac(digest, password).update(block1).digest()
-
-    if (!hLen) {
-      hLen = U.length
-      T = new Buffer(hLen)
-      l = Math.ceil(keylen / hLen)
-      r = keylen - (l - 1) * hLen
-    }
-
-    U.copy(T, 0, 0, hLen)
-
-    for (var j = 1; j < iterations; j++) {
-      U = createHmac(digest, password).update(U).digest()
-      for (var k = 0; k < hLen; k++) T[k] ^= U[k]
-    }
-
-    var destPos = (i - 1) * hLen
-    var len = (i === l ? r : hLen)
-    T.copy(DK, destPos, 0, len)
-  }
-
-  return DK
-}
-
-}).call(this,require('_process'),require("buffer").Buffer)
-},{"./precondition":108,"_process":110,"buffer":48,"create-hmac":55}],108:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":114}],111:[function(require,module,exports){
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
 module.exports = function (iterations, keylen) {
   if (typeof iterations !== 'number') {
@@ -17853,7 +17903,111 @@ module.exports = function (iterations, keylen) {
   }
 }
 
-},{}],109:[function(require,module,exports){
+},{}],112:[function(require,module,exports){
+var md5 = require('create-hash/md5')
+var rmd160 = require('ripemd160')
+var sha = require('sha.js')
+
+var checkParameters = require('./precondition')
+var defaultEncoding = require('./default-encoding')
+var Buffer = require('safe-buffer').Buffer
+var ZEROS = Buffer.alloc(128)
+var sizes = {
+  md5: 16,
+  sha1: 20,
+  sha224: 28,
+  sha256: 32,
+  sha384: 48,
+  sha512: 64,
+  rmd160: 20,
+  ripemd160: 20
+}
+function Hmac (alg, key, saltLen) {
+  var hash = getDigest(alg)
+  var blocksize = (alg === 'sha512' || alg === 'sha384') ? 128 : 64
+
+  if (key.length > blocksize) {
+    key = hash(key)
+  } else if (key.length < blocksize) {
+    key = Buffer.concat([key, ZEROS], blocksize)
+  }
+
+  var ipad = Buffer.allocUnsafe(blocksize + sizes[alg])
+  var opad = Buffer.allocUnsafe(blocksize + sizes[alg])
+  for (var i = 0; i < blocksize; i++) {
+    ipad[i] = key[i] ^ 0x36
+    opad[i] = key[i] ^ 0x5C
+  }
+
+  var ipad1 = Buffer.allocUnsafe(blocksize + saltLen + 4)
+  ipad.copy(ipad1, 0, 0, blocksize)
+  this.ipad1 = ipad1
+  this.ipad2 = ipad
+  this.opad = opad
+  this.alg = alg
+  this.blocksize = blocksize
+  this.hash = hash
+  this.size = sizes[alg]
+}
+
+Hmac.prototype.run = function (data, ipad) {
+  data.copy(ipad, this.blocksize)
+  var h = this.hash(ipad)
+  h.copy(this.opad, this.blocksize)
+  return this.hash(this.opad)
+}
+
+function getDigest (alg) {
+  if (alg === 'rmd160' || alg === 'ripemd160') return rmd160
+  if (alg === 'md5') return md5
+  return shaFunc
+
+  function shaFunc (data) {
+    return sha(alg).update(data).digest()
+  }
+}
+
+module.exports = function (password, salt, iterations, keylen, digest) {
+  if (!Buffer.isBuffer(password)) password = Buffer.from(password, defaultEncoding)
+  if (!Buffer.isBuffer(salt)) salt = Buffer.from(salt, defaultEncoding)
+
+  checkParameters(iterations, keylen)
+
+  digest = digest || 'sha1'
+
+  var hmac = new Hmac(digest, password, salt.length)
+
+  var DK = Buffer.allocUnsafe(keylen)
+  var block1 = Buffer.allocUnsafe(salt.length + 4)
+  salt.copy(block1, 0, 0, salt.length)
+
+  var U, j, destPos, len
+
+  var hLen = hmac.size
+  var T = Buffer.allocUnsafe(hLen)
+  var l = Math.ceil(keylen / hLen)
+  var r = keylen - (l - 1) * hLen
+
+  for (var i = 1; i <= l; i++) {
+    block1.writeUInt32BE(i, salt.length)
+    U = hmac.run(block1, hmac.ipad1)
+
+    U.copy(T, 0, 0, hLen)
+
+    for (j = 1; j < iterations; j++) {
+      U = hmac.run(U, hmac.ipad2)
+      for (var k = 0; k < hLen; k++) T[k] ^= U[k]
+    }
+
+    destPos = (i - 1) * hLen
+    len = (i === l ? r : hLen)
+    T.copy(DK, destPos, 0, len)
+  }
+
+  return DK
+}
+
+},{"./default-encoding":110,"./precondition":111,"create-hash/md5":53,"ripemd160":135,"safe-buffer":136,"sha.js":138}],113:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -17900,7 +18054,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":110}],110:[function(require,module,exports){
+},{"_process":114}],114:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -18086,7 +18240,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],111:[function(require,module,exports){
+},{}],115:[function(require,module,exports){
 exports.publicEncrypt = require('./publicEncrypt');
 exports.privateDecrypt = require('./privateDecrypt');
 
@@ -18097,7 +18251,7 @@ exports.privateEncrypt = function privateEncrypt(key, buf) {
 exports.publicDecrypt = function publicDecrypt(key, buf) {
   return exports.privateDecrypt(key, buf, true);
 };
-},{"./privateDecrypt":113,"./publicEncrypt":114}],112:[function(require,module,exports){
+},{"./privateDecrypt":117,"./publicEncrypt":118}],116:[function(require,module,exports){
 (function (Buffer){
 var createHash = require('create-hash');
 module.exports = function (seed, len) {
@@ -18116,7 +18270,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"create-hash":52}],113:[function(require,module,exports){
+},{"buffer":47,"create-hash":51}],117:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -18227,7 +18381,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":112,"./withPublic":115,"./xor":116,"bn.js":18,"browserify-rsa":39,"buffer":48,"create-hash":52,"parse-asn1":105}],114:[function(require,module,exports){
+},{"./mgf":116,"./withPublic":119,"./xor":120,"bn.js":18,"browserify-rsa":39,"buffer":47,"create-hash":51,"parse-asn1":106}],118:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var randomBytes = require('randombytes');
@@ -18325,7 +18479,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":112,"./withPublic":115,"./xor":116,"bn.js":18,"browserify-rsa":39,"buffer":48,"create-hash":52,"parse-asn1":105,"randombytes":117}],115:[function(require,module,exports){
+},{"./mgf":116,"./withPublic":119,"./xor":120,"bn.js":18,"browserify-rsa":39,"buffer":47,"create-hash":51,"parse-asn1":106,"randombytes":121}],119:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 function withPublic(paddedMsg, key) {
@@ -18338,7 +18492,7 @@ function withPublic(paddedMsg, key) {
 
 module.exports = withPublic;
 }).call(this,require("buffer").Buffer)
-},{"bn.js":18,"buffer":48}],116:[function(require,module,exports){
+},{"bn.js":18,"buffer":47}],120:[function(require,module,exports){
 module.exports = function xor(a, b) {
   var len = a.length;
   var i = -1;
@@ -18347,14 +18501,15 @@ module.exports = function xor(a, b) {
   }
   return a
 };
-},{}],117:[function(require,module,exports){
-(function (process,global,Buffer){
+},{}],121:[function(require,module,exports){
+(function (process,global){
 'use strict'
 
 function oldBrowser () {
   throw new Error('secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11')
 }
 
+var Buffer = require('safe-buffer').Buffer
 var crypto = global.crypto || global.msCrypto
 
 if (crypto && crypto.getRandomValues) {
@@ -18374,8 +18529,9 @@ function randomBytes (size, cb) {
   if (size > 0) {  // getRandomValues fails on IE if size == 0
     crypto.getRandomValues(rawBytes)
   }
-  // phantomjs doesn't like a buffer being passed here
-  var bytes = new Buffer(rawBytes.buffer)
+
+  // XXX: phantomjs doesn't like a buffer being passed here
+  var bytes = Buffer.from(rawBytes.buffer)
 
   if (typeof cb === 'function') {
     return process.nextTick(function () {
@@ -18386,11 +18542,73 @@ function randomBytes (size, cb) {
   return bytes
 }
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"_process":110,"buffer":48}],118:[function(require,module,exports){
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"_process":114,"safe-buffer":122}],122:[function(require,module,exports){
+/* eslint-disable node/no-deprecated-api */
+var buffer = require('buffer')
+var Buffer = buffer.Buffer
+
+if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow) {
+  module.exports = buffer
+} else {
+  // Copy properties from require('buffer')
+  Object.keys(buffer).forEach(function (prop) {
+    exports[prop] = buffer[prop]
+  })
+  exports.Buffer = SafeBuffer
+}
+
+function SafeBuffer (arg, encodingOrOffset, length) {
+  return Buffer(arg, encodingOrOffset, length)
+}
+
+// Copy static methods from Buffer
+Object.keys(Buffer).forEach(function (prop) {
+  SafeBuffer[prop] = Buffer[prop]
+})
+
+SafeBuffer.from = function (arg, encodingOrOffset, length) {
+  if (typeof arg === 'number') {
+    throw new TypeError('Argument must not be a number')
+  }
+  return Buffer(arg, encodingOrOffset, length)
+}
+
+SafeBuffer.alloc = function (size, fill, encoding) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  var buf = Buffer(size)
+  if (fill !== undefined) {
+    if (typeof encoding === 'string') {
+      buf.fill(fill, encoding)
+    } else {
+      buf.fill(fill)
+    }
+  } else {
+    buf.fill(0)
+  }
+  return buf
+}
+
+SafeBuffer.allocUnsafe = function (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  return Buffer(size)
+}
+
+SafeBuffer.allocUnsafeSlow = function (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('Argument must be a number')
+  }
+  return buffer.SlowBuffer(size)
+}
+
+},{"buffer":47}],123:[function(require,module,exports){
 module.exports = require('./lib/_stream_duplex.js');
 
-},{"./lib/_stream_duplex.js":119}],119:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":124}],124:[function(require,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -18466,7 +18684,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":121,"./_stream_writable":123,"core-util-is":50,"inherits":94,"process-nextick-args":109}],120:[function(require,module,exports){
+},{"./_stream_readable":126,"./_stream_writable":128,"core-util-is":49,"inherits":95,"process-nextick-args":113}],125:[function(require,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -18493,7 +18711,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":122,"core-util-is":50,"inherits":94}],121:[function(require,module,exports){
+},{"./_stream_transform":127,"core-util-is":49,"inherits":95}],126:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -18525,9 +18743,8 @@ var EElistenerCount = function (emitter, type) {
 var Stream = require('./internal/streams/stream');
 /*</replacement>*/
 
-var Buffer = require('buffer').Buffer;
 /*<replacement>*/
-var bufferShim = require('buffer-shims');
+var Buffer = require('safe-buffer').Buffer;
 /*</replacement>*/
 
 /*<replacement>*/
@@ -18660,7 +18877,7 @@ Readable.prototype.push = function (chunk, encoding) {
   if (!state.objectMode && typeof chunk === 'string') {
     encoding = encoding || state.defaultEncoding;
     if (encoding !== state.encoding) {
-      chunk = bufferShim.from(chunk, encoding);
+      chunk = Buffer.from(chunk, encoding);
       encoding = '';
     }
   }
@@ -18980,7 +19197,7 @@ Readable.prototype.pipe = function (dest, pipeOpts) {
 
   var doEnd = (!pipeOpts || pipeOpts.end !== false) && dest !== process.stdout && dest !== process.stderr;
 
-  var endFn = doEnd ? onend : cleanup;
+  var endFn = doEnd ? onend : unpipe;
   if (state.endEmitted) processNextTick(endFn);else src.once('end', endFn);
 
   dest.on('unpipe', onunpipe);
@@ -19013,7 +19230,7 @@ Readable.prototype.pipe = function (dest, pipeOpts) {
     dest.removeListener('error', onerror);
     dest.removeListener('unpipe', onunpipe);
     src.removeListener('end', onend);
-    src.removeListener('end', cleanup);
+    src.removeListener('end', unpipe);
     src.removeListener('data', ondata);
 
     cleanedUp = true;
@@ -19370,7 +19587,7 @@ function copyFromBufferString(n, list) {
 // This function is designed to be inlinable, so please take care when making
 // changes to the function body.
 function copyFromBuffer(n, list) {
-  var ret = bufferShim.allocUnsafe(n);
+  var ret = Buffer.allocUnsafe(n);
   var p = list.head;
   var c = 1;
   p.data.copy(ret);
@@ -19431,7 +19648,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":119,"./internal/streams/BufferList":124,"./internal/streams/stream":125,"_process":110,"buffer":48,"buffer-shims":46,"core-util-is":50,"events":83,"inherits":94,"isarray":96,"process-nextick-args":109,"string_decoder/":126,"util":20}],122:[function(require,module,exports){
+},{"./_stream_duplex":124,"./internal/streams/BufferList":129,"./internal/streams/stream":130,"_process":114,"core-util-is":49,"events":83,"inherits":95,"isarray":97,"process-nextick-args":113,"safe-buffer":136,"string_decoder/":146,"util":20}],127:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -19614,7 +19831,7 @@ function done(stream, er, data) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":119,"core-util-is":50,"inherits":94}],123:[function(require,module,exports){
+},{"./_stream_duplex":124,"core-util-is":49,"inherits":95}],128:[function(require,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -19653,9 +19870,8 @@ var internalUtil = {
 var Stream = require('./internal/streams/stream');
 /*</replacement>*/
 
-var Buffer = require('buffer').Buffer;
 /*<replacement>*/
-var bufferShim = require('buffer-shims');
+var Buffer = require('safe-buffer').Buffer;
 /*</replacement>*/
 
 util.inherits(Writable, Stream);
@@ -19911,7 +20127,7 @@ Writable.prototype.setDefaultEncoding = function setDefaultEncoding(encoding) {
 
 function decodeChunk(state, chunk, encoding) {
   if (!state.objectMode && state.decodeStrings !== false && typeof chunk === 'string') {
-    chunk = bufferShim.from(chunk, encoding);
+    chunk = Buffer.from(chunk, encoding);
   }
   return chunk;
 }
@@ -20161,12 +20377,12 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":119,"./internal/streams/stream":125,"_process":110,"buffer":48,"buffer-shims":46,"core-util-is":50,"inherits":94,"process-nextick-args":109,"util-deprecate":142}],124:[function(require,module,exports){
+},{"./_stream_duplex":124,"./internal/streams/stream":130,"_process":114,"core-util-is":49,"inherits":95,"process-nextick-args":113,"safe-buffer":136,"util-deprecate":147}],129:[function(require,module,exports){
 'use strict';
 
-var Buffer = require('buffer').Buffer;
 /*<replacement>*/
-var bufferShim = require('buffer-shims');
+
+var Buffer = require('safe-buffer').Buffer;
 /*</replacement>*/
 
 module.exports = BufferList;
@@ -20214,9 +20430,9 @@ BufferList.prototype.join = function (s) {
 };
 
 BufferList.prototype.concat = function (n) {
-  if (this.length === 0) return bufferShim.alloc(0);
+  if (this.length === 0) return Buffer.alloc(0);
   if (this.length === 1) return this.head.data;
-  var ret = bufferShim.allocUnsafe(n >>> 0);
+  var ret = Buffer.allocUnsafe(n >>> 0);
   var p = this.head;
   var i = 0;
   while (p) {
@@ -20226,287 +20442,13 @@ BufferList.prototype.concat = function (n) {
   }
   return ret;
 };
-},{"buffer":48,"buffer-shims":46}],125:[function(require,module,exports){
+},{"safe-buffer":136}],130:[function(require,module,exports){
 module.exports = require('events').EventEmitter;
 
-},{"events":83}],126:[function(require,module,exports){
-'use strict';
-
-var Buffer = require('buffer').Buffer;
-var bufferShim = require('buffer-shims');
-
-var isEncoding = Buffer.isEncoding || function (encoding) {
-  encoding = '' + encoding;
-  switch (encoding && encoding.toLowerCase()) {
-    case 'hex':case 'utf8':case 'utf-8':case 'ascii':case 'binary':case 'base64':case 'ucs2':case 'ucs-2':case 'utf16le':case 'utf-16le':case 'raw':
-      return true;
-    default:
-      return false;
-  }
-};
-
-function _normalizeEncoding(enc) {
-  if (!enc) return 'utf8';
-  var retried;
-  while (true) {
-    switch (enc) {
-      case 'utf8':
-      case 'utf-8':
-        return 'utf8';
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return 'utf16le';
-      case 'latin1':
-      case 'binary':
-        return 'latin1';
-      case 'base64':
-      case 'ascii':
-      case 'hex':
-        return enc;
-      default:
-        if (retried) return; // undefined
-        enc = ('' + enc).toLowerCase();
-        retried = true;
-    }
-  }
-};
-
-// Do not cache `Buffer.isEncoding` when checking encoding names as some
-// modules monkey-patch it to support additional encodings
-function normalizeEncoding(enc) {
-  var nenc = _normalizeEncoding(enc);
-  if (typeof nenc !== 'string' && (Buffer.isEncoding === isEncoding || !isEncoding(enc))) throw new Error('Unknown encoding: ' + enc);
-  return nenc || enc;
-}
-
-// StringDecoder provides an interface for efficiently splitting a series of
-// buffers into a series of JS strings without breaking apart multi-byte
-// characters.
-exports.StringDecoder = StringDecoder;
-function StringDecoder(encoding) {
-  this.encoding = normalizeEncoding(encoding);
-  var nb;
-  switch (this.encoding) {
-    case 'utf16le':
-      this.text = utf16Text;
-      this.end = utf16End;
-      nb = 4;
-      break;
-    case 'utf8':
-      this.fillLast = utf8FillLast;
-      nb = 4;
-      break;
-    case 'base64':
-      this.text = base64Text;
-      this.end = base64End;
-      nb = 3;
-      break;
-    default:
-      this.write = simpleWrite;
-      this.end = simpleEnd;
-      return;
-  }
-  this.lastNeed = 0;
-  this.lastTotal = 0;
-  this.lastChar = bufferShim.allocUnsafe(nb);
-}
-
-StringDecoder.prototype.write = function (buf) {
-  if (buf.length === 0) return '';
-  var r;
-  var i;
-  if (this.lastNeed) {
-    r = this.fillLast(buf);
-    if (r === undefined) return '';
-    i = this.lastNeed;
-    this.lastNeed = 0;
-  } else {
-    i = 0;
-  }
-  if (i < buf.length) return r ? r + this.text(buf, i) : this.text(buf, i);
-  return r || '';
-};
-
-StringDecoder.prototype.end = utf8End;
-
-// Returns only complete characters in a Buffer
-StringDecoder.prototype.text = utf8Text;
-
-// Attempts to complete a partial non-UTF-8 character using bytes from a Buffer
-StringDecoder.prototype.fillLast = function (buf) {
-  if (this.lastNeed <= buf.length) {
-    buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed);
-    return this.lastChar.toString(this.encoding, 0, this.lastTotal);
-  }
-  buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, buf.length);
-  this.lastNeed -= buf.length;
-};
-
-// Checks the type of a UTF-8 byte, whether it's ASCII, a leading byte, or a
-// continuation byte.
-function utf8CheckByte(byte) {
-  if (byte <= 0x7F) return 0;else if (byte >> 5 === 0x06) return 2;else if (byte >> 4 === 0x0E) return 3;else if (byte >> 3 === 0x1E) return 4;
-  return -1;
-}
-
-// Checks at most 3 bytes at the end of a Buffer in order to detect an
-// incomplete multi-byte UTF-8 character. The total number of bytes (2, 3, or 4)
-// needed to complete the UTF-8 character (if applicable) are returned.
-function utf8CheckIncomplete(self, buf, i) {
-  var j = buf.length - 1;
-  if (j < i) return 0;
-  var nb = utf8CheckByte(buf[j]);
-  if (nb >= 0) {
-    if (nb > 0) self.lastNeed = nb - 1;
-    return nb;
-  }
-  if (--j < i) return 0;
-  nb = utf8CheckByte(buf[j]);
-  if (nb >= 0) {
-    if (nb > 0) self.lastNeed = nb - 2;
-    return nb;
-  }
-  if (--j < i) return 0;
-  nb = utf8CheckByte(buf[j]);
-  if (nb >= 0) {
-    if (nb > 0) {
-      if (nb === 2) nb = 0;else self.lastNeed = nb - 3;
-    }
-    return nb;
-  }
-  return 0;
-}
-
-// Validates as many continuation bytes for a multi-byte UTF-8 character as
-// needed or are available. If we see a non-continuation byte where we expect
-// one, we "replace" the validated continuation bytes we've seen so far with
-// UTF-8 replacement characters ('\ufffd'), to match v8's UTF-8 decoding
-// behavior. The continuation byte check is included three times in the case
-// where all of the continuation bytes for a character exist in the same buffer.
-// It is also done this way as a slight performance increase instead of using a
-// loop.
-function utf8CheckExtraBytes(self, buf, p) {
-  if ((buf[0] & 0xC0) !== 0x80) {
-    self.lastNeed = 0;
-    return '\ufffd'.repeat(p);
-  }
-  if (self.lastNeed > 1 && buf.length > 1) {
-    if ((buf[1] & 0xC0) !== 0x80) {
-      self.lastNeed = 1;
-      return '\ufffd'.repeat(p + 1);
-    }
-    if (self.lastNeed > 2 && buf.length > 2) {
-      if ((buf[2] & 0xC0) !== 0x80) {
-        self.lastNeed = 2;
-        return '\ufffd'.repeat(p + 2);
-      }
-    }
-  }
-}
-
-// Attempts to complete a multi-byte UTF-8 character using bytes from a Buffer.
-function utf8FillLast(buf) {
-  var p = this.lastTotal - this.lastNeed;
-  var r = utf8CheckExtraBytes(this, buf, p);
-  if (r !== undefined) return r;
-  if (this.lastNeed <= buf.length) {
-    buf.copy(this.lastChar, p, 0, this.lastNeed);
-    return this.lastChar.toString(this.encoding, 0, this.lastTotal);
-  }
-  buf.copy(this.lastChar, p, 0, buf.length);
-  this.lastNeed -= buf.length;
-}
-
-// Returns all complete UTF-8 characters in a Buffer. If the Buffer ended on a
-// partial character, the character's bytes are buffered until the required
-// number of bytes are available.
-function utf8Text(buf, i) {
-  var total = utf8CheckIncomplete(this, buf, i);
-  if (!this.lastNeed) return buf.toString('utf8', i);
-  this.lastTotal = total;
-  var end = buf.length - (total - this.lastNeed);
-  buf.copy(this.lastChar, 0, end);
-  return buf.toString('utf8', i, end);
-}
-
-// For UTF-8, a replacement character for each buffered byte of a (partial)
-// character needs to be added to the output.
-function utf8End(buf) {
-  var r = buf && buf.length ? this.write(buf) : '';
-  if (this.lastNeed) return r + '\ufffd'.repeat(this.lastTotal - this.lastNeed);
-  return r;
-}
-
-// UTF-16LE typically needs two bytes per character, but even if we have an even
-// number of bytes available, we need to check if we end on a leading/high
-// surrogate. In that case, we need to wait for the next two bytes in order to
-// decode the last character properly.
-function utf16Text(buf, i) {
-  if ((buf.length - i) % 2 === 0) {
-    var r = buf.toString('utf16le', i);
-    if (r) {
-      var c = r.charCodeAt(r.length - 1);
-      if (c >= 0xD800 && c <= 0xDBFF) {
-        this.lastNeed = 2;
-        this.lastTotal = 4;
-        this.lastChar[0] = buf[buf.length - 2];
-        this.lastChar[1] = buf[buf.length - 1];
-        return r.slice(0, -1);
-      }
-    }
-    return r;
-  }
-  this.lastNeed = 1;
-  this.lastTotal = 2;
-  this.lastChar[0] = buf[buf.length - 1];
-  return buf.toString('utf16le', i, buf.length - 1);
-}
-
-// For UTF-16LE we do not explicitly append special replacement characters if we
-// end on a partial character, we simply let v8 handle that.
-function utf16End(buf) {
-  var r = buf && buf.length ? this.write(buf) : '';
-  if (this.lastNeed) {
-    var end = this.lastTotal - this.lastNeed;
-    return r + this.lastChar.toString('utf16le', 0, end);
-  }
-  return r;
-}
-
-function base64Text(buf, i) {
-  var n = (buf.length - i) % 3;
-  if (n === 0) return buf.toString('base64', i);
-  this.lastNeed = 3 - n;
-  this.lastTotal = 3;
-  if (n === 1) {
-    this.lastChar[0] = buf[buf.length - 1];
-  } else {
-    this.lastChar[0] = buf[buf.length - 2];
-    this.lastChar[1] = buf[buf.length - 1];
-  }
-  return buf.toString('base64', i, buf.length - n);
-}
-
-function base64End(buf) {
-  var r = buf && buf.length ? this.write(buf) : '';
-  if (this.lastNeed) return r + this.lastChar.toString('base64', 0, 3 - this.lastNeed);
-  return r;
-}
-
-// Pass bytes on through for single-byte encodings (e.g. ascii, latin1, hex)
-function simpleWrite(buf) {
-  return buf.toString(this.encoding);
-}
-
-function simpleEnd(buf) {
-  return buf && buf.length ? this.write(buf) : '';
-}
-},{"buffer":48,"buffer-shims":46}],127:[function(require,module,exports){
+},{"events":83}],131:[function(require,module,exports){
 module.exports = require('./readable').PassThrough
 
-},{"./readable":128}],128:[function(require,module,exports){
+},{"./readable":132}],132:[function(require,module,exports){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = exports;
 exports.Readable = exports;
@@ -20515,227 +20457,311 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":119,"./lib/_stream_passthrough.js":120,"./lib/_stream_readable.js":121,"./lib/_stream_transform.js":122,"./lib/_stream_writable.js":123}],129:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":124,"./lib/_stream_passthrough.js":125,"./lib/_stream_readable.js":126,"./lib/_stream_transform.js":127,"./lib/_stream_writable.js":128}],133:[function(require,module,exports){
 module.exports = require('./readable').Transform
 
-},{"./readable":128}],130:[function(require,module,exports){
+},{"./readable":132}],134:[function(require,module,exports){
 module.exports = require('./lib/_stream_writable.js');
 
-},{"./lib/_stream_writable.js":123}],131:[function(require,module,exports){
+},{"./lib/_stream_writable.js":128}],135:[function(require,module,exports){
 (function (Buffer){
-/*
-CryptoJS v3.1.2
-code.google.com/p/crypto-js
-(c) 2009-2013 by Jeff Mott. All rights reserved.
-code.google.com/p/crypto-js/wiki/License
-*/
-/** @preserve
-(c) 2012 by Cédric Mesnil. All rights reserved.
+'use strict'
+var inherits = require('inherits')
+var HashBase = require('hash-base')
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+function RIPEMD160 () {
+  HashBase.call(this, 64)
 
-    - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-    - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+  // state
+  this._a = 0x67452301
+  this._b = 0xefcdab89
+  this._c = 0x98badcfe
+  this._d = 0x10325476
+  this._e = 0xc3d2e1f0
+}
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+inherits(RIPEMD160, HashBase)
 
-// constants table
-var zl = [
-  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-  7, 4, 13, 1, 10, 6, 15, 3, 12, 0, 9, 5, 2, 14, 11, 8,
-  3, 10, 14, 4, 9, 15, 8, 1, 2, 7, 0, 6, 13, 11, 5, 12,
-  1, 9, 11, 10, 0, 8, 12, 4, 13, 3, 7, 15, 14, 5, 6, 2,
-  4, 0, 5, 9, 7, 12, 2, 10, 14, 1, 3, 8, 11, 6, 15, 13
-]
+RIPEMD160.prototype._update = function () {
+  var m = new Array(16)
+  for (var i = 0; i < 16; ++i) m[i] = this._block.readInt32LE(i * 4)
 
-var zr = [
-  5, 14, 7, 0, 9, 2, 11, 4, 13, 6, 15, 8, 1, 10, 3, 12,
-  6, 11, 3, 7, 0, 13, 5, 10, 14, 15, 8, 12, 4, 9, 1, 2,
-  15, 5, 1, 3, 7, 14, 6, 9, 11, 8, 12, 2, 10, 0, 4, 13,
-  8, 6, 4, 1, 3, 11, 15, 0, 5, 12, 2, 13, 9, 7, 10, 14,
-  12, 15, 10, 4, 1, 5, 8, 7, 6, 2, 13, 14, 0, 3, 9, 11
-]
+  var al = this._a
+  var bl = this._b
+  var cl = this._c
+  var dl = this._d
+  var el = this._e
 
-var sl = [
-  11, 14, 15, 12, 5, 8, 7, 9, 11, 13, 14, 15, 6, 7, 9, 8,
-  7, 6, 8, 13, 11, 9, 7, 15, 7, 12, 15, 9, 11, 7, 13, 12,
-  11, 13, 6, 7, 14, 9, 13, 15, 14, 8, 13, 6, 5, 12, 7, 5,
-  11, 12, 14, 15, 14, 15, 9, 8, 9, 14, 5, 6, 8, 6, 5, 12,
-  9, 15, 5, 11, 6, 8, 13, 12, 5, 12, 13, 14, 11, 8, 5, 6
-]
+  // Mj = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+  // K = 0x00000000
+  // Sj = 11, 14, 15, 12, 5, 8, 7, 9, 11, 13, 14, 15, 6, 7, 9, 8
+  al = fn1(al, bl, cl, dl, el, m[0], 0x00000000, 11); cl = rotl(cl, 10)
+  el = fn1(el, al, bl, cl, dl, m[1], 0x00000000, 14); bl = rotl(bl, 10)
+  dl = fn1(dl, el, al, bl, cl, m[2], 0x00000000, 15); al = rotl(al, 10)
+  cl = fn1(cl, dl, el, al, bl, m[3], 0x00000000, 12); el = rotl(el, 10)
+  bl = fn1(bl, cl, dl, el, al, m[4], 0x00000000, 5); dl = rotl(dl, 10)
+  al = fn1(al, bl, cl, dl, el, m[5], 0x00000000, 8); cl = rotl(cl, 10)
+  el = fn1(el, al, bl, cl, dl, m[6], 0x00000000, 7); bl = rotl(bl, 10)
+  dl = fn1(dl, el, al, bl, cl, m[7], 0x00000000, 9); al = rotl(al, 10)
+  cl = fn1(cl, dl, el, al, bl, m[8], 0x00000000, 11); el = rotl(el, 10)
+  bl = fn1(bl, cl, dl, el, al, m[9], 0x00000000, 13); dl = rotl(dl, 10)
+  al = fn1(al, bl, cl, dl, el, m[10], 0x00000000, 14); cl = rotl(cl, 10)
+  el = fn1(el, al, bl, cl, dl, m[11], 0x00000000, 15); bl = rotl(bl, 10)
+  dl = fn1(dl, el, al, bl, cl, m[12], 0x00000000, 6); al = rotl(al, 10)
+  cl = fn1(cl, dl, el, al, bl, m[13], 0x00000000, 7); el = rotl(el, 10)
+  bl = fn1(bl, cl, dl, el, al, m[14], 0x00000000, 9); dl = rotl(dl, 10)
+  al = fn1(al, bl, cl, dl, el, m[15], 0x00000000, 8); cl = rotl(cl, 10)
 
-var sr = [
-  8, 9, 9, 11, 13, 15, 15, 5, 7, 7, 8, 11, 14, 14, 12, 6,
-  9, 13, 15, 7, 12, 8, 9, 11, 7, 7, 12, 7, 6, 15, 13, 11,
-  9, 7, 15, 11, 8, 6, 6, 14, 12, 13, 5, 14, 13, 13, 7, 5,
-  15, 5, 8, 11, 14, 14, 6, 14, 6, 9, 12, 9, 12, 5, 15, 8,
-  8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
-]
+  // Mj = 7, 4, 13, 1, 10, 6, 15, 3, 12, 0, 9, 5, 2, 14, 11, 8
+  // K = 0x5a827999
+  // Sj = 7, 6, 8, 13, 11, 9, 7, 15, 7, 12, 15, 9, 11, 7, 13, 12
+  el = fn2(el, al, bl, cl, dl, m[7], 0x5a827999, 7); bl = rotl(bl, 10)
+  dl = fn2(dl, el, al, bl, cl, m[4], 0x5a827999, 6); al = rotl(al, 10)
+  cl = fn2(cl, dl, el, al, bl, m[13], 0x5a827999, 8); el = rotl(el, 10)
+  bl = fn2(bl, cl, dl, el, al, m[1], 0x5a827999, 13); dl = rotl(dl, 10)
+  al = fn2(al, bl, cl, dl, el, m[10], 0x5a827999, 11); cl = rotl(cl, 10)
+  el = fn2(el, al, bl, cl, dl, m[6], 0x5a827999, 9); bl = rotl(bl, 10)
+  dl = fn2(dl, el, al, bl, cl, m[15], 0x5a827999, 7); al = rotl(al, 10)
+  cl = fn2(cl, dl, el, al, bl, m[3], 0x5a827999, 15); el = rotl(el, 10)
+  bl = fn2(bl, cl, dl, el, al, m[12], 0x5a827999, 7); dl = rotl(dl, 10)
+  al = fn2(al, bl, cl, dl, el, m[0], 0x5a827999, 12); cl = rotl(cl, 10)
+  el = fn2(el, al, bl, cl, dl, m[9], 0x5a827999, 15); bl = rotl(bl, 10)
+  dl = fn2(dl, el, al, bl, cl, m[5], 0x5a827999, 9); al = rotl(al, 10)
+  cl = fn2(cl, dl, el, al, bl, m[2], 0x5a827999, 11); el = rotl(el, 10)
+  bl = fn2(bl, cl, dl, el, al, m[14], 0x5a827999, 7); dl = rotl(dl, 10)
+  al = fn2(al, bl, cl, dl, el, m[11], 0x5a827999, 13); cl = rotl(cl, 10)
+  el = fn2(el, al, bl, cl, dl, m[8], 0x5a827999, 12); bl = rotl(bl, 10)
 
-var hl = [0x00000000, 0x5A827999, 0x6ED9EBA1, 0x8F1BBCDC, 0xA953FD4E]
-var hr = [0x50A28BE6, 0x5C4DD124, 0x6D703EF3, 0x7A6D76E9, 0x00000000]
+  // Mj = 3, 10, 14, 4, 9, 15, 8, 1, 2, 7, 0, 6, 13, 11, 5, 12
+  // K = 0x6ed9eba1
+  // Sj = 11, 13, 6, 7, 14, 9, 13, 15, 14, 8, 13, 6, 5, 12, 7, 5
+  dl = fn3(dl, el, al, bl, cl, m[3], 0x6ed9eba1, 11); al = rotl(al, 10)
+  cl = fn3(cl, dl, el, al, bl, m[10], 0x6ed9eba1, 13); el = rotl(el, 10)
+  bl = fn3(bl, cl, dl, el, al, m[14], 0x6ed9eba1, 6); dl = rotl(dl, 10)
+  al = fn3(al, bl, cl, dl, el, m[4], 0x6ed9eba1, 7); cl = rotl(cl, 10)
+  el = fn3(el, al, bl, cl, dl, m[9], 0x6ed9eba1, 14); bl = rotl(bl, 10)
+  dl = fn3(dl, el, al, bl, cl, m[15], 0x6ed9eba1, 9); al = rotl(al, 10)
+  cl = fn3(cl, dl, el, al, bl, m[8], 0x6ed9eba1, 13); el = rotl(el, 10)
+  bl = fn3(bl, cl, dl, el, al, m[1], 0x6ed9eba1, 15); dl = rotl(dl, 10)
+  al = fn3(al, bl, cl, dl, el, m[2], 0x6ed9eba1, 14); cl = rotl(cl, 10)
+  el = fn3(el, al, bl, cl, dl, m[7], 0x6ed9eba1, 8); bl = rotl(bl, 10)
+  dl = fn3(dl, el, al, bl, cl, m[0], 0x6ed9eba1, 13); al = rotl(al, 10)
+  cl = fn3(cl, dl, el, al, bl, m[6], 0x6ed9eba1, 6); el = rotl(el, 10)
+  bl = fn3(bl, cl, dl, el, al, m[13], 0x6ed9eba1, 5); dl = rotl(dl, 10)
+  al = fn3(al, bl, cl, dl, el, m[11], 0x6ed9eba1, 12); cl = rotl(cl, 10)
+  el = fn3(el, al, bl, cl, dl, m[5], 0x6ed9eba1, 7); bl = rotl(bl, 10)
+  dl = fn3(dl, el, al, bl, cl, m[12], 0x6ed9eba1, 5); al = rotl(al, 10)
 
-function bytesToWords (bytes) {
-  var words = []
-  for (var i = 0, b = 0; i < bytes.length; i++, b += 8) {
-    words[b >>> 5] |= bytes[i] << (24 - b % 32)
+  // Mj = 1, 9, 11, 10, 0, 8, 12, 4, 13, 3, 7, 15, 14, 5, 6, 2
+  // K = 0x8f1bbcdc
+  // Sj = 11, 12, 14, 15, 14, 15, 9, 8, 9, 14, 5, 6, 8, 6, 5, 12
+  cl = fn4(cl, dl, el, al, bl, m[1], 0x8f1bbcdc, 11); el = rotl(el, 10)
+  bl = fn4(bl, cl, dl, el, al, m[9], 0x8f1bbcdc, 12); dl = rotl(dl, 10)
+  al = fn4(al, bl, cl, dl, el, m[11], 0x8f1bbcdc, 14); cl = rotl(cl, 10)
+  el = fn4(el, al, bl, cl, dl, m[10], 0x8f1bbcdc, 15); bl = rotl(bl, 10)
+  dl = fn4(dl, el, al, bl, cl, m[0], 0x8f1bbcdc, 14); al = rotl(al, 10)
+  cl = fn4(cl, dl, el, al, bl, m[8], 0x8f1bbcdc, 15); el = rotl(el, 10)
+  bl = fn4(bl, cl, dl, el, al, m[12], 0x8f1bbcdc, 9); dl = rotl(dl, 10)
+  al = fn4(al, bl, cl, dl, el, m[4], 0x8f1bbcdc, 8); cl = rotl(cl, 10)
+  el = fn4(el, al, bl, cl, dl, m[13], 0x8f1bbcdc, 9); bl = rotl(bl, 10)
+  dl = fn4(dl, el, al, bl, cl, m[3], 0x8f1bbcdc, 14); al = rotl(al, 10)
+  cl = fn4(cl, dl, el, al, bl, m[7], 0x8f1bbcdc, 5); el = rotl(el, 10)
+  bl = fn4(bl, cl, dl, el, al, m[15], 0x8f1bbcdc, 6); dl = rotl(dl, 10)
+  al = fn4(al, bl, cl, dl, el, m[14], 0x8f1bbcdc, 8); cl = rotl(cl, 10)
+  el = fn4(el, al, bl, cl, dl, m[5], 0x8f1bbcdc, 6); bl = rotl(bl, 10)
+  dl = fn4(dl, el, al, bl, cl, m[6], 0x8f1bbcdc, 5); al = rotl(al, 10)
+  cl = fn4(cl, dl, el, al, bl, m[2], 0x8f1bbcdc, 12); el = rotl(el, 10)
+
+  // Mj = 4, 0, 5, 9, 7, 12, 2, 10, 14, 1, 3, 8, 11, 6, 15, 13
+  // K = 0xa953fd4e
+  // Sj = 9, 15, 5, 11, 6, 8, 13, 12, 5, 12, 13, 14, 11, 8, 5, 6
+  bl = fn5(bl, cl, dl, el, al, m[4], 0xa953fd4e, 9); dl = rotl(dl, 10)
+  al = fn5(al, bl, cl, dl, el, m[0], 0xa953fd4e, 15); cl = rotl(cl, 10)
+  el = fn5(el, al, bl, cl, dl, m[5], 0xa953fd4e, 5); bl = rotl(bl, 10)
+  dl = fn5(dl, el, al, bl, cl, m[9], 0xa953fd4e, 11); al = rotl(al, 10)
+  cl = fn5(cl, dl, el, al, bl, m[7], 0xa953fd4e, 6); el = rotl(el, 10)
+  bl = fn5(bl, cl, dl, el, al, m[12], 0xa953fd4e, 8); dl = rotl(dl, 10)
+  al = fn5(al, bl, cl, dl, el, m[2], 0xa953fd4e, 13); cl = rotl(cl, 10)
+  el = fn5(el, al, bl, cl, dl, m[10], 0xa953fd4e, 12); bl = rotl(bl, 10)
+  dl = fn5(dl, el, al, bl, cl, m[14], 0xa953fd4e, 5); al = rotl(al, 10)
+  cl = fn5(cl, dl, el, al, bl, m[1], 0xa953fd4e, 12); el = rotl(el, 10)
+  bl = fn5(bl, cl, dl, el, al, m[3], 0xa953fd4e, 13); dl = rotl(dl, 10)
+  al = fn5(al, bl, cl, dl, el, m[8], 0xa953fd4e, 14); cl = rotl(cl, 10)
+  el = fn5(el, al, bl, cl, dl, m[11], 0xa953fd4e, 11); bl = rotl(bl, 10)
+  dl = fn5(dl, el, al, bl, cl, m[6], 0xa953fd4e, 8); al = rotl(al, 10)
+  cl = fn5(cl, dl, el, al, bl, m[15], 0xa953fd4e, 5); el = rotl(el, 10)
+  bl = fn5(bl, cl, dl, el, al, m[13], 0xa953fd4e, 6); dl = rotl(dl, 10)
+
+  var ar = this._a
+  var br = this._b
+  var cr = this._c
+  var dr = this._d
+  var er = this._e
+
+  // M'j = 5, 14, 7, 0, 9, 2, 11, 4, 13, 6, 15, 8, 1, 10, 3, 12
+  // K' = 0x50a28be6
+  // S'j = 8, 9, 9, 11, 13, 15, 15, 5, 7, 7, 8, 11, 14, 14, 12, 6
+  ar = fn5(ar, br, cr, dr, er, m[5], 0x50a28be6, 8); cr = rotl(cr, 10)
+  er = fn5(er, ar, br, cr, dr, m[14], 0x50a28be6, 9); br = rotl(br, 10)
+  dr = fn5(dr, er, ar, br, cr, m[7], 0x50a28be6, 9); ar = rotl(ar, 10)
+  cr = fn5(cr, dr, er, ar, br, m[0], 0x50a28be6, 11); er = rotl(er, 10)
+  br = fn5(br, cr, dr, er, ar, m[9], 0x50a28be6, 13); dr = rotl(dr, 10)
+  ar = fn5(ar, br, cr, dr, er, m[2], 0x50a28be6, 15); cr = rotl(cr, 10)
+  er = fn5(er, ar, br, cr, dr, m[11], 0x50a28be6, 15); br = rotl(br, 10)
+  dr = fn5(dr, er, ar, br, cr, m[4], 0x50a28be6, 5); ar = rotl(ar, 10)
+  cr = fn5(cr, dr, er, ar, br, m[13], 0x50a28be6, 7); er = rotl(er, 10)
+  br = fn5(br, cr, dr, er, ar, m[6], 0x50a28be6, 7); dr = rotl(dr, 10)
+  ar = fn5(ar, br, cr, dr, er, m[15], 0x50a28be6, 8); cr = rotl(cr, 10)
+  er = fn5(er, ar, br, cr, dr, m[8], 0x50a28be6, 11); br = rotl(br, 10)
+  dr = fn5(dr, er, ar, br, cr, m[1], 0x50a28be6, 14); ar = rotl(ar, 10)
+  cr = fn5(cr, dr, er, ar, br, m[10], 0x50a28be6, 14); er = rotl(er, 10)
+  br = fn5(br, cr, dr, er, ar, m[3], 0x50a28be6, 12); dr = rotl(dr, 10)
+  ar = fn5(ar, br, cr, dr, er, m[12], 0x50a28be6, 6); cr = rotl(cr, 10)
+
+  // M'j = 6, 11, 3, 7, 0, 13, 5, 10, 14, 15, 8, 12, 4, 9, 1, 2
+  // K' = 0x5c4dd124
+  // S'j = 9, 13, 15, 7, 12, 8, 9, 11, 7, 7, 12, 7, 6, 15, 13, 11
+  er = fn4(er, ar, br, cr, dr, m[6], 0x5c4dd124, 9); br = rotl(br, 10)
+  dr = fn4(dr, er, ar, br, cr, m[11], 0x5c4dd124, 13); ar = rotl(ar, 10)
+  cr = fn4(cr, dr, er, ar, br, m[3], 0x5c4dd124, 15); er = rotl(er, 10)
+  br = fn4(br, cr, dr, er, ar, m[7], 0x5c4dd124, 7); dr = rotl(dr, 10)
+  ar = fn4(ar, br, cr, dr, er, m[0], 0x5c4dd124, 12); cr = rotl(cr, 10)
+  er = fn4(er, ar, br, cr, dr, m[13], 0x5c4dd124, 8); br = rotl(br, 10)
+  dr = fn4(dr, er, ar, br, cr, m[5], 0x5c4dd124, 9); ar = rotl(ar, 10)
+  cr = fn4(cr, dr, er, ar, br, m[10], 0x5c4dd124, 11); er = rotl(er, 10)
+  br = fn4(br, cr, dr, er, ar, m[14], 0x5c4dd124, 7); dr = rotl(dr, 10)
+  ar = fn4(ar, br, cr, dr, er, m[15], 0x5c4dd124, 7); cr = rotl(cr, 10)
+  er = fn4(er, ar, br, cr, dr, m[8], 0x5c4dd124, 12); br = rotl(br, 10)
+  dr = fn4(dr, er, ar, br, cr, m[12], 0x5c4dd124, 7); ar = rotl(ar, 10)
+  cr = fn4(cr, dr, er, ar, br, m[4], 0x5c4dd124, 6); er = rotl(er, 10)
+  br = fn4(br, cr, dr, er, ar, m[9], 0x5c4dd124, 15); dr = rotl(dr, 10)
+  ar = fn4(ar, br, cr, dr, er, m[1], 0x5c4dd124, 13); cr = rotl(cr, 10)
+  er = fn4(er, ar, br, cr, dr, m[2], 0x5c4dd124, 11); br = rotl(br, 10)
+
+  // M'j = 15, 5, 1, 3, 7, 14, 6, 9, 11, 8, 12, 2, 10, 0, 4, 13
+  // K' = 0x6d703ef3
+  // S'j = 9, 7, 15, 11, 8, 6, 6, 14, 12, 13, 5, 14, 13, 13, 7, 5
+  dr = fn3(dr, er, ar, br, cr, m[15], 0x6d703ef3, 9); ar = rotl(ar, 10)
+  cr = fn3(cr, dr, er, ar, br, m[5], 0x6d703ef3, 7); er = rotl(er, 10)
+  br = fn3(br, cr, dr, er, ar, m[1], 0x6d703ef3, 15); dr = rotl(dr, 10)
+  ar = fn3(ar, br, cr, dr, er, m[3], 0x6d703ef3, 11); cr = rotl(cr, 10)
+  er = fn3(er, ar, br, cr, dr, m[7], 0x6d703ef3, 8); br = rotl(br, 10)
+  dr = fn3(dr, er, ar, br, cr, m[14], 0x6d703ef3, 6); ar = rotl(ar, 10)
+  cr = fn3(cr, dr, er, ar, br, m[6], 0x6d703ef3, 6); er = rotl(er, 10)
+  br = fn3(br, cr, dr, er, ar, m[9], 0x6d703ef3, 14); dr = rotl(dr, 10)
+  ar = fn3(ar, br, cr, dr, er, m[11], 0x6d703ef3, 12); cr = rotl(cr, 10)
+  er = fn3(er, ar, br, cr, dr, m[8], 0x6d703ef3, 13); br = rotl(br, 10)
+  dr = fn3(dr, er, ar, br, cr, m[12], 0x6d703ef3, 5); ar = rotl(ar, 10)
+  cr = fn3(cr, dr, er, ar, br, m[2], 0x6d703ef3, 14); er = rotl(er, 10)
+  br = fn3(br, cr, dr, er, ar, m[10], 0x6d703ef3, 13); dr = rotl(dr, 10)
+  ar = fn3(ar, br, cr, dr, er, m[0], 0x6d703ef3, 13); cr = rotl(cr, 10)
+  er = fn3(er, ar, br, cr, dr, m[4], 0x6d703ef3, 7); br = rotl(br, 10)
+  dr = fn3(dr, er, ar, br, cr, m[13], 0x6d703ef3, 5); ar = rotl(ar, 10)
+
+  // M'j = 8, 6, 4, 1, 3, 11, 15, 0, 5, 12, 2, 13, 9, 7, 10, 14
+  // K' = 0x7a6d76e9
+  // S'j = 15, 5, 8, 11, 14, 14, 6, 14, 6, 9, 12, 9, 12, 5, 15, 8
+  cr = fn2(cr, dr, er, ar, br, m[8], 0x7a6d76e9, 15); er = rotl(er, 10)
+  br = fn2(br, cr, dr, er, ar, m[6], 0x7a6d76e9, 5); dr = rotl(dr, 10)
+  ar = fn2(ar, br, cr, dr, er, m[4], 0x7a6d76e9, 8); cr = rotl(cr, 10)
+  er = fn2(er, ar, br, cr, dr, m[1], 0x7a6d76e9, 11); br = rotl(br, 10)
+  dr = fn2(dr, er, ar, br, cr, m[3], 0x7a6d76e9, 14); ar = rotl(ar, 10)
+  cr = fn2(cr, dr, er, ar, br, m[11], 0x7a6d76e9, 14); er = rotl(er, 10)
+  br = fn2(br, cr, dr, er, ar, m[15], 0x7a6d76e9, 6); dr = rotl(dr, 10)
+  ar = fn2(ar, br, cr, dr, er, m[0], 0x7a6d76e9, 14); cr = rotl(cr, 10)
+  er = fn2(er, ar, br, cr, dr, m[5], 0x7a6d76e9, 6); br = rotl(br, 10)
+  dr = fn2(dr, er, ar, br, cr, m[12], 0x7a6d76e9, 9); ar = rotl(ar, 10)
+  cr = fn2(cr, dr, er, ar, br, m[2], 0x7a6d76e9, 12); er = rotl(er, 10)
+  br = fn2(br, cr, dr, er, ar, m[13], 0x7a6d76e9, 9); dr = rotl(dr, 10)
+  ar = fn2(ar, br, cr, dr, er, m[9], 0x7a6d76e9, 12); cr = rotl(cr, 10)
+  er = fn2(er, ar, br, cr, dr, m[7], 0x7a6d76e9, 5); br = rotl(br, 10)
+  dr = fn2(dr, er, ar, br, cr, m[10], 0x7a6d76e9, 15); ar = rotl(ar, 10)
+  cr = fn2(cr, dr, er, ar, br, m[14], 0x7a6d76e9, 8); er = rotl(er, 10)
+
+  // M'j = 12, 15, 10, 4, 1, 5, 8, 7, 6, 2, 13, 14, 0, 3, 9, 11
+  // K' = 0x00000000
+  // S'j = 8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
+  br = fn1(br, cr, dr, er, ar, m[12], 0x00000000, 8); dr = rotl(dr, 10)
+  ar = fn1(ar, br, cr, dr, er, m[15], 0x00000000, 5); cr = rotl(cr, 10)
+  er = fn1(er, ar, br, cr, dr, m[10], 0x00000000, 12); br = rotl(br, 10)
+  dr = fn1(dr, er, ar, br, cr, m[4], 0x00000000, 9); ar = rotl(ar, 10)
+  cr = fn1(cr, dr, er, ar, br, m[1], 0x00000000, 12); er = rotl(er, 10)
+  br = fn1(br, cr, dr, er, ar, m[5], 0x00000000, 5); dr = rotl(dr, 10)
+  ar = fn1(ar, br, cr, dr, er, m[8], 0x00000000, 14); cr = rotl(cr, 10)
+  er = fn1(er, ar, br, cr, dr, m[7], 0x00000000, 6); br = rotl(br, 10)
+  dr = fn1(dr, er, ar, br, cr, m[6], 0x00000000, 8); ar = rotl(ar, 10)
+  cr = fn1(cr, dr, er, ar, br, m[2], 0x00000000, 13); er = rotl(er, 10)
+  br = fn1(br, cr, dr, er, ar, m[13], 0x00000000, 6); dr = rotl(dr, 10)
+  ar = fn1(ar, br, cr, dr, er, m[14], 0x00000000, 5); cr = rotl(cr, 10)
+  er = fn1(er, ar, br, cr, dr, m[0], 0x00000000, 15); br = rotl(br, 10)
+  dr = fn1(dr, er, ar, br, cr, m[3], 0x00000000, 13); ar = rotl(ar, 10)
+  cr = fn1(cr, dr, er, ar, br, m[9], 0x00000000, 11); er = rotl(er, 10)
+  br = fn1(br, cr, dr, er, ar, m[11], 0x00000000, 11); dr = rotl(dr, 10)
+
+  // change state
+  var t = (this._b + cl + dr) | 0
+  this._b = (this._c + dl + er) | 0
+  this._c = (this._d + el + ar) | 0
+  this._d = (this._e + al + br) | 0
+  this._e = (this._a + bl + cr) | 0
+  this._a = t
+}
+
+RIPEMD160.prototype._digest = function () {
+  // create padding and handle blocks
+  this._block[this._blockOffset++] = 0x80
+  if (this._blockOffset > 56) {
+    this._block.fill(0, this._blockOffset, 64)
+    this._update()
+    this._blockOffset = 0
   }
-  return words
-}
 
-function wordsToBytes (words) {
-  var bytes = []
-  for (var b = 0; b < words.length * 32; b += 8) {
-    bytes.push((words[b >>> 5] >>> (24 - b % 32)) & 0xFF)
-  }
-  return bytes
-}
+  this._block.fill(0, this._blockOffset, 56)
+  this._block.writeUInt32LE(this._length[0], 56)
+  this._block.writeUInt32LE(this._length[1], 60)
+  this._update()
 
-function processBlock (H, M, offset) {
-  // swap endian
-  for (var i = 0; i < 16; i++) {
-    var offset_i = offset + i
-    var M_offset_i = M[offset_i]
-
-    // Swap
-    M[offset_i] = (
-      (((M_offset_i << 8) | (M_offset_i >>> 24)) & 0x00ff00ff) |
-      (((M_offset_i << 24) | (M_offset_i >>> 8)) & 0xff00ff00)
-    )
-  }
-
-  // Working variables
-  var al, bl, cl, dl, el
-  var ar, br, cr, dr, er
-
-  ar = al = H[0]
-  br = bl = H[1]
-  cr = cl = H[2]
-  dr = dl = H[3]
-  er = el = H[4]
-
-  // computation
-  var t
-  for (i = 0; i < 80; i += 1) {
-    t = (al + M[offset + zl[i]]) | 0
-    if (i < 16) {
-      t += f1(bl, cl, dl) + hl[0]
-    } else if (i < 32) {
-      t += f2(bl, cl, dl) + hl[1]
-    } else if (i < 48) {
-      t += f3(bl, cl, dl) + hl[2]
-    } else if (i < 64) {
-      t += f4(bl, cl, dl) + hl[3]
-    } else {// if (i<80) {
-      t += f5(bl, cl, dl) + hl[4]
-    }
-    t = t | 0
-    t = rotl(t, sl[i])
-    t = (t + el) | 0
-    al = el
-    el = dl
-    dl = rotl(cl, 10)
-    cl = bl
-    bl = t
-
-    t = (ar + M[offset + zr[i]]) | 0
-    if (i < 16) {
-      t += f5(br, cr, dr) + hr[0]
-    } else if (i < 32) {
-      t += f4(br, cr, dr) + hr[1]
-    } else if (i < 48) {
-      t += f3(br, cr, dr) + hr[2]
-    } else if (i < 64) {
-      t += f2(br, cr, dr) + hr[3]
-    } else {// if (i<80) {
-      t += f1(br, cr, dr) + hr[4]
-    }
-
-    t = t | 0
-    t = rotl(t, sr[i])
-    t = (t + er) | 0
-    ar = er
-    er = dr
-    dr = rotl(cr, 10)
-    cr = br
-    br = t
-  }
-
-  // intermediate hash value
-  t = (H[1] + cl + dr) | 0
-  H[1] = (H[2] + dl + er) | 0
-  H[2] = (H[3] + el + ar) | 0
-  H[3] = (H[4] + al + br) | 0
-  H[4] = (H[0] + bl + cr) | 0
-  H[0] = t
-}
-
-function f1 (x, y, z) {
-  return ((x) ^ (y) ^ (z))
-}
-
-function f2 (x, y, z) {
-  return (((x) & (y)) | ((~x) & (z)))
-}
-
-function f3 (x, y, z) {
-  return (((x) | (~(y))) ^ (z))
-}
-
-function f4 (x, y, z) {
-  return (((x) & (z)) | ((y) & (~(z))))
-}
-
-function f5 (x, y, z) {
-  return ((x) ^ ((y) | (~(z))))
+  // produce result
+  var buffer = new Buffer(20)
+  buffer.writeInt32LE(this._a, 0)
+  buffer.writeInt32LE(this._b, 4)
+  buffer.writeInt32LE(this._c, 8)
+  buffer.writeInt32LE(this._d, 12)
+  buffer.writeInt32LE(this._e, 16)
+  return buffer
 }
 
 function rotl (x, n) {
   return (x << n) | (x >>> (32 - n))
 }
 
-function ripemd160 (message) {
-  var H = [0x67452301, 0xEFCDAB89, 0x98BADCFE, 0x10325476, 0xC3D2E1F0]
-
-  if (typeof message === 'string') {
-    message = new Buffer(message, 'utf8')
-  }
-
-  var m = bytesToWords(message)
-
-  var nBitsLeft = message.length * 8
-  var nBitsTotal = message.length * 8
-
-  // Add padding
-  m[nBitsLeft >>> 5] |= 0x80 << (24 - nBitsLeft % 32)
-  m[(((nBitsLeft + 64) >>> 9) << 4) + 14] = (
-    (((nBitsTotal << 8) | (nBitsTotal >>> 24)) & 0x00ff00ff) |
-    (((nBitsTotal << 24) | (nBitsTotal >>> 8)) & 0xff00ff00)
-  )
-
-  for (var i = 0; i < m.length; i += 16) {
-    processBlock(H, m, i)
-  }
-
-  // swap endian
-  for (i = 0; i < 5; i++) {
-    // shortcut
-    var H_i = H[i]
-
-    // Swap
-    H[i] = (((H_i << 8) | (H_i >>> 24)) & 0x00ff00ff) |
-      (((H_i << 24) | (H_i >>> 8)) & 0xff00ff00)
-  }
-
-  var digestbytes = wordsToBytes(H)
-  return new Buffer(digestbytes)
+function fn1 (a, b, c, d, e, m, k, s) {
+  return (rotl((a + (b ^ c ^ d) + m + k) | 0, s) + e) | 0
 }
 
-module.exports = ripemd160
+function fn2 (a, b, c, d, e, m, k, s) {
+  return (rotl((a + ((b & c) | ((~b) & d)) + m + k) | 0, s) + e) | 0
+}
+
+function fn3 (a, b, c, d, e, m, k, s) {
+  return (rotl((a + ((b | (~c)) ^ d) + m + k) | 0, s) + e) | 0
+}
+
+function fn4 (a, b, c, d, e, m, k, s) {
+  return (rotl((a + ((b & d) | (c & (~d))) + m + k) | 0, s) + e) | 0
+}
+
+function fn5 (a, b, c, d, e, m, k, s) {
+  return (rotl((a + (b ^ (c | (~d))) + m + k) | 0, s) + e) | 0
+}
+
+module.exports = RIPEMD160
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48}],132:[function(require,module,exports){
+},{"buffer":47,"hash-base":85,"inherits":95}],136:[function(require,module,exports){
+module.exports = require('buffer')
+
+},{"buffer":47}],137:[function(require,module,exports){
 (function (Buffer){
 // prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -20808,7 +20834,7 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48}],133:[function(require,module,exports){
+},{"buffer":47}],138:[function(require,module,exports){
 var exports = module.exports = function SHA (algorithm) {
   algorithm = algorithm.toLowerCase()
 
@@ -20825,7 +20851,7 @@ exports.sha256 = require('./sha256')
 exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
-},{"./sha":134,"./sha1":135,"./sha224":136,"./sha256":137,"./sha384":138,"./sha512":139}],134:[function(require,module,exports){
+},{"./sha":139,"./sha1":140,"./sha224":141,"./sha256":142,"./sha384":143,"./sha512":144}],139:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
@@ -20922,7 +20948,7 @@ Sha.prototype._hash = function () {
 module.exports = Sha
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":132,"buffer":48,"inherits":94}],135:[function(require,module,exports){
+},{"./hash":137,"buffer":47,"inherits":95}],140:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -21024,7 +21050,7 @@ Sha1.prototype._hash = function () {
 module.exports = Sha1
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":132,"buffer":48,"inherits":94}],136:[function(require,module,exports){
+},{"./hash":137,"buffer":47,"inherits":95}],141:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -21080,7 +21106,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":132,"./sha256":137,"buffer":48,"inherits":94}],137:[function(require,module,exports){
+},{"./hash":137,"./sha256":142,"buffer":47,"inherits":95}],142:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -21218,7 +21244,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":132,"buffer":48,"inherits":94}],138:[function(require,module,exports){
+},{"./hash":137,"buffer":47,"inherits":95}],143:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var SHA512 = require('./sha512')
@@ -21278,7 +21304,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":132,"./sha512":139,"buffer":48,"inherits":94}],139:[function(require,module,exports){
+},{"./hash":137,"./sha512":144,"buffer":47,"inherits":95}],144:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -21541,7 +21567,7 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":132,"buffer":48,"inherits":94}],140:[function(require,module,exports){
+},{"./hash":137,"buffer":47,"inherits":95}],145:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -21670,230 +21696,280 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":83,"inherits":94,"readable-stream/duplex.js":118,"readable-stream/passthrough.js":127,"readable-stream/readable.js":128,"readable-stream/transform.js":129,"readable-stream/writable.js":130}],141:[function(require,module,exports){
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
+},{"events":83,"inherits":95,"readable-stream/duplex.js":123,"readable-stream/passthrough.js":131,"readable-stream/readable.js":132,"readable-stream/transform.js":133,"readable-stream/writable.js":134}],146:[function(require,module,exports){
+'use strict';
 
-var Buffer = require('buffer').Buffer;
+var Buffer = require('safe-buffer').Buffer;
 
-var isBufferEncoding = Buffer.isEncoding
-  || function(encoding) {
-       switch (encoding && encoding.toLowerCase()) {
-         case 'hex': case 'utf8': case 'utf-8': case 'ascii': case 'binary': case 'base64': case 'ucs2': case 'ucs-2': case 'utf16le': case 'utf-16le': case 'raw': return true;
-         default: return false;
-       }
-     }
-
-
-function assertEncoding(encoding) {
-  if (encoding && !isBufferEncoding(encoding)) {
-    throw new Error('Unknown encoding: ' + encoding);
+var isEncoding = Buffer.isEncoding || function (encoding) {
+  encoding = '' + encoding;
+  switch (encoding && encoding.toLowerCase()) {
+    case 'hex':case 'utf8':case 'utf-8':case 'ascii':case 'binary':case 'base64':case 'ucs2':case 'ucs-2':case 'utf16le':case 'utf-16le':case 'raw':
+      return true;
+    default:
+      return false;
   }
+};
+
+function _normalizeEncoding(enc) {
+  if (!enc) return 'utf8';
+  var retried;
+  while (true) {
+    switch (enc) {
+      case 'utf8':
+      case 'utf-8':
+        return 'utf8';
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return 'utf16le';
+      case 'latin1':
+      case 'binary':
+        return 'latin1';
+      case 'base64':
+      case 'ascii':
+      case 'hex':
+        return enc;
+      default:
+        if (retried) return; // undefined
+        enc = ('' + enc).toLowerCase();
+        retried = true;
+    }
+  }
+};
+
+// Do not cache `Buffer.isEncoding` when checking encoding names as some
+// modules monkey-patch it to support additional encodings
+function normalizeEncoding(enc) {
+  var nenc = _normalizeEncoding(enc);
+  if (typeof nenc !== 'string' && (Buffer.isEncoding === isEncoding || !isEncoding(enc))) throw new Error('Unknown encoding: ' + enc);
+  return nenc || enc;
 }
 
 // StringDecoder provides an interface for efficiently splitting a series of
 // buffers into a series of JS strings without breaking apart multi-byte
-// characters. CESU-8 is handled as part of the UTF-8 encoding.
-//
-// @TODO Handling all encodings inside a single object makes it very difficult
-// to reason about this code, so it should be split up in the future.
-// @TODO There should be a utf8-strict encoding that rejects invalid UTF-8 code
-// points as used by CESU-8.
-var StringDecoder = exports.StringDecoder = function(encoding) {
-  this.encoding = (encoding || 'utf8').toLowerCase().replace(/[-_]/, '');
-  assertEncoding(encoding);
+// characters.
+exports.StringDecoder = StringDecoder;
+function StringDecoder(encoding) {
+  this.encoding = normalizeEncoding(encoding);
+  var nb;
   switch (this.encoding) {
-    case 'utf8':
-      // CESU-8 represents each of Surrogate Pair by 3-bytes
-      this.surrogateSize = 3;
-      break;
-    case 'ucs2':
     case 'utf16le':
-      // UTF-16 represents each of Surrogate Pair by 2-bytes
-      this.surrogateSize = 2;
-      this.detectIncompleteChar = utf16DetectIncompleteChar;
+      this.text = utf16Text;
+      this.end = utf16End;
+      nb = 4;
+      break;
+    case 'utf8':
+      this.fillLast = utf8FillLast;
+      nb = 4;
       break;
     case 'base64':
-      // Base-64 stores 3 bytes in 4 chars, and pads the remainder.
-      this.surrogateSize = 3;
-      this.detectIncompleteChar = base64DetectIncompleteChar;
+      this.text = base64Text;
+      this.end = base64End;
+      nb = 3;
       break;
     default:
-      this.write = passThroughWrite;
+      this.write = simpleWrite;
+      this.end = simpleEnd;
       return;
   }
-
-  // Enough space to store all bytes of a single character. UTF-8 needs 4
-  // bytes, but CESU-8 may require up to 6 (3 bytes per surrogate).
-  this.charBuffer = new Buffer(6);
-  // Number of bytes received for the current incomplete multi-byte character.
-  this.charReceived = 0;
-  // Number of bytes expected for the current incomplete multi-byte character.
-  this.charLength = 0;
-};
-
-
-// write decodes the given buffer and returns it as JS string that is
-// guaranteed to not contain any partial multi-byte characters. Any partial
-// character found at the end of the buffer is buffered up, and will be
-// returned when calling write again with the remaining bytes.
-//
-// Note: Converting a Buffer containing an orphan surrogate to a String
-// currently works, but converting a String to a Buffer (via `new Buffer`, or
-// Buffer#write) will replace incomplete surrogates with the unicode
-// replacement character. See https://codereview.chromium.org/121173009/ .
-StringDecoder.prototype.write = function(buffer) {
-  var charStr = '';
-  // if our last write ended with an incomplete multibyte character
-  while (this.charLength) {
-    // determine how many remaining bytes this buffer has to offer for this char
-    var available = (buffer.length >= this.charLength - this.charReceived) ?
-        this.charLength - this.charReceived :
-        buffer.length;
-
-    // add the new bytes to the char buffer
-    buffer.copy(this.charBuffer, this.charReceived, 0, available);
-    this.charReceived += available;
-
-    if (this.charReceived < this.charLength) {
-      // still not enough chars in this buffer? wait for more ...
-      return '';
-    }
-
-    // remove bytes belonging to the current character from the buffer
-    buffer = buffer.slice(available, buffer.length);
-
-    // get the character that was split
-    charStr = this.charBuffer.slice(0, this.charLength).toString(this.encoding);
-
-    // CESU-8: lead surrogate (D800-DBFF) is also the incomplete character
-    var charCode = charStr.charCodeAt(charStr.length - 1);
-    if (charCode >= 0xD800 && charCode <= 0xDBFF) {
-      this.charLength += this.surrogateSize;
-      charStr = '';
-      continue;
-    }
-    this.charReceived = this.charLength = 0;
-
-    // if there are no more bytes in this buffer, just emit our char
-    if (buffer.length === 0) {
-      return charStr;
-    }
-    break;
-  }
-
-  // determine and set charLength / charReceived
-  this.detectIncompleteChar(buffer);
-
-  var end = buffer.length;
-  if (this.charLength) {
-    // buffer the incomplete character bytes we got
-    buffer.copy(this.charBuffer, 0, buffer.length - this.charReceived, end);
-    end -= this.charReceived;
-  }
-
-  charStr += buffer.toString(this.encoding, 0, end);
-
-  var end = charStr.length - 1;
-  var charCode = charStr.charCodeAt(end);
-  // CESU-8: lead surrogate (D800-DBFF) is also the incomplete character
-  if (charCode >= 0xD800 && charCode <= 0xDBFF) {
-    var size = this.surrogateSize;
-    this.charLength += size;
-    this.charReceived += size;
-    this.charBuffer.copy(this.charBuffer, size, 0, size);
-    buffer.copy(this.charBuffer, 0, 0, size);
-    return charStr.substring(0, end);
-  }
-
-  // or just emit the charStr
-  return charStr;
-};
-
-// detectIncompleteChar determines if there is an incomplete UTF-8 character at
-// the end of the given buffer. If so, it sets this.charLength to the byte
-// length that character, and sets this.charReceived to the number of bytes
-// that are available for this character.
-StringDecoder.prototype.detectIncompleteChar = function(buffer) {
-  // determine how many bytes we have to check at the end of this buffer
-  var i = (buffer.length >= 3) ? 3 : buffer.length;
-
-  // Figure out if one of the last i bytes of our buffer announces an
-  // incomplete char.
-  for (; i > 0; i--) {
-    var c = buffer[buffer.length - i];
-
-    // See http://en.wikipedia.org/wiki/UTF-8#Description
-
-    // 110XXXXX
-    if (i == 1 && c >> 5 == 0x06) {
-      this.charLength = 2;
-      break;
-    }
-
-    // 1110XXXX
-    if (i <= 2 && c >> 4 == 0x0E) {
-      this.charLength = 3;
-      break;
-    }
-
-    // 11110XXX
-    if (i <= 3 && c >> 3 == 0x1E) {
-      this.charLength = 4;
-      break;
-    }
-  }
-  this.charReceived = i;
-};
-
-StringDecoder.prototype.end = function(buffer) {
-  var res = '';
-  if (buffer && buffer.length)
-    res = this.write(buffer);
-
-  if (this.charReceived) {
-    var cr = this.charReceived;
-    var buf = this.charBuffer;
-    var enc = this.encoding;
-    res += buf.slice(0, cr).toString(enc);
-  }
-
-  return res;
-};
-
-function passThroughWrite(buffer) {
-  return buffer.toString(this.encoding);
+  this.lastNeed = 0;
+  this.lastTotal = 0;
+  this.lastChar = Buffer.allocUnsafe(nb);
 }
 
-function utf16DetectIncompleteChar(buffer) {
-  this.charReceived = buffer.length % 2;
-  this.charLength = this.charReceived ? 2 : 0;
+StringDecoder.prototype.write = function (buf) {
+  if (buf.length === 0) return '';
+  var r;
+  var i;
+  if (this.lastNeed) {
+    r = this.fillLast(buf);
+    if (r === undefined) return '';
+    i = this.lastNeed;
+    this.lastNeed = 0;
+  } else {
+    i = 0;
+  }
+  if (i < buf.length) return r ? r + this.text(buf, i) : this.text(buf, i);
+  return r || '';
+};
+
+StringDecoder.prototype.end = utf8End;
+
+// Returns only complete characters in a Buffer
+StringDecoder.prototype.text = utf8Text;
+
+// Attempts to complete a partial non-UTF-8 character using bytes from a Buffer
+StringDecoder.prototype.fillLast = function (buf) {
+  if (this.lastNeed <= buf.length) {
+    buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed);
+    return this.lastChar.toString(this.encoding, 0, this.lastTotal);
+  }
+  buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, buf.length);
+  this.lastNeed -= buf.length;
+};
+
+// Checks the type of a UTF-8 byte, whether it's ASCII, a leading byte, or a
+// continuation byte.
+function utf8CheckByte(byte) {
+  if (byte <= 0x7F) return 0;else if (byte >> 5 === 0x06) return 2;else if (byte >> 4 === 0x0E) return 3;else if (byte >> 3 === 0x1E) return 4;
+  return -1;
 }
 
-function base64DetectIncompleteChar(buffer) {
-  this.charReceived = buffer.length % 3;
-  this.charLength = this.charReceived ? 3 : 0;
+// Checks at most 3 bytes at the end of a Buffer in order to detect an
+// incomplete multi-byte UTF-8 character. The total number of bytes (2, 3, or 4)
+// needed to complete the UTF-8 character (if applicable) are returned.
+function utf8CheckIncomplete(self, buf, i) {
+  var j = buf.length - 1;
+  if (j < i) return 0;
+  var nb = utf8CheckByte(buf[j]);
+  if (nb >= 0) {
+    if (nb > 0) self.lastNeed = nb - 1;
+    return nb;
+  }
+  if (--j < i) return 0;
+  nb = utf8CheckByte(buf[j]);
+  if (nb >= 0) {
+    if (nb > 0) self.lastNeed = nb - 2;
+    return nb;
+  }
+  if (--j < i) return 0;
+  nb = utf8CheckByte(buf[j]);
+  if (nb >= 0) {
+    if (nb > 0) {
+      if (nb === 2) nb = 0;else self.lastNeed = nb - 3;
+    }
+    return nb;
+  }
+  return 0;
 }
 
-},{"buffer":48}],142:[function(require,module,exports){
+// Validates as many continuation bytes for a multi-byte UTF-8 character as
+// needed or are available. If we see a non-continuation byte where we expect
+// one, we "replace" the validated continuation bytes we've seen so far with
+// UTF-8 replacement characters ('\ufffd'), to match v8's UTF-8 decoding
+// behavior. The continuation byte check is included three times in the case
+// where all of the continuation bytes for a character exist in the same buffer.
+// It is also done this way as a slight performance increase instead of using a
+// loop.
+function utf8CheckExtraBytes(self, buf, p) {
+  if ((buf[0] & 0xC0) !== 0x80) {
+    self.lastNeed = 0;
+    return '\ufffd'.repeat(p);
+  }
+  if (self.lastNeed > 1 && buf.length > 1) {
+    if ((buf[1] & 0xC0) !== 0x80) {
+      self.lastNeed = 1;
+      return '\ufffd'.repeat(p + 1);
+    }
+    if (self.lastNeed > 2 && buf.length > 2) {
+      if ((buf[2] & 0xC0) !== 0x80) {
+        self.lastNeed = 2;
+        return '\ufffd'.repeat(p + 2);
+      }
+    }
+  }
+}
+
+// Attempts to complete a multi-byte UTF-8 character using bytes from a Buffer.
+function utf8FillLast(buf) {
+  var p = this.lastTotal - this.lastNeed;
+  var r = utf8CheckExtraBytes(this, buf, p);
+  if (r !== undefined) return r;
+  if (this.lastNeed <= buf.length) {
+    buf.copy(this.lastChar, p, 0, this.lastNeed);
+    return this.lastChar.toString(this.encoding, 0, this.lastTotal);
+  }
+  buf.copy(this.lastChar, p, 0, buf.length);
+  this.lastNeed -= buf.length;
+}
+
+// Returns all complete UTF-8 characters in a Buffer. If the Buffer ended on a
+// partial character, the character's bytes are buffered until the required
+// number of bytes are available.
+function utf8Text(buf, i) {
+  var total = utf8CheckIncomplete(this, buf, i);
+  if (!this.lastNeed) return buf.toString('utf8', i);
+  this.lastTotal = total;
+  var end = buf.length - (total - this.lastNeed);
+  buf.copy(this.lastChar, 0, end);
+  return buf.toString('utf8', i, end);
+}
+
+// For UTF-8, a replacement character for each buffered byte of a (partial)
+// character needs to be added to the output.
+function utf8End(buf) {
+  var r = buf && buf.length ? this.write(buf) : '';
+  if (this.lastNeed) return r + '\ufffd'.repeat(this.lastTotal - this.lastNeed);
+  return r;
+}
+
+// UTF-16LE typically needs two bytes per character, but even if we have an even
+// number of bytes available, we need to check if we end on a leading/high
+// surrogate. In that case, we need to wait for the next two bytes in order to
+// decode the last character properly.
+function utf16Text(buf, i) {
+  if ((buf.length - i) % 2 === 0) {
+    var r = buf.toString('utf16le', i);
+    if (r) {
+      var c = r.charCodeAt(r.length - 1);
+      if (c >= 0xD800 && c <= 0xDBFF) {
+        this.lastNeed = 2;
+        this.lastTotal = 4;
+        this.lastChar[0] = buf[buf.length - 2];
+        this.lastChar[1] = buf[buf.length - 1];
+        return r.slice(0, -1);
+      }
+    }
+    return r;
+  }
+  this.lastNeed = 1;
+  this.lastTotal = 2;
+  this.lastChar[0] = buf[buf.length - 1];
+  return buf.toString('utf16le', i, buf.length - 1);
+}
+
+// For UTF-16LE we do not explicitly append special replacement characters if we
+// end on a partial character, we simply let v8 handle that.
+function utf16End(buf) {
+  var r = buf && buf.length ? this.write(buf) : '';
+  if (this.lastNeed) {
+    var end = this.lastTotal - this.lastNeed;
+    return r + this.lastChar.toString('utf16le', 0, end);
+  }
+  return r;
+}
+
+function base64Text(buf, i) {
+  var n = (buf.length - i) % 3;
+  if (n === 0) return buf.toString('base64', i);
+  this.lastNeed = 3 - n;
+  this.lastTotal = 3;
+  if (n === 1) {
+    this.lastChar[0] = buf[buf.length - 1];
+  } else {
+    this.lastChar[0] = buf[buf.length - 2];
+    this.lastChar[1] = buf[buf.length - 1];
+  }
+  return buf.toString('base64', i, buf.length - n);
+}
+
+function base64End(buf) {
+  var r = buf && buf.length ? this.write(buf) : '';
+  if (this.lastNeed) return r + this.lastChar.toString('base64', 0, 3 - this.lastNeed);
+  return r;
+}
+
+// Pass bytes on through for single-byte encodings (e.g. ascii, latin1, hex)
+function simpleWrite(buf) {
+  return buf.toString(this.encoding);
+}
+
+function simpleEnd(buf) {
+  return buf && buf.length ? this.write(buf) : '';
+}
+},{"safe-buffer":136}],147:[function(require,module,exports){
 (function (global){
 
 /**
@@ -21964,16 +22040,16 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],143:[function(require,module,exports){
-arguments[4][94][0].apply(exports,arguments)
-},{"dup":94}],144:[function(require,module,exports){
+},{}],148:[function(require,module,exports){
+arguments[4][95][0].apply(exports,arguments)
+},{"dup":95}],149:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],145:[function(require,module,exports){
+},{}],150:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -22563,7 +22639,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":144,"_process":110,"inherits":143}],146:[function(require,module,exports){
+},{"./support/isBuffer":149,"_process":114,"inherits":148}],151:[function(require,module,exports){
 var indexOf = require('indexof');
 
 var Object_keys = function (obj) {
@@ -22703,27 +22779,211 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":93}],147:[function(require,module,exports){
-"use strict";
+},{"indexof":94}],152:[function(require,module,exports){
+var natural = require('natural');
+var dm = natural.DoubleMetaphone;
 
-// Full Credits go to https://scotch.io/tutorials/getting-started-with-browserify
+var nounInflector = new natural.NounInflector();
+var metaphone = natural.DoubleMetaphone;
+var phonetic = natural.DoubleMetaphone;
+var soundex = phonetic.soundex;
+
+//var wordA = 'phonetics';
+//var wordB = 'fonetix';
+
+// note: lots of options here: https://www.npmjs.com/package/natural#phonetics
+
+var articles = require('articles/lib/Articles.js');
+var randy = require('randy');
+var _ = require('lodash');
+
+// ---------------------------------------------
+//                  DEFAULTS
+// ---------------------------------------------
+
+function Sentencer() {
+  var self = this;
+
+  self._nouns      = require('./words/nouns.js');
+  self._adjectives = require('./words/adjectives.js');
+
+  self._filteredAdjectives = self._adjectives;
+  self._filteredAdjStack = [];
+
+  self.actions = {
+    noun: function() {
+      return randy.choice(self._nouns);
+    },
+    a_noun: function() {
+      return articles.articlize( self.actions.noun() );
+    },
+    nouns: function() {
+      return nounInflector.pluralize( randy.choice(self._nouns) );
+    },
+    adjective: function() {
+      return randy.choice(self._adjectives);
+    },
+    an_adjective: function() {
+      return articles.articlize( self.actions.adjective() );
+    },
+    filtered_adjective: function() {
+      return randy.choice(self._filteredAdjStack);
+    }
+  };
+
+  self.configure = function(options) {
+    // merge actions
+
+    self.actions     = _.merge(self.actions, options.actions || {});
+    // overwrite nouns and adjectives if we got some
+
+    // TODO: add adjective filter here
+
+    self._nouns      = options.nounList || self._nouns;
+    self._adjectives = options.adjectiveList || self._adjectives;
+  };
+
+  self.use = function(options) {
+    var newInstance = new Sentencer();
+    newInstance.configure(options);
+    return newInstance;
+  };
 
 
-var R = require('ramda');
-var Sentencer = require('sentencer');
+}
 
-var square = function square (x) { return x * x; }
-var squares = R.chain(square, [1, 2, 3, 4, 5]);
+// ---------------------------------------------
+//                  THE GOODS
+// ---------------------------------------------
+
+Sentencer.prototype.make = function(template) {
 
 
-var Sentencer = require('sentencer');
-var randomSentence = Sentencer.make("This sentence has {{ a_noun }} and {{ an_adjective }} {{ noun }} in it.");
+  // note: template is basic structure of sentence
 
-// document.getElementById('response').innerHTML = randomSentence;
+  var self = this;
 
-alert(randomSentence);
+  var sentence = template;
+  var occurrences = template.match(/\{\{(.+?)\}\}/g); // regex
 
-},{"ramda":257,"sentencer":570}],148:[function(require,module,exports){
+  if(occurrences && occurrences.length) {
+    for(var i = 0; i < occurrences.length; i++) {
+      var action = occurrences[i].replace('{{', '').replace('}}', '').trim();
+      var result = '';
+      if(action.match(/\((.+?)\)/)) { // matches for verb, noun, adjective, etc
+        try {
+          result = eval('self.actions.' + action);
+        }
+        catch(e) { }
+      } else {
+        if(self.actions[action]) {
+          result = self.actions[action]();
+        } else {
+          result = '{{ ' + action + ' }}'; // if match for speech type fits
+        }
+      }
+      sentence = sentence.replace(occurrences[i], result);
+    }
+  }
+  return sentence;
+};
+
+
+Sentencer.prototype.filterAdjectives = function() {
+
+    var self = this;
+    self._filteredAdjStack = [];
+
+    // set delay
+
+    setInterval(function(refreshRate) {
+
+        var refresh = refreshRate;
+
+        $('#generateBtn').trigger('click'); // this is a callback loop.
+
+    }, 5000); // one second delay
+
+    for (i=0; i < self._filteredAdjectives.length; i++) {
+
+        var word = randy.choice(self._filteredAdjectives); // generate a random word
+
+        var patternMatch = self.filter(self._filterOpts, word); // see if it matches our pattern
+
+        // TODO - debug this part
+        if (patternMatch && self._filteredAdjStack.indexOf(word) < 0) { // if random word matches
+
+            // console.log("adding: " + word + " to stack");
+            self._filteredAdjStack.push(word); // add to filtered word stack
+
+        }
+
+    }
+
+};
+
+Sentencer.prototype.filter = function(opts, word) {
+
+    // A "String" is a concept involved in programming, it's also known as a variable.
+
+    // I wrote this at like 3am last night when I could think, and had a clearer idea of how the related stuff worked.
+
+    // these things aren't meant to be overthought, but always good to make extensible.
+
+    // "The Close Enough" Principle. --> should always be held constant.
+
+    if (typeof word !== 'undefined' && opts) {
+
+        // this area is truncated the word it's filtering on to provide a more accurate match for a specific vowel pattern
+        // vowel patterns are represented in language using combinations of vowels, such as 'ei' ('weird') or etc.
+
+        var truncatedWord = word.substring(1, opts.limit); // limits the word to length specified in opts
+
+    } else {
+        return false;
+    }
+
+    var truncatedString = word["0"] + truncatedWord; // retain opening consonant of word
+
+    var vowels = opts.vowelPattern.vowels; // this indicates the phoneme that we're trying to target
+    var target = opts.vowelPattern.target; // this indicates the letter we want our word to begin with
+
+    // TODO: this is callback hell
+
+    var result = truncatedString.search(vowels);
+
+    // check if first consonant in word is in our target array
+    var char = word.substring(0,1);
+
+    var bullseye = target.indexOf(char); // this is specifying the character of the word to be looking at, in an array context
+
+    var example = [ 'T', 'h', 'i', 's']; // target = 2
+    var exampleArray = [ 0, 1, 2, 3 ];
+
+    // console.log(bullseye);
+
+    if ((result > 0 && result < opts.placement) && bullseye >= 0) {
+
+        var test = target.indexOf(char);
+        console.log(test + result);
+
+        // console.log("match found on '" + opts.vowelPattern.vowels + "' ('" + truncatedString + "') for " + word); // close enough
+        return true;
+    }
+
+    return false;
+
+};
+
+
+// ---------------------------------------------
+//                    DONE
+// ---------------------------------------------
+
+var instance = new Sentencer();
+module.exports = instance;
+
+},{"./words/adjectives.js":274,"./words/nouns.js":275,"articles/lib/Articles.js":158,"lodash":179,"natural":188,"randy":262}],153:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -22856,7 +23116,7 @@ BayesClassifier.prototype.probabilityOfClass = probabilityOfClass;
 BayesClassifier.restore = restore;
 
 module.exports = BayesClassifier;
-},{"./classifier":149,"util":145}],149:[function(require,module,exports){
+},{"./classifier":154,"util":150}],154:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -22912,7 +23172,7 @@ Classifier.restore = restore;
 
 module.exports = Classifier;
 
-},{}],150:[function(require,module,exports){
+},{}],155:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -23106,7 +23366,7 @@ LogisticRegressionClassifier.restore = restore;
 
 module.exports = LogisticRegressionClassifier;
 
-},{"./classifier":149,"sylvester":573,"util":145}],151:[function(require,module,exports){
+},{"./classifier":154,"sylvester":266,"util":150}],156:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -23226,13 +23486,13 @@ KMeans.prototype.cluster = cluster;
 
 module.exports = KMeans;
 
-},{"sylvester":573}],152:[function(require,module,exports){
+},{"sylvester":266}],157:[function(require,module,exports){
 
 exports.BayesClassifier = require('./classifier/bayes_classifier');
 exports.LogisticRegressionClassifier = require('./classifier/logistic_regression_classifier');
 exports.KMeans = require('./clusterer/kmeans');
 
-},{"./classifier/bayes_classifier":148,"./classifier/logistic_regression_classifier":150,"./clusterer/kmeans":151}],153:[function(require,module,exports){
+},{"./classifier/bayes_classifier":153,"./classifier/logistic_regression_classifier":155,"./clusterer/kmeans":156}],158:[function(require,module,exports){
 // Generated by CoffeeScript 1.3.3
 (function() {
   var articles, articlize, find,
@@ -23288,9 +23548,9 @@ exports.KMeans = require('./clusterer/kmeans');
 
 }).call(this);
 
-},{"./articledata":154}],154:[function(require,module,exports){
+},{"./articledata":159}],159:[function(require,module,exports){
 module.exports={"0":{"8":{"article":"an"},"9":{"article":"an"},"-":{"1":{"1":{"article":"an"}},"4":{" ":{"article":"a"},"article":"an"},"6":{"-":{"article":"an"}},"8":{"article":"an"}}},"1":{"1":{"0":{"article":"a"},"1":{"article":"a"},"2":{"article":"a"},"3":{"article":"a"},"4":{"article":"a"},"5":{"article":"a"},"6":{"article":"a"},"7":{"article":"a"},"8":{"article":"a"},"9":{"article":"a"},"article":"an",".":{"4":{"article":"a"}}},"8":{"0":{"0":{"article":"an"},"1":{"article":"an"},"2":{"article":"an"},"3":{"article":"an"},"4":{"article":"an"},"5":{"article":"an"},"6":{"article":"an"},"7":{"article":"an"},"8":{"article":"an"},"9":{"article":"an"},"article":"a"},"1":{"-":{"article":"a"}," ":{"article":"a"}},"2":{"-":{"article":"a"}," ":{"article":"a"}},"3":{"-":{"article":"a"}," ":{"article":"a"}},"4":{"-":{"article":"a"}," ":{"article":"a"}},"5":{"-":{"article":"a"}," ":{"article":"a"}},"6":{"-":{"article":"a"}," ":{"article":"a"}},"7":{"-":{"article":"a"}," ":{"article":"a"}},"8":{"-":{"article":"a"}," ":{"article":"a"}},"9":{"-":{"article":"a"}," ":{"article":"a"}},"article":"an"}},"8":{"0":{"0":{"x":{"article":"a"}}},"9":{"0":{"article":"a"}},"article":"an",",":{"1":{"article":"a"}}},"`":{"a":{"article":"an"}},"£":{"8":{"article":"an"}},"∞":{"article":"an"},"a":{" ":{"article":"a"},"b":{"o":{"u":{"t":{"-":{"article":"an"}},"article":"a"}}},"g":{"a":{"i":{"article":"a"}}},"l":{"-":{"I":{"article":"a"}},"g":{"u":{"article":"a"}},"t":{"h":{"article":"a"}}},"m":{"o":{"n":{"article":"a"}}},"n":{" ":{"article":"a"},"d":{"a":{"article":"an"},"e":{"article":"an"},"r":{"article":"an"},"article":"a"},"o":{"t":{"article":"a"}},"y":{"w":{"article":"a"}}},"p":{"r":{"e":{"article":"a"}}},"r":{"e":{" ":{"article":"a"},":":{"article":"a"}},"t":{"í":{"article":"a"}}},"article":"an"},"A":{"$":{"article":"a"},"A":{"A":{"article":"a"}},"n":{"d":{"a":{"l":{"u":{"c":{"article":"a"}}}}}},"r":{"m":{"a":{"t":{"article":"a"}}}},"s":{"t":{"u":{"r":{"i":{"a":{"s":{"article":"a"}}}}}}},"t":{"h":{"l":{"e":{"t":{"i":{"article":"an"}}},"o":{"article":"an"},"article":"a"}}},"U":{"$":{"article":"a"},"D":{"article":"a"},"S":{"C":{"article":"a"}}},"article":"an"},"Á":{"article":"an"},"á":{";":{"article":"an"}},"à":{"article":"an"},"Ä":{"article":"an"},"ā":{"article":"an"},"Å":{"article":"an"},"æ":{"article":"an"},"Æ":{"n":{"article":"a"},"article":"an"},"D":{"ú":{"n":{"article":"a"}}},"e":{".":{"g":{"article":"a"}},"a":{"c":{"h":{" ":{"article":"a"}}}},"i":{"t":{"h":{"e":{"r":{" ":{"article":"a"},".":{"article":"a"}}}}}},"l":{"-":{"article":"a"},"l":{"a":{"article":"a"}}},"m":{"p":{"e":{"z":{"article":"a"}}}},"n":{"o":{"u":{"g":{"article":"a"}}}},"u":{"p":{" ":{"article":"an"}},"article":"a"},"w":{"article":"a"},"x":{"i":{"s":{"t":{"s":{"article":"a"}}}}},"article":"an"},"E":{"m":{"p":{"e":{"z":{"article":"a"}}}},"n":{"a":{"m":{"article":"a"}}},"s":{"p":{"a":{"d":{"article":"an"}},"e":{"article":"an"},"o":{"article":"an"},"article":"a"}},"u":{"l":{"article":"an"},"article":"a"},"U":{"R":{"article":"a"}},"article":"an"},"é":{"g":{"article":"a"},"t":{"a":{"article":"an"},"u":{"article":"an"},"article":"a"},"article":"an"},"É":{"article":"an"},"f":{"-":{"article":"an"}," ":{"article":"an"},"/":{"article":"an"},"M":{"article":"an"},"p":{"article":"an"},"t":{"article":"an"}},"F":{"0":{"article":"an"},"1":{"article":"an"},"2":{"article":"an"},"3":{"article":"an"},"4":{"article":"an"},"5":{"article":"an"},"6":{"article":"an"},"9":{"article":"an"},"'":{"article":"an"},"-":{"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},"#":{"article":"an"},",":{"article":"an"},".":{"article":"an"},"/":{"article":"an"},"”":{"article":"an"},"A":{"C":{"article":"a"},"D":{"article":"a"},"I":{"R":{"article":"a"}},"L":{"article":"a"},"M":{"article":"a"},"N":{"article":"a"},"P":{"article":"a"},"Q":{"article":"a"},"R":{"article":"a"},"S":{"article":"a"},"T":{"article":"a"},"article":"an"},"B":{"article":"an"},"C":{"article":"an"},"c":{"article":"an"},"D":{"article":"an"},"E":{"C":{"article":"an"},"I":{"article":"an"}},"F":{" ":{"article":"a"},"article":"an"},"f":{"article":"an"},"h":{"article":"an"},"H":{"article":"an"},"I":{"A":{"T":{"article":"a"},"article":"an"},"D":{" ":{"article":"an"}},"R":{" ":{"article":"an"}},"S":{" ":{"article":"an"}}},"K":{"article":"an"},"L":{"C":{"article":"an"},"N":{"article":"an"},"P":{"article":"an"}},"M":{"R":{"article":"a"},"article":"an"},"O":{" ":{"article":"an"},"I":{" ":{"article":"an"}}},"P":{".":{"article":"a"},"?":{"article":"a"},"C":{"?":{"article":"a"}},"article":"an"},"R":{"C":{"article":"an"},"S":{"article":"an"}},"S":{"article":"an"},"T":{"S":{"article":"a"},"T":{"article":"a"},"article":"an"},"U":{" ":{"article":"an"},",":{"article":"an"},".":{"article":"an"}},"V":{"article":"an"},"W":{"D":{"article":"a"},"article":"an"},"X":{"article":"an"},"Y":{"article":"an"},"σ":{"article":"an"}},"G":{"h":{"a":{"e":{"article":"an"},"i":{"article":"an"}}}},"h":{"'":{"article":"an"},"-":{"U":{"article":"a"},"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},",":{"article":"an"},"C":{"article":"an"},"e":{"i":{"r":{"a":{"article":"a"},"article":"an"}}},"i":{"m":{"s":{"article":"an"}},"s":{"t":{"o":{"r":{"i":{"c":{"article":"a"}}}}}}},"o":{"m":{"a":{"article":"an"},"m":{"article":"an"}},"n":{"e":{"y":{"article":"a"}},"k":{"article":"a"},"v":{"article":"a"},"article":"an"},"r":{"s":{" ":{"article":"an"}}},"u":{"r":{"article":"an"}}},"t":{"t":{"p":{" ":{"article":"an"}},"article":"a"},"article":"an"}},"H":{"1":{"article":"an"},"2":{"article":"an"},"3":{"article":"an"},"4":{"article":"an"},"5":{"article":"an"},"'":{"article":"an"},"-":{"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},"&":{"article":"an"},",":{"article":"an"},".":{"A":{"article":"a"},"article":"an"},"+":{"article":"an"},"a":{"b":{"i":{"l":{"i":{"t":{"a":{"t":{"i":{"o":{"n":{"s":{"article":"an"}}}}}}}}}}}},"B":{"article":"an"},"C":{"article":"an"},"D":{"B":{"article":"a"},"article":"an"},"e":{"i":{"r":{"article":"an"}}},"F":{"article":"an"},"G":{"article":"an"},"H":{"article":"an"},"I":{"D":{"article":"a"},"G":{"article":"a"},"M":{"article":"a"},"P":{"article":"a"},"article":"an"},"L":{"A":{"-":{"D":{"article":"a"}}},"article":"an"},"M":{"article":"an"},"N":{"article":"an"},"o":{"n":{"d":{"article":"a"},"e":{"s":{"article":"an"},"article":"a"},"g":{"article":"a"},"k":{"article":"a"},"o":{"l":{"article":"a"}},"article":"an"},"u":{"r":{"article":"an"}}},"O":{" ":{"article":"an"},"V":{"article":"an"}},"P":{"article":"an"},"Q":{"article":"an"},"R":{"T":{"article":"a"},"article":"an"},"S":{" ":{"article":"a"},"R":{"article":"a"},"T":{"article":"a"},"article":"an"},"T":{"P":{"article":"a"},"article":"an"},"V":{"article":"an"},"W":{"T":{"article":"an"}}},"i":{".":{"e":{"article":"a"}},"b":{"n":{"article":"a"}},"f":{" ":{"article":"a"}},"i":{"article":"a"},"n":{"c":{"l":{"u":{"d":{"i":{"article":"a"}}}}},"d":{"i":{"c":{"a":{"t":{"e":{"s":{"article":"a"}}}}}}},"s":{"t":{"e":{"a":{"d":{"?":{"article":"an"}},"article":"a"}}}}},"s":{" ":{"article":"a"},".":{"article":"a"}},"t":{" ":{"article":"a"}},"u":{"article":"a"},"article":"an"},"I":{"-":{"A":{"article":"a"},"I":{"article":"a"}},"I":{"I":{"article":"a"}},"l":{"b":{"article":"a"}},"M":{"H":{"article":"a"}},"m":{"a":{"m":{"s":{"article":"a"}}}},"R":{"£":{"article":"a"}},"s":{"l":{"a":{"m":{" ":{"article":"a"},",":{"article":"a"},".":{"article":"a"}},"n":{"d":{"s":{"article":"a"}}}}}},"article":"an"},"İ":{"article":"an"},"J":{"i":{"a":{"n":{"article":"a"},"article":"an"}}},"k":{"u":{" ":{"article":"an"}}},"l":{" ":{"article":"an"},"\"":{"article":"an"},"p":{"article":"an"}},"L":{"1":{"article":"an"},"2":{"article":"an"},"3":{"article":"an"},"5":{"article":"an"},"'":{"A":{"article":"a"},"article":"an"},"-":{"a":{"article":"a"},"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},"&":{"article":"an"},",":{"article":"an"},".":{"article":"an"},"/":{"article":"an"},"a":{"e":{"article":"an"},"o":{"i":{"g":{"article":"an"}}}},"A":{" ":{"article":"an"},"L":{"article":"an"},"P":{"article":"an"}},"B":{"article":"an"},"C":{"article":"an"},"D":{"article":"an"},"E":{"A":{"article":"a"},"E":{"article":"a"},"G":{"article":"a"},"O":{"article":"a"},"P":{"article":"a"},"T":{"article":"a"},"article":"an"},"F":{"article":"an"},"G":{"article":"an"},"H":{"article":"an"},"I":{"R":{"article":"an"}},"L":{"article":"an"},"M":{"X":{"article":"a"},"article":"an"},"N":{"article":"an"},"o":{"c":{"h":{"a":{"article":"an"}}}},"O":{"E":{"article":"an"}},"P":{"article":"an"},"R":{"article":"an"},"S":{"article":"an"},"T":{"article":"an"},"U":{" ":{"article":"an"}},"V":{"article":"an"},"X":{"article":"an"},"Z":{"article":"an"}},"m":{"-":{"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},"&":{"article":"an"},"a":{"k":{"e":{"s":{" ":{"article":"an"}}}}},"b":{"article":"an"},"e":{"i":{"n":{"article":"an"}},"n":{"t":{"i":{"o":{"n":{"s":{"article":"an"}}}}}}},"f":{"article":"an"},"p":{"article":"an"},"R":{"article":"an"},"t":{"article":"an"}},"M":{"1":{"9":{"0":{"article":"an"},"article":"a"},"article":"an"},"2":{"article":"an"},"3":{"article":"an"},"4":{"article":"an"},"5":{"article":"an"},"6":{"article":"an"},"7":{"article":"an"},"8":{"article":"an"},"9":{"article":"an"},"'":{"article":"an"},"-":{"t":{"article":"a"},"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},"&":{"article":"an"},",":{"article":"an"},".":{"A":{".":{"S":{"article":"a"}}},"article":"an"},"/":{"article":"an"},"A":{"C":{"article":"a"},"D":{"article":"a"},"F":{"article":"a"},"G":{"article":"a"},"J":{"article":"a"},"L":{"article":"a"},"M":{"article":"a"},"N":{"article":"a"},"P":{"article":"a"},"R":{"article":"a"},"S":{"article":"a"},"T":{"article":"a"},"X":{"article":"a"},"Y":{"article":"a"},"article":"an"},"B":{"article":"an"},"C":{"article":"an"},"D":{"article":"an"},"e":{"-":{"article":"an"}},"E":{"d":{"article":"an"},"n":{"article":"an"},"P":{"article":"an"}},"F":{"article":"an"},"f":{"article":"an"},"G":{"article":"an"},"H":{"article":"an"},"h":{"article":"an"},"i":{"e":{"article":"an"}},"I":{"5":{"article":"an"},"6":{"article":"an"}," ":{"article":"an"},"A":{"article":"an"},"T":{"article":"an"}},"K":{"article":"an"},"L":{"article":"an"},"M":{"T":{"article":"a"},"article":"an"},"N":{"article":"an"},"o":{"U":{"article":"an"}},"O":{" ":{"article":"an"},"T":{" ":{"article":"an"}},"U":{"article":"an"}},"P":{"article":"an"},"R":{"article":"an"},"S":{"article":"an"},"s":{"c":{"article":"an"}},"T":{"R":{"article":"a"},"article":"an"},"U":{"V":{"article":"an"}},"V":{"article":"an"},"X":{"article":"an"}},"N":{"4":{"article":"an"},"6":{"article":"an"},"'":{"article":"an"},"-":{"a":{"article":"a"},"S":{"article":"a"},"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},",":{"article":"an"},".":{"Y":{"article":"a"},"article":"an"},"=":{"article":"an"},"²":{"article":"an"},"a":{"o":{"article":"an"}},"A":{" ":{"article":"an"},"A":{"F":{"article":"a"},"article":"an"},"I":{"article":"an"},"S":{"L":{"article":"an"}}},"B":{"article":"an"},"C":{"article":"an"},"D":{"article":"an"},"E":{"A":{"article":"an"},"H":{"article":"an"},"S":{" ":{"article":"an"}}},"F":{"article":"an"},"G":{"article":"an"},"H":{"article":"an"},"I":{"C":{"article":"a"},"L":{"article":"a"},"M":{"H":{"article":"an"},"article":"a"},"N":{"article":"a"},"S":{"article":"a"},"article":"an"},"J":{"C":{"article":"an"}},"K":{"article":"an"},"L":{"S":{"article":"a"},"article":"an"},"M":{"article":"an"},"N":{"R":{"article":"an"},"T":{"article":"an"}},"P":{"O":{"V":{"-":{"article":"an"}},"article":"a"},"article":"an"},"R":{"J":{"article":"a"},"T":{"article":"a"},"article":"an"},"S":{"W":{"article":"a"},"article":"an"},"T":{"$":{"article":"a"},"article":"an"},"U":{"S":{"article":"an"}},"V":{"article":"an"},"v":{"article":"an"},"W":{"A":{"article":"an"}},"X":{"article":"an"},"Y":{"P":{"article":"an"},"U":{"article":"an"}}},"n":{"-":{"article":"an"},"−":{"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},"&":{"article":"an"},",":{"article":"an"},"+":{"article":"an"},"×":{"article":"an"},"d":{"a":{"article":"an"}},"p":{"a":{"article":"an"}},"t":{"article":"an"},"V":{"article":"an"},"W":{"article":"an"}},"o":{"b":{"r":{"article":"a"}},"c":{"c":{"u":{"r":{"s":{"article":"a"}}}},"h":{"o":{"article":"a"}}},"f":{" ":{"article":"a"}},"n":{"-":{"article":"an"},"/":{"article":"an"},"b":{"article":"an"},"c":{"o":{"article":"an"}},"d":{"article":"an"},"e":{"r":{"article":"an"}},"g":{"article":"an"},"i":{"article":"an"},"l":{"article":"an"},"m":{"article":"an"},"o":{"article":"an"},"r":{"article":"an"},"s":{"article":"an"},"t":{"article":"an"},"u":{"article":"an"},"w":{"article":"an"},"y":{"article":"an"},"article":"a"},"r":{" ":{"article":"a"},",":{"article":"a"}},"u":{"i":{"article":"a"}},"article":"an"},"O":{"b":{"e":{"r":{"s":{"t":{" ":{"article":"an"},"l":{"article":"an"}},"article":"a"}}}},"l":{"v":{"article":"a"}},"n":{"e":{"i":{"article":"an"},"article":"a"}},"N":{"E":{"article":"a"}},"o":{"p":{"article":"a"}},"u":{"i":{"article":"a"}},"article":"an"},"Ó":{"article":"an"},"Ö":{"article":"an"},"ö":{"article":"an"},"Ō":{"article":"an"},"ō":{"article":"an"},"P":{"h":{"o":{"b":{"article":"an"},"i":{"article":"an"}}}},"r":{"'":{"article":"an"},"-":{"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},"&":{"article":"an"},".":{"article":"an"},"e":{"f":{"e":{"r":{"s":{"article":"an"}}}}},"f":{"article":"an"},"m":{"article":"an"},"s":{"article":"an"}},"R":{"1":{"0":{"article":"a"},"article":"an"},"2":{"article":"an"},"3":{"article":"an"},"4":{"article":"an"},"5":{"article":"an"},"6":{"article":"an"},"'":{"article":"an"},"-":{"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},"&":{"article":"an"},",":{"article":"an"},".":{"C":{"article":"a"},"article":"an"},"/":{"article":"an"},"A":{" ":{"article":"an"},"F":{"article":"an"}},"B":{"article":"an"},"C":{"article":"an"},"D":{"article":"an"},"E":{" ":{"article":"an"},"R":{"article":"an"}},"F":{"article":"an"},"f":{"article":"an"},"G":{"article":"an"},"H":{"S":{"article":"an"}},"I":{"A":{"article":"an"},"C":{" ":{"article":"an"}}},"J":{"article":"an"},"K":{"article":"an"},"L":{" ":{"article":"a"},"article":"an"},"M":{"1":{"article":"a"},"article":"an"},"N":{"G":{"article":"a"},"article":"an"},"O":{"T":{"article":"an"}},"P":{"article":"an"},"Q":{"article":"an"},"R":{"article":"an"},"S":{" ":{"article":"a"},")":{"article":"a"},",":{"article":"a"},".":{"article":"a"},"?":{"article":"a"},"T":{"article":"a"},"article":"an"},"T":{"article":"an"},"U":{"article":"an"},"V":{"article":"an"},"X":{"article":"an"}},"s":{"-":{"article":"an"},"\"":{"article":"an"},")":{"article":"an"},",":{"article":"an"},".":{"article":"an"},"a":{"y":{"s":{"article":"an"}}},"i":{"c":{"h":{"article":"an"}}},"p":{"3":{"article":"an"},"r":{"o":{"t":{"article":"an"}}}},"s":{"h":{"article":"an"}},"t":{"a":{"t":{"e":{"s":{" ":{"article":"an"},":":{"article":"an"}}}}}},"v":{"a":{"article":"a"},"e":{"article":"a"},"article":"an"}},"S":{"1":{"article":"an"},"2":{"article":"an"},"3":{"article":"an"},"4":{"article":"an"},"5":{"article":"an"},"6":{"article":"an"},"'":{"article":"an"},"-":{"article":"an"}," ":{"article":"an"},"\"":{"article":"an"},"&":{"W":{"article":"a"},"article":"an"},",":{"article":"an"},".":{"B":{"article":"an"},"M":{"article":"an"},"O":{"article":"an"}},"”":{"article":"an"},"A":{"-":{"1":{"article":"a"},"article":"an"}," ":{"article":"an"},"C":{"D":{"article":"an"}},"E":{"article":"an"},"S":{"E":{"article":"a"},"article":"an"},"T":{" ":{"article":"an"},"B":{"article":"an"}}},"B":{"article":"an"},"C":{"A":{" ":{"article":"an"}},"C":{"article":"an"},"M":{"article":"an"},"O":{" ":{"article":"an"}},"R":{"A":{"article":"a"},"article":"an"},"T":{"article":"an"}},"D":{"article":"an"},"E":{" ":{"article":"an"},"C":{"O":{"article":"a"},"R":{"article":"a"},"article":"an"},"I":{"article":"an"},"O":{"article":"an"}},"F":{"article":"an"},"G":{"article":"an"},"H":{"2":{"article":"an"},"3":{"article":"an"},"-":{"article":"an"}},"I":{" ":{"article":"an"}},"J":{"article":"an"},"K":{"article":"an"},"L":{"A":{"article":"a"},"I":{"article":"a"},"O":{"article":"a"},"article":"an"},"M":{"A":{"article":"a"},"E":{" ":{"article":"an"},"article":"a"},"I":{"article":"a"},"article":"an"},"N":{"A":{"article":"a"},"E":{"article":"a"},"O":{"article":"a"},"article":"an"},"O":{"(":{"article":"an"},"A":{" ":{"article":"an"},"I":{"article":"an"}},"E":{"article":"an"},"I":{"article":"an"},"S":{"article":"an"},"V":{"article":"an"}},"P":{"A":{"C":{"article":"a"},"D":{"article":"a"},"M":{"article":"a"},"N":{"article":"a"},"R":{"article":"a"}},"E":{" ":{"article":"an"},"article":"a"},"I":{"C":{"article":"a"}},"O":{"article":"a"},"U":{"article":"a"},"article":"an"},"R":{"article":"an"},"S":{"article":"an"},"T":{"-":{"article":"an"},"A":{" ":{"article":"an"}},"B":{"article":"an"},"C":{"article":"an"},"D":{"article":"an"},"F":{"article":"an"},"L":{"article":"an"},"M":{"article":"an"},"S":{"article":"an"},"V":{"article":"an"}},"u":{"r":{"a":{" ":{"article":"an"}}}},"U":{"B":{"article":"a"},"L":{"article":"a"},"N":{"article":"a"},"P":{"article":"a"},"S":{"article":"a"},"article":"an"},"V":{"article":"an"},"W":{"F":{"article":"an"},"P":{"article":"an"},"R":{"article":"an"}},"X":{"S":{"article":"a"},"article":"an"}},"t":{"-":{"S":{"article":"an"}},"S":{"article":"an"}},"T":{"a":{"v":{"e":{"s":{"article":"an"}}}},"à":{"article":"an"}},"u":{"-":{"article":"a"}," ":{"article":"a"},"\"":{"article":"a"},".":{"article":"a"},"b":{"e":{"article":"an"},"article":"a"},"f":{"article":"a"},"k":{"a":{"article":"an"},"article":"a"},"l":{"u":{"article":"a"}},"m":{" ":{"article":"a"}},"n":{" ":{"article":"a"},"a":{" ":{"article":"a"},"n":{"a":{"article":"an"},"n":{"article":"an"},"s":{"article":"an"},"t":{"article":"an"},"article":"a"},"r":{"y":{"article":"a"}}},"e":{" ":{"article":"a"}},"i":{"c":{"o":{"r":{"p":{"article":"an"}}}},"d":{"i":{"article":"a"},"article":"an"},"m":{"o":{"article":"a"},"article":"an"},"n":{"article":"an"},"v":{"o":{"article":"an"}},"article":"a"},"l":{"e":{"s":{"article":"a"}}}},"p":{"o":{"article":"a"}},"r":{"a":{"article":"a"},"e":{"article":"a"},"i":{"article":"a"},"l":{"article":"a"},"o":{"article":"a"}},"s":{"-":{"article":"an"}," ":{"article":"an"},"h":{"article":"an"},"article":"a"},"t":{"m":{"article":"an"},"t":{"article":"an"},"article":"a"},"v":{"article":"a"},"w":{"article":"a"},"article":"an"},"U":{"1":{"article":"an"},"-":{"B":{"o":{"article":"a"},"article":"an"}},"a":{"article":"an"},"b":{"i":{"article":"a"},"article":"an"},"D":{"P":{"-":{"article":"an"}}},"d":{"article":"an"},"g":{"l":{"article":"an"}},"h":{"article":"an"},"i":{"article":"an"},"l":{"i":{"article":"a"},"article":"an"},"m":{"article":"an"},"M":{"N":{"article":"an"}},"n":{"-":{"article":"an"},"a":{"n":{"article":"a"},"article":"an"},"b":{"article":"an"},"c":{"article":"an"},"d":{"article":"an"},"e":{"s":{"article":"a"},"article":"an"},"f":{"article":"an"},"g":{"article":"an"},"h":{"article":"an"},"i":{"d":{"article":"an"},"n":{"article":"an"}},"k":{"article":"an"},"l":{"article":"an"},"m":{"article":"an"},"n":{"article":"an"},"o":{"article":"an"},"p":{"article":"an"},"r":{"article":"an"},"s":{"article":"an"},"t":{"e":{"r":{"s":{"article":"a"}}},"article":"an"},"u":{"article":"an"},"w":{"article":"an"}},"p":{"article":"an"},"r":{"a":{"article":"a"},"i":{"article":"a"},"u":{"g":{"u":{"a":{"y":{"a":{"n":{"-":{"article":"an"}}}}}}},"k":{"article":"an"},"article":"a"},"article":"an"},"s":{"h":{"article":"an"},"t":{"article":"an"}},"t":{"n":{"article":"an"},"o":{"-":{"article":"an"}},"r":{"article":"an"},"t":{"article":"an"}},"x":{"article":"an"},"z":{"article":"an"}},"ü":{"article":"an"},"Ü":{"article":"an"},"V":{"I":{"I":{"article":"an"}}},"x":{"a":{"article":"a"},"e":{"article":"a"},"i":{"article":"a"},"o":{"article":"a"},"x":{"article":"a"},"y":{"article":"a"},"article":"an"},"X":{"a":{"article":"a"},"A":{"article":"a"},"e":{"article":"a"},"h":{"article":"a"},"i":{"article":"a"},"I":{"V":{"article":"a"},"X":{"article":"a"}},"o":{"article":"a"},"u":{"article":"a"},"U":{"article":"a"},"V":{"article":"a"},"X":{" ":{"article":"an"},"article":"a"},"y":{"article":"a"},"article":"an"},"Y":{"p":{"article":"an"}},"α":{"article":"an"},"ε":{"article":"an"},"ω":{"article":"an"}}
-},{}],155:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 (function (process,__filename){
 
 /**
@@ -23459,8 +23719,8 @@ exports.getRoot = function getRoot (file) {
   }
 }
 
-}).call(this,require('_process'),"/../node_modules/bindings/bindings.js")
-},{"_process":110,"fs":1,"path":106}],156:[function(require,module,exports){
+}).call(this,require('_process'),"/../../Sentencer/node_modules/bindings/bindings.js")
+},{"_process":114,"fs":1,"path":107}],161:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -23510,14 +23770,14 @@ function useColors() {
 
   // is webkit? http://stackoverflow.com/a/16459606/376773
   // document is undefined in react-native: https://github.com/facebook/react-native/pull/1632
-  return (typeof document !== 'undefined' && document && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance) ||
+  return (typeof document !== 'undefined' && document.documentElement && document.documentElement.style && document.documentElement.style.WebkitAppearance) ||
     // is firebug? http://stackoverflow.com/a/398120/376773
-    (typeof window !== 'undefined' && window && window.console && (window.console.firebug || (window.console.exception && window.console.table))) ||
+    (typeof window !== 'undefined' && window.console && (window.console.firebug || (window.console.exception && window.console.table))) ||
     // is firefox >= v31?
     // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
-    (typeof navigator !== 'undefined' && navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
+    (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
     // double check webkit in userAgent just in case we are in a worker
-    (typeof navigator !== 'undefined' && navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
+    (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
 }
 
 /**
@@ -23649,7 +23909,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":157,"_process":110}],157:[function(require,module,exports){
+},{"./debug":162,"_process":114}],162:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -23853,7 +24113,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":175}],158:[function(require,module,exports){
+},{"ms":180}],163:[function(require,module,exports){
 (function (process,Buffer){
 
 /**
@@ -23979,11 +24239,11 @@ function ForeignFunction (cif, funcPtr, returnType, argTypes) {
 module.exports = ForeignFunction
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"./bindings":159,"_process":110,"assert":16,"buffer":48,"debug":156,"ref":569}],159:[function(require,module,exports){
+},{"./bindings":164,"_process":114,"assert":16,"buffer":47,"debug":161,"ref":265}],164:[function(require,module,exports){
 
 module.exports = require('bindings')('ffi_bindings.node')
 
-},{"bindings":155}],160:[function(require,module,exports){
+},{"bindings":160}],165:[function(require,module,exports){
 (function (process){
 
 /**
@@ -24071,7 +24331,7 @@ function Callback (retType, argTypes, abi, func) {
 module.exports = Callback
 
 }).call(this,require('_process'))
-},{"./bindings":159,"./cif":161,"_process":110,"assert":16,"debug":156,"ref":569}],161:[function(require,module,exports){
+},{"./bindings":164,"./cif":166,"_process":114,"assert":16,"debug":161,"ref":265}],166:[function(require,module,exports){
 (function (Buffer){
 
 /**
@@ -24154,7 +24414,7 @@ function CIF (rtype, types, abi) {
 module.exports = CIF
 
 }).call(this,require("buffer").Buffer)
-},{"./bindings":159,"./type":170,"assert":16,"buffer":48,"debug":156,"ref":569}],162:[function(require,module,exports){
+},{"./bindings":164,"./type":175,"assert":16,"buffer":47,"debug":161,"ref":265}],167:[function(require,module,exports){
 (function (Buffer){
 
 /**
@@ -24238,7 +24498,7 @@ function CIF_var (rtype, types, numFixedArgs, abi) {
 module.exports = CIF_var
 
 }).call(this,require("buffer").Buffer)
-},{"./bindings":159,"./type":170,"assert":16,"buffer":48,"debug":156,"ref":569}],163:[function(require,module,exports){
+},{"./bindings":164,"./type":175,"assert":16,"buffer":47,"debug":161,"ref":265}],168:[function(require,module,exports){
 (function (Buffer){
 
 /**
@@ -24368,8 +24628,8 @@ DynamicLibrary.prototype.error = function error () {
   return dlerror()
 }
 
-}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":95,"./bindings":159,"./foreign_function":166,"assert":16,"debug":156,"fs":1,"ref":569}],164:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":96,"./bindings":164,"./foreign_function":171,"assert":16,"debug":161,"fs":1,"ref":265}],169:[function(require,module,exports){
 (function (process){
 var DynamicLibrary = require('./dynamic_library')
   , ForeignFunction = require('./foreign_function')
@@ -24394,7 +24654,7 @@ if (process.platform == 'win32') {
 module.exports = errno
 
 }).call(this,require('_process'))
-},{"./bindings":159,"./dynamic_library":163,"./foreign_function":166,"_process":110,"ref":569}],165:[function(require,module,exports){
+},{"./bindings":164,"./dynamic_library":168,"./foreign_function":171,"_process":114,"ref":265}],170:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -24487,7 +24747,7 @@ exports.LIB_EXT = exports.Library.EXT
 // the FFI_TYPE struct definition
 exports.FFI_TYPE = exports.ffiType.FFI_TYPE
 
-},{"./bindings":159,"./callback":160,"./cif":161,"./cif_var":162,"./dynamic_library":163,"./errno":164,"./foreign_function":166,"./foreign_function_var":167,"./function":168,"./library":169,"./type":170,"assert":16,"debug":156,"ref":569,"ref-struct":568}],166:[function(require,module,exports){
+},{"./bindings":164,"./callback":165,"./cif":166,"./cif_var":167,"./dynamic_library":168,"./errno":169,"./foreign_function":171,"./foreign_function_var":172,"./function":173,"./library":174,"./type":175,"assert":16,"debug":161,"ref":265,"ref-struct":264}],171:[function(require,module,exports){
 (function (Buffer){
 
 /**
@@ -24528,8 +24788,8 @@ function ForeignFunction (funcPtr, returnType, argTypes, abi) {
 }
 module.exports = ForeignFunction
 
-}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":95,"./_foreign_function":158,"./cif":161,"assert":16,"debug":156,"ref":569}],167:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":96,"./_foreign_function":163,"./cif":166,"assert":16,"debug":161,"ref":265}],172:[function(require,module,exports){
 (function (Buffer){
 
 /**
@@ -24634,8 +24894,8 @@ function getId (type) {
   return type[idKey]
 }
 
-}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":95,"./_foreign_function":158,"./bindings":159,"./cif_var":162,"./type":170,"assert":16,"debug":156,"ref":569}],168:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":96,"./_foreign_function":163,"./bindings":164,"./cif_var":167,"./type":175,"assert":16,"debug":161,"ref":265}],173:[function(require,module,exports){
 (function (Buffer){
 
 /**
@@ -24748,8 +25008,8 @@ Function.prototype.set = function set (buffer, offset, value) {
   buffer.writePointer(ptr, offset)
 }
 
-}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../.nvm/versions/node/v7.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":95,"./bindings":159,"./callback":160,"./foreign_function":166,"assert":16,"debug":156,"ref":569}],169:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../.nvm/versions/node/v6.0.0/lib/node_modules/browserify/node_modules/is-buffer/index.js":96,"./bindings":164,"./callback":165,"./foreign_function":171,"assert":16,"debug":161,"ref":265}],174:[function(require,module,exports){
 (function (process){
 
 /**
@@ -24828,7 +25088,7 @@ function Library (libfile, funcs, lib) {
 module.exports = Library
 
 }).call(this,require('_process'))
-},{"./dynamic_library":163,"./foreign_function":166,"./foreign_function_var":167,"_process":110,"debug":156}],170:[function(require,module,exports){
+},{"./dynamic_library":168,"./foreign_function":171,"./foreign_function_var":172,"_process":114,"debug":161}],175:[function(require,module,exports){
 (function (Buffer){
 
 /**
@@ -24961,7 +25221,7 @@ function Type (type) {
 module.exports = Type
 
 }).call(this,require("buffer").Buffer)
-},{"./bindings":159,"assert":16,"buffer":48,"debug":156,"ref":569,"ref-struct":568}],171:[function(require,module,exports){
+},{"./bindings":164,"assert":16,"buffer":47,"debug":161,"ref":265,"ref-struct":264}],176:[function(require,module,exports){
 (function (Buffer){
 /*
 Copyright (c) 2011, Chris Umbel
@@ -25036,7 +25296,7 @@ module.exports.jsMatrixToFortranArray = jsMatrixToFortranArray;
 module.exports.fortranArrayToJSArray = fortranArrayToJSArray;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"ffi":165}],172:[function(require,module,exports){
+},{"buffer":47,"ffi":170}],177:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -25069,7 +25329,7 @@ exports.lu = lapack.lu;
 exports.sgetrf = lapack.sgetrf;
 exports.sgesv = lapack.sgesv;
 
-},{"./lapack.js":173}],173:[function(require,module,exports){
+},{"./lapack.js":178}],178:[function(require,module,exports){
 (function (Buffer){
 /*
 Copyright (c) 2011, Chris Umbel
@@ -25376,7 +25636,7 @@ exports.qr = qr;
 exports.lu = lu;
 
 }).call(this,require("buffer").Buffer)
-},{"./fortranArray":171,"buffer":48,"ffi":165}],174:[function(require,module,exports){
+},{"./fortranArray":176,"buffer":47,"ffi":170}],179:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -32166,16 +32426,16 @@ exports.lu = lu;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],175:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 /**
  * Helpers.
  */
 
-var s = 1000
-var m = s * 60
-var h = m * 60
-var d = h * 24
-var y = d * 365.25
+var s = 1000;
+var m = s * 60;
+var h = m * 60;
+var d = h * 24;
+var y = d * 365.25;
 
 /**
  * Parse or format the given `val`.
@@ -32191,18 +32451,19 @@ var y = d * 365.25
  * @api public
  */
 
-module.exports = function (val, options) {
-  options = options || {}
-  var type = typeof val
+module.exports = function(val, options) {
+  options = options || {};
+  var type = typeof val;
   if (type === 'string' && val.length > 0) {
-    return parse(val)
+    return parse(val);
   } else if (type === 'number' && isNaN(val) === false) {
-    return options.long ?
-			fmtLong(val) :
-			fmtShort(val)
+    return options.long ? fmtLong(val) : fmtShort(val);
   }
-  throw new Error('val is not a non-empty string or a valid number. val=' + JSON.stringify(val))
-}
+  throw new Error(
+    'val is not a non-empty string or a valid number. val=' +
+      JSON.stringify(val)
+  );
+};
 
 /**
  * Parse the given `str` and return milliseconds.
@@ -32213,53 +32474,55 @@ module.exports = function (val, options) {
  */
 
 function parse(str) {
-  str = String(str)
-  if (str.length > 10000) {
-    return
+  str = String(str);
+  if (str.length > 100) {
+    return;
   }
-  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(str)
+  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(
+    str
+  );
   if (!match) {
-    return
+    return;
   }
-  var n = parseFloat(match[1])
-  var type = (match[2] || 'ms').toLowerCase()
+  var n = parseFloat(match[1]);
+  var type = (match[2] || 'ms').toLowerCase();
   switch (type) {
     case 'years':
     case 'year':
     case 'yrs':
     case 'yr':
     case 'y':
-      return n * y
+      return n * y;
     case 'days':
     case 'day':
     case 'd':
-      return n * d
+      return n * d;
     case 'hours':
     case 'hour':
     case 'hrs':
     case 'hr':
     case 'h':
-      return n * h
+      return n * h;
     case 'minutes':
     case 'minute':
     case 'mins':
     case 'min':
     case 'm':
-      return n * m
+      return n * m;
     case 'seconds':
     case 'second':
     case 'secs':
     case 'sec':
     case 's':
-      return n * s
+      return n * s;
     case 'milliseconds':
     case 'millisecond':
     case 'msecs':
     case 'msec':
     case 'ms':
-      return n
+      return n;
     default:
-      return undefined
+      return undefined;
   }
 }
 
@@ -32273,18 +32536,18 @@ function parse(str) {
 
 function fmtShort(ms) {
   if (ms >= d) {
-    return Math.round(ms / d) + 'd'
+    return Math.round(ms / d) + 'd';
   }
   if (ms >= h) {
-    return Math.round(ms / h) + 'h'
+    return Math.round(ms / h) + 'h';
   }
   if (ms >= m) {
-    return Math.round(ms / m) + 'm'
+    return Math.round(ms / m) + 'm';
   }
   if (ms >= s) {
-    return Math.round(ms / s) + 's'
+    return Math.round(ms / s) + 's';
   }
-  return ms + 'ms'
+  return ms + 'ms';
 }
 
 /**
@@ -32300,7 +32563,7 @@ function fmtLong(ms) {
     plural(ms, h, 'hour') ||
     plural(ms, m, 'minute') ||
     plural(ms, s, 'second') ||
-    ms + ' ms'
+    ms + ' ms';
 }
 
 /**
@@ -32309,15 +32572,15 @@ function fmtLong(ms) {
 
 function plural(ms, n, name) {
   if (ms < n) {
-    return
+    return;
   }
   if (ms < n * 1.5) {
-    return Math.floor(ms / n) + ' ' + name
+    return Math.floor(ms / n) + ' ' + name;
   }
-  return Math.ceil(ms / n) + ' ' + name + 's'
+  return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],176:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 /*
 Copyright (c) 2011, Rob Ellis, Chris Umbel
 
@@ -32492,7 +32755,7 @@ Sentences.prototype.type = function(callback) {
 
 module.exports = Sentences;
 
-},{"underscore":580}],177:[function(require,module,exports){
+},{"underscore":273}],182:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -32552,7 +32815,7 @@ BayesClassifier.load = load;
 
 module.exports = BayesClassifier;
 
-},{"../stemmers/porter_stemmer":204,"./classifier":178,"apparatus":152,"util":145}],178:[function(require,module,exports){
+},{"../stemmers/porter_stemmer":209,"./classifier":183,"apparatus":157,"util":150}],183:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -32721,7 +32984,7 @@ Classifier.load = load;
 
 module.exports = Classifier;
 
-},{"../stemmers/porter_stemmer":204,"events":83,"fs":1,"util":145}],179:[function(require,module,exports){
+},{"../stemmers/porter_stemmer":209,"events":83,"fs":1,"util":150}],184:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -32783,7 +33046,7 @@ LogisticRegressionClassifier.load = load;
 
 module.exports = LogisticRegressionClassifier;
 
-},{"../stemmers/porter_stemmer":204,"./classifier":178,"apparatus":152,"util":145}],180:[function(require,module,exports){
+},{"../stemmers/porter_stemmer":209,"./classifier":183,"apparatus":157,"util":150}],185:[function(require,module,exports){
 /*
 Copyright (c) 2011, John Crepezzi, Chris Umbel
 
@@ -32854,7 +33117,7 @@ var compare = function (str1, str2) {
 
 module.exports = compare;
 
-},{}],181:[function(require,module,exports){
+},{}],186:[function(require,module,exports){
 /*
 Copyright (c) 2012, Adam Phillabaum, Chris Umbel
 
@@ -32967,7 +33230,7 @@ function JaroWinklerDistance(s1, s2, dj) {
 }
 module.exports = JaroWinklerDistance;
 
-},{}],182:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 /*
 Copyright (c) 2012, Sid Nallu, Chris Umbel
 
@@ -33037,7 +33300,7 @@ function LevenshteinDistance (source, target, options) {
 
 module.exports = LevenshteinDistance;
 
-},{}],183:[function(require,module,exports){
+},{}],188:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -33114,7 +33377,7 @@ exports.normalize_ja = require('./normalizers/normalizer_ja').normalize_ja;
 exports.removeDiacritics = require('./normalizers/remove_diacritics');
 exports.transliterate_ja = require('./transliterators/ja');
 
-},{"./analyzers/sentence_analyzer":176,"./classifiers/bayes_classifier":177,"./classifiers/logistic_regression_classifier":179,"./distance/dice_coefficient":180,"./distance/jaro-winkler_distance":181,"./distance/levenshtein_distance":182,"./inflectors/count_inflector":184,"./inflectors/fr/noun_inflector":186,"./inflectors/ja/noun_inflector":187,"./inflectors/noun_inflector":188,"./inflectors/present_verb_inflector":189,"./ngrams/ngrams":191,"./ngrams/ngrams_zh":192,"./normalizers/normalizer":193,"./normalizers/normalizer_ja":194,"./normalizers/remove_diacritics":196,"./phonetics/dm_soundex":197,"./phonetics/double_metaphone":198,"./phonetics/metaphone":199,"./phonetics/soundex":201,"./stemmers/lancaster_stemmer":203,"./stemmers/porter_stemmer":204,"./stemmers/porter_stemmer_es":205,"./stemmers/porter_stemmer_fa":206,"./stemmers/porter_stemmer_fr":207,"./stemmers/porter_stemmer_it":208,"./stemmers/porter_stemmer_no":209,"./stemmers/porter_stemmer_ru":210,"./stemmers/stemmer_fr":214,"./stemmers/stemmer_ja":216,"./stemmers/stemmer_pl":218,"./tfidf/tfidf":220,"./tokenizers/aggressive_tokenizer":221,"./tokenizers/aggressive_tokenizer_es":222,"./tokenizers/aggressive_tokenizer_fa":223,"./tokenizers/aggressive_tokenizer_it":225,"./tokenizers/aggressive_tokenizer_nl":226,"./tokenizers/aggressive_tokenizer_no":227,"./tokenizers/aggressive_tokenizer_pl":228,"./tokenizers/aggressive_tokenizer_pt":229,"./tokenizers/aggressive_tokenizer_ru":230,"./tokenizers/regexp_tokenizer":231,"./tokenizers/tokenizer_ja":233,"./tokenizers/treebank_word_tokenizer":234,"./transliterators/ja":235,"./trie/trie":236,"./util/edge_weighted_digraph":238,"./util/longest_path_tree":239,"./util/shortest_path_tree":240,"./util/stopwords":241,"./wordnet/wordnet":254}],184:[function(require,module,exports){
+},{"./analyzers/sentence_analyzer":181,"./classifiers/bayes_classifier":182,"./classifiers/logistic_regression_classifier":184,"./distance/dice_coefficient":185,"./distance/jaro-winkler_distance":186,"./distance/levenshtein_distance":187,"./inflectors/count_inflector":189,"./inflectors/fr/noun_inflector":191,"./inflectors/ja/noun_inflector":192,"./inflectors/noun_inflector":193,"./inflectors/present_verb_inflector":194,"./ngrams/ngrams":196,"./ngrams/ngrams_zh":197,"./normalizers/normalizer":198,"./normalizers/normalizer_ja":199,"./normalizers/remove_diacritics":201,"./phonetics/dm_soundex":202,"./phonetics/double_metaphone":203,"./phonetics/metaphone":204,"./phonetics/soundex":206,"./stemmers/lancaster_stemmer":208,"./stemmers/porter_stemmer":209,"./stemmers/porter_stemmer_es":210,"./stemmers/porter_stemmer_fa":211,"./stemmers/porter_stemmer_fr":212,"./stemmers/porter_stemmer_it":213,"./stemmers/porter_stemmer_no":214,"./stemmers/porter_stemmer_ru":215,"./stemmers/stemmer_fr":219,"./stemmers/stemmer_ja":221,"./stemmers/stemmer_pl":223,"./tfidf/tfidf":225,"./tokenizers/aggressive_tokenizer":226,"./tokenizers/aggressive_tokenizer_es":227,"./tokenizers/aggressive_tokenizer_fa":228,"./tokenizers/aggressive_tokenizer_it":230,"./tokenizers/aggressive_tokenizer_nl":231,"./tokenizers/aggressive_tokenizer_no":232,"./tokenizers/aggressive_tokenizer_pl":233,"./tokenizers/aggressive_tokenizer_pt":234,"./tokenizers/aggressive_tokenizer_ru":235,"./tokenizers/regexp_tokenizer":236,"./tokenizers/tokenizer_ja":238,"./tokenizers/treebank_word_tokenizer":239,"./transliterators/ja":240,"./trie/trie":241,"./util/edge_weighted_digraph":243,"./util/longest_path_tree":244,"./util/shortest_path_tree":245,"./util/stopwords":246,"./wordnet/wordnet":259}],189:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -33170,7 +33433,7 @@ CountInflector.nth = nth;
 
 module.exports = CountInflector;
 
-},{}],185:[function(require,module,exports){
+},{}],190:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -33200,7 +33463,7 @@ var FormSet = function() {
 
 module.exports = FormSet;
 
-},{}],186:[function(require,module,exports){
+},{}],191:[function(require,module,exports){
 /*
  Copyright (c) 2012, Guillaume Marty
 
@@ -33437,7 +33700,7 @@ util.inherits(NounInflector, SingularPluralInflector);
 
 module.exports = NounInflector;
 
-},{"../form_set":185,"../singular_plural_inflector":190,"util":145}],187:[function(require,module,exports){
+},{"../form_set":190,"../singular_plural_inflector":195,"util":150}],192:[function(require,module,exports){
 /*
  Copyright (c) 2012, Guillaume Marty
 
@@ -33574,7 +33837,7 @@ util.inherits(NounInflector, SingularPluralInflector);
 
 module.exports = NounInflector;
 
-},{"../form_set":185,"../singular_plural_inflector":190,"util":145}],188:[function(require,module,exports){
+},{"../form_set":190,"../singular_plural_inflector":195,"util":150}],193:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -33681,7 +33944,7 @@ util.inherits(NounInflector, SingularPluralInflector);
     
 module.exports = NounInflector;
 
-},{"./form_set":185,"./singular_plural_inflector":190,"util":145}],189:[function(require,module,exports){
+},{"./form_set":190,"./singular_plural_inflector":195,"util":150}],194:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -33757,7 +34020,7 @@ util.inherits(VerbInflector, SingularPluralInflector);
 
 module.exports = VerbInflector;
 
-},{"./form_set":185,"./singular_plural_inflector":190,"util":145}],190:[function(require,module,exports){
+},{"./form_set":190,"./singular_plural_inflector":195,"util":150}],195:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -33868,7 +34131,7 @@ TenseInflector.prototype.izeRegExps = function(token, forms) {
 
 module.exports = TenseInflector;
 
-},{}],191:[function(require,module,exports){
+},{}],196:[function(require,module,exports){
 /*
 Copyright (c) 2011, Rob Ellis, Chris Umbel
 
@@ -33961,7 +34224,7 @@ var ngrams = function(sequence, n, startSymbol, endSymbol) {
 }
 
 
-},{"../tokenizers/regexp_tokenizer":231,"underscore":580}],192:[function(require,module,exports){
+},{"../tokenizers/regexp_tokenizer":236,"underscore":273}],197:[function(require,module,exports){
 /*
 Copyright (c) 2014, Lee Wenzhu
 
@@ -34046,7 +34309,7 @@ var ngrams = function(sequence, n, startSymbol, endSymbol) {
 };
 
 
-},{"underscore":580}],193:[function(require,module,exports){
+},{"underscore":273}],198:[function(require,module,exports){
 /*
  Copyright (c) 2013, Kenneth Koch
 
@@ -34143,7 +34406,7 @@ exports.normalize_tokens = normalize_tokens;
 
 
 
-},{"../util/utils":251}],194:[function(require,module,exports){
+},{"../util/utils":256}],199:[function(require,module,exports){
 /*
  Copyright (c) 2012, Guillaume Marty
 
@@ -34769,7 +35032,7 @@ var normalize_ja = function(str) {
 exports.normalize_ja = normalize_ja;
 exports.converters = converters;
 
-},{"../util/utils":251,"../util/utils.js":251}],195:[function(require,module,exports){
+},{"../util/utils":256,"../util/utils.js":256}],200:[function(require,module,exports){
 /*
  Copyright (c) 2014, Kristoffer Brabrand
 
@@ -34829,7 +35092,7 @@ var remove_diacritics = function(text) {
 
 // export the relevant stuff.
 exports.remove_diacritics = remove_diacritics;
-},{}],196:[function(require,module,exports){
+},{}],201:[function(require,module,exports){
 /*
  Copyright (c) 2012, Alexy Maslennikov
 
@@ -34952,7 +35215,7 @@ module.exports = function(str) {
 	return str;
 };
 
-},{}],197:[function(require,module,exports){
+},{}],202:[function(require,module,exports){
 /*
 Copyright (c) 2012, Alexy Maslenninkov
 
@@ -35201,7 +35464,7 @@ soundex.process = process;
 module.exports = soundex;
 
 
-},{"./phonetic":200}],198:[function(require,module,exports){
+},{"./phonetic":205}],203:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -35709,7 +35972,7 @@ DoubleMetaphone.compare = compare
 DoubleMetaphone.process = process;
 DoubleMetaphone.isVowel = isVowel;
 
-},{"./phonetic":200}],199:[function(require,module,exports){
+},{"./phonetic":205}],204:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -35899,7 +36162,7 @@ Metaphone.dropY = dropY;
 Metaphone.transformZ = transformZ;
 Metaphone.dropVowels = dropVowels;
 
-},{"./phonetic":200}],200:[function(require,module,exports){
+},{"./phonetic":205}],205:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -35955,7 +36218,7 @@ module.exports = function() {
     };
 };
 
-},{"../tokenizers/aggressive_tokenizer":221,"../util/stopwords":241}],201:[function(require,module,exports){
+},{"../tokenizers/aggressive_tokenizer":226,"../util/stopwords":246}],206:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -36037,7 +36300,7 @@ SoundEx.transformR = transformR;
 SoundEx.condense = condense;
 SoundEx.padRight0 = padRight0;
 
-},{"./phonetic":200}],202:[function(require,module,exports){
+},{"./phonetic":205}],207:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -36829,7 +37092,7 @@ exports.rules = {
 };
 
 
-},{}],203:[function(require,module,exports){
+},{}],208:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -36905,7 +37168,7 @@ module.exports = LancasterStemmer;
 LancasterStemmer.stem = function(token) {
     return applyRuleSection(token.toLowerCase(), true);
 }
-},{"./lancaster_rules":202,"./stemmer":211}],204:[function(require,module,exports){
+},{"./lancaster_rules":207,"./stemmer":216}],209:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -37112,7 +37375,7 @@ PorterStemmer.step4 = step4;
 PorterStemmer.step5a = step5a;
 PorterStemmer.step5b = step5b;
 
-},{"./stemmer":211}],205:[function(require,module,exports){
+},{"./stemmer":216}],210:[function(require,module,exports){
 /*
 Copyright (c) 2012, David Przybilla, Chris Umbel
 
@@ -37335,7 +37598,7 @@ PorterStemmer.stem = function(token) {
 
 };
 
-},{"./stemmer_es":212}],206:[function(require,module,exports){
+},{"./stemmer_es":217}],211:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 Farsi Porter Stemmer by Fardin Koochaki <me@fardinak.com>
@@ -37369,7 +37632,7 @@ module.exports = PorterStemmer;
 PorterStemmer.stem = function(token) {
     return token;
 };
-},{"./stemmer_fa":213}],207:[function(require,module,exports){
+},{"./stemmer_fa":218}],212:[function(require,module,exports){
 'use strict';
 
 /*
@@ -37747,7 +38010,7 @@ function endsin(token, suffix) {
   if (token.length < suffix.length) return false;
   return (token.slice(-suffix.length) == suffix);
 };
-},{"./stemmer_fr":214}],208:[function(require,module,exports){
+},{"./stemmer_fr":219}],213:[function(require,module,exports){
 /*
 Copyright (c) 2012, Leonardo Fenu, Chris Umbel
 
@@ -37981,7 +38244,7 @@ PorterStemmer.stem = function(token) {
 	return token.toLowerCase();
 
 };
-},{"./stemmer_it":215}],209:[function(require,module,exports){
+},{"./stemmer_it":220}],214:[function(require,module,exports){
 /*
 Copyright (c) 2014, Kristoffer Brabrand
 
@@ -38137,7 +38400,7 @@ PorterStemmer.step1b = step1b;
 PorterStemmer.step1c = step1c;
 PorterStemmer.step2  = step2;
 PorterStemmer.step3  = step3;
-},{"./stemmer_no":217}],210:[function(require,module,exports){
+},{"./stemmer_no":222}],215:[function(require,module,exports){
 /*
 Copyright (c) 2012, Polyakov Vladimir, Chris Umbel
 
@@ -38290,7 +38553,7 @@ PorterStemmer.stem = function(token) {
 	return head + superlativeResult;
 };
 
-},{"./stemmer_ru":219}],211:[function(require,module,exports){
+},{"./stemmer_ru":224}],216:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -38353,7 +38616,7 @@ module.exports = function() {
     };
 }
 
-},{"../tokenizers/aggressive_tokenizer":221,"../util/stopwords":241}],212:[function(require,module,exports){
+},{"../tokenizers/aggressive_tokenizer":226,"../util/stopwords":246}],217:[function(require,module,exports){
 /*
 Copyright (c) 2012, David Przybilla, Chris Umbel
 
@@ -38413,7 +38676,7 @@ module.exports = function() {
     };
 }
 
-},{"../tokenizers/aggressive_tokenizer_es":222,"../util/stopwords_es":242}],213:[function(require,module,exports){
+},{"../tokenizers/aggressive_tokenizer_es":227,"../util/stopwords_es":247}],218:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 Farsi Stemmer by Fardin Koochaki <me@fardinak.com>
@@ -38469,7 +38732,7 @@ module.exports = function() {
     };
 }
 
-},{"../tokenizers/aggressive_tokenizer_fa":223,"../util/stopwords_fa":243}],214:[function(require,module,exports){
+},{"../tokenizers/aggressive_tokenizer_fa":228,"../util/stopwords_fa":248}],219:[function(require,module,exports){
 /*
 Copyright (c) 2014, Ismaël Héry
 
@@ -38529,7 +38792,7 @@ module.exports = function() {
    };
 }
 
-},{"../tokenizers/aggressive_tokenizer_fr":224,"../util/stopwords_fr":244}],215:[function(require,module,exports){
+},{"../tokenizers/aggressive_tokenizer_fr":229,"../util/stopwords_fr":249}],220:[function(require,module,exports){
 var stopwords = require('../util/stopwords_it');
 var Tokenizer = require('../tokenizers/aggressive_tokenizer_it');
 
@@ -38566,7 +38829,7 @@ module.exports = function() {
         };
     };
 }
-},{"../tokenizers/aggressive_tokenizer_it":225,"../util/stopwords_it":245}],216:[function(require,module,exports){
+},{"../tokenizers/aggressive_tokenizer_it":230,"../util/stopwords_it":250}],221:[function(require,module,exports){
 /*
  Copyright (c) 2012, Guillaume Marty
 
@@ -38706,7 +38969,7 @@ StemmerJa.prototype.attach = function() {
 
 module.exports = StemmerJa;
 
-},{"../tokenizers/tokenizer_ja":233,"../util/stopwords_ja":246}],217:[function(require,module,exports){
+},{"../tokenizers/tokenizer_ja":238,"../util/stopwords_ja":251}],222:[function(require,module,exports){
 /*
 Copyright (c) 2014, Kristoffer Brabrand
 
@@ -38769,7 +39032,7 @@ module.exports = function() {
     };
 }
 
-},{"../tokenizers/aggressive_tokenizer_no":227,"../util/stopwords_no":247}],218:[function(require,module,exports){
+},{"../tokenizers/aggressive_tokenizer_no":232,"../util/stopwords_no":252}],223:[function(require,module,exports){
 /*
 Copyright (c) 2013, Paweł Łaskarzewski
 
@@ -38829,7 +39092,7 @@ module.exports = function() {
     };
 }
 
-},{"../tokenizers/aggressive_tokenizer_pl":228,"../util/stopwords_pl":248}],219:[function(require,module,exports){
+},{"../tokenizers/aggressive_tokenizer_pl":233,"../util/stopwords_pl":253}],224:[function(require,module,exports){
 /*
 Copyright (c) 2012, Polyakov Vladimir, Chris Umbel
 
@@ -38889,7 +39152,7 @@ module.exports = function() {
     };
 }
 
-},{"../tokenizers/aggressive_tokenizer_ru":230,"../util/stopwords_ru":249}],220:[function(require,module,exports){
+},{"../tokenizers/aggressive_tokenizer_ru":235,"../util/stopwords_ru":254}],225:[function(require,module,exports){
 (function (Buffer){
 /*
 Copyright (c) 2011, Rob Ellis, Chris Umbel
@@ -39087,7 +39350,7 @@ TfIdf.prototype.setTokenizer = function(t) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"../tokenizers/regexp_tokenizer":231,"../util/stopwords":241,"buffer":48,"fs":1,"underscore":580}],221:[function(require,module,exports){
+},{"../tokenizers/regexp_tokenizer":236,"../util/stopwords":246,"buffer":47,"fs":1,"underscore":273}],226:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -39125,7 +39388,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.trim(text.split(/\W+/));
 };
 
-},{"./tokenizer":232,"util":145}],222:[function(require,module,exports){
+},{"./tokenizer":237,"util":150}],227:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel,David Przybilla
 
@@ -39163,7 +39426,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.trim(text.split(/[^a-zA-Zá-úÁ-ÚñÑüÜ]+/));
 };
 
-},{"./tokenizer":232,"util":145}],223:[function(require,module,exports){
+},{"./tokenizer":237,"util":150}],228:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 Farsi Aggressive Tokenizer by Fardin Koochaki <me@fardinak.com>
@@ -39213,7 +39476,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.clearEmptyString(text.split(/\s+/));
 };
 
-},{"./tokenizer":232,"util":145}],224:[function(require,module,exports){
+},{"./tokenizer":237,"util":150}],229:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -39251,7 +39514,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.trim(text.split(/[^a-z0-9äâàéèëêïîöôùüûœç]+/i));
 };
 
-},{"./tokenizer":232,"util":145}],225:[function(require,module,exports){
+},{"./tokenizer":237,"util":150}],230:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel,David Przybilla
 
@@ -39289,7 +39552,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.trim(text.split(/\W+/));
 };
 
-},{"./tokenizer":232,"util":145}],226:[function(require,module,exports){
+},{"./tokenizer":237,"util":150}],231:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel, Martijn de Boer
 
@@ -39327,7 +39590,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.trim(text.split(/[^a-zA-Z0-9_']+/));
 };
 
-},{"./tokenizer":232,"util":145}],227:[function(require,module,exports){
+},{"./tokenizer":237,"util":150}],232:[function(require,module,exports){
 /*
 Copyright (c) 2014, Kristoffer Brabrand
 
@@ -39368,7 +39631,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.trim(text.split(/[^A-Za-z0-9_æøåÆØÅäÄöÖüÜ]+/));
 };
 
-},{"../normalizers/normalizer_no":195,"./tokenizer":232,"util":145}],228:[function(require,module,exports){
+},{"../normalizers/normalizer_no":200,"./tokenizer":237,"util":150}],233:[function(require,module,exports){
 /*
 Copyright (c) 2013, Paweł Łaskarzewski
 
@@ -39415,7 +39678,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.withoutEmpty(this.clearText(text).split(' '));
 };
 
-},{"./tokenizer":232,"util":145}],229:[function(require,module,exports){
+},{"./tokenizer":237,"util":150}],234:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel,David Przybilla
 
@@ -39457,7 +39720,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.withoutEmpty(this.trim(text.split(/[^a-zA-Zà-úÀ-Ú]/)));
 };
 
-},{"./tokenizer":232,"util":145}],230:[function(require,module,exports){
+},{"./tokenizer":237,"util":150}],235:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -39504,7 +39767,7 @@ AggressiveTokenizer.prototype.tokenize = function(text) {
     return this.withoutEmpty(this.clearText(text).split(' '));
 };
 
-},{"./tokenizer":232,"util":145}],231:[function(require,module,exports){
+},{"./tokenizer":237,"util":150}],236:[function(require,module,exports){
 /*
 Copyright (c) 2011, Rob Ellis, Chris Umbel
 
@@ -39592,7 +39855,7 @@ var WordPunctTokenizer = function(options) {
 util.inherits(WordPunctTokenizer, RegexpTokenizer);
 exports.WordPunctTokenizer = WordPunctTokenizer;
 
-},{"./tokenizer":232,"underscore":580,"util":145}],232:[function(require,module,exports){
+},{"./tokenizer":237,"underscore":273,"util":150}],237:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -39645,7 +39908,7 @@ Tokenizer.prototype.tokenize = function() {};
 
 module.exports = Tokenizer;
 
-},{}],233:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 // Original copyright:
 /*
  Copyright (c) 2008, Taku Kudo
@@ -39924,7 +40187,7 @@ TokenizerJa.prototype.tokenize = function(text) {
 
 module.exports = TokenizerJa;
 
-},{"../normalizers/normalizer_ja":194,"./tokenizer":232,"util":145}],234:[function(require,module,exports){
+},{"../normalizers/normalizer_ja":199,"./tokenizer":237,"util":150}],239:[function(require,module,exports){
 /*
 Copyright (c) 2011, Rob Ellis, Chris Umbel
 
@@ -40000,7 +40263,7 @@ TreebankWordTokenizer.prototype.tokenize = function(text) {
 
 module.exports = TreebankWordTokenizer;
 
-},{"./tokenizer":232,"underscore":580,"util":145}],235:[function(require,module,exports){
+},{"./tokenizer":237,"underscore":273,"util":150}],240:[function(require,module,exports){
 /*
  Copyright (c) 2012, Guillaume Marty
 
@@ -40584,7 +40847,7 @@ module.exports = function(str) {
   return str;
 };
 
-},{"../../util/utils":251}],236:[function(require,module,exports){
+},{"../../util/utils":256}],241:[function(require,module,exports){
 /*
 Copyright (c) 2014 Ken Koch
 
@@ -40816,7 +41079,7 @@ Trie.prototype.getSize = function() {
  **/
 module.exports = Trie;
 
-},{}],237:[function(require,module,exports){
+},{}],242:[function(require,module,exports){
 /*
  Copyright (c) 2014, Lee Wenzhu
 
@@ -40868,7 +41131,7 @@ Bag.prototype.unpack = function() {
 
 module.exports = Bag;
 
-},{}],238:[function(require,module,exports){
+},{}],243:[function(require,module,exports){
 /*
  Copyright (c) 2014, Lee Wenzhu
 
@@ -40982,7 +41245,7 @@ EdgeWeightedDigraph.prototype.toString = function() {
 
 module.exports = EdgeWeightedDigraph;
 
-},{"./bag":237,"util":145}],239:[function(require,module,exports){
+},{"./bag":242,"util":150}],244:[function(require,module,exports){
 /*
  Copyright (c) 2014, Lee Wenzhu
 
@@ -41083,7 +41346,7 @@ LongestPathTree.prototype.pathTo = function(v) {
 
 module.exports = LongestPathTree;
 
-},{"./edge_weighted_digraph":238,"./topological":250}],240:[function(require,module,exports){
+},{"./edge_weighted_digraph":243,"./topological":255}],245:[function(require,module,exports){
 /*
  Copyright (c) 2014, Lee Wenzhu
 
@@ -41185,7 +41448,7 @@ ShortestPathTree.prototype.pathTo = function(v) {
 
 module.exports = ShortestPathTree;
 
-},{"./edge_weighted_digraph":238,"./topological":250}],241:[function(require,module,exports){
+},{"./edge_weighted_digraph":243,"./topological":255}],246:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -41228,7 +41491,7 @@ var words = [
 // tell the world about the noise words.    
 exports.words = words;
 
-},{}],242:[function(require,module,exports){
+},{}],247:[function(require,module,exports){
 /*
 Copyright (c) 2011, David Przybilla, Chris Umbel
 
@@ -41266,7 +41529,7 @@ var words = [
 // tell the world about the noise words.    
 exports.words = words;
 
-},{}],243:[function(require,module,exports){
+},{}],248:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 Farsi Stop Words by Fardin Koochaki <me@fardinak.com>
@@ -41306,7 +41569,7 @@ var words = [
 // tell the world about the noise words.    
 exports.words = words;
 
-},{}],244:[function(require,module,exports){
+},{}],249:[function(require,module,exports){
 /*
  Copyright (c) 2014, Ismaël Héry
 
@@ -41502,7 +41765,7 @@ var words = ['être', 'avoir', 'faire',
 
 exports.words = words;
 
-},{}],245:[function(require,module,exports){
+},{}],250:[function(require,module,exports){
 /*
 Copyright (c) 2011, David Przybilla, Chris Umbel
 
@@ -41556,7 +41819,7 @@ var words = [
 // tell the world about the noise words.    
 exports.words = words;
 
-},{}],246:[function(require,module,exports){
+},{}],251:[function(require,module,exports){
 // Original copyright:
 /*
  Licensed to the Apache Software Foundation (ASF) under one or more
@@ -41617,7 +41880,7 @@ var words = ['の', 'に', 'は', 'を', 'た', 'が', 'で', 'て', 'と', 'し
 // tell the world about the noise words.
 module.exports = words;
 
-},{}],247:[function(require,module,exports){
+},{}],252:[function(require,module,exports){
 /*
 Copyright (c) 2014, Kristoffer Brabrand
 
@@ -41660,7 +41923,7 @@ var words = [
 
 // tell the world about the noise words.
 exports.words = words;
-},{}],248:[function(require,module,exports){
+},{}],253:[function(require,module,exports){
 /*
 Copyright (c) 2013, Paweł Łaskarzewski
 
@@ -41724,7 +41987,7 @@ var words = [
 // tell the world about the noise words.
 exports.words = words;
 
-},{}],249:[function(require,module,exports){
+},{}],254:[function(require,module,exports){
 /*
 Copyright (c) 2011, Polyakov Vladimir, Chris Umbel
 
@@ -41767,7 +42030,7 @@ var words = [
 // tell the world about the noise words.    
 exports.words = words;
 
-},{}],250:[function(require,module,exports){
+},{}],255:[function(require,module,exports){
 /*
  Copyright (c) 2014, Lee Wenzhu
 
@@ -41867,7 +42130,7 @@ function uniqueVertexs(edges) {
 
 module.exports = Topological;
 
-},{}],251:[function(require,module,exports){
+},{}],256:[function(require,module,exports){
 /*
  Copyright (c) 2012, Guillaume Marty
 
@@ -41988,7 +42251,7 @@ exports.replacer = replacer;
 exports.flip = flip;
 exports.merge = merge;
 
-},{}],252:[function(require,module,exports){
+},{}],257:[function(require,module,exports){
 (function (Buffer){
 /*
 Copyright (c) 2011, Chris Umbel
@@ -42078,7 +42341,7 @@ DataFile.prototype.get = get;
 module.exports = DataFile;
 
 }).call(this,require("buffer").Buffer)
-},{"./wordnet_file":255,"buffer":48,"fs":1,"util":145}],253:[function(require,module,exports){
+},{"./wordnet_file":260,"buffer":47,"fs":1,"util":150}],258:[function(require,module,exports){
 (function (Buffer){
 /*
 Copyright (c) 2011, Chris Umbel
@@ -42222,7 +42485,7 @@ IndexFile.prototype._findAt = findAt;
 module.exports = IndexFile;
 
 }).call(this,require("buffer").Buffer)
-},{"./wordnet_file":255,"buffer":48,"fs":1,"util":145}],254:[function(require,module,exports){
+},{"./wordnet_file":260,"buffer":47,"fs":1,"util":150}],259:[function(require,module,exports){
 /*
 Copyright (c) 2011, Chris Umbel
 
@@ -42393,7 +42656,7 @@ function WordNet(dataDir) {
 
 module.exports = WordNet;
 
-},{"./data_file":252,"./index_file":253,"WNdb":1}],255:[function(require,module,exports){
+},{"./data_file":257,"./index_file":258,"WNdb":1}],260:[function(require,module,exports){
 (function (Buffer){
 /*
 Copyright (c) 2011, Chris Umbel
@@ -42466,7 +42729,7 @@ WordNetFile.appendLineChar = appendLineChar;
 module.exports = WordNetFile;
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":48,"fs":1,"path":106,"util":145}],256:[function(require,module,exports){
+},{"buffer":47,"fs":1,"path":107,"util":150}],261:[function(require,module,exports){
 /* -*- js-indent-level: 4; -*- */
 
 "use strict";
@@ -42532,10351 +42795,9 @@ function well1024a (entropy_) {
              getUInt32: getUInt32 };
 }
 
-},{}],257:[function(require,module,exports){
-module.exports = {
-  F: require('./src/F'),
-  T: require('./src/T'),
-  __: require('./src/__'),
-  add: require('./src/add'),
-  addIndex: require('./src/addIndex'),
-  adjust: require('./src/adjust'),
-  all: require('./src/all'),
-  allPass: require('./src/allPass'),
-  always: require('./src/always'),
-  and: require('./src/and'),
-  any: require('./src/any'),
-  anyPass: require('./src/anyPass'),
-  ap: require('./src/ap'),
-  aperture: require('./src/aperture'),
-  append: require('./src/append'),
-  apply: require('./src/apply'),
-  applySpec: require('./src/applySpec'),
-  ascend: require('./src/ascend'),
-  assoc: require('./src/assoc'),
-  assocPath: require('./src/assocPath'),
-  binary: require('./src/binary'),
-  bind: require('./src/bind'),
-  both: require('./src/both'),
-  call: require('./src/call'),
-  chain: require('./src/chain'),
-  clamp: require('./src/clamp'),
-  clone: require('./src/clone'),
-  comparator: require('./src/comparator'),
-  complement: require('./src/complement'),
-  compose: require('./src/compose'),
-  composeK: require('./src/composeK'),
-  composeP: require('./src/composeP'),
-  concat: require('./src/concat'),
-  cond: require('./src/cond'),
-  construct: require('./src/construct'),
-  constructN: require('./src/constructN'),
-  contains: require('./src/contains'),
-  converge: require('./src/converge'),
-  countBy: require('./src/countBy'),
-  curry: require('./src/curry'),
-  curryN: require('./src/curryN'),
-  dec: require('./src/dec'),
-  descend: require('./src/descend'),
-  defaultTo: require('./src/defaultTo'),
-  difference: require('./src/difference'),
-  differenceWith: require('./src/differenceWith'),
-  dissoc: require('./src/dissoc'),
-  dissocPath: require('./src/dissocPath'),
-  divide: require('./src/divide'),
-  drop: require('./src/drop'),
-  dropLast: require('./src/dropLast'),
-  dropLastWhile: require('./src/dropLastWhile'),
-  dropRepeats: require('./src/dropRepeats'),
-  dropRepeatsWith: require('./src/dropRepeatsWith'),
-  dropWhile: require('./src/dropWhile'),
-  either: require('./src/either'),
-  empty: require('./src/empty'),
-  eqBy: require('./src/eqBy'),
-  eqProps: require('./src/eqProps'),
-  equals: require('./src/equals'),
-  evolve: require('./src/evolve'),
-  filter: require('./src/filter'),
-  find: require('./src/find'),
-  findIndex: require('./src/findIndex'),
-  findLast: require('./src/findLast'),
-  findLastIndex: require('./src/findLastIndex'),
-  flatten: require('./src/flatten'),
-  flip: require('./src/flip'),
-  forEach: require('./src/forEach'),
-  forEachObjIndexed: require('./src/forEachObjIndexed'),
-  fromPairs: require('./src/fromPairs'),
-  groupBy: require('./src/groupBy'),
-  groupWith: require('./src/groupWith'),
-  gt: require('./src/gt'),
-  gte: require('./src/gte'),
-  has: require('./src/has'),
-  hasIn: require('./src/hasIn'),
-  head: require('./src/head'),
-  identical: require('./src/identical'),
-  identity: require('./src/identity'),
-  ifElse: require('./src/ifElse'),
-  inc: require('./src/inc'),
-  indexBy: require('./src/indexBy'),
-  indexOf: require('./src/indexOf'),
-  init: require('./src/init'),
-  insert: require('./src/insert'),
-  insertAll: require('./src/insertAll'),
-  intersection: require('./src/intersection'),
-  intersectionWith: require('./src/intersectionWith'),
-  intersperse: require('./src/intersperse'),
-  into: require('./src/into'),
-  invert: require('./src/invert'),
-  invertObj: require('./src/invertObj'),
-  invoker: require('./src/invoker'),
-  is: require('./src/is'),
-  isArrayLike: require('./src/isArrayLike'),
-  isEmpty: require('./src/isEmpty'),
-  isNil: require('./src/isNil'),
-  join: require('./src/join'),
-  juxt: require('./src/juxt'),
-  keys: require('./src/keys'),
-  keysIn: require('./src/keysIn'),
-  last: require('./src/last'),
-  lastIndexOf: require('./src/lastIndexOf'),
-  length: require('./src/length'),
-  lens: require('./src/lens'),
-  lensIndex: require('./src/lensIndex'),
-  lensPath: require('./src/lensPath'),
-  lensProp: require('./src/lensProp'),
-  lift: require('./src/lift'),
-  liftN: require('./src/liftN'),
-  lt: require('./src/lt'),
-  lte: require('./src/lte'),
-  map: require('./src/map'),
-  mapAccum: require('./src/mapAccum'),
-  mapAccumRight: require('./src/mapAccumRight'),
-  mapObjIndexed: require('./src/mapObjIndexed'),
-  match: require('./src/match'),
-  mathMod: require('./src/mathMod'),
-  max: require('./src/max'),
-  maxBy: require('./src/maxBy'),
-  mean: require('./src/mean'),
-  median: require('./src/median'),
-  memoize: require('./src/memoize'),
-  merge: require('./src/merge'),
-  mergeAll: require('./src/mergeAll'),
-  mergeWith: require('./src/mergeWith'),
-  mergeWithKey: require('./src/mergeWithKey'),
-  min: require('./src/min'),
-  minBy: require('./src/minBy'),
-  modulo: require('./src/modulo'),
-  multiply: require('./src/multiply'),
-  nAry: require('./src/nAry'),
-  negate: require('./src/negate'),
-  none: require('./src/none'),
-  not: require('./src/not'),
-  nth: require('./src/nth'),
-  nthArg: require('./src/nthArg'),
-  objOf: require('./src/objOf'),
-  of: require('./src/of'),
-  omit: require('./src/omit'),
-  once: require('./src/once'),
-  or: require('./src/or'),
-  over: require('./src/over'),
-  pair: require('./src/pair'),
-  partial: require('./src/partial'),
-  partialRight: require('./src/partialRight'),
-  partition: require('./src/partition'),
-  path: require('./src/path'),
-  pathEq: require('./src/pathEq'),
-  pathOr: require('./src/pathOr'),
-  pathSatisfies: require('./src/pathSatisfies'),
-  pick: require('./src/pick'),
-  pickAll: require('./src/pickAll'),
-  pickBy: require('./src/pickBy'),
-  pipe: require('./src/pipe'),
-  pipeK: require('./src/pipeK'),
-  pipeP: require('./src/pipeP'),
-  pluck: require('./src/pluck'),
-  prepend: require('./src/prepend'),
-  product: require('./src/product'),
-  project: require('./src/project'),
-  prop: require('./src/prop'),
-  propEq: require('./src/propEq'),
-  propIs: require('./src/propIs'),
-  propOr: require('./src/propOr'),
-  propSatisfies: require('./src/propSatisfies'),
-  props: require('./src/props'),
-  range: require('./src/range'),
-  reduce: require('./src/reduce'),
-  reduceBy: require('./src/reduceBy'),
-  reduceRight: require('./src/reduceRight'),
-  reduceWhile: require('./src/reduceWhile'),
-  reduced: require('./src/reduced'),
-  reject: require('./src/reject'),
-  remove: require('./src/remove'),
-  repeat: require('./src/repeat'),
-  replace: require('./src/replace'),
-  reverse: require('./src/reverse'),
-  scan: require('./src/scan'),
-  sequence: require('./src/sequence'),
-  set: require('./src/set'),
-  slice: require('./src/slice'),
-  sort: require('./src/sort'),
-  sortBy: require('./src/sortBy'),
-  sortWith: require('./src/sortWith'),
-  split: require('./src/split'),
-  splitAt: require('./src/splitAt'),
-  splitEvery: require('./src/splitEvery'),
-  splitWhen: require('./src/splitWhen'),
-  subtract: require('./src/subtract'),
-  sum: require('./src/sum'),
-  symmetricDifference: require('./src/symmetricDifference'),
-  symmetricDifferenceWith: require('./src/symmetricDifferenceWith'),
-  tail: require('./src/tail'),
-  take: require('./src/take'),
-  takeLast: require('./src/takeLast'),
-  takeLastWhile: require('./src/takeLastWhile'),
-  takeWhile: require('./src/takeWhile'),
-  tap: require('./src/tap'),
-  test: require('./src/test'),
-  times: require('./src/times'),
-  toLower: require('./src/toLower'),
-  toPairs: require('./src/toPairs'),
-  toPairsIn: require('./src/toPairsIn'),
-  toString: require('./src/toString'),
-  toUpper: require('./src/toUpper'),
-  transduce: require('./src/transduce'),
-  transpose: require('./src/transpose'),
-  traverse: require('./src/traverse'),
-  trim: require('./src/trim'),
-  tryCatch: require('./src/tryCatch'),
-  type: require('./src/type'),
-  unapply: require('./src/unapply'),
-  unary: require('./src/unary'),
-  uncurryN: require('./src/uncurryN'),
-  unfold: require('./src/unfold'),
-  union: require('./src/union'),
-  unionWith: require('./src/unionWith'),
-  uniq: require('./src/uniq'),
-  uniqBy: require('./src/uniqBy'),
-  uniqWith: require('./src/uniqWith'),
-  unless: require('./src/unless'),
-  unnest: require('./src/unnest'),
-  until: require('./src/until'),
-  update: require('./src/update'),
-  useWith: require('./src/useWith'),
-  values: require('./src/values'),
-  valuesIn: require('./src/valuesIn'),
-  view: require('./src/view'),
-  when: require('./src/when'),
-  where: require('./src/where'),
-  whereEq: require('./src/whereEq'),
-  without: require('./src/without'),
-  xprod: require('./src/xprod'),
-  zip: require('./src/zip'),
-  zipObj: require('./src/zipObj'),
-  zipWith: require('./src/zipWith')
-};
-
-},{"./src/F":258,"./src/T":259,"./src/__":260,"./src/add":261,"./src/addIndex":262,"./src/adjust":263,"./src/all":264,"./src/allPass":265,"./src/always":266,"./src/and":267,"./src/any":268,"./src/anyPass":269,"./src/ap":270,"./src/aperture":271,"./src/append":272,"./src/apply":273,"./src/applySpec":274,"./src/ascend":275,"./src/assoc":276,"./src/assocPath":277,"./src/binary":278,"./src/bind":279,"./src/both":280,"./src/call":281,"./src/chain":282,"./src/clamp":283,"./src/clone":284,"./src/comparator":285,"./src/complement":286,"./src/compose":287,"./src/composeK":288,"./src/composeP":289,"./src/concat":290,"./src/cond":291,"./src/construct":292,"./src/constructN":293,"./src/contains":294,"./src/converge":295,"./src/countBy":296,"./src/curry":297,"./src/curryN":298,"./src/dec":299,"./src/defaultTo":300,"./src/descend":301,"./src/difference":302,"./src/differenceWith":303,"./src/dissoc":304,"./src/dissocPath":305,"./src/divide":306,"./src/drop":307,"./src/dropLast":308,"./src/dropLastWhile":309,"./src/dropRepeats":310,"./src/dropRepeatsWith":311,"./src/dropWhile":312,"./src/either":313,"./src/empty":314,"./src/eqBy":315,"./src/eqProps":316,"./src/equals":317,"./src/evolve":318,"./src/filter":319,"./src/find":320,"./src/findIndex":321,"./src/findLast":322,"./src/findLastIndex":323,"./src/flatten":324,"./src/flip":325,"./src/forEach":326,"./src/forEachObjIndexed":327,"./src/fromPairs":328,"./src/groupBy":329,"./src/groupWith":330,"./src/gt":331,"./src/gte":332,"./src/has":333,"./src/hasIn":334,"./src/head":335,"./src/identical":336,"./src/identity":337,"./src/ifElse":338,"./src/inc":339,"./src/indexBy":340,"./src/indexOf":341,"./src/init":342,"./src/insert":343,"./src/insertAll":344,"./src/intersection":415,"./src/intersectionWith":416,"./src/intersperse":417,"./src/into":418,"./src/invert":419,"./src/invertObj":420,"./src/invoker":421,"./src/is":422,"./src/isArrayLike":423,"./src/isEmpty":424,"./src/isNil":425,"./src/join":426,"./src/juxt":427,"./src/keys":428,"./src/keysIn":429,"./src/last":430,"./src/lastIndexOf":431,"./src/length":432,"./src/lens":433,"./src/lensIndex":434,"./src/lensPath":435,"./src/lensProp":436,"./src/lift":437,"./src/liftN":438,"./src/lt":439,"./src/lte":440,"./src/map":441,"./src/mapAccum":442,"./src/mapAccumRight":443,"./src/mapObjIndexed":444,"./src/match":445,"./src/mathMod":446,"./src/max":447,"./src/maxBy":448,"./src/mean":449,"./src/median":450,"./src/memoize":451,"./src/merge":452,"./src/mergeAll":453,"./src/mergeWith":454,"./src/mergeWithKey":455,"./src/min":456,"./src/minBy":457,"./src/modulo":458,"./src/multiply":459,"./src/nAry":460,"./src/negate":461,"./src/none":462,"./src/not":463,"./src/nth":464,"./src/nthArg":465,"./src/objOf":466,"./src/of":467,"./src/omit":468,"./src/once":469,"./src/or":470,"./src/over":471,"./src/pair":472,"./src/partial":473,"./src/partialRight":474,"./src/partition":475,"./src/path":476,"./src/pathEq":477,"./src/pathOr":478,"./src/pathSatisfies":479,"./src/pick":480,"./src/pickAll":481,"./src/pickBy":482,"./src/pipe":483,"./src/pipeK":484,"./src/pipeP":485,"./src/pluck":486,"./src/prepend":487,"./src/product":488,"./src/project":489,"./src/prop":490,"./src/propEq":491,"./src/propIs":492,"./src/propOr":493,"./src/propSatisfies":494,"./src/props":495,"./src/range":496,"./src/reduce":497,"./src/reduceBy":498,"./src/reduceRight":499,"./src/reduceWhile":500,"./src/reduced":501,"./src/reject":502,"./src/remove":503,"./src/repeat":504,"./src/replace":505,"./src/reverse":506,"./src/scan":507,"./src/sequence":508,"./src/set":509,"./src/slice":510,"./src/sort":511,"./src/sortBy":512,"./src/sortWith":513,"./src/split":514,"./src/splitAt":515,"./src/splitEvery":516,"./src/splitWhen":517,"./src/subtract":518,"./src/sum":519,"./src/symmetricDifference":520,"./src/symmetricDifferenceWith":521,"./src/tail":522,"./src/take":523,"./src/takeLast":524,"./src/takeLastWhile":525,"./src/takeWhile":526,"./src/tap":527,"./src/test":528,"./src/times":529,"./src/toLower":530,"./src/toPairs":531,"./src/toPairsIn":532,"./src/toString":533,"./src/toUpper":534,"./src/transduce":535,"./src/transpose":536,"./src/traverse":537,"./src/trim":538,"./src/tryCatch":539,"./src/type":540,"./src/unapply":541,"./src/unary":542,"./src/uncurryN":543,"./src/unfold":544,"./src/union":545,"./src/unionWith":546,"./src/uniq":547,"./src/uniqBy":548,"./src/uniqWith":549,"./src/unless":550,"./src/unnest":551,"./src/until":552,"./src/update":553,"./src/useWith":554,"./src/values":555,"./src/valuesIn":556,"./src/view":557,"./src/when":558,"./src/where":559,"./src/whereEq":560,"./src/without":561,"./src/xprod":562,"./src/zip":563,"./src/zipObj":564,"./src/zipWith":565}],258:[function(require,module,exports){
-var always = require('./always');
-
-
-/**
- * A function that always returns `false`. Any passed in parameters are ignored.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Function
- * @sig * -> Boolean
- * @param {*}
- * @return {Boolean}
- * @see R.always, R.T
- * @example
- *
- *      R.F(); //=> false
- */
-module.exports = always(false);
-
-},{"./always":266}],259:[function(require,module,exports){
-var always = require('./always');
-
-
-/**
- * A function that always returns `true`. Any passed in parameters are ignored.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Function
- * @sig * -> Boolean
- * @param {*}
- * @return {Boolean}
- * @see R.always, R.F
- * @example
- *
- *      R.T(); //=> true
- */
-module.exports = always(true);
-
-},{"./always":266}],260:[function(require,module,exports){
-/**
- * A special placeholder value used to specify "gaps" within curried functions,
- * allowing partial application of any combination of arguments, regardless of
- * their positions.
- *
- * If `g` is a curried ternary function and `_` is `R.__`, the following are
- * equivalent:
- *
- *   - `g(1, 2, 3)`
- *   - `g(_, 2, 3)(1)`
- *   - `g(_, _, 3)(1)(2)`
- *   - `g(_, _, 3)(1, 2)`
- *   - `g(_, 2, _)(1, 3)`
- *   - `g(_, 2)(1)(3)`
- *   - `g(_, 2)(1, 3)`
- *   - `g(_, 2)(_, 3)(1)`
- *
- * @constant
- * @memberOf R
- * @since v0.6.0
- * @category Function
- * @example
- *
- *      var greet = R.replace('{name}', R.__, 'Hello, {name}!');
- *      greet('Alice'); //=> 'Hello, Alice!'
- */
-module.exports = {'@@functional/placeholder': true};
-
-},{}],261:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Adds two values.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Math
- * @sig Number -> Number -> Number
- * @param {Number} a
- * @param {Number} b
- * @return {Number}
- * @see R.subtract
- * @example
- *
- *      R.add(2, 3);       //=>  5
- *      R.add(7)(10);      //=> 17
- */
-module.exports = _curry2(function add(a, b) {
-  return Number(a) + Number(b);
-});
-
-},{"./internal/_curry2":359}],262:[function(require,module,exports){
-var _concat = require('./internal/_concat');
-var _curry1 = require('./internal/_curry1');
-var curryN = require('./curryN');
-
-
-/**
- * Creates a new list iteration function from an existing one by adding two new
- * parameters to its callback function: the current index, and the entire list.
- *
- * This would turn, for instance, Ramda's simple `map` function into one that
- * more closely resembles `Array.prototype.map`. Note that this will only work
- * for functions in which the iteration callback function is the first
- * parameter, and where the list is the last parameter. (This latter might be
- * unimportant if the list parameter is not used.)
- *
- * @func
- * @memberOf R
- * @since v0.15.0
- * @category Function
- * @category List
- * @sig ((a ... -> b) ... -> [a] -> *) -> (a ..., Int, [a] -> b) ... -> [a] -> *)
- * @param {Function} fn A list iteration function that does not pass index or list to its callback
- * @return {Function} An altered list iteration function that passes (item, index, list) to its callback
- * @example
- *
- *      var mapIndexed = R.addIndex(R.map);
- *      mapIndexed((val, idx) => idx + '-' + val, ['f', 'o', 'o', 'b', 'a', 'r']);
- *      //=> ['0-f', '1-o', '2-o', '3-b', '4-a', '5-r']
- */
-module.exports = _curry1(function addIndex(fn) {
-  return curryN(fn.length, function() {
-    var idx = 0;
-    var origFn = arguments[0];
-    var list = arguments[arguments.length - 1];
-    var args = Array.prototype.slice.call(arguments, 0);
-    args[0] = function() {
-      var result = origFn.apply(this, _concat(arguments, [idx, list]));
-      idx += 1;
-      return result;
-    };
-    return fn.apply(this, args);
-  });
-});
-
-},{"./curryN":298,"./internal/_concat":354,"./internal/_curry1":358}],263:[function(require,module,exports){
-var _concat = require('./internal/_concat');
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Applies a function to the value at the given index of an array, returning a
- * new copy of the array with the element at the given index replaced with the
- * result of the function application.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category List
- * @sig (a -> a) -> Number -> [a] -> [a]
- * @param {Function} fn The function to apply.
- * @param {Number} idx The index.
- * @param {Array|Arguments} list An array-like object whose value
- *        at the supplied index will be replaced.
- * @return {Array} A copy of the supplied array-like object with
- *         the element at index `idx` replaced with the value
- *         returned by applying `fn` to the existing element.
- * @see R.update
- * @example
- *
- *      R.adjust(R.add(10), 1, [1, 2, 3]);     //=> [1, 12, 3]
- *      R.adjust(R.add(10))(1)([1, 2, 3]);     //=> [1, 12, 3]
- * @symb R.adjust(f, -1, [a, b]) = [a, f(b)]
- * @symb R.adjust(f, 0, [a, b]) = [f(a), b]
- */
-module.exports = _curry3(function adjust(fn, idx, list) {
-  if (idx >= list.length || idx < -list.length) {
-    return list;
-  }
-  var start = idx < 0 ? list.length : 0;
-  var _idx = start + idx;
-  var _list = _concat(list);
-  _list[_idx] = fn(list[_idx]);
-  return _list;
-});
-
-},{"./internal/_concat":354,"./internal/_curry3":360}],264:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xall = require('./internal/_xall');
-
-
-/**
- * Returns `true` if all elements of the list match the predicate, `false` if
- * there are any that don't.
- *
- * Dispatches to the `all` method of the second argument, if present.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> Boolean
- * @param {Function} fn The predicate function.
- * @param {Array} list The array to consider.
- * @return {Boolean} `true` if the predicate is satisfied by every element, `false`
- *         otherwise.
- * @see R.any, R.none, R.transduce
- * @example
- *
- *      var equals3 = R.equals(3);
- *      R.all(equals3)([3, 3, 3, 3]); //=> true
- *      R.all(equals3)([3, 3, 1, 3]); //=> false
- */
-module.exports = _curry2(_dispatchable(['all'], _xall, function all(fn, list) {
-  var idx = 0;
-  while (idx < list.length) {
-    if (!fn(list[idx])) {
-      return false;
-    }
-    idx += 1;
-  }
-  return true;
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xall":395}],265:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var curryN = require('./curryN');
-var max = require('./max');
-var pluck = require('./pluck');
-var reduce = require('./reduce');
-
-
-/**
- * Takes a list of predicates and returns a predicate that returns true for a
- * given list of arguments if every one of the provided predicates is satisfied
- * by those arguments.
- *
- * The function returned is a curried function whose arity matches that of the
- * highest-arity predicate.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Logic
- * @sig [(*... -> Boolean)] -> (*... -> Boolean)
- * @param {Array} predicates An array of predicates to check
- * @return {Function} The combined predicate
- * @see R.anyPass
- * @example
- *
- *      var isQueen = R.propEq('rank', 'Q');
- *      var isSpade = R.propEq('suit', '♠︎');
- *      var isQueenOfSpades = R.allPass([isQueen, isSpade]);
- *
- *      isQueenOfSpades({rank: 'Q', suit: '♣︎'}); //=> false
- *      isQueenOfSpades({rank: 'Q', suit: '♠︎'}); //=> true
- */
-module.exports = _curry1(function allPass(preds) {
-  return curryN(reduce(max, 0, pluck('length', preds)), function() {
-    var idx = 0;
-    var len = preds.length;
-    while (idx < len) {
-      if (!preds[idx].apply(this, arguments)) {
-        return false;
-      }
-      idx += 1;
-    }
-    return true;
-  });
-});
-
-},{"./curryN":298,"./internal/_curry1":358,"./max":447,"./pluck":486,"./reduce":497}],266:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Returns a function that always returns the given value. Note that for
- * non-primitives the value returned is a reference to the original value.
- *
- * This function is known as `const`, `constant`, or `K` (for K combinator) in
- * other languages and libraries.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig a -> (* -> a)
- * @param {*} val The value to wrap in a function
- * @return {Function} A Function :: * -> val.
- * @example
- *
- *      var t = R.always('Tee');
- *      t(); //=> 'Tee'
- */
-module.exports = _curry1(function always(val) {
-  return function() {
-    return val;
-  };
-});
-
-},{"./internal/_curry1":358}],267:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns `true` if both arguments are `true`; `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Logic
- * @sig a -> b -> a | b
- * @param {Any} a
- * @param {Any} b
- * @return {Any} the first argument if it is falsy, otherwise the second argument.
- * @see R.both
- * @example
- *
- *      R.and(true, true); //=> true
- *      R.and(true, false); //=> false
- *      R.and(false, true); //=> false
- *      R.and(false, false); //=> false
- */
-module.exports = _curry2(function and(a, b) {
-  return a && b;
-});
-
-},{"./internal/_curry2":359}],268:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xany = require('./internal/_xany');
-
-
-/**
- * Returns `true` if at least one of elements of the list match the predicate,
- * `false` otherwise.
- *
- * Dispatches to the `any` method of the second argument, if present.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> Boolean
- * @param {Function} fn The predicate function.
- * @param {Array} list The array to consider.
- * @return {Boolean} `true` if the predicate is satisfied by at least one element, `false`
- *         otherwise.
- * @see R.all, R.none, R.transduce
- * @example
- *
- *      var lessThan0 = R.flip(R.lt)(0);
- *      var lessThan2 = R.flip(R.lt)(2);
- *      R.any(lessThan0)([1, 2]); //=> false
- *      R.any(lessThan2)([1, 2]); //=> true
- */
-module.exports = _curry2(_dispatchable(['any'], _xany, function any(fn, list) {
-  var idx = 0;
-  while (idx < list.length) {
-    if (fn(list[idx])) {
-      return true;
-    }
-    idx += 1;
-  }
-  return false;
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xany":396}],269:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var curryN = require('./curryN');
-var max = require('./max');
-var pluck = require('./pluck');
-var reduce = require('./reduce');
-
-
-/**
- * Takes a list of predicates and returns a predicate that returns true for a
- * given list of arguments if at least one of the provided predicates is
- * satisfied by those arguments.
- *
- * The function returned is a curried function whose arity matches that of the
- * highest-arity predicate.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Logic
- * @sig [(*... -> Boolean)] -> (*... -> Boolean)
- * @param {Array} predicates An array of predicates to check
- * @return {Function} The combined predicate
- * @see R.allPass
- * @example
- *
- *      var isClub = R.propEq('suit', '♣');
- *      var isSpade = R.propEq('suit', '♠');
- *      var isBlackCard = R.anyPass([isClub, isSpade]);
- *
- *      isBlackCard({rank: '10', suit: '♣'}); //=> true
- *      isBlackCard({rank: 'Q', suit: '♠'}); //=> true
- *      isBlackCard({rank: 'Q', suit: '♦'}); //=> false
- */
-module.exports = _curry1(function anyPass(preds) {
-  return curryN(reduce(max, 0, pluck('length', preds)), function() {
-    var idx = 0;
-    var len = preds.length;
-    while (idx < len) {
-      if (preds[idx].apply(this, arguments)) {
-        return true;
-      }
-      idx += 1;
-    }
-    return false;
-  });
-});
-
-},{"./curryN":298,"./internal/_curry1":358,"./max":447,"./pluck":486,"./reduce":497}],270:[function(require,module,exports){
-var _concat = require('./internal/_concat');
-var _curry2 = require('./internal/_curry2');
-var _reduce = require('./internal/_reduce');
-var map = require('./map');
-
-
-/**
- * ap applies a list of functions to a list of values.
- *
- * Dispatches to the `ap` method of the second argument, if present. Also
- * treats curried functions as applicatives.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category Function
- * @sig [a -> b] -> [a] -> [b]
- * @sig Apply f => f (a -> b) -> f a -> f b
- * @param {Array} fns An array of functions
- * @param {Array} vs An array of values
- * @return {Array} An array of results of applying each of `fns` to all of `vs` in turn.
- * @example
- *
- *      R.ap([R.multiply(2), R.add(3)], [1,2,3]); //=> [2, 4, 6, 4, 5, 6]
- *      R.ap([R.concat('tasty '), R.toUpper], ['pizza', 'salad']); //=> ["tasty pizza", "tasty salad", "PIZZA", "SALAD"]
- * @symb R.ap([f, g], [a, b]) = [f(a), f(b), g(a), g(b)]
- */
-module.exports = _curry2(function ap(applicative, fn) {
-  return (
-    typeof applicative.ap === 'function' ?
-      applicative.ap(fn) :
-    typeof applicative === 'function' ?
-      function(x) { return applicative(x)(fn(x)); } :
-    // else
-      _reduce(function(acc, f) { return _concat(acc, map(f, fn)); }, [], applicative)
-  );
-});
-
-},{"./internal/_concat":354,"./internal/_curry2":359,"./internal/_reduce":390,"./map":441}],271:[function(require,module,exports){
-var _aperture = require('./internal/_aperture');
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xaperture = require('./internal/_xaperture');
-
-
-/**
- * Returns a new list, composed of n-tuples of consecutive elements If `n` is
- * greater than the length of the list, an empty list is returned.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.12.0
- * @category List
- * @sig Number -> [a] -> [[a]]
- * @param {Number} n The size of the tuples to create
- * @param {Array} list The list to split into `n`-length tuples
- * @return {Array} The resulting list of `n`-length tuples
- * @see R.transduce
- * @example
- *
- *      R.aperture(2, [1, 2, 3, 4, 5]); //=> [[1, 2], [2, 3], [3, 4], [4, 5]]
- *      R.aperture(3, [1, 2, 3, 4, 5]); //=> [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
- *      R.aperture(7, [1, 2, 3, 4, 5]); //=> []
- */
-module.exports = _curry2(_dispatchable([], _xaperture, _aperture));
-
-},{"./internal/_aperture":346,"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xaperture":397}],272:[function(require,module,exports){
-var _concat = require('./internal/_concat');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a new list containing the contents of the given list, followed by
- * the given element.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig a -> [a] -> [a]
- * @param {*} el The element to add to the end of the new list.
- * @param {Array} list The list of elements to add a new item to.
- *        list.
- * @return {Array} A new list containing the elements of the old list followed by `el`.
- * @see R.prepend
- * @example
- *
- *      R.append('tests', ['write', 'more']); //=> ['write', 'more', 'tests']
- *      R.append('tests', []); //=> ['tests']
- *      R.append(['tests'], ['write', 'more']); //=> ['write', 'more', ['tests']]
- */
-module.exports = _curry2(function append(el, list) {
-  return _concat(list, [el]);
-});
-
-},{"./internal/_concat":354,"./internal/_curry2":359}],273:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Applies function `fn` to the argument list `args`. This is useful for
- * creating a fixed-arity function from a variadic function. `fn` should be a
- * bound function if context is significant.
- *
- * @func
- * @memberOf R
- * @since v0.7.0
- * @category Function
- * @sig (*... -> a) -> [*] -> a
- * @param {Function} fn The function which will be called with `args`
- * @param {Array} args The arguments to call `fn` with
- * @return {*} result The result, equivalent to `fn(...args)`
- * @see R.call, R.unapply
- * @example
- *
- *      var nums = [1, 2, 3, -99, 42, 6, 7];
- *      R.apply(Math.max, nums); //=> 42
- * @symb R.apply(f, [a, b, c]) = f(a, b, c)
- */
-module.exports = _curry2(function apply(fn, args) {
-  return fn.apply(this, args);
-});
-
-},{"./internal/_curry2":359}],274:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var apply = require('./apply');
-var curryN = require('./curryN');
-var map = require('./map');
-var max = require('./max');
-var pluck = require('./pluck');
-var reduce = require('./reduce');
-var values = require('./values');
-
-
-/**
- * Given a spec object recursively mapping properties to functions, creates a
- * function producing an object of the same structure, by mapping each property
- * to the result of calling its associated function with the supplied arguments.
- *
- * @func
- * @memberOf R
- * @since v0.20.0
- * @category Function
- * @sig {k: ((a, b, ..., m) -> v)} -> ((a, b, ..., m) -> {k: v})
- * @param {Object} spec an object recursively mapping properties to functions for
- *        producing the values for these properties.
- * @return {Function} A function that returns an object of the same structure
- * as `spec', with each property set to the value returned by calling its
- * associated function with the supplied arguments.
- * @see R.converge, R.juxt
- * @example
- *
- *      var getMetrics = R.applySpec({
- *                                      sum: R.add,
- *                                      nested: { mul: R.multiply }
- *                                   });
- *      getMetrics(2, 4); // => { sum: 6, nested: { mul: 8 } }
- * @symb R.applySpec({ x: f, y: { z: g } })(a, b) = { x: f(a, b), y: { z: g(a, b) } }
- */
-module.exports = _curry1(function applySpec(spec) {
-  spec = map(function(v) { return typeof v == 'function' ? v : applySpec(v); },
-             spec);
-  return curryN(reduce(max, 0, pluck('length', values(spec))),
-                function() {
-                  var args = arguments;
-                  return map(function(f) { return apply(f, args); }, spec);
-                });
-});
-
-},{"./apply":273,"./curryN":298,"./internal/_curry1":358,"./map":441,"./max":447,"./pluck":486,"./reduce":497,"./values":555}],275:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Makes an ascending comparator function out of a function that returns a value
- * that can be compared with `<` and `>`.
- *
- * @func
- * @memberOf R
- * @since v0.23.0
- * @category Function
- * @sig Ord b => (a -> b) -> a -> a -> Number
- * @param {Function} fn A function of arity one that returns a value that can be compared
- * @param {*} a The first item to be compared.
- * @param {*} b The second item to be compared.
- * @return {Number} `-1` if fn(a) < fn(b), `1` if fn(b) < fn(a), otherwise `0`
- * @example
- *
- *      var byAge = R.ascend(R.prop('age'));
- *      var people = [
- *        // ...
- *      ];
- *      var peopleByYoungestFirst = R.sort(byAge, people);
- */
-module.exports = _curry3(function ascend(fn, a, b) {
-  var aa = fn(a);
-  var bb = fn(b);
-  return aa < bb ? -1 : aa > bb ? 1 : 0;
-});
-
-},{"./internal/_curry3":360}],276:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Makes a shallow clone of an object, setting or overriding the specified
- * property with the given value. Note that this copies and flattens prototype
- * properties onto the new object as well. All non-primitive properties are
- * copied by reference.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Object
- * @sig String -> a -> {k: v} -> {k: v}
- * @param {String} prop The property name to set
- * @param {*} val The new value
- * @param {Object} obj The object to clone
- * @return {Object} A new object equivalent to the original except for the changed property.
- * @see R.dissoc
- * @example
- *
- *      R.assoc('c', 3, {a: 1, b: 2}); //=> {a: 1, b: 2, c: 3}
- */
-module.exports = _curry3(function assoc(prop, val, obj) {
-  var result = {};
-  for (var p in obj) {
-    result[p] = obj[p];
-  }
-  result[prop] = val;
-  return result;
-});
-
-},{"./internal/_curry3":360}],277:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var _has = require('./internal/_has');
-var _isArray = require('./internal/_isArray');
-var _isInteger = require('./internal/_isInteger');
-var assoc = require('./assoc');
-
-
-/**
- * Makes a shallow clone of an object, setting or overriding the nodes required
- * to create the given path, and placing the specific value at the tail end of
- * that path. Note that this copies and flattens prototype properties onto the
- * new object as well. All non-primitive properties are copied by reference.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Object
- * @typedefn Idx = String | Int
- * @sig [Idx] -> a -> {a} -> {a}
- * @param {Array} path the path to set
- * @param {*} val The new value
- * @param {Object} obj The object to clone
- * @return {Object} A new object equivalent to the original except along the specified path.
- * @see R.dissocPath
- * @example
- *
- *      R.assocPath(['a', 'b', 'c'], 42, {a: {b: {c: 0}}}); //=> {a: {b: {c: 42}}}
- *
- *      // Any missing or non-object keys in path will be overridden
- *      R.assocPath(['a', 'b', 'c'], 42, {a: 5}); //=> {a: {b: {c: 42}}}
- */
-module.exports = _curry3(function assocPath(path, val, obj) {
-  if (path.length === 0) {
-    return val;
-  }
-  var idx = path[0];
-  if (path.length > 1) {
-    var nextObj = _has(idx, obj) ? obj[idx] : _isInteger(path[1]) ? [] : {};
-    val = assocPath(Array.prototype.slice.call(path, 1), val, nextObj);
-  }
-  if (_isInteger(idx) && _isArray(obj)) {
-    var arr = [].concat(obj);
-    arr[idx] = val;
-    return arr;
-  } else {
-    return assoc(idx, val, obj);
-  }
-});
-
-},{"./assoc":276,"./internal/_curry3":360,"./internal/_has":370,"./internal/_isArray":374,"./internal/_isInteger":376}],278:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var nAry = require('./nAry');
-
-
-/**
- * Wraps a function of any arity (including nullary) in a function that accepts
- * exactly 2 parameters. Any extraneous parameters will not be passed to the
- * supplied function.
- *
- * @func
- * @memberOf R
- * @since v0.2.0
- * @category Function
- * @sig (* -> c) -> (a, b -> c)
- * @param {Function} fn The function to wrap.
- * @return {Function} A new function wrapping `fn`. The new function is guaranteed to be of
- *         arity 2.
- * @example
- *
- *      var takesThreeArgs = function(a, b, c) {
- *        return [a, b, c];
- *      };
- *      takesThreeArgs.length; //=> 3
- *      takesThreeArgs(1, 2, 3); //=> [1, 2, 3]
- *
- *      var takesTwoArgs = R.binary(takesThreeArgs);
- *      takesTwoArgs.length; //=> 2
- *      // Only 2 arguments are passed to the wrapped function
- *      takesTwoArgs(1, 2, 3); //=> [1, 2, undefined]
- * @symb R.binary(f)(a, b, c) = f(a, b)
- */
-module.exports = _curry1(function binary(fn) {
-  return nAry(2, fn);
-});
-
-},{"./internal/_curry1":358,"./nAry":460}],279:[function(require,module,exports){
-var _arity = require('./internal/_arity');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Creates a function that is bound to a context.
- * Note: `R.bind` does not provide the additional argument-binding capabilities of
- * [Function.prototype.bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
- *
- * @func
- * @memberOf R
- * @since v0.6.0
- * @category Function
- * @category Object
- * @sig (* -> *) -> {*} -> (* -> *)
- * @param {Function} fn The function to bind to context
- * @param {Object} thisObj The context to bind `fn` to
- * @return {Function} A function that will execute in the context of `thisObj`.
- * @see R.partial
- * @example
- *
- *      var log = R.bind(console.log, console);
- *      R.pipe(R.assoc('a', 2), R.tap(log), R.assoc('a', 3))({a: 1}); //=> {a: 3}
- *      // logs {a: 2}
- * @symb R.bind(f, o)(a, b) = f.call(o, a, b)
- */
-module.exports = _curry2(function bind(fn, thisObj) {
-  return _arity(fn.length, function() {
-    return fn.apply(thisObj, arguments);
-  });
-});
-
-},{"./internal/_arity":347,"./internal/_curry2":359}],280:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _isFunction = require('./internal/_isFunction');
-var and = require('./and');
-var lift = require('./lift');
-
-
-/**
- * A function which calls the two provided functions and returns the `&&`
- * of the results.
- * It returns the result of the first function if it is false-y and the result
- * of the second function otherwise. Note that this is short-circuited,
- * meaning that the second function will not be invoked if the first returns a
- * false-y value.
- *
- * In addition to functions, `R.both` also accepts any fantasy-land compatible
- * applicative functor.
- *
- * @func
- * @memberOf R
- * @since v0.12.0
- * @category Logic
- * @sig (*... -> Boolean) -> (*... -> Boolean) -> (*... -> Boolean)
- * @param {Function} f A predicate
- * @param {Function} g Another predicate
- * @return {Function} a function that applies its arguments to `f` and `g` and `&&`s their outputs together.
- * @see R.and
- * @example
- *
- *      var gt10 = R.gt(R.__, 10)
- *      var lt20 = R.lt(R.__, 20)
- *      var f = R.both(gt10, lt20);
- *      f(15); //=> true
- *      f(30); //=> false
- */
-module.exports = _curry2(function both(f, g) {
-  return _isFunction(f) ?
-    function _both() {
-      return f.apply(this, arguments) && g.apply(this, arguments);
-    } :
-    lift(and)(f, g);
-});
-
-},{"./and":267,"./internal/_curry2":359,"./internal/_isFunction":375,"./lift":437}],281:[function(require,module,exports){
-var curry = require('./curry');
-
-
-/**
- * Returns the result of calling its first argument with the remaining
- * arguments. This is occasionally useful as a converging function for
- * `R.converge`: the left branch can produce a function while the right branch
- * produces a value to be passed to that function as an argument.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Function
- * @sig (*... -> a),*... -> a
- * @param {Function} fn The function to apply to the remaining arguments.
- * @param {...*} args Any number of positional arguments.
- * @return {*}
- * @see R.apply
- * @example
- *
- *      R.call(R.add, 1, 2); //=> 3
- *
- *      var indentN = R.pipe(R.times(R.always(' ')),
- *                           R.join(''),
- *                           R.replace(/^(?!$)/gm));
- *
- *      var format = R.converge(R.call, [
- *                                  R.pipe(R.prop('indent'), indentN),
- *                                  R.prop('value')
- *                              ]);
- *
- *      format({indent: 2, value: 'foo\nbar\nbaz\n'}); //=> '  foo\n  bar\n  baz\n'
- * @symb R.call(f, a, b) = f(a, b)
- */
-module.exports = curry(function call(fn) {
-  return fn.apply(this, Array.prototype.slice.call(arguments, 1));
-});
-
-},{"./curry":297}],282:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _makeFlat = require('./internal/_makeFlat');
-var _xchain = require('./internal/_xchain');
-var map = require('./map');
-
-
-/**
- * `chain` maps a function over a list and concatenates the results. `chain`
- * is also known as `flatMap` in some libraries
- *
- * Dispatches to the `chain` method of the second argument, if present,
- * according to the [FantasyLand Chain spec](https://github.com/fantasyland/fantasy-land#chain).
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category List
- * @sig Chain m => (a -> m b) -> m a -> m b
- * @param {Function} fn The function to map with
- * @param {Array} list The list to map over
- * @return {Array} The result of flat-mapping `list` with `fn`
- * @example
- *
- *      var duplicate = n => [n, n];
- *      R.chain(duplicate, [1, 2, 3]); //=> [1, 1, 2, 2, 3, 3]
- *
- *      R.chain(R.append, R.head)([1, 2, 3]); //=> [1, 2, 3, 1]
- */
-module.exports = _curry2(_dispatchable(['chain'], _xchain, function chain(fn, monad) {
-  if (typeof monad === 'function') {
-    return function(x) { return fn(monad(x))(x); };
-  }
-  return _makeFlat(false)(map(fn, monad));
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_makeFlat":383,"./internal/_xchain":398,"./map":441}],283:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-/**
- * Restricts a number to be within a range.
- *
- * Also works for other ordered types such as Strings and Dates.
- *
- * @func
- * @memberOf R
- * @since v0.20.0
- * @category Relation
- * @sig Ord a => a -> a -> a -> a
- * @param {Number} minimum The lower limit of the clamp (inclusive)
- * @param {Number} maximum The upper limit of the clamp (inclusive)
- * @param {Number} value Value to be clamped
- * @return {Number} Returns `minimum` when `val < minimum`, `maximum` when `val > maximum`, returns `val` otherwise
- * @example
- *
- *      R.clamp(1, 10, -5) // => 1
- *      R.clamp(1, 10, 15) // => 10
- *      R.clamp(1, 10, 4)  // => 4
- */
-module.exports = _curry3(function clamp(min, max, value) {
-  if (min > max) {
-    throw new Error('min must not be greater than max in clamp(min, max, value)');
-  }
-  return value < min ? min :
-         value > max ? max :
-         value;
-});
-
-},{"./internal/_curry3":360}],284:[function(require,module,exports){
-var _clone = require('./internal/_clone');
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Creates a deep copy of the value which may contain (nested) `Array`s and
- * `Object`s, `Number`s, `String`s, `Boolean`s and `Date`s. `Function`s are
- * assigned by reference rather than copied
- *
- * Dispatches to a `clone` method if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig {*} -> {*}
- * @param {*} value The object or array to clone
- * @return {*} A deeply cloned copy of `val`
- * @example
- *
- *      var objects = [{}, {}, {}];
- *      var objectsClone = R.clone(objects);
- *      objects === objectsClone; //=> false
- *      objects[0] === objectsClone[0]; //=> false
- */
-module.exports = _curry1(function clone(value) {
-  return value != null && typeof value.clone === 'function' ?
-    value.clone() :
-    _clone(value, [], [], true);
-});
-
-},{"./internal/_clone":351,"./internal/_curry1":358}],285:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Makes a comparator function out of a function that reports whether the first
- * element is less than the second.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (a, b -> Boolean) -> (a, b -> Number)
- * @param {Function} pred A predicate function of arity two which will return `true` if the first argument
- * is less than the second, `false` otherwise
- * @return {Function} A Function :: a -> b -> Int that returns `-1` if a < b, `1` if b < a, otherwise `0`
- * @example
- *
- *      var byAge = R.comparator((a, b) => a.age < b.age);
- *      var people = [
- *        // ...
- *      ];
- *      var peopleByIncreasingAge = R.sort(byAge, people);
- */
-module.exports = _curry1(function comparator(pred) {
-  return function(a, b) {
-    return pred(a, b) ? -1 : pred(b, a) ? 1 : 0;
-  };
-});
-
-},{"./internal/_curry1":358}],286:[function(require,module,exports){
-var lift = require('./lift');
-var not = require('./not');
-
-
-/**
- * Takes a function `f` and returns a function `g` such that if called with the same arguments
- * when `f` returns a "truthy" value, `g` returns `false` and when `f` returns a "falsy" value `g` returns `true`.
- *
- * `R.complement` may be applied to any functor
- *
- * @func
- * @memberOf R
- * @since v0.12.0
- * @category Logic
- * @sig (*... -> *) -> (*... -> Boolean)
- * @param {Function} f
- * @return {Function}
- * @see R.not
- * @example
- *
- *      var isNotNil = R.complement(R.isNil);
- *      isNil(null); //=> true
- *      isNotNil(null); //=> false
- *      isNil(7); //=> false
- *      isNotNil(7); //=> true
- */
-module.exports = lift(not);
-
-},{"./lift":437,"./not":463}],287:[function(require,module,exports){
-var pipe = require('./pipe');
-var reverse = require('./reverse');
-
-
-/**
- * Performs right-to-left function composition. The rightmost function may have
- * any arity; the remaining functions must be unary.
- *
- * **Note:** The result of compose is not automatically curried.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig ((y -> z), (x -> y), ..., (o -> p), ((a, b, ..., n) -> o)) -> ((a, b, ..., n) -> z)
- * @param {...Function} ...functions The functions to compose
- * @return {Function}
- * @see R.pipe
- * @example
- *
- *      var classyGreeting = (firstName, lastName) => "The name's " + lastName + ", " + firstName + " " + lastName
- *      var yellGreeting = R.compose(R.toUpper, classyGreeting);
- *      yellGreeting('James', 'Bond'); //=> "THE NAME'S BOND, JAMES BOND"
- *
- *      R.compose(Math.abs, R.add(1), R.multiply(2))(-4) //=> 7
- *
- * @symb R.compose(f, g, h)(a, b) = f(g(h(a, b)))
- */
-module.exports = function compose() {
-  if (arguments.length === 0) {
-    throw new Error('compose requires at least one argument');
-  }
-  return pipe.apply(this, reverse(arguments));
-};
-
-},{"./pipe":483,"./reverse":506}],288:[function(require,module,exports){
-var chain = require('./chain');
-var compose = require('./compose');
-var map = require('./map');
-
-
-/**
- * Returns the right-to-left Kleisli composition of the provided functions,
- * each of which must return a value of a type supported by [`chain`](#chain).
- *
- * `R.composeK(h, g, f)` is equivalent to `R.compose(R.chain(h), R.chain(g), R.chain(f))`.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category Function
- * @sig Chain m => ((y -> m z), (x -> m y), ..., (a -> m b)) -> (a -> m z)
- * @param {...Function} ...functions The functions to compose
- * @return {Function}
- * @see R.pipeK
- * @example
- *
- *       //  get :: String -> Object -> Maybe *
- *       var get = R.curry((propName, obj) => Maybe(obj[propName]))
- *
- *       //  getStateCode :: Maybe String -> Maybe String
- *       var getStateCode = R.composeK(
- *         R.compose(Maybe.of, R.toUpper),
- *         get('state'),
- *         get('address'),
- *         get('user'),
- *       );
- *       getStateCode({"user":{"address":{"state":"ny"}}}); //=> Maybe.Just("NY")
- *       getStateCode({}); //=> Maybe.Nothing()
- * @symb R.composeK(f, g, h)(a) = R.chain(f, R.chain(g, h(a)))
- */
-module.exports = function composeK() {
-  if (arguments.length === 0) {
-    throw new Error('composeK requires at least one argument');
-  }
-  var init = Array.prototype.slice.call(arguments);
-  var last = init.pop();
-  return compose(compose.apply(this, map(chain, init)), last);
-};
-
-},{"./chain":282,"./compose":287,"./map":441}],289:[function(require,module,exports){
-var pipeP = require('./pipeP');
-var reverse = require('./reverse');
-
-
-/**
- * Performs right-to-left composition of one or more Promise-returning
- * functions. The rightmost function may have any arity; the remaining
- * functions must be unary.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Function
- * @sig ((y -> Promise z), (x -> Promise y), ..., (a -> Promise b)) -> (a -> Promise z)
- * @param {...Function} functions The functions to compose
- * @return {Function}
- * @see R.pipeP
- * @example
- *
- *      var db = {
- *        users: {
- *          JOE: {
- *            name: 'Joe',
- *            followers: ['STEVE', 'SUZY']
- *          }
- *        }
- *      }
- *
- *      // We'll pretend to do a db lookup which returns a promise
- *      var lookupUser = (userId) => Promise.resolve(db.users[userId])
- *      var lookupFollowers = (user) => Promise.resolve(user.followers)
- *      lookupUser('JOE').then(lookupFollowers)
- *
- *      //  followersForUser :: String -> Promise [UserId]
- *      var followersForUser = R.composeP(lookupFollowers, lookupUser);
- *      followersForUser('JOE').then(followers => console.log('Followers:', followers))
- *      // Followers: ["STEVE","SUZY"]
- */
-module.exports = function composeP() {
-  if (arguments.length === 0) {
-    throw new Error('composeP requires at least one argument');
-  }
-  return pipeP.apply(this, reverse(arguments));
-};
-
-},{"./pipeP":485,"./reverse":506}],290:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _isArray = require('./internal/_isArray');
-var _isFunction = require('./internal/_isFunction');
-var toString = require('./toString');
-
-
-/**
- * Returns the result of concatenating the given lists or strings.
- *
- * Note: `R.concat` expects both arguments to be of the same type,
- * unlike the native `Array.prototype.concat` method. It will throw
- * an error if you `concat` an Array with a non-Array value.
- *
- * Dispatches to the `concat` method of the first argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig [a] -> [a] -> [a]
- * @sig String -> String -> String
- * @param {Array|String} firstList The first list
- * @param {Array|String} secondList The second list
- * @return {Array|String} A list consisting of the elements of `firstList` followed by the elements of
- * `secondList`.
- *
- * @example
- *
- *      R.concat('ABC', 'DEF'); // 'ABCDEF'
- *      R.concat([4, 5, 6], [1, 2, 3]); //=> [4, 5, 6, 1, 2, 3]
- *      R.concat([], []); //=> []
- */
-module.exports = _curry2(function concat(a, b) {
-  if (a == null || !_isFunction(a.concat)) {
-    throw new TypeError(toString(a) + ' does not have a method named "concat"');
-  }
-  if (_isArray(a) && !_isArray(b)) {
-    throw new TypeError(toString(b) + ' is not an array');
-  }
-  return a.concat(b);
-});
-
-},{"./internal/_curry2":359,"./internal/_isArray":374,"./internal/_isFunction":375,"./toString":533}],291:[function(require,module,exports){
-var _arity = require('./internal/_arity');
-var _curry1 = require('./internal/_curry1');
-var map = require('./map');
-var max = require('./max');
-var reduce = require('./reduce');
-
-
-/**
- * Returns a function, `fn`, which encapsulates `if/else, if/else, ...` logic.
- * `R.cond` takes a list of [predicate, transformer] pairs. All of the arguments
- * to `fn` are applied to each of the predicates in turn until one returns a
- * "truthy" value, at which point `fn` returns the result of applying its
- * arguments to the corresponding transformer. If none of the predicates
- * matches, `fn` returns undefined.
- *
- * @func
- * @memberOf R
- * @since v0.6.0
- * @category Logic
- * @sig [[(*... -> Boolean),(*... -> *)]] -> (*... -> *)
- * @param {Array} pairs A list of [predicate, transformer]
- * @return {Function}
- * @example
- *
- *      var fn = R.cond([
- *        [R.equals(0),   R.always('water freezes at 0°C')],
- *        [R.equals(100), R.always('water boils at 100°C')],
- *        [R.T,           temp => 'nothing special happens at ' + temp + '°C']
- *      ]);
- *      fn(0); //=> 'water freezes at 0°C'
- *      fn(50); //=> 'nothing special happens at 50°C'
- *      fn(100); //=> 'water boils at 100°C'
- */
-module.exports = _curry1(function cond(pairs) {
-  var arity = reduce(max,
-                     0,
-                     map(function(pair) { return pair[0].length; }, pairs));
-  return _arity(arity, function() {
-    var idx = 0;
-    while (idx < pairs.length) {
-      if (pairs[idx][0].apply(this, arguments)) {
-        return pairs[idx][1].apply(this, arguments);
-      }
-      idx += 1;
-    }
-  });
-});
-
-},{"./internal/_arity":347,"./internal/_curry1":358,"./map":441,"./max":447,"./reduce":497}],292:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var constructN = require('./constructN');
-
-
-/**
- * Wraps a constructor function inside a curried function that can be called
- * with the same arguments and returns the same type.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (* -> {*}) -> (* -> {*})
- * @param {Function} fn The constructor function to wrap.
- * @return {Function} A wrapped, curried constructor function.
- * @example
- *
- *      // Constructor function
- *      function Animal(kind) {
- *        this.kind = kind;
- *      };
- *      Animal.prototype.sighting = function() {
- *        return "It's a " + this.kind + "!";
- *      }
- *
- *      var AnimalConstructor = R.construct(Animal)
- *
- *      // Notice we no longer need the 'new' keyword:
- *      AnimalConstructor('Pig'); //=> {"kind": "Pig", "sighting": function (){...}};
- *
- *      var animalTypes = ["Lion", "Tiger", "Bear"];
- *      var animalSighting = R.invoker(0, 'sighting');
- *      var sightNewAnimal = R.compose(animalSighting, AnimalConstructor);
- *      R.map(sightNewAnimal, animalTypes); //=> ["It's a Lion!", "It's a Tiger!", "It's a Bear!"]
- */
-module.exports = _curry1(function construct(Fn) {
-  return constructN(Fn.length, Fn);
-});
-
-},{"./constructN":293,"./internal/_curry1":358}],293:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var curry = require('./curry');
-var nAry = require('./nAry');
-
-
-/**
- * Wraps a constructor function inside a curried function that can be called
- * with the same arguments and returns the same type. The arity of the function
- * returned is specified to allow using variadic constructor functions.
- *
- * @func
- * @memberOf R
- * @since v0.4.0
- * @category Function
- * @sig Number -> (* -> {*}) -> (* -> {*})
- * @param {Number} n The arity of the constructor function.
- * @param {Function} Fn The constructor function to wrap.
- * @return {Function} A wrapped, curried constructor function.
- * @example
- *
- *      // Variadic Constructor function
- *      function Salad() {
- *        this.ingredients = arguments;
- *      };
- *      Salad.prototype.recipe = function() {
- *        var instructions = R.map((ingredient) => (
- *          'Add a whollop of ' + ingredient, this.ingredients)
- *        )
- *        return R.join('\n', instructions)
- *      }
- *
- *      var ThreeLayerSalad = R.constructN(3, Salad)
- *
- *      // Notice we no longer need the 'new' keyword, and the constructor is curried for 3 arguments.
- *      var salad = ThreeLayerSalad('Mayonnaise')('Potato Chips')('Ketchup')
- *      console.log(salad.recipe());
- *      // Add a whollop of Mayonnaise
- *      // Add a whollop of Potato Chips
- *      // Add a whollop of Potato Ketchup
- */
-module.exports = _curry2(function constructN(n, Fn) {
-  if (n > 10) {
-    throw new Error('Constructor with greater than ten arguments');
-  }
-  if (n === 0) {
-    return function() { return new Fn(); };
-  }
-  return curry(nAry(n, function($0, $1, $2, $3, $4, $5, $6, $7, $8, $9) {
-    switch (arguments.length) {
-      case  1: return new Fn($0);
-      case  2: return new Fn($0, $1);
-      case  3: return new Fn($0, $1, $2);
-      case  4: return new Fn($0, $1, $2, $3);
-      case  5: return new Fn($0, $1, $2, $3, $4);
-      case  6: return new Fn($0, $1, $2, $3, $4, $5);
-      case  7: return new Fn($0, $1, $2, $3, $4, $5, $6);
-      case  8: return new Fn($0, $1, $2, $3, $4, $5, $6, $7);
-      case  9: return new Fn($0, $1, $2, $3, $4, $5, $6, $7, $8);
-      case 10: return new Fn($0, $1, $2, $3, $4, $5, $6, $7, $8, $9);
-    }
-  }));
-});
-
-},{"./curry":297,"./internal/_curry2":359,"./nAry":460}],294:[function(require,module,exports){
-var _contains = require('./internal/_contains');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns `true` if the specified value is equal, in `R.equals` terms, to at
- * least one element of the given list; `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig a -> [a] -> Boolean
- * @param {Object} a The item to compare against.
- * @param {Array} list The array to consider.
- * @return {Boolean} `true` if an equivalent item is in the list, `false` otherwise.
- * @see R.any
- * @example
- *
- *      R.contains(3, [1, 2, 3]); //=> true
- *      R.contains(4, [1, 2, 3]); //=> false
- *      R.contains({ name: 'Fred' }, [{ name: 'Fred' }]); //=> true
- *      R.contains([42], [[42]]); //=> true
- */
-module.exports = _curry2(_contains);
-
-},{"./internal/_contains":355,"./internal/_curry2":359}],295:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _map = require('./internal/_map');
-var curryN = require('./curryN');
-var max = require('./max');
-var pluck = require('./pluck');
-var reduce = require('./reduce');
-
-
-/**
- * Accepts a converging function and a list of branching functions and returns
- * a new function. When invoked, this new function is applied to some
- * arguments, each branching function is applied to those same arguments. The
- * results of each branching function are passed as arguments to the converging
- * function to produce the return value.
- *
- * @func
- * @memberOf R
- * @since v0.4.2
- * @category Function
- * @sig (x1 -> x2 -> ... -> z) -> [(a -> b -> ... -> x1), (a -> b -> ... -> x2), ...] -> (a -> b -> ... -> z)
- * @param {Function} after A function. `after` will be invoked with the return values of
- *        `fn1` and `fn2` as its arguments.
- * @param {Array} functions A list of functions.
- * @return {Function} A new function.
- * @see R.useWith
- * @example
- *
- *      var average = R.converge(R.divide, [R.sum, R.length])
- *      average([1, 2, 3, 4, 5, 6, 7]) //=> 4
- *
- *      var strangeConcat = R.converge(R.concat, [R.toUpper, R.toLower])
- *      strangeConcat("Yodel") //=> "YODELyodel"
- *
- * @symb R.converge(f, [g, h])(a, b) = f(g(a, b), h(a, b))
- */
-module.exports = _curry2(function converge(after, fns) {
-  return curryN(reduce(max, 0, pluck('length', fns)), function() {
-    var args = arguments;
-    var context = this;
-    return after.apply(context, _map(function(fn) {
-      return fn.apply(context, args);
-    }, fns));
-  });
-});
-
-},{"./curryN":298,"./internal/_curry2":359,"./internal/_map":384,"./max":447,"./pluck":486,"./reduce":497}],296:[function(require,module,exports){
-var reduceBy = require('./reduceBy');
-
-
-/**
- * Counts the elements of a list according to how many match each value of a
- * key generated by the supplied function. Returns an object mapping the keys
- * produced by `fn` to the number of occurrences in the list. Note that all
- * keys are coerced to strings because of how JavaScript objects work.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig (a -> String) -> [a] -> {*}
- * @param {Function} fn The function used to map values to keys.
- * @param {Array} list The list to count elements from.
- * @return {Object} An object mapping keys to number of occurrences in the list.
- * @example
- *
- *      var numbers = [1.0, 1.1, 1.2, 2.0, 3.0, 2.2];
- *      R.countBy(Math.floor)(numbers);    //=> {'1': 3, '2': 2, '3': 1}
- *
- *      var letters = ['a', 'b', 'A', 'a', 'B', 'c'];
- *      R.countBy(R.toLower)(letters);   //=> {'a': 3, 'b': 2, 'c': 1}
- */
-module.exports = reduceBy(function(acc, elem) { return acc + 1; }, 0);
-
-},{"./reduceBy":498}],297:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var curryN = require('./curryN');
-
-
-/**
- * Returns a curried equivalent of the provided function. The curried function
- * has two unusual capabilities. First, its arguments needn't be provided one
- * at a time. If `f` is a ternary function and `g` is `R.curry(f)`, the
- * following are equivalent:
- *
- *   - `g(1)(2)(3)`
- *   - `g(1)(2, 3)`
- *   - `g(1, 2)(3)`
- *   - `g(1, 2, 3)`
- *
- * Secondly, the special placeholder value `R.__` may be used to specify
- * "gaps", allowing partial application of any combination of arguments,
- * regardless of their positions. If `g` is as above and `_` is `R.__`, the
- * following are equivalent:
- *
- *   - `g(1, 2, 3)`
- *   - `g(_, 2, 3)(1)`
- *   - `g(_, _, 3)(1)(2)`
- *   - `g(_, _, 3)(1, 2)`
- *   - `g(_, 2)(1)(3)`
- *   - `g(_, 2)(1, 3)`
- *   - `g(_, 2)(_, 3)(1)`
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (* -> a) -> (* -> a)
- * @param {Function} fn The function to curry.
- * @return {Function} A new, curried function.
- * @see R.curryN
- * @example
- *
- *      var addFourNumbers = (a, b, c, d) => a + b + c + d;
- *
- *      var curriedAddFourNumbers = R.curry(addFourNumbers);
- *      var f = curriedAddFourNumbers(1, 2);
- *      var g = f(3);
- *      g(4); //=> 10
- */
-module.exports = _curry1(function curry(fn) {
-  return curryN(fn.length, fn);
-});
-
-},{"./curryN":298,"./internal/_curry1":358}],298:[function(require,module,exports){
-var _arity = require('./internal/_arity');
-var _curry1 = require('./internal/_curry1');
-var _curry2 = require('./internal/_curry2');
-var _curryN = require('./internal/_curryN');
-
-
-/**
- * Returns a curried equivalent of the provided function, with the specified
- * arity. The curried function has two unusual capabilities. First, its
- * arguments needn't be provided one at a time. If `g` is `R.curryN(3, f)`, the
- * following are equivalent:
- *
- *   - `g(1)(2)(3)`
- *   - `g(1)(2, 3)`
- *   - `g(1, 2)(3)`
- *   - `g(1, 2, 3)`
- *
- * Secondly, the special placeholder value `R.__` may be used to specify
- * "gaps", allowing partial application of any combination of arguments,
- * regardless of their positions. If `g` is as above and `_` is `R.__`, the
- * following are equivalent:
- *
- *   - `g(1, 2, 3)`
- *   - `g(_, 2, 3)(1)`
- *   - `g(_, _, 3)(1)(2)`
- *   - `g(_, _, 3)(1, 2)`
- *   - `g(_, 2)(1)(3)`
- *   - `g(_, 2)(1, 3)`
- *   - `g(_, 2)(_, 3)(1)`
- *
- * @func
- * @memberOf R
- * @since v0.5.0
- * @category Function
- * @sig Number -> (* -> a) -> (* -> a)
- * @param {Number} length The arity for the returned function.
- * @param {Function} fn The function to curry.
- * @return {Function} A new, curried function.
- * @see R.curry
- * @example
- *
- *      var sumArgs = (...args) => R.sum(args);
- *
- *      var curriedAddFourNumbers = R.curryN(4, sumArgs);
- *      var f = curriedAddFourNumbers(1, 2);
- *      var g = f(3);
- *      g(4); //=> 10
- */
-module.exports = _curry2(function curryN(length, fn) {
-  if (length === 1) {
-    return _curry1(fn);
-  }
-  return _arity(length, _curryN(length, [], fn));
-});
-
-},{"./internal/_arity":347,"./internal/_curry1":358,"./internal/_curry2":359,"./internal/_curryN":361}],299:[function(require,module,exports){
-var add = require('./add');
-
-
-/**
- * Decrements its argument.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Math
- * @sig Number -> Number
- * @param {Number} n
- * @return {Number} n - 1
- * @see R.inc
- * @example
- *
- *      R.dec(42); //=> 41
- */
-module.exports = add(-1);
-
-},{"./add":261}],300:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns the second argument if it is not `null`, `undefined` or `NaN`
- * otherwise the first argument is returned.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Logic
- * @sig a -> b -> a | b
- * @param {a} default The default value.
- * @param {b} val `val` will be returned instead of `default` unless `val` is `null`, `undefined` or `NaN`.
- * @return {*} The second value if it is not `null`, `undefined` or `NaN`, otherwise the default value
- * @example
- *
- *      var defaultTo42 = R.defaultTo(42);
- *
- *      defaultTo42(null);  //=> 42
- *      defaultTo42(undefined);  //=> 42
- *      defaultTo42('Ramda');  //=> 'Ramda'
- *      // parseInt('string') results in NaN
- *      defaultTo42(parseInt('string')); //=> 42
- */
-module.exports = _curry2(function defaultTo(d, v) {
-  return v == null || v !== v ? d : v;
-});
-
-},{"./internal/_curry2":359}],301:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Makes a descending comparator function out of a function that returns a value
- * that can be compared with `<` and `>`.
- *
- * @func
- * @memberOf R
- * @since v0.23.0
- * @category Function
- * @sig Ord b => (a -> b) -> a -> a -> Number
- * @param {Function} fn A function of arity one that returns a value that can be compared
- * @param {*} a The first item to be compared.
- * @param {*} b The second item to be compared.
- * @return {Number} `-1` if fn(a) > fn(b), `1` if fn(b) > fn(a), otherwise `0`
- * @example
- *
- *      var byAge = R.descend(R.prop('age'));
- *      var people = [
- *        // ...
- *      ];
- *      var peopleByOldestFirst = R.sort(byAge, people);
- */
-module.exports = _curry3(function descend(fn, a, b) {
-  var aa = fn(a);
-  var bb = fn(b);
-  return aa > bb ? -1 : aa < bb ? 1 : 0;
-});
-
-},{"./internal/_curry3":360}],302:[function(require,module,exports){
-var _contains = require('./internal/_contains');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Finds the set (i.e. no duplicates) of all elements in the first list not
- * contained in the second list. Objects and Arrays are compared are compared
- * in terms of value equality, not reference equality.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig [*] -> [*] -> [*]
- * @param {Array} list1 The first list.
- * @param {Array} list2 The second list.
- * @return {Array} The elements in `list1` that are not in `list2`.
- * @see R.differenceWith, R.symmetricDifference, R.symmetricDifferenceWith
- * @example
- *
- *      R.difference([1,2,3,4], [7,6,5,4,3]); //=> [1,2]
- *      R.difference([7,6,5,4,3], [1,2,3,4]); //=> [7,6,5]
- *      R.difference([{a: 1}, {b: 2}], [{a: 1}, {c: 3}]) //=> [{b: 2}]
- */
-module.exports = _curry2(function difference(first, second) {
-  var out = [];
-  var idx = 0;
-  var firstLen = first.length;
-  while (idx < firstLen) {
-    if (!_contains(first[idx], second) && !_contains(first[idx], out)) {
-      out[out.length] = first[idx];
-    }
-    idx += 1;
-  }
-  return out;
-});
-
-},{"./internal/_contains":355,"./internal/_curry2":359}],303:[function(require,module,exports){
-var _containsWith = require('./internal/_containsWith');
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Finds the set (i.e. no duplicates) of all elements in the first list not
- * contained in the second list. Duplication is determined according to the
- * value returned by applying the supplied predicate to two list elements.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig ((a, a) -> Boolean) -> [a] -> [a] -> [a]
- * @param {Function} pred A predicate used to test whether two items are equal.
- * @param {Array} list1 The first list.
- * @param {Array} list2 The second list.
- * @return {Array} The elements in `list1` that are not in `list2`.
- * @see R.difference, R.symmetricDifference, R.symmetricDifferenceWith
- * @example
- *
- *      var cmp = (x, y) => x.a === y.a;
- *      var l1 = [{a: 1}, {a: 2}, {a: 3}];
- *      var l2 = [{a: 3}, {a: 4}];
- *      R.differenceWith(cmp, l1, l2); //=> [{a: 1}, {a: 2}]
- */
-module.exports = _curry3(function differenceWith(pred, first, second) {
-  var out = [];
-  var idx = 0;
-  var firstLen = first.length;
-  while (idx < firstLen) {
-    if (!_containsWith(pred, first[idx], second) &&
-        !_containsWith(pred, first[idx], out)) {
-      out.push(first[idx]);
-    }
-    idx += 1;
-  }
-  return out;
-});
-
-},{"./internal/_containsWith":356,"./internal/_curry3":360}],304:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a new object that does not contain a `prop` property.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Object
- * @sig String -> {k: v} -> {k: v}
- * @param {String} prop The name of the property to dissociate
- * @param {Object} obj The object to clone
- * @return {Object} A new object equivalent to the original but without the specified property
- * @see R.assoc
- * @example
- *
- *      R.dissoc('b', {a: 1, b: 2, c: 3}); //=> {a: 1, c: 3}
- */
-module.exports = _curry2(function dissoc(prop, obj) {
-  var result = {};
-  for (var p in obj) {
-    result[p] = obj[p];
-  }
-  delete result[prop];
-  return result;
-});
-
-},{"./internal/_curry2":359}],305:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var assoc = require('./assoc');
-var dissoc = require('./dissoc');
-
-
-/**
- * Makes a shallow clone of an object, omitting the property at the given path.
- * Note that this copies and flattens prototype properties onto the new object
- * as well. All non-primitive properties are copied by reference.
- *
- * @func
- * @memberOf R
- * @since v0.11.0
- * @category Object
- * @sig [String] -> {k: v} -> {k: v}
- * @param {Array} path The path to the value to omit
- * @param {Object} obj The object to clone
- * @return {Object} A new object without the property at path
- * @see R.assocPath
- * @example
- *
- *      R.dissocPath(['a', 'b', 'c'], {a: {b: {c: 42}}}); //=> {a: {b: {}}}
- */
-module.exports = _curry2(function dissocPath(path, obj) {
-  switch (path.length) {
-    case 0:
-      return obj;
-    case 1:
-      return dissoc(path[0], obj);
-    default:
-      var head = path[0];
-      var tail = Array.prototype.slice.call(path, 1);
-      return obj[head] == null ? obj : assoc(head, dissocPath(tail, obj[head]), obj);
-  }
-});
-
-},{"./assoc":276,"./dissoc":304,"./internal/_curry2":359}],306:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Divides two numbers. Equivalent to `a / b`.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Math
- * @sig Number -> Number -> Number
- * @param {Number} a The first value.
- * @param {Number} b The second value.
- * @return {Number} The result of `a / b`.
- * @see R.multiply
- * @example
- *
- *      R.divide(71, 100); //=> 0.71
- *
- *      var half = R.divide(R.__, 2);
- *      half(42); //=> 21
- *
- *      var reciprocal = R.divide(1);
- *      reciprocal(4);   //=> 0.25
- */
-module.exports = _curry2(function divide(a, b) { return a / b; });
-
-},{"./internal/_curry2":359}],307:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xdrop = require('./internal/_xdrop');
-var slice = require('./slice');
-
-
-/**
- * Returns all but the first `n` elements of the given list, string, or
- * transducer/transformer (or object with a `drop` method).
- *
- * Dispatches to the `drop` method of the second argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig Number -> [a] -> [a]
- * @sig Number -> String -> String
- * @param {Number} n
- * @param {[a]} list
- * @return {[a]} A copy of list without the first `n` elements
- * @see R.take, R.transduce, R.dropLast, R.dropWhile
- * @example
- *
- *      R.drop(1, ['foo', 'bar', 'baz']); //=> ['bar', 'baz']
- *      R.drop(2, ['foo', 'bar', 'baz']); //=> ['baz']
- *      R.drop(3, ['foo', 'bar', 'baz']); //=> []
- *      R.drop(4, ['foo', 'bar', 'baz']); //=> []
- *      R.drop(3, 'ramda');               //=> 'da'
- */
-module.exports = _curry2(_dispatchable(['drop'], _xdrop, function drop(n, xs) {
-  return slice(Math.max(0, n), Infinity, xs);
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xdrop":399,"./slice":510}],308:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _dropLast = require('./internal/_dropLast');
-var _xdropLast = require('./internal/_xdropLast');
-
-
-/**
- * Returns a list containing all but the last `n` elements of the given `list`.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category List
- * @sig Number -> [a] -> [a]
- * @sig Number -> String -> String
- * @param {Number} n The number of elements of `list` to skip.
- * @param {Array} list The list of elements to consider.
- * @return {Array} A copy of the list with only the first `list.length - n` elements
- * @see R.takeLast, R.drop, R.dropWhile, R.dropLastWhile
- * @example
- *
- *      R.dropLast(1, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
- *      R.dropLast(2, ['foo', 'bar', 'baz']); //=> ['foo']
- *      R.dropLast(3, ['foo', 'bar', 'baz']); //=> []
- *      R.dropLast(4, ['foo', 'bar', 'baz']); //=> []
- *      R.dropLast(3, 'ramda');               //=> 'ra'
- */
-module.exports = _curry2(_dispatchable([], _xdropLast, _dropLast));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_dropLast":363,"./internal/_xdropLast":400}],309:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _dropLastWhile = require('./internal/_dropLastWhile');
-var _xdropLastWhile = require('./internal/_xdropLastWhile');
-
-
-/**
- * Returns a new list excluding all the tailing elements of a given list which
- * satisfy the supplied predicate function. It passes each value from the right
- * to the supplied predicate function, skipping elements until the predicate
- * function returns a `falsy` value. The predicate function is applied to one argument:
- * *(value)*.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> [a]
- * @param {Function} predicate The function to be called on each element
- * @param {Array} list The collection to iterate over.
- * @return {Array} A new array without any trailing elements that return `falsy` values from the `predicate`.
- * @see R.takeLastWhile, R.addIndex, R.drop, R.dropWhile
- * @example
- *
- *      var lteThree = x => x <= 3;
- *
- *      R.dropLastWhile(lteThree, [1, 2, 3, 4, 3, 2, 1]); //=> [1, 2, 3, 4]
- */
-module.exports = _curry2(_dispatchable([], _xdropLastWhile, _dropLastWhile));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_dropLastWhile":364,"./internal/_xdropLastWhile":401}],310:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _dispatchable = require('./internal/_dispatchable');
-var _xdropRepeatsWith = require('./internal/_xdropRepeatsWith');
-var dropRepeatsWith = require('./dropRepeatsWith');
-var equals = require('./equals');
-
-
-/**
- * Returns a new list without any consecutively repeating elements. `R.equals`
- * is used to determine equality.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category List
- * @sig [a] -> [a]
- * @param {Array} list The array to consider.
- * @return {Array} `list` without repeating elements.
- * @see R.transduce
- * @example
- *
- *     R.dropRepeats([1, 1, 1, 2, 3, 4, 4, 2, 2]); //=> [1, 2, 3, 4, 2]
- */
-module.exports = _curry1(_dispatchable([], _xdropRepeatsWith(equals), dropRepeatsWith(equals)));
-
-},{"./dropRepeatsWith":311,"./equals":317,"./internal/_curry1":358,"./internal/_dispatchable":362,"./internal/_xdropRepeatsWith":402}],311:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xdropRepeatsWith = require('./internal/_xdropRepeatsWith');
-var last = require('./last');
-
-
-/**
- * Returns a new list without any consecutively repeating elements. Equality is
- * determined by applying the supplied predicate to each pair of consecutive elements. The
- * first element in a series of equal elements will be preserved.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category List
- * @sig (a, a -> Boolean) -> [a] -> [a]
- * @param {Function} pred A predicate used to test whether two items are equal.
- * @param {Array} list The array to consider.
- * @return {Array} `list` without repeating elements.
- * @see R.transduce
- * @example
- *
- *      var l = [1, -1, 1, 3, 4, -4, -4, -5, 5, 3, 3];
- *      R.dropRepeatsWith(R.eqBy(Math.abs), l); //=> [1, 3, 4, -5, 3]
- */
-module.exports = _curry2(_dispatchable([], _xdropRepeatsWith, function dropRepeatsWith(pred, list) {
-  var result = [];
-  var idx = 1;
-  var len = list.length;
-  if (len !== 0) {
-    result[0] = list[0];
-    while (idx < len) {
-      if (!pred(last(result), list[idx])) {
-        result[result.length] = list[idx];
-      }
-      idx += 1;
-    }
-  }
-  return result;
-}));
-
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xdropRepeatsWith":402,"./last":430}],312:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xdropWhile = require('./internal/_xdropWhile');
-
-
-/**
- * Returns a new list excluding the leading elements of a given list which
- * satisfy the supplied predicate function. It passes each value to the supplied
- * predicate function, skipping elements while the predicate function returns
- * `true`. The predicate function is applied to one argument: *(value)*.
- *
- * Dispatches to the `dropWhile` method of the second argument, if present.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> [a]
- * @param {Function} fn The function called per iteration.
- * @param {Array} list The collection to iterate over.
- * @return {Array} A new array.
- * @see R.takeWhile, R.transduce, R.addIndex
- * @example
- *
- *      var lteTwo = x => x <= 2;
- *
- *      R.dropWhile(lteTwo, [1, 2, 3, 4, 3, 2, 1]); //=> [3, 4, 3, 2, 1]
- */
-module.exports = _curry2(_dispatchable(['dropWhile'], _xdropWhile, function dropWhile(pred, list) {
-  var idx = 0;
-  var len = list.length;
-  while (idx < len && pred(list[idx])) {
-    idx += 1;
-  }
-  return Array.prototype.slice.call(list, idx);
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xdropWhile":403}],313:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _isFunction = require('./internal/_isFunction');
-var lift = require('./lift');
-var or = require('./or');
-
-
-/**
- * A function wrapping calls to the two functions in an `||` operation,
- * returning the result of the first function if it is truth-y and the result
- * of the second function otherwise. Note that this is short-circuited,
- * meaning that the second function will not be invoked if the first returns a
- * truth-y value.
- *
- * In addition to functions, `R.either` also accepts any fantasy-land compatible
- * applicative functor.
- *
- * @func
- * @memberOf R
- * @since v0.12.0
- * @category Logic
- * @sig (*... -> Boolean) -> (*... -> Boolean) -> (*... -> Boolean)
- * @param {Function} f a predicate
- * @param {Function} g another predicate
- * @return {Function} a function that applies its arguments to `f` and `g` and `||`s their outputs together.
- * @see R.or
- * @example
- *
- *      var gt10 = x => x > 10;
- *      var even = x => x % 2 === 0;
- *      var f = R.either(gt10, even);
- *      f(101); //=> true
- *      f(8); //=> true
- */
-module.exports = _curry2(function either(f, g) {
-  return _isFunction(f) ?
-    function _either() {
-      return f.apply(this, arguments) || g.apply(this, arguments);
-    } :
-    lift(or)(f, g);
-});
-
-},{"./internal/_curry2":359,"./internal/_isFunction":375,"./lift":437,"./or":470}],314:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _isArguments = require('./internal/_isArguments');
-var _isArray = require('./internal/_isArray');
-var _isObject = require('./internal/_isObject');
-var _isString = require('./internal/_isString');
-
-
-/**
- * Returns the empty value of its argument's type. Ramda defines the empty
- * value of Array (`[]`), Object (`{}`), String (`''`), and Arguments. Other
- * types are supported if they define `<Type>.empty` and/or
- * `<Type>.prototype.empty`.
- *
- * Dispatches to the `empty` method of the first argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category Function
- * @sig a -> a
- * @param {*} x
- * @return {*}
- * @example
- *
- *      R.empty(Just(42));      //=> Nothing()
- *      R.empty([1, 2, 3]);     //=> []
- *      R.empty('unicorns');    //=> ''
- *      R.empty({x: 1, y: 2});  //=> {}
- */
-module.exports = _curry1(function empty(x) {
-  return (
-    (x != null && typeof x.empty === 'function') ?
-      x.empty() :
-    (x != null && x.constructor != null && typeof x.constructor.empty === 'function') ?
-      x.constructor.empty() :
-    _isArray(x) ?
-      [] :
-    _isString(x) ?
-      '' :
-    _isObject(x) ?
-      {} :
-    _isArguments(x) ?
-      (function() { return arguments; }()) :
-    // else
-      void 0
-  );
-});
-
-},{"./internal/_curry1":358,"./internal/_isArguments":373,"./internal/_isArray":374,"./internal/_isObject":378,"./internal/_isString":381}],315:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var equals = require('./equals');
-
-
-/**
- * Takes a function and two values in its domain and returns `true` if the
- * values map to the same value in the codomain; `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.18.0
- * @category Relation
- * @sig (a -> b) -> a -> a -> Boolean
- * @param {Function} f
- * @param {*} x
- * @param {*} y
- * @return {Boolean}
- * @example
- *
- *      R.eqBy(Math.abs, 5, -5); //=> true
- */
-module.exports = _curry3(function eqBy(f, x, y) {
-  return equals(f(x), f(y));
-});
-
-},{"./equals":317,"./internal/_curry3":360}],316:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var equals = require('./equals');
-
-
-/**
- * Reports whether two objects have the same value, in `R.equals` terms, for
- * the specified property. Useful as a curried predicate.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig k -> {k: v} -> {k: v} -> Boolean
- * @param {String} prop The name of the property to compare
- * @param {Object} obj1
- * @param {Object} obj2
- * @return {Boolean}
- *
- * @example
- *
- *      var o1 = { a: 1, b: 2, c: 3, d: 4 };
- *      var o2 = { a: 10, b: 20, c: 3, d: 40 };
- *      R.eqProps('a', o1, o2); //=> false
- *      R.eqProps('c', o1, o2); //=> true
- */
-module.exports = _curry3(function eqProps(prop, obj1, obj2) {
-  return equals(obj1[prop], obj2[prop]);
-});
-
-},{"./equals":317,"./internal/_curry3":360}],317:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _equals = require('./internal/_equals');
-
-
-/**
- * Returns `true` if its arguments are equivalent, `false` otherwise. Handles
- * cyclical data structures.
- *
- * Dispatches symmetrically to the `equals` methods of both arguments, if
- * present.
- *
- * @func
- * @memberOf R
- * @since v0.15.0
- * @category Relation
- * @sig a -> b -> Boolean
- * @param {*} a
- * @param {*} b
- * @return {Boolean}
- * @example
- *
- *      R.equals(1, 1); //=> true
- *      R.equals(1, '1'); //=> false
- *      R.equals([1, 2, 3], [1, 2, 3]); //=> true
- *
- *      var a = {}; a.v = a;
- *      var b = {}; b.v = b;
- *      R.equals(a, b); //=> true
- */
-module.exports = _curry2(function equals(a, b) {
-  return _equals(a, b, [], []);
-});
-
-},{"./internal/_curry2":359,"./internal/_equals":365}],318:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Creates a new object by recursively evolving a shallow copy of `object`,
- * according to the `transformation` functions. All non-primitive properties
- * are copied by reference.
- *
- * A `transformation` function will not be invoked if its corresponding key
- * does not exist in the evolved object.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Object
- * @sig {k: (v -> v)} -> {k: v} -> {k: v}
- * @param {Object} transformations The object specifying transformation functions to apply
- *        to the object.
- * @param {Object} object The object to be transformed.
- * @return {Object} The transformed object.
- * @example
- *
- *      var tomato  = {firstName: '  Tomato ', data: {elapsed: 100, remaining: 1400}, id:123};
- *      var transformations = {
- *        firstName: R.trim,
- *        lastName: R.trim, // Will not get invoked.
- *        data: {elapsed: R.add(1), remaining: R.add(-1)}
- *      };
- *      R.evolve(transformations, tomato); //=> {firstName: 'Tomato', data: {elapsed: 101, remaining: 1399}, id:123}
- */
-module.exports = _curry2(function evolve(transformations, object) {
-  var result = {};
-  var transformation, key, type;
-  for (key in object) {
-    transformation = transformations[key];
-    type = typeof transformation;
-    result[key] = type === 'function'                 ? transformation(object[key])
-                : transformation && type === 'object' ? evolve(transformation, object[key])
-                                                      : object[key];
-  }
-  return result;
-});
-
-},{"./internal/_curry2":359}],319:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _filter = require('./internal/_filter');
-var _isObject = require('./internal/_isObject');
-var _reduce = require('./internal/_reduce');
-var _xfilter = require('./internal/_xfilter');
-var keys = require('./keys');
-
-
-/**
- * Takes a predicate and a "filterable", and returns a new filterable of the
- * same type containing the members of the given filterable which satisfy the
- * given predicate.
- *
- * Dispatches to the `filter` method of the second argument, if present.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig Filterable f => (a -> Boolean) -> f a -> f a
- * @param {Function} pred
- * @param {Array} filterable
- * @return {Array}
- * @see R.reject, R.transduce, R.addIndex
- * @example
- *
- *      var isEven = n => n % 2 === 0;
- *
- *      R.filter(isEven, [1, 2, 3, 4]); //=> [2, 4]
- *
- *      R.filter(isEven, {a: 1, b: 2, c: 3, d: 4}); //=> {b: 2, d: 4}
- */
-module.exports = _curry2(_dispatchable(['filter'], _xfilter, function(pred, filterable) {
-  return (
-    _isObject(filterable) ?
-      _reduce(function(acc, key) {
-        if (pred(filterable[key])) {
-          acc[key] = filterable[key];
-        }
-        return acc;
-      }, {}, keys(filterable)) :
-    // else
-      _filter(pred, filterable)
-  );
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_filter":366,"./internal/_isObject":378,"./internal/_reduce":390,"./internal/_xfilter":405,"./keys":428}],320:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xfind = require('./internal/_xfind');
-
-
-/**
- * Returns the first element of the list which matches the predicate, or
- * `undefined` if no element matches.
- *
- * Dispatches to the `find` method of the second argument, if present.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> a | undefined
- * @param {Function} fn The predicate function used to determine if the element is the
- *        desired one.
- * @param {Array} list The array to consider.
- * @return {Object} The element found, or `undefined`.
- * @see R.transduce
- * @example
- *
- *      var xs = [{a: 1}, {a: 2}, {a: 3}];
- *      R.find(R.propEq('a', 2))(xs); //=> {a: 2}
- *      R.find(R.propEq('a', 4))(xs); //=> undefined
- */
-module.exports = _curry2(_dispatchable(['find'], _xfind, function find(fn, list) {
-  var idx = 0;
-  var len = list.length;
-  while (idx < len) {
-    if (fn(list[idx])) {
-      return list[idx];
-    }
-    idx += 1;
-  }
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xfind":406}],321:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xfindIndex = require('./internal/_xfindIndex');
-
-
-/**
- * Returns the index of the first element of the list which matches the
- * predicate, or `-1` if no element matches.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.1
- * @category List
- * @sig (a -> Boolean) -> [a] -> Number
- * @param {Function} fn The predicate function used to determine if the element is the
- * desired one.
- * @param {Array} list The array to consider.
- * @return {Number} The index of the element found, or `-1`.
- * @see R.transduce
- * @example
- *
- *      var xs = [{a: 1}, {a: 2}, {a: 3}];
- *      R.findIndex(R.propEq('a', 2))(xs); //=> 1
- *      R.findIndex(R.propEq('a', 4))(xs); //=> -1
- */
-module.exports = _curry2(_dispatchable([], _xfindIndex, function findIndex(fn, list) {
-  var idx = 0;
-  var len = list.length;
-  while (idx < len) {
-    if (fn(list[idx])) {
-      return idx;
-    }
-    idx += 1;
-  }
-  return -1;
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xfindIndex":407}],322:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xfindLast = require('./internal/_xfindLast');
-
-
-/**
- * Returns the last element of the list which matches the predicate, or
- * `undefined` if no element matches.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.1
- * @category List
- * @sig (a -> Boolean) -> [a] -> a | undefined
- * @param {Function} fn The predicate function used to determine if the element is the
- * desired one.
- * @param {Array} list The array to consider.
- * @return {Object} The element found, or `undefined`.
- * @see R.transduce
- * @example
- *
- *      var xs = [{a: 1, b: 0}, {a:1, b: 1}];
- *      R.findLast(R.propEq('a', 1))(xs); //=> {a: 1, b: 1}
- *      R.findLast(R.propEq('a', 4))(xs); //=> undefined
- */
-module.exports = _curry2(_dispatchable([], _xfindLast, function findLast(fn, list) {
-  var idx = list.length - 1;
-  while (idx >= 0) {
-    if (fn(list[idx])) {
-      return list[idx];
-    }
-    idx -= 1;
-  }
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xfindLast":408}],323:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xfindLastIndex = require('./internal/_xfindLastIndex');
-
-
-/**
- * Returns the index of the last element of the list which matches the
- * predicate, or `-1` if no element matches.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.1
- * @category List
- * @sig (a -> Boolean) -> [a] -> Number
- * @param {Function} fn The predicate function used to determine if the element is the
- * desired one.
- * @param {Array} list The array to consider.
- * @return {Number} The index of the element found, or `-1`.
- * @see R.transduce
- * @example
- *
- *      var xs = [{a: 1, b: 0}, {a:1, b: 1}];
- *      R.findLastIndex(R.propEq('a', 1))(xs); //=> 1
- *      R.findLastIndex(R.propEq('a', 4))(xs); //=> -1
- */
-module.exports = _curry2(_dispatchable([], _xfindLastIndex, function findLastIndex(fn, list) {
-  var idx = list.length - 1;
-  while (idx >= 0) {
-    if (fn(list[idx])) {
-      return idx;
-    }
-    idx -= 1;
-  }
-  return -1;
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xfindLastIndex":409}],324:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _makeFlat = require('./internal/_makeFlat');
-
-
-/**
- * Returns a new list by pulling every item out of it (and all its sub-arrays)
- * and putting them in a new array, depth-first.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig [a] -> [b]
- * @param {Array} list The array to consider.
- * @return {Array} The flattened list.
- * @see R.unnest
- * @example
- *
- *      R.flatten([1, 2, [3, 4], 5, [6, [7, 8, [9, [10, 11], 12]]]]);
- *      //=> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
- */
-module.exports = _curry1(_makeFlat(true));
-
-},{"./internal/_curry1":358,"./internal/_makeFlat":383}],325:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var curry = require('./curry');
-
-
-/**
- * Returns a new function much like the supplied one, except that the first two
- * arguments' order is reversed.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (a -> b -> c -> ... -> z) -> (b -> a -> c -> ... -> z)
- * @param {Function} fn The function to invoke with its first two parameters reversed.
- * @return {*} The result of invoking `fn` with its first two parameters' order reversed.
- * @example
- *
- *      var mergeThree = (a, b, c) => [].concat(a, b, c);
- *
- *      mergeThree(1, 2, 3); //=> [1, 2, 3]
- *
- *      R.flip(mergeThree)(1, 2, 3); //=> [2, 1, 3]
- * @symb R.flip(f)(a, b, c) = f(b, a, c)
- */
-module.exports = _curry1(function flip(fn) {
-  return curry(function(a, b) {
-    var args = Array.prototype.slice.call(arguments, 0);
-    args[0] = b;
-    args[1] = a;
-    return fn.apply(this, args);
-  });
-});
-
-},{"./curry":297,"./internal/_curry1":358}],326:[function(require,module,exports){
-var _checkForMethod = require('./internal/_checkForMethod');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Iterate over an input `list`, calling a provided function `fn` for each
- * element in the list.
- *
- * `fn` receives one argument: *(value)*.
- *
- * Note: `R.forEach` does not skip deleted or unassigned indices (sparse
- * arrays), unlike the native `Array.prototype.forEach` method. For more
- * details on this behavior, see:
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Description
- *
- * Also note that, unlike `Array.prototype.forEach`, Ramda's `forEach` returns
- * the original array. In some libraries this function is named `each`.
- *
- * Dispatches to the `forEach` method of the second argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.1
- * @category List
- * @sig (a -> *) -> [a] -> [a]
- * @param {Function} fn The function to invoke. Receives one argument, `value`.
- * @param {Array} list The list to iterate over.
- * @return {Array} The original list.
- * @see R.addIndex
- * @example
- *
- *      var printXPlusFive = x => console.log(x + 5);
- *      R.forEach(printXPlusFive, [1, 2, 3]); //=> [1, 2, 3]
- *      // logs 6
- *      // logs 7
- *      // logs 8
- * @symb R.forEach(f, [a, b, c]) = [a, b, c]
- */
-module.exports = _curry2(_checkForMethod('forEach', function forEach(fn, list) {
-  var len = list.length;
-  var idx = 0;
-  while (idx < len) {
-    fn(list[idx]);
-    idx += 1;
-  }
-  return list;
-}));
-
-},{"./internal/_checkForMethod":350,"./internal/_curry2":359}],327:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var keys = require('./keys');
-
-
-/**
- * Iterate over an input `object`, calling a provided function `fn` for each
- * key and value in the object.
- *
- * `fn` receives three argument: *(value, key, obj)*.
- *
- * @func
- * @memberOf R
- * @since v0.23.0
- * @category Object
- * @sig ((a, String, StrMap a) -> Any) -> StrMap a -> StrMap a
- * @param {Function} fn The function to invoke. Receives three argument, `value`, `key`, `obj`.
- * @param {Object} obj The object to iterate over.
- * @return {Object} The original object.
- * @example
- *
- *      var printKeyConcatValue = (value, key) => console.log(key + ':' + value);
- *      R.forEachObjIndexed(printKeyConcatValue, {x: 1, y: 2}); //=> {x: 1, y: 2}
- *      // logs x:1
- *      // logs y:2
- * @symb R.forEachObjIndexed(f, {x: a, y: b}) = {x: a, y: b}
- */
-module.exports = _curry2(function forEachObjIndexed(fn, obj) {
-  var keyList = keys(obj);
-  var idx = 0;
-  while (idx < keyList.length) {
-    var key = keyList[idx];
-    fn(obj[key], key, obj);
-    idx += 1;
-  }
-  return obj;
-});
-
-},{"./internal/_curry2":359,"./keys":428}],328:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Creates a new object from a list key-value pairs. If a key appears in
- * multiple pairs, the rightmost pair is included in the object.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category List
- * @sig [[k,v]] -> {k: v}
- * @param {Array} pairs An array of two-element arrays that will be the keys and values of the output object.
- * @return {Object} The object made by pairing up `keys` and `values`.
- * @see R.toPairs, R.pair
- * @example
- *
- *      R.fromPairs([['a', 1], ['b', 2], ['c', 3]]); //=> {a: 1, b: 2, c: 3}
- */
-module.exports = _curry1(function fromPairs(pairs) {
-  var result = {};
-  var idx = 0;
-  while (idx < pairs.length) {
-    result[pairs[idx][0]] = pairs[idx][1];
-    idx += 1;
-  }
-  return result;
-});
-
-},{"./internal/_curry1":358}],329:[function(require,module,exports){
-var _checkForMethod = require('./internal/_checkForMethod');
-var _curry2 = require('./internal/_curry2');
-var reduceBy = require('./reduceBy');
-
-/**
- * Splits a list into sub-lists stored in an object, based on the result of
- * calling a String-returning function on each element, and grouping the
- * results according to values returned.
- *
- * Dispatches to the `groupBy` method of the second argument, if present.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a -> String) -> [a] -> {String: [a]}
- * @param {Function} fn Function :: a -> String
- * @param {Array} list The array to group
- * @return {Object} An object with the output of `fn` for keys, mapped to arrays of elements
- *         that produced that key when passed to `fn`.
- * @see R.transduce
- * @example
- *
- *      var byGrade = R.groupBy(function(student) {
- *        var score = student.score;
- *        return score < 65 ? 'F' :
- *               score < 70 ? 'D' :
- *               score < 80 ? 'C' :
- *               score < 90 ? 'B' : 'A';
- *      });
- *      var students = [{name: 'Abby', score: 84},
- *                      {name: 'Eddy', score: 58},
- *                      // ...
- *                      {name: 'Jack', score: 69}];
- *      byGrade(students);
- *      // {
- *      //   'A': [{name: 'Dianne', score: 99}],
- *      //   'B': [{name: 'Abby', score: 84}]
- *      //   // ...,
- *      //   'F': [{name: 'Eddy', score: 58}]
- *      // }
- */
-module.exports = _curry2(_checkForMethod('groupBy', reduceBy(function(acc, item) {
-  if (acc == null) {
-    acc = [];
-  }
-  acc.push(item);
-  return acc;
-}, null)));
-
-},{"./internal/_checkForMethod":350,"./internal/_curry2":359,"./reduceBy":498}],330:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-/**
- * Takes a list and returns a list of lists where each sublist's elements are
- * all "equal" according to the provided equality function.
- *
- * @func
- * @memberOf R
- * @since v0.21.0
- * @category List
- * @sig ((a, a) → Boolean) → [a] → [[a]]
- * @param {Function} fn Function for determining whether two given (adjacent)
- *        elements should be in the same group
- * @param {Array} list The array to group. Also accepts a string, which will be
- *        treated as a list of characters.
- * @return {List} A list that contains sublists of equal elements,
- *         whose concatenations are equal to the original list.
- * @example
- *
- * R.groupWith(R.equals, [0, 1, 1, 2, 3, 5, 8, 13, 21])
- * //=> [[0], [1, 1], [2], [3], [5], [8], [13], [21]]
- *
- * R.groupWith((a, b) => a % 2 === b % 2, [0, 1, 1, 2, 3, 5, 8, 13, 21])
- * //=> [[0], [1, 1], [2], [3, 5], [8], [13, 21]]
- *
- * R.groupWith(R.eqBy(isVowel), 'aestiou')
- * //=> ['ae', 'st', 'iou']
- */
-module.exports = _curry2(function(fn, list) {
-  var res = [];
-  var idx = 0;
-  var len = list.length;
-  while (idx < len) {
-    var nextidx = idx + 1;
-    while (nextidx < len && fn(list[idx], list[nextidx])) {
-      nextidx += 1;
-    }
-    res.push(list.slice(idx, nextidx));
-    idx = nextidx;
-  }
-  return res;
-});
-
-},{"./internal/_curry2":359}],331:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns `true` if the first argument is greater than the second; `false`
- * otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig Ord a => a -> a -> Boolean
- * @param {*} a
- * @param {*} b
- * @return {Boolean}
- * @see R.lt
- * @example
- *
- *      R.gt(2, 1); //=> true
- *      R.gt(2, 2); //=> false
- *      R.gt(2, 3); //=> false
- *      R.gt('a', 'z'); //=> false
- *      R.gt('z', 'a'); //=> true
- */
-module.exports = _curry2(function gt(a, b) { return a > b; });
-
-},{"./internal/_curry2":359}],332:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns `true` if the first argument is greater than or equal to the second;
- * `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig Ord a => a -> a -> Boolean
- * @param {Number} a
- * @param {Number} b
- * @return {Boolean}
- * @see R.lte
- * @example
- *
- *      R.gte(2, 1); //=> true
- *      R.gte(2, 2); //=> true
- *      R.gte(2, 3); //=> false
- *      R.gte('a', 'z'); //=> false
- *      R.gte('z', 'a'); //=> true
- */
-module.exports = _curry2(function gte(a, b) { return a >= b; });
-
-},{"./internal/_curry2":359}],333:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _has = require('./internal/_has');
-
-
-/**
- * Returns whether or not an object has an own property with the specified name
- *
- * @func
- * @memberOf R
- * @since v0.7.0
- * @category Object
- * @sig s -> {s: x} -> Boolean
- * @param {String} prop The name of the property to check for.
- * @param {Object} obj The object to query.
- * @return {Boolean} Whether the property exists.
- * @example
- *
- *      var hasName = R.has('name');
- *      hasName({name: 'alice'});   //=> true
- *      hasName({name: 'bob'});     //=> true
- *      hasName({});                //=> false
- *
- *      var point = {x: 0, y: 0};
- *      var pointHas = R.has(R.__, point);
- *      pointHas('x');  //=> true
- *      pointHas('y');  //=> true
- *      pointHas('z');  //=> false
- */
-module.exports = _curry2(_has);
-
-},{"./internal/_curry2":359,"./internal/_has":370}],334:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns whether or not an object or its prototype chain has a property with
- * the specified name
- *
- * @func
- * @memberOf R
- * @since v0.7.0
- * @category Object
- * @sig s -> {s: x} -> Boolean
- * @param {String} prop The name of the property to check for.
- * @param {Object} obj The object to query.
- * @return {Boolean} Whether the property exists.
- * @example
- *
- *      function Rectangle(width, height) {
- *        this.width = width;
- *        this.height = height;
- *      }
- *      Rectangle.prototype.area = function() {
- *        return this.width * this.height;
- *      };
- *
- *      var square = new Rectangle(2, 2);
- *      R.hasIn('width', square);  //=> true
- *      R.hasIn('area', square);  //=> true
- */
-module.exports = _curry2(function hasIn(prop, obj) {
-  return prop in obj;
-});
-
-},{"./internal/_curry2":359}],335:[function(require,module,exports){
-var nth = require('./nth');
-
-
-/**
- * Returns the first element of the given list or string. In some libraries
- * this function is named `first`.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig [a] -> a | Undefined
- * @sig String -> String
- * @param {Array|String} list
- * @return {*}
- * @see R.tail, R.init, R.last
- * @example
- *
- *      R.head(['fi', 'fo', 'fum']); //=> 'fi'
- *      R.head([]); //=> undefined
- *
- *      R.head('abc'); //=> 'a'
- *      R.head(''); //=> ''
- */
-module.exports = nth(0);
-
-},{"./nth":464}],336:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns true if its arguments are identical, false otherwise. Values are
- * identical if they reference the same memory. `NaN` is identical to `NaN`;
- * `0` and `-0` are not identical.
- *
- * @func
- * @memberOf R
- * @since v0.15.0
- * @category Relation
- * @sig a -> a -> Boolean
- * @param {*} a
- * @param {*} b
- * @return {Boolean}
- * @example
- *
- *      var o = {};
- *      R.identical(o, o); //=> true
- *      R.identical(1, 1); //=> true
- *      R.identical(1, '1'); //=> false
- *      R.identical([], []); //=> false
- *      R.identical(0, -0); //=> false
- *      R.identical(NaN, NaN); //=> true
- */
-module.exports = _curry2(function identical(a, b) {
-  // SameValue algorithm
-  if (a === b) { // Steps 1-5, 7-10
-    // Steps 6.b-6.e: +0 != -0
-    return a !== 0 || 1 / a === 1 / b;
-  } else {
-    // Step 6.a: NaN == NaN
-    return a !== a && b !== b;
-  }
-});
-
-},{"./internal/_curry2":359}],337:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _identity = require('./internal/_identity');
-
-
-/**
- * A function that does nothing but return the parameter supplied to it. Good
- * as a default or placeholder function.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig a -> a
- * @param {*} x The value to return.
- * @return {*} The input value, `x`.
- * @example
- *
- *      R.identity(1); //=> 1
- *
- *      var obj = {};
- *      R.identity(obj) === obj; //=> true
- * @symb R.identity(a) = a
- */
-module.exports = _curry1(_identity);
-
-},{"./internal/_curry1":358,"./internal/_identity":371}],338:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var curryN = require('./curryN');
-
-
-/**
- * Creates a function that will process either the `onTrue` or the `onFalse`
- * function depending upon the result of the `condition` predicate.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Logic
- * @sig (*... -> Boolean) -> (*... -> *) -> (*... -> *) -> (*... -> *)
- * @param {Function} condition A predicate function
- * @param {Function} onTrue A function to invoke when the `condition` evaluates to a truthy value.
- * @param {Function} onFalse A function to invoke when the `condition` evaluates to a falsy value.
- * @return {Function} A new unary function that will process either the `onTrue` or the `onFalse`
- *                    function depending upon the result of the `condition` predicate.
- * @see R.unless, R.when
- * @example
- *
- *      var incCount = R.ifElse(
- *        R.has('count'),
- *        R.over(R.lensProp('count'), R.inc),
- *        R.assoc('count', 1)
- *      );
- *      incCount({});           //=> { count: 1 }
- *      incCount({ count: 1 }); //=> { count: 2 }
- */
-module.exports = _curry3(function ifElse(condition, onTrue, onFalse) {
-  return curryN(Math.max(condition.length, onTrue.length, onFalse.length),
-    function _ifElse() {
-      return condition.apply(this, arguments) ? onTrue.apply(this, arguments) : onFalse.apply(this, arguments);
-    }
-  );
-});
-
-},{"./curryN":298,"./internal/_curry3":360}],339:[function(require,module,exports){
-var add = require('./add');
-
-
-/**
- * Increments its argument.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Math
- * @sig Number -> Number
- * @param {Number} n
- * @return {Number} n + 1
- * @see R.dec
- * @example
- *
- *      R.inc(42); //=> 43
- */
-module.exports = add(1);
-
-},{"./add":261}],340:[function(require,module,exports){
-var reduceBy = require('./reduceBy');
-
-
-/**
- * Given a function that generates a key, turns a list of objects into an
- * object indexing the objects by the given key. Note that if multiple
- * objects generate the same value for the indexing key only the last value
- * will be included in the generated object.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category List
- * @sig (a -> String) -> [{k: v}] -> {k: {k: v}}
- * @param {Function} fn Function :: a -> String
- * @param {Array} array The array of objects to index
- * @return {Object} An object indexing each array element by the given property.
- * @example
- *
- *      var list = [{id: 'xyz', title: 'A'}, {id: 'abc', title: 'B'}];
- *      R.indexBy(R.prop('id'), list);
- *      //=> {abc: {id: 'abc', title: 'B'}, xyz: {id: 'xyz', title: 'A'}}
- */
-module.exports = reduceBy(function(acc, elem) { return elem; }, null);
-
-},{"./reduceBy":498}],341:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _indexOf = require('./internal/_indexOf');
-var _isArray = require('./internal/_isArray');
-
-
-/**
- * Returns the position of the first occurrence of an item in an array, or -1
- * if the item is not included in the array. `R.equals` is used to determine
- * equality.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig a -> [a] -> Number
- * @param {*} target The item to find.
- * @param {Array} xs The array to search in.
- * @return {Number} the index of the target, or -1 if the target is not found.
- * @see R.lastIndexOf
- * @example
- *
- *      R.indexOf(3, [1,2,3,4]); //=> 2
- *      R.indexOf(10, [1,2,3,4]); //=> -1
- */
-module.exports = _curry2(function indexOf(target, xs) {
-  return typeof xs.indexOf === 'function' && !_isArray(xs) ?
-    xs.indexOf(target) :
-    _indexOf(xs, target, 0);
-});
-
-},{"./internal/_curry2":359,"./internal/_indexOf":372,"./internal/_isArray":374}],342:[function(require,module,exports){
-var slice = require('./slice');
-
-
-/**
- * Returns all but the last element of the given list or string.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category List
- * @sig [a] -> [a]
- * @sig String -> String
- * @param {*} list
- * @return {*}
- * @see R.last, R.head, R.tail
- * @example
- *
- *      R.init([1, 2, 3]);  //=> [1, 2]
- *      R.init([1, 2]);     //=> [1]
- *      R.init([1]);        //=> []
- *      R.init([]);         //=> []
- *
- *      R.init('abc');  //=> 'ab'
- *      R.init('ab');   //=> 'a'
- *      R.init('a');    //=> ''
- *      R.init('');     //=> ''
- */
-module.exports = slice(0, -1);
-
-},{"./slice":510}],343:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Inserts the supplied element into the list, at index `index`. _Note that
- * this is not destructive_: it returns a copy of the list with the changes.
- * <small>No lists have been harmed in the application of this function.</small>
- *
- * @func
- * @memberOf R
- * @since v0.2.2
- * @category List
- * @sig Number -> a -> [a] -> [a]
- * @param {Number} index The position to insert the element
- * @param {*} elt The element to insert into the Array
- * @param {Array} list The list to insert into
- * @return {Array} A new Array with `elt` inserted at `index`.
- * @example
- *
- *      R.insert(2, 'x', [1,2,3,4]); //=> [1,2,'x',3,4]
- */
-module.exports = _curry3(function insert(idx, elt, list) {
-  idx = idx < list.length && idx >= 0 ? idx : list.length;
-  var result = Array.prototype.slice.call(list, 0);
-  result.splice(idx, 0, elt);
-  return result;
-});
-
-},{"./internal/_curry3":360}],344:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Inserts the sub-list into the list, at index `index`. _Note that this is not
- * destructive_: it returns a copy of the list with the changes.
- * <small>No lists have been harmed in the application of this function.</small>
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category List
- * @sig Number -> [a] -> [a] -> [a]
- * @param {Number} index The position to insert the sub-list
- * @param {Array} elts The sub-list to insert into the Array
- * @param {Array} list The list to insert the sub-list into
- * @return {Array} A new Array with `elts` inserted starting at `index`.
- * @example
- *
- *      R.insertAll(2, ['x','y','z'], [1,2,3,4]); //=> [1,2,'x','y','z',3,4]
- */
-module.exports = _curry3(function insertAll(idx, elts, list) {
-  idx = idx < list.length && idx >= 0 ? idx : list.length;
-  return [].concat(Array.prototype.slice.call(list, 0, idx),
-                   elts,
-                   Array.prototype.slice.call(list, idx));
-});
-
-},{"./internal/_curry3":360}],345:[function(require,module,exports){
-var _contains = require('./_contains');
-
-
-// A simple Set type that honours R.equals semantics
-module.exports = (function() {
-  function _Set() {
-    /* globals Set */
-    this._nativeSet = typeof Set === 'function' ? new Set() : null;
-    this._items = {};
-  }
-
-  // until we figure out why jsdoc chokes on this
-  // @param item The item to add to the Set
-  // @returns {boolean} true if the item did not exist prior, otherwise false
-  //
-  _Set.prototype.add = function(item) {
-    return !hasOrAdd(item, true, this);
-  };
-
-  //
-  // @param item The item to check for existence in the Set
-  // @returns {boolean} true if the item exists in the Set, otherwise false
-  //
-  _Set.prototype.has = function(item) {
-    return hasOrAdd(item, false, this);
-  };
-
-  //
-  // Combines the logic for checking whether an item is a member of the set and
-  // for adding a new item to the set.
-  //
-  // @param item       The item to check or add to the Set instance.
-  // @param shouldAdd  If true, the item will be added to the set if it doesn't
-  //                   already exist.
-  // @param set        The set instance to check or add to.
-  // @return {boolean} true if the item already existed, otherwise false.
-  //
-  function hasOrAdd(item, shouldAdd, set) {
-    var type = typeof item;
-    var prevSize, newSize;
-    switch (type) {
-      case 'string':
-      case 'number':
-        // distinguish between +0 and -0
-        if (item === 0 && 1 / item === -Infinity) {
-          if (set._items['-0']) {
-            return true;
-          } else {
-            if (shouldAdd) {
-              set._items['-0'] = true;
-            }
-            return false;
-          }
-        }
-        // these types can all utilise the native Set
-        if (set._nativeSet !== null) {
-          if (shouldAdd) {
-            prevSize = set._nativeSet.size;
-            set._nativeSet.add(item);
-            newSize = set._nativeSet.size;
-            return newSize === prevSize;
-          } else {
-            return set._nativeSet.has(item);
-          }
-        } else {
-          if (!(type in set._items)) {
-            if (shouldAdd) {
-              set._items[type] = {};
-              set._items[type][item] = true;
-            }
-            return false;
-          } else if (item in set._items[type]) {
-            return true;
-          } else {
-            if (shouldAdd) {
-              set._items[type][item] = true;
-            }
-            return false;
-          }
-        }
-
-      case 'boolean':
-        // set._items['boolean'] holds a two element array
-        // representing [ falseExists, trueExists ]
-        if (type in set._items) {
-          var bIdx = item ? 1 : 0;
-          if (set._items[type][bIdx]) {
-            return true;
-          } else {
-            if (shouldAdd) {
-              set._items[type][bIdx] = true;
-            }
-            return false;
-          }
-        } else {
-          if (shouldAdd) {
-            set._items[type] = item ? [false, true] : [true, false];
-          }
-          return false;
-        }
-
-      case 'function':
-        // compare functions for reference equality
-        if (set._nativeSet !== null) {
-          if (shouldAdd) {
-            prevSize = set._nativeSet.size;
-            set._nativeSet.add(item);
-            newSize = set._nativeSet.size;
-            return newSize === prevSize;
-          } else {
-            return set._nativeSet.has(item);
-          }
-        } else {
-          if (!(type in set._items)) {
-            if (shouldAdd) {
-              set._items[type] = [item];
-            }
-            return false;
-          }
-          if (!_contains(item, set._items[type])) {
-            if (shouldAdd) {
-              set._items[type].push(item);
-            }
-            return false;
-          }
-          return true;
-        }
-
-      case 'undefined':
-        if (set._items[type]) {
-          return true;
-        } else {
-          if (shouldAdd) {
-            set._items[type] = true;
-          }
-          return false;
-        }
-
-      case 'object':
-        if (item === null) {
-          if (!set._items['null']) {
-            if (shouldAdd) {
-              set._items['null'] = true;
-            }
-            return false;
-          }
-          return true;
-        }
-      /* falls through */
-      default:
-        // reduce the search size of heterogeneous sets by creating buckets
-        // for each type.
-        type = Object.prototype.toString.call(item);
-        if (!(type in set._items)) {
-          if (shouldAdd) {
-            set._items[type] = [item];
-          }
-          return false;
-        }
-        // scan through all previously applied items
-        if (!_contains(item, set._items[type])) {
-          if (shouldAdd) {
-            set._items[type].push(item);
-          }
-          return false;
-        }
-        return true;
-    }
-  }
-  return _Set;
-}());
-
-},{"./_contains":355}],346:[function(require,module,exports){
-module.exports = function _aperture(n, list) {
-  var idx = 0;
-  var limit = list.length - (n - 1);
-  var acc = new Array(limit >= 0 ? limit : 0);
-  while (idx < limit) {
-    acc[idx] = Array.prototype.slice.call(list, idx, idx + n);
-    idx += 1;
-  }
-  return acc;
-};
-
-},{}],347:[function(require,module,exports){
-module.exports = function _arity(n, fn) {
-  /* eslint-disable no-unused-vars */
-  switch (n) {
-    case 0: return function() { return fn.apply(this, arguments); };
-    case 1: return function(a0) { return fn.apply(this, arguments); };
-    case 2: return function(a0, a1) { return fn.apply(this, arguments); };
-    case 3: return function(a0, a1, a2) { return fn.apply(this, arguments); };
-    case 4: return function(a0, a1, a2, a3) { return fn.apply(this, arguments); };
-    case 5: return function(a0, a1, a2, a3, a4) { return fn.apply(this, arguments); };
-    case 6: return function(a0, a1, a2, a3, a4, a5) { return fn.apply(this, arguments); };
-    case 7: return function(a0, a1, a2, a3, a4, a5, a6) { return fn.apply(this, arguments); };
-    case 8: return function(a0, a1, a2, a3, a4, a5, a6, a7) { return fn.apply(this, arguments); };
-    case 9: return function(a0, a1, a2, a3, a4, a5, a6, a7, a8) { return fn.apply(this, arguments); };
-    case 10: return function(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) { return fn.apply(this, arguments); };
-    default: throw new Error('First argument to _arity must be a non-negative integer no greater than ten');
-  }
-};
-
-},{}],348:[function(require,module,exports){
-module.exports = function _arrayFromIterator(iter) {
-  var list = [];
-  var next;
-  while (!(next = iter.next()).done) {
-    list.push(next.value);
-  }
-  return list;
-};
-
-},{}],349:[function(require,module,exports){
-var _objectAssign = require('./_objectAssign');
-
-module.exports =
-  typeof Object.assign === 'function' ? Object.assign : _objectAssign;
-
-},{"./_objectAssign":385}],350:[function(require,module,exports){
-var _isArray = require('./_isArray');
-
-
-/**
- * This checks whether a function has a [methodname] function. If it isn't an
- * array it will execute that function otherwise it will default to the ramda
- * implementation.
- *
- * @private
- * @param {Function} fn ramda implemtation
- * @param {String} methodname property to check for a custom implementation
- * @return {Object} Whatever the return value of the method is.
- */
-module.exports = function _checkForMethod(methodname, fn) {
-  return function() {
-    var length = arguments.length;
-    if (length === 0) {
-      return fn();
-    }
-    var obj = arguments[length - 1];
-    return (_isArray(obj) || typeof obj[methodname] !== 'function') ?
-      fn.apply(this, arguments) :
-      obj[methodname].apply(obj, Array.prototype.slice.call(arguments, 0, length - 1));
-  };
-};
-
-},{"./_isArray":374}],351:[function(require,module,exports){
-var _cloneRegExp = require('./_cloneRegExp');
-var type = require('../type');
-
-
-/**
- * Copies an object.
- *
- * @private
- * @param {*} value The value to be copied
- * @param {Array} refFrom Array containing the source references
- * @param {Array} refTo Array containing the copied source references
- * @param {Boolean} deep Whether or not to perform deep cloning.
- * @return {*} The copied value.
- */
-module.exports = function _clone(value, refFrom, refTo, deep) {
-  var copy = function copy(copiedValue) {
-    var len = refFrom.length;
-    var idx = 0;
-    while (idx < len) {
-      if (value === refFrom[idx]) {
-        return refTo[idx];
-      }
-      idx += 1;
-    }
-    refFrom[idx + 1] = value;
-    refTo[idx + 1] = copiedValue;
-    for (var key in value) {
-      copiedValue[key] = deep ?
-        _clone(value[key], refFrom, refTo, true) : value[key];
-    }
-    return copiedValue;
-  };
-  switch (type(value)) {
-    case 'Object':  return copy({});
-    case 'Array':   return copy([]);
-    case 'Date':    return new Date(value.valueOf());
-    case 'RegExp':  return _cloneRegExp(value);
-    default:        return value;
-  }
-};
-
-},{"../type":540,"./_cloneRegExp":352}],352:[function(require,module,exports){
-module.exports = function _cloneRegExp(pattern) {
-  return new RegExp(pattern.source, (pattern.global     ? 'g' : '') +
-                                    (pattern.ignoreCase ? 'i' : '') +
-                                    (pattern.multiline  ? 'm' : '') +
-                                    (pattern.sticky     ? 'y' : '') +
-                                    (pattern.unicode    ? 'u' : ''));
-};
-
-},{}],353:[function(require,module,exports){
-module.exports = function _complement(f) {
-  return function() {
-    return !f.apply(this, arguments);
-  };
-};
-
-},{}],354:[function(require,module,exports){
-/**
- * Private `concat` function to merge two array-like objects.
- *
- * @private
- * @param {Array|Arguments} [set1=[]] An array-like object.
- * @param {Array|Arguments} [set2=[]] An array-like object.
- * @return {Array} A new, merged array.
- * @example
- *
- *      _concat([4, 5, 6], [1, 2, 3]); //=> [4, 5, 6, 1, 2, 3]
- */
-module.exports = function _concat(set1, set2) {
-  set1 = set1 || [];
-  set2 = set2 || [];
-  var idx;
-  var len1 = set1.length;
-  var len2 = set2.length;
-  var result = [];
-
-  idx = 0;
-  while (idx < len1) {
-    result[result.length] = set1[idx];
-    idx += 1;
-  }
-  idx = 0;
-  while (idx < len2) {
-    result[result.length] = set2[idx];
-    idx += 1;
-  }
-  return result;
-};
-
-},{}],355:[function(require,module,exports){
-var _indexOf = require('./_indexOf');
-
-
-module.exports = function _contains(a, list) {
-  return _indexOf(list, a, 0) >= 0;
-};
-
-},{"./_indexOf":372}],356:[function(require,module,exports){
-module.exports = function _containsWith(pred, x, list) {
-  var idx = 0;
-  var len = list.length;
-
-  while (idx < len) {
-    if (pred(x, list[idx])) {
-      return true;
-    }
-    idx += 1;
-  }
-  return false;
-};
-
-},{}],357:[function(require,module,exports){
-var _arity = require('./_arity');
-var _curry2 = require('./_curry2');
-
-
-module.exports = function _createPartialApplicator(concat) {
-  return _curry2(function(fn, args) {
-    return _arity(Math.max(0, fn.length - args.length), function() {
-      return fn.apply(this, concat(args, arguments));
-    });
-  });
-};
-
-},{"./_arity":347,"./_curry2":359}],358:[function(require,module,exports){
-var _isPlaceholder = require('./_isPlaceholder');
-
-
-/**
- * Optimized internal one-arity curry function.
- *
- * @private
- * @category Function
- * @param {Function} fn The function to curry.
- * @return {Function} The curried function.
- */
-module.exports = function _curry1(fn) {
-  return function f1(a) {
-    if (arguments.length === 0 || _isPlaceholder(a)) {
-      return f1;
-    } else {
-      return fn.apply(this, arguments);
-    }
-  };
-};
-
-},{"./_isPlaceholder":379}],359:[function(require,module,exports){
-var _curry1 = require('./_curry1');
-var _isPlaceholder = require('./_isPlaceholder');
-
-
-/**
- * Optimized internal two-arity curry function.
- *
- * @private
- * @category Function
- * @param {Function} fn The function to curry.
- * @return {Function} The curried function.
- */
-module.exports = function _curry2(fn) {
-  return function f2(a, b) {
-    switch (arguments.length) {
-      case 0:
-        return f2;
-      case 1:
-        return _isPlaceholder(a) ? f2
-             : _curry1(function(_b) { return fn(a, _b); });
-      default:
-        return _isPlaceholder(a) && _isPlaceholder(b) ? f2
-             : _isPlaceholder(a) ? _curry1(function(_a) { return fn(_a, b); })
-             : _isPlaceholder(b) ? _curry1(function(_b) { return fn(a, _b); })
-             : fn(a, b);
-    }
-  };
-};
-
-},{"./_curry1":358,"./_isPlaceholder":379}],360:[function(require,module,exports){
-var _curry1 = require('./_curry1');
-var _curry2 = require('./_curry2');
-var _isPlaceholder = require('./_isPlaceholder');
-
-
-/**
- * Optimized internal three-arity curry function.
- *
- * @private
- * @category Function
- * @param {Function} fn The function to curry.
- * @return {Function} The curried function.
- */
-module.exports = function _curry3(fn) {
-  return function f3(a, b, c) {
-    switch (arguments.length) {
-      case 0:
-        return f3;
-      case 1:
-        return _isPlaceholder(a) ? f3
-             : _curry2(function(_b, _c) { return fn(a, _b, _c); });
-      case 2:
-        return _isPlaceholder(a) && _isPlaceholder(b) ? f3
-             : _isPlaceholder(a) ? _curry2(function(_a, _c) { return fn(_a, b, _c); })
-             : _isPlaceholder(b) ? _curry2(function(_b, _c) { return fn(a, _b, _c); })
-             : _curry1(function(_c) { return fn(a, b, _c); });
-      default:
-        return _isPlaceholder(a) && _isPlaceholder(b) && _isPlaceholder(c) ? f3
-             : _isPlaceholder(a) && _isPlaceholder(b) ? _curry2(function(_a, _b) { return fn(_a, _b, c); })
-             : _isPlaceholder(a) && _isPlaceholder(c) ? _curry2(function(_a, _c) { return fn(_a, b, _c); })
-             : _isPlaceholder(b) && _isPlaceholder(c) ? _curry2(function(_b, _c) { return fn(a, _b, _c); })
-             : _isPlaceholder(a) ? _curry1(function(_a) { return fn(_a, b, c); })
-             : _isPlaceholder(b) ? _curry1(function(_b) { return fn(a, _b, c); })
-             : _isPlaceholder(c) ? _curry1(function(_c) { return fn(a, b, _c); })
-             : fn(a, b, c);
-    }
-  };
-};
-
-},{"./_curry1":358,"./_curry2":359,"./_isPlaceholder":379}],361:[function(require,module,exports){
-var _arity = require('./_arity');
-var _isPlaceholder = require('./_isPlaceholder');
-
-
-/**
- * Internal curryN function.
- *
- * @private
- * @category Function
- * @param {Number} length The arity of the curried function.
- * @param {Array} received An array of arguments received thus far.
- * @param {Function} fn The function to curry.
- * @return {Function} The curried function.
- */
-module.exports = function _curryN(length, received, fn) {
-  return function() {
-    var combined = [];
-    var argsIdx = 0;
-    var left = length;
-    var combinedIdx = 0;
-    while (combinedIdx < received.length || argsIdx < arguments.length) {
-      var result;
-      if (combinedIdx < received.length &&
-          (!_isPlaceholder(received[combinedIdx]) ||
-           argsIdx >= arguments.length)) {
-        result = received[combinedIdx];
-      } else {
-        result = arguments[argsIdx];
-        argsIdx += 1;
-      }
-      combined[combinedIdx] = result;
-      if (!_isPlaceholder(result)) {
-        left -= 1;
-      }
-      combinedIdx += 1;
-    }
-    return left <= 0 ? fn.apply(this, combined)
-                     : _arity(left, _curryN(length, combined, fn));
-  };
-};
-
-},{"./_arity":347,"./_isPlaceholder":379}],362:[function(require,module,exports){
-var _isArray = require('./_isArray');
-var _isTransformer = require('./_isTransformer');
-
-
-/**
- * Returns a function that dispatches with different strategies based on the
- * object in list position (last argument). If it is an array, executes [fn].
- * Otherwise, if it has a function with one of the given method names, it will
- * execute that function (functor case). Otherwise, if it is a transformer,
- * uses transducer [xf] to return a new transformer (transducer case).
- * Otherwise, it will default to executing [fn].
- *
- * @private
- * @param {Array} methodNames properties to check for a custom implementation
- * @param {Function} xf transducer to initialize if object is transformer
- * @param {Function} fn default ramda implementation
- * @return {Function} A function that dispatches on object in list position
- */
-module.exports = function _dispatchable(methodNames, xf, fn) {
-  return function() {
-    if (arguments.length === 0) {
-      return fn();
-    }
-    var args = Array.prototype.slice.call(arguments, 0);
-    var obj = args.pop();
-    if (!_isArray(obj)) {
-      var idx = 0;
-      while (idx < methodNames.length) {
-        if (typeof obj[methodNames[idx]] === 'function') {
-          return obj[methodNames[idx]].apply(obj, args);
-        }
-        idx += 1;
-      }
-      if (_isTransformer(obj)) {
-        var transducer = xf.apply(null, args);
-        return transducer(obj);
-      }
-    }
-    return fn.apply(this, arguments);
-  };
-};
-
-},{"./_isArray":374,"./_isTransformer":382}],363:[function(require,module,exports){
-var take = require('../take');
-
-module.exports = function dropLast(n, xs) {
-  return take(n < xs.length ? xs.length - n : 0, xs);
-};
-
-},{"../take":523}],364:[function(require,module,exports){
-module.exports = function dropLastWhile(pred, list) {
-  var idx = list.length - 1;
-  while (idx >= 0 && pred(list[idx])) {
-    idx -= 1;
-  }
-  return Array.prototype.slice.call(list, 0, idx + 1);
-};
-
-},{}],365:[function(require,module,exports){
-var _arrayFromIterator = require('./_arrayFromIterator');
-var _functionName = require('./_functionName');
-var _has = require('./_has');
-var identical = require('../identical');
-var keys = require('../keys');
-var type = require('../type');
-
-
-module.exports = function _equals(a, b, stackA, stackB) {
-  if (identical(a, b)) {
-    return true;
-  }
-
-  if (type(a) !== type(b)) {
-    return false;
-  }
-
-  if (a == null || b == null) {
-    return false;
-  }
-
-  if (typeof a.equals === 'function' || typeof b.equals === 'function') {
-    return typeof a.equals === 'function' && a.equals(b) &&
-           typeof b.equals === 'function' && b.equals(a);
-  }
-
-  switch (type(a)) {
-    case 'Arguments':
-    case 'Array':
-    case 'Object':
-      if (typeof a.constructor === 'function' &&
-          _functionName(a.constructor) === 'Promise') {
-        return a === b;
-      }
-      break;
-    case 'Boolean':
-    case 'Number':
-    case 'String':
-      if (!(typeof a === typeof b && identical(a.valueOf(), b.valueOf()))) {
-        return false;
-      }
-      break;
-    case 'Date':
-      if (!identical(a.valueOf(), b.valueOf())) {
-        return false;
-      }
-      break;
-    case 'Error':
-      return a.name === b.name && a.message === b.message;
-    case 'RegExp':
-      if (!(a.source === b.source &&
-            a.global === b.global &&
-            a.ignoreCase === b.ignoreCase &&
-            a.multiline === b.multiline &&
-            a.sticky === b.sticky &&
-            a.unicode === b.unicode)) {
-        return false;
-      }
-      break;
-    case 'Map':
-    case 'Set':
-      if (!_equals(_arrayFromIterator(a.entries()), _arrayFromIterator(b.entries()), stackA, stackB)) {
-        return false;
-      }
-      break;
-    case 'Int8Array':
-    case 'Uint8Array':
-    case 'Uint8ClampedArray':
-    case 'Int16Array':
-    case 'Uint16Array':
-    case 'Int32Array':
-    case 'Uint32Array':
-    case 'Float32Array':
-    case 'Float64Array':
-      break;
-    case 'ArrayBuffer':
-      break;
-    default:
-      // Values of other types are only equal if identical.
-      return false;
-  }
-
-  var keysA = keys(a);
-  if (keysA.length !== keys(b).length) {
-    return false;
-  }
-
-  var idx = stackA.length - 1;
-  while (idx >= 0) {
-    if (stackA[idx] === a) {
-      return stackB[idx] === b;
-    }
-    idx -= 1;
-  }
-
-  stackA.push(a);
-  stackB.push(b);
-  idx = keysA.length - 1;
-  while (idx >= 0) {
-    var key = keysA[idx];
-    if (!(_has(key, b) && _equals(b[key], a[key], stackA, stackB))) {
-      return false;
-    }
-    idx -= 1;
-  }
-  stackA.pop();
-  stackB.pop();
-  return true;
-};
-
-},{"../identical":336,"../keys":428,"../type":540,"./_arrayFromIterator":348,"./_functionName":369,"./_has":370}],366:[function(require,module,exports){
-module.exports = function _filter(fn, list) {
-  var idx = 0;
-  var len = list.length;
-  var result = [];
-
-  while (idx < len) {
-    if (fn(list[idx])) {
-      result[result.length] = list[idx];
-    }
-    idx += 1;
-  }
-  return result;
-};
-
-},{}],367:[function(require,module,exports){
-var _forceReduced = require('./_forceReduced');
-var _reduce = require('./_reduce');
-var _xfBase = require('./_xfBase');
-var isArrayLike = require('../isArrayLike');
-
-module.exports = (function() {
-  var preservingReduced = function(xf) {
-    return {
-      '@@transducer/init': _xfBase.init,
-      '@@transducer/result': function(result) {
-        return xf['@@transducer/result'](result);
-      },
-      '@@transducer/step': function(result, input) {
-        var ret = xf['@@transducer/step'](result, input);
-        return ret['@@transducer/reduced'] ? _forceReduced(ret) : ret;
-      }
-    };
-  };
-
-  return function _xcat(xf) {
-    var rxf = preservingReduced(xf);
-    return {
-      '@@transducer/init': _xfBase.init,
-      '@@transducer/result': function(result) {
-        return rxf['@@transducer/result'](result);
-      },
-      '@@transducer/step': function(result, input) {
-        return !isArrayLike(input) ? _reduce(rxf, result, [input]) : _reduce(rxf, result, input);
-      }
-    };
-  };
-}());
-
-},{"../isArrayLike":423,"./_forceReduced":368,"./_reduce":390,"./_xfBase":404}],368:[function(require,module,exports){
-module.exports = function _forceReduced(x) {
-  return {
-    '@@transducer/value': x,
-    '@@transducer/reduced': true
-  };
-};
-
-},{}],369:[function(require,module,exports){
-module.exports = function _functionName(f) {
-  // String(x => x) evaluates to "x => x", so the pattern may not match.
-  var match = String(f).match(/^function (\w*)/);
-  return match == null ? '' : match[1];
-};
-
-},{}],370:[function(require,module,exports){
-module.exports = function _has(prop, obj) {
-  return Object.prototype.hasOwnProperty.call(obj, prop);
-};
-
-},{}],371:[function(require,module,exports){
-module.exports = function _identity(x) { return x; };
-
-},{}],372:[function(require,module,exports){
-var equals = require('../equals');
-
-
-module.exports = function _indexOf(list, a, idx) {
-  var inf, item;
-  // Array.prototype.indexOf doesn't exist below IE9
-  if (typeof list.indexOf === 'function') {
-    switch (typeof a) {
-      case 'number':
-        if (a === 0) {
-          // manually crawl the list to distinguish between +0 and -0
-          inf = 1 / a;
-          while (idx < list.length) {
-            item = list[idx];
-            if (item === 0 && 1 / item === inf) {
-              return idx;
-            }
-            idx += 1;
-          }
-          return -1;
-        } else if (a !== a) {
-          // NaN
-          while (idx < list.length) {
-            item = list[idx];
-            if (typeof item === 'number' && item !== item) {
-              return idx;
-            }
-            idx += 1;
-          }
-          return -1;
-        }
-        // non-zero numbers can utilise Set
-        return list.indexOf(a, idx);
-
-      // all these types can utilise Set
-      case 'string':
-      case 'boolean':
-      case 'function':
-      case 'undefined':
-        return list.indexOf(a, idx);
-
-      case 'object':
-        if (a === null) {
-          // null can utilise Set
-          return list.indexOf(a, idx);
-        }
-    }
-  }
-  // anything else not covered above, defer to R.equals
-  while (idx < list.length) {
-    if (equals(list[idx], a)) {
-      return idx;
-    }
-    idx += 1;
-  }
-  return -1;
-};
-
-},{"../equals":317}],373:[function(require,module,exports){
-var _has = require('./_has');
-
-
-module.exports = (function() {
-  var toString = Object.prototype.toString;
-  return toString.call(arguments) === '[object Arguments]' ?
-    function _isArguments(x) { return toString.call(x) === '[object Arguments]'; } :
-    function _isArguments(x) { return _has('callee', x); };
-}());
-
-},{"./_has":370}],374:[function(require,module,exports){
-/**
- * Tests whether or not an object is an array.
- *
- * @private
- * @param {*} val The object to test.
- * @return {Boolean} `true` if `val` is an array, `false` otherwise.
- * @example
- *
- *      _isArray([]); //=> true
- *      _isArray(null); //=> false
- *      _isArray({}); //=> false
- */
-module.exports = Array.isArray || function _isArray(val) {
-  return (val != null &&
-          val.length >= 0 &&
-          Object.prototype.toString.call(val) === '[object Array]');
-};
-
-},{}],375:[function(require,module,exports){
-module.exports = function _isFunction(x) {
-  return Object.prototype.toString.call(x) === '[object Function]';
-};
-
-},{}],376:[function(require,module,exports){
-/**
- * Determine if the passed argument is an integer.
- *
- * @private
- * @param {*} n
- * @category Type
- * @return {Boolean}
- */
-module.exports = Number.isInteger || function _isInteger(n) {
-  return (n << 0) === n;
-};
-
-},{}],377:[function(require,module,exports){
-module.exports = function _isNumber(x) {
-  return Object.prototype.toString.call(x) === '[object Number]';
-};
-
-},{}],378:[function(require,module,exports){
-module.exports = function _isObject(x) {
-  return Object.prototype.toString.call(x) === '[object Object]';
-};
-
-},{}],379:[function(require,module,exports){
-module.exports = function _isPlaceholder(a) {
-  return a != null &&
-         typeof a === 'object' &&
-         a['@@functional/placeholder'] === true;
-};
-
-},{}],380:[function(require,module,exports){
-module.exports = function _isRegExp(x) {
-  return Object.prototype.toString.call(x) === '[object RegExp]';
-};
-
-},{}],381:[function(require,module,exports){
-module.exports = function _isString(x) {
-  return Object.prototype.toString.call(x) === '[object String]';
-};
-
-},{}],382:[function(require,module,exports){
-module.exports = function _isTransformer(obj) {
-  return typeof obj['@@transducer/step'] === 'function';
-};
-
-},{}],383:[function(require,module,exports){
-var isArrayLike = require('../isArrayLike');
-
-
-/**
- * `_makeFlat` is a helper function that returns a one-level or fully recursive
- * function based on the flag passed in.
- *
- * @private
- */
-module.exports = function _makeFlat(recursive) {
-  return function flatt(list) {
-    var value, jlen, j;
-    var result = [];
-    var idx = 0;
-    var ilen = list.length;
-
-    while (idx < ilen) {
-      if (isArrayLike(list[idx])) {
-        value = recursive ? flatt(list[idx]) : list[idx];
-        j = 0;
-        jlen = value.length;
-        while (j < jlen) {
-          result[result.length] = value[j];
-          j += 1;
-        }
-      } else {
-        result[result.length] = list[idx];
-      }
-      idx += 1;
-    }
-    return result;
-  };
-};
-
-},{"../isArrayLike":423}],384:[function(require,module,exports){
-module.exports = function _map(fn, functor) {
-  var idx = 0;
-  var len = functor.length;
-  var result = Array(len);
-  while (idx < len) {
-    result[idx] = fn(functor[idx]);
-    idx += 1;
-  }
-  return result;
-};
-
-},{}],385:[function(require,module,exports){
-var _has = require('./_has');
-
-// Based on https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-module.exports = function _objectAssign(target) {
-  if (target == null) {
-    throw new TypeError('Cannot convert undefined or null to object');
-  }
-
-  var output = Object(target);
-  var idx = 1;
-  var length = arguments.length;
-  while (idx < length) {
-    var source = arguments[idx];
-    if (source != null) {
-      for (var nextKey in source) {
-        if (_has(nextKey, source)) {
-          output[nextKey] = source[nextKey];
-        }
-      }
-    }
-    idx += 1;
-  }
-  return output;
-};
-
-},{"./_has":370}],386:[function(require,module,exports){
-module.exports = function _of(x) { return [x]; };
-
-},{}],387:[function(require,module,exports){
-module.exports = function _pipe(f, g) {
-  return function() {
-    return g.call(this, f.apply(this, arguments));
-  };
-};
-
-},{}],388:[function(require,module,exports){
-module.exports = function _pipeP(f, g) {
-  return function() {
-    var ctx = this;
-    return f.apply(ctx, arguments).then(function(x) {
-      return g.call(ctx, x);
-    });
-  };
-};
-
-},{}],389:[function(require,module,exports){
-module.exports = function _quote(s) {
-  var escaped = s
-    .replace(/\\/g, '\\\\')
-    .replace(/[\b]/g, '\\b')  // \b matches word boundary; [\b] matches backspace
-    .replace(/\f/g, '\\f')
-    .replace(/\n/g, '\\n')
-    .replace(/\r/g, '\\r')
-    .replace(/\t/g, '\\t')
-    .replace(/\v/g, '\\v')
-    .replace(/\0/g, '\\0');
-
-  return '"' + escaped.replace(/"/g, '\\"') + '"';
-};
-
-},{}],390:[function(require,module,exports){
-var _xwrap = require('./_xwrap');
-var bind = require('../bind');
-var isArrayLike = require('../isArrayLike');
-
-
-module.exports = (function() {
-  function _arrayReduce(xf, acc, list) {
-    var idx = 0;
-    var len = list.length;
-    while (idx < len) {
-      acc = xf['@@transducer/step'](acc, list[idx]);
-      if (acc && acc['@@transducer/reduced']) {
-        acc = acc['@@transducer/value'];
-        break;
-      }
-      idx += 1;
-    }
-    return xf['@@transducer/result'](acc);
-  }
-
-  function _iterableReduce(xf, acc, iter) {
-    var step = iter.next();
-    while (!step.done) {
-      acc = xf['@@transducer/step'](acc, step.value);
-      if (acc && acc['@@transducer/reduced']) {
-        acc = acc['@@transducer/value'];
-        break;
-      }
-      step = iter.next();
-    }
-    return xf['@@transducer/result'](acc);
-  }
-
-  function _methodReduce(xf, acc, obj) {
-    return xf['@@transducer/result'](obj.reduce(bind(xf['@@transducer/step'], xf), acc));
-  }
-
-  var symIterator = (typeof Symbol !== 'undefined') ? Symbol.iterator : '@@iterator';
-  return function _reduce(fn, acc, list) {
-    if (typeof fn === 'function') {
-      fn = _xwrap(fn);
-    }
-    if (isArrayLike(list)) {
-      return _arrayReduce(fn, acc, list);
-    }
-    if (typeof list.reduce === 'function') {
-      return _methodReduce(fn, acc, list);
-    }
-    if (list[symIterator] != null) {
-      return _iterableReduce(fn, acc, list[symIterator]());
-    }
-    if (typeof list.next === 'function') {
-      return _iterableReduce(fn, acc, list);
-    }
-    throw new TypeError('reduce: list must be array or iterable');
-  };
-}());
-
-},{"../bind":279,"../isArrayLike":423,"./_xwrap":414}],391:[function(require,module,exports){
-module.exports = function _reduced(x) {
-  return x && x['@@transducer/reduced'] ? x :
-    {
-      '@@transducer/value': x,
-      '@@transducer/reduced': true
-    };
-};
-
-},{}],392:[function(require,module,exports){
-var _assign = require('./_assign');
-var _identity = require('./_identity');
-var _isTransformer = require('./_isTransformer');
-var isArrayLike = require('../isArrayLike');
-var objOf = require('../objOf');
-
-
-module.exports = (function() {
-  var _stepCatArray = {
-    '@@transducer/init': Array,
-    '@@transducer/step': function(xs, x) {
-      xs.push(x);
-      return xs;
-    },
-    '@@transducer/result': _identity
-  };
-  var _stepCatString = {
-    '@@transducer/init': String,
-    '@@transducer/step': function(a, b) { return a + b; },
-    '@@transducer/result': _identity
-  };
-  var _stepCatObject = {
-    '@@transducer/init': Object,
-    '@@transducer/step': function(result, input) {
-      return _assign(
-        result,
-        isArrayLike(input) ? objOf(input[0], input[1]) : input
-      );
-    },
-    '@@transducer/result': _identity
-  };
-
-  return function _stepCat(obj) {
-    if (_isTransformer(obj)) {
-      return obj;
-    }
-    if (isArrayLike(obj)) {
-      return _stepCatArray;
-    }
-    if (typeof obj === 'string') {
-      return _stepCatString;
-    }
-    if (typeof obj === 'object') {
-      return _stepCatObject;
-    }
-    throw new Error('Cannot create transformer for ' + obj);
-  };
-}());
-
-},{"../isArrayLike":423,"../objOf":466,"./_assign":349,"./_identity":371,"./_isTransformer":382}],393:[function(require,module,exports){
-/**
- * Polyfill from <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString>.
- */
-module.exports = (function() {
-  var pad = function pad(n) { return (n < 10 ? '0' : '') + n; };
-
-  return typeof Date.prototype.toISOString === 'function' ?
-    function _toISOString(d) {
-      return d.toISOString();
-    } :
-    function _toISOString(d) {
-      return (
-        d.getUTCFullYear() + '-' +
-        pad(d.getUTCMonth() + 1) + '-' +
-        pad(d.getUTCDate()) + 'T' +
-        pad(d.getUTCHours()) + ':' +
-        pad(d.getUTCMinutes()) + ':' +
-        pad(d.getUTCSeconds()) + '.' +
-        (d.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) + 'Z'
-      );
-    };
-}());
-
-},{}],394:[function(require,module,exports){
-var _contains = require('./_contains');
-var _map = require('./_map');
-var _quote = require('./_quote');
-var _toISOString = require('./_toISOString');
-var keys = require('../keys');
-var reject = require('../reject');
-
-
-module.exports = function _toString(x, seen) {
-  var recur = function recur(y) {
-    var xs = seen.concat([x]);
-    return _contains(y, xs) ? '<Circular>' : _toString(y, xs);
-  };
-
-  //  mapPairs :: (Object, [String]) -> [String]
-  var mapPairs = function(obj, keys) {
-    return _map(function(k) { return _quote(k) + ': ' + recur(obj[k]); }, keys.slice().sort());
-  };
-
-  switch (Object.prototype.toString.call(x)) {
-    case '[object Arguments]':
-      return '(function() { return arguments; }(' + _map(recur, x).join(', ') + '))';
-    case '[object Array]':
-      return '[' + _map(recur, x).concat(mapPairs(x, reject(function(k) { return /^\d+$/.test(k); }, keys(x)))).join(', ') + ']';
-    case '[object Boolean]':
-      return typeof x === 'object' ? 'new Boolean(' + recur(x.valueOf()) + ')' : x.toString();
-    case '[object Date]':
-      return 'new Date(' + (isNaN(x.valueOf()) ? recur(NaN) : _quote(_toISOString(x))) + ')';
-    case '[object Null]':
-      return 'null';
-    case '[object Number]':
-      return typeof x === 'object' ? 'new Number(' + recur(x.valueOf()) + ')' : 1 / x === -Infinity ? '-0' : x.toString(10);
-    case '[object String]':
-      return typeof x === 'object' ? 'new String(' + recur(x.valueOf()) + ')' : _quote(x);
-    case '[object Undefined]':
-      return 'undefined';
-    default:
-      if (typeof x.toString === 'function') {
-        var repr = x.toString();
-        if (repr !== '[object Object]') {
-          return repr;
-        }
-      }
-      return '{' + mapPairs(x, keys(x)).join(', ') + '}';
-  }
-};
-
-},{"../keys":428,"../reject":502,"./_contains":355,"./_map":384,"./_quote":389,"./_toISOString":393}],395:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _reduced = require('./_reduced');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XAll(f, xf) {
-    this.xf = xf;
-    this.f = f;
-    this.all = true;
-  }
-  XAll.prototype['@@transducer/init'] = _xfBase.init;
-  XAll.prototype['@@transducer/result'] = function(result) {
-    if (this.all) {
-      result = this.xf['@@transducer/step'](result, true);
-    }
-    return this.xf['@@transducer/result'](result);
-  };
-  XAll.prototype['@@transducer/step'] = function(result, input) {
-    if (!this.f(input)) {
-      this.all = false;
-      result = _reduced(this.xf['@@transducer/step'](result, false));
-    }
-    return result;
-  };
-
-  return _curry2(function _xall(f, xf) { return new XAll(f, xf); });
-}());
-
-},{"./_curry2":359,"./_reduced":391,"./_xfBase":404}],396:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _reduced = require('./_reduced');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XAny(f, xf) {
-    this.xf = xf;
-    this.f = f;
-    this.any = false;
-  }
-  XAny.prototype['@@transducer/init'] = _xfBase.init;
-  XAny.prototype['@@transducer/result'] = function(result) {
-    if (!this.any) {
-      result = this.xf['@@transducer/step'](result, false);
-    }
-    return this.xf['@@transducer/result'](result);
-  };
-  XAny.prototype['@@transducer/step'] = function(result, input) {
-    if (this.f(input)) {
-      this.any = true;
-      result = _reduced(this.xf['@@transducer/step'](result, true));
-    }
-    return result;
-  };
-
-  return _curry2(function _xany(f, xf) { return new XAny(f, xf); });
-}());
-
-},{"./_curry2":359,"./_reduced":391,"./_xfBase":404}],397:[function(require,module,exports){
-var _concat = require('./_concat');
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XAperture(n, xf) {
-    this.xf = xf;
-    this.pos = 0;
-    this.full = false;
-    this.acc = new Array(n);
-  }
-  XAperture.prototype['@@transducer/init'] = _xfBase.init;
-  XAperture.prototype['@@transducer/result'] = function(result) {
-    this.acc = null;
-    return this.xf['@@transducer/result'](result);
-  };
-  XAperture.prototype['@@transducer/step'] = function(result, input) {
-    this.store(input);
-    return this.full ? this.xf['@@transducer/step'](result, this.getCopy()) : result;
-  };
-  XAperture.prototype.store = function(input) {
-    this.acc[this.pos] = input;
-    this.pos += 1;
-    if (this.pos === this.acc.length) {
-      this.pos = 0;
-      this.full = true;
-    }
-  };
-  XAperture.prototype.getCopy = function() {
-    return _concat(Array.prototype.slice.call(this.acc, this.pos),
-                   Array.prototype.slice.call(this.acc, 0, this.pos));
-  };
-
-  return _curry2(function _xaperture(n, xf) { return new XAperture(n, xf); });
-}());
-
-},{"./_concat":354,"./_curry2":359,"./_xfBase":404}],398:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _flatCat = require('./_flatCat');
-var map = require('../map');
-
-
-module.exports = _curry2(function _xchain(f, xf) {
-  return map(f, _flatCat(xf));
-});
-
-},{"../map":441,"./_curry2":359,"./_flatCat":367}],399:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XDrop(n, xf) {
-    this.xf = xf;
-    this.n = n;
-  }
-  XDrop.prototype['@@transducer/init'] = _xfBase.init;
-  XDrop.prototype['@@transducer/result'] = _xfBase.result;
-  XDrop.prototype['@@transducer/step'] = function(result, input) {
-    if (this.n > 0) {
-      this.n -= 1;
-      return result;
-    }
-    return this.xf['@@transducer/step'](result, input);
-  };
-
-  return _curry2(function _xdrop(n, xf) { return new XDrop(n, xf); });
-}());
-
-},{"./_curry2":359,"./_xfBase":404}],400:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XDropLast(n, xf) {
-    this.xf = xf;
-    this.pos = 0;
-    this.full = false;
-    this.acc = new Array(n);
-  }
-  XDropLast.prototype['@@transducer/init'] = _xfBase.init;
-  XDropLast.prototype['@@transducer/result'] =  function(result) {
-    this.acc = null;
-    return this.xf['@@transducer/result'](result);
-  };
-  XDropLast.prototype['@@transducer/step'] = function(result, input) {
-    if (this.full) {
-      result = this.xf['@@transducer/step'](result, this.acc[this.pos]);
-    }
-    this.store(input);
-    return result;
-  };
-  XDropLast.prototype.store = function(input) {
-    this.acc[this.pos] = input;
-    this.pos += 1;
-    if (this.pos === this.acc.length) {
-      this.pos = 0;
-      this.full = true;
-    }
-  };
-
-  return _curry2(function _xdropLast(n, xf) { return new XDropLast(n, xf); });
-}());
-
-},{"./_curry2":359,"./_xfBase":404}],401:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _reduce = require('./_reduce');
-var _xfBase = require('./_xfBase');
-
-module.exports = (function() {
-  function XDropLastWhile(fn, xf) {
-    this.f = fn;
-    this.retained = [];
-    this.xf = xf;
-  }
-  XDropLastWhile.prototype['@@transducer/init'] = _xfBase.init;
-  XDropLastWhile.prototype['@@transducer/result'] = function(result) {
-    this.retained = null;
-    return this.xf['@@transducer/result'](result);
-  };
-  XDropLastWhile.prototype['@@transducer/step'] = function(result, input) {
-    return this.f(input) ? this.retain(result, input)
-                         : this.flush(result, input);
-  };
-  XDropLastWhile.prototype.flush = function(result, input) {
-    result = _reduce(
-      this.xf['@@transducer/step'],
-      result,
-      this.retained
-    );
-    this.retained = [];
-    return this.xf['@@transducer/step'](result, input);
-  };
-  XDropLastWhile.prototype.retain = function(result, input) {
-    this.retained.push(input);
-    return result;
-  };
-
-  return _curry2(function _xdropLastWhile(fn, xf) { return new XDropLastWhile(fn, xf); });
-}());
-
-},{"./_curry2":359,"./_reduce":390,"./_xfBase":404}],402:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XDropRepeatsWith(pred, xf) {
-    this.xf = xf;
-    this.pred = pred;
-    this.lastValue = undefined;
-    this.seenFirstValue = false;
-  }
-
-  XDropRepeatsWith.prototype['@@transducer/init'] = _xfBase.init;
-  XDropRepeatsWith.prototype['@@transducer/result'] = _xfBase.result;
-  XDropRepeatsWith.prototype['@@transducer/step'] = function(result, input) {
-    var sameAsLast = false;
-    if (!this.seenFirstValue) {
-      this.seenFirstValue = true;
-    } else if (this.pred(this.lastValue, input)) {
-      sameAsLast = true;
-    }
-    this.lastValue = input;
-    return sameAsLast ? result : this.xf['@@transducer/step'](result, input);
-  };
-
-  return _curry2(function _xdropRepeatsWith(pred, xf) { return new XDropRepeatsWith(pred, xf); });
-}());
-
-},{"./_curry2":359,"./_xfBase":404}],403:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XDropWhile(f, xf) {
-    this.xf = xf;
-    this.f = f;
-  }
-  XDropWhile.prototype['@@transducer/init'] = _xfBase.init;
-  XDropWhile.prototype['@@transducer/result'] = _xfBase.result;
-  XDropWhile.prototype['@@transducer/step'] = function(result, input) {
-    if (this.f) {
-      if (this.f(input)) {
-        return result;
-      }
-      this.f = null;
-    }
-    return this.xf['@@transducer/step'](result, input);
-  };
-
-  return _curry2(function _xdropWhile(f, xf) { return new XDropWhile(f, xf); });
-}());
-
-},{"./_curry2":359,"./_xfBase":404}],404:[function(require,module,exports){
-module.exports = {
-  init: function() {
-    return this.xf['@@transducer/init']();
-  },
-  result: function(result) {
-    return this.xf['@@transducer/result'](result);
-  }
-};
-
-},{}],405:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XFilter(f, xf) {
-    this.xf = xf;
-    this.f = f;
-  }
-  XFilter.prototype['@@transducer/init'] = _xfBase.init;
-  XFilter.prototype['@@transducer/result'] = _xfBase.result;
-  XFilter.prototype['@@transducer/step'] = function(result, input) {
-    return this.f(input) ? this.xf['@@transducer/step'](result, input) : result;
-  };
-
-  return _curry2(function _xfilter(f, xf) { return new XFilter(f, xf); });
-}());
-
-},{"./_curry2":359,"./_xfBase":404}],406:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _reduced = require('./_reduced');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XFind(f, xf) {
-    this.xf = xf;
-    this.f = f;
-    this.found = false;
-  }
-  XFind.prototype['@@transducer/init'] = _xfBase.init;
-  XFind.prototype['@@transducer/result'] = function(result) {
-    if (!this.found) {
-      result = this.xf['@@transducer/step'](result, void 0);
-    }
-    return this.xf['@@transducer/result'](result);
-  };
-  XFind.prototype['@@transducer/step'] = function(result, input) {
-    if (this.f(input)) {
-      this.found = true;
-      result = _reduced(this.xf['@@transducer/step'](result, input));
-    }
-    return result;
-  };
-
-  return _curry2(function _xfind(f, xf) { return new XFind(f, xf); });
-}());
-
-},{"./_curry2":359,"./_reduced":391,"./_xfBase":404}],407:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _reduced = require('./_reduced');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XFindIndex(f, xf) {
-    this.xf = xf;
-    this.f = f;
-    this.idx = -1;
-    this.found = false;
-  }
-  XFindIndex.prototype['@@transducer/init'] = _xfBase.init;
-  XFindIndex.prototype['@@transducer/result'] = function(result) {
-    if (!this.found) {
-      result = this.xf['@@transducer/step'](result, -1);
-    }
-    return this.xf['@@transducer/result'](result);
-  };
-  XFindIndex.prototype['@@transducer/step'] = function(result, input) {
-    this.idx += 1;
-    if (this.f(input)) {
-      this.found = true;
-      result = _reduced(this.xf['@@transducer/step'](result, this.idx));
-    }
-    return result;
-  };
-
-  return _curry2(function _xfindIndex(f, xf) { return new XFindIndex(f, xf); });
-}());
-
-},{"./_curry2":359,"./_reduced":391,"./_xfBase":404}],408:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XFindLast(f, xf) {
-    this.xf = xf;
-    this.f = f;
-  }
-  XFindLast.prototype['@@transducer/init'] = _xfBase.init;
-  XFindLast.prototype['@@transducer/result'] = function(result) {
-    return this.xf['@@transducer/result'](this.xf['@@transducer/step'](result, this.last));
-  };
-  XFindLast.prototype['@@transducer/step'] = function(result, input) {
-    if (this.f(input)) {
-      this.last = input;
-    }
-    return result;
-  };
-
-  return _curry2(function _xfindLast(f, xf) { return new XFindLast(f, xf); });
-}());
-
-},{"./_curry2":359,"./_xfBase":404}],409:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XFindLastIndex(f, xf) {
-    this.xf = xf;
-    this.f = f;
-    this.idx = -1;
-    this.lastIdx = -1;
-  }
-  XFindLastIndex.prototype['@@transducer/init'] = _xfBase.init;
-  XFindLastIndex.prototype['@@transducer/result'] = function(result) {
-    return this.xf['@@transducer/result'](this.xf['@@transducer/step'](result, this.lastIdx));
-  };
-  XFindLastIndex.prototype['@@transducer/step'] = function(result, input) {
-    this.idx += 1;
-    if (this.f(input)) {
-      this.lastIdx = this.idx;
-    }
-    return result;
-  };
-
-  return _curry2(function _xfindLastIndex(f, xf) { return new XFindLastIndex(f, xf); });
-}());
-
-},{"./_curry2":359,"./_xfBase":404}],410:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XMap(f, xf) {
-    this.xf = xf;
-    this.f = f;
-  }
-  XMap.prototype['@@transducer/init'] = _xfBase.init;
-  XMap.prototype['@@transducer/result'] = _xfBase.result;
-  XMap.prototype['@@transducer/step'] = function(result, input) {
-    return this.xf['@@transducer/step'](result, this.f(input));
-  };
-
-  return _curry2(function _xmap(f, xf) { return new XMap(f, xf); });
-}());
-
-},{"./_curry2":359,"./_xfBase":404}],411:[function(require,module,exports){
-var _curryN = require('./_curryN');
-var _has = require('./_has');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XReduceBy(valueFn, valueAcc, keyFn, xf) {
-    this.valueFn = valueFn;
-    this.valueAcc = valueAcc;
-    this.keyFn = keyFn;
-    this.xf = xf;
-    this.inputs = {};
-  }
-  XReduceBy.prototype['@@transducer/init'] = _xfBase.init;
-  XReduceBy.prototype['@@transducer/result'] = function(result) {
-    var key;
-    for (key in this.inputs) {
-      if (_has(key, this.inputs)) {
-        result = this.xf['@@transducer/step'](result, this.inputs[key]);
-        if (result['@@transducer/reduced']) {
-          result = result['@@transducer/value'];
-          break;
-        }
-      }
-    }
-    this.inputs = null;
-    return this.xf['@@transducer/result'](result);
-  };
-  XReduceBy.prototype['@@transducer/step'] = function(result, input) {
-    var key = this.keyFn(input);
-    this.inputs[key] = this.inputs[key] || [key, this.valueAcc];
-    this.inputs[key][1] = this.valueFn(this.inputs[key][1], input);
-    return result;
-  };
-
-  return _curryN(4, [],
-                 function _xreduceBy(valueFn, valueAcc, keyFn, xf) {
-                   return new XReduceBy(valueFn, valueAcc, keyFn, xf);
-                 });
-}());
-
-},{"./_curryN":361,"./_has":370,"./_xfBase":404}],412:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _reduced = require('./_reduced');
-var _xfBase = require('./_xfBase');
-
-module.exports = (function() {
-  function XTake(n, xf) {
-    this.xf = xf;
-    this.n = n;
-    this.i = 0;
-  }
-  XTake.prototype['@@transducer/init'] = _xfBase.init;
-  XTake.prototype['@@transducer/result'] = _xfBase.result;
-  XTake.prototype['@@transducer/step'] = function(result, input) {
-    this.i += 1;
-    var ret = this.n === 0 ? result : this.xf['@@transducer/step'](result, input);
-    return this.i >= this.n ? _reduced(ret) : ret;
-  };
-
-  return _curry2(function _xtake(n, xf) { return new XTake(n, xf); });
-}());
-
-},{"./_curry2":359,"./_reduced":391,"./_xfBase":404}],413:[function(require,module,exports){
-var _curry2 = require('./_curry2');
-var _reduced = require('./_reduced');
-var _xfBase = require('./_xfBase');
-
-
-module.exports = (function() {
-  function XTakeWhile(f, xf) {
-    this.xf = xf;
-    this.f = f;
-  }
-  XTakeWhile.prototype['@@transducer/init'] = _xfBase.init;
-  XTakeWhile.prototype['@@transducer/result'] = _xfBase.result;
-  XTakeWhile.prototype['@@transducer/step'] = function(result, input) {
-    return this.f(input) ? this.xf['@@transducer/step'](result, input) : _reduced(result);
-  };
-
-  return _curry2(function _xtakeWhile(f, xf) { return new XTakeWhile(f, xf); });
-}());
-
-},{"./_curry2":359,"./_reduced":391,"./_xfBase":404}],414:[function(require,module,exports){
-module.exports = (function() {
-  function XWrap(fn) {
-    this.f = fn;
-  }
-  XWrap.prototype['@@transducer/init'] = function() {
-    throw new Error('init not implemented on XWrap');
-  };
-  XWrap.prototype['@@transducer/result'] = function(acc) { return acc; };
-  XWrap.prototype['@@transducer/step'] = function(acc, x) {
-    return this.f(acc, x);
-  };
-
-  return function _xwrap(fn) { return new XWrap(fn); };
-}());
-
-},{}],415:[function(require,module,exports){
-var _contains = require('./internal/_contains');
-var _curry2 = require('./internal/_curry2');
-var _filter = require('./internal/_filter');
-var flip = require('./flip');
-var uniq = require('./uniq');
-
-
-/**
- * Combines two lists into a set (i.e. no duplicates) composed of those
- * elements common to both lists.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig [*] -> [*] -> [*]
- * @param {Array} list1 The first list.
- * @param {Array} list2 The second list.
- * @return {Array} The list of elements found in both `list1` and `list2`.
- * @see R.intersectionWith
- * @example
- *
- *      R.intersection([1,2,3,4], [7,6,5,4,3]); //=> [4, 3]
- */
-module.exports = _curry2(function intersection(list1, list2) {
-  var lookupList, filteredList;
-  if (list1.length > list2.length) {
-    lookupList = list1;
-    filteredList = list2;
-  } else {
-    lookupList = list2;
-    filteredList = list1;
-  }
-  return uniq(_filter(flip(_contains)(lookupList), filteredList));
-});
-
-},{"./flip":325,"./internal/_contains":355,"./internal/_curry2":359,"./internal/_filter":366,"./uniq":547}],416:[function(require,module,exports){
-var _containsWith = require('./internal/_containsWith');
-var _curry3 = require('./internal/_curry3');
-var uniqWith = require('./uniqWith');
-
-
-/**
- * Combines two lists into a set (i.e. no duplicates) composed of those
- * elements common to both lists. Duplication is determined according to the
- * value returned by applying the supplied predicate to two list elements.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig ((a, a) -> Boolean) -> [a] -> [a] -> [a]
- * @param {Function} pred A predicate function that determines whether
- *        the two supplied elements are equal.
- * @param {Array} list1 One list of items to compare
- * @param {Array} list2 A second list of items to compare
- * @return {Array} A new list containing those elements common to both lists.
- * @see R.intersection
- * @example
- *
- *      var buffaloSpringfield = [
- *        {id: 824, name: 'Richie Furay'},
- *        {id: 956, name: 'Dewey Martin'},
- *        {id: 313, name: 'Bruce Palmer'},
- *        {id: 456, name: 'Stephen Stills'},
- *        {id: 177, name: 'Neil Young'}
- *      ];
- *      var csny = [
- *        {id: 204, name: 'David Crosby'},
- *        {id: 456, name: 'Stephen Stills'},
- *        {id: 539, name: 'Graham Nash'},
- *        {id: 177, name: 'Neil Young'}
- *      ];
- *
- *      R.intersectionWith(R.eqBy(R.prop('id')), buffaloSpringfield, csny);
- *      //=> [{id: 456, name: 'Stephen Stills'}, {id: 177, name: 'Neil Young'}]
- */
-module.exports = _curry3(function intersectionWith(pred, list1, list2) {
-  var lookupList, filteredList;
-  if (list1.length > list2.length) {
-    lookupList = list1;
-    filteredList = list2;
-  } else {
-    lookupList = list2;
-    filteredList = list1;
-  }
-  var results = [];
-  var idx = 0;
-  while (idx < filteredList.length) {
-    if (_containsWith(pred, filteredList[idx], lookupList)) {
-      results[results.length] = filteredList[idx];
-    }
-    idx += 1;
-  }
-  return uniqWith(pred, results);
-});
-
-},{"./internal/_containsWith":356,"./internal/_curry3":360,"./uniqWith":549}],417:[function(require,module,exports){
-var _checkForMethod = require('./internal/_checkForMethod');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Creates a new list with the separator interposed between elements.
- *
- * Dispatches to the `intersperse` method of the second argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category List
- * @sig a -> [a] -> [a]
- * @param {*} separator The element to add to the list.
- * @param {Array} list The list to be interposed.
- * @return {Array} The new list.
- * @example
- *
- *      R.intersperse('n', ['ba', 'a', 'a']); //=> ['ba', 'n', 'a', 'n', 'a']
- */
-module.exports = _curry2(_checkForMethod('intersperse', function intersperse(separator, list) {
-  var out = [];
-  var idx = 0;
-  var length = list.length;
-  while (idx < length) {
-    if (idx === length - 1) {
-      out.push(list[idx]);
-    } else {
-      out.push(list[idx], separator);
-    }
-    idx += 1;
-  }
-  return out;
-}));
-
-},{"./internal/_checkForMethod":350,"./internal/_curry2":359}],418:[function(require,module,exports){
-var _clone = require('./internal/_clone');
-var _curry3 = require('./internal/_curry3');
-var _isTransformer = require('./internal/_isTransformer');
-var _reduce = require('./internal/_reduce');
-var _stepCat = require('./internal/_stepCat');
-
-
-/**
- * Transforms the items of the list with the transducer and appends the
- * transformed items to the accumulator using an appropriate iterator function
- * based on the accumulator type.
- *
- * The accumulator can be an array, string, object or a transformer. Iterated
- * items will be appended to arrays and concatenated to strings. Objects will
- * be merged directly or 2-item arrays will be merged as key, value pairs.
- *
- * The accumulator can also be a transformer object that provides a 2-arity
- * reducing iterator function, step, 0-arity initial value function, init, and
- * 1-arity result extraction function result. The step function is used as the
- * iterator function in reduce. The result function is used to convert the
- * final accumulator into the return type and in most cases is R.identity. The
- * init function is used to provide the initial accumulator.
- *
- * The iteration is performed with R.reduce after initializing the transducer.
- *
- * @func
- * @memberOf R
- * @since v0.12.0
- * @category List
- * @sig a -> (b -> b) -> [c] -> a
- * @param {*} acc The initial accumulator value.
- * @param {Function} xf The transducer function. Receives a transformer and returns a transformer.
- * @param {Array} list The list to iterate over.
- * @return {*} The final, accumulated value.
- * @example
- *
- *      var numbers = [1, 2, 3, 4];
- *      var transducer = R.compose(R.map(R.add(1)), R.take(2));
- *
- *      R.into([], transducer, numbers); //=> [2, 3]
- *
- *      var intoArray = R.into([]);
- *      intoArray(transducer, numbers); //=> [2, 3]
- */
-module.exports = _curry3(function into(acc, xf, list) {
-  return _isTransformer(acc) ?
-    _reduce(xf(acc), acc['@@transducer/init'](), list) :
-    _reduce(xf(_stepCat(acc)), _clone(acc, [], [], false), list);
-});
-
-},{"./internal/_clone":351,"./internal/_curry3":360,"./internal/_isTransformer":382,"./internal/_reduce":390,"./internal/_stepCat":392}],419:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _has = require('./internal/_has');
-var keys = require('./keys');
-
-
-/**
- * Same as R.invertObj, however this accounts for objects with duplicate values
- * by putting the values into an array.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Object
- * @sig {s: x} -> {x: [ s, ... ]}
- * @param {Object} obj The object or array to invert
- * @return {Object} out A new object with keys
- * in an array.
- * @example
- *
- *      var raceResultsByFirstName = {
- *        first: 'alice',
- *        second: 'jake',
- *        third: 'alice',
- *      };
- *      R.invert(raceResultsByFirstName);
- *      //=> { 'alice': ['first', 'third'], 'jake':['second'] }
- */
-module.exports = _curry1(function invert(obj) {
-  var props = keys(obj);
-  var len = props.length;
-  var idx = 0;
-  var out = {};
-
-  while (idx < len) {
-    var key = props[idx];
-    var val = obj[key];
-    var list = _has(val, out) ? out[val] : (out[val] = []);
-    list[list.length] = key;
-    idx += 1;
-  }
-  return out;
-});
-
-},{"./internal/_curry1":358,"./internal/_has":370,"./keys":428}],420:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var keys = require('./keys');
-
-
-/**
- * Returns a new object with the keys of the given object as values, and the
- * values of the given object, which are coerced to strings, as keys. Note
- * that the last key found is preferred when handling the same value.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Object
- * @sig {s: x} -> {x: s}
- * @param {Object} obj The object or array to invert
- * @return {Object} out A new object
- * @example
- *
- *      var raceResults = {
- *        first: 'alice',
- *        second: 'jake'
- *      };
- *      R.invertObj(raceResults);
- *      //=> { 'alice': 'first', 'jake':'second' }
- *
- *      // Alternatively:
- *      var raceResults = ['alice', 'jake'];
- *      R.invertObj(raceResults);
- *      //=> { 'alice': '0', 'jake':'1' }
- */
-module.exports = _curry1(function invertObj(obj) {
-  var props = keys(obj);
-  var len = props.length;
-  var idx = 0;
-  var out = {};
-
-  while (idx < len) {
-    var key = props[idx];
-    out[obj[key]] = key;
-    idx += 1;
-  }
-  return out;
-});
-
-},{"./internal/_curry1":358,"./keys":428}],421:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _isFunction = require('./internal/_isFunction');
-var curryN = require('./curryN');
-var toString = require('./toString');
-
-
-/**
- * Turns a named method with a specified arity into a function that can be
- * called directly supplied with arguments and a target object.
- *
- * The returned function is curried and accepts `arity + 1` parameters where
- * the final parameter is the target object.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig Number -> String -> (a -> b -> ... -> n -> Object -> *)
- * @param {Number} arity Number of arguments the returned function should take
- *        before the target object.
- * @param {String} method Name of the method to call.
- * @return {Function} A new curried function.
- * @example
- *
- *      var sliceFrom = R.invoker(1, 'slice');
- *      sliceFrom(6, 'abcdefghijklm'); //=> 'ghijklm'
- *      var sliceFrom6 = R.invoker(2, 'slice')(6);
- *      sliceFrom6(8, 'abcdefghijklm'); //=> 'gh'
- * @symb R.invoker(0, 'method')(o) = o['method']()
- * @symb R.invoker(1, 'method')(a, o) = o['method'](a)
- * @symb R.invoker(2, 'method')(a, b, o) = o['method'](a, b)
- */
-module.exports = _curry2(function invoker(arity, method) {
-  return curryN(arity + 1, function() {
-    var target = arguments[arity];
-    if (target != null && _isFunction(target[method])) {
-      return target[method].apply(target, Array.prototype.slice.call(arguments, 0, arity));
-    }
-    throw new TypeError(toString(target) + ' does not have a method named "' + method + '"');
-  });
-});
-
-},{"./curryN":298,"./internal/_curry2":359,"./internal/_isFunction":375,"./toString":533}],422:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * See if an object (`val`) is an instance of the supplied constructor. This
- * function will check up the inheritance chain, if any.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category Type
- * @sig (* -> {*}) -> a -> Boolean
- * @param {Object} ctor A constructor
- * @param {*} val The value to test
- * @return {Boolean}
- * @example
- *
- *      R.is(Object, {}); //=> true
- *      R.is(Number, 1); //=> true
- *      R.is(Object, 1); //=> false
- *      R.is(String, 's'); //=> true
- *      R.is(String, new String('')); //=> true
- *      R.is(Object, new String('')); //=> true
- *      R.is(Object, 's'); //=> false
- *      R.is(Number, {}); //=> false
- */
-module.exports = _curry2(function is(Ctor, val) {
-  return val != null && val.constructor === Ctor || val instanceof Ctor;
-});
-
-},{"./internal/_curry2":359}],423:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _isArray = require('./internal/_isArray');
-var _isString = require('./internal/_isString');
-
-
-/**
- * Tests whether or not an object is similar to an array.
- *
- * @func
- * @memberOf R
- * @since v0.5.0
- * @category Type
- * @category List
- * @sig * -> Boolean
- * @param {*} x The object to test.
- * @return {Boolean} `true` if `x` has a numeric length property and extreme indices defined; `false` otherwise.
- * @deprecated since v0.23.0
- * @example
- *
- *      R.isArrayLike([]); //=> true
- *      R.isArrayLike(true); //=> false
- *      R.isArrayLike({}); //=> false
- *      R.isArrayLike({length: 10}); //=> false
- *      R.isArrayLike({0: 'zero', 9: 'nine', length: 10}); //=> true
- */
-module.exports = _curry1(function isArrayLike(x) {
-  if (_isArray(x)) { return true; }
-  if (!x) { return false; }
-  if (typeof x !== 'object') { return false; }
-  if (_isString(x)) { return false; }
-  if (x.nodeType === 1) { return !!x.length; }
-  if (x.length === 0) { return true; }
-  if (x.length > 0) {
-    return x.hasOwnProperty(0) && x.hasOwnProperty(x.length - 1);
-  }
-  return false;
-});
-
-},{"./internal/_curry1":358,"./internal/_isArray":374,"./internal/_isString":381}],424:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var empty = require('./empty');
-var equals = require('./equals');
-
-
-/**
- * Returns `true` if the given value is its type's empty value; `false`
- * otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Logic
- * @sig a -> Boolean
- * @param {*} x
- * @return {Boolean}
- * @see R.empty
- * @example
- *
- *      R.isEmpty([1, 2, 3]);   //=> false
- *      R.isEmpty([]);          //=> true
- *      R.isEmpty('');          //=> true
- *      R.isEmpty(null);        //=> false
- *      R.isEmpty({});          //=> true
- *      R.isEmpty({length: 0}); //=> false
- */
-module.exports = _curry1(function isEmpty(x) {
-  return x != null && equals(x, empty(x));
-});
-
-},{"./empty":314,"./equals":317,"./internal/_curry1":358}],425:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Checks if the input value is `null` or `undefined`.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Type
- * @sig * -> Boolean
- * @param {*} x The value to test.
- * @return {Boolean} `true` if `x` is `undefined` or `null`, otherwise `false`.
- * @example
- *
- *      R.isNil(null); //=> true
- *      R.isNil(undefined); //=> true
- *      R.isNil(0); //=> false
- *      R.isNil([]); //=> false
- */
-module.exports = _curry1(function isNil(x) { return x == null; });
-
-},{"./internal/_curry1":358}],426:[function(require,module,exports){
-var invoker = require('./invoker');
-
-
-/**
- * Returns a string made by inserting the `separator` between each element and
- * concatenating all the elements into a single string.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig String -> [a] -> String
- * @param {Number|String} separator The string used to separate the elements.
- * @param {Array} xs The elements to join into a string.
- * @return {String} str The string made by concatenating `xs` with `separator`.
- * @see R.split
- * @example
- *
- *      var spacer = R.join(' ');
- *      spacer(['a', 2, 3.4]);   //=> 'a 2 3.4'
- *      R.join('|', [1, 2, 3]);    //=> '1|2|3'
- */
-module.exports = invoker(1, 'join');
-
-},{"./invoker":421}],427:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var converge = require('./converge');
-
-
-/**
- * juxt applies a list of functions to a list of values.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category Function
- * @sig [(a, b, ..., m) -> n] -> ((a, b, ..., m) -> [n])
- * @param {Array} fns An array of functions
- * @return {Function} A function that returns a list of values after applying each of the original `fns` to its parameters.
- * @see R.applySpec
- * @example
- *
- *      var getRange = R.juxt([Math.min, Math.max]);
- *      getRange(3, 4, 9, -3); //=> [-3, 9]
- * @symb R.juxt([f, g, h])(a, b) = [f(a, b), g(a, b), h(a, b)]
- */
-module.exports = _curry1(function juxt(fns) {
-  return converge(function() { return Array.prototype.slice.call(arguments, 0); }, fns);
-});
-
-},{"./converge":295,"./internal/_curry1":358}],428:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _has = require('./internal/_has');
-var _isArguments = require('./internal/_isArguments');
-
-
-/**
- * Returns a list containing the names of all the enumerable own properties of
- * the supplied object.
- * Note that the order of the output array is not guaranteed to be consistent
- * across different JS platforms.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig {k: v} -> [k]
- * @param {Object} obj The object to extract properties from
- * @return {Array} An array of the object's own properties.
- * @example
- *
- *      R.keys({a: 1, b: 2, c: 3}); //=> ['a', 'b', 'c']
- */
-module.exports = (function() {
-  // cover IE < 9 keys issues
-  var hasEnumBug = !({toString: null}).propertyIsEnumerable('toString');
-  var nonEnumerableProps = ['constructor', 'valueOf', 'isPrototypeOf', 'toString',
-                            'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
-  // Safari bug
-  var hasArgsEnumBug = (function() {
-    'use strict';
-    return arguments.propertyIsEnumerable('length');
-  }());
-
-  var contains = function contains(list, item) {
-    var idx = 0;
-    while (idx < list.length) {
-      if (list[idx] === item) {
-        return true;
-      }
-      idx += 1;
-    }
-    return false;
-  };
-
-  return typeof Object.keys === 'function' && !hasArgsEnumBug ?
-    _curry1(function keys(obj) {
-      return Object(obj) !== obj ? [] : Object.keys(obj);
-    }) :
-    _curry1(function keys(obj) {
-      if (Object(obj) !== obj) {
-        return [];
-      }
-      var prop, nIdx;
-      var ks = [];
-      var checkArgsLength = hasArgsEnumBug && _isArguments(obj);
-      for (prop in obj) {
-        if (_has(prop, obj) && (!checkArgsLength || prop !== 'length')) {
-          ks[ks.length] = prop;
-        }
-      }
-      if (hasEnumBug) {
-        nIdx = nonEnumerableProps.length - 1;
-        while (nIdx >= 0) {
-          prop = nonEnumerableProps[nIdx];
-          if (_has(prop, obj) && !contains(ks, prop)) {
-            ks[ks.length] = prop;
-          }
-          nIdx -= 1;
-        }
-      }
-      return ks;
-    });
-}());
-
-},{"./internal/_curry1":358,"./internal/_has":370,"./internal/_isArguments":373}],429:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Returns a list containing the names of all the properties of the supplied
- * object, including prototype properties.
- * Note that the order of the output array is not guaranteed to be consistent
- * across different JS platforms.
- *
- * @func
- * @memberOf R
- * @since v0.2.0
- * @category Object
- * @sig {k: v} -> [k]
- * @param {Object} obj The object to extract properties from
- * @return {Array} An array of the object's own and prototype properties.
- * @example
- *
- *      var F = function() { this.x = 'X'; };
- *      F.prototype.y = 'Y';
- *      var f = new F();
- *      R.keysIn(f); //=> ['x', 'y']
- */
-module.exports = _curry1(function keysIn(obj) {
-  var prop;
-  var ks = [];
-  for (prop in obj) {
-    ks[ks.length] = prop;
-  }
-  return ks;
-});
-
-},{"./internal/_curry1":358}],430:[function(require,module,exports){
-var nth = require('./nth');
-
-
-/**
- * Returns the last element of the given list or string.
- *
- * @func
- * @memberOf R
- * @since v0.1.4
- * @category List
- * @sig [a] -> a | Undefined
- * @sig String -> String
- * @param {*} list
- * @return {*}
- * @see R.init, R.head, R.tail
- * @example
- *
- *      R.last(['fi', 'fo', 'fum']); //=> 'fum'
- *      R.last([]); //=> undefined
- *
- *      R.last('abc'); //=> 'c'
- *      R.last(''); //=> ''
- */
-module.exports = nth(-1);
-
-},{"./nth":464}],431:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _isArray = require('./internal/_isArray');
-var equals = require('./equals');
-
-
-/**
- * Returns the position of the last occurrence of an item in an array, or -1 if
- * the item is not included in the array. `R.equals` is used to determine
- * equality.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig a -> [a] -> Number
- * @param {*} target The item to find.
- * @param {Array} xs The array to search in.
- * @return {Number} the index of the target, or -1 if the target is not found.
- * @see R.indexOf
- * @example
- *
- *      R.lastIndexOf(3, [-1,3,3,0,1,2,3,4]); //=> 6
- *      R.lastIndexOf(10, [1,2,3,4]); //=> -1
- */
-module.exports = _curry2(function lastIndexOf(target, xs) {
-  if (typeof xs.lastIndexOf === 'function' && !_isArray(xs)) {
-    return xs.lastIndexOf(target);
-  } else {
-    var idx = xs.length - 1;
-    while (idx >= 0) {
-      if (equals(xs[idx], target)) {
-        return idx;
-      }
-      idx -= 1;
-    }
-    return -1;
-  }
-});
-
-},{"./equals":317,"./internal/_curry2":359,"./internal/_isArray":374}],432:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _isNumber = require('./internal/_isNumber');
-
-
-/**
- * Returns the number of elements in the array by returning `list.length`.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category List
- * @sig [a] -> Number
- * @param {Array} list The array to inspect.
- * @return {Number} The length of the array.
- * @example
- *
- *      R.length([]); //=> 0
- *      R.length([1, 2, 3]); //=> 3
- */
-module.exports = _curry1(function length(list) {
-  return list != null && _isNumber(list.length) ? list.length : NaN;
-});
-
-},{"./internal/_curry1":358,"./internal/_isNumber":377}],433:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var map = require('./map');
-
-
-/**
- * Returns a lens for the given getter and setter functions. The getter "gets"
- * the value of the focus; the setter "sets" the value of the focus. The setter
- * should not mutate the data structure.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Object
- * @typedefn Lens s a = Functor f => (a -> f a) -> s -> f s
- * @sig (s -> a) -> ((a, s) -> s) -> Lens s a
- * @param {Function} getter
- * @param {Function} setter
- * @return {Lens}
- * @see R.view, R.set, R.over, R.lensIndex, R.lensProp
- * @example
- *
- *      var xLens = R.lens(R.prop('x'), R.assoc('x'));
- *
- *      R.view(xLens, {x: 1, y: 2});            //=> 1
- *      R.set(xLens, 4, {x: 1, y: 2});          //=> {x: 4, y: 2}
- *      R.over(xLens, R.negate, {x: 1, y: 2});  //=> {x: -1, y: 2}
- */
-module.exports = _curry2(function lens(getter, setter) {
-  return function(toFunctorFn) {
-    return function(target) {
-      return map(
-        function(focus) {
-          return setter(focus, target);
-        },
-        toFunctorFn(getter(target))
-      );
-    };
-  };
-});
-
-},{"./internal/_curry2":359,"./map":441}],434:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var lens = require('./lens');
-var nth = require('./nth');
-var update = require('./update');
-
-
-/**
- * Returns a lens whose focus is the specified index.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category Object
- * @typedefn Lens s a = Functor f => (a -> f a) -> s -> f s
- * @sig Number -> Lens s a
- * @param {Number} n
- * @return {Lens}
- * @see R.view, R.set, R.over
- * @example
- *
- *      var headLens = R.lensIndex(0);
- *
- *      R.view(headLens, ['a', 'b', 'c']);            //=> 'a'
- *      R.set(headLens, 'x', ['a', 'b', 'c']);        //=> ['x', 'b', 'c']
- *      R.over(headLens, R.toUpper, ['a', 'b', 'c']); //=> ['A', 'b', 'c']
- */
-module.exports = _curry1(function lensIndex(n) {
-  return lens(nth(n), update(n));
-});
-
-},{"./internal/_curry1":358,"./lens":433,"./nth":464,"./update":553}],435:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var assocPath = require('./assocPath');
-var lens = require('./lens');
-var path = require('./path');
-
-
-/**
- * Returns a lens whose focus is the specified path.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category Object
- * @typedefn Idx = String | Int
- * @typedefn Lens s a = Functor f => (a -> f a) -> s -> f s
- * @sig [Idx] -> Lens s a
- * @param {Array} path The path to use.
- * @return {Lens}
- * @see R.view, R.set, R.over
- * @example
- *
- *      var xHeadYLens = R.lensPath(['x', 0, 'y']);
- *
- *      R.view(xHeadYLens, {x: [{y: 2, z: 3}, {y: 4, z: 5}]});
- *      //=> 2
- *      R.set(xHeadYLens, 1, {x: [{y: 2, z: 3}, {y: 4, z: 5}]});
- *      //=> {x: [{y: 1, z: 3}, {y: 4, z: 5}]}
- *      R.over(xHeadYLens, R.negate, {x: [{y: 2, z: 3}, {y: 4, z: 5}]});
- *      //=> {x: [{y: -2, z: 3}, {y: 4, z: 5}]}
- */
-module.exports = _curry1(function lensPath(p) {
-  return lens(path(p), assocPath(p));
-});
-
-},{"./assocPath":277,"./internal/_curry1":358,"./lens":433,"./path":476}],436:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var assoc = require('./assoc');
-var lens = require('./lens');
-var prop = require('./prop');
-
-
-/**
- * Returns a lens whose focus is the specified property.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category Object
- * @typedefn Lens s a = Functor f => (a -> f a) -> s -> f s
- * @sig String -> Lens s a
- * @param {String} k
- * @return {Lens}
- * @see R.view, R.set, R.over
- * @example
- *
- *      var xLens = R.lensProp('x');
- *
- *      R.view(xLens, {x: 1, y: 2});            //=> 1
- *      R.set(xLens, 4, {x: 1, y: 2});          //=> {x: 4, y: 2}
- *      R.over(xLens, R.negate, {x: 1, y: 2});  //=> {x: -1, y: 2}
- */
-module.exports = _curry1(function lensProp(k) {
-  return lens(prop(k), assoc(k));
-});
-
-},{"./assoc":276,"./internal/_curry1":358,"./lens":433,"./prop":490}],437:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var liftN = require('./liftN');
-
-
-/**
- * "lifts" a function of arity > 1 so that it may "map over" a list, Function or other
- * object that satisfies the [FantasyLand Apply spec](https://github.com/fantasyland/fantasy-land#apply).
- *
- * @func
- * @memberOf R
- * @since v0.7.0
- * @category Function
- * @sig (*... -> *) -> ([*]... -> [*])
- * @param {Function} fn The function to lift into higher context
- * @return {Function} The lifted function.
- * @see R.liftN
- * @example
- *
- *      var madd3 = R.lift((a, b, c) => a + b + c);
- *
- *      madd3([1,2,3], [1,2,3], [1]); //=> [3, 4, 5, 4, 5, 6, 5, 6, 7]
- *
- *      var madd5 = R.lift((a, b, c, d, e) => a + b + c + d + e);
- *
- *      madd5([1,2], [3], [4, 5], [6], [7, 8]); //=> [21, 22, 22, 23, 22, 23, 23, 24]
- */
-module.exports = _curry1(function lift(fn) {
-  return liftN(fn.length, fn);
-});
-
-},{"./internal/_curry1":358,"./liftN":438}],438:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _reduce = require('./internal/_reduce');
-var ap = require('./ap');
-var curryN = require('./curryN');
-var map = require('./map');
-
-
-/**
- * "lifts" a function to be the specified arity, so that it may "map over" that
- * many lists, Functions or other objects that satisfy the [FantasyLand Apply spec](https://github.com/fantasyland/fantasy-land#apply).
- *
- * @func
- * @memberOf R
- * @since v0.7.0
- * @category Function
- * @sig Number -> (*... -> *) -> ([*]... -> [*])
- * @param {Function} fn The function to lift into higher context
- * @return {Function} The lifted function.
- * @see R.lift, R.ap
- * @example
- *
- *      var madd3 = R.liftN(3, (...args) => R.sum(args));
- *      madd3([1,2,3], [1,2,3], [1]); //=> [3, 4, 5, 4, 5, 6, 5, 6, 7]
- */
-module.exports = _curry2(function liftN(arity, fn) {
-  var lifted = curryN(arity, fn);
-  return curryN(arity, function() {
-    return _reduce(ap, map(lifted, arguments[0]), Array.prototype.slice.call(arguments, 1));
-  });
-});
-
-},{"./ap":270,"./curryN":298,"./internal/_curry2":359,"./internal/_reduce":390,"./map":441}],439:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns `true` if the first argument is less than the second; `false`
- * otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig Ord a => a -> a -> Boolean
- * @param {*} a
- * @param {*} b
- * @return {Boolean}
- * @see R.gt
- * @example
- *
- *      R.lt(2, 1); //=> false
- *      R.lt(2, 2); //=> false
- *      R.lt(2, 3); //=> true
- *      R.lt('a', 'z'); //=> true
- *      R.lt('z', 'a'); //=> false
- */
-module.exports = _curry2(function lt(a, b) { return a < b; });
-
-},{"./internal/_curry2":359}],440:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns `true` if the first argument is less than or equal to the second;
- * `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig Ord a => a -> a -> Boolean
- * @param {Number} a
- * @param {Number} b
- * @return {Boolean}
- * @see R.gte
- * @example
- *
- *      R.lte(2, 1); //=> false
- *      R.lte(2, 2); //=> true
- *      R.lte(2, 3); //=> true
- *      R.lte('a', 'z'); //=> true
- *      R.lte('z', 'a'); //=> false
- */
-module.exports = _curry2(function lte(a, b) { return a <= b; });
-
-},{"./internal/_curry2":359}],441:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _map = require('./internal/_map');
-var _reduce = require('./internal/_reduce');
-var _xmap = require('./internal/_xmap');
-var curryN = require('./curryN');
-var keys = require('./keys');
-
-
-/**
- * Takes a function and
- * a [functor](https://github.com/fantasyland/fantasy-land#functor),
- * applies the function to each of the functor's values, and returns
- * a functor of the same shape.
- *
- * Ramda provides suitable `map` implementations for `Array` and `Object`,
- * so this function may be applied to `[1, 2, 3]` or `{x: 1, y: 2, z: 3}`.
- *
- * Dispatches to the `map` method of the second argument, if present.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * Also treats functions as functors and will compose them together.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig Functor f => (a -> b) -> f a -> f b
- * @param {Function} fn The function to be called on every element of the input `list`.
- * @param {Array} list The list to be iterated over.
- * @return {Array} The new list.
- * @see R.transduce, R.addIndex
- * @example
- *
- *      var double = x => x * 2;
- *
- *      R.map(double, [1, 2, 3]); //=> [2, 4, 6]
- *
- *      R.map(double, {x: 1, y: 2, z: 3}); //=> {x: 2, y: 4, z: 6}
- * @symb R.map(f, [a, b]) = [f(a), f(b)]
- * @symb R.map(f, { x: a, y: b }) = { x: f(a), y: f(b) }
- * @symb R.map(f, functor_o) = functor_o.map(f)
- */
-module.exports = _curry2(_dispatchable(['map'], _xmap, function map(fn, functor) {
-  switch (Object.prototype.toString.call(functor)) {
-    case '[object Function]':
-      return curryN(functor.length, function() {
-        return fn.call(this, functor.apply(this, arguments));
-      });
-    case '[object Object]':
-      return _reduce(function(acc, key) {
-        acc[key] = fn(functor[key]);
-        return acc;
-      }, {}, keys(functor));
-    default:
-      return _map(fn, functor);
-  }
-}));
-
-},{"./curryN":298,"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_map":384,"./internal/_reduce":390,"./internal/_xmap":410,"./keys":428}],442:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * The mapAccum function behaves like a combination of map and reduce; it
- * applies a function to each element of a list, passing an accumulating
- * parameter from left to right, and returning a final value of this
- * accumulator together with the new list.
- *
- * The iterator function receives two arguments, *acc* and *value*, and should
- * return a tuple *[acc, value]*.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category List
- * @sig (acc -> x -> (acc, y)) -> acc -> [x] -> (acc, [y])
- * @param {Function} fn The function to be called on every element of the input `list`.
- * @param {*} acc The accumulator value.
- * @param {Array} list The list to iterate over.
- * @return {*} The final, accumulated value.
- * @see R.addIndex, R.mapAccumRight
- * @example
- *
- *      var digits = ['1', '2', '3', '4'];
- *      var appender = (a, b) => [a + b, a + b];
- *
- *      R.mapAccum(appender, 0, digits); //=> ['01234', ['01', '012', '0123', '01234']]
- * @symb R.mapAccum(f, a, [b, c, d]) = [
- *   f(f(f(a, b)[0], c)[0], d)[0],
- *   [
- *     f(a, b)[1],
- *     f(f(a, b)[0], c)[1],
- *     f(f(f(a, b)[0], c)[0], d)[1]
- *   ]
- * ]
- */
-module.exports = _curry3(function mapAccum(fn, acc, list) {
-  var idx = 0;
-  var len = list.length;
-  var result = [];
-  var tuple = [acc];
-  while (idx < len) {
-    tuple = fn(tuple[0], list[idx]);
-    result[idx] = tuple[1];
-    idx += 1;
-  }
-  return [tuple[0], result];
-});
-
-},{"./internal/_curry3":360}],443:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * The mapAccumRight function behaves like a combination of map and reduce; it
- * applies a function to each element of a list, passing an accumulating
- * parameter from right to left, and returning a final value of this
- * accumulator together with the new list.
- *
- * Similar to `mapAccum`, except moves through the input list from the right to
- * the left.
- *
- * The iterator function receives two arguments, *value* and *acc*, and should
- * return a tuple *[value, acc]*.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category List
- * @sig (x-> acc -> (y, acc)) -> acc -> [x] -> ([y], acc)
- * @param {Function} fn The function to be called on every element of the input `list`.
- * @param {*} acc The accumulator value.
- * @param {Array} list The list to iterate over.
- * @return {*} The final, accumulated value.
- * @see R.addIndex, R.mapAccum
- * @example
- *
- *      var digits = ['1', '2', '3', '4'];
- *      var append = (a, b) => [a + b, a + b];
- *
- *      R.mapAccumRight(append, 5, digits); //=> [['12345', '2345', '345', '45'], '12345']
- * @symb R.mapAccumRight(f, a, [b, c, d]) = [
- *   [
- *     f(b, f(c, f(d, a)[0])[0])[1],
- *     f(c, f(d, a)[0])[1],
- *     f(d, a)[1],
- *   ]
- *   f(b, f(c, f(d, a)[0])[0])[0],
- * ]
- */
-module.exports = _curry3(function mapAccumRight(fn, acc, list) {
-  var idx = list.length - 1;
-  var result = [];
-  var tuple = [acc];
-  while (idx >= 0) {
-    tuple = fn(list[idx], tuple[0]);
-    result[idx] = tuple[1];
-    idx -= 1;
-  }
-  return [result, tuple[0]];
-});
-
-},{"./internal/_curry3":360}],444:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _reduce = require('./internal/_reduce');
-var keys = require('./keys');
-
-
-/**
- * An Object-specific version of `map`. The function is applied to three
- * arguments: *(value, key, obj)*. If only the value is significant, use
- * `map` instead.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Object
- * @sig ((*, String, Object) -> *) -> Object -> Object
- * @param {Function} fn
- * @param {Object} obj
- * @return {Object}
- * @see R.map
- * @example
- *
- *      var values = { x: 1, y: 2, z: 3 };
- *      var prependKeyAndDouble = (num, key, obj) => key + (num * 2);
- *
- *      R.mapObjIndexed(prependKeyAndDouble, values); //=> { x: 'x2', y: 'y4', z: 'z6' }
- */
-module.exports = _curry2(function mapObjIndexed(fn, obj) {
-  return _reduce(function(acc, key) {
-    acc[key] = fn(obj[key], key, obj);
-    return acc;
-  }, {}, keys(obj));
-});
-
-},{"./internal/_curry2":359,"./internal/_reduce":390,"./keys":428}],445:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Tests a regular expression against a String. Note that this function will
- * return an empty array when there are no matches. This differs from
- * [`String.prototype.match`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)
- * which returns `null` when there are no matches.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category String
- * @sig RegExp -> String -> [String | Undefined]
- * @param {RegExp} rx A regular expression.
- * @param {String} str The string to match against
- * @return {Array} The list of matches or empty array.
- * @see R.test
- * @example
- *
- *      R.match(/([a-z]a)/g, 'bananas'); //=> ['ba', 'na', 'na']
- *      R.match(/a/, 'b'); //=> []
- *      R.match(/a/, null); //=> TypeError: null does not have a method named "match"
- */
-module.exports = _curry2(function match(rx, str) {
-  return str.match(rx) || [];
-});
-
-},{"./internal/_curry2":359}],446:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _isInteger = require('./internal/_isInteger');
-
-
-/**
- * mathMod behaves like the modulo operator should mathematically, unlike the
- * `%` operator (and by extension, R.modulo). So while "-17 % 5" is -2,
- * mathMod(-17, 5) is 3. mathMod requires Integer arguments, and returns NaN
- * when the modulus is zero or negative.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category Math
- * @sig Number -> Number -> Number
- * @param {Number} m The dividend.
- * @param {Number} p the modulus.
- * @return {Number} The result of `b mod a`.
- * @example
- *
- *      R.mathMod(-17, 5);  //=> 3
- *      R.mathMod(17, 5);   //=> 2
- *      R.mathMod(17, -5);  //=> NaN
- *      R.mathMod(17, 0);   //=> NaN
- *      R.mathMod(17.2, 5); //=> NaN
- *      R.mathMod(17, 5.3); //=> NaN
- *
- *      var clock = R.mathMod(R.__, 12);
- *      clock(15); //=> 3
- *      clock(24); //=> 0
- *
- *      var seventeenMod = R.mathMod(17);
- *      seventeenMod(3);  //=> 2
- *      seventeenMod(4);  //=> 1
- *      seventeenMod(10); //=> 7
- */
-module.exports = _curry2(function mathMod(m, p) {
-  if (!_isInteger(m)) { return NaN; }
-  if (!_isInteger(p) || p < 1) { return NaN; }
-  return ((m % p) + p) % p;
-});
-
-},{"./internal/_curry2":359,"./internal/_isInteger":376}],447:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns the larger of its two arguments.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig Ord a => a -> a -> a
- * @param {*} a
- * @param {*} b
- * @return {*}
- * @see R.maxBy, R.min
- * @example
- *
- *      R.max(789, 123); //=> 789
- *      R.max('a', 'b'); //=> 'b'
- */
-module.exports = _curry2(function max(a, b) { return b > a ? b : a; });
-
-},{"./internal/_curry2":359}],448:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Takes a function and two values, and returns whichever value produces the
- * larger result when passed to the provided function.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Relation
- * @sig Ord b => (a -> b) -> a -> a -> a
- * @param {Function} f
- * @param {*} a
- * @param {*} b
- * @return {*}
- * @see R.max, R.minBy
- * @example
- *
- *      //  square :: Number -> Number
- *      var square = n => n * n;
- *
- *      R.maxBy(square, -3, 2); //=> -3
- *
- *      R.reduce(R.maxBy(square), 0, [3, -5, 4, 1, -2]); //=> -5
- *      R.reduce(R.maxBy(square), 0, []); //=> 0
- */
-module.exports = _curry3(function maxBy(f, a, b) {
-  return f(b) > f(a) ? b : a;
-});
-
-},{"./internal/_curry3":360}],449:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var sum = require('./sum');
-
-
-/**
- * Returns the mean of the given list of numbers.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category Math
- * @sig [Number] -> Number
- * @param {Array} list
- * @return {Number}
- * @example
- *
- *      R.mean([2, 7, 9]); //=> 6
- *      R.mean([]); //=> NaN
- */
-module.exports = _curry1(function mean(list) {
-  return sum(list) / list.length;
-});
-
-},{"./internal/_curry1":358,"./sum":519}],450:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var mean = require('./mean');
-
-
-/**
- * Returns the median of the given list of numbers.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category Math
- * @sig [Number] -> Number
- * @param {Array} list
- * @return {Number}
- * @example
- *
- *      R.median([2, 9, 7]); //=> 7
- *      R.median([7, 2, 10, 9]); //=> 8
- *      R.median([]); //=> NaN
- */
-module.exports = _curry1(function median(list) {
-  var len = list.length;
-  if (len === 0) {
-    return NaN;
-  }
-  var width = 2 - len % 2;
-  var idx = (len - width) / 2;
-  return mean(Array.prototype.slice.call(list, 0).sort(function(a, b) {
-    return a < b ? -1 : a > b ? 1 : 0;
-  }).slice(idx, idx + width));
-});
-
-},{"./internal/_curry1":358,"./mean":449}],451:[function(require,module,exports){
-var _arity = require('./internal/_arity');
-var _curry1 = require('./internal/_curry1');
-var _has = require('./internal/_has');
-var toString = require('./toString');
-
-
-/**
- * Creates a new function that, when invoked, caches the result of calling `fn`
- * for a given argument set and returns the result. Subsequent calls to the
- * memoized `fn` with the same argument set will not result in an additional
- * call to `fn`; instead, the cached result for that set of arguments will be
- * returned.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (*... -> a) -> (*... -> a)
- * @param {Function} fn The function to memoize.
- * @return {Function} Memoized version of `fn`.
- * @example
- *
- *      var count = 0;
- *      var factorial = R.memoize(n => {
- *        count += 1;
- *        return R.product(R.range(1, n + 1));
- *      });
- *      factorial(5); //=> 120
- *      factorial(5); //=> 120
- *      factorial(5); //=> 120
- *      count; //=> 1
- */
-module.exports = _curry1(function memoize(fn) {
-  var cache = {};
-  return _arity(fn.length, function() {
-    var key = toString(arguments);
-    if (!_has(key, cache)) {
-      cache[key] = fn.apply(this, arguments);
-    }
-    return cache[key];
-  });
-});
-
-},{"./internal/_arity":347,"./internal/_curry1":358,"./internal/_has":370,"./toString":533}],452:[function(require,module,exports){
-var _assign = require('./internal/_assign');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Create a new object with the own properties of the first object merged with
- * the own properties of the second object. If a key exists in both objects,
- * the value from the second object will be used.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig {k: v} -> {k: v} -> {k: v}
- * @param {Object} l
- * @param {Object} r
- * @return {Object}
- * @see R.mergeWith, R.mergeWithKey
- * @example
- *
- *      R.merge({ 'name': 'fred', 'age': 10 }, { 'age': 40 });
- *      //=> { 'name': 'fred', 'age': 40 }
- *
- *      var resetToDefault = R.merge(R.__, {x: 0});
- *      resetToDefault({x: 5, y: 2}); //=> {x: 0, y: 2}
- * @symb R.merge({ x: 1, y: 2 }, { y: 5, z: 3 }) = { x: 1, y: 5, z: 3 }
- */
-module.exports = _curry2(function merge(l, r) {
-  return _assign({}, l, r);
-});
-
-},{"./internal/_assign":349,"./internal/_curry2":359}],453:[function(require,module,exports){
-var _assign = require('./internal/_assign');
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Merges a list of objects together into one object.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category List
- * @sig [{k: v}] -> {k: v}
- * @param {Array} list An array of objects
- * @return {Object} A merged object.
- * @see R.reduce
- * @example
- *
- *      R.mergeAll([{foo:1},{bar:2},{baz:3}]); //=> {foo:1,bar:2,baz:3}
- *      R.mergeAll([{foo:1},{foo:2},{bar:2}]); //=> {foo:2,bar:2}
- * @symb R.mergeAll([{ x: 1 }, { y: 2 }, { z: 3 }]) = { x: 1, y: 2, z: 3 }
- */
-module.exports = _curry1(function mergeAll(list) {
-  return _assign.apply(null, [{}].concat(list));
-});
-
-},{"./internal/_assign":349,"./internal/_curry1":358}],454:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var mergeWithKey = require('./mergeWithKey');
-
-
-/**
- * Creates a new object with the own properties of the two provided objects. If
- * a key exists in both objects, the provided function is applied to the values
- * associated with the key in each object, with the result being used as the
- * value associated with the key in the returned object. The key will be
- * excluded from the returned object if the resulting value is `undefined`.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category Object
- * @sig (a -> a -> a) -> {a} -> {a} -> {a}
- * @param {Function} fn
- * @param {Object} l
- * @param {Object} r
- * @return {Object}
- * @see R.merge, R.mergeWithKey
- * @example
- *
- *      R.mergeWith(R.concat,
- *                  { a: true, values: [10, 20] },
- *                  { b: true, values: [15, 35] });
- *      //=> { a: true, b: true, values: [10, 20, 15, 35] }
- */
-module.exports = _curry3(function mergeWith(fn, l, r) {
-  return mergeWithKey(function(_, _l, _r) {
-    return fn(_l, _r);
-  }, l, r);
-});
-
-},{"./internal/_curry3":360,"./mergeWithKey":455}],455:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var _has = require('./internal/_has');
-
-
-/**
- * Creates a new object with the own properties of the two provided objects. If
- * a key exists in both objects, the provided function is applied to the key
- * and the values associated with the key in each object, with the result being
- * used as the value associated with the key in the returned object. The key
- * will be excluded from the returned object if the resulting value is
- * `undefined`.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category Object
- * @sig (String -> a -> a -> a) -> {a} -> {a} -> {a}
- * @param {Function} fn
- * @param {Object} l
- * @param {Object} r
- * @return {Object}
- * @see R.merge, R.mergeWith
- * @example
- *
- *      let concatValues = (k, l, r) => k == 'values' ? R.concat(l, r) : r
- *      R.mergeWithKey(concatValues,
- *                     { a: true, thing: 'foo', values: [10, 20] },
- *                     { b: true, thing: 'bar', values: [15, 35] });
- *      //=> { a: true, b: true, thing: 'bar', values: [10, 20, 15, 35] }
- * @symb R.mergeWithKey(f, { x: 1, y: 2 }, { y: 5, z: 3 }) = { x: 1, y: f('y', 2, 5), z: 3 }
- */
-module.exports = _curry3(function mergeWithKey(fn, l, r) {
-  var result = {};
-  var k;
-
-  for (k in l) {
-    if (_has(k, l)) {
-      result[k] = _has(k, r) ? fn(k, l[k], r[k]) : l[k];
-    }
-  }
-
-  for (k in r) {
-    if (_has(k, r) && !(_has(k, result))) {
-      result[k] = r[k];
-    }
-  }
-
-  return result;
-});
-
-},{"./internal/_curry3":360,"./internal/_has":370}],456:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns the smaller of its two arguments.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig Ord a => a -> a -> a
- * @param {*} a
- * @param {*} b
- * @return {*}
- * @see R.minBy, R.max
- * @example
- *
- *      R.min(789, 123); //=> 123
- *      R.min('a', 'b'); //=> 'a'
- */
-module.exports = _curry2(function min(a, b) { return b < a ? b : a; });
-
-},{"./internal/_curry2":359}],457:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Takes a function and two values, and returns whichever value produces the
- * smaller result when passed to the provided function.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Relation
- * @sig Ord b => (a -> b) -> a -> a -> a
- * @param {Function} f
- * @param {*} a
- * @param {*} b
- * @return {*}
- * @see R.min, R.maxBy
- * @example
- *
- *      //  square :: Number -> Number
- *      var square = n => n * n;
- *
- *      R.minBy(square, -3, 2); //=> 2
- *
- *      R.reduce(R.minBy(square), Infinity, [3, -5, 4, 1, -2]); //=> 1
- *      R.reduce(R.minBy(square), Infinity, []); //=> Infinity
- */
-module.exports = _curry3(function minBy(f, a, b) {
-  return f(b) < f(a) ? b : a;
-});
-
-},{"./internal/_curry3":360}],458:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Divides the first parameter by the second and returns the remainder. Note
- * that this function preserves the JavaScript-style behavior for modulo. For
- * mathematical modulo see `mathMod`.
- *
- * @func
- * @memberOf R
- * @since v0.1.1
- * @category Math
- * @sig Number -> Number -> Number
- * @param {Number} a The value to the divide.
- * @param {Number} b The pseudo-modulus
- * @return {Number} The result of `b % a`.
- * @see R.mathMod
- * @example
- *
- *      R.modulo(17, 3); //=> 2
- *      // JS behavior:
- *      R.modulo(-17, 3); //=> -2
- *      R.modulo(17, -3); //=> 2
- *
- *      var isOdd = R.modulo(R.__, 2);
- *      isOdd(42); //=> 0
- *      isOdd(21); //=> 1
- */
-module.exports = _curry2(function modulo(a, b) { return a % b; });
-
-},{"./internal/_curry2":359}],459:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Multiplies two numbers. Equivalent to `a * b` but curried.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Math
- * @sig Number -> Number -> Number
- * @param {Number} a The first value.
- * @param {Number} b The second value.
- * @return {Number} The result of `a * b`.
- * @see R.divide
- * @example
- *
- *      var double = R.multiply(2);
- *      var triple = R.multiply(3);
- *      double(3);       //=>  6
- *      triple(4);       //=> 12
- *      R.multiply(2, 5);  //=> 10
- */
-module.exports = _curry2(function multiply(a, b) { return a * b; });
-
-},{"./internal/_curry2":359}],460:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Wraps a function of any arity (including nullary) in a function that accepts
- * exactly `n` parameters. Any extraneous parameters will not be passed to the
- * supplied function.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig Number -> (* -> a) -> (* -> a)
- * @param {Number} n The desired arity of the new function.
- * @param {Function} fn The function to wrap.
- * @return {Function} A new function wrapping `fn`. The new function is guaranteed to be of
- *         arity `n`.
- * @example
- *
- *      var takesTwoArgs = (a, b) => [a, b];
- *
- *      takesTwoArgs.length; //=> 2
- *      takesTwoArgs(1, 2); //=> [1, 2]
- *
- *      var takesOneArg = R.nAry(1, takesTwoArgs);
- *      takesOneArg.length; //=> 1
- *      // Only `n` arguments are passed to the wrapped function
- *      takesOneArg(1, 2); //=> [1, undefined]
- * @symb R.nAry(0, f)(a, b) = f()
- * @symb R.nAry(1, f)(a, b) = f(a)
- * @symb R.nAry(2, f)(a, b) = f(a, b)
- */
-module.exports = _curry2(function nAry(n, fn) {
-  switch (n) {
-    case 0: return function() {return fn.call(this);};
-    case 1: return function(a0) {return fn.call(this, a0);};
-    case 2: return function(a0, a1) {return fn.call(this, a0, a1);};
-    case 3: return function(a0, a1, a2) {return fn.call(this, a0, a1, a2);};
-    case 4: return function(a0, a1, a2, a3) {return fn.call(this, a0, a1, a2, a3);};
-    case 5: return function(a0, a1, a2, a3, a4) {return fn.call(this, a0, a1, a2, a3, a4);};
-    case 6: return function(a0, a1, a2, a3, a4, a5) {return fn.call(this, a0, a1, a2, a3, a4, a5);};
-    case 7: return function(a0, a1, a2, a3, a4, a5, a6) {return fn.call(this, a0, a1, a2, a3, a4, a5, a6);};
-    case 8: return function(a0, a1, a2, a3, a4, a5, a6, a7) {return fn.call(this, a0, a1, a2, a3, a4, a5, a6, a7);};
-    case 9: return function(a0, a1, a2, a3, a4, a5, a6, a7, a8) {return fn.call(this, a0, a1, a2, a3, a4, a5, a6, a7, a8);};
-    case 10: return function(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) {return fn.call(this, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);};
-    default: throw new Error('First argument to nAry must be a non-negative integer no greater than ten');
-  }
-});
-
-},{"./internal/_curry2":359}],461:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Negates its argument.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Math
- * @sig Number -> Number
- * @param {Number} n
- * @return {Number}
- * @example
- *
- *      R.negate(42); //=> -42
- */
-module.exports = _curry1(function negate(n) { return -n; });
-
-},{"./internal/_curry1":358}],462:[function(require,module,exports){
-var _complement = require('./internal/_complement');
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xany = require('./internal/_xany');
-var any = require('./any');
-
-
-/**
- * Returns `true` if no elements of the list match the predicate, `false`
- * otherwise.
- *
- * Dispatches to the `any` method of the second argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.12.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> Boolean
- * @param {Function} fn The predicate function.
- * @param {Array} list The array to consider.
- * @return {Boolean} `true` if the predicate is not satisfied by every element, `false` otherwise.
- * @see R.all, R.any
- * @example
- *
- *      var isEven = n => n % 2 === 0;
- *
- *      R.none(isEven, [1, 3, 5, 7, 9, 11]); //=> true
- *      R.none(isEven, [1, 3, 5, 7, 8, 11]); //=> false
- */
-module.exports = _curry2(_complement(_dispatchable(['any'], _xany, any)));
-
-},{"./any":268,"./internal/_complement":353,"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xany":396}],463:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * A function that returns the `!` of its argument. It will return `true` when
- * passed false-y value, and `false` when passed a truth-y one.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Logic
- * @sig * -> Boolean
- * @param {*} a any value
- * @return {Boolean} the logical inverse of passed argument.
- * @see R.complement
- * @example
- *
- *      R.not(true); //=> false
- *      R.not(false); //=> true
- *      R.not(0); //=> true
- *      R.not(1); //=> false
- */
-module.exports = _curry1(function not(a) {
-  return !a;
-});
-
-},{"./internal/_curry1":358}],464:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _isString = require('./internal/_isString');
-
-
-/**
- * Returns the nth element of the given list or string. If n is negative the
- * element at index length + n is returned.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig Number -> [a] -> a | Undefined
- * @sig Number -> String -> String
- * @param {Number} offset
- * @param {*} list
- * @return {*}
- * @example
- *
- *      var list = ['foo', 'bar', 'baz', 'quux'];
- *      R.nth(1, list); //=> 'bar'
- *      R.nth(-1, list); //=> 'quux'
- *      R.nth(-99, list); //=> undefined
- *
- *      R.nth(2, 'abc'); //=> 'c'
- *      R.nth(3, 'abc'); //=> ''
- * @symb R.nth(-1, [a, b, c]) = c
- * @symb R.nth(0, [a, b, c]) = a
- * @symb R.nth(1, [a, b, c]) = b
- */
-module.exports = _curry2(function nth(offset, list) {
-  var idx = offset < 0 ? list.length + offset : offset;
-  return _isString(list) ? list.charAt(idx) : list[idx];
-});
-
-},{"./internal/_curry2":359,"./internal/_isString":381}],465:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var curryN = require('./curryN');
-var nth = require('./nth');
-
-
-/**
- * Returns a function which returns its nth argument.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category Function
- * @sig Number -> *... -> *
- * @param {Number} n
- * @return {Function}
- * @example
- *
- *      R.nthArg(1)('a', 'b', 'c'); //=> 'b'
- *      R.nthArg(-1)('a', 'b', 'c'); //=> 'c'
- * @symb R.nthArg(-1)(a, b, c) = c
- * @symb R.nthArg(0)(a, b, c) = a
- * @symb R.nthArg(1)(a, b, c) = b
- */
-module.exports = _curry1(function nthArg(n) {
-  var arity = n < 0 ? 1 : n + 1;
-  return curryN(arity, function() {
-    return nth(n, arguments);
-  });
-});
-
-},{"./curryN":298,"./internal/_curry1":358,"./nth":464}],466:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Creates an object containing a single key:value pair.
- *
- * @func
- * @memberOf R
- * @since v0.18.0
- * @category Object
- * @sig String -> a -> {String:a}
- * @param {String} key
- * @param {*} val
- * @return {Object}
- * @see R.pair
- * @example
- *
- *      var matchPhrases = R.compose(
- *        R.objOf('must'),
- *        R.map(R.objOf('match_phrase'))
- *      );
- *      matchPhrases(['foo', 'bar', 'baz']); //=> {must: [{match_phrase: 'foo'}, {match_phrase: 'bar'}, {match_phrase: 'baz'}]}
- */
-module.exports = _curry2(function objOf(key, val) {
-  var obj = {};
-  obj[key] = val;
-  return obj;
-});
-
-},{"./internal/_curry2":359}],467:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _of = require('./internal/_of');
-
-
-/**
- * Returns a singleton array containing the value provided.
- *
- * Note this `of` is different from the ES6 `of`; See
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category Function
- * @sig a -> [a]
- * @param {*} x any value
- * @return {Array} An array wrapping `x`.
- * @example
- *
- *      R.of(null); //=> [null]
- *      R.of([42]); //=> [[42]]
- */
-module.exports = _curry1(_of);
-
-},{"./internal/_curry1":358,"./internal/_of":386}],468:[function(require,module,exports){
-var _contains = require('./internal/_contains');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a partial copy of an object omitting the keys specified.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig [String] -> {String: *} -> {String: *}
- * @param {Array} names an array of String property names to omit from the new object
- * @param {Object} obj The object to copy from
- * @return {Object} A new object with properties from `names` not on it.
- * @see R.pick
- * @example
- *
- *      R.omit(['a', 'd'], {a: 1, b: 2, c: 3, d: 4}); //=> {b: 2, c: 3}
- */
-module.exports = _curry2(function omit(names, obj) {
-  var result = {};
-  for (var prop in obj) {
-    if (!_contains(prop, names)) {
-      result[prop] = obj[prop];
-    }
-  }
-  return result;
-});
-
-},{"./internal/_contains":355,"./internal/_curry2":359}],469:[function(require,module,exports){
-var _arity = require('./internal/_arity');
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Accepts a function `fn` and returns a function that guards invocation of
- * `fn` such that `fn` can only ever be called once, no matter how many times
- * the returned function is invoked. The first value calculated is returned in
- * subsequent invocations.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (a... -> b) -> (a... -> b)
- * @param {Function} fn The function to wrap in a call-only-once wrapper.
- * @return {Function} The wrapped function.
- * @example
- *
- *      var addOneOnce = R.once(x => x + 1);
- *      addOneOnce(10); //=> 11
- *      addOneOnce(addOneOnce(50)); //=> 11
- */
-module.exports = _curry1(function once(fn) {
-  var called = false;
-  var result;
-  return _arity(fn.length, function() {
-    if (called) {
-      return result;
-    }
-    called = true;
-    result = fn.apply(this, arguments);
-    return result;
-  });
-});
-
-},{"./internal/_arity":347,"./internal/_curry1":358}],470:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns `true` if one or both of its arguments are `true`. Returns `false`
- * if both arguments are `false`.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Logic
- * @sig a -> b -> a | b
- * @param {Any} a
- * @param {Any} b
- * @return {Any} the first argument if truthy, otherwise the second argument.
- * @see R.either
- * @example
- *
- *      R.or(true, true); //=> true
- *      R.or(true, false); //=> true
- *      R.or(false, true); //=> true
- *      R.or(false, false); //=> false
- */
-module.exports = _curry2(function or(a, b) {
-  return a || b;
-});
-
-},{"./internal/_curry2":359}],471:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Returns the result of "setting" the portion of the given data structure
- * focused by the given lens to the result of applying the given function to
- * the focused value.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category Object
- * @typedefn Lens s a = Functor f => (a -> f a) -> s -> f s
- * @sig Lens s a -> (a -> a) -> s -> s
- * @param {Lens} lens
- * @param {*} v
- * @param {*} x
- * @return {*}
- * @see R.prop, R.lensIndex, R.lensProp
- * @example
- *
- *      var headLens = R.lensIndex(0);
- *
- *      R.over(headLens, R.toUpper, ['foo', 'bar', 'baz']); //=> ['FOO', 'bar', 'baz']
- */
-module.exports = (function() {
-  // `Identity` is a functor that holds a single value, where `map` simply
-  // transforms the held value with the provided function.
-  var Identity = function(x) {
-    return {value: x, map: function(f) { return Identity(f(x)); }};
-  };
-
-  return _curry3(function over(lens, f, x) {
-    // The value returned by the getter function is first transformed with `f`,
-    // then set as the value of an `Identity`. This is then mapped over with the
-    // setter function of the lens.
-    return lens(function(y) { return Identity(f(y)); })(x).value;
-  });
-}());
-
-},{"./internal/_curry3":360}],472:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Takes two arguments, `fst` and `snd`, and returns `[fst, snd]`.
- *
- * @func
- * @memberOf R
- * @since v0.18.0
- * @category List
- * @sig a -> b -> (a,b)
- * @param {*} fst
- * @param {*} snd
- * @return {Array}
- * @see R.objOf, R.of
- * @example
- *
- *      R.pair('foo', 'bar'); //=> ['foo', 'bar']
- */
-module.exports = _curry2(function pair(fst, snd) { return [fst, snd]; });
-
-},{"./internal/_curry2":359}],473:[function(require,module,exports){
-var _concat = require('./internal/_concat');
-var _createPartialApplicator = require('./internal/_createPartialApplicator');
-
-
-/**
- * Takes a function `f` and a list of arguments, and returns a function `g`.
- * When applied, `g` returns the result of applying `f` to the arguments
- * provided initially followed by the arguments provided to `g`.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Function
- * @sig ((a, b, c, ..., n) -> x) -> [a, b, c, ...] -> ((d, e, f, ..., n) -> x)
- * @param {Function} f
- * @param {Array} args
- * @return {Function}
- * @see R.partialRight
- * @example
- *
- *      var multiply2 = (a, b) => a * b;
- *      var double = R.partial(multiply2, [2]);
- *      double(2); //=> 4
- *
- *      var greet = (salutation, title, firstName, lastName) =>
- *        salutation + ', ' + title + ' ' + firstName + ' ' + lastName + '!';
- *
- *      var sayHello = R.partial(greet, ['Hello']);
- *      var sayHelloToMs = R.partial(sayHello, ['Ms.']);
- *      sayHelloToMs('Jane', 'Jones'); //=> 'Hello, Ms. Jane Jones!'
- * @symb R.partial(f, [a, b])(c, d) = f(a, b, c, d)
- */
-module.exports = _createPartialApplicator(_concat);
-
-},{"./internal/_concat":354,"./internal/_createPartialApplicator":357}],474:[function(require,module,exports){
-var _concat = require('./internal/_concat');
-var _createPartialApplicator = require('./internal/_createPartialApplicator');
-var flip = require('./flip');
-
-
-/**
- * Takes a function `f` and a list of arguments, and returns a function `g`.
- * When applied, `g` returns the result of applying `f` to the arguments
- * provided to `g` followed by the arguments provided initially.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Function
- * @sig ((a, b, c, ..., n) -> x) -> [d, e, f, ..., n] -> ((a, b, c, ...) -> x)
- * @param {Function} f
- * @param {Array} args
- * @return {Function}
- * @see R.partial
- * @example
- *
- *      var greet = (salutation, title, firstName, lastName) =>
- *        salutation + ', ' + title + ' ' + firstName + ' ' + lastName + '!';
- *
- *      var greetMsJaneJones = R.partialRight(greet, ['Ms.', 'Jane', 'Jones']);
- *
- *      greetMsJaneJones('Hello'); //=> 'Hello, Ms. Jane Jones!'
- * @symb R.partialRight(f, [a, b])(c, d) = f(c, d, a, b)
- */
-module.exports = _createPartialApplicator(flip(_concat));
-
-},{"./flip":325,"./internal/_concat":354,"./internal/_createPartialApplicator":357}],475:[function(require,module,exports){
-var filter = require('./filter');
-var juxt = require('./juxt');
-var reject = require('./reject');
-
-
-/**
- * Takes a predicate and a list or other "filterable" object and returns the
- * pair of filterable objects of the same type of elements which do and do not
- * satisfy, the predicate, respectively.
- *
- * @func
- * @memberOf R
- * @since v0.1.4
- * @category List
- * @sig Filterable f => (a -> Boolean) -> f a -> [f a, f a]
- * @param {Function} pred A predicate to determine which side the element belongs to.
- * @param {Array} filterable the list (or other filterable) to partition.
- * @return {Array} An array, containing first the subset of elements that satisfy the
- *         predicate, and second the subset of elements that do not satisfy.
- * @see R.filter, R.reject
- * @example
- *
- *      R.partition(R.contains('s'), ['sss', 'ttt', 'foo', 'bars']);
- *      // => [ [ 'sss', 'bars' ],  [ 'ttt', 'foo' ] ]
- *
- *      R.partition(R.contains('s'), { a: 'sss', b: 'ttt', foo: 'bars' });
- *      // => [ { a: 'sss', foo: 'bars' }, { b: 'ttt' }  ]
- */
-module.exports = juxt([filter, reject]);
-
-},{"./filter":319,"./juxt":427,"./reject":502}],476:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Retrieve the value at a given path.
- *
- * @func
- * @memberOf R
- * @since v0.2.0
- * @category Object
- * @typedefn Idx = String | Int
- * @sig [Idx] -> {a} -> a | Undefined
- * @param {Array} path The path to use.
- * @param {Object} obj The object to retrieve the nested property from.
- * @return {*} The data at `path`.
- * @see R.prop
- * @example
- *
- *      R.path(['a', 'b'], {a: {b: 2}}); //=> 2
- *      R.path(['a', 'b'], {c: {b: 2}}); //=> undefined
- */
-module.exports = _curry2(function path(paths, obj) {
-  var val = obj;
-  var idx = 0;
-  while (idx < paths.length) {
-    if (val == null) {
-      return;
-    }
-    val = val[paths[idx]];
-    idx += 1;
-  }
-  return val;
-});
-
-},{"./internal/_curry2":359}],477:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var equals = require('./equals');
-var path = require('./path');
-
-
-/**
- * Determines whether a nested path on an object has a specific value, in
- * `R.equals` terms. Most likely used to filter a list.
- *
- * @func
- * @memberOf R
- * @since v0.7.0
- * @category Relation
- * @typedefn Idx = String | Int
- * @sig [Idx] -> a -> {a} -> Boolean
- * @param {Array} path The path of the nested property to use
- * @param {*} val The value to compare the nested property with
- * @param {Object} obj The object to check the nested property in
- * @return {Boolean} `true` if the value equals the nested object property,
- *         `false` otherwise.
- * @example
- *
- *      var user1 = { address: { zipCode: 90210 } };
- *      var user2 = { address: { zipCode: 55555 } };
- *      var user3 = { name: 'Bob' };
- *      var users = [ user1, user2, user3 ];
- *      var isFamous = R.pathEq(['address', 'zipCode'], 90210);
- *      R.filter(isFamous, users); //=> [ user1 ]
- */
-module.exports = _curry3(function pathEq(_path, val, obj) {
-  return equals(path(_path, obj), val);
-});
-
-},{"./equals":317,"./internal/_curry3":360,"./path":476}],478:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var defaultTo = require('./defaultTo');
-var path = require('./path');
-
-
-/**
- * If the given, non-null object has a value at the given path, returns the
- * value at that path. Otherwise returns the provided default value.
- *
- * @func
- * @memberOf R
- * @since v0.18.0
- * @category Object
- * @typedefn Idx = String | Int
- * @sig a -> [Idx] -> {a} -> a
- * @param {*} d The default value.
- * @param {Array} p The path to use.
- * @param {Object} obj The object to retrieve the nested property from.
- * @return {*} The data at `path` of the supplied object or the default value.
- * @example
- *
- *      R.pathOr('N/A', ['a', 'b'], {a: {b: 2}}); //=> 2
- *      R.pathOr('N/A', ['a', 'b'], {c: {b: 2}}); //=> "N/A"
- */
-module.exports = _curry3(function pathOr(d, p, obj) {
-  return defaultTo(d, path(p, obj));
-});
-
-},{"./defaultTo":300,"./internal/_curry3":360,"./path":476}],479:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var path = require('./path');
-
-
-/**
- * Returns `true` if the specified object property at given path satisfies the
- * given predicate; `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category Logic
- * @typedefn Idx = String | Int
- * @sig (a -> Boolean) -> [Idx] -> {a} -> Boolean
- * @param {Function} pred
- * @param {Array} propPath
- * @param {*} obj
- * @return {Boolean}
- * @see R.propSatisfies, R.path
- * @example
- *
- *      R.pathSatisfies(y => y > 0, ['x', 'y'], {x: {y: 2}}); //=> true
- */
-module.exports = _curry3(function pathSatisfies(pred, propPath, obj) {
-  return propPath.length > 0 && pred(path(propPath, obj));
-});
-
-},{"./internal/_curry3":360,"./path":476}],480:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a partial copy of an object containing only the keys specified. If
- * the key does not exist, the property is ignored.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig [k] -> {k: v} -> {k: v}
- * @param {Array} names an array of String property names to copy onto a new object
- * @param {Object} obj The object to copy from
- * @return {Object} A new object with only properties from `names` on it.
- * @see R.omit, R.props
- * @example
- *
- *      R.pick(['a', 'd'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1, d: 4}
- *      R.pick(['a', 'e', 'f'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1}
- */
-module.exports = _curry2(function pick(names, obj) {
-  var result = {};
-  var idx = 0;
-  while (idx < names.length) {
-    if (names[idx] in obj) {
-      result[names[idx]] = obj[names[idx]];
-    }
-    idx += 1;
-  }
-  return result;
-});
-
-},{"./internal/_curry2":359}],481:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Similar to `pick` except that this one includes a `key: undefined` pair for
- * properties that don't exist.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig [k] -> {k: v} -> {k: v}
- * @param {Array} names an array of String property names to copy onto a new object
- * @param {Object} obj The object to copy from
- * @return {Object} A new object with only properties from `names` on it.
- * @see R.pick
- * @example
- *
- *      R.pickAll(['a', 'd'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1, d: 4}
- *      R.pickAll(['a', 'e', 'f'], {a: 1, b: 2, c: 3, d: 4}); //=> {a: 1, e: undefined, f: undefined}
- */
-module.exports = _curry2(function pickAll(names, obj) {
-  var result = {};
-  var idx = 0;
-  var len = names.length;
-  while (idx < len) {
-    var name = names[idx];
-    result[name] = obj[name];
-    idx += 1;
-  }
-  return result;
-});
-
-},{"./internal/_curry2":359}],482:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a partial copy of an object containing only the keys that satisfy
- * the supplied predicate.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Object
- * @sig (v, k -> Boolean) -> {k: v} -> {k: v}
- * @param {Function} pred A predicate to determine whether or not a key
- *        should be included on the output object.
- * @param {Object} obj The object to copy from
- * @return {Object} A new object with only properties that satisfy `pred`
- *         on it.
- * @see R.pick, R.filter
- * @example
- *
- *      var isUpperCase = (val, key) => key.toUpperCase() === key;
- *      R.pickBy(isUpperCase, {a: 1, b: 2, A: 3, B: 4}); //=> {A: 3, B: 4}
- */
-module.exports = _curry2(function pickBy(test, obj) {
-  var result = {};
-  for (var prop in obj) {
-    if (test(obj[prop], prop, obj)) {
-      result[prop] = obj[prop];
-    }
-  }
-  return result;
-});
-
-},{"./internal/_curry2":359}],483:[function(require,module,exports){
-var _arity = require('./internal/_arity');
-var _pipe = require('./internal/_pipe');
-var reduce = require('./reduce');
-var tail = require('./tail');
-
-
-/**
- * Performs left-to-right function composition. The leftmost function may have
- * any arity; the remaining functions must be unary.
- *
- * In some libraries this function is named `sequence`.
- *
- * **Note:** The result of pipe is not automatically curried.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (((a, b, ..., n) -> o), (o -> p), ..., (x -> y), (y -> z)) -> ((a, b, ..., n) -> z)
- * @param {...Function} functions
- * @return {Function}
- * @see R.compose
- * @example
- *
- *      var f = R.pipe(Math.pow, R.negate, R.inc);
- *
- *      f(3, 4); // -(3^4) + 1
- * @symb R.pipe(f, g, h)(a, b) = h(g(f(a, b)))
- */
-module.exports = function pipe() {
-  if (arguments.length === 0) {
-    throw new Error('pipe requires at least one argument');
-  }
-  return _arity(arguments[0].length,
-                reduce(_pipe, arguments[0], tail(arguments)));
-};
-
-},{"./internal/_arity":347,"./internal/_pipe":387,"./reduce":497,"./tail":522}],484:[function(require,module,exports){
-var composeK = require('./composeK');
-var reverse = require('./reverse');
-
-/**
- * Returns the left-to-right Kleisli composition of the provided functions,
- * each of which must return a value of a type supported by [`chain`](#chain).
- *
- * `R.pipeK(f, g, h)` is equivalent to `R.pipe(R.chain(f), R.chain(g), R.chain(h))`.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category Function
- * @sig Chain m => ((a -> m b), (b -> m c), ..., (y -> m z)) -> (a -> m z)
- * @param {...Function}
- * @return {Function}
- * @see R.composeK
- * @example
- *
- *      //  parseJson :: String -> Maybe *
- *      //  get :: String -> Object -> Maybe *
- *
- *      //  getStateCode :: Maybe String -> Maybe String
- *      var getStateCode = R.pipeK(
- *        parseJson,
- *        get('user'),
- *        get('address'),
- *        get('state'),
- *        R.compose(Maybe.of, R.toUpper)
- *      );
- *
- *      getStateCode('{"user":{"address":{"state":"ny"}}}');
- *      //=> Just('NY')
- *      getStateCode('[Invalid JSON]');
- *      //=> Nothing()
- * @symb R.pipeK(f, g, h)(a) = R.chain(h, R.chain(g, f(a)))
- */
-module.exports = function pipeK() {
-  if (arguments.length === 0) {
-    throw new Error('pipeK requires at least one argument');
-  }
-  return composeK.apply(this, reverse(arguments));
-};
-
-},{"./composeK":288,"./reverse":506}],485:[function(require,module,exports){
-var _arity = require('./internal/_arity');
-var _pipeP = require('./internal/_pipeP');
-var reduce = require('./reduce');
-var tail = require('./tail');
-
-
-/**
- * Performs left-to-right composition of one or more Promise-returning
- * functions. The leftmost function may have any arity; the remaining functions
- * must be unary.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category Function
- * @sig ((a -> Promise b), (b -> Promise c), ..., (y -> Promise z)) -> (a -> Promise z)
- * @param {...Function} functions
- * @return {Function}
- * @see R.composeP
- * @example
- *
- *      //  followersForUser :: String -> Promise [User]
- *      var followersForUser = R.pipeP(db.getUserById, db.getFollowers);
- */
-module.exports = function pipeP() {
-  if (arguments.length === 0) {
-    throw new Error('pipeP requires at least one argument');
-  }
-  return _arity(arguments[0].length,
-                reduce(_pipeP, arguments[0], tail(arguments)));
-};
-
-},{"./internal/_arity":347,"./internal/_pipeP":388,"./reduce":497,"./tail":522}],486:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var map = require('./map');
-var prop = require('./prop');
-
-
-/**
- * Returns a new list by plucking the same named property off all objects in
- * the list supplied.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig k -> [{k: v}] -> [v]
- * @param {Number|String} key The key name to pluck off of each object.
- * @param {Array} list The array to consider.
- * @return {Array} The list of values for the given key.
- * @see R.props
- * @example
- *
- *      R.pluck('a')([{a: 1}, {a: 2}]); //=> [1, 2]
- *      R.pluck(0)([[1, 2], [3, 4]]);   //=> [1, 3]
- * @symb R.pluck('x', [{x: 1, y: 2}, {x: 3, y: 4}, {x: 5, y: 6}]) = [1, 3, 5]
- * @symb R.pluck(0, [[1, 2], [3, 4], [5, 6]]) = [1, 3, 5]
- */
-module.exports = _curry2(function pluck(p, list) {
-  return map(prop(p), list);
-});
-
-},{"./internal/_curry2":359,"./map":441,"./prop":490}],487:[function(require,module,exports){
-var _concat = require('./internal/_concat');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a new list with the given element at the front, followed by the
- * contents of the list.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig a -> [a] -> [a]
- * @param {*} el The item to add to the head of the output list.
- * @param {Array} list The array to add to the tail of the output list.
- * @return {Array} A new array.
- * @see R.append
- * @example
- *
- *      R.prepend('fee', ['fi', 'fo', 'fum']); //=> ['fee', 'fi', 'fo', 'fum']
- */
-module.exports = _curry2(function prepend(el, list) {
-  return _concat([el], list);
-});
-
-},{"./internal/_concat":354,"./internal/_curry2":359}],488:[function(require,module,exports){
-var multiply = require('./multiply');
-var reduce = require('./reduce');
-
-
-/**
- * Multiplies together all the elements of a list.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Math
- * @sig [Number] -> Number
- * @param {Array} list An array of numbers
- * @return {Number} The product of all the numbers in the list.
- * @see R.reduce
- * @example
- *
- *      R.product([2,4,6,8,100,1]); //=> 38400
- */
-module.exports = reduce(multiply, 1);
-
-},{"./multiply":459,"./reduce":497}],489:[function(require,module,exports){
-var _map = require('./internal/_map');
-var identity = require('./identity');
-var pickAll = require('./pickAll');
-var useWith = require('./useWith');
-
-
-/**
- * Reasonable analog to SQL `select` statement.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @category Relation
- * @sig [k] -> [{k: v}] -> [{k: v}]
- * @param {Array} props The property names to project
- * @param {Array} objs The objects to query
- * @return {Array} An array of objects with just the `props` properties.
- * @example
- *
- *      var abby = {name: 'Abby', age: 7, hair: 'blond', grade: 2};
- *      var fred = {name: 'Fred', age: 12, hair: 'brown', grade: 7};
- *      var kids = [abby, fred];
- *      R.project(['name', 'grade'], kids); //=> [{name: 'Abby', grade: 2}, {name: 'Fred', grade: 7}]
- */
-module.exports = useWith(_map, [pickAll, identity]); // passing `identity` gives correct arity
-
-},{"./identity":337,"./internal/_map":384,"./pickAll":481,"./useWith":554}],490:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a function that when supplied an object returns the indicated
- * property of that object, if it exists.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig s -> {s: a} -> a | Undefined
- * @param {String} p The property name
- * @param {Object} obj The object to query
- * @return {*} The value at `obj.p`.
- * @see R.path
- * @example
- *
- *      R.prop('x', {x: 100}); //=> 100
- *      R.prop('x', {}); //=> undefined
- */
-module.exports = _curry2(function prop(p, obj) { return obj[p]; });
-
-},{"./internal/_curry2":359}],491:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var equals = require('./equals');
-
-
-/**
- * Returns `true` if the specified object property is equal, in `R.equals`
- * terms, to the given value; `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig String -> a -> Object -> Boolean
- * @param {String} name
- * @param {*} val
- * @param {*} obj
- * @return {Boolean}
- * @see R.equals, R.propSatisfies
- * @example
- *
- *      var abby = {name: 'Abby', age: 7, hair: 'blond'};
- *      var fred = {name: 'Fred', age: 12, hair: 'brown'};
- *      var rusty = {name: 'Rusty', age: 10, hair: 'brown'};
- *      var alois = {name: 'Alois', age: 15, disposition: 'surly'};
- *      var kids = [abby, fred, rusty, alois];
- *      var hasBrownHair = R.propEq('hair', 'brown');
- *      R.filter(hasBrownHair, kids); //=> [fred, rusty]
- */
-module.exports = _curry3(function propEq(name, val, obj) {
-  return equals(val, obj[name]);
-});
-
-},{"./equals":317,"./internal/_curry3":360}],492:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var is = require('./is');
-
-
-/**
- * Returns `true` if the specified object property is of the given type;
- * `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category Type
- * @sig Type -> String -> Object -> Boolean
- * @param {Function} type
- * @param {String} name
- * @param {*} obj
- * @return {Boolean}
- * @see R.is, R.propSatisfies
- * @example
- *
- *      R.propIs(Number, 'x', {x: 1, y: 2});  //=> true
- *      R.propIs(Number, 'x', {x: 'foo'});    //=> false
- *      R.propIs(Number, 'x', {});            //=> false
- */
-module.exports = _curry3(function propIs(type, name, obj) {
-  return is(type, obj[name]);
-});
-
-},{"./internal/_curry3":360,"./is":422}],493:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var _has = require('./internal/_has');
-
-
-/**
- * If the given, non-null object has an own property with the specified name,
- * returns the value of that property. Otherwise returns the provided default
- * value.
- *
- * @func
- * @memberOf R
- * @since v0.6.0
- * @category Object
- * @sig a -> String -> Object -> a
- * @param {*} val The default value.
- * @param {String} p The name of the property to return.
- * @param {Object} obj The object to query.
- * @return {*} The value of given property of the supplied object or the default value.
- * @example
- *
- *      var alice = {
- *        name: 'ALICE',
- *        age: 101
- *      };
- *      var favorite = R.prop('favoriteLibrary');
- *      var favoriteWithDefault = R.propOr('Ramda', 'favoriteLibrary');
- *
- *      favorite(alice);  //=> undefined
- *      favoriteWithDefault(alice);  //=> 'Ramda'
- */
-module.exports = _curry3(function propOr(val, p, obj) {
-  return (obj != null && _has(p, obj)) ? obj[p] : val;
-});
-
-},{"./internal/_curry3":360,"./internal/_has":370}],494:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Returns `true` if the specified object property satisfies the given
- * predicate; `false` otherwise.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category Logic
- * @sig (a -> Boolean) -> String -> {String: a} -> Boolean
- * @param {Function} pred
- * @param {String} name
- * @param {*} obj
- * @return {Boolean}
- * @see R.propEq, R.propIs
- * @example
- *
- *      R.propSatisfies(x => x > 0, 'x', {x: 1, y: 2}); //=> true
- */
-module.exports = _curry3(function propSatisfies(pred, name, obj) {
-  return pred(obj[name]);
-});
-
-},{"./internal/_curry3":360}],495:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Acts as multiple `prop`: array of keys in, array of values out. Preserves
- * order.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig [k] -> {k: v} -> [v]
- * @param {Array} ps The property names to fetch
- * @param {Object} obj The object to query
- * @return {Array} The corresponding values or partially applied function.
- * @example
- *
- *      R.props(['x', 'y'], {x: 1, y: 2}); //=> [1, 2]
- *      R.props(['c', 'a', 'b'], {b: 2, a: 1}); //=> [undefined, 1, 2]
- *
- *      var fullName = R.compose(R.join(' '), R.props(['first', 'last']));
- *      fullName({last: 'Bullet-Tooth', age: 33, first: 'Tony'}); //=> 'Tony Bullet-Tooth'
- */
-module.exports = _curry2(function props(ps, obj) {
-  var len = ps.length;
-  var out = [];
-  var idx = 0;
-
-  while (idx < len) {
-    out[idx] = obj[ps[idx]];
-    idx += 1;
-  }
-
-  return out;
-});
-
-},{"./internal/_curry2":359}],496:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _isNumber = require('./internal/_isNumber');
-
-
-/**
- * Returns a list of numbers from `from` (inclusive) to `to` (exclusive).
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig Number -> Number -> [Number]
- * @param {Number} from The first number in the list.
- * @param {Number} to One more than the last number in the list.
- * @return {Array} The list of numbers in tthe set `[a, b)`.
- * @example
- *
- *      R.range(1, 5);    //=> [1, 2, 3, 4]
- *      R.range(50, 53);  //=> [50, 51, 52]
- */
-module.exports = _curry2(function range(from, to) {
-  if (!(_isNumber(from) && _isNumber(to))) {
-    throw new TypeError('Both arguments to range must be numbers');
-  }
-  var result = [];
-  var n = from;
-  while (n < to) {
-    result.push(n);
-    n += 1;
-  }
-  return result;
-});
-
-},{"./internal/_curry2":359,"./internal/_isNumber":377}],497:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var _reduce = require('./internal/_reduce');
-
-
-/**
- * Returns a single item by iterating through the list, successively calling
- * the iterator function and passing it an accumulator value and the current
- * value from the array, and then passing the result to the next call.
- *
- * The iterator function receives two values: *(acc, value)*. It may use
- * `R.reduced` to shortcut the iteration.
- *
- * The arguments' order of `reduceRight`'s iterator function is *(value, acc)*.
- *
- * Note: `R.reduce` does not skip deleted or unassigned indices (sparse
- * arrays), unlike the native `Array.prototype.reduce` method. For more details
- * on this behavior, see:
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#Description
- *
- * Dispatches to the `reduce` method of the third argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig ((a, b) -> a) -> a -> [b] -> a
- * @param {Function} fn The iterator function. Receives two values, the accumulator and the
- *        current element from the array.
- * @param {*} acc The accumulator value.
- * @param {Array} list The list to iterate over.
- * @return {*} The final, accumulated value.
- * @see R.reduced, R.addIndex, R.reduceRight
- * @example
- *
- *      R.reduce(R.subtract, 0, [1, 2, 3, 4]) // => ((((0 - 1) - 2) - 3) - 4) = -10
- *                -               -10
- *               / \              / \
- *              -   4           -6   4
- *             / \              / \
- *            -   3   ==>     -3   3
- *           / \              / \
- *          -   2           -1   2
- *         / \              / \
- *        0   1            0   1
- *
- * @symb R.reduce(f, a, [b, c, d]) = f(f(f(a, b), c), d)
- */
-module.exports = _curry3(_reduce);
-
-},{"./internal/_curry3":360,"./internal/_reduce":390}],498:[function(require,module,exports){
-var _curryN = require('./internal/_curryN');
-var _dispatchable = require('./internal/_dispatchable');
-var _has = require('./internal/_has');
-var _reduce = require('./internal/_reduce');
-var _xreduceBy = require('./internal/_xreduceBy');
-
-
-/**
- * Groups the elements of the list according to the result of calling
- * the String-returning function `keyFn` on each element and reduces the elements
- * of each group to a single value via the reducer function `valueFn`.
- *
- * This function is basically a more general `groupBy` function.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.20.0
- * @category List
- * @sig ((a, b) -> a) -> a -> (b -> String) -> [b] -> {String: a}
- * @param {Function} valueFn The function that reduces the elements of each group to a single
- *        value. Receives two values, accumulator for a particular group and the current element.
- * @param {*} acc The (initial) accumulator value for each group.
- * @param {Function} keyFn The function that maps the list's element into a key.
- * @param {Array} list The array to group.
- * @return {Object} An object with the output of `keyFn` for keys, mapped to the output of
- *         `valueFn` for elements which produced that key when passed to `keyFn`.
- * @see R.groupBy, R.reduce
- * @example
- *
- *      var reduceToNamesBy = R.reduceBy((acc, student) => acc.concat(student.name), []);
- *      var namesByGrade = reduceToNamesBy(function(student) {
- *        var score = student.score;
- *        return score < 65 ? 'F' :
- *               score < 70 ? 'D' :
- *               score < 80 ? 'C' :
- *               score < 90 ? 'B' : 'A';
- *      });
- *      var students = [{name: 'Lucy', score: 92},
- *                      {name: 'Drew', score: 85},
- *                      // ...
- *                      {name: 'Bart', score: 62}];
- *      namesByGrade(students);
- *      // {
- *      //   'A': ['Lucy'],
- *      //   'B': ['Drew']
- *      //   // ...,
- *      //   'F': ['Bart']
- *      // }
- */
-module.exports = _curryN(4, [], _dispatchable([], _xreduceBy,
-  function reduceBy(valueFn, valueAcc, keyFn, list) {
-    return _reduce(function(acc, elt) {
-      var key = keyFn(elt);
-      acc[key] = valueFn(_has(key, acc) ? acc[key] : valueAcc, elt);
-      return acc;
-    }, {}, list);
-  }));
-
-},{"./internal/_curryN":361,"./internal/_dispatchable":362,"./internal/_has":370,"./internal/_reduce":390,"./internal/_xreduceBy":411}],499:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Returns a single item by iterating through the list, successively calling
- * the iterator function and passing it an accumulator value and the current
- * value from the array, and then passing the result to the next call.
- *
- * Similar to `reduce`, except moves through the input list from the right to
- * the left.
- *
- * The iterator function receives two values: *(value, acc)*, while the arguments'
- * order of `reduce`'s iterator function is *(acc, value)*.
- *
- * Note: `R.reduceRight` does not skip deleted or unassigned indices (sparse
- * arrays), unlike the native `Array.prototype.reduce` method. For more details
- * on this behavior, see:
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight#Description
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a, b -> b) -> b -> [a] -> b
- * @param {Function} fn The iterator function. Receives two values, the current element from the array
- *        and the accumulator.
- * @param {*} acc The accumulator value.
- * @param {Array} list The list to iterate over.
- * @return {*} The final, accumulated value.
- * @see R.reduce, R.addIndex
- * @example
- *
- *      R.reduceRight(R.subtract, 0, [1, 2, 3, 4]) // => (1 - (2 - (3 - (4 - 0)))) = -2
- *          -               -2
- *         / \              / \
- *        1   -            1   3
- *           / \              / \
- *          2   -     ==>    2  -1
- *             / \              / \
- *            3   -            3   4
- *               / \              / \
- *              4   0            4   0
- *
- * @symb R.reduceRight(f, a, [b, c, d]) = f(b, f(c, f(d, a)))
- */
-module.exports = _curry3(function reduceRight(fn, acc, list) {
-  var idx = list.length - 1;
-  while (idx >= 0) {
-    acc = fn(list[idx], acc);
-    idx -= 1;
-  }
-  return acc;
-});
-
-},{"./internal/_curry3":360}],500:[function(require,module,exports){
-var _curryN = require('./internal/_curryN');
-var _reduce = require('./internal/_reduce');
-var _reduced = require('./internal/_reduced');
-
-
-/**
- * Like `reduce`, `reduceWhile` returns a single item by iterating through
- * the list, successively calling the iterator function. `reduceWhile` also
- * takes a predicate that is evaluated before each step. If the predicate returns
- * `false`, it "short-circuits" the iteration and returns the current value
- * of the accumulator.
- *
- * @func
- * @memberOf R
- * @since v0.22.0
- * @category List
- * @sig ((a, b) -> Boolean) -> ((a, b) -> a) -> a -> [b] -> a
- * @param {Function} pred The predicate. It is passed the accumulator and the
- *        current element.
- * @param {Function} fn The iterator function. Receives two values, the
- *        accumulator and the current element.
- * @param {*} a The accumulator value.
- * @param {Array} list The list to iterate over.
- * @return {*} The final, accumulated value.
- * @see R.reduce, R.reduced
- * @example
- *
- *      var isOdd = (acc, x) => x % 2 === 1;
- *      var xs = [1, 3, 5, 60, 777, 800];
- *      R.reduceWhile(isOdd, R.add, 0, xs); //=> 9
- *
- *      var ys = [2, 4, 6]
- *      R.reduceWhile(isOdd, R.add, 111, ys); //=> 111
- */
-module.exports = _curryN(4, [], function _reduceWhile(pred, fn, a, list) {
-  return _reduce(function(acc, x) {
-    return pred(acc, x) ? fn(acc, x) : _reduced(acc);
-  }, a, list);
-});
-
-},{"./internal/_curryN":361,"./internal/_reduce":390,"./internal/_reduced":391}],501:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _reduced = require('./internal/_reduced');
-
-/**
- * Returns a value wrapped to indicate that it is the final value of the reduce
- * and transduce functions. The returned value should be considered a black
- * box: the internal structure is not guaranteed to be stable.
- *
- * Note: this optimization is unavailable to functions not explicitly listed
- * above. For instance, it is not currently supported by reduceRight.
- *
- * @func
- * @memberOf R
- * @since v0.15.0
- * @category List
- * @sig a -> *
- * @param {*} x The final value of the reduce.
- * @return {*} The wrapped value.
- * @see R.reduce, R.transduce
- * @example
- *
- *      R.reduce(
- *        R.pipe(R.add, R.when(R.gte(R.__, 10), R.reduced)),
- *        0,
- *        [1, 2, 3, 4, 5]) // 10
- */
-
-module.exports = _curry1(_reduced);
-
-},{"./internal/_curry1":358,"./internal/_reduced":391}],502:[function(require,module,exports){
-var _complement = require('./internal/_complement');
-var _curry2 = require('./internal/_curry2');
-var filter = require('./filter');
-
-
-/**
- * The complement of `filter`.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig Filterable f => (a -> Boolean) -> f a -> f a
- * @param {Function} pred
- * @param {Array} filterable
- * @return {Array}
- * @see R.filter, R.transduce, R.addIndex
- * @example
- *
- *      var isOdd = (n) => n % 2 === 1;
- *
- *      R.reject(isOdd, [1, 2, 3, 4]); //=> [2, 4]
- *
- *      R.reject(isOdd, {a: 1, b: 2, c: 3, d: 4}); //=> {b: 2, d: 4}
- */
-module.exports = _curry2(function reject(pred, filterable) {
-  return filter(_complement(pred), filterable);
-});
-
-},{"./filter":319,"./internal/_complement":353,"./internal/_curry2":359}],503:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Removes the sub-list of `list` starting at index `start` and containing
- * `count` elements. _Note that this is not destructive_: it returns a copy of
- * the list with the changes.
- * <small>No lists have been harmed in the application of this function.</small>
- *
- * @func
- * @memberOf R
- * @since v0.2.2
- * @category List
- * @sig Number -> Number -> [a] -> [a]
- * @param {Number} start The position to start removing elements
- * @param {Number} count The number of elements to remove
- * @param {Array} list The list to remove from
- * @return {Array} A new Array with `count` elements from `start` removed.
- * @example
- *
- *      R.remove(2, 3, [1,2,3,4,5,6,7,8]); //=> [1,2,6,7,8]
- */
-module.exports = _curry3(function remove(start, count, list) {
-  var result = Array.prototype.slice.call(list, 0);
-  result.splice(start, count);
-  return result;
-});
-
-},{"./internal/_curry3":360}],504:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var always = require('./always');
-var times = require('./times');
-
-
-/**
- * Returns a fixed list of size `n` containing a specified identical value.
- *
- * @func
- * @memberOf R
- * @since v0.1.1
- * @category List
- * @sig a -> n -> [a]
- * @param {*} value The value to repeat.
- * @param {Number} n The desired size of the output list.
- * @return {Array} A new array containing `n` `value`s.
- * @example
- *
- *      R.repeat('hi', 5); //=> ['hi', 'hi', 'hi', 'hi', 'hi']
- *
- *      var obj = {};
- *      var repeatedObjs = R.repeat(obj, 5); //=> [{}, {}, {}, {}, {}]
- *      repeatedObjs[0] === repeatedObjs[1]; //=> true
- * @symb R.repeat(a, 0) = []
- * @symb R.repeat(a, 1) = [a]
- * @symb R.repeat(a, 2) = [a, a]
- */
-module.exports = _curry2(function repeat(value, n) {
-  return times(always(value), n);
-});
-
-},{"./always":266,"./internal/_curry2":359,"./times":529}],505:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Replace a substring or regex match in a string with a replacement.
- *
- * @func
- * @memberOf R
- * @since v0.7.0
- * @category String
- * @sig RegExp|String -> String -> String -> String
- * @param {RegExp|String} pattern A regular expression or a substring to match.
- * @param {String} replacement The string to replace the matches with.
- * @param {String} str The String to do the search and replacement in.
- * @return {String} The result.
- * @example
- *
- *      R.replace('foo', 'bar', 'foo foo foo'); //=> 'bar foo foo'
- *      R.replace(/foo/, 'bar', 'foo foo foo'); //=> 'bar foo foo'
- *
- *      // Use the "g" (global) flag to replace all occurrences:
- *      R.replace(/foo/g, 'bar', 'foo foo foo'); //=> 'bar bar bar'
- */
-module.exports = _curry3(function replace(regex, replacement, str) {
-  return str.replace(regex, replacement);
-});
-
-},{"./internal/_curry3":360}],506:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _isString = require('./internal/_isString');
-
-
-/**
- * Returns a new list or string with the elements or characters in reverse
- * order.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig [a] -> [a]
- * @sig String -> String
- * @param {Array|String} list
- * @return {Array|String}
- * @example
- *
- *      R.reverse([1, 2, 3]);  //=> [3, 2, 1]
- *      R.reverse([1, 2]);     //=> [2, 1]
- *      R.reverse([1]);        //=> [1]
- *      R.reverse([]);         //=> []
- *
- *      R.reverse('abc');      //=> 'cba'
- *      R.reverse('ab');       //=> 'ba'
- *      R.reverse('a');        //=> 'a'
- *      R.reverse('');         //=> ''
- */
-module.exports = _curry1(function reverse(list) {
-  return _isString(list) ? list.split('').reverse().join('') :
-                           Array.prototype.slice.call(list, 0).reverse();
-});
-
-},{"./internal/_curry1":358,"./internal/_isString":381}],507:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Scan is similar to reduce, but returns a list of successively reduced values
- * from the left
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category List
- * @sig (a,b -> a) -> a -> [b] -> [a]
- * @param {Function} fn The iterator function. Receives two values, the accumulator and the
- *        current element from the array
- * @param {*} acc The accumulator value.
- * @param {Array} list The list to iterate over.
- * @return {Array} A list of all intermediately reduced values.
- * @example
- *
- *      var numbers = [1, 2, 3, 4];
- *      var factorials = R.scan(R.multiply, 1, numbers); //=> [1, 1, 2, 6, 24]
- * @symb R.scan(f, a, [b, c]) = [a, f(a, b), f(f(a, b), c)]
- */
-module.exports = _curry3(function scan(fn, acc, list) {
-  var idx = 0;
-  var len = list.length;
-  var result = [acc];
-  while (idx < len) {
-    acc = fn(acc, list[idx]);
-    result[idx + 1] = acc;
-    idx += 1;
-  }
-  return result;
-});
-
-},{"./internal/_curry3":360}],508:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var ap = require('./ap');
-var map = require('./map');
-var prepend = require('./prepend');
-var reduceRight = require('./reduceRight');
-
-
-/**
- * Transforms a [Traversable](https://github.com/fantasyland/fantasy-land#traversable)
- * of [Applicative](https://github.com/fantasyland/fantasy-land#applicative) into an
- * Applicative of Traversable.
- *
- * Dispatches to the `sequence` method of the second argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category List
- * @sig (Applicative f, Traversable t) => (a -> f a) -> t (f a) -> f (t a)
- * @param {Function} of
- * @param {*} traversable
- * @return {*}
- * @see R.traverse
- * @example
- *
- *      R.sequence(Maybe.of, [Just(1), Just(2), Just(3)]);   //=> Just([1, 2, 3])
- *      R.sequence(Maybe.of, [Just(1), Just(2), Nothing()]); //=> Nothing()
- *
- *      R.sequence(R.of, Just([1, 2, 3])); //=> [Just(1), Just(2), Just(3)]
- *      R.sequence(R.of, Nothing());       //=> [Nothing()]
- */
-module.exports = _curry2(function sequence(of, traversable) {
-  return typeof traversable.sequence === 'function' ?
-    traversable.sequence(of) :
-    reduceRight(function(x, acc) { return ap(map(prepend, x), acc); },
-                of([]),
-                traversable);
-});
-
-},{"./ap":270,"./internal/_curry2":359,"./map":441,"./prepend":487,"./reduceRight":499}],509:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var always = require('./always');
-var over = require('./over');
-
-
-/**
- * Returns the result of "setting" the portion of the given data structure
- * focused by the given lens to the given value.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category Object
- * @typedefn Lens s a = Functor f => (a -> f a) -> s -> f s
- * @sig Lens s a -> a -> s -> s
- * @param {Lens} lens
- * @param {*} v
- * @param {*} x
- * @return {*}
- * @see R.prop, R.lensIndex, R.lensProp
- * @example
- *
- *      var xLens = R.lensProp('x');
- *
- *      R.set(xLens, 4, {x: 1, y: 2});  //=> {x: 4, y: 2}
- *      R.set(xLens, 8, {x: 1, y: 2});  //=> {x: 8, y: 2}
- */
-module.exports = _curry3(function set(lens, v, x) {
-  return over(lens, always(v), x);
-});
-
-},{"./always":266,"./internal/_curry3":360,"./over":471}],510:[function(require,module,exports){
-var _checkForMethod = require('./internal/_checkForMethod');
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Returns the elements of the given list or string (or object with a `slice`
- * method) from `fromIndex` (inclusive) to `toIndex` (exclusive).
- *
- * Dispatches to the `slice` method of the third argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.4
- * @category List
- * @sig Number -> Number -> [a] -> [a]
- * @sig Number -> Number -> String -> String
- * @param {Number} fromIndex The start index (inclusive).
- * @param {Number} toIndex The end index (exclusive).
- * @param {*} list
- * @return {*}
- * @example
- *
- *      R.slice(1, 3, ['a', 'b', 'c', 'd']);        //=> ['b', 'c']
- *      R.slice(1, Infinity, ['a', 'b', 'c', 'd']); //=> ['b', 'c', 'd']
- *      R.slice(0, -1, ['a', 'b', 'c', 'd']);       //=> ['a', 'b', 'c']
- *      R.slice(-3, -1, ['a', 'b', 'c', 'd']);      //=> ['b', 'c']
- *      R.slice(0, 3, 'ramda');                     //=> 'ram'
- */
-module.exports = _curry3(_checkForMethod('slice', function slice(fromIndex, toIndex, list) {
-  return Array.prototype.slice.call(list, fromIndex, toIndex);
-}));
-
-},{"./internal/_checkForMethod":350,"./internal/_curry3":360}],511:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a copy of the list, sorted according to the comparator function,
- * which should accept two values at a time and return a negative number if the
- * first value is smaller, a positive number if it's larger, and zero if they
- * are equal. Please note that this is a **copy** of the list. It does not
- * modify the original.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a,a -> Number) -> [a] -> [a]
- * @param {Function} comparator A sorting function :: a -> b -> Int
- * @param {Array} list The list to sort
- * @return {Array} a new array with its elements sorted by the comparator function.
- * @example
- *
- *      var diff = function(a, b) { return a - b; };
- *      R.sort(diff, [4,2,7,5]); //=> [2, 4, 5, 7]
- */
-module.exports = _curry2(function sort(comparator, list) {
-  return Array.prototype.slice.call(list, 0).sort(comparator);
-});
-
-},{"./internal/_curry2":359}],512:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Sorts the list according to the supplied function.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig Ord b => (a -> b) -> [a] -> [a]
- * @param {Function} fn
- * @param {Array} list The list to sort.
- * @return {Array} A new list sorted by the keys generated by `fn`.
- * @example
- *
- *      var sortByFirstItem = R.sortBy(R.prop(0));
- *      var sortByNameCaseInsensitive = R.sortBy(R.compose(R.toLower, R.prop('name')));
- *      var pairs = [[-1, 1], [-2, 2], [-3, 3]];
- *      sortByFirstItem(pairs); //=> [[-3, 3], [-2, 2], [-1, 1]]
- *      var alice = {
- *        name: 'ALICE',
- *        age: 101
- *      };
- *      var bob = {
- *        name: 'Bob',
- *        age: -10
- *      };
- *      var clara = {
- *        name: 'clara',
- *        age: 314.159
- *      };
- *      var people = [clara, bob, alice];
- *      sortByNameCaseInsensitive(people); //=> [alice, bob, clara]
- */
-module.exports = _curry2(function sortBy(fn, list) {
-  return Array.prototype.slice.call(list, 0).sort(function(a, b) {
-    var aa = fn(a);
-    var bb = fn(b);
-    return aa < bb ? -1 : aa > bb ? 1 : 0;
-  });
-});
-
-},{"./internal/_curry2":359}],513:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Sorts a list according to a list of comparators.
- *
- * @func
- * @memberOf R
- * @since v0.23.0
- * @category Relation
- * @sig [a -> a -> Number] -> [a] -> [a]
- * @param {Array} functions A list of comparator functions.
- * @param {Array} list The list to sort.
- * @return {Array} A new list sorted according to the comarator functions.
- * @example
- *
- *      var alice = {
- *        name: 'alice',
- *        age: 40
- *      };
- *      var bob = {
- *        name: 'bob',
- *        age: 30
- *      };
- *      var clara = {
- *        name: 'clara',
- *        age: 40
- *      };
- *      var people = [clara, bob, alice];
- *      var ageNameSort = R.sortWith([
- *        R.descend(R.prop('age')),
- *        R.ascend(R.prop('name'))
- *      ]);
- *      ageNameSort(people); //=> [alice, clara, bob]
- */
-module.exports = _curry2(function sortWith(fns, list) {
-  return Array.prototype.slice.call(list, 0).sort(function(a, b) {
-    var result = 0;
-    var i = 0;
-    while (result === 0 && i < fns.length) {
-      result = fns[i](a, b);
-      i += 1;
-    }
-    return result;
-  });
-});
-
-},{"./internal/_curry2":359}],514:[function(require,module,exports){
-var invoker = require('./invoker');
-
-
-/**
- * Splits a string into an array of strings based on the given
- * separator.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category String
- * @sig (String | RegExp) -> String -> [String]
- * @param {String|RegExp} sep The pattern.
- * @param {String} str The string to separate into an array.
- * @return {Array} The array of strings from `str` separated by `str`.
- * @see R.join
- * @example
- *
- *      var pathComponents = R.split('/');
- *      R.tail(pathComponents('/usr/local/bin/node')); //=> ['usr', 'local', 'bin', 'node']
- *
- *      R.split('.', 'a.b.c.xyz.d'); //=> ['a', 'b', 'c', 'xyz', 'd']
- */
-module.exports = invoker(1, 'split');
-
-},{"./invoker":421}],515:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var length = require('./length');
-var slice = require('./slice');
-
-
-/**
- * Splits a given list or string at a given index.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category List
- * @sig Number -> [a] -> [[a], [a]]
- * @sig Number -> String -> [String, String]
- * @param {Number} index The index where the array/string is split.
- * @param {Array|String} array The array/string to be split.
- * @return {Array}
- * @example
- *
- *      R.splitAt(1, [1, 2, 3]);          //=> [[1], [2, 3]]
- *      R.splitAt(5, 'hello world');      //=> ['hello', ' world']
- *      R.splitAt(-1, 'foobar');          //=> ['fooba', 'r']
- */
-module.exports = _curry2(function splitAt(index, array) {
-  return [slice(0, index, array), slice(index, length(array), array)];
-});
-
-},{"./internal/_curry2":359,"./length":432,"./slice":510}],516:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var slice = require('./slice');
-
-
-/**
- * Splits a collection into slices of the specified length.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category List
- * @sig Number -> [a] -> [[a]]
- * @sig Number -> String -> [String]
- * @param {Number} n
- * @param {Array} list
- * @return {Array}
- * @example
- *
- *      R.splitEvery(3, [1, 2, 3, 4, 5, 6, 7]); //=> [[1, 2, 3], [4, 5, 6], [7]]
- *      R.splitEvery(3, 'foobarbaz'); //=> ['foo', 'bar', 'baz']
- */
-module.exports = _curry2(function splitEvery(n, list) {
-  if (n <= 0) {
-    throw new Error('First argument to splitEvery must be a positive integer');
-  }
-  var result = [];
-  var idx = 0;
-  while (idx < list.length) {
-    result.push(slice(idx, idx += n, list));
-  }
-  return result;
-});
-
-},{"./internal/_curry2":359,"./slice":510}],517:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Takes a list and a predicate and returns a pair of lists with the following properties:
- *
- *  - the result of concatenating the two output lists is equivalent to the input list;
- *  - none of the elements of the first output list satisfies the predicate; and
- *  - if the second output list is non-empty, its first element satisfies the predicate.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> [[a], [a]]
- * @param {Function} pred The predicate that determines where the array is split.
- * @param {Array} list The array to be split.
- * @return {Array}
- * @example
- *
- *      R.splitWhen(R.equals(2), [1, 2, 3, 1, 2, 3]);   //=> [[1], [2, 3, 1, 2, 3]]
- */
-module.exports = _curry2(function splitWhen(pred, list) {
-  var idx = 0;
-  var len = list.length;
-  var prefix = [];
-
-  while (idx < len && !pred(list[idx])) {
-    prefix.push(list[idx]);
-    idx += 1;
-  }
-
-  return [prefix, Array.prototype.slice.call(list, idx)];
-});
-
-},{"./internal/_curry2":359}],518:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Subtracts its second argument from its first argument.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Math
- * @sig Number -> Number -> Number
- * @param {Number} a The first value.
- * @param {Number} b The second value.
- * @return {Number} The result of `a - b`.
- * @see R.add
- * @example
- *
- *      R.subtract(10, 8); //=> 2
- *
- *      var minus5 = R.subtract(R.__, 5);
- *      minus5(17); //=> 12
- *
- *      var complementaryAngle = R.subtract(90);
- *      complementaryAngle(30); //=> 60
- *      complementaryAngle(72); //=> 18
- */
-module.exports = _curry2(function subtract(a, b) {
-  return Number(a) - Number(b);
-});
-
-},{"./internal/_curry2":359}],519:[function(require,module,exports){
-var add = require('./add');
-var reduce = require('./reduce');
-
-
-/**
- * Adds together all the elements of a list.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Math
- * @sig [Number] -> Number
- * @param {Array} list An array of numbers
- * @return {Number} The sum of all the numbers in the list.
- * @see R.reduce
- * @example
- *
- *      R.sum([2,4,6,8,100,1]); //=> 121
- */
-module.exports = reduce(add, 0);
-
-},{"./add":261,"./reduce":497}],520:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var concat = require('./concat');
-var difference = require('./difference');
-
-
-/**
- * Finds the set (i.e. no duplicates) of all elements contained in the first or
- * second list, but not both.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category Relation
- * @sig [*] -> [*] -> [*]
- * @param {Array} list1 The first list.
- * @param {Array} list2 The second list.
- * @return {Array} The elements in `list1` or `list2`, but not both.
- * @see R.symmetricDifferenceWith, R.difference, R.differenceWith
- * @example
- *
- *      R.symmetricDifference([1,2,3,4], [7,6,5,4,3]); //=> [1,2,7,6,5]
- *      R.symmetricDifference([7,6,5,4,3], [1,2,3,4]); //=> [7,6,5,1,2]
- */
-module.exports = _curry2(function symmetricDifference(list1, list2) {
-  return concat(difference(list1, list2), difference(list2, list1));
-});
-
-},{"./concat":290,"./difference":302,"./internal/_curry2":359}],521:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var concat = require('./concat');
-var differenceWith = require('./differenceWith');
-
-
-/**
- * Finds the set (i.e. no duplicates) of all elements contained in the first or
- * second list, but not both. Duplication is determined according to the value
- * returned by applying the supplied predicate to two list elements.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category Relation
- * @sig ((a, a) -> Boolean) -> [a] -> [a] -> [a]
- * @param {Function} pred A predicate used to test whether two items are equal.
- * @param {Array} list1 The first list.
- * @param {Array} list2 The second list.
- * @return {Array} The elements in `list1` or `list2`, but not both.
- * @see R.symmetricDifference, R.difference, R.differenceWith
- * @example
- *
- *      var eqA = R.eqBy(R.prop('a'));
- *      var l1 = [{a: 1}, {a: 2}, {a: 3}, {a: 4}];
- *      var l2 = [{a: 3}, {a: 4}, {a: 5}, {a: 6}];
- *      R.symmetricDifferenceWith(eqA, l1, l2); //=> [{a: 1}, {a: 2}, {a: 5}, {a: 6}]
- */
-module.exports = _curry3(function symmetricDifferenceWith(pred, list1, list2) {
-  return concat(differenceWith(pred, list1, list2), differenceWith(pred, list2, list1));
-});
-
-},{"./concat":290,"./differenceWith":303,"./internal/_curry3":360}],522:[function(require,module,exports){
-var _checkForMethod = require('./internal/_checkForMethod');
-var _curry1 = require('./internal/_curry1');
-var slice = require('./slice');
-
-
-/**
- * Returns all but the first element of the given list or string (or object
- * with a `tail` method).
- *
- * Dispatches to the `slice` method of the first argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig [a] -> [a]
- * @sig String -> String
- * @param {*} list
- * @return {*}
- * @see R.head, R.init, R.last
- * @example
- *
- *      R.tail([1, 2, 3]);  //=> [2, 3]
- *      R.tail([1, 2]);     //=> [2]
- *      R.tail([1]);        //=> []
- *      R.tail([]);         //=> []
- *
- *      R.tail('abc');  //=> 'bc'
- *      R.tail('ab');   //=> 'b'
- *      R.tail('a');    //=> ''
- *      R.tail('');     //=> ''
- */
-module.exports = _curry1(_checkForMethod('tail', slice(1, Infinity)));
-
-},{"./internal/_checkForMethod":350,"./internal/_curry1":358,"./slice":510}],523:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xtake = require('./internal/_xtake');
-var slice = require('./slice');
-
-
-/**
- * Returns the first `n` elements of the given list, string, or
- * transducer/transformer (or object with a `take` method).
- *
- * Dispatches to the `take` method of the second argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig Number -> [a] -> [a]
- * @sig Number -> String -> String
- * @param {Number} n
- * @param {*} list
- * @return {*}
- * @see R.drop
- * @example
- *
- *      R.take(1, ['foo', 'bar', 'baz']); //=> ['foo']
- *      R.take(2, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
- *      R.take(3, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
- *      R.take(4, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
- *      R.take(3, 'ramda');               //=> 'ram'
- *
- *      var personnel = [
- *        'Dave Brubeck',
- *        'Paul Desmond',
- *        'Eugene Wright',
- *        'Joe Morello',
- *        'Gerry Mulligan',
- *        'Bob Bates',
- *        'Joe Dodge',
- *        'Ron Crotty'
- *      ];
- *
- *      var takeFive = R.take(5);
- *      takeFive(personnel);
- *      //=> ['Dave Brubeck', 'Paul Desmond', 'Eugene Wright', 'Joe Morello', 'Gerry Mulligan']
- * @symb R.take(-1, [a, b]) = [a, b]
- * @symb R.take(0, [a, b]) = []
- * @symb R.take(1, [a, b]) = [a]
- * @symb R.take(2, [a, b]) = [a, b]
- */
-module.exports = _curry2(_dispatchable(['take'], _xtake, function take(n, xs) {
-  return slice(0, n < 0 ? Infinity : n, xs);
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xtake":412,"./slice":510}],524:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var drop = require('./drop');
-
-
-/**
- * Returns a new list containing the last `n` elements of the given list.
- * If `n > list.length`, returns a list of `list.length` elements.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category List
- * @sig Number -> [a] -> [a]
- * @sig Number -> String -> String
- * @param {Number} n The number of elements to return.
- * @param {Array} xs The collection to consider.
- * @return {Array}
- * @see R.dropLast
- * @example
- *
- *      R.takeLast(1, ['foo', 'bar', 'baz']); //=> ['baz']
- *      R.takeLast(2, ['foo', 'bar', 'baz']); //=> ['bar', 'baz']
- *      R.takeLast(3, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
- *      R.takeLast(4, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
- *      R.takeLast(3, 'ramda');               //=> 'mda'
- */
-module.exports = _curry2(function takeLast(n, xs) {
-  return drop(n >= 0 ? xs.length - n : 0, xs);
-});
-
-},{"./drop":307,"./internal/_curry2":359}],525:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a new list containing the last `n` elements of a given list, passing
- * each value to the supplied predicate function, and terminating when the
- * predicate function returns `false`. Excludes the element that caused the
- * predicate function to fail. The predicate function is passed one argument:
- * *(value)*.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> [a]
- * @param {Function} fn The function called per iteration.
- * @param {Array} list The collection to iterate over.
- * @return {Array} A new array.
- * @see R.dropLastWhile, R.addIndex
- * @example
- *
- *      var isNotOne = x => x !== 1;
- *
- *      R.takeLastWhile(isNotOne, [1, 2, 3, 4]); //=> [2, 3, 4]
- */
-module.exports = _curry2(function takeLastWhile(fn, list) {
-  var idx = list.length - 1;
-  while (idx >= 0 && fn(list[idx])) {
-    idx -= 1;
-  }
-  return Array.prototype.slice.call(list, idx + 1);
-});
-
-},{"./internal/_curry2":359}],526:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _dispatchable = require('./internal/_dispatchable');
-var _xtakeWhile = require('./internal/_xtakeWhile');
-
-
-/**
- * Returns a new list containing the first `n` elements of a given list,
- * passing each value to the supplied predicate function, and terminating when
- * the predicate function returns `false`. Excludes the element that caused the
- * predicate function to fail. The predicate function is passed one argument:
- * *(value)*.
- *
- * Dispatches to the `takeWhile` method of the second argument, if present.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a -> Boolean) -> [a] -> [a]
- * @param {Function} fn The function called per iteration.
- * @param {Array} list The collection to iterate over.
- * @return {Array} A new array.
- * @see R.dropWhile, R.transduce, R.addIndex
- * @example
- *
- *      var isNotFour = x => x !== 4;
- *
- *      R.takeWhile(isNotFour, [1, 2, 3, 4, 3, 2, 1]); //=> [1, 2, 3]
- */
-module.exports = _curry2(_dispatchable(['takeWhile'], _xtakeWhile, function takeWhile(fn, list) {
-  var idx = 0;
-  var len = list.length;
-  while (idx < len && fn(list[idx])) {
-    idx += 1;
-  }
-  return Array.prototype.slice.call(list, 0, idx);
-}));
-
-},{"./internal/_curry2":359,"./internal/_dispatchable":362,"./internal/_xtakeWhile":413}],527:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Runs the given function with the supplied object, then returns the object.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (a -> *) -> a -> a
- * @param {Function} fn The function to call with `x`. The return value of `fn` will be thrown away.
- * @param {*} x
- * @return {*} `x`.
- * @example
- *
- *      var sayX = x => console.log('x is ' + x);
- *      R.tap(sayX, 100); //=> 100
- *      // logs 'x is 100'
- * @symb R.tap(f, a) = a
- */
-module.exports = _curry2(function tap(fn, x) {
-  fn(x);
-  return x;
-});
-
-},{"./internal/_curry2":359}],528:[function(require,module,exports){
-var _cloneRegExp = require('./internal/_cloneRegExp');
-var _curry2 = require('./internal/_curry2');
-var _isRegExp = require('./internal/_isRegExp');
-var toString = require('./toString');
-
-
-/**
- * Determines whether a given string matches a given regular expression.
- *
- * @func
- * @memberOf R
- * @since v0.12.0
- * @category String
- * @sig RegExp -> String -> Boolean
- * @param {RegExp} pattern
- * @param {String} str
- * @return {Boolean}
- * @see R.match
- * @example
- *
- *      R.test(/^x/, 'xyz'); //=> true
- *      R.test(/^y/, 'xyz'); //=> false
- */
-module.exports = _curry2(function test(pattern, str) {
-  if (!_isRegExp(pattern)) {
-    throw new TypeError('‘test’ requires a value of type RegExp as its first argument; received ' + toString(pattern));
-  }
-  return _cloneRegExp(pattern).test(str);
-});
-
-},{"./internal/_cloneRegExp":352,"./internal/_curry2":359,"./internal/_isRegExp":380,"./toString":533}],529:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Calls an input function `n` times, returning an array containing the results
- * of those function calls.
- *
- * `fn` is passed one argument: The current value of `n`, which begins at `0`
- * and is gradually incremented to `n - 1`.
- *
- * @func
- * @memberOf R
- * @since v0.2.3
- * @category List
- * @sig (Number -> a) -> Number -> [a]
- * @param {Function} fn The function to invoke. Passed one argument, the current value of `n`.
- * @param {Number} n A value between `0` and `n - 1`. Increments after each function call.
- * @return {Array} An array containing the return values of all calls to `fn`.
- * @example
- *
- *      R.times(R.identity, 5); //=> [0, 1, 2, 3, 4]
- * @symb R.times(f, 0) = []
- * @symb R.times(f, 1) = [f(0)]
- * @symb R.times(f, 2) = [f(0), f(1)]
- */
-module.exports = _curry2(function times(fn, n) {
-  var len = Number(n);
-  var idx = 0;
-  var list;
-
-  if (len < 0 || isNaN(len)) {
-    throw new RangeError('n must be a non-negative number');
-  }
-  list = new Array(len);
-  while (idx < len) {
-    list[idx] = fn(idx);
-    idx += 1;
-  }
-  return list;
-});
-
-},{"./internal/_curry2":359}],530:[function(require,module,exports){
-var invoker = require('./invoker');
-
-
-/**
- * The lower case version of a string.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category String
- * @sig String -> String
- * @param {String} str The string to lower case.
- * @return {String} The lower case version of `str`.
- * @see R.toUpper
- * @example
- *
- *      R.toLower('XYZ'); //=> 'xyz'
- */
-module.exports = invoker(0, 'toLowerCase');
-
-},{"./invoker":421}],531:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _has = require('./internal/_has');
-
-
-/**
- * Converts an object into an array of key, value arrays. Only the object's
- * own properties are used.
- * Note that the order of the output array is not guaranteed to be consistent
- * across different JS platforms.
- *
- * @func
- * @memberOf R
- * @since v0.4.0
- * @category Object
- * @sig {String: *} -> [[String,*]]
- * @param {Object} obj The object to extract from
- * @return {Array} An array of key, value arrays from the object's own properties.
- * @see R.fromPairs
- * @example
- *
- *      R.toPairs({a: 1, b: 2, c: 3}); //=> [['a', 1], ['b', 2], ['c', 3]]
- */
-module.exports = _curry1(function toPairs(obj) {
-  var pairs = [];
-  for (var prop in obj) {
-    if (_has(prop, obj)) {
-      pairs[pairs.length] = [prop, obj[prop]];
-    }
-  }
-  return pairs;
-});
-
-},{"./internal/_curry1":358,"./internal/_has":370}],532:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Converts an object into an array of key, value arrays. The object's own
- * properties and prototype properties are used. Note that the order of the
- * output array is not guaranteed to be consistent across different JS
- * platforms.
- *
- * @func
- * @memberOf R
- * @since v0.4.0
- * @category Object
- * @sig {String: *} -> [[String,*]]
- * @param {Object} obj The object to extract from
- * @return {Array} An array of key, value arrays from the object's own
- *         and prototype properties.
- * @example
- *
- *      var F = function() { this.x = 'X'; };
- *      F.prototype.y = 'Y';
- *      var f = new F();
- *      R.toPairsIn(f); //=> [['x','X'], ['y','Y']]
- */
-module.exports = _curry1(function toPairsIn(obj) {
-  var pairs = [];
-  for (var prop in obj) {
-    pairs[pairs.length] = [prop, obj[prop]];
-  }
-  return pairs;
-});
-
-},{"./internal/_curry1":358}],533:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var _toString = require('./internal/_toString');
-
-
-/**
- * Returns the string representation of the given value. `eval`'ing the output
- * should result in a value equivalent to the input value. Many of the built-in
- * `toString` methods do not satisfy this requirement.
- *
- * If the given value is an `[object Object]` with a `toString` method other
- * than `Object.prototype.toString`, this method is invoked with no arguments
- * to produce the return value. This means user-defined constructor functions
- * can provide a suitable `toString` method. For example:
- *
- *     function Point(x, y) {
- *       this.x = x;
- *       this.y = y;
- *     }
- *
- *     Point.prototype.toString = function() {
- *       return 'new Point(' + this.x + ', ' + this.y + ')';
- *     };
- *
- *     R.toString(new Point(1, 2)); //=> 'new Point(1, 2)'
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category String
- * @sig * -> String
- * @param {*} val
- * @return {String}
- * @example
- *
- *      R.toString(42); //=> '42'
- *      R.toString('abc'); //=> '"abc"'
- *      R.toString([1, 2, 3]); //=> '[1, 2, 3]'
- *      R.toString({foo: 1, bar: 2, baz: 3}); //=> '{"bar": 2, "baz": 3, "foo": 1}'
- *      R.toString(new Date('2001-02-03T04:05:06Z')); //=> 'new Date("2001-02-03T04:05:06.000Z")'
- */
-module.exports = _curry1(function toString(val) { return _toString(val, []); });
-
-},{"./internal/_curry1":358,"./internal/_toString":394}],534:[function(require,module,exports){
-var invoker = require('./invoker');
-
-
-/**
- * The upper case version of a string.
- *
- * @func
- * @memberOf R
- * @since v0.9.0
- * @category String
- * @sig String -> String
- * @param {String} str The string to upper case.
- * @return {String} The upper case version of `str`.
- * @see R.toLower
- * @example
- *
- *      R.toUpper('abc'); //=> 'ABC'
- */
-module.exports = invoker(0, 'toUpperCase');
-
-},{"./invoker":421}],535:[function(require,module,exports){
-var _reduce = require('./internal/_reduce');
-var _xwrap = require('./internal/_xwrap');
-var curryN = require('./curryN');
-
-
-/**
- * Initializes a transducer using supplied iterator function. Returns a single
- * item by iterating through the list, successively calling the transformed
- * iterator function and passing it an accumulator value and the current value
- * from the array, and then passing the result to the next call.
- *
- * The iterator function receives two values: *(acc, value)*. It will be
- * wrapped as a transformer to initialize the transducer. A transformer can be
- * passed directly in place of an iterator function. In both cases, iteration
- * may be stopped early with the `R.reduced` function.
- *
- * A transducer is a function that accepts a transformer and returns a
- * transformer and can be composed directly.
- *
- * A transformer is an an object that provides a 2-arity reducing iterator
- * function, step, 0-arity initial value function, init, and 1-arity result
- * extraction function, result. The step function is used as the iterator
- * function in reduce. The result function is used to convert the final
- * accumulator into the return type and in most cases is R.identity. The init
- * function can be used to provide an initial accumulator, but is ignored by
- * transduce.
- *
- * The iteration is performed with R.reduce after initializing the transducer.
- *
- * @func
- * @memberOf R
- * @since v0.12.0
- * @category List
- * @sig (c -> c) -> (a,b -> a) -> a -> [b] -> a
- * @param {Function} xf The transducer function. Receives a transformer and returns a transformer.
- * @param {Function} fn The iterator function. Receives two values, the accumulator and the
- *        current element from the array. Wrapped as transformer, if necessary, and used to
- *        initialize the transducer
- * @param {*} acc The initial accumulator value.
- * @param {Array} list The list to iterate over.
- * @return {*} The final, accumulated value.
- * @see R.reduce, R.reduced, R.into
- * @example
- *
- *      var numbers = [1, 2, 3, 4];
- *      var transducer = R.compose(R.map(R.add(1)), R.take(2));
- *
- *      R.transduce(transducer, R.flip(R.append), [], numbers); //=> [2, 3]
- */
-module.exports = curryN(4, function transduce(xf, fn, acc, list) {
-  return _reduce(xf(typeof fn === 'function' ? _xwrap(fn) : fn), acc, list);
-});
-
-},{"./curryN":298,"./internal/_reduce":390,"./internal/_xwrap":414}],536:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Transposes the rows and columns of a 2D list.
- * When passed a list of `n` lists of length `x`,
- * returns a list of `x` lists of length `n`.
- *
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category List
- * @sig [[a]] -> [[a]]
- * @param {Array} list A 2D list
- * @return {Array} A 2D list
- * @example
- *
- *      R.transpose([[1, 'a'], [2, 'b'], [3, 'c']]) //=> [[1, 2, 3], ['a', 'b', 'c']]
- *      R.transpose([[1, 2, 3], ['a', 'b', 'c']]) //=> [[1, 'a'], [2, 'b'], [3, 'c']]
- *
- * If some of the rows are shorter than the following rows, their elements are skipped:
- *
- *      R.transpose([[10, 11], [20], [], [30, 31, 32]]) //=> [[10, 20, 30], [11, 31], [32]]
- * @symb R.transpose([[a], [b], [c]]) = [a, b, c]
- * @symb R.transpose([[a, b], [c, d]]) = [[a, c], [b, d]]
- * @symb R.transpose([[a, b], [c]]) = [[a, c], [b]]
- */
-module.exports = _curry1(function transpose(outerlist) {
-  var i = 0;
-  var result = [];
-  while (i < outerlist.length) {
-    var innerlist = outerlist[i];
-    var j = 0;
-    while (j < innerlist.length) {
-      if (typeof result[j] === 'undefined') {
-        result[j] = [];
-      }
-      result[j].push(innerlist[j]);
-      j += 1;
-    }
-    i += 1;
-  }
-  return result;
-});
-
-},{"./internal/_curry1":358}],537:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var map = require('./map');
-var sequence = require('./sequence');
-
-
-/**
- * Maps an [Applicative](https://github.com/fantasyland/fantasy-land#applicative)-returning
- * function over a [Traversable](https://github.com/fantasyland/fantasy-land#traversable),
- * then uses [`sequence`](#sequence) to transform the resulting Traversable of Applicative
- * into an Applicative of Traversable.
- *
- * Dispatches to the `sequence` method of the third argument, if present.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category List
- * @sig (Applicative f, Traversable t) => (a -> f a) -> (a -> f b) -> t a -> f (t b)
- * @param {Function} of
- * @param {Function} f
- * @param {*} traversable
- * @return {*}
- * @see R.sequence
- * @example
- *
- *      // Returns `Nothing` if the given divisor is `0`
- *      safeDiv = n => d => d === 0 ? Nothing() : Just(n / d)
- *
- *      R.traverse(Maybe.of, safeDiv(10), [2, 4, 5]); //=> Just([5, 2.5, 2])
- *      R.traverse(Maybe.of, safeDiv(10), [2, 0, 5]); //=> Nothing
- */
-module.exports = _curry3(function traverse(of, f, traversable) {
-  return sequence(of, map(f, traversable));
-});
-
-},{"./internal/_curry3":360,"./map":441,"./sequence":508}],538:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Removes (strips) whitespace from both ends of the string.
- *
- * @func
- * @memberOf R
- * @since v0.6.0
- * @category String
- * @sig String -> String
- * @param {String} str The string to trim.
- * @return {String} Trimmed version of `str`.
- * @example
- *
- *      R.trim('   xyz  '); //=> 'xyz'
- *      R.map(R.trim, R.split(',', 'x, y, z')); //=> ['x', 'y', 'z']
- */
-module.exports = (function() {
-  var ws = '\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003' +
-           '\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028' +
-           '\u2029\uFEFF';
-  var zeroWidth = '\u200b';
-  var hasProtoTrim = (typeof String.prototype.trim === 'function');
-  if (!hasProtoTrim || (ws.trim() || !zeroWidth.trim())) {
-    return _curry1(function trim(str) {
-      var beginRx = new RegExp('^[' + ws + '][' + ws + ']*');
-      var endRx = new RegExp('[' + ws + '][' + ws + ']*$');
-      return str.replace(beginRx, '').replace(endRx, '');
-    });
-  } else {
-    return _curry1(function trim(str) {
-      return str.trim();
-    });
-  }
-}());
-
-},{"./internal/_curry1":358}],539:[function(require,module,exports){
-var _arity = require('./internal/_arity');
-var _concat = require('./internal/_concat');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * `tryCatch` takes two functions, a `tryer` and a `catcher`. The returned
- * function evaluates the `tryer`; if it does not throw, it simply returns the
- * result. If the `tryer` *does* throw, the returned function evaluates the
- * `catcher` function and returns its result. Note that for effective
- * composition with this function, both the `tryer` and `catcher` functions
- * must return the same type of results.
- *
- * @func
- * @memberOf R
- * @since v0.20.0
- * @category Function
- * @sig (...x -> a) -> ((e, ...x) -> a) -> (...x -> a)
- * @param {Function} tryer The function that may throw.
- * @param {Function} catcher The function that will be evaluated if `tryer` throws.
- * @return {Function} A new function that will catch exceptions and send then to the catcher.
- * @example
- *
- *      R.tryCatch(R.prop('x'), R.F)({x: true}); //=> true
- *      R.tryCatch(R.prop('x'), R.F)(null);      //=> false
- */
-module.exports = _curry2(function _tryCatch(tryer, catcher) {
-  return _arity(tryer.length, function() {
-    try {
-      return tryer.apply(this, arguments);
-    } catch (e) {
-      return catcher.apply(this, _concat([e], arguments));
-    }
-  });
-});
-
-},{"./internal/_arity":347,"./internal/_concat":354,"./internal/_curry2":359}],540:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Gives a single-word string description of the (native) type of a value,
- * returning such answers as 'Object', 'Number', 'Array', or 'Null'. Does not
- * attempt to distinguish user Object types any further, reporting them all as
- * 'Object'.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Type
- * @sig (* -> {*}) -> String
- * @param {*} val The value to test
- * @return {String}
- * @example
- *
- *      R.type({}); //=> "Object"
- *      R.type(1); //=> "Number"
- *      R.type(false); //=> "Boolean"
- *      R.type('s'); //=> "String"
- *      R.type(null); //=> "Null"
- *      R.type([]); //=> "Array"
- *      R.type(/[A-z]/); //=> "RegExp"
- */
-module.exports = _curry1(function type(val) {
-  return val === null      ? 'Null'      :
-         val === undefined ? 'Undefined' :
-         Object.prototype.toString.call(val).slice(8, -1);
-});
-
-},{"./internal/_curry1":358}],541:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Takes a function `fn`, which takes a single array argument, and returns a
- * function which:
- *
- *   - takes any number of positional arguments;
- *   - passes these arguments to `fn` as an array; and
- *   - returns the result.
- *
- * In other words, R.unapply derives a variadic function from a function which
- * takes an array. R.unapply is the inverse of R.apply.
- *
- * @func
- * @memberOf R
- * @since v0.8.0
- * @category Function
- * @sig ([*...] -> a) -> (*... -> a)
- * @param {Function} fn
- * @return {Function}
- * @see R.apply
- * @example
- *
- *      R.unapply(JSON.stringify)(1, 2, 3); //=> '[1,2,3]'
- * @symb R.unapply(f)(a, b) = f([a, b])
- */
-module.exports = _curry1(function unapply(fn) {
-  return function() {
-    return fn(Array.prototype.slice.call(arguments, 0));
-  };
-});
-
-},{"./internal/_curry1":358}],542:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var nAry = require('./nAry');
-
-
-/**
- * Wraps a function of any arity (including nullary) in a function that accepts
- * exactly 1 parameter. Any extraneous parameters will not be passed to the
- * supplied function.
- *
- * @func
- * @memberOf R
- * @since v0.2.0
- * @category Function
- * @sig (* -> b) -> (a -> b)
- * @param {Function} fn The function to wrap.
- * @return {Function} A new function wrapping `fn`. The new function is guaranteed to be of
- *         arity 1.
- * @example
- *
- *      var takesTwoArgs = function(a, b) {
- *        return [a, b];
- *      };
- *      takesTwoArgs.length; //=> 2
- *      takesTwoArgs(1, 2); //=> [1, 2]
- *
- *      var takesOneArg = R.unary(takesTwoArgs);
- *      takesOneArg.length; //=> 1
- *      // Only 1 argument is passed to the wrapped function
- *      takesOneArg(1, 2); //=> [1, undefined]
- * @symb R.unary(f)(a, b, c) = f(a)
- */
-module.exports = _curry1(function unary(fn) {
-  return nAry(1, fn);
-});
-
-},{"./internal/_curry1":358,"./nAry":460}],543:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var curryN = require('./curryN');
-
-
-/**
- * Returns a function of arity `n` from a (manually) curried function.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category Function
- * @sig Number -> (a -> b) -> (a -> c)
- * @param {Number} length The arity for the returned function.
- * @param {Function} fn The function to uncurry.
- * @return {Function} A new function.
- * @see R.curry
- * @example
- *
- *      var addFour = a => b => c => d => a + b + c + d;
- *
- *      var uncurriedAddFour = R.uncurryN(4, addFour);
- *      uncurriedAddFour(1, 2, 3, 4); //=> 10
- */
-module.exports = _curry2(function uncurryN(depth, fn) {
-  return curryN(depth, function() {
-    var currentDepth = 1;
-    var value = fn;
-    var idx = 0;
-    var endIdx;
-    while (currentDepth <= depth && typeof value === 'function') {
-      endIdx = currentDepth === depth ? arguments.length : idx + value.length;
-      value = value.apply(this, Array.prototype.slice.call(arguments, idx, endIdx));
-      currentDepth += 1;
-      idx = endIdx;
-    }
-    return value;
-  });
-});
-
-},{"./curryN":298,"./internal/_curry2":359}],544:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Builds a list from a seed value. Accepts an iterator function, which returns
- * either false to stop iteration or an array of length 2 containing the value
- * to add to the resulting list and the seed to be used in the next call to the
- * iterator function.
- *
- * The iterator function receives one argument: *(seed)*.
- *
- * @func
- * @memberOf R
- * @since v0.10.0
- * @category List
- * @sig (a -> [b]) -> * -> [b]
- * @param {Function} fn The iterator function. receives one argument, `seed`, and returns
- *        either false to quit iteration or an array of length two to proceed. The element
- *        at index 0 of this array will be added to the resulting array, and the element
- *        at index 1 will be passed to the next call to `fn`.
- * @param {*} seed The seed value.
- * @return {Array} The final list.
- * @example
- *
- *      var f = n => n > 50 ? false : [-n, n + 10];
- *      R.unfold(f, 10); //=> [-10, -20, -30, -40, -50]
- * @symb R.unfold(f, x) = [f(x)[0], f(f(x)[1])[0], f(f(f(x)[1])[1])[0], ...]
- */
-module.exports = _curry2(function unfold(fn, seed) {
-  var pair = fn(seed);
-  var result = [];
-  while (pair && pair.length) {
-    result[result.length] = pair[0];
-    pair = fn(pair[1]);
-  }
-  return result;
-});
-
-},{"./internal/_curry2":359}],545:[function(require,module,exports){
-var _concat = require('./internal/_concat');
-var _curry2 = require('./internal/_curry2');
-var compose = require('./compose');
-var uniq = require('./uniq');
-
-
-/**
- * Combines two lists into a set (i.e. no duplicates) composed of the elements
- * of each list.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig [*] -> [*] -> [*]
- * @param {Array} as The first list.
- * @param {Array} bs The second list.
- * @return {Array} The first and second lists concatenated, with
- *         duplicates removed.
- * @example
- *
- *      R.union([1, 2, 3], [2, 3, 4]); //=> [1, 2, 3, 4]
- */
-module.exports = _curry2(compose(uniq, _concat));
-
-},{"./compose":287,"./internal/_concat":354,"./internal/_curry2":359,"./uniq":547}],546:[function(require,module,exports){
-var _concat = require('./internal/_concat');
-var _curry3 = require('./internal/_curry3');
-var uniqWith = require('./uniqWith');
-
-
-/**
- * Combines two lists into a set (i.e. no duplicates) composed of the elements
- * of each list. Duplication is determined according to the value returned by
- * applying the supplied predicate to two list elements.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Relation
- * @sig (a -> a -> Boolean) -> [*] -> [*] -> [*]
- * @param {Function} pred A predicate used to test whether two items are equal.
- * @param {Array} list1 The first list.
- * @param {Array} list2 The second list.
- * @return {Array} The first and second lists concatenated, with
- *         duplicates removed.
- * @see R.union
- * @example
- *
- *      var l1 = [{a: 1}, {a: 2}];
- *      var l2 = [{a: 1}, {a: 4}];
- *      R.unionWith(R.eqBy(R.prop('a')), l1, l2); //=> [{a: 1}, {a: 2}, {a: 4}]
- */
-module.exports = _curry3(function unionWith(pred, list1, list2) {
-  return uniqWith(pred, _concat(list1, list2));
-});
-
-},{"./internal/_concat":354,"./internal/_curry3":360,"./uniqWith":549}],547:[function(require,module,exports){
-var identity = require('./identity');
-var uniqBy = require('./uniqBy');
-
-
-/**
- * Returns a new list containing only one copy of each element in the original
- * list. `R.equals` is used to determine equality.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig [a] -> [a]
- * @param {Array} list The array to consider.
- * @return {Array} The list of unique items.
- * @example
- *
- *      R.uniq([1, 1, 2, 1]); //=> [1, 2]
- *      R.uniq([1, '1']);     //=> [1, '1']
- *      R.uniq([[42], [42]]); //=> [[42]]
- */
-module.exports = uniqBy(identity);
-
-},{"./identity":337,"./uniqBy":548}],548:[function(require,module,exports){
-var _Set = require('./internal/_Set');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a new list containing only one copy of each element in the original
- * list, based upon the value returned by applying the supplied function to
- * each list element. Prefers the first item if the supplied function produces
- * the same value on two items. `R.equals` is used for comparison.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category List
- * @sig (a -> b) -> [a] -> [a]
- * @param {Function} fn A function used to produce a value to use during comparisons.
- * @param {Array} list The array to consider.
- * @return {Array} The list of unique items.
- * @example
- *
- *      R.uniqBy(Math.abs, [-1, -5, 2, 10, 1, 2]); //=> [-1, -5, 2, 10]
- */
-module.exports = _curry2(function uniqBy(fn, list) {
-  var set = new _Set();
-  var result = [];
-  var idx = 0;
-  var appliedItem, item;
-
-  while (idx < list.length) {
-    item = list[idx];
-    appliedItem = fn(item);
-    if (set.add(appliedItem)) {
-      result.push(item);
-    }
-    idx += 1;
-  }
-  return result;
-});
-
-},{"./internal/_Set":345,"./internal/_curry2":359}],549:[function(require,module,exports){
-var _containsWith = require('./internal/_containsWith');
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a new list containing only one copy of each element in the original
- * list, based upon the value returned by applying the supplied predicate to
- * two list elements. Prefers the first item if two items compare equal based
- * on the predicate.
- *
- * @func
- * @memberOf R
- * @since v0.2.0
- * @category List
- * @sig (a, a -> Boolean) -> [a] -> [a]
- * @param {Function} pred A predicate used to test whether two items are equal.
- * @param {Array} list The array to consider.
- * @return {Array} The list of unique items.
- * @example
- *
- *      var strEq = R.eqBy(String);
- *      R.uniqWith(strEq)([1, '1', 2, 1]); //=> [1, 2]
- *      R.uniqWith(strEq)([{}, {}]);       //=> [{}]
- *      R.uniqWith(strEq)([1, '1', 1]);    //=> [1]
- *      R.uniqWith(strEq)(['1', 1, 1]);    //=> ['1']
- */
-module.exports = _curry2(function uniqWith(pred, list) {
-  var idx = 0;
-  var len = list.length;
-  var result = [];
-  var item;
-  while (idx < len) {
-    item = list[idx];
-    if (!_containsWith(pred, item, result)) {
-      result[result.length] = item;
-    }
-    idx += 1;
-  }
-  return result;
-});
-
-},{"./internal/_containsWith":356,"./internal/_curry2":359}],550:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Tests the final argument by passing it to the given predicate function. If
- * the predicate is not satisfied, the function will return the result of
- * calling the `whenFalseFn` function with the same argument. If the predicate
- * is satisfied, the argument is returned as is.
- *
- * @func
- * @memberOf R
- * @since v0.18.0
- * @category Logic
- * @sig (a -> Boolean) -> (a -> a) -> a -> a
- * @param {Function} pred        A predicate function
- * @param {Function} whenFalseFn A function to invoke when the `pred` evaluates
- *                               to a falsy value.
- * @param {*}        x           An object to test with the `pred` function and
- *                               pass to `whenFalseFn` if necessary.
- * @return {*} Either `x` or the result of applying `x` to `whenFalseFn`.
- * @see R.ifElse, R.when
- * @example
- *
- *      // coerceArray :: (a|[a]) -> [a]
- *      var coerceArray = R.unless(R.isArrayLike, R.of);
- *      coerceArray([1, 2, 3]); //=> [1, 2, 3]
- *      coerceArray(1);         //=> [1]
- */
-module.exports = _curry3(function unless(pred, whenFalseFn, x) {
-  return pred(x) ? x : whenFalseFn(x);
-});
-
-},{"./internal/_curry3":360}],551:[function(require,module,exports){
-var _identity = require('./internal/_identity');
-var chain = require('./chain');
-
-
-/**
- * Shorthand for `R.chain(R.identity)`, which removes one level of nesting from
- * any [Chain](https://github.com/fantasyland/fantasy-land#chain).
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category List
- * @sig Chain c => c (c a) -> c a
- * @param {*} list
- * @return {*}
- * @see R.flatten, R.chain
- * @example
- *
- *      R.unnest([1, [2], [[3]]]); //=> [1, 2, [3]]
- *      R.unnest([[1, 2], [3, 4], [5, 6]]); //=> [1, 2, 3, 4, 5, 6]
- */
-module.exports = chain(_identity);
-
-},{"./chain":282,"./internal/_identity":371}],552:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Takes a predicate, a transformation function, and an initial value,
- * and returns a value of the same type as the initial value.
- * It does so by applying the transformation until the predicate is satisfied,
- * at which point it returns the satisfactory value.
- *
- * @func
- * @memberOf R
- * @since v0.20.0
- * @category Logic
- * @sig (a -> Boolean) -> (a -> a) -> a -> a
- * @param {Function} pred A predicate function
- * @param {Function} fn The iterator function
- * @param {*} init Initial value
- * @return {*} Final value that satisfies predicate
- * @example
- *
- *      R.until(R.gt(R.__, 100), R.multiply(2))(1) // => 128
- */
-module.exports = _curry3(function until(pred, fn, init) {
-  var val = init;
-  while (!pred(val)) {
-    val = fn(val);
-  }
-  return val;
-});
-
-},{"./internal/_curry3":360}],553:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-var adjust = require('./adjust');
-var always = require('./always');
-
-
-/**
- * Returns a new copy of the array with the element at the provided index
- * replaced with the given value.
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category List
- * @sig Number -> a -> [a] -> [a]
- * @param {Number} idx The index to update.
- * @param {*} x The value to exist at the given index of the returned array.
- * @param {Array|Arguments} list The source array-like object to be updated.
- * @return {Array} A copy of `list` with the value at index `idx` replaced with `x`.
- * @see R.adjust
- * @example
- *
- *      R.update(1, 11, [0, 1, 2]);     //=> [0, 11, 2]
- *      R.update(1)(11)([0, 1, 2]);     //=> [0, 11, 2]
- * @symb R.update(-1, a, [b, c]) = [b, a]
- * @symb R.update(0, a, [b, c]) = [a, c]
- * @symb R.update(1, a, [b, c]) = [b, a]
- */
-module.exports = _curry3(function update(idx, x, list) {
-  return adjust(always(x), idx, list);
-});
-
-},{"./adjust":263,"./always":266,"./internal/_curry3":360}],554:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var curryN = require('./curryN');
-
-
-/**
- * Accepts a function `fn` and a list of transformer functions and returns a
- * new curried function. When the new function is invoked, it calls the
- * function `fn` with parameters consisting of the result of calling each
- * supplied handler on successive arguments to the new function.
- *
- * If more arguments are passed to the returned function than transformer
- * functions, those arguments are passed directly to `fn` as additional
- * parameters. If you expect additional arguments that don't need to be
- * transformed, although you can ignore them, it's best to pass an identity
- * function so that the new function reports the correct arity.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Function
- * @sig (x1 -> x2 -> ... -> z) -> [(a -> x1), (b -> x2), ...] -> (a -> b -> ... -> z)
- * @param {Function} fn The function to wrap.
- * @param {Array} transformers A list of transformer functions
- * @return {Function} The wrapped function.
- * @see R.converge
- * @example
- *
- *      R.useWith(Math.pow, [R.identity, R.identity])(3, 4); //=> 81
- *      R.useWith(Math.pow, [R.identity, R.identity])(3)(4); //=> 81
- *      R.useWith(Math.pow, [R.dec, R.inc])(3, 4); //=> 32
- *      R.useWith(Math.pow, [R.dec, R.inc])(3)(4); //=> 32
- * @symb R.useWith(f, [g, h])(a, b) = f(g(a), h(b))
- */
-module.exports = _curry2(function useWith(fn, transformers) {
-  return curryN(transformers.length, function() {
-    var args = [];
-    var idx = 0;
-    while (idx < transformers.length) {
-      args.push(transformers[idx].call(this, arguments[idx]));
-      idx += 1;
-    }
-    return fn.apply(this, args.concat(Array.prototype.slice.call(arguments, transformers.length)));
-  });
-});
-
-},{"./curryN":298,"./internal/_curry2":359}],555:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-var keys = require('./keys');
-
-
-/**
- * Returns a list of all the enumerable own properties of the supplied object.
- * Note that the order of the output array is not guaranteed across different
- * JS platforms.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category Object
- * @sig {k: v} -> [v]
- * @param {Object} obj The object to extract values from
- * @return {Array} An array of the values of the object's own properties.
- * @example
- *
- *      R.values({a: 1, b: 2, c: 3}); //=> [1, 2, 3]
- */
-module.exports = _curry1(function values(obj) {
-  var props = keys(obj);
-  var len = props.length;
-  var vals = [];
-  var idx = 0;
-  while (idx < len) {
-    vals[idx] = obj[props[idx]];
-    idx += 1;
-  }
-  return vals;
-});
-
-},{"./internal/_curry1":358,"./keys":428}],556:[function(require,module,exports){
-var _curry1 = require('./internal/_curry1');
-
-
-/**
- * Returns a list of all the properties, including prototype properties, of the
- * supplied object.
- * Note that the order of the output array is not guaranteed to be consistent
- * across different JS platforms.
- *
- * @func
- * @memberOf R
- * @since v0.2.0
- * @category Object
- * @sig {k: v} -> [v]
- * @param {Object} obj The object to extract values from
- * @return {Array} An array of the values of the object's own and prototype properties.
- * @example
- *
- *      var F = function() { this.x = 'X'; };
- *      F.prototype.y = 'Y';
- *      var f = new F();
- *      R.valuesIn(f); //=> ['X', 'Y']
- */
-module.exports = _curry1(function valuesIn(obj) {
-  var prop;
-  var vs = [];
-  for (prop in obj) {
-    vs[vs.length] = obj[prop];
-  }
-  return vs;
-});
-
-},{"./internal/_curry1":358}],557:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Returns a "view" of the given data structure, determined by the given lens.
- * The lens's focus determines which portion of the data structure is visible.
- *
- * @func
- * @memberOf R
- * @since v0.16.0
- * @category Object
- * @typedefn Lens s a = Functor f => (a -> f a) -> s -> f s
- * @sig Lens s a -> s -> a
- * @param {Lens} lens
- * @param {*} x
- * @return {*}
- * @see R.prop, R.lensIndex, R.lensProp
- * @example
- *
- *      var xLens = R.lensProp('x');
- *
- *      R.view(xLens, {x: 1, y: 2});  //=> 1
- *      R.view(xLens, {x: 4, y: 2});  //=> 4
- */
-module.exports = (function() {
-  // `Const` is a functor that effectively ignores the function given to `map`.
-  var Const = function(x) {
-    return {value: x, map: function() { return this; }};
-  };
-
-  return _curry2(function view(lens, x) {
-    // Using `Const` effectively ignores the setter function of the `lens`,
-    // leaving the value returned by the getter function unmodified.
-    return lens(Const)(x).value;
-  });
-}());
-
-},{"./internal/_curry2":359}],558:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Tests the final argument by passing it to the given predicate function. If
- * the predicate is satisfied, the function will return the result of calling
- * the `whenTrueFn` function with the same argument. If the predicate is not
- * satisfied, the argument is returned as is.
- *
- * @func
- * @memberOf R
- * @since v0.18.0
- * @category Logic
- * @sig (a -> Boolean) -> (a -> a) -> a -> a
- * @param {Function} pred       A predicate function
- * @param {Function} whenTrueFn A function to invoke when the `condition`
- *                              evaluates to a truthy value.
- * @param {*}        x          An object to test with the `pred` function and
- *                              pass to `whenTrueFn` if necessary.
- * @return {*} Either `x` or the result of applying `x` to `whenTrueFn`.
- * @see R.ifElse, R.unless
- * @example
- *
- *      // truncate :: String -> String
- *      var truncate = R.when(
- *        R.propSatisfies(R.gt(R.__, 10), 'length'),
- *        R.pipe(R.take(10), R.append('…'), R.join(''))
- *      );
- *      truncate('12345');         //=> '12345'
- *      truncate('0123456789ABC'); //=> '0123456789…'
- */
-module.exports = _curry3(function when(pred, whenTrueFn, x) {
-  return pred(x) ? whenTrueFn(x) : x;
-});
-
-},{"./internal/_curry3":360}],559:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var _has = require('./internal/_has');
-
-
-/**
- * Takes a spec object and a test object; returns true if the test satisfies
- * the spec. Each of the spec's own properties must be a predicate function.
- * Each predicate is applied to the value of the corresponding property of the
- * test object. `where` returns true if all the predicates return true, false
- * otherwise.
- *
- * `where` is well suited to declaratively expressing constraints for other
- * functions such as `filter` and `find`.
- *
- * @func
- * @memberOf R
- * @since v0.1.1
- * @category Object
- * @sig {String: (* -> Boolean)} -> {String: *} -> Boolean
- * @param {Object} spec
- * @param {Object} testObj
- * @return {Boolean}
- * @example
- *
- *      // pred :: Object -> Boolean
- *      var pred = R.where({
- *        a: R.equals('foo'),
- *        b: R.complement(R.equals('bar')),
- *        x: R.gt(__, 10),
- *        y: R.lt(__, 20)
- *      });
- *
- *      pred({a: 'foo', b: 'xxx', x: 11, y: 19}); //=> true
- *      pred({a: 'xxx', b: 'xxx', x: 11, y: 19}); //=> false
- *      pred({a: 'foo', b: 'bar', x: 11, y: 19}); //=> false
- *      pred({a: 'foo', b: 'xxx', x: 10, y: 19}); //=> false
- *      pred({a: 'foo', b: 'xxx', x: 11, y: 20}); //=> false
- */
-module.exports = _curry2(function where(spec, testObj) {
-  for (var prop in spec) {
-    if (_has(prop, spec) && !spec[prop](testObj[prop])) {
-      return false;
-    }
-  }
-  return true;
-});
-
-},{"./internal/_curry2":359,"./internal/_has":370}],560:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-var equals = require('./equals');
-var map = require('./map');
-var where = require('./where');
-
-
-/**
- * Takes a spec object and a test object; returns true if the test satisfies
- * the spec, false otherwise. An object satisfies the spec if, for each of the
- * spec's own properties, accessing that property of the object gives the same
- * value (in `R.equals` terms) as accessing that property of the spec.
- *
- * `whereEq` is a specialization of [`where`](#where).
- *
- * @func
- * @memberOf R
- * @since v0.14.0
- * @category Object
- * @sig {String: *} -> {String: *} -> Boolean
- * @param {Object} spec
- * @param {Object} testObj
- * @return {Boolean}
- * @see R.where
- * @example
- *
- *      // pred :: Object -> Boolean
- *      var pred = R.whereEq({a: 1, b: 2});
- *
- *      pred({a: 1});              //=> false
- *      pred({a: 1, b: 2});        //=> true
- *      pred({a: 1, b: 2, c: 3});  //=> true
- *      pred({a: 1, b: 1});        //=> false
- */
-module.exports = _curry2(function whereEq(spec, testObj) {
-  return where(map(equals, spec), testObj);
-});
-
-},{"./equals":317,"./internal/_curry2":359,"./map":441,"./where":559}],561:[function(require,module,exports){
-var _contains = require('./internal/_contains');
-var _curry2 = require('./internal/_curry2');
-var flip = require('./flip');
-var reject = require('./reject');
-
-
-/**
- * Returns a new list without values in the first argument.
- * `R.equals` is used to determine equality.
- *
- * Acts as a transducer if a transformer is given in list position.
- *
- * @func
- * @memberOf R
- * @since v0.19.0
- * @category List
- * @sig [a] -> [a] -> [a]
- * @param {Array} list1 The values to be removed from `list2`.
- * @param {Array} list2 The array to remove values from.
- * @return {Array} The new array without values in `list1`.
- * @see R.transduce
- * @example
- *
- *      R.without([1, 2], [1, 2, 1, 3, 4]); //=> [3, 4]
- */
-module.exports = _curry2(function(xs, list) {
-  return reject(flip(_contains)(xs), list);
-});
-
-},{"./flip":325,"./internal/_contains":355,"./internal/_curry2":359,"./reject":502}],562:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Creates a new list out of the two supplied by creating each possible pair
- * from the lists.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig [a] -> [b] -> [[a,b]]
- * @param {Array} as The first list.
- * @param {Array} bs The second list.
- * @return {Array} The list made by combining each possible pair from
- *         `as` and `bs` into pairs (`[a, b]`).
- * @example
- *
- *      R.xprod([1, 2], ['a', 'b']); //=> [[1, 'a'], [1, 'b'], [2, 'a'], [2, 'b']]
- * @symb R.xprod([a, b], [c, d]) = [[a, c], [a, d], [b, c], [b, d]]
- */
-module.exports = _curry2(function xprod(a, b) { // = xprodWith(prepend); (takes about 3 times as long...)
-  var idx = 0;
-  var ilen = a.length;
-  var j;
-  var jlen = b.length;
-  var result = [];
-  while (idx < ilen) {
-    j = 0;
-    while (j < jlen) {
-      result[result.length] = [a[idx], b[j]];
-      j += 1;
-    }
-    idx += 1;
-  }
-  return result;
-});
-
-},{"./internal/_curry2":359}],563:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Creates a new list out of the two supplied by pairing up equally-positioned
- * items from both lists. The returned list is truncated to the length of the
- * shorter of the two input lists.
- * Note: `zip` is equivalent to `zipWith(function(a, b) { return [a, b] })`.
- *
- * @func
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig [a] -> [b] -> [[a,b]]
- * @param {Array} list1 The first array to consider.
- * @param {Array} list2 The second array to consider.
- * @return {Array} The list made by pairing up same-indexed elements of `list1` and `list2`.
- * @example
- *
- *      R.zip([1, 2, 3], ['a', 'b', 'c']); //=> [[1, 'a'], [2, 'b'], [3, 'c']]
- * @symb R.zip([a, b, c], [d, e, f]) = [[a, d], [b, e], [c, f]]
- */
-module.exports = _curry2(function zip(a, b) {
-  var rv = [];
-  var idx = 0;
-  var len = Math.min(a.length, b.length);
-  while (idx < len) {
-    rv[idx] = [a[idx], b[idx]];
-    idx += 1;
-  }
-  return rv;
-});
-
-},{"./internal/_curry2":359}],564:[function(require,module,exports){
-var _curry2 = require('./internal/_curry2');
-
-
-/**
- * Creates a new object out of a list of keys and a list of values.
- * Key/value pairing is truncated to the length of the shorter of the two lists.
- * Note: `zipObj` is equivalent to `pipe(zipWith(pair), fromPairs)`.
- *
- * @func
- * @memberOf R
- * @since v0.3.0
- * @category List
- * @sig [String] -> [*] -> {String: *}
- * @param {Array} keys The array that will be properties on the output object.
- * @param {Array} values The list of values on the output object.
- * @return {Object} The object made by pairing up same-indexed elements of `keys` and `values`.
- * @example
- *
- *      R.zipObj(['a', 'b', 'c'], [1, 2, 3]); //=> {a: 1, b: 2, c: 3}
- */
-module.exports = _curry2(function zipObj(keys, values) {
-  var idx = 0;
-  var len = Math.min(keys.length, values.length);
-  var out = {};
-  while (idx < len) {
-    out[keys[idx]] = values[idx];
-    idx += 1;
-  }
-  return out;
-});
-
-},{"./internal/_curry2":359}],565:[function(require,module,exports){
-var _curry3 = require('./internal/_curry3');
-
-
-/**
- * Creates a new list out of the two supplied by applying the function to each
- * equally-positioned pair in the lists. The returned list is truncated to the
- * length of the shorter of the two input lists.
- *
- * @function
- * @memberOf R
- * @since v0.1.0
- * @category List
- * @sig (a,b -> c) -> [a] -> [b] -> [c]
- * @param {Function} fn The function used to combine the two elements into one value.
- * @param {Array} list1 The first array to consider.
- * @param {Array} list2 The second array to consider.
- * @return {Array} The list made by combining same-indexed elements of `list1` and `list2`
- *         using `fn`.
- * @example
- *
- *      var f = (x, y) => {
- *        // ...
- *      };
- *      R.zipWith(f, [1, 2, 3], ['a', 'b', 'c']);
- *      //=> [f(1, 'a'), f(2, 'b'), f(3, 'c')]
- * @symb R.zipWith(fn, [a, b, c], [d, e, f]) = [fn(a, d), fn(b, e), fn(c, f)]
- */
-module.exports = _curry3(function zipWith(fn, a, b) {
-  var rv = [];
-  var idx = 0;
-  var len = Math.min(a.length, b.length);
-  while (idx < len) {
-    rv[idx] = fn(a[idx], b[idx]);
-    idx += 1;
-  }
-  return rv;
-});
-
-},{"./internal/_curry3":360}],566:[function(require,module,exports){
+},{}],262:[function(require,module,exports){
 module.exports = require("./lib/randy.js");
-},{"./lib/randy.js":567}],567:[function(require,module,exports){
+},{"./lib/randy.js":263}],263:[function(require,module,exports){
 (function (process){
 /* -*- js-indent-level: 4; -*- */
 
@@ -53164,7 +43085,7 @@ var randy = (function () {
 })();
 
 }).call(this,require('_process'))
-},{"_process":110,"crypto":56,"os":100,"prng-well1024a":256}],568:[function(require,module,exports){
+},{"_process":114,"crypto":56,"os":101,"prng-well1024a":261}],264:[function(require,module,exports){
 (function (Buffer){
 
 /**
@@ -53528,7 +43449,7 @@ proto.ref = function ref () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"assert":16,"buffer":48,"debug":156,"ref":569,"util":145}],569:[function(require,module,exports){
+},{"assert":16,"buffer":47,"debug":161,"ref":265,"util":150}],265:[function(require,module,exports){
 (function (Buffer){
 
 var assert = require('assert')
@@ -54993,96 +44914,3705 @@ function overwriteInspect (inspect) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"assert":16,"bindings":155,"buffer":48,"debug":156}],570:[function(require,module,exports){
-var natural = require('natural');
-var nounInflector = new natural.NounInflector();
-var articles = require('articles/lib/Articles.js');
-var randy = require('randy');
-var _ = require('lodash');
+},{"assert":16,"bindings":160,"buffer":47,"debug":161}],266:[function(require,module,exports){
+(function (global){
+// Copyright (c) 2011, Chris Umbel
 
-// ---------------------------------------------
-//                  DEFAULTS
-// ---------------------------------------------
+exports.Vector = require('./vector');
+global.$V = exports.Vector.create;
+exports.Matrix = require('./matrix');
+global.$M = exports.Matrix.create;
+exports.Line = require('./line');
+global.$L = exports.Line.create;
+exports.Plane = require('./plane');
+global.$P = exports.Plane.create;
+exports.Line.Segment = require('./line.segment');
+exports.Sylvester = require('./sylvester');
 
-function Sentencer() {
-  var self = this;
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./line":267,"./line.segment":268,"./matrix":269,"./plane":270,"./sylvester":271,"./vector":272}],267:[function(require,module,exports){
+// Copyright (c) 2011, Chris Umbel, James Coglan
+var Vector = require('./vector');
+var Matrix = require('./matrix');
+var Plane = require('./plane');
+var Sylvester = require('./sylvester');
 
-  self._nouns      = require('./words/nouns.js');
-  self._adjectives = require('./words/adjectives.js');
+// Line class - depends on Vector, and some methods require Matrix and Plane.
 
-  self.actions = {
-    noun: function() {
-      return randy.choice(self._nouns);
-    },
-    a_noun: function() {
-      return articles.articlize( self.actions.noun() );
-    },
-    nouns: function() {
-      return nounInflector.pluralize( randy.choice(self._nouns) );
-    },
-    adjective: function() {
-      return randy.choice(self._adjectives);
-    },
-    an_adjective: function() {
-      return articles.articlize( self.actions.adjective() );
+function Line() {}
+Line.prototype = {
+
+  // Returns true if the argument occupies the same space as the line
+  eql: function(line) {
+    return (this.isParallelTo(line) && this.contains(line.anchor));
+  },
+
+  // Returns a copy of the line
+  dup: function() {
+    return Line.create(this.anchor, this.direction);
+  },
+
+  // Returns the result of translating the line by the given vector/array
+  translate: function(vector) {
+    var V = vector.elements || vector;
+    return Line.create([
+      this.anchor.elements[0] + V[0],
+      this.anchor.elements[1] + V[1],
+      this.anchor.elements[2] + (V[2] || 0)
+    ], this.direction);
+  },
+
+  // Returns true if the line is parallel to the argument. Here, 'parallel to'
+  // means that the argument's direction is either parallel or antiparallel to
+  // the line's own direction. A line is parallel to a plane if the two do not
+  // have a unique intersection.
+  isParallelTo: function(obj) {
+    if (obj.normal || (obj.start && obj.end)) { return obj.isParallelTo(this); }
+    var theta = this.direction.angleFrom(obj.direction);
+    return (Math.abs(theta) <= Sylvester.precision || Math.abs(theta - Math.PI) <= Sylvester.precision);
+  },
+
+  // Returns the line's perpendicular distance from the argument,
+  // which can be a point, a line or a plane
+  distanceFrom: function(obj) {
+    if (obj.normal || (obj.start && obj.end)) { return obj.distanceFrom(this); }
+    if (obj.direction) {
+      // obj is a line
+      if (this.isParallelTo(obj)) { return this.distanceFrom(obj.anchor); }
+      var N = this.direction.cross(obj.direction).toUnitVector().elements;
+      var A = this.anchor.elements, B = obj.anchor.elements;
+      return Math.abs((A[0] - B[0]) * N[0] + (A[1] - B[1]) * N[1] + (A[2] - B[2]) * N[2]);
+    } else {
+      // obj is a point
+      var P = obj.elements || obj;
+      var A = this.anchor.elements, D = this.direction.elements;
+      var PA1 = P[0] - A[0], PA2 = P[1] - A[1], PA3 = (P[2] || 0) - A[2];
+      var modPA = Math.sqrt(PA1*PA1 + PA2*PA2 + PA3*PA3);
+      if (modPA === 0) return 0;
+      // Assumes direction vector is normalized
+      var cosTheta = (PA1 * D[0] + PA2 * D[1] + PA3 * D[2]) / modPA;
+      var sin2 = 1 - cosTheta*cosTheta;
+      return Math.abs(modPA * Math.sqrt(sin2 < 0 ? 0 : sin2));
     }
-  };
+  },
 
-  self.configure = function(options) {
-    // merge actions
-    self.actions     = _.merge(self.actions, options.actions || {});
-    // overwrite nouns and adjectives if we got some
-    self._nouns      = options.nounList || self._nouns;
-    self._adjectives = options.adjectiveList || self._adjectives;
-  };
+  // Returns true iff the argument is a point on the line, or if the argument
+  // is a line segment lying within the receiver
+  contains: function(obj) {
+    if (obj.start && obj.end) { return this.contains(obj.start) && this.contains(obj.end); }
+    var dist = this.distanceFrom(obj);
+    return (dist !== null && dist <= Sylvester.precision);
+  },
 
-  self.use = function(options) {
-    var newInstance = new Sentencer();
-    newInstance.configure(options);
-    return newInstance;
-  };
-}
+  // Returns the distance from the anchor of the given point. Negative values are
+  // returned for points that are in the opposite direction to the line's direction from
+  // the line's anchor point.
+  positionOf: function(point) {
+    if (!this.contains(point)) { return null; }
+    var P = point.elements || point;
+    var A = this.anchor.elements, D = this.direction.elements;
+    return (P[0] - A[0]) * D[0] + (P[1] - A[1]) * D[1] + ((P[2] || 0) - A[2]) * D[2];
+  },
 
-// ---------------------------------------------
-//                  THE GOODS
-// ---------------------------------------------
+  // Returns true iff the line lies in the given plane
+  liesIn: function(plane) {
+    return plane.contains(this);
+  },
 
-Sentencer.prototype.make = function(template) {
-  var self = this;
+  // Returns true iff the line has a unique point of intersection with the argument
+  intersects: function(obj) {
+    if (obj.normal) { return obj.intersects(this); }
+    return (!this.isParallelTo(obj) && this.distanceFrom(obj) <= Sylvester.precision);
+  },
 
-  var sentence = template;
-  var occurrences = template.match(/\{\{(.+?)\}\}/g);
+  // Returns the unique intersection point with the argument, if one exists
+  intersectionWith: function(obj) {
+    if (obj.normal || (obj.start && obj.end)) { return obj.intersectionWith(this); }
+    if (!this.intersects(obj)) { return null; }
+    var P = this.anchor.elements, X = this.direction.elements,
+        Q = obj.anchor.elements, Y = obj.direction.elements;
+    var X1 = X[0], X2 = X[1], X3 = X[2], Y1 = Y[0], Y2 = Y[1], Y3 = Y[2];
+    var PsubQ1 = P[0] - Q[0], PsubQ2 = P[1] - Q[1], PsubQ3 = P[2] - Q[2];
+    var XdotQsubP = - X1*PsubQ1 - X2*PsubQ2 - X3*PsubQ3;
+    var YdotPsubQ = Y1*PsubQ1 + Y2*PsubQ2 + Y3*PsubQ3;
+    var XdotX = X1*X1 + X2*X2 + X3*X3;
+    var YdotY = Y1*Y1 + Y2*Y2 + Y3*Y3;
+    var XdotY = X1*Y1 + X2*Y2 + X3*Y3;
+    var k = (XdotQsubP * YdotY / XdotX + XdotY * YdotPsubQ) / (YdotY - XdotY * XdotY);
+    return Vector.create([P[0] + k*X1, P[1] + k*X2, P[2] + k*X3]);
+  },
 
-  if(occurrences && occurrences.length) {
-    for(var i = 0; i < occurrences.length; i++) {
-      var action = occurrences[i].replace('{{', '').replace('}}', '').trim();
-      var result = '';
-      if(action.match(/\((.+?)\)/)) {
-        try {
-          result = eval('self.actions.' + action);
-        }
-        catch(e) { }
-      } else {
-        if(self.actions[action]) {
-          result = self.actions[action]();
-        } else {
-          result = '{{ ' + action + ' }}';
-        }
-      }
-      sentence = sentence.replace(occurrences[i], result);
+  // Returns the point on the line that is closest to the given point or line/line segment
+  pointClosestTo: function(obj) {
+    if (obj.start && obj.end) {
+      // obj is a line segment
+      var P = obj.pointClosestTo(this);
+      return (P === null) ? null : this.pointClosestTo(P);
+    } else if (obj.direction) {
+      // obj is a line
+      if (this.intersects(obj)) { return this.intersectionWith(obj); }
+      if (this.isParallelTo(obj)) { return null; }
+      var D = this.direction.elements, E = obj.direction.elements;
+      var D1 = D[0], D2 = D[1], D3 = D[2], E1 = E[0], E2 = E[1], E3 = E[2];
+      // Create plane containing obj and the shared normal and intersect this with it
+      // Thank you: http://www.cgafaq.info/wiki/Line-line_distance
+      var x = (D3 * E1 - D1 * E3), y = (D1 * E2 - D2 * E1), z = (D2 * E3 - D3 * E2);
+      var N = [x * E3 - y * E2, y * E1 - z * E3, z * E2 - x * E1];
+      var P = Plane.create(obj.anchor, N);
+      return P.intersectionWith(this);
+    } else {
+      // obj is a point
+      var P = obj.elements || obj;
+      if (this.contains(P)) { return Vector.create(P); }
+      var A = this.anchor.elements, D = this.direction.elements;
+      var D1 = D[0], D2 = D[1], D3 = D[2], A1 = A[0], A2 = A[1], A3 = A[2];
+      var x = D1 * (P[1]-A2) - D2 * (P[0]-A1), y = D2 * ((P[2] || 0) - A3) - D3 * (P[1]-A2),
+          z = D3 * (P[0]-A1) - D1 * ((P[2] || 0) - A3);
+      var V = Vector.create([D2 * x - D3 * z, D3 * y - D1 * x, D1 * z - D2 * y]);
+      var k = this.distanceFrom(P) / V.modulus();
+      return Vector.create([
+        P[0] + V.elements[0] * k,
+        P[1] + V.elements[1] * k,
+        (P[2] || 0) + V.elements[2] * k
+      ]);
     }
+  },
+
+  // Returns a copy of the line rotated by t radians about the given line. Works by
+  // finding the argument's closest point to this line's anchor point (call this C) and
+  // rotating the anchor about C. Also rotates the line's direction about the argument's.
+  // Be careful with this - the rotation axis' direction affects the outcome!
+  rotate: function(t, line) {
+    // If we're working in 2D
+    if (typeof(line.direction) == 'undefined') { line = Line.create(line.to3D(), Vector.k); }
+    var R = Matrix.Rotation(t, line.direction).elements;
+    var C = line.pointClosestTo(this.anchor).elements;
+    var A = this.anchor.elements, D = this.direction.elements;
+    var C1 = C[0], C2 = C[1], C3 = C[2], A1 = A[0], A2 = A[1], A3 = A[2];
+    var x = A1 - C1, y = A2 - C2, z = A3 - C3;
+    return Line.create([
+      C1 + R[0][0] * x + R[0][1] * y + R[0][2] * z,
+      C2 + R[1][0] * x + R[1][1] * y + R[1][2] * z,
+      C3 + R[2][0] * x + R[2][1] * y + R[2][2] * z
+    ], [
+      R[0][0] * D[0] + R[0][1] * D[1] + R[0][2] * D[2],
+      R[1][0] * D[0] + R[1][1] * D[1] + R[1][2] * D[2],
+      R[2][0] * D[0] + R[2][1] * D[1] + R[2][2] * D[2]
+    ]);
+  },
+
+  // Returns a copy of the line with its direction vector reversed.
+  // Useful when using lines for rotations.
+  reverse: function() {
+    return Line.create(this.anchor, this.direction.x(-1));
+  },
+
+  // Returns the line's reflection in the given point or line
+  reflectionIn: function(obj) {
+    if (obj.normal) {
+      // obj is a plane
+      var A = this.anchor.elements, D = this.direction.elements;
+      var A1 = A[0], A2 = A[1], A3 = A[2], D1 = D[0], D2 = D[1], D3 = D[2];
+      var newA = this.anchor.reflectionIn(obj).elements;
+      // Add the line's direction vector to its anchor, then mirror that in the plane
+      var AD1 = A1 + D1, AD2 = A2 + D2, AD3 = A3 + D3;
+      var Q = obj.pointClosestTo([AD1, AD2, AD3]).elements;
+      var newD = [Q[0] + (Q[0] - AD1) - newA[0], Q[1] + (Q[1] - AD2) - newA[1], Q[2] + (Q[2] - AD3) - newA[2]];
+      return Line.create(newA, newD);
+    } else if (obj.direction) {
+      // obj is a line - reflection obtained by rotating PI radians about obj
+      return this.rotate(Math.PI, obj);
+    } else {
+      // obj is a point - just reflect the line's anchor in it
+      var P = obj.elements || obj;
+      return Line.create(this.anchor.reflectionIn([P[0], P[1], (P[2] || 0)]), this.direction);
+    }
+  },
+
+  // Set the line's anchor point and direction.
+  setVectors: function(anchor, direction) {
+    // Need to do this so that line's properties are not
+    // references to the arguments passed in
+    anchor = Vector.create(anchor);
+    direction = Vector.create(direction);
+    if (anchor.elements.length == 2) {anchor.elements.push(0); }
+    if (direction.elements.length == 2) { direction.elements.push(0); }
+    if (anchor.elements.length > 3 || direction.elements.length > 3) { return null; }
+    var mod = direction.modulus();
+    if (mod === 0) { return null; }
+    this.anchor = anchor;
+    this.direction = Vector.create([
+      direction.elements[0] / mod,
+      direction.elements[1] / mod,
+      direction.elements[2] / mod
+    ]);
+    return this;
   }
-  return sentence;
 };
 
-// ---------------------------------------------
-//                    DONE
-// ---------------------------------------------
+// Constructor function
+Line.create = function(anchor, direction) {
+  var L = new Line();
+  return L.setVectors(anchor, direction);
+};
 
-var instance = new Sentencer();
-module.exports = instance;
+// Axes
+Line.X = Line.create(Vector.Zero(3), Vector.i);
+Line.Y = Line.create(Vector.Zero(3), Vector.j);
+Line.Z = Line.create(Vector.Zero(3), Vector.k);
 
-},{"./words/adjectives.js":571,"./words/nouns.js":572,"articles/lib/Articles.js":153,"lodash":174,"natural":183,"randy":566}],571:[function(require,module,exports){
+module.exports = Line;
+
+},{"./matrix":269,"./plane":270,"./sylvester":271,"./vector":272}],268:[function(require,module,exports){
+// Copyright (c) 2011, Chris Umbel, James Coglan
+// Line.Segment class - depends on Line and its dependencies.
+
+var Line = require('./line');
+var Vector = require('./vector');
+
+Line.Segment = function() {};
+Line.Segment.prototype = {
+
+  // Returns true iff the line segment is equal to the argument
+  eql: function(segment) {
+    return (this.start.eql(segment.start) && this.end.eql(segment.end)) ||
+        (this.start.eql(segment.end) && this.end.eql(segment.start));
+  },
+
+  // Returns a copy of the line segment
+  dup: function() {
+    return Line.Segment.create(this.start, this.end);
+  },
+
+  // Returns the length of the line segment
+  length: function() {
+    var A = this.start.elements, B = this.end.elements;
+    var C1 = B[0] - A[0], C2 = B[1] - A[1], C3 = B[2] - A[2];
+    return Math.sqrt(C1*C1 + C2*C2 + C3*C3);
+  },
+
+  // Returns the line segment as a vector equal to its
+  // end point relative to its endpoint
+  toVector: function() {
+    var A = this.start.elements, B = this.end.elements;
+    return Vector.create([B[0] - A[0], B[1] - A[1], B[2] - A[2]]);
+  },
+
+  // Returns the segment's midpoint as a vector
+  midpoint: function() {
+    var A = this.start.elements, B = this.end.elements;
+    return Vector.create([(B[0] + A[0])/2, (B[1] + A[1])/2, (B[2] + A[2])/2]);
+  },
+
+  // Returns the plane that bisects the segment
+  bisectingPlane: function() {
+    return Plane.create(this.midpoint(), this.toVector());
+  },
+
+  // Returns the result of translating the line by the given vector/array
+  translate: function(vector) {
+    var V = vector.elements || vector;
+    var S = this.start.elements, E = this.end.elements;
+    return Line.Segment.create(
+      [S[0] + V[0], S[1] + V[1], S[2] + (V[2] || 0)],
+      [E[0] + V[0], E[1] + V[1], E[2] + (V[2] || 0)]
+    );
+  },
+
+  // Returns true iff the line segment is parallel to the argument. It simply forwards
+  // the method call onto its line property.
+  isParallelTo: function(obj) {
+    return this.line.isParallelTo(obj);
+  },
+
+  // Returns the distance between the argument and the line segment's closest point to the argument
+  distanceFrom: function(obj) {
+    var P = this.pointClosestTo(obj);
+    return (P === null) ? null : P.distanceFrom(obj);
+  },
+
+  // Returns true iff the given point lies on the segment
+  contains: function(obj) {
+    if (obj.start && obj.end) { return this.contains(obj.start) && this.contains(obj.end); }
+    var P = (obj.elements || obj).slice();
+    if (P.length == 2) { P.push(0); }
+    if (this.start.eql(P)) { return true; }
+    var S = this.start.elements;
+    var V = Vector.create([S[0] - P[0], S[1] - P[1], S[2] - (P[2] || 0)]);
+    var vect = this.toVector();
+    return V.isAntiparallelTo(vect) && V.modulus() <= vect.modulus();
+  },
+
+  // Returns true iff the line segment intersects the argument
+  intersects: function(obj) {
+    return (this.intersectionWith(obj) !== null);
+  },
+
+  // Returns the unique point of intersection with the argument
+  intersectionWith: function(obj) {
+    if (!this.line.intersects(obj)) { return null; }
+    var P = this.line.intersectionWith(obj);
+    return (this.contains(P) ? P : null);
+  },
+
+  // Returns the point on the line segment closest to the given object
+  pointClosestTo: function(obj) {
+    if (obj.normal) {
+      // obj is a plane
+      var V = this.line.intersectionWith(obj);
+      if (V === null) { return null; }
+      return this.pointClosestTo(V);
+    } else {
+      // obj is a line (segment) or point
+      var P = this.line.pointClosestTo(obj);
+      if (P === null) { return null; }
+      if (this.contains(P)) { return P; }
+      return (this.line.positionOf(P) < 0 ? this.start : this.end).dup();
+    }
+  },
+
+  // Set the start and end-points of the segment
+  setPoints: function(startPoint, endPoint) {
+    startPoint = Vector.create(startPoint).to3D();
+    endPoint = Vector.create(endPoint).to3D();
+    if (startPoint === null || endPoint === null) { return null; }
+    this.line = Line.create(startPoint, endPoint.subtract(startPoint));
+    this.start = startPoint;
+    this.end = endPoint;
+    return this;
+  }
+};
+
+// Constructor function
+Line.Segment.create = function(v1, v2) {
+  var S = new Line.Segment();
+  return S.setPoints(v1, v2);
+};
+
+module.exports = Line.Segment;
+
+},{"./line":267,"./vector":272}],269:[function(require,module,exports){
+// Copyright (c) 2011, Chris Umbel, James Coglan
+// Matrix class - depends on Vector.
+
+var fs = require('fs');
+var Sylvester = require('./sylvester');
+var Vector = require('./vector');
+
+// augment a matrix M with identity rows/cols
+function identSize(M, m, n, k) {
+    var e = M.elements;
+    var i = k - 1;
+
+    while(i--) {
+	var row = [];
+	
+	for(var j = 0; j < n; j++)
+	    row.push(j == i ? 1 : 0);
+	
+        e.unshift(row);
+    }
+    
+    for(var i = k - 1; i < m; i++) {
+        while(e[i].length < n)
+            e[i].unshift(0);
+    }
+
+    return $M(e);
+}
+
+function pca(X) {
+    var Sigma = X.transpose().x(X).x(1 / X.rows());
+    var svd = Sigma.svd();
+    return {U: svd.U, S: svd.S};
+}
+
+// singular value decomposition in pure javascript
+function svdJs() {
+    var A = this;
+    var V = Matrix.I(A.rows());
+    var S = A.transpose();
+    var U = Matrix.I(A.cols());
+    var err = Number.MAX_VALUE;
+    var i = 0;
+    var maxLoop = 100;
+
+    while(err > 2.2737e-13 && i < maxLoop) {
+        var qr = S.transpose().qrJs();
+        S = qr.R;
+        V = V.x(qr.Q);
+        qr = S.transpose().qrJs();
+        U = U.x(qr.Q);
+        S = qr.R;
+
+        var e = S.triu(1).unroll().norm();
+        var f = S.diagonal().norm();
+
+        if(f == 0)
+            f = 1;
+
+        err = e / f;
+
+        i++;
+    }
+
+    var ss = S.diagonal();
+    var s = [];
+
+    for(var i = 1; i <= ss.cols(); i++) {
+        var ssn = ss.e(i);
+        s.push(Math.abs(ssn));
+
+        if(ssn < 0) {
+            for(var j = 0; j < U.rows(); j++) {
+                V.elements[j][i - 1] = -(V.elements[j][i - 1]);
+            }
+        }
+    }
+
+    return {U: U, S: $V(s).toDiagonalMatrix(), V: V};
+}
+
+// singular value decomposition using LAPACK
+function svdPack() {
+    var result = lapack.sgesvd('A', 'A', this.elements);
+
+    return {
+        U: $M(result.U),
+        S: $M(result.S).column(1).toDiagonalMatrix(),
+	V: $M(result.VT).transpose()
+    };
+}
+
+// QR decomposition in pure javascript
+function qrJs() {
+    var m = this.rows();
+    var n = this.cols();
+    var Q = Matrix.I(m);
+    var A = this;
+    
+    for(var k = 1; k < Math.min(m, n); k++) {
+	var ak = A.slice(k, 0, k, k).col(1);
+	var oneZero = [1];
+	
+	while(oneZero.length <=  m - k)
+	    oneZero.push(0);
+	
+	oneZero = $V(oneZero);
+	var vk = ak.add(oneZero.x(ak.norm() * Math.sign(ak.e(1))));
+	var Vk = $M(vk);
+	var Hk = Matrix.I(m - k + 1).subtract(Vk.x(2).x(Vk.transpose()).div(Vk.transpose().x(Vk).e(1, 1)));
+	var Qk = identSize(Hk, m, n, k);
+	A = Qk.x(A);
+	// slow way to compute Q
+	Q = Q.x(Qk);
+    }
+    
+    return {Q: Q, R: A};
+}
+
+// QR decomposition using LAPACK
+function qrPack() {
+    var qr = lapack.qr(this.elements);
+
+    return {
+	Q: $M(qr.Q),
+	R: $M(qr.R)
+    };
+}
+
+function Matrix() {}
+Matrix.prototype = {
+    // solve a system of linear equations (work in progress)
+    solve: function(b) {
+	var lu = this.lu();
+	b = lu.P.x(b);
+	var y = lu.L.forwardSubstitute(b);
+	var x = lu.U.backSubstitute(y);
+	return lu.P.x(x);
+	//return this.inv().x(b);
+    },
+
+    // project a matrix onto a lower dim
+    pcaProject: function(k, U) {
+	var U = U || pca(this).U;
+	var Ureduce= U.slice(1, U.rows(), 1, k);
+	return {Z: this.x(Ureduce), U: U};
+    },
+
+    // recover a matrix to a higher dimension
+    pcaRecover: function(U) {
+	var k = this.cols();
+	var Ureduce = U.slice(1, U.rows(), 1, k);
+	return this.x(Ureduce.transpose());
+    },    
+
+    // grab the upper triangular part of the matrix
+    triu: function(k) {
+	if(!k)
+	    k = 0;
+	
+	return this.map(function(x, i, j) {
+	    return j - i >= k ? x : 0;
+	});
+    },
+
+    // unroll a matrix into a vector
+    unroll: function() {
+	var v = [];
+	
+	for(var i = 1; i <= this.cols(); i++) {
+	    for(var j = 1; j <= this.rows(); j++) {
+		v.push(this.e(j, i));
+	    }
+	}
+
+	return $V(v);
+    },
+
+    // return a sub-block of the matrix
+    slice: function(startRow, endRow, startCol, endCol) {
+	var x = [];
+	
+	if(endRow == 0)
+	    endRow = this.rows();
+	
+	if(endCol == 0)
+	    endCol = this.cols();
+
+	for(i = startRow; i <= endRow; i++) {
+	    var row = [];
+
+	    for(j = startCol; j <= endCol; j++) {
+		row.push(this.e(i, j));
+	    }
+
+	    x.push(row);
+	}
+
+	return $M(x);
+    },
+
+    // Returns element (i,j) of the matrix
+    e: function(i,j) {
+	if (i < 1 || i > this.elements.length || j < 1 || j > this.elements[0].length) { return null; }
+	return this.elements[i - 1][j - 1];
+    },
+
+    // Returns row k of the matrix as a vector
+    row: function(i) {
+	if (i > this.elements.length) { return null; }
+	return $V(this.elements[i - 1]);
+    },
+
+    // Returns column k of the matrix as a vector
+    col: function(j) {
+	if (j > this.elements[0].length) { return null; }
+	var col = [], n = this.elements.length;
+	for (var i = 0; i < n; i++) { col.push(this.elements[i][j - 1]); }
+	return $V(col);
+    },
+
+    // Returns the number of rows/columns the matrix has
+    dimensions: function() {
+	return {rows: this.elements.length, cols: this.elements[0].length};
+    },
+
+    // Returns the number of rows in the matrix
+    rows: function() {
+	return this.elements.length;
+    },
+
+    // Returns the number of columns in the matrix
+    cols: function() {
+	return this.elements[0].length;
+    },
+
+    approxEql: function(matrix) {
+	return this.eql(matrix, Sylvester.approxPrecision);
+    },
+
+    // Returns true iff the matrix is equal to the argument. You can supply
+    // a vector as the argument, in which case the receiver must be a
+    // one-column matrix equal to the vector.
+    eql: function(matrix, precision) {
+	var M = matrix.elements || matrix;
+	if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
+	if (this.elements.length != M.length ||
+            this.elements[0].length != M[0].length) { return false; }
+	var i = this.elements.length, nj = this.elements[0].length, j;
+	while (i--) { j = nj;
+		      while (j--) {
+			  if (Math.abs(this.elements[i][j] - M[i][j]) > (precision || Sylvester.precision)) { return false; }
+		      }
+		    }
+	return true;
+    },
+
+    // Returns a copy of the matrix
+    dup: function() {
+	return Matrix.create(this.elements);
+    },
+
+    // Maps the matrix to another matrix (of the same dimensions) according to the given function
+    map: function(fn) {
+    var els = [], i = this.elements.length, nj = this.elements[0].length, j;
+	while (i--) { j = nj;
+		      els[i] = [];
+		      while (j--) {
+			  els[i][j] = fn(this.elements[i][j], i + 1, j + 1);
+		      }
+		    }
+	return Matrix.create(els);
+    },
+
+    // Returns true iff the argument has the same dimensions as the matrix
+    isSameSizeAs: function(matrix) {
+	var M = matrix.elements || matrix;
+	if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
+	return (this.elements.length == M.length &&
+		this.elements[0].length == M[0].length);
+    },
+
+    // Returns the result of adding the argument to the matrix
+    add: function(matrix) {
+	if(typeof(matrix) == 'number') {
+	    return this.map(function(x, i, j) { return x + matrix});
+	} else {
+	    var M = matrix.elements || matrix;
+	    if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
+	    if (!this.isSameSizeAs(M)) { return null; }
+	    return this.map(function(x, i, j) { return x + M[i - 1][j - 1]; });
+	}
+    },
+
+    // Returns the result of subtracting the argument from the matrix
+    subtract: function(matrix) {
+	if(typeof(matrix) == 'number') {
+	    return this.map(function(x, i, j) { return x - matrix});
+	} else {
+	    var M = matrix.elements || matrix;
+	    if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
+	    if (!this.isSameSizeAs(M)) { return null; }
+	    return this.map(function(x, i, j) { return x - M[i - 1][j - 1]; });
+	}
+    },
+
+    // Returns true iff the matrix can multiply the argument from the left
+    canMultiplyFromLeft: function(matrix) {
+	var M = matrix.elements || matrix;
+	if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
+	// this.columns should equal matrix.rows
+	return (this.elements[0].length == M.length);
+    },
+
+    // Returns the result of a multiplication-style operation the matrix from the right by the argument.
+    // If the argument is a scalar then just operate on all the elements. If the argument is
+    // a vector, a vector is returned, which saves you having to remember calling
+    // col(1) on the result.
+    mulOp: function(matrix, op) {
+	if (!matrix.elements) {
+	    return this.map(function(x) { return op(x, matrix); });
+	}
+
+	var returnVector = matrix.modulus ? true : false;
+	var M = matrix.elements || matrix;
+	if (typeof(M[0][0]) == 'undefined') 
+	    M = Matrix.create(M).elements;
+	if (!this.canMultiplyFromLeft(M)) 
+	    return null; 
+	var e = this.elements, rowThis, rowElem, elements = [],
+        sum, m = e.length, n = M[0].length, o = e[0].length, i = m, j, k;
+
+	while (i--) {
+            rowElem = [];
+            rowThis = e[i];
+            j = n;
+
+            while (j--) {
+		sum = 0;
+		k = o;
+
+		while (k--) {
+                    sum += op(rowThis[k], M[k][j]);
+		}
+
+		rowElem[j] = sum;
+            }
+
+            elements[i] = rowElem;
+	}
+
+	var M = Matrix.create(elements);
+	return returnVector ? M.col(1) : M;
+    },
+
+    // Returns the result of dividing the matrix from the right by the argument.
+    // If the argument is a scalar then just divide all the elements. If the argument is
+    // a vector, a vector is returned, which saves you having to remember calling
+    // col(1) on the result.
+    div: function(matrix) {
+	return this.mulOp(matrix, function(x, y) { return x / y});
+    },
+
+    // Returns the result of multiplying the matrix from the right by the argument.
+    // If the argument is a scalar then just multiply all the elements. If the argument is
+    // a vector, a vector is returned, which saves you having to remember calling
+    // col(1) on the result.
+    multiply: function(matrix) {
+	return this.mulOp(matrix, function(x, y) { return x * y});
+    },
+
+    x: function(matrix) { return this.multiply(matrix); },
+
+    elementMultiply: function(v) {
+        return this.map(function(k, i, j) {
+            return v.e(i, j) * k;
+        });
+    },
+
+    // sum all elements in the matrix
+    sum: function() {
+        var sum = 0;
+
+        this.map(function(x) { sum += x;});
+
+        return sum;
+    },
+
+    // Returns a Vector of each colum averaged.
+    mean: function() {
+      var dim = this.dimensions();
+      var r = [];
+      for (var i = 1; i <= dim.cols; i++) {
+        r.push(this.col(i).sum() / dim.rows);
+      }
+      return $V(r);
+    },
+
+    column: function(n) {
+	return this.col(n);
+    },
+
+    // element-wise log
+    log: function() {
+	return this.map(function(x) { return Math.log(x); });
+    },
+
+    // Returns a submatrix taken from the matrix
+    // Argument order is: start row, start col, nrows, ncols
+    // Element selection wraps if the required index is outside the matrix's bounds, so you could
+    // use this to perform row/column cycling or copy-augmenting.
+    minor: function(a, b, c, d) {
+	var elements = [], ni = c, i, nj, j;
+	var rows = this.elements.length, cols = this.elements[0].length;
+	while (ni--) {
+	    i = c - ni - 1;
+	    elements[i] = [];
+	    nj = d;
+	    while (nj--) {
+		j = d - nj - 1;
+		elements[i][j] = this.elements[(a + i - 1) % rows][(b + j - 1) % cols];
+	    }
+	}
+	return Matrix.create(elements);
+    },
+
+    // Returns the transpose of the matrix
+    transpose: function() {
+    var rows = this.elements.length, i, cols = this.elements[0].length, j;
+	var elements = [], i = cols;
+	while (i--) {
+	    j = rows;
+	    elements[i] = [];
+	    while (j--) {
+		elements[i][j] = this.elements[j][i];
+	    }
+	}
+	return Matrix.create(elements);
+    },
+
+    // Returns true iff the matrix is square
+    isSquare: function() {
+	return (this.elements.length == this.elements[0].length);
+    },
+
+    // Returns the (absolute) largest element of the matrix
+    max: function() {
+	var m = 0, i = this.elements.length, nj = this.elements[0].length, j;
+	while (i--) {
+	    j = nj;
+	    while (j--) {
+		if (Math.abs(this.elements[i][j]) > Math.abs(m)) { m = this.elements[i][j]; }
+	    }
+	}
+	return m;
+    },
+
+    // Returns the indeces of the first match found by reading row-by-row from left to right
+    indexOf: function(x) {
+	var index = null, ni = this.elements.length, i, nj = this.elements[0].length, j;
+	for (i = 0; i < ni; i++) {
+	    for (j = 0; j < nj; j++) {
+		if (this.elements[i][j] == x) { return {i: i + 1, j: j + 1}; }
+	    }
+	}
+	return null;
+    },
+
+    // If the matrix is square, returns the diagonal elements as a vector.
+    // Otherwise, returns null.
+    diagonal: function() {
+	if (!this.isSquare) { return null; }
+	var els = [], n = this.elements.length;
+	for (var i = 0; i < n; i++) {
+	    els.push(this.elements[i][i]);
+	}
+	return $V(els);
+    },
+
+    // Make the matrix upper (right) triangular by Gaussian elimination.
+    // This method only adds multiples of rows to other rows. No rows are
+    // scaled up or switched, and the determinant is preserved.
+    toRightTriangular: function() {
+	var M = this.dup(), els;
+	var n = this.elements.length, i, j, np = this.elements[0].length, p;
+	for (i = 0; i < n; i++) {
+	    if (M.elements[i][i] == 0) {
+		for (j = i + 1; j < n; j++) {
+		    if (M.elements[j][i] != 0) {
+			els = [];
+			for (p = 0; p < np; p++) { els.push(M.elements[i][p] + M.elements[j][p]); }
+			M.elements[i] = els;
+			break;
+		    }
+		}
+	    }
+	    if (M.elements[i][i] != 0) {
+		for (j = i + 1; j < n; j++) {
+		    var multiplier = M.elements[j][i] / M.elements[i][i];
+		    els = [];
+		    for (p = 0; p < np; p++) {
+			// Elements with column numbers up to an including the number
+			// of the row that we're subtracting can safely be set straight to
+			// zero, since that's the point of this routine and it avoids having
+			// to loop over and correct rounding errors later
+			els.push(p <= i ? 0 : M.elements[j][p] - M.elements[i][p] * multiplier);
+		    }
+		    M.elements[j] = els;
+		}
+	    }
+	}
+	return M;
+    },
+
+    toUpperTriangular: function() { return this.toRightTriangular(); },
+
+    // Returns the determinant for square matrices
+    determinant: function() {
+	if (!this.isSquare()) { return null; }
+	if (this.cols == 1 && this.rows == 1) { return this.row(1); }
+	if (this.cols == 0 && this.rows == 0) { return 1; }
+	var M = this.toRightTriangular();
+	var det = M.elements[0][0], n = M.elements.length;
+	for (var i = 1; i < n; i++) {
+	    det = det * M.elements[i][i];
+	}
+	return det;
+    },
+    det: function() { return this.determinant(); },
+
+    // Returns true iff the matrix is singular
+    isSingular: function() {
+	return (this.isSquare() && this.determinant() === 0);
+    },
+
+    // Returns the trace for square matrices
+    trace: function() {
+	if (!this.isSquare()) { return null; }
+	var tr = this.elements[0][0], n = this.elements.length;
+	for (var i = 1; i < n; i++) {
+	    tr += this.elements[i][i];
+	}
+	return tr;
+    },
+
+    tr: function() { return this.trace(); },
+
+    // Returns the rank of the matrix
+    rank: function() {
+	var M = this.toRightTriangular(), rank = 0;
+	var i = this.elements.length, nj = this.elements[0].length, j;
+	while (i--) {
+	    j = nj;
+	    while (j--) {
+		if (Math.abs(M.elements[i][j]) > Sylvester.precision) { rank++; break; }
+	    }
+	}
+	return rank;
+    },
+
+    rk: function() { return this.rank(); },
+
+    // Returns the result of attaching the given argument to the right-hand side of the matrix
+    augment: function(matrix) {
+	var M = matrix.elements || matrix;
+	if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
+	var T = this.dup(), cols = T.elements[0].length;
+	var i = T.elements.length, nj = M[0].length, j;
+	if (i != M.length) { return null; }
+	while (i--) {
+	    j = nj;
+	    while (j--) {
+		T.elements[i][cols + j] = M[i][j];
+	    }
+	}
+	return T;
+    },
+
+    // Returns the inverse (if one exists) using Gauss-Jordan
+    inverse: function() {
+	if (!this.isSquare() || this.isSingular()) { return null; }
+	var n = this.elements.length, i = n, j;
+	var M = this.augment(Matrix.I(n)).toRightTriangular();
+	var np = M.elements[0].length, p, els, divisor;
+	var inverse_elements = [], new_element;
+	// Matrix is non-singular so there will be no zeros on the diagonal
+	// Cycle through rows from last to first
+	while (i--) {
+	    // First, normalise diagonal elements to 1
+	    els = [];
+	    inverse_elements[i] = [];
+	    divisor = M.elements[i][i];
+	    for (p = 0; p < np; p++) {
+        new_element = M.elements[i][p] / divisor;
+		els.push(new_element);
+		// Shuffle off the current row of the right hand side into the results
+		// array as it will not be modified by later runs through this loop
+		if (p >= n) { inverse_elements[i].push(new_element); }
+	    }
+	    M.elements[i] = els;
+	    // Then, subtract this row from those above it to
+	    // give the identity matrix on the left hand side
+	    j = i;
+	    while (j--) {
+		els = [];
+		for (p = 0; p < np; p++) {
+		    els.push(M.elements[j][p] - M.elements[i][p] * M.elements[j][i]);
+		}
+		M.elements[j] = els;
+	    }
+	}
+	return Matrix.create(inverse_elements);
+    },
+
+    inv: function() { return this.inverse(); },
+
+    // Returns the result of rounding all the elements
+    round: function() {
+	return this.map(function(x) { return Math.round(x); });
+    },
+
+    // Returns a copy of the matrix with elements set to the given value if they
+    // differ from it by less than Sylvester.precision
+    snapTo: function(x) {
+	return this.map(function(p) {
+	    return (Math.abs(p - x) <= Sylvester.precision) ? x : p;
+	});
+    },
+
+    // Returns a string representation of the matrix
+    inspect: function() {
+	var matrix_rows = [];
+	var n = this.elements.length;
+	for (var i = 0; i < n; i++) {
+	    matrix_rows.push($V(this.elements[i]).inspect());
+	}
+	return matrix_rows.join('\n');
+    },
+
+    // Returns a array representation of the matrix
+    toArray: function() {
+    	var matrix_rows = [];
+    	var n = this.elements.length;
+    	for (var i = 0; i < n; i++) {
+        matrix_rows.push(this.elements[i]);
+    	}
+      return matrix_rows;
+    },
+
+
+    // Set the matrix's elements from an array. If the argument passed
+    // is a vector, the resulting matrix will be a single column.
+    setElements: function(els) {
+	var i, j, elements = els.elements || els;
+	if (typeof(elements[0][0]) != 'undefined') {
+	    i = elements.length;
+	    this.elements = [];
+	    while (i--) {
+		j = elements[i].length;
+		this.elements[i] = [];
+		while (j--) {
+		    this.elements[i][j] = elements[i][j];
+		}
+	    }
+	    return this;
+	}
+	var n = elements.length;
+	this.elements = [];
+	for (i = 0; i < n; i++) {
+	    this.elements.push([elements[i]]);
+	}
+	return this;
+    },
+
+    // return the indexes of the columns with the largest value
+    // for each row
+    maxColumnIndexes: function() {
+	var maxes = [];
+
+	for(var i = 1; i <= this.rows(); i++) {
+	    var max = null;
+	    var maxIndex = -1;
+
+	    for(var j = 1; j <= this.cols(); j++) {
+		if(max === null || this.e(i, j) > max) {
+		    max = this.e(i, j);
+		    maxIndex = j;
+		}
+	    }
+
+	    maxes.push(maxIndex);
+	}
+
+	return $V(maxes);
+    },
+
+    // return the largest values in each row
+    maxColumns: function() {
+	var maxes = [];
+
+	for(var i = 1; i <= this.rows(); i++) {
+	    var max = null;
+
+	    for(var j = 1; j <= this.cols(); j++) {
+		if(max === null || this.e(i, j) > max) {
+		    max = this.e(i, j);
+		}
+	    }
+
+	    maxes.push(max);
+	}
+
+	return $V(maxes);
+    },
+
+    // return the indexes of the columns with the smallest values
+    // for each row
+    minColumnIndexes: function() {
+	var mins = [];
+
+	for(var i = 1; i <= this.rows(); i++) {
+	    var min = null;
+	    var minIndex = -1;
+
+	    for(var j = 1; j <= this.cols(); j++) {
+		if(min === null || this.e(i, j) < min) {
+		    min = this.e(i, j);
+		    minIndex = j;
+		}
+	    }
+
+	    mins.push(minIndex);
+	}
+
+	return $V(mins);
+    },
+
+    // return the smallest values in each row
+    minColumns: function() {
+	var mins = [];
+
+	for(var i = 1; i <= this.rows(); i++) {
+	    var min = null;
+
+	    for(var j = 1; j <= this.cols(); j++) {
+		if(min === null || this.e(i, j) < min) {
+		    min = this.e(i, j);
+		}
+	    }
+
+	    mins.push(min);
+	}
+
+	return $V(mins);
+    },
+    
+    // perorm a partial pivot on the matrix. essentially move the largest
+    // row below-or-including the pivot and replace the pivot's row with it.
+    // a pivot matrix is returned so multiplication can perform the transform.
+    partialPivot: function(k, j, P, A, L) {
+	var maxIndex = 0;
+	var maxValue = 0;
+
+	for(var i = k; i <= A.rows(); i++) {
+	    if(Math.abs(A.e(i, j)) > maxValue) {
+		maxValue = Math.abs(A.e(k, j));
+		maxIndex = i;
+	    }
+	}
+
+	if(maxIndex != k) {
+	    var tmp = A.elements[k - 1];
+	    A.elements[k - 1] = A.elements[maxIndex - 1];
+	    A.elements[maxIndex - 1] = tmp;
+	    
+	    P.elements[k - 1][k - 1] = 0;
+	    P.elements[k - 1][maxIndex - 1] = 1;
+	    P.elements[maxIndex - 1][maxIndex - 1] = 0;
+	    P.elements[maxIndex - 1][k - 1] = 1;
+	}
+	
+	return P;
+    },
+
+    // solve lower-triangular matrix * x = b via forward substitution
+    forwardSubstitute: function(b) {
+	var xa = [];
+
+	for(var i = 1; i <= this.rows(); i++) {
+	    var w = 0;
+
+	    for(var j = 1; j < i; j++) {
+		w += this.e(i, j) * xa[j - 1];
+	    }
+
+	    xa.push((b.e(i) - w) / this.e(i, i));
+	}
+
+	return $V(xa);
+    },
+
+    // solve an upper-triangular matrix * x = b via back substitution
+    backSubstitute: function(b) {
+	var xa = [];
+
+	for(var i = this.rows(); i > 0; i--) {
+	    var w = 0;
+
+	    for(var j = this.cols(); j > i; j--) {
+		w += this.e(i, j) * xa[this.rows() - j];
+	    }
+
+	    xa.push((b.e(i) - w) / this.e(i, i));
+	}
+
+	return $V(xa.reverse());
+    },
+    
+    luPack: luPack,
+    luJs: luJs,
+    svdJs: svdJs,
+    svdPack: svdPack,
+    qrJs: qrJs,
+    qrPack: qrPack
+};
+
+// LU factorization from LAPACK
+function luPack() {
+    var lu = lapack.lu(this.elements);
+    return {
+	L: $M(lu.L),
+	U: $M(lu.U),
+	P: $M(lu.P)
+	// don't pass back IPIV
+    };
+}
+
+var tolerance =  1.4901e-08;
+
+// pure Javascript LU factorization
+function luJs() {
+    var A = this.dup();
+    var L = Matrix.I(A.rows());
+    var P = Matrix.I(A.rows());
+    var U = Matrix.Zeros(A.rows(), A.cols());
+    var p = 1;
+
+    for(var k = 1; k <= Math.min(A.cols(), A.rows()); k++) {
+	P = A.partialPivot(k, p, P, A, L);
+	
+	for(var i = k + 1; i <= A.rows(); i++) {
+	    var l = A.e(i, p) / A.e(k, p);
+	    L.elements[i - 1][k - 1] = l;
+	    
+	    for(var j = k + 1 ; j <= A.cols(); j++) {
+		A.elements[i - 1][j - 1] -= A.e(k, j) * l;
+	    }
+	}
+	
+	for(var j = k; j <= A.cols(); j++) {
+	    U.elements[k - 1][j - 1] = A.e(k, j);
+	}
+
+	if(p < A.cols())
+	    p++;
+    }    
+    
+    return {L: L, U: U, P: P};
+}
+
+function getLapack() {
+    try {
+	return require('lapack');
+    } catch(e) {}
+}
+
+var lapack;
+
+// if node-lapack is installed use the fast, native fortran routines
+if(lapack = getLapack()) {
+    Matrix.prototype.svd = svdPack;
+    Matrix.prototype.qr = qrPack;
+    Matrix.prototype.lu = luPack;
+} else {
+    // otherwise use the slower pure Javascript versions
+    Matrix.prototype.svd = svdJs;
+    Matrix.prototype.qr = qrJs;
+    Matrix.prototype.lu = luJs;
+}
+
+// Constructor function
+Matrix.create = function(aElements, ignoreLapack) {
+    var M = new Matrix().setElements(aElements);
+    return M;
+};
+
+// Identity matrix of size n
+Matrix.I = function(n) {
+    var els = [], i = n, j;
+    while (i--) {
+	j = n;
+	els[i] = [];
+	while (j--) {
+	    els[i][j] = (i == j) ? 1 : 0;
+	}
+    }
+    return Matrix.create(els);
+};
+
+Matrix.loadFile = function(file) {
+    var contents = fs.readFileSync(file, 'utf-8');
+    var matrix = [];
+
+    var rowArray = contents.split('\n');
+    for (var i = 0; i < rowArray.length; i++) {
+	var d = rowArray[i].split(',');
+	if (d.length > 1) {
+	    matrix.push(d);
+	}
+    }
+
+    var M = new Matrix();
+    return M.setElements(matrix);
+};
+
+// Diagonal matrix - all off-diagonal elements are zero
+Matrix.Diagonal = function(elements) {
+    var i = elements.length;
+    var M = Matrix.I(i);
+    while (i--) {
+	M.elements[i][i] = elements[i];
+    }
+    return M;
+};
+
+// Rotation matrix about some axis. If no axis is
+// supplied, assume we're after a 2D transform
+Matrix.Rotation = function(theta, a) {
+    if (!a) {
+	return Matrix.create([
+	    [Math.cos(theta), -Math.sin(theta)],
+	    [Math.sin(theta), Math.cos(theta)]
+	]);
+    }
+    var axis = a.dup();
+    if (axis.elements.length != 3) { return null; }
+    var mod = axis.modulus();
+    var x = axis.elements[0] / mod, y = axis.elements[1] / mod, z = axis.elements[2] / mod;
+    var s = Math.sin(theta), c = Math.cos(theta), t = 1 - c;
+    // Formula derived here: http://www.gamedev.net/reference/articles/article1199.asp
+    // That proof rotates the co-ordinate system so theta
+    // becomes -theta and sin becomes -sin here.
+    return Matrix.create([
+	[t * x * x + c, t * x * y - s * z, t * x * z + s * y],
+	[t * x * y + s * z, t * y * y + c, t * y * z - s * x],
+	[t * x * z - s * y, t * y * z + s * x, t * z * z + c]
+    ]);
+};
+
+// Special case rotations
+Matrix.RotationX = function(t) {
+    var c = Math.cos(t), s = Math.sin(t);
+    return Matrix.create([
+	[1, 0, 0],
+	[0, c, -s],
+	[0, s, c]
+    ]);
+};
+
+Matrix.RotationY = function(t) {
+    var c = Math.cos(t), s = Math.sin(t);
+    return Matrix.create([
+	[c, 0, s],
+	[0, 1, 0],
+	[-s, 0, c]
+    ]);
+};
+
+Matrix.RotationZ = function(t) {
+    var c = Math.cos(t), s = Math.sin(t);
+    return Matrix.create([
+	[c, -s, 0],
+	[s, c, 0],
+	[0, 0, 1]
+    ]);
+};
+
+// Random matrix of n rows, m columns
+Matrix.Random = function(n, m) {
+    if (arguments.length === 1) m = n;
+    return Matrix.Zero(n, m).map(
+	function() { return Math.random(); }
+  );
+};
+
+Matrix.Fill = function(n, m, v) {
+    if (arguments.length === 2) {
+	v = m;
+	m = n;
+    }
+
+    var els = [], i = n, j;
+
+    while (i--) {
+	j = m;
+	els[i] = [];
+
+	while (j--) {
+	    els[i][j] = v;
+	}
+    }
+
+    return Matrix.create(els);
+};
+
+// Matrix filled with zeros
+Matrix.Zero = function(n, m) {
+    return Matrix.Fill(n, m, 0);
+};
+
+// Matrix filled with zeros
+Matrix.Zeros = function(n, m) {
+    return Matrix.Zero(n, m);
+};
+
+// Matrix filled with ones
+Matrix.One = function(n, m) {
+    return Matrix.Fill(n, m, 1);
+};
+
+// Matrix filled with ones
+Matrix.Ones = function(n, m) {
+    return Matrix.One(n, m);
+};
+
+module.exports = Matrix;
+
+},{"./sylvester":271,"./vector":272,"fs":1,"lapack":177}],270:[function(require,module,exports){
+// Copyright (c) 2011, Chris Umbel, James Coglan
+// Plane class - depends on Vector. Some methods require Matrix and Line.
+var Vector = require('./vector');
+var Matrix = require('./matrix');
+var Line = require('./line');
+
+var Sylvester = require('./sylvester');
+
+function Plane() {}
+Plane.prototype = {
+
+  // Returns true iff the plane occupies the same space as the argument
+  eql: function(plane) {
+    return (this.contains(plane.anchor) && this.isParallelTo(plane));
+  },
+
+  // Returns a copy of the plane
+  dup: function() {
+    return Plane.create(this.anchor, this.normal);
+  },
+
+  // Returns the result of translating the plane by the given vector
+  translate: function(vector) {
+    var V = vector.elements || vector;
+    return Plane.create([
+      this.anchor.elements[0] + V[0],
+      this.anchor.elements[1] + V[1],
+      this.anchor.elements[2] + (V[2] || 0)
+    ], this.normal);
+  },
+
+  // Returns true iff the plane is parallel to the argument. Will return true
+  // if the planes are equal, or if you give a line and it lies in the plane.
+  isParallelTo: function(obj) {
+    var theta;
+    if (obj.normal) {
+      // obj is a plane
+      theta = this.normal.angleFrom(obj.normal);
+      return (Math.abs(theta) <= Sylvester.precision || Math.abs(Math.PI - theta) <= Sylvester.precision);
+    } else if (obj.direction) {
+      // obj is a line
+      return this.normal.isPerpendicularTo(obj.direction);
+    }
+    return null;
+  },
+
+  // Returns true iff the receiver is perpendicular to the argument
+  isPerpendicularTo: function(plane) {
+    var theta = this.normal.angleFrom(plane.normal);
+    return (Math.abs(Math.PI/2 - theta) <= Sylvester.precision);
+  },
+
+  // Returns the plane's distance from the given object (point, line or plane)
+  distanceFrom: function(obj) {
+    if (this.intersects(obj) || this.contains(obj)) { return 0; }
+    if (obj.anchor) {
+      // obj is a plane or line
+      var A = this.anchor.elements, B = obj.anchor.elements, N = this.normal.elements;
+      return Math.abs((A[0] - B[0]) * N[0] + (A[1] - B[1]) * N[1] + (A[2] - B[2]) * N[2]);
+    } else {
+      // obj is a point
+      var P = obj.elements || obj;
+      var A = this.anchor.elements, N = this.normal.elements;
+      return Math.abs((A[0] - P[0]) * N[0] + (A[1] - P[1]) * N[1] + (A[2] - (P[2] || 0)) * N[2]);
+    }
+  },
+
+  // Returns true iff the plane contains the given point or line
+  contains: function(obj) {
+    if (obj.normal) { return null; }
+    if (obj.direction) {
+      return (this.contains(obj.anchor) && this.contains(obj.anchor.add(obj.direction)));
+    } else {
+      var P = obj.elements || obj;
+      var A = this.anchor.elements, N = this.normal.elements;
+      var diff = Math.abs(N[0]*(A[0] - P[0]) + N[1]*(A[1] - P[1]) + N[2]*(A[2] - (P[2] || 0)));
+      return (diff <= Sylvester.precision);
+    }
+  },
+
+  // Returns true iff the plane has a unique point/line of intersection with the argument
+  intersects: function(obj) {
+    if (typeof(obj.direction) == 'undefined' && typeof(obj.normal) == 'undefined') { return null; }
+    return !this.isParallelTo(obj);
+  },
+
+  // Returns the unique intersection with the argument, if one exists. The result
+  // will be a vector if a line is supplied, and a line if a plane is supplied.
+  intersectionWith: function(obj) {
+    if (!this.intersects(obj)) { return null; }
+    if (obj.direction) {
+      // obj is a line
+      var A = obj.anchor.elements, D = obj.direction.elements,
+          P = this.anchor.elements, N = this.normal.elements;
+      var multiplier = (N[0]*(P[0]-A[0]) + N[1]*(P[1]-A[1]) + N[2]*(P[2]-A[2])) / (N[0]*D[0] + N[1]*D[1] + N[2]*D[2]);
+      return Vector.create([A[0] + D[0]*multiplier, A[1] + D[1]*multiplier, A[2] + D[2]*multiplier]);
+    } else if (obj.normal) {
+      // obj is a plane
+      var direction = this.normal.cross(obj.normal).toUnitVector();
+      // To find an anchor point, we find one co-ordinate that has a value
+      // of zero somewhere on the intersection, and remember which one we picked
+      var N = this.normal.elements, A = this.anchor.elements,
+          O = obj.normal.elements, B = obj.anchor.elements;
+      var solver = Matrix.Zero(2,2), i = 0;
+      while (solver.isSingular()) {
+        i++;
+        solver = Matrix.create([
+          [ N[i%3], N[(i+1)%3] ],
+          [ O[i%3], O[(i+1)%3]  ]
+        ]);
+      }
+      // Then we solve the simultaneous equations in the remaining dimensions
+      var inverse = solver.inverse().elements;
+      var x = N[0]*A[0] + N[1]*A[1] + N[2]*A[2];
+      var y = O[0]*B[0] + O[1]*B[1] + O[2]*B[2];
+      var intersection = [
+        inverse[0][0] * x + inverse[0][1] * y,
+        inverse[1][0] * x + inverse[1][1] * y
+      ];
+      var anchor = [];
+      for (var j = 1; j <= 3; j++) {
+        // This formula picks the right element from intersection by
+        // cycling depending on which element we set to zero above
+        anchor.push((i == j) ? 0 : intersection[(j + (5 - i)%3)%3]);
+      }
+      return Line.create(anchor, direction);
+    }
+  },
+
+  // Returns the point in the plane closest to the given point
+  pointClosestTo: function(point) {
+    var P = point.elements || point;
+    var A = this.anchor.elements, N = this.normal.elements;
+    var dot = (A[0] - P[0]) * N[0] + (A[1] - P[1]) * N[1] + (A[2] - (P[2] || 0)) * N[2];
+    return Vector.create([P[0] + N[0] * dot, P[1] + N[1] * dot, (P[2] || 0) + N[2] * dot]);
+  },
+
+  // Returns a copy of the plane, rotated by t radians about the given line
+  // See notes on Line#rotate.
+  rotate: function(t, line) {
+    var R = t.determinant ? t.elements : Matrix.Rotation(t, line.direction).elements;
+    var C = line.pointClosestTo(this.anchor).elements;
+    var A = this.anchor.elements, N = this.normal.elements;
+    var C1 = C[0], C2 = C[1], C3 = C[2], A1 = A[0], A2 = A[1], A3 = A[2];
+    var x = A1 - C1, y = A2 - C2, z = A3 - C3;
+    return Plane.create([
+      C1 + R[0][0] * x + R[0][1] * y + R[0][2] * z,
+      C2 + R[1][0] * x + R[1][1] * y + R[1][2] * z,
+      C3 + R[2][0] * x + R[2][1] * y + R[2][2] * z
+    ], [
+      R[0][0] * N[0] + R[0][1] * N[1] + R[0][2] * N[2],
+      R[1][0] * N[0] + R[1][1] * N[1] + R[1][2] * N[2],
+      R[2][0] * N[0] + R[2][1] * N[1] + R[2][2] * N[2]
+    ]);
+  },
+
+  // Returns the reflection of the plane in the given point, line or plane.
+  reflectionIn: function(obj) {
+    if (obj.normal) {
+      // obj is a plane
+      var A = this.anchor.elements, N = this.normal.elements;
+      var A1 = A[0], A2 = A[1], A3 = A[2], N1 = N[0], N2 = N[1], N3 = N[2];
+      var newA = this.anchor.reflectionIn(obj).elements;
+      // Add the plane's normal to its anchor, then mirror that in the other plane
+      var AN1 = A1 + N1, AN2 = A2 + N2, AN3 = A3 + N3;
+      var Q = obj.pointClosestTo([AN1, AN2, AN3]).elements;
+      var newN = [Q[0] + (Q[0] - AN1) - newA[0], Q[1] + (Q[1] - AN2) - newA[1], Q[2] + (Q[2] - AN3) - newA[2]];
+      return Plane.create(newA, newN);
+    } else if (obj.direction) {
+      // obj is a line
+      return this.rotate(Math.PI, obj);
+    } else {
+      // obj is a point
+      var P = obj.elements || obj;
+      return Plane.create(this.anchor.reflectionIn([P[0], P[1], (P[2] || 0)]), this.normal);
+    }
+  },
+
+  // Sets the anchor point and normal to the plane. If three arguments are specified,
+  // the normal is calculated by assuming the three points should lie in the same plane.
+  // If only two are sepcified, the second is taken to be the normal. Normal vector is
+  // normalised before storage.
+  setVectors: function(anchor, v1, v2) {
+    anchor = Vector.create(anchor);
+    anchor = anchor.to3D(); if (anchor === null) { return null; }
+    v1 = Vector.create(v1);
+    v1 = v1.to3D(); if (v1 === null) { return null; }
+    if (typeof(v2) == 'undefined') {
+      v2 = null;
+    } else {
+      v2 = Vector.create(v2);
+      v2 = v2.to3D(); if (v2 === null) { return null; }
+    }
+    var A1 = anchor.elements[0], A2 = anchor.elements[1], A3 = anchor.elements[2];
+    var v11 = v1.elements[0], v12 = v1.elements[1], v13 = v1.elements[2];
+    var normal, mod;
+    if (v2 !== null) {
+      var v21 = v2.elements[0], v22 = v2.elements[1], v23 = v2.elements[2];
+      normal = Vector.create([
+        (v12 - A2) * (v23 - A3) - (v13 - A3) * (v22 - A2),
+        (v13 - A3) * (v21 - A1) - (v11 - A1) * (v23 - A3),
+        (v11 - A1) * (v22 - A2) - (v12 - A2) * (v21 - A1)
+      ]);
+      mod = normal.modulus();
+      if (mod === 0) { return null; }
+      normal = Vector.create([normal.elements[0] / mod, normal.elements[1] / mod, normal.elements[2] / mod]);
+    } else {
+      mod = Math.sqrt(v11*v11 + v12*v12 + v13*v13);
+      if (mod === 0) { return null; }
+      normal = Vector.create([v1.elements[0] / mod, v1.elements[1] / mod, v1.elements[2] / mod]);
+    }
+    this.anchor = anchor;
+    this.normal = normal;
+    return this;
+  }
+};
+
+// Constructor function
+Plane.create = function(anchor, v1, v2) {
+  var P = new Plane();
+  return P.setVectors(anchor, v1, v2);
+};
+
+// X-Y-Z planes
+Plane.XY = Plane.create(Vector.Zero(3), Vector.k);
+Plane.YZ = Plane.create(Vector.Zero(3), Vector.i);
+Plane.ZX = Plane.create(Vector.Zero(3), Vector.j);
+Plane.YX = Plane.XY; Plane.ZY = Plane.YZ; Plane.XZ = Plane.ZX;
+
+// Returns the plane containing the given points (can be arrays as
+// well as vectors). If the points are not coplanar, returns null.
+Plane.fromPoints = function(points) {
+  var np = points.length, list = [], i, P, n, N, A, B, C, D, theta, prevN, totalN = Vector.Zero(3);
+  for (i = 0; i < np; i++) {
+    P = Vector.create(points[i]).to3D();
+    if (P === null) { return null; }
+    list.push(P);
+    n = list.length;
+    if (n > 2) {
+      // Compute plane normal for the latest three points
+      A = list[n-1].elements; B = list[n-2].elements; C = list[n-3].elements;
+      N = Vector.create([
+        (A[1] - B[1]) * (C[2] - B[2]) - (A[2] - B[2]) * (C[1] - B[1]),
+        (A[2] - B[2]) * (C[0] - B[0]) - (A[0] - B[0]) * (C[2] - B[2]),
+        (A[0] - B[0]) * (C[1] - B[1]) - (A[1] - B[1]) * (C[0] - B[0])
+      ]).toUnitVector();
+      if (n > 3) {
+        // If the latest normal is not (anti)parallel to the previous one, we've strayed off the plane.
+        // This might be a slightly long-winded way of doing things, but we need the sum of all the normals
+        // to find which way the plane normal should point so that the points form an anticlockwise list.
+        theta = N.angleFrom(prevN);
+        if (theta !== null) {
+          if (!(Math.abs(theta) <= Sylvester.precision || Math.abs(theta - Math.PI) <= Sylvester.precision)) { return null; }
+        }
+      }
+      totalN = totalN.add(N);
+      prevN = N;
+    }
+  }
+  // We need to add in the normals at the start and end points, which the above misses out
+  A = list[1].elements; B = list[0].elements; C = list[n-1].elements; D = list[n-2].elements;
+  totalN = totalN.add(Vector.create([
+    (A[1] - B[1]) * (C[2] - B[2]) - (A[2] - B[2]) * (C[1] - B[1]),
+    (A[2] - B[2]) * (C[0] - B[0]) - (A[0] - B[0]) * (C[2] - B[2]),
+    (A[0] - B[0]) * (C[1] - B[1]) - (A[1] - B[1]) * (C[0] - B[0])
+  ]).toUnitVector()).add(Vector.create([
+    (B[1] - C[1]) * (D[2] - C[2]) - (B[2] - C[2]) * (D[1] - C[1]),
+    (B[2] - C[2]) * (D[0] - C[0]) - (B[0] - C[0]) * (D[2] - C[2]),
+    (B[0] - C[0]) * (D[1] - C[1]) - (B[1] - C[1]) * (D[0] - C[0])
+  ]).toUnitVector());
+  return Plane.create(list[0], totalN);
+};
+
+module.exports = Plane;
+
+},{"./line":267,"./matrix":269,"./sylvester":271,"./vector":272}],271:[function(require,module,exports){
+// Copyright (c) 2011, Chris Umbel, James Coglan
+// This file is required in order for any other classes to work. Some Vector methods work with the
+// other Sylvester classes and are useless unless they are included. Other classes such as Line and
+// Plane will not function at all without Vector being loaded first.           
+
+Math.sign = function(x) {
+    return x < 0 ? -1: 1;
+}
+                                              
+var Sylvester = {
+    precision: 1e-6,
+    approxPrecision: 1e-5
+};
+
+module.exports = Sylvester;
+
+},{}],272:[function(require,module,exports){
+// Copyright (c) 2011, Chris Umbel, James Coglan
+// This file is required in order for any other classes to work. Some Vector methods work with the
+// other Sylvester classes and are useless unless they are included. Other classes such as Line and
+// Plane will not function at all without Vector being loaded first.
+
+var Sylvester = require('./sylvester'),
+Matrix = require('./matrix');
+
+function Vector() {}
+Vector.prototype = {
+
+    norm: function() {
+	var n = this.elements.length;
+	var sum = 0;
+
+	while (n--) {
+	    sum += Math.pow(this.elements[n], 2);
+	}
+
+	return Math.sqrt(sum);
+    },
+
+    // Returns element i of the vector
+    e: function(i) {
+      return (i < 1 || i > this.elements.length) ? null : this.elements[i - 1];
+    },
+
+    // Returns the number of rows/columns the vector has
+    dimensions: function() {
+      return {rows: 1, cols: this.elements.length};
+    },
+
+    // Returns the number of rows in the vector
+    rows: function() {
+      return 1;
+    },
+
+    // Returns the number of columns in the vector
+    cols: function() {
+      return this.elements.length;
+    },
+
+    // Returns the modulus ('length') of the vector
+    modulus: function() {
+      return Math.sqrt(this.dot(this));
+    },
+
+    // Returns true iff the vector is equal to the argument
+    eql: function(vector) {
+    	var n = this.elements.length;
+    	var V = vector.elements || vector;
+    	if (n != V.length) { return false; }
+    	while (n--) {
+    	    if (Math.abs(this.elements[n] - V[n]) > Sylvester.precision) { return false; }
+    	}
+    	return true;
+    },
+
+    // Returns a copy of the vector
+    dup: function() {
+	    return Vector.create(this.elements);
+    },
+
+    // Maps the vector to another vector according to the given function
+    map: function(fn) {
+	var elements = [];
+	this.each(function(x, i) {
+	    elements.push(fn(x, i));
+	});
+	return Vector.create(elements);
+    },
+
+    // Calls the iterator for each element of the vector in turn
+    each: function(fn) {
+	var n = this.elements.length;
+	for (var i = 0; i < n; i++) {
+	    fn(this.elements[i], i + 1);
+	}
+    },
+
+    // Returns a new vector created by normalizing the receiver
+    toUnitVector: function() {
+	var r = this.modulus();
+	if (r === 0) { return this.dup(); }
+	return this.map(function(x) { return x / r; });
+    },
+
+    // Returns the angle between the vector and the argument (also a vector)
+    angleFrom: function(vector) {
+	var V = vector.elements || vector;
+	var n = this.elements.length, k = n, i;
+	if (n != V.length) { return null; }
+	var dot = 0, mod1 = 0, mod2 = 0;
+	// Work things out in parallel to save time
+	this.each(function(x, i) {
+	    dot += x * V[i - 1];
+	    mod1 += x * x;
+	    mod2 += V[i - 1] * V[i - 1];
+	});
+	mod1 = Math.sqrt(mod1); mod2 = Math.sqrt(mod2);
+	if (mod1 * mod2 === 0) { return null; }
+	var theta = dot / (mod1 * mod2);
+	if (theta < -1) { theta = -1; }
+	if (theta > 1) { theta = 1; }
+	return Math.acos(theta);
+    },
+
+    // Returns true iff the vector is parallel to the argument
+    isParallelTo: function(vector) {
+	var angle = this.angleFrom(vector);
+	return (angle === null) ? null : (angle <= Sylvester.precision);
+    },
+
+    // Returns true iff the vector is antiparallel to the argument
+    isAntiparallelTo: function(vector) {
+	var angle = this.angleFrom(vector);
+	return (angle === null) ? null : (Math.abs(angle - Math.PI) <= Sylvester.precision);
+    },
+
+    // Returns true iff the vector is perpendicular to the argument
+    isPerpendicularTo: function(vector) {
+	var dot = this.dot(vector);
+	return (dot === null) ? null : (Math.abs(dot) <= Sylvester.precision);
+    },
+
+    // Returns the result of adding the argument to the vector
+    add: function(value) {
+	var V = value.elements || value;
+
+	if (this.elements.length != V.length) 
+	    return this.map(function(v) { return v + value });
+	else
+	    return this.map(function(x, i) { return x + V[i - 1]; });
+    },
+
+    // Returns the result of subtracting the argument from the vector
+    subtract: function(v) {
+	if (typeof(v) == 'number')
+	    return this.map(function(k) { return k - v; });
+
+	var V = v.elements || v;
+	if (this.elements.length != V.length) { return null; }
+	return this.map(function(x, i) { return x - V[i - 1]; });
+    },
+
+    // Returns the result of multiplying the elements of the vector by the argument
+    multiply: function(k) {
+	return this.map(function(x) { return x * k; });
+    },
+
+    elementMultiply: function(v) {
+	return this.map(function(k, i) {
+	    return v.e(i) * k;
+	});
+    },
+
+    sum: function() {
+	var sum = 0;
+	this.map(function(x) { sum += x;});
+	return sum;
+    },
+
+    chomp: function(n) {
+	var elements = [];
+
+	for (var i = n; i < this.elements.length; i++) {
+	    elements.push(this.elements[i]);
+	}
+
+	return Vector.create(elements);
+    },
+
+    top: function(n) {
+	var elements = [];
+
+	for (var i = 0; i < n; i++) {
+	    elements.push(this.elements[i]);
+	}
+
+	return Vector.create(elements);
+    },
+
+    augment: function(elements) {
+	var newElements = this.elements;
+
+	for (var i = 0; i < elements.length; i++) {
+	    newElements.push(elements[i]);
+	}
+
+	return Vector.create(newElements);
+    },
+
+    x: function(k) { return this.multiply(k); },
+
+    log: function() {
+	return Vector.log(this);
+    },
+
+    elementDivide: function(vector) {
+	return this.map(function(v, i) {
+	    return v / vector.e(i);
+	});
+    },
+
+    product: function() {
+	var p = 1;
+
+	this.map(function(v) {
+	    p *= v;
+	});
+
+	return p;
+    },
+
+    // Returns the scalar product of the vector with the argument
+    // Both vectors must have equal dimensionality
+    dot: function(vector) {
+	var V = vector.elements || vector;
+	var i, product = 0, n = this.elements.length;	
+	if (n != V.length) { return null; }
+	while (n--) { product += this.elements[n] * V[n]; }
+	return product;
+    },
+
+    // Returns the vector product of the vector with the argument
+    // Both vectors must have dimensionality 3
+    cross: function(vector) {
+	var B = vector.elements || vector;
+	if (this.elements.length != 3 || B.length != 3) { return null; }
+	var A = this.elements;
+	return Vector.create([
+	    (A[1] * B[2]) - (A[2] * B[1]),
+	    (A[2] * B[0]) - (A[0] * B[2]),
+	    (A[0] * B[1]) - (A[1] * B[0])
+	]);
+    },
+
+    // Returns the (absolute) largest element of the vector
+    max: function() {
+	var m = 0, i = this.elements.length;
+	while (i--) {
+	    if (Math.abs(this.elements[i]) > Math.abs(m)) { m = this.elements[i]; }
+	}
+	return m;
+    },
+
+
+    maxIndex: function() {
+	var m = 0, i = this.elements.length;
+	var maxIndex = -1;
+
+	while (i--) {
+	    if (Math.abs(this.elements[i]) > Math.abs(m)) { 
+		m = this.elements[i]; 
+		maxIndex = i + 1;
+	    }
+	}
+
+	return maxIndex;
+    },
+
+
+    // Returns the index of the first match found
+    indexOf: function(x) {
+	var index = null, n = this.elements.length;
+	for (var i = 0; i < n; i++) {
+	    if (index === null && this.elements[i] == x) {
+		index = i + 1;
+	    }
+	}
+	return index;
+    },
+
+    // Returns a diagonal matrix with the vector's elements as its diagonal elements
+    toDiagonalMatrix: function() {
+	return Matrix.Diagonal(this.elements);
+    },
+
+    // Returns the result of rounding the elements of the vector
+    round: function() {
+	return this.map(function(x) { return Math.round(x); });
+    },
+
+    // Transpose a Vector, return a 1xn Matrix
+    transpose: function() {
+	var rows = this.elements.length;
+	var elements = [];
+
+	for (var i = 0; i < rows; i++) {
+	    elements.push([this.elements[i]]);
+	}
+	return Matrix.create(elements);
+    },
+
+    // Returns a copy of the vector with elements set to the given value if they
+    // differ from it by less than Sylvester.precision
+    snapTo: function(x) {
+	return this.map(function(y) {
+	    return (Math.abs(y - x) <= Sylvester.precision) ? x : y;
+	});
+    },
+
+    // Returns the vector's distance from the argument, when considered as a point in space
+    distanceFrom: function(obj) {
+	if (obj.anchor || (obj.start && obj.end)) { return obj.distanceFrom(this); }
+	var V = obj.elements || obj;
+	if (V.length != this.elements.length) { return null; }
+	var sum = 0, part;
+	this.each(function(x, i) {
+	    part = x - V[i - 1];
+	    sum += part * part;
+	});
+	return Math.sqrt(sum);
+    },
+
+    // Returns true if the vector is point on the given line
+    liesOn: function(line) {
+	return line.contains(this);
+    },
+
+    // Return true iff the vector is a point in the given plane
+    liesIn: function(plane) {
+	return plane.contains(this);
+    },
+
+    // Rotates the vector about the given object. The object should be a
+    // point if the vector is 2D, and a line if it is 3D. Be careful with line directions!
+    rotate: function(t, obj) {
+	var V, R = null, x, y, z;
+	if (t.determinant) { R = t.elements; }
+	switch (this.elements.length) {
+	case 2:
+            V = obj.elements || obj;
+            if (V.length != 2) { return null; }
+            if (!R) { R = Matrix.Rotation(t).elements; }
+            x = this.elements[0] - V[0];
+            y = this.elements[1] - V[1];
+            return Vector.create([
+		V[0] + R[0][0] * x + R[0][1] * y,
+		V[1] + R[1][0] * x + R[1][1] * y
+            ]);
+            break;
+	case 3:
+            if (!obj.direction) { return null; }
+            var C = obj.pointClosestTo(this).elements;
+            if (!R) { R = Matrix.Rotation(t, obj.direction).elements; }
+            x = this.elements[0] - C[0];
+            y = this.elements[1] - C[1];
+            z = this.elements[2] - C[2];
+            return Vector.create([
+		C[0] + R[0][0] * x + R[0][1] * y + R[0][2] * z,
+		C[1] + R[1][0] * x + R[1][1] * y + R[1][2] * z,
+		C[2] + R[2][0] * x + R[2][1] * y + R[2][2] * z
+            ]);
+            break;
+	default:
+            return null;
+	}
+    },
+
+    // Returns the result of reflecting the point in the given point, line or plane
+    reflectionIn: function(obj) {
+	if (obj.anchor) {
+	    // obj is a plane or line
+	    var P = this.elements.slice();
+	    var C = obj.pointClosestTo(P).elements;
+	    return Vector.create([C[0] + (C[0] - P[0]), C[1] + (C[1] - P[1]), C[2] + (C[2] - (P[2] || 0))]);
+	} else {
+	    // obj is a point
+	    var Q = obj.elements || obj;
+	    if (this.elements.length != Q.length) { return null; }
+	    return this.map(function(x, i) { return Q[i - 1] + (Q[i - 1] - x); });
+	}
+    },
+
+    // Utility to make sure vectors are 3D. If they are 2D, a zero z-component is added
+    to3D: function() {
+	var V = this.dup();
+	switch (V.elements.length) {
+	case 3: break;
+	case 2: V.elements.push(0); break;
+	default: return null;
+	}
+	return V;
+    },
+
+    // Returns a string representation of the vector
+    inspect: function() {
+	return '[' + this.elements.join(', ') + ']';
+    },
+
+    // Set vector's elements from an array
+    setElements: function(els) {
+	this.elements = (els.elements || els).slice();
+	return this;
+    }
+};
+
+// Constructor function
+Vector.create = function(elements) {
+    var V = new Vector();
+    return V.setElements(elements);
+};
+
+// i, j, k unit vectors
+Vector.i = Vector.create([1, 0, 0]);
+Vector.j = Vector.create([0, 1, 0]);
+Vector.k = Vector.create([0, 0, 1]);
+
+// Random vector of size n
+Vector.Random = function(n) {
+    var elements = [];
+    while (n--) { elements.push(Math.random()); }
+    return Vector.create(elements);
+};
+
+Vector.Fill = function(n, v) {
+    var elements = [];
+    while (n--) { elements.push(v); }
+    return Vector.create(elements);
+};
+
+// Vector filled with zeros
+Vector.Zero = function(n) {
+    return Vector.Fill(n, 0);
+};
+
+Vector.One = function(n) {
+    return Vector.Fill(n, 1);
+};
+
+Vector.log = function(v) {
+    return v.map(function(x) {
+	return Math.log(x);
+    });
+};
+
+module.exports = Vector;
+
+},{"./matrix":269,"./sylvester":271}],273:[function(require,module,exports){
+//     Underscore.js 1.8.3
+//     http://underscorejs.org
+//     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+//     Underscore may be freely distributed under the MIT license.
+
+(function() {
+
+  // Baseline setup
+  // --------------
+
+  // Establish the root object, `window` in the browser, or `exports` on the server.
+  var root = this;
+
+  // Save the previous value of the `_` variable.
+  var previousUnderscore = root._;
+
+  // Save bytes in the minified (but not gzipped) version:
+  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
+
+  // Create quick reference variables for speed access to core prototypes.
+  var
+    push             = ArrayProto.push,
+    slice            = ArrayProto.slice,
+    toString         = ObjProto.toString,
+    hasOwnProperty   = ObjProto.hasOwnProperty;
+
+  // All **ECMAScript 5** native function implementations that we hope to use
+  // are declared here.
+  var
+    nativeIsArray      = Array.isArray,
+    nativeKeys         = Object.keys,
+    nativeBind         = FuncProto.bind,
+    nativeCreate       = Object.create;
+
+  // Naked function reference for surrogate-prototype-swapping.
+  var Ctor = function(){};
+
+  // Create a safe reference to the Underscore object for use below.
+  var _ = function(obj) {
+    if (obj instanceof _) return obj;
+    if (!(this instanceof _)) return new _(obj);
+    this._wrapped = obj;
+  };
+
+  // Export the Underscore object for **Node.js**, with
+  // backwards-compatibility for the old `require()` API. If we're in
+  // the browser, add `_` as a global object.
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = _;
+    }
+    exports._ = _;
+  } else {
+    root._ = _;
+  }
+
+  // Current version.
+  _.VERSION = '1.8.3';
+
+  // Internal function that returns an efficient (for current engines) version
+  // of the passed-in callback, to be repeatedly applied in other Underscore
+  // functions.
+  var optimizeCb = function(func, context, argCount) {
+    if (context === void 0) return func;
+    switch (argCount == null ? 3 : argCount) {
+      case 1: return function(value) {
+        return func.call(context, value);
+      };
+      case 2: return function(value, other) {
+        return func.call(context, value, other);
+      };
+      case 3: return function(value, index, collection) {
+        return func.call(context, value, index, collection);
+      };
+      case 4: return function(accumulator, value, index, collection) {
+        return func.call(context, accumulator, value, index, collection);
+      };
+    }
+    return function() {
+      return func.apply(context, arguments);
+    };
+  };
+
+  // A mostly-internal function to generate callbacks that can be applied
+  // to each element in a collection, returning the desired result — either
+  // identity, an arbitrary callback, a property matcher, or a property accessor.
+  var cb = function(value, context, argCount) {
+    if (value == null) return _.identity;
+    if (_.isFunction(value)) return optimizeCb(value, context, argCount);
+    if (_.isObject(value)) return _.matcher(value);
+    return _.property(value);
+  };
+  _.iteratee = function(value, context) {
+    return cb(value, context, Infinity);
+  };
+
+  // An internal function for creating assigner functions.
+  var createAssigner = function(keysFunc, undefinedOnly) {
+    return function(obj) {
+      var length = arguments.length;
+      if (length < 2 || obj == null) return obj;
+      for (var index = 1; index < length; index++) {
+        var source = arguments[index],
+            keys = keysFunc(source),
+            l = keys.length;
+        for (var i = 0; i < l; i++) {
+          var key = keys[i];
+          if (!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
+        }
+      }
+      return obj;
+    };
+  };
+
+  // An internal function for creating a new object that inherits from another.
+  var baseCreate = function(prototype) {
+    if (!_.isObject(prototype)) return {};
+    if (nativeCreate) return nativeCreate(prototype);
+    Ctor.prototype = prototype;
+    var result = new Ctor;
+    Ctor.prototype = null;
+    return result;
+  };
+
+  var property = function(key) {
+    return function(obj) {
+      return obj == null ? void 0 : obj[key];
+    };
+  };
+
+  // Helper for collection methods to determine whether a collection
+  // should be iterated as an array or as an object
+  // Related: http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength
+  // Avoids a very nasty iOS 8 JIT bug on ARM-64. #2094
+  var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
+  var getLength = property('length');
+  var isArrayLike = function(collection) {
+    var length = getLength(collection);
+    return typeof length == 'number' && length >= 0 && length <= MAX_ARRAY_INDEX;
+  };
+
+  // Collection Functions
+  // --------------------
+
+  // The cornerstone, an `each` implementation, aka `forEach`.
+  // Handles raw objects in addition to array-likes. Treats all
+  // sparse array-likes as if they were dense.
+  _.each = _.forEach = function(obj, iteratee, context) {
+    iteratee = optimizeCb(iteratee, context);
+    var i, length;
+    if (isArrayLike(obj)) {
+      for (i = 0, length = obj.length; i < length; i++) {
+        iteratee(obj[i], i, obj);
+      }
+    } else {
+      var keys = _.keys(obj);
+      for (i = 0, length = keys.length; i < length; i++) {
+        iteratee(obj[keys[i]], keys[i], obj);
+      }
+    }
+    return obj;
+  };
+
+  // Return the results of applying the iteratee to each element.
+  _.map = _.collect = function(obj, iteratee, context) {
+    iteratee = cb(iteratee, context);
+    var keys = !isArrayLike(obj) && _.keys(obj),
+        length = (keys || obj).length,
+        results = Array(length);
+    for (var index = 0; index < length; index++) {
+      var currentKey = keys ? keys[index] : index;
+      results[index] = iteratee(obj[currentKey], currentKey, obj);
+    }
+    return results;
+  };
+
+  // Create a reducing function iterating left or right.
+  function createReduce(dir) {
+    // Optimized iterator function as using arguments.length
+    // in the main function will deoptimize the, see #1991.
+    function iterator(obj, iteratee, memo, keys, index, length) {
+      for (; index >= 0 && index < length; index += dir) {
+        var currentKey = keys ? keys[index] : index;
+        memo = iteratee(memo, obj[currentKey], currentKey, obj);
+      }
+      return memo;
+    }
+
+    return function(obj, iteratee, memo, context) {
+      iteratee = optimizeCb(iteratee, context, 4);
+      var keys = !isArrayLike(obj) && _.keys(obj),
+          length = (keys || obj).length,
+          index = dir > 0 ? 0 : length - 1;
+      // Determine the initial value if none is provided.
+      if (arguments.length < 3) {
+        memo = obj[keys ? keys[index] : index];
+        index += dir;
+      }
+      return iterator(obj, iteratee, memo, keys, index, length);
+    };
+  }
+
+  // **Reduce** builds up a single result from a list of values, aka `inject`,
+  // or `foldl`.
+  _.reduce = _.foldl = _.inject = createReduce(1);
+
+  // The right-associative version of reduce, also known as `foldr`.
+  _.reduceRight = _.foldr = createReduce(-1);
+
+  // Return the first value which passes a truth test. Aliased as `detect`.
+  _.find = _.detect = function(obj, predicate, context) {
+    var key;
+    if (isArrayLike(obj)) {
+      key = _.findIndex(obj, predicate, context);
+    } else {
+      key = _.findKey(obj, predicate, context);
+    }
+    if (key !== void 0 && key !== -1) return obj[key];
+  };
+
+  // Return all the elements that pass a truth test.
+  // Aliased as `select`.
+  _.filter = _.select = function(obj, predicate, context) {
+    var results = [];
+    predicate = cb(predicate, context);
+    _.each(obj, function(value, index, list) {
+      if (predicate(value, index, list)) results.push(value);
+    });
+    return results;
+  };
+
+  // Return all the elements for which a truth test fails.
+  _.reject = function(obj, predicate, context) {
+    return _.filter(obj, _.negate(cb(predicate)), context);
+  };
+
+  // Determine whether all of the elements match a truth test.
+  // Aliased as `all`.
+  _.every = _.all = function(obj, predicate, context) {
+    predicate = cb(predicate, context);
+    var keys = !isArrayLike(obj) && _.keys(obj),
+        length = (keys || obj).length;
+    for (var index = 0; index < length; index++) {
+      var currentKey = keys ? keys[index] : index;
+      if (!predicate(obj[currentKey], currentKey, obj)) return false;
+    }
+    return true;
+  };
+
+  // Determine if at least one element in the object matches a truth test.
+  // Aliased as `any`.
+  _.some = _.any = function(obj, predicate, context) {
+    predicate = cb(predicate, context);
+    var keys = !isArrayLike(obj) && _.keys(obj),
+        length = (keys || obj).length;
+    for (var index = 0; index < length; index++) {
+      var currentKey = keys ? keys[index] : index;
+      if (predicate(obj[currentKey], currentKey, obj)) return true;
+    }
+    return false;
+  };
+
+  // Determine if the array or object contains a given item (using `===`).
+  // Aliased as `includes` and `include`.
+  _.contains = _.includes = _.include = function(obj, item, fromIndex, guard) {
+    if (!isArrayLike(obj)) obj = _.values(obj);
+    if (typeof fromIndex != 'number' || guard) fromIndex = 0;
+    return _.indexOf(obj, item, fromIndex) >= 0;
+  };
+
+  // Invoke a method (with arguments) on every item in a collection.
+  _.invoke = function(obj, method) {
+    var args = slice.call(arguments, 2);
+    var isFunc = _.isFunction(method);
+    return _.map(obj, function(value) {
+      var func = isFunc ? method : value[method];
+      return func == null ? func : func.apply(value, args);
+    });
+  };
+
+  // Convenience version of a common use case of `map`: fetching a property.
+  _.pluck = function(obj, key) {
+    return _.map(obj, _.property(key));
+  };
+
+  // Convenience version of a common use case of `filter`: selecting only objects
+  // containing specific `key:value` pairs.
+  _.where = function(obj, attrs) {
+    return _.filter(obj, _.matcher(attrs));
+  };
+
+  // Convenience version of a common use case of `find`: getting the first object
+  // containing specific `key:value` pairs.
+  _.findWhere = function(obj, attrs) {
+    return _.find(obj, _.matcher(attrs));
+  };
+
+  // Return the maximum element (or element-based computation).
+  _.max = function(obj, iteratee, context) {
+    var result = -Infinity, lastComputed = -Infinity,
+        value, computed;
+    if (iteratee == null && obj != null) {
+      obj = isArrayLike(obj) ? obj : _.values(obj);
+      for (var i = 0, length = obj.length; i < length; i++) {
+        value = obj[i];
+        if (value > result) {
+          result = value;
+        }
+      }
+    } else {
+      iteratee = cb(iteratee, context);
+      _.each(obj, function(value, index, list) {
+        computed = iteratee(value, index, list);
+        if (computed > lastComputed || computed === -Infinity && result === -Infinity) {
+          result = value;
+          lastComputed = computed;
+        }
+      });
+    }
+    return result;
+  };
+
+  // Return the minimum element (or element-based computation).
+  _.min = function(obj, iteratee, context) {
+    var result = Infinity, lastComputed = Infinity,
+        value, computed;
+    if (iteratee == null && obj != null) {
+      obj = isArrayLike(obj) ? obj : _.values(obj);
+      for (var i = 0, length = obj.length; i < length; i++) {
+        value = obj[i];
+        if (value < result) {
+          result = value;
+        }
+      }
+    } else {
+      iteratee = cb(iteratee, context);
+      _.each(obj, function(value, index, list) {
+        computed = iteratee(value, index, list);
+        if (computed < lastComputed || computed === Infinity && result === Infinity) {
+          result = value;
+          lastComputed = computed;
+        }
+      });
+    }
+    return result;
+  };
+
+  // Shuffle a collection, using the modern version of the
+  // [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
+  _.shuffle = function(obj) {
+    var set = isArrayLike(obj) ? obj : _.values(obj);
+    var length = set.length;
+    var shuffled = Array(length);
+    for (var index = 0, rand; index < length; index++) {
+      rand = _.random(0, index);
+      if (rand !== index) shuffled[index] = shuffled[rand];
+      shuffled[rand] = set[index];
+    }
+    return shuffled;
+  };
+
+  // Sample **n** random values from a collection.
+  // If **n** is not specified, returns a single random element.
+  // The internal `guard` argument allows it to work with `map`.
+  _.sample = function(obj, n, guard) {
+    if (n == null || guard) {
+      if (!isArrayLike(obj)) obj = _.values(obj);
+      return obj[_.random(obj.length - 1)];
+    }
+    return _.shuffle(obj).slice(0, Math.max(0, n));
+  };
+
+  // Sort the object's values by a criterion produced by an iteratee.
+  _.sortBy = function(obj, iteratee, context) {
+    iteratee = cb(iteratee, context);
+    return _.pluck(_.map(obj, function(value, index, list) {
+      return {
+        value: value,
+        index: index,
+        criteria: iteratee(value, index, list)
+      };
+    }).sort(function(left, right) {
+      var a = left.criteria;
+      var b = right.criteria;
+      if (a !== b) {
+        if (a > b || a === void 0) return 1;
+        if (a < b || b === void 0) return -1;
+      }
+      return left.index - right.index;
+    }), 'value');
+  };
+
+  // An internal function used for aggregate "group by" operations.
+  var group = function(behavior) {
+    return function(obj, iteratee, context) {
+      var result = {};
+      iteratee = cb(iteratee, context);
+      _.each(obj, function(value, index) {
+        var key = iteratee(value, index, obj);
+        behavior(result, value, key);
+      });
+      return result;
+    };
+  };
+
+  // Groups the object's values by a criterion. Pass either a string attribute
+  // to group by, or a function that returns the criterion.
+  _.groupBy = group(function(result, value, key) {
+    if (_.has(result, key)) result[key].push(value); else result[key] = [value];
+  });
+
+  // Indexes the object's values by a criterion, similar to `groupBy`, but for
+  // when you know that your index values will be unique.
+  _.indexBy = group(function(result, value, key) {
+    result[key] = value;
+  });
+
+  // Counts instances of an object that group by a certain criterion. Pass
+  // either a string attribute to count by, or a function that returns the
+  // criterion.
+  _.countBy = group(function(result, value, key) {
+    if (_.has(result, key)) result[key]++; else result[key] = 1;
+  });
+
+  // Safely create a real, live array from anything iterable.
+  _.toArray = function(obj) {
+    if (!obj) return [];
+    if (_.isArray(obj)) return slice.call(obj);
+    if (isArrayLike(obj)) return _.map(obj, _.identity);
+    return _.values(obj);
+  };
+
+  // Return the number of elements in an object.
+  _.size = function(obj) {
+    if (obj == null) return 0;
+    return isArrayLike(obj) ? obj.length : _.keys(obj).length;
+  };
+
+  // Split a collection into two arrays: one whose elements all satisfy the given
+  // predicate, and one whose elements all do not satisfy the predicate.
+  _.partition = function(obj, predicate, context) {
+    predicate = cb(predicate, context);
+    var pass = [], fail = [];
+    _.each(obj, function(value, key, obj) {
+      (predicate(value, key, obj) ? pass : fail).push(value);
+    });
+    return [pass, fail];
+  };
+
+  // Array Functions
+  // ---------------
+
+  // Get the first element of an array. Passing **n** will return the first N
+  // values in the array. Aliased as `head` and `take`. The **guard** check
+  // allows it to work with `_.map`.
+  _.first = _.head = _.take = function(array, n, guard) {
+    if (array == null) return void 0;
+    if (n == null || guard) return array[0];
+    return _.initial(array, array.length - n);
+  };
+
+  // Returns everything but the last entry of the array. Especially useful on
+  // the arguments object. Passing **n** will return all the values in
+  // the array, excluding the last N.
+  _.initial = function(array, n, guard) {
+    return slice.call(array, 0, Math.max(0, array.length - (n == null || guard ? 1 : n)));
+  };
+
+  // Get the last element of an array. Passing **n** will return the last N
+  // values in the array.
+  _.last = function(array, n, guard) {
+    if (array == null) return void 0;
+    if (n == null || guard) return array[array.length - 1];
+    return _.rest(array, Math.max(0, array.length - n));
+  };
+
+  // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
+  // Especially useful on the arguments object. Passing an **n** will return
+  // the rest N values in the array.
+  _.rest = _.tail = _.drop = function(array, n, guard) {
+    return slice.call(array, n == null || guard ? 1 : n);
+  };
+
+  // Trim out all falsy values from an array.
+  _.compact = function(array) {
+    return _.filter(array, _.identity);
+  };
+
+  // Internal implementation of a recursive `flatten` function.
+  var flatten = function(input, shallow, strict, startIndex) {
+    var output = [], idx = 0;
+    for (var i = startIndex || 0, length = getLength(input); i < length; i++) {
+      var value = input[i];
+      if (isArrayLike(value) && (_.isArray(value) || _.isArguments(value))) {
+        //flatten current level of array or arguments object
+        if (!shallow) value = flatten(value, shallow, strict);
+        var j = 0, len = value.length;
+        output.length += len;
+        while (j < len) {
+          output[idx++] = value[j++];
+        }
+      } else if (!strict) {
+        output[idx++] = value;
+      }
+    }
+    return output;
+  };
+
+  // Flatten out an array, either recursively (by default), or just one level.
+  _.flatten = function(array, shallow) {
+    return flatten(array, shallow, false);
+  };
+
+  // Return a version of the array that does not contain the specified value(s).
+  _.without = function(array) {
+    return _.difference(array, slice.call(arguments, 1));
+  };
+
+  // Produce a duplicate-free version of the array. If the array has already
+  // been sorted, you have the option of using a faster algorithm.
+  // Aliased as `unique`.
+  _.uniq = _.unique = function(array, isSorted, iteratee, context) {
+    if (!_.isBoolean(isSorted)) {
+      context = iteratee;
+      iteratee = isSorted;
+      isSorted = false;
+    }
+    if (iteratee != null) iteratee = cb(iteratee, context);
+    var result = [];
+    var seen = [];
+    for (var i = 0, length = getLength(array); i < length; i++) {
+      var value = array[i],
+          computed = iteratee ? iteratee(value, i, array) : value;
+      if (isSorted) {
+        if (!i || seen !== computed) result.push(value);
+        seen = computed;
+      } else if (iteratee) {
+        if (!_.contains(seen, computed)) {
+          seen.push(computed);
+          result.push(value);
+        }
+      } else if (!_.contains(result, value)) {
+        result.push(value);
+      }
+    }
+    return result;
+  };
+
+  // Produce an array that contains the union: each distinct element from all of
+  // the passed-in arrays.
+  _.union = function() {
+    return _.uniq(flatten(arguments, true, true));
+  };
+
+  // Produce an array that contains every item shared between all the
+  // passed-in arrays.
+  _.intersection = function(array) {
+    var result = [];
+    var argsLength = arguments.length;
+    for (var i = 0, length = getLength(array); i < length; i++) {
+      var item = array[i];
+      if (_.contains(result, item)) continue;
+      for (var j = 1; j < argsLength; j++) {
+        if (!_.contains(arguments[j], item)) break;
+      }
+      if (j === argsLength) result.push(item);
+    }
+    return result;
+  };
+
+  // Take the difference between one array and a number of other arrays.
+  // Only the elements present in just the first array will remain.
+  _.difference = function(array) {
+    var rest = flatten(arguments, true, true, 1);
+    return _.filter(array, function(value){
+      return !_.contains(rest, value);
+    });
+  };
+
+  // Zip together multiple lists into a single array -- elements that share
+  // an index go together.
+  _.zip = function() {
+    return _.unzip(arguments);
+  };
+
+  // Complement of _.zip. Unzip accepts an array of arrays and groups
+  // each array's elements on shared indices
+  _.unzip = function(array) {
+    var length = array && _.max(array, getLength).length || 0;
+    var result = Array(length);
+
+    for (var index = 0; index < length; index++) {
+      result[index] = _.pluck(array, index);
+    }
+    return result;
+  };
+
+  // Converts lists into objects. Pass either a single array of `[key, value]`
+  // pairs, or two parallel arrays of the same length -- one of keys, and one of
+  // the corresponding values.
+  _.object = function(list, values) {
+    var result = {};
+    for (var i = 0, length = getLength(list); i < length; i++) {
+      if (values) {
+        result[list[i]] = values[i];
+      } else {
+        result[list[i][0]] = list[i][1];
+      }
+    }
+    return result;
+  };
+
+  // Generator function to create the findIndex and findLastIndex functions
+  function createPredicateIndexFinder(dir) {
+    return function(array, predicate, context) {
+      predicate = cb(predicate, context);
+      var length = getLength(array);
+      var index = dir > 0 ? 0 : length - 1;
+      for (; index >= 0 && index < length; index += dir) {
+        if (predicate(array[index], index, array)) return index;
+      }
+      return -1;
+    };
+  }
+
+  // Returns the first index on an array-like that passes a predicate test
+  _.findIndex = createPredicateIndexFinder(1);
+  _.findLastIndex = createPredicateIndexFinder(-1);
+
+  // Use a comparator function to figure out the smallest index at which
+  // an object should be inserted so as to maintain order. Uses binary search.
+  _.sortedIndex = function(array, obj, iteratee, context) {
+    iteratee = cb(iteratee, context, 1);
+    var value = iteratee(obj);
+    var low = 0, high = getLength(array);
+    while (low < high) {
+      var mid = Math.floor((low + high) / 2);
+      if (iteratee(array[mid]) < value) low = mid + 1; else high = mid;
+    }
+    return low;
+  };
+
+  // Generator function to create the indexOf and lastIndexOf functions
+  function createIndexFinder(dir, predicateFind, sortedIndex) {
+    return function(array, item, idx) {
+      var i = 0, length = getLength(array);
+      if (typeof idx == 'number') {
+        if (dir > 0) {
+            i = idx >= 0 ? idx : Math.max(idx + length, i);
+        } else {
+            length = idx >= 0 ? Math.min(idx + 1, length) : idx + length + 1;
+        }
+      } else if (sortedIndex && idx && length) {
+        idx = sortedIndex(array, item);
+        return array[idx] === item ? idx : -1;
+      }
+      if (item !== item) {
+        idx = predicateFind(slice.call(array, i, length), _.isNaN);
+        return idx >= 0 ? idx + i : -1;
+      }
+      for (idx = dir > 0 ? i : length - 1; idx >= 0 && idx < length; idx += dir) {
+        if (array[idx] === item) return idx;
+      }
+      return -1;
+    };
+  }
+
+  // Return the position of the first occurrence of an item in an array,
+  // or -1 if the item is not included in the array.
+  // If the array is large and already in sort order, pass `true`
+  // for **isSorted** to use binary search.
+  _.indexOf = createIndexFinder(1, _.findIndex, _.sortedIndex);
+  _.lastIndexOf = createIndexFinder(-1, _.findLastIndex);
+
+  // Generate an integer Array containing an arithmetic progression. A port of
+  // the native Python `range()` function. See
+  // [the Python documentation](http://docs.python.org/library/functions.html#range).
+  _.range = function(start, stop, step) {
+    if (stop == null) {
+      stop = start || 0;
+      start = 0;
+    }
+    step = step || 1;
+
+    var length = Math.max(Math.ceil((stop - start) / step), 0);
+    var range = Array(length);
+
+    for (var idx = 0; idx < length; idx++, start += step) {
+      range[idx] = start;
+    }
+
+    return range;
+  };
+
+  // Function (ahem) Functions
+  // ------------------
+
+  // Determines whether to execute a function as a constructor
+  // or a normal function with the provided arguments
+  var executeBound = function(sourceFunc, boundFunc, context, callingContext, args) {
+    if (!(callingContext instanceof boundFunc)) return sourceFunc.apply(context, args);
+    var self = baseCreate(sourceFunc.prototype);
+    var result = sourceFunc.apply(self, args);
+    if (_.isObject(result)) return result;
+    return self;
+  };
+
+  // Create a function bound to a given object (assigning `this`, and arguments,
+  // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
+  // available.
+  _.bind = function(func, context) {
+    if (nativeBind && func.bind === nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
+    if (!_.isFunction(func)) throw new TypeError('Bind must be called on a function');
+    var args = slice.call(arguments, 2);
+    var bound = function() {
+      return executeBound(func, bound, context, this, args.concat(slice.call(arguments)));
+    };
+    return bound;
+  };
+
+  // Partially apply a function by creating a version that has had some of its
+  // arguments pre-filled, without changing its dynamic `this` context. _ acts
+  // as a placeholder, allowing any combination of arguments to be pre-filled.
+  _.partial = function(func) {
+    var boundArgs = slice.call(arguments, 1);
+    var bound = function() {
+      var position = 0, length = boundArgs.length;
+      var args = Array(length);
+      for (var i = 0; i < length; i++) {
+        args[i] = boundArgs[i] === _ ? arguments[position++] : boundArgs[i];
+      }
+      while (position < arguments.length) args.push(arguments[position++]);
+      return executeBound(func, bound, this, this, args);
+    };
+    return bound;
+  };
+
+  // Bind a number of an object's methods to that object. Remaining arguments
+  // are the method names to be bound. Useful for ensuring that all callbacks
+  // defined on an object belong to it.
+  _.bindAll = function(obj) {
+    var i, length = arguments.length, key;
+    if (length <= 1) throw new Error('bindAll must be passed function names');
+    for (i = 1; i < length; i++) {
+      key = arguments[i];
+      obj[key] = _.bind(obj[key], obj);
+    }
+    return obj;
+  };
+
+  // Memoize an expensive function by storing its results.
+  _.memoize = function(func, hasher) {
+    var memoize = function(key) {
+      var cache = memoize.cache;
+      var address = '' + (hasher ? hasher.apply(this, arguments) : key);
+      if (!_.has(cache, address)) cache[address] = func.apply(this, arguments);
+      return cache[address];
+    };
+    memoize.cache = {};
+    return memoize;
+  };
+
+  // Delays a function for the given number of milliseconds, and then calls
+  // it with the arguments supplied.
+  _.delay = function(func, wait) {
+    var args = slice.call(arguments, 2);
+    return setTimeout(function(){
+      return func.apply(null, args);
+    }, wait);
+  };
+
+  // Defers a function, scheduling it to run after the current call stack has
+  // cleared.
+  _.defer = _.partial(_.delay, _, 1);
+
+  // Returns a function, that, when invoked, will only be triggered at most once
+  // during a given window of time. Normally, the throttled function will run
+  // as much as it can, without ever going more than once per `wait` duration;
+  // but if you'd like to disable the execution on the leading edge, pass
+  // `{leading: false}`. To disable execution on the trailing edge, ditto.
+  _.throttle = function(func, wait, options) {
+    var context, args, result;
+    var timeout = null;
+    var previous = 0;
+    if (!options) options = {};
+    var later = function() {
+      previous = options.leading === false ? 0 : _.now();
+      timeout = null;
+      result = func.apply(context, args);
+      if (!timeout) context = args = null;
+    };
+    return function() {
+      var now = _.now();
+      if (!previous && options.leading === false) previous = now;
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+      if (remaining <= 0 || remaining > wait) {
+        if (timeout) {
+          clearTimeout(timeout);
+          timeout = null;
+        }
+        previous = now;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+      } else if (!timeout && options.trailing !== false) {
+        timeout = setTimeout(later, remaining);
+      }
+      return result;
+    };
+  };
+
+  // Returns a function, that, as long as it continues to be invoked, will not
+  // be triggered. The function will be called after it stops being called for
+  // N milliseconds. If `immediate` is passed, trigger the function on the
+  // leading edge, instead of the trailing.
+  _.debounce = function(func, wait, immediate) {
+    var timeout, args, context, timestamp, result;
+
+    var later = function() {
+      var last = _.now() - timestamp;
+
+      if (last < wait && last >= 0) {
+        timeout = setTimeout(later, wait - last);
+      } else {
+        timeout = null;
+        if (!immediate) {
+          result = func.apply(context, args);
+          if (!timeout) context = args = null;
+        }
+      }
+    };
+
+    return function() {
+      context = this;
+      args = arguments;
+      timestamp = _.now();
+      var callNow = immediate && !timeout;
+      if (!timeout) timeout = setTimeout(later, wait);
+      if (callNow) {
+        result = func.apply(context, args);
+        context = args = null;
+      }
+
+      return result;
+    };
+  };
+
+  // Returns the first function passed as an argument to the second,
+  // allowing you to adjust arguments, run code before and after, and
+  // conditionally execute the original function.
+  _.wrap = function(func, wrapper) {
+    return _.partial(wrapper, func);
+  };
+
+  // Returns a negated version of the passed-in predicate.
+  _.negate = function(predicate) {
+    return function() {
+      return !predicate.apply(this, arguments);
+    };
+  };
+
+  // Returns a function that is the composition of a list of functions, each
+  // consuming the return value of the function that follows.
+  _.compose = function() {
+    var args = arguments;
+    var start = args.length - 1;
+    return function() {
+      var i = start;
+      var result = args[start].apply(this, arguments);
+      while (i--) result = args[i].call(this, result);
+      return result;
+    };
+  };
+
+  // Returns a function that will only be executed on and after the Nth call.
+  _.after = function(times, func) {
+    return function() {
+      if (--times < 1) {
+        return func.apply(this, arguments);
+      }
+    };
+  };
+
+  // Returns a function that will only be executed up to (but not including) the Nth call.
+  _.before = function(times, func) {
+    var memo;
+    return function() {
+      if (--times > 0) {
+        memo = func.apply(this, arguments);
+      }
+      if (times <= 1) func = null;
+      return memo;
+    };
+  };
+
+  // Returns a function that will be executed at most one time, no matter how
+  // often you call it. Useful for lazy initialization.
+  _.once = _.partial(_.before, 2);
+
+  // Object Functions
+  // ----------------
+
+  // Keys in IE < 9 that won't be iterated by `for key in ...` and thus missed.
+  var hasEnumBug = !{toString: null}.propertyIsEnumerable('toString');
+  var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',
+                      'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
+
+  function collectNonEnumProps(obj, keys) {
+    var nonEnumIdx = nonEnumerableProps.length;
+    var constructor = obj.constructor;
+    var proto = (_.isFunction(constructor) && constructor.prototype) || ObjProto;
+
+    // Constructor is a special case.
+    var prop = 'constructor';
+    if (_.has(obj, prop) && !_.contains(keys, prop)) keys.push(prop);
+
+    while (nonEnumIdx--) {
+      prop = nonEnumerableProps[nonEnumIdx];
+      if (prop in obj && obj[prop] !== proto[prop] && !_.contains(keys, prop)) {
+        keys.push(prop);
+      }
+    }
+  }
+
+  // Retrieve the names of an object's own properties.
+  // Delegates to **ECMAScript 5**'s native `Object.keys`
+  _.keys = function(obj) {
+    if (!_.isObject(obj)) return [];
+    if (nativeKeys) return nativeKeys(obj);
+    var keys = [];
+    for (var key in obj) if (_.has(obj, key)) keys.push(key);
+    // Ahem, IE < 9.
+    if (hasEnumBug) collectNonEnumProps(obj, keys);
+    return keys;
+  };
+
+  // Retrieve all the property names of an object.
+  _.allKeys = function(obj) {
+    if (!_.isObject(obj)) return [];
+    var keys = [];
+    for (var key in obj) keys.push(key);
+    // Ahem, IE < 9.
+    if (hasEnumBug) collectNonEnumProps(obj, keys);
+    return keys;
+  };
+
+  // Retrieve the values of an object's properties.
+  _.values = function(obj) {
+    var keys = _.keys(obj);
+    var length = keys.length;
+    var values = Array(length);
+    for (var i = 0; i < length; i++) {
+      values[i] = obj[keys[i]];
+    }
+    return values;
+  };
+
+  // Returns the results of applying the iteratee to each element of the object
+  // In contrast to _.map it returns an object
+  _.mapObject = function(obj, iteratee, context) {
+    iteratee = cb(iteratee, context);
+    var keys =  _.keys(obj),
+          length = keys.length,
+          results = {},
+          currentKey;
+      for (var index = 0; index < length; index++) {
+        currentKey = keys[index];
+        results[currentKey] = iteratee(obj[currentKey], currentKey, obj);
+      }
+      return results;
+  };
+
+  // Convert an object into a list of `[key, value]` pairs.
+  _.pairs = function(obj) {
+    var keys = _.keys(obj);
+    var length = keys.length;
+    var pairs = Array(length);
+    for (var i = 0; i < length; i++) {
+      pairs[i] = [keys[i], obj[keys[i]]];
+    }
+    return pairs;
+  };
+
+  // Invert the keys and values of an object. The values must be serializable.
+  _.invert = function(obj) {
+    var result = {};
+    var keys = _.keys(obj);
+    for (var i = 0, length = keys.length; i < length; i++) {
+      result[obj[keys[i]]] = keys[i];
+    }
+    return result;
+  };
+
+  // Return a sorted list of the function names available on the object.
+  // Aliased as `methods`
+  _.functions = _.methods = function(obj) {
+    var names = [];
+    for (var key in obj) {
+      if (_.isFunction(obj[key])) names.push(key);
+    }
+    return names.sort();
+  };
+
+  // Extend a given object with all the properties in passed-in object(s).
+  _.extend = createAssigner(_.allKeys);
+
+  // Assigns a given object with all the own properties in the passed-in object(s)
+  // (https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+  _.extendOwn = _.assign = createAssigner(_.keys);
+
+  // Returns the first key on an object that passes a predicate test
+  _.findKey = function(obj, predicate, context) {
+    predicate = cb(predicate, context);
+    var keys = _.keys(obj), key;
+    for (var i = 0, length = keys.length; i < length; i++) {
+      key = keys[i];
+      if (predicate(obj[key], key, obj)) return key;
+    }
+  };
+
+  // Return a copy of the object only containing the whitelisted properties.
+  _.pick = function(object, oiteratee, context) {
+    var result = {}, obj = object, iteratee, keys;
+    if (obj == null) return result;
+    if (_.isFunction(oiteratee)) {
+      keys = _.allKeys(obj);
+      iteratee = optimizeCb(oiteratee, context);
+    } else {
+      keys = flatten(arguments, false, false, 1);
+      iteratee = function(value, key, obj) { return key in obj; };
+      obj = Object(obj);
+    }
+    for (var i = 0, length = keys.length; i < length; i++) {
+      var key = keys[i];
+      var value = obj[key];
+      if (iteratee(value, key, obj)) result[key] = value;
+    }
+    return result;
+  };
+
+   // Return a copy of the object without the blacklisted properties.
+  _.omit = function(obj, iteratee, context) {
+    if (_.isFunction(iteratee)) {
+      iteratee = _.negate(iteratee);
+    } else {
+      var keys = _.map(flatten(arguments, false, false, 1), String);
+      iteratee = function(value, key) {
+        return !_.contains(keys, key);
+      };
+    }
+    return _.pick(obj, iteratee, context);
+  };
+
+  // Fill in a given object with default properties.
+  _.defaults = createAssigner(_.allKeys, true);
+
+  // Creates an object that inherits from the given prototype object.
+  // If additional properties are provided then they will be added to the
+  // created object.
+  _.create = function(prototype, props) {
+    var result = baseCreate(prototype);
+    if (props) _.extendOwn(result, props);
+    return result;
+  };
+
+  // Create a (shallow-cloned) duplicate of an object.
+  _.clone = function(obj) {
+    if (!_.isObject(obj)) return obj;
+    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
+  };
+
+  // Invokes interceptor with the obj, and then returns obj.
+  // The primary purpose of this method is to "tap into" a method chain, in
+  // order to perform operations on intermediate results within the chain.
+  _.tap = function(obj, interceptor) {
+    interceptor(obj);
+    return obj;
+  };
+
+  // Returns whether an object has a given set of `key:value` pairs.
+  _.isMatch = function(object, attrs) {
+    var keys = _.keys(attrs), length = keys.length;
+    if (object == null) return !length;
+    var obj = Object(object);
+    for (var i = 0; i < length; i++) {
+      var key = keys[i];
+      if (attrs[key] !== obj[key] || !(key in obj)) return false;
+    }
+    return true;
+  };
+
+
+  // Internal recursive comparison function for `isEqual`.
+  var eq = function(a, b, aStack, bStack) {
+    // Identical objects are equal. `0 === -0`, but they aren't identical.
+    // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
+    if (a === b) return a !== 0 || 1 / a === 1 / b;
+    // A strict comparison is necessary because `null == undefined`.
+    if (a == null || b == null) return a === b;
+    // Unwrap any wrapped objects.
+    if (a instanceof _) a = a._wrapped;
+    if (b instanceof _) b = b._wrapped;
+    // Compare `[[Class]]` names.
+    var className = toString.call(a);
+    if (className !== toString.call(b)) return false;
+    switch (className) {
+      // Strings, numbers, regular expressions, dates, and booleans are compared by value.
+      case '[object RegExp]':
+      // RegExps are coerced to strings for comparison (Note: '' + /a/i === '/a/i')
+      case '[object String]':
+        // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
+        // equivalent to `new String("5")`.
+        return '' + a === '' + b;
+      case '[object Number]':
+        // `NaN`s are equivalent, but non-reflexive.
+        // Object(NaN) is equivalent to NaN
+        if (+a !== +a) return +b !== +b;
+        // An `egal` comparison is performed for other numeric values.
+        return +a === 0 ? 1 / +a === 1 / b : +a === +b;
+      case '[object Date]':
+      case '[object Boolean]':
+        // Coerce dates and booleans to numeric primitive values. Dates are compared by their
+        // millisecond representations. Note that invalid dates with millisecond representations
+        // of `NaN` are not equivalent.
+        return +a === +b;
+    }
+
+    var areArrays = className === '[object Array]';
+    if (!areArrays) {
+      if (typeof a != 'object' || typeof b != 'object') return false;
+
+      // Objects with different constructors are not equivalent, but `Object`s or `Array`s
+      // from different frames are.
+      var aCtor = a.constructor, bCtor = b.constructor;
+      if (aCtor !== bCtor && !(_.isFunction(aCtor) && aCtor instanceof aCtor &&
+                               _.isFunction(bCtor) && bCtor instanceof bCtor)
+                          && ('constructor' in a && 'constructor' in b)) {
+        return false;
+      }
+    }
+    // Assume equality for cyclic structures. The algorithm for detecting cyclic
+    // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
+
+    // Initializing stack of traversed objects.
+    // It's done here since we only need them for objects and arrays comparison.
+    aStack = aStack || [];
+    bStack = bStack || [];
+    var length = aStack.length;
+    while (length--) {
+      // Linear search. Performance is inversely proportional to the number of
+      // unique nested structures.
+      if (aStack[length] === a) return bStack[length] === b;
+    }
+
+    // Add the first object to the stack of traversed objects.
+    aStack.push(a);
+    bStack.push(b);
+
+    // Recursively compare objects and arrays.
+    if (areArrays) {
+      // Compare array lengths to determine if a deep comparison is necessary.
+      length = a.length;
+      if (length !== b.length) return false;
+      // Deep compare the contents, ignoring non-numeric properties.
+      while (length--) {
+        if (!eq(a[length], b[length], aStack, bStack)) return false;
+      }
+    } else {
+      // Deep compare objects.
+      var keys = _.keys(a), key;
+      length = keys.length;
+      // Ensure that both objects contain the same number of properties before comparing deep equality.
+      if (_.keys(b).length !== length) return false;
+      while (length--) {
+        // Deep compare each member
+        key = keys[length];
+        if (!(_.has(b, key) && eq(a[key], b[key], aStack, bStack))) return false;
+      }
+    }
+    // Remove the first object from the stack of traversed objects.
+    aStack.pop();
+    bStack.pop();
+    return true;
+  };
+
+  // Perform a deep comparison to check if two objects are equal.
+  _.isEqual = function(a, b) {
+    return eq(a, b);
+  };
+
+  // Is a given array, string, or object empty?
+  // An "empty" object has no enumerable own-properties.
+  _.isEmpty = function(obj) {
+    if (obj == null) return true;
+    if (isArrayLike(obj) && (_.isArray(obj) || _.isString(obj) || _.isArguments(obj))) return obj.length === 0;
+    return _.keys(obj).length === 0;
+  };
+
+  // Is a given value a DOM element?
+  _.isElement = function(obj) {
+    return !!(obj && obj.nodeType === 1);
+  };
+
+  // Is a given value an array?
+  // Delegates to ECMA5's native Array.isArray
+  _.isArray = nativeIsArray || function(obj) {
+    return toString.call(obj) === '[object Array]';
+  };
+
+  // Is a given variable an object?
+  _.isObject = function(obj) {
+    var type = typeof obj;
+    return type === 'function' || type === 'object' && !!obj;
+  };
+
+  // Add some isType methods: isArguments, isFunction, isString, isNumber, isDate, isRegExp, isError.
+  _.each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error'], function(name) {
+    _['is' + name] = function(obj) {
+      return toString.call(obj) === '[object ' + name + ']';
+    };
+  });
+
+  // Define a fallback version of the method in browsers (ahem, IE < 9), where
+  // there isn't any inspectable "Arguments" type.
+  if (!_.isArguments(arguments)) {
+    _.isArguments = function(obj) {
+      return _.has(obj, 'callee');
+    };
+  }
+
+  // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
+  // IE 11 (#1621), and in Safari 8 (#1929).
+  if (typeof /./ != 'function' && typeof Int8Array != 'object') {
+    _.isFunction = function(obj) {
+      return typeof obj == 'function' || false;
+    };
+  }
+
+  // Is a given object a finite number?
+  _.isFinite = function(obj) {
+    return isFinite(obj) && !isNaN(parseFloat(obj));
+  };
+
+  // Is the given value `NaN`? (NaN is the only number which does not equal itself).
+  _.isNaN = function(obj) {
+    return _.isNumber(obj) && obj !== +obj;
+  };
+
+  // Is a given value a boolean?
+  _.isBoolean = function(obj) {
+    return obj === true || obj === false || toString.call(obj) === '[object Boolean]';
+  };
+
+  // Is a given value equal to null?
+  _.isNull = function(obj) {
+    return obj === null;
+  };
+
+  // Is a given variable undefined?
+  _.isUndefined = function(obj) {
+    return obj === void 0;
+  };
+
+  // Shortcut function for checking if an object has a given property directly
+  // on itself (in other words, not on a prototype).
+  _.has = function(obj, key) {
+    return obj != null && hasOwnProperty.call(obj, key);
+  };
+
+  // Utility Functions
+  // -----------------
+
+  // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
+  // previous owner. Returns a reference to the Underscore object.
+  _.noConflict = function() {
+    root._ = previousUnderscore;
+    return this;
+  };
+
+  // Keep the identity function around for default iteratees.
+  _.identity = function(value) {
+    return value;
+  };
+
+  // Predicate-generating functions. Often useful outside of Underscore.
+  _.constant = function(value) {
+    return function() {
+      return value;
+    };
+  };
+
+  _.noop = function(){};
+
+  _.property = property;
+
+  // Generates a function for a given object that returns a given property.
+  _.propertyOf = function(obj) {
+    return obj == null ? function(){} : function(key) {
+      return obj[key];
+    };
+  };
+
+  // Returns a predicate for checking whether an object has a given set of
+  // `key:value` pairs.
+  _.matcher = _.matches = function(attrs) {
+    attrs = _.extendOwn({}, attrs);
+    return function(obj) {
+      return _.isMatch(obj, attrs);
+    };
+  };
+
+  // Run a function **n** times.
+  _.times = function(n, iteratee, context) {
+    var accum = Array(Math.max(0, n));
+    iteratee = optimizeCb(iteratee, context, 1);
+    for (var i = 0; i < n; i++) accum[i] = iteratee(i);
+    return accum;
+  };
+
+  // Return a random integer between min and max (inclusive).
+  _.random = function(min, max) {
+    if (max == null) {
+      max = min;
+      min = 0;
+    }
+    return min + Math.floor(Math.random() * (max - min + 1));
+  };
+
+  // A (possibly faster) way to get the current timestamp as an integer.
+  _.now = Date.now || function() {
+    return new Date().getTime();
+  };
+
+   // List of HTML entities for escaping.
+  var escapeMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#x27;',
+    '`': '&#x60;'
+  };
+  var unescapeMap = _.invert(escapeMap);
+
+  // Functions for escaping and unescaping strings to/from HTML interpolation.
+  var createEscaper = function(map) {
+    var escaper = function(match) {
+      return map[match];
+    };
+    // Regexes for identifying a key that needs to be escaped
+    var source = '(?:' + _.keys(map).join('|') + ')';
+    var testRegexp = RegExp(source);
+    var replaceRegexp = RegExp(source, 'g');
+    return function(string) {
+      string = string == null ? '' : '' + string;
+      return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;
+    };
+  };
+  _.escape = createEscaper(escapeMap);
+  _.unescape = createEscaper(unescapeMap);
+
+  // If the value of the named `property` is a function then invoke it with the
+  // `object` as context; otherwise, return it.
+  _.result = function(object, property, fallback) {
+    var value = object == null ? void 0 : object[property];
+    if (value === void 0) {
+      value = fallback;
+    }
+    return _.isFunction(value) ? value.call(object) : value;
+  };
+
+  // Generate a unique integer id (unique within the entire client session).
+  // Useful for temporary DOM ids.
+  var idCounter = 0;
+  _.uniqueId = function(prefix) {
+    var id = ++idCounter + '';
+    return prefix ? prefix + id : id;
+  };
+
+  // By default, Underscore uses ERB-style template delimiters, change the
+  // following template settings to use alternative delimiters.
+  _.templateSettings = {
+    evaluate    : /<%([\s\S]+?)%>/g,
+    interpolate : /<%=([\s\S]+?)%>/g,
+    escape      : /<%-([\s\S]+?)%>/g
+  };
+
+  // When customizing `templateSettings`, if you don't want to define an
+  // interpolation, evaluation or escaping regex, we need one that is
+  // guaranteed not to match.
+  var noMatch = /(.)^/;
+
+  // Certain characters need to be escaped so that they can be put into a
+  // string literal.
+  var escapes = {
+    "'":      "'",
+    '\\':     '\\',
+    '\r':     'r',
+    '\n':     'n',
+    '\u2028': 'u2028',
+    '\u2029': 'u2029'
+  };
+
+  var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
+
+  var escapeChar = function(match) {
+    return '\\' + escapes[match];
+  };
+
+  // JavaScript micro-templating, similar to John Resig's implementation.
+  // Underscore templating handles arbitrary delimiters, preserves whitespace,
+  // and correctly escapes quotes within interpolated code.
+  // NB: `oldSettings` only exists for backwards compatibility.
+  _.template = function(text, settings, oldSettings) {
+    if (!settings && oldSettings) settings = oldSettings;
+    settings = _.defaults({}, settings, _.templateSettings);
+
+    // Combine delimiters into one regular expression via alternation.
+    var matcher = RegExp([
+      (settings.escape || noMatch).source,
+      (settings.interpolate || noMatch).source,
+      (settings.evaluate || noMatch).source
+    ].join('|') + '|$', 'g');
+
+    // Compile the template source, escaping string literals appropriately.
+    var index = 0;
+    var source = "__p+='";
+    text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
+      source += text.slice(index, offset).replace(escaper, escapeChar);
+      index = offset + match.length;
+
+      if (escape) {
+        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";
+      } else if (interpolate) {
+        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
+      } else if (evaluate) {
+        source += "';\n" + evaluate + "\n__p+='";
+      }
+
+      // Adobe VMs need the match returned to produce the correct offest.
+      return match;
+    });
+    source += "';\n";
+
+    // If a variable is not specified, place data values in local scope.
+    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
+
+    source = "var __t,__p='',__j=Array.prototype.join," +
+      "print=function(){__p+=__j.call(arguments,'');};\n" +
+      source + 'return __p;\n';
+
+    try {
+      var render = new Function(settings.variable || 'obj', '_', source);
+    } catch (e) {
+      e.source = source;
+      throw e;
+    }
+
+    var template = function(data) {
+      return render.call(this, data, _);
+    };
+
+    // Provide the compiled source as a convenience for precompilation.
+    var argument = settings.variable || 'obj';
+    template.source = 'function(' + argument + '){\n' + source + '}';
+
+    return template;
+  };
+
+  // Add a "chain" function. Start chaining a wrapped Underscore object.
+  _.chain = function(obj) {
+    var instance = _(obj);
+    instance._chain = true;
+    return instance;
+  };
+
+  // OOP
+  // ---------------
+  // If Underscore is called as a function, it returns a wrapped object that
+  // can be used OO-style. This wrapper holds altered versions of all the
+  // underscore functions. Wrapped objects may be chained.
+
+  // Helper function to continue chaining intermediate results.
+  var result = function(instance, obj) {
+    return instance._chain ? _(obj).chain() : obj;
+  };
+
+  // Add your own custom functions to the Underscore object.
+  _.mixin = function(obj) {
+    _.each(_.functions(obj), function(name) {
+      var func = _[name] = obj[name];
+      _.prototype[name] = function() {
+        var args = [this._wrapped];
+        push.apply(args, arguments);
+        return result(this, func.apply(_, args));
+      };
+    });
+  };
+
+  // Add all of the Underscore functions to the wrapper object.
+  _.mixin(_);
+
+  // Add all mutator Array functions to the wrapper.
+  _.each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
+    var method = ArrayProto[name];
+    _.prototype[name] = function() {
+      var obj = this._wrapped;
+      method.apply(obj, arguments);
+      if ((name === 'shift' || name === 'splice') && obj.length === 0) delete obj[0];
+      return result(this, obj);
+    };
+  });
+
+  // Add all accessor Array functions to the wrapper.
+  _.each(['concat', 'join', 'slice'], function(name) {
+    var method = ArrayProto[name];
+    _.prototype[name] = function() {
+      return result(this, method.apply(this._wrapped, arguments));
+    };
+  });
+
+  // Extracts the result from a wrapped and chained object.
+  _.prototype.value = function() {
+    return this._wrapped;
+  };
+
+  // Provide unwrapping proxy for some methods used in engine operations
+  // such as arithmetic and JSON stringification.
+  _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;
+
+  _.prototype.toString = function() {
+    return '' + this._wrapped;
+  };
+
+  // AMD registration happens at the end for compatibility with AMD loaders
+  // that may not enforce next-turn semantics on modules. Even though general
+  // practice for AMD registration is to be anonymous, underscore registers
+  // as a named module because, like jQuery, it is a base library that is
+  // popular enough to be bundled in a third party lib, but not be part of
+  // an AMD load request. Those cases could generate an error when an
+  // anonymous define() is called outside of a loader request.
+  if (typeof define === 'function' && define.amd) {
+    define('underscore', [], function() {
+      return _;
+    });
+  }
+}.call(this));
+
+},{}],274:[function(require,module,exports){
 // yes, we're going to be crude and load all the words into memory... it's really not so bad.
 // the list comes from this gem:
 // http://www.ashley-bovan.co.uk/words/partsofspeech.html
@@ -60263,7 +53793,7 @@ module.exports = ["abased",
 "zippy",
 "zonate",
 "zoning"];
-},{}],572:[function(require,module,exports){
+},{}],275:[function(require,module,exports){
 // yes, we're going to be crude and load all the words into memory... it's really not so bad.
 // the list comes from this gem:
 // http://www.ashley-bovan.co.uk/words/partsofspeech.html
@@ -62541,3702 +56071,5654 @@ module.exports = ["aardvark",
 "zone",
 "zoo",
 "zoology"];
-},{}],573:[function(require,module,exports){
-(function (global){
-// Copyright (c) 2011, Chris Umbel
+},{}],276:[function(require,module,exports){
+"use strict";
 
-exports.Vector = require('./vector');
-global.$V = exports.Vector.create;
-exports.Matrix = require('./matrix');
-global.$M = exports.Matrix.create;
-exports.Line = require('./line');
-global.$L = exports.Line.create;
-exports.Plane = require('./plane');
-global.$P = exports.Plane.create;
-exports.Line.Segment = require('./line.segment');
-exports.Sylvester = require('./sylvester');
+// Creating a tool to help people who stutter.
 
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./line":574,"./line.segment":575,"./matrix":576,"./plane":577,"./sylvester":578,"./vector":579}],574:[function(require,module,exports){
-// Copyright (c) 2011, Chris Umbel, James Coglan
-var Vector = require('./vector');
-var Matrix = require('./matrix');
-var Plane = require('./plane');
-var Sylvester = require('./sylvester');
+// Credits go to https://scotch.io/tutorials/getting-started-with-browserify
+// Credits go to https://github.com/kylestetz/Sentencer
 
-// Line class - depends on Vector, and some methods require Matrix and Plane.
+var Sentencer = require('./script.js');
 
-function Line() {}
-Line.prototype = {
 
-  // Returns true if the argument occupies the same space as the line
-  eql: function(line) {
-    return (this.isParallelTo(line) && this.contains(line.anchor));
-  },
+// TODO: automate browserify using gulp (not sure how to do that)
 
-  // Returns a copy of the line
-  dup: function() {
-    return Line.create(this.anchor, this.direction);
-  },
+// TODO: filter word list using regex to focus on specific vowel sounds
+// https://www.npmjs.com/package/regex
 
-  // Returns the result of translating the line by the given vector/array
-  translate: function(vector) {
-    var V = vector.elements || vector;
-    return Line.create([
-      this.anchor.elements[0] + V[0],
-      this.anchor.elements[1] + V[1],
-      this.anchor.elements[2] + (V[2] || 0)
-    ], this.direction);
-  },
 
-  // Returns true if the line is parallel to the argument. Here, 'parallel to'
-  // means that the argument's direction is either parallel or antiparallel to
-  // the line's own direction. A line is parallel to a plane if the two do not
-  // have a unique intersection.
-  isParallelTo: function(obj) {
-    if (obj.normal || (obj.start && obj.end)) { return obj.isParallelTo(this); }
-    var theta = this.direction.angleFrom(obj.direction);
-    return (Math.abs(theta) <= Sylvester.precision || Math.abs(theta - Math.PI) <= Sylvester.precision);
-  },
 
-  // Returns the line's perpendicular distance from the argument,
-  // which can be a point, a line or a plane
-  distanceFrom: function(obj) {
-    if (obj.normal || (obj.start && obj.end)) { return obj.distanceFrom(this); }
-    if (obj.direction) {
-      // obj is a line
-      if (this.isParallelTo(obj)) { return this.distanceFrom(obj.anchor); }
-      var N = this.direction.cross(obj.direction).toUnitVector().elements;
-      var A = this.anchor.elements, B = obj.anchor.elements;
-      return Math.abs((A[0] - B[0]) * N[0] + (A[1] - B[1]) * N[1] + (A[2] - B[2]) * N[2]);
-    } else {
-      // obj is a point
-      var P = obj.elements || obj;
-      var A = this.anchor.elements, D = this.direction.elements;
-      var PA1 = P[0] - A[0], PA2 = P[1] - A[1], PA3 = (P[2] || 0) - A[2];
-      var modPA = Math.sqrt(PA1*PA1 + PA2*PA2 + PA3*PA3);
-      if (modPA === 0) return 0;
-      // Assumes direction vector is normalized
-      var cosTheta = (PA1 * D[0] + PA2 * D[1] + PA3 * D[2]) / modPA;
-      var sin2 = 1 - cosTheta*cosTheta;
-      return Math.abs(modPA * Math.sqrt(sin2 < 0 ? 0 : sin2));
-    }
-  },
 
-  // Returns true iff the argument is a point on the line, or if the argument
-  // is a line segment lying within the receiver
-  contains: function(obj) {
-    if (obj.start && obj.end) { return this.contains(obj.start) && this.contains(obj.end); }
-    var dist = this.distanceFrom(obj);
-    return (dist !== null && dist <= Sylvester.precision);
-  },
+// document.getElementById('response').innerHTML = 'test';
 
-  // Returns the distance from the anchor of the given point. Negative values are
-  // returned for points that are in the opposite direction to the line's direction from
-  // the line's anchor point.
-  positionOf: function(point) {
-    if (!this.contains(point)) { return null; }
-    var P = point.elements || point;
-    var A = this.anchor.elements, D = this.direction.elements;
-    return (P[0] - A[0]) * D[0] + (P[1] - A[1]) * D[1] + ((P[2] || 0) - A[2]) * D[2];
-  },
+// alert(randomSentence);
 
-  // Returns true iff the line lies in the given plane
-  liesIn: function(plane) {
-    return plane.contains(this);
-  },
+},{"./script.js":277}],277:[function(require,module,exports){
 
-  // Returns true iff the line has a unique point of intersection with the argument
-  intersects: function(obj) {
-    if (obj.normal) { return obj.intersects(this); }
-    return (!this.isParallelTo(obj) && this.distanceFrom(obj) <= Sylvester.precision);
-  },
+var Sentencer = require('Sentencer');
+var async = require("async");
 
-  // Returns the unique intersection point with the argument, if one exists
-  intersectionWith: function(obj) {
-    if (obj.normal || (obj.start && obj.end)) { return obj.intersectionWith(this); }
-    if (!this.intersects(obj)) { return null; }
-    var P = this.anchor.elements, X = this.direction.elements,
-        Q = obj.anchor.elements, Y = obj.direction.elements;
-    var X1 = X[0], X2 = X[1], X3 = X[2], Y1 = Y[0], Y2 = Y[1], Y3 = Y[2];
-    var PsubQ1 = P[0] - Q[0], PsubQ2 = P[1] - Q[1], PsubQ3 = P[2] - Q[2];
-    var XdotQsubP = - X1*PsubQ1 - X2*PsubQ2 - X3*PsubQ3;
-    var YdotPsubQ = Y1*PsubQ1 + Y2*PsubQ2 + Y3*PsubQ3;
-    var XdotX = X1*X1 + X2*X2 + X3*X3;
-    var YdotY = Y1*Y1 + Y2*Y2 + Y3*Y3;
-    var XdotY = X1*Y1 + X2*Y2 + X3*Y3;
-    var k = (XdotQsubP * YdotY / XdotX + XdotY * YdotPsubQ) / (YdotY - XdotY * XdotY);
-    return Vector.create([P[0] + k*X1, P[1] + k*X2, P[2] + k*X3]);
-  },
+// TODO: move options into configure method
+Sentencer.configure({
 
-  // Returns the point on the line that is closest to the given point or line/line segment
-  pointClosestTo: function(obj) {
-    if (obj.start && obj.end) {
-      // obj is a line segment
-      var P = obj.pointClosestTo(this);
-      return (P === null) ? null : this.pointClosestTo(P);
-    } else if (obj.direction) {
-      // obj is a line
-      if (this.intersects(obj)) { return this.intersectionWith(obj); }
-      if (this.isParallelTo(obj)) { return null; }
-      var D = this.direction.elements, E = obj.direction.elements;
-      var D1 = D[0], D2 = D[1], D3 = D[2], E1 = E[0], E2 = E[1], E3 = E[2];
-      // Create plane containing obj and the shared normal and intersect this with it
-      // Thank you: http://www.cgafaq.info/wiki/Line-line_distance
-      var x = (D3 * E1 - D1 * E3), y = (D1 * E2 - D2 * E1), z = (D2 * E3 - D3 * E2);
-      var N = [x * E3 - y * E2, y * E1 - z * E3, z * E2 - x * E1];
-      var P = Plane.create(obj.anchor, N);
-      return P.intersectionWith(this);
-    } else {
-      // obj is a point
-      var P = obj.elements || obj;
-      if (this.contains(P)) { return Vector.create(P); }
-      var A = this.anchor.elements, D = this.direction.elements;
-      var D1 = D[0], D2 = D[1], D3 = D[2], A1 = A[0], A2 = A[1], A3 = A[2];
-      var x = D1 * (P[1]-A2) - D2 * (P[0]-A1), y = D2 * ((P[2] || 0) - A3) - D3 * (P[1]-A2),
-          z = D3 * (P[0]-A1) - D1 * ((P[2] || 0) - A3);
-      var V = Vector.create([D2 * x - D3 * z, D3 * y - D1 * x, D1 * z - D2 * y]);
-      var k = this.distanceFrom(P) / V.modulus();
-      return Vector.create([
-        P[0] + V.elements[0] * k,
-        P[1] + V.elements[1] * k,
-        (P[2] || 0) + V.elements[2] * k
-      ]);
-    }
-  },
-
-  // Returns a copy of the line rotated by t radians about the given line. Works by
-  // finding the argument's closest point to this line's anchor point (call this C) and
-  // rotating the anchor about C. Also rotates the line's direction about the argument's.
-  // Be careful with this - the rotation axis' direction affects the outcome!
-  rotate: function(t, line) {
-    // If we're working in 2D
-    if (typeof(line.direction) == 'undefined') { line = Line.create(line.to3D(), Vector.k); }
-    var R = Matrix.Rotation(t, line.direction).elements;
-    var C = line.pointClosestTo(this.anchor).elements;
-    var A = this.anchor.elements, D = this.direction.elements;
-    var C1 = C[0], C2 = C[1], C3 = C[2], A1 = A[0], A2 = A[1], A3 = A[2];
-    var x = A1 - C1, y = A2 - C2, z = A3 - C3;
-    return Line.create([
-      C1 + R[0][0] * x + R[0][1] * y + R[0][2] * z,
-      C2 + R[1][0] * x + R[1][1] * y + R[1][2] * z,
-      C3 + R[2][0] * x + R[2][1] * y + R[2][2] * z
-    ], [
-      R[0][0] * D[0] + R[0][1] * D[1] + R[0][2] * D[2],
-      R[1][0] * D[0] + R[1][1] * D[1] + R[1][2] * D[2],
-      R[2][0] * D[0] + R[2][1] * D[1] + R[2][2] * D[2]
-    ]);
-  },
-
-  // Returns a copy of the line with its direction vector reversed.
-  // Useful when using lines for rotations.
-  reverse: function() {
-    return Line.create(this.anchor, this.direction.x(-1));
-  },
-
-  // Returns the line's reflection in the given point or line
-  reflectionIn: function(obj) {
-    if (obj.normal) {
-      // obj is a plane
-      var A = this.anchor.elements, D = this.direction.elements;
-      var A1 = A[0], A2 = A[1], A3 = A[2], D1 = D[0], D2 = D[1], D3 = D[2];
-      var newA = this.anchor.reflectionIn(obj).elements;
-      // Add the line's direction vector to its anchor, then mirror that in the plane
-      var AD1 = A1 + D1, AD2 = A2 + D2, AD3 = A3 + D3;
-      var Q = obj.pointClosestTo([AD1, AD2, AD3]).elements;
-      var newD = [Q[0] + (Q[0] - AD1) - newA[0], Q[1] + (Q[1] - AD2) - newA[1], Q[2] + (Q[2] - AD3) - newA[2]];
-      return Line.create(newA, newD);
-    } else if (obj.direction) {
-      // obj is a line - reflection obtained by rotating PI radians about obj
-      return this.rotate(Math.PI, obj);
-    } else {
-      // obj is a point - just reflect the line's anchor in it
-      var P = obj.elements || obj;
-      return Line.create(this.anchor.reflectionIn([P[0], P[1], (P[2] || 0)]), this.direction);
-    }
-  },
-
-  // Set the line's anchor point and direction.
-  setVectors: function(anchor, direction) {
-    // Need to do this so that line's properties are not
-    // references to the arguments passed in
-    anchor = Vector.create(anchor);
-    direction = Vector.create(direction);
-    if (anchor.elements.length == 2) {anchor.elements.push(0); }
-    if (direction.elements.length == 2) { direction.elements.push(0); }
-    if (anchor.elements.length > 3 || direction.elements.length > 3) { return null; }
-    var mod = direction.modulus();
-    if (mod === 0) { return null; }
-    this.anchor = anchor;
-    this.direction = Vector.create([
-      direction.elements[0] / mod,
-      direction.elements[1] / mod,
-      direction.elements[2] / mod
-    ]);
-    return this;
-  }
-};
-
-// Constructor function
-Line.create = function(anchor, direction) {
-  var L = new Line();
-  return L.setVectors(anchor, direction);
-};
-
-// Axes
-Line.X = Line.create(Vector.Zero(3), Vector.i);
-Line.Y = Line.create(Vector.Zero(3), Vector.j);
-Line.Z = Line.create(Vector.Zero(3), Vector.k);
-
-module.exports = Line;
-
-},{"./matrix":576,"./plane":577,"./sylvester":578,"./vector":579}],575:[function(require,module,exports){
-// Copyright (c) 2011, Chris Umbel, James Coglan
-// Line.Segment class - depends on Line and its dependencies.
-
-var Line = require('./line');
-var Vector = require('./vector');
-
-Line.Segment = function() {};
-Line.Segment.prototype = {
-
-  // Returns true iff the line segment is equal to the argument
-  eql: function(segment) {
-    return (this.start.eql(segment.start) && this.end.eql(segment.end)) ||
-        (this.start.eql(segment.end) && this.end.eql(segment.start));
-  },
-
-  // Returns a copy of the line segment
-  dup: function() {
-    return Line.Segment.create(this.start, this.end);
-  },
-
-  // Returns the length of the line segment
-  length: function() {
-    var A = this.start.elements, B = this.end.elements;
-    var C1 = B[0] - A[0], C2 = B[1] - A[1], C3 = B[2] - A[2];
-    return Math.sqrt(C1*C1 + C2*C2 + C3*C3);
-  },
-
-  // Returns the line segment as a vector equal to its
-  // end point relative to its endpoint
-  toVector: function() {
-    var A = this.start.elements, B = this.end.elements;
-    return Vector.create([B[0] - A[0], B[1] - A[1], B[2] - A[2]]);
-  },
-
-  // Returns the segment's midpoint as a vector
-  midpoint: function() {
-    var A = this.start.elements, B = this.end.elements;
-    return Vector.create([(B[0] + A[0])/2, (B[1] + A[1])/2, (B[2] + A[2])/2]);
-  },
-
-  // Returns the plane that bisects the segment
-  bisectingPlane: function() {
-    return Plane.create(this.midpoint(), this.toVector());
-  },
-
-  // Returns the result of translating the line by the given vector/array
-  translate: function(vector) {
-    var V = vector.elements || vector;
-    var S = this.start.elements, E = this.end.elements;
-    return Line.Segment.create(
-      [S[0] + V[0], S[1] + V[1], S[2] + (V[2] || 0)],
-      [E[0] + V[0], E[1] + V[1], E[2] + (V[2] || 0)]
-    );
-  },
-
-  // Returns true iff the line segment is parallel to the argument. It simply forwards
-  // the method call onto its line property.
-  isParallelTo: function(obj) {
-    return this.line.isParallelTo(obj);
-  },
-
-  // Returns the distance between the argument and the line segment's closest point to the argument
-  distanceFrom: function(obj) {
-    var P = this.pointClosestTo(obj);
-    return (P === null) ? null : P.distanceFrom(obj);
-  },
-
-  // Returns true iff the given point lies on the segment
-  contains: function(obj) {
-    if (obj.start && obj.end) { return this.contains(obj.start) && this.contains(obj.end); }
-    var P = (obj.elements || obj).slice();
-    if (P.length == 2) { P.push(0); }
-    if (this.start.eql(P)) { return true; }
-    var S = this.start.elements;
-    var V = Vector.create([S[0] - P[0], S[1] - P[1], S[2] - (P[2] || 0)]);
-    var vect = this.toVector();
-    return V.isAntiparallelTo(vect) && V.modulus() <= vect.modulus();
-  },
-
-  // Returns true iff the line segment intersects the argument
-  intersects: function(obj) {
-    return (this.intersectionWith(obj) !== null);
-  },
-
-  // Returns the unique point of intersection with the argument
-  intersectionWith: function(obj) {
-    if (!this.line.intersects(obj)) { return null; }
-    var P = this.line.intersectionWith(obj);
-    return (this.contains(P) ? P : null);
-  },
-
-  // Returns the point on the line segment closest to the given object
-  pointClosestTo: function(obj) {
-    if (obj.normal) {
-      // obj is a plane
-      var V = this.line.intersectionWith(obj);
-      if (V === null) { return null; }
-      return this.pointClosestTo(V);
-    } else {
-      // obj is a line (segment) or point
-      var P = this.line.pointClosestTo(obj);
-      if (P === null) { return null; }
-      if (this.contains(P)) { return P; }
-      return (this.line.positionOf(P) < 0 ? this.start : this.end).dup();
-    }
-  },
-
-  // Set the start and end-points of the segment
-  setPoints: function(startPoint, endPoint) {
-    startPoint = Vector.create(startPoint).to3D();
-    endPoint = Vector.create(endPoint).to3D();
-    if (startPoint === null || endPoint === null) { return null; }
-    this.line = Line.create(startPoint, endPoint.subtract(startPoint));
-    this.start = startPoint;
-    this.end = endPoint;
-    return this;
-  }
-};
-
-// Constructor function
-Line.Segment.create = function(v1, v2) {
-  var S = new Line.Segment();
-  return S.setPoints(v1, v2);
-};
-
-module.exports = Line.Segment;
-
-},{"./line":574,"./vector":579}],576:[function(require,module,exports){
-// Copyright (c) 2011, Chris Umbel, James Coglan
-// Matrix class - depends on Vector.
-
-var fs = require('fs');
-var Sylvester = require('./sylvester');
-var Vector = require('./vector');
-
-// augment a matrix M with identity rows/cols
-function identSize(M, m, n, k) {
-    var e = M.elements;
-    var i = k - 1;
-
-    while(i--) {
-	var row = [];
-	
-	for(var j = 0; j < n; j++)
-	    row.push(j == i ? 1 : 0);
-	
-        e.unshift(row);
-    }
-    
-    for(var i = k - 1; i < m; i++) {
-        while(e[i].length < n)
-            e[i].unshift(0);
-    }
-
-    return $M(e);
-}
-
-function pca(X) {
-    var Sigma = X.transpose().x(X).x(1 / X.rows());
-    var svd = Sigma.svd();
-    return {U: svd.U, S: svd.S};
-}
-
-// singular value decomposition in pure javascript
-function svdJs() {
-    var A = this;
-    var V = Matrix.I(A.rows());
-    var S = A.transpose();
-    var U = Matrix.I(A.cols());
-    var err = Number.MAX_VALUE;
-    var i = 0;
-    var maxLoop = 100;
-
-    while(err > 2.2737e-13 && i < maxLoop) {
-        var qr = S.transpose().qrJs();
-        S = qr.R;
-        V = V.x(qr.Q);
-        qr = S.transpose().qrJs();
-        U = U.x(qr.Q);
-        S = qr.R;
-
-        var e = S.triu(1).unroll().norm();
-        var f = S.diagonal().norm();
-
-        if(f == 0)
-            f = 1;
-
-        err = e / f;
-
-        i++;
-    }
-
-    var ss = S.diagonal();
-    var s = [];
-
-    for(var i = 1; i <= ss.cols(); i++) {
-        var ssn = ss.e(i);
-        s.push(Math.abs(ssn));
-
-        if(ssn < 0) {
-            for(var j = 0; j < U.rows(); j++) {
-                V.elements[j][i - 1] = -(V.elements[j][i - 1]);
-            }
+    actions: {
+        number: function() {
+            return Math.floor( Math.random() * 10 ) + 1;
         }
     }
 
-    return {U: U, S: $V(s).toDiagonalMatrix(), V: V};
-}
+});
 
-// singular value decomposition using LAPACK
-function svdPack() {
-    var result = lapack.sgesvd('A', 'A', this.elements);
+document.getElementById("generateBtn").addEventListener("click", function(){
 
-    return {
-        U: $M(result.U),
-        S: $M(result.S).column(1).toDiagonalMatrix(),
-	V: $M(result.VT).transpose()
-    };
-}
+        var template = document.getElementById("template").value;
 
-// QR decomposition in pure javascript
-function qrJs() {
-    var m = this.rows();
-    var n = this.cols();
-    var Q = Matrix.I(m);
-    var A = this;
-    
-    for(var k = 1; k < Math.min(m, n); k++) {
-	var ak = A.slice(k, 0, k, k).col(1);
-	var oneZero = [1];
-	
-	while(oneZero.length <=  m - k)
-	    oneZero.push(0);
-	
-	oneZero = $V(oneZero);
-	var vk = ak.add(oneZero.x(ak.norm() * Math.sign(ak.e(1))));
-	var Vk = $M(vk);
-	var Hk = Matrix.I(m - k + 1).subtract(Vk.x(2).x(Vk.transpose()).div(Vk.transpose().x(Vk).e(1, 1)));
-	var Qk = identSize(Hk, m, n, k);
-	A = Qk.x(A);
-	// slow way to compute Q
-	Q = Q.x(Qk);
-    }
-    
-    return {Q: Q, R: A};
-}
+        // TODO - move settings control here
 
-// QR decomposition using LAPACK
-function qrPack() {
-    var qr = lapack.qr(this.elements);
+        var e = document.getElementById("phoneme");
 
-    return {
-	Q: $M(qr.Q),
-	R: $M(qr.R)
-    };
-}
+        var phoneme = e.options[e.selectedIndex].dataset['name'];
+        var limit = e.options[e.selectedIndex].dataset['limit'];
+        var placement = e.options[e.selectedIndex].dataset['placement'];
 
-function Matrix() {}
-Matrix.prototype = {
-    // solve a system of linear equations (work in progress)
-    solve: function(b) {
-	var lu = this.lu();
-	b = lu.P.x(b);
-	var y = lu.L.forwardSubstitute(b);
-	var x = lu.U.backSubstitute(y);
-	return lu.P.x(x);
-	//return this.inv().x(b);
-    },
+        var f = document.getElementById("target");
+        var target = f.options[f.selectedIndex].dataset['name'];
 
-    // project a matrix onto a lower dim
-    pcaProject: function(k, U) {
-	var U = U || pca(this).U;
-	var Ureduce= U.slice(1, U.rows(), 1, k);
-	return {Z: this.x(Ureduce), U: U};
-    },
+        var array = target.split(',');
 
-    // recover a matrix to a higher dimension
-    pcaRecover: function(U) {
-	var k = this.cols();
-	var Ureduce = U.slice(1, U.rows(), 1, k);
-	return this.x(Ureduce.transpose());
-    },    
+        var key =  e.options[e.selectedIndex].id;
 
-    // grab the upper triangular part of the matrix
-    triu: function(k) {
-	if(!k)
-	    k = 0;
-	
-	return this.map(function(x, i, j) {
-	    return j - i >= k ? x : 0;
-	});
-    },
-
-    // unroll a matrix into a vector
-    unroll: function() {
-	var v = [];
-	
-	for(var i = 1; i <= this.cols(); i++) {
-	    for(var j = 1; j <= this.rows(); j++) {
-		v.push(this.e(j, i));
-	    }
-	}
-
-	return $V(v);
-    },
-
-    // return a sub-block of the matrix
-    slice: function(startRow, endRow, startCol, endCol) {
-	var x = [];
-	
-	if(endRow == 0)
-	    endRow = this.rows();
-	
-	if(endCol == 0)
-	    endCol = this.cols();
-
-	for(i = startRow; i <= endRow; i++) {
-	    var row = [];
-
-	    for(j = startCol; j <= endCol; j++) {
-		row.push(this.e(i, j));
-	    }
-
-	    x.push(row);
-	}
-
-	return $M(x);
-    },
-
-    // Returns element (i,j) of the matrix
-    e: function(i,j) {
-	if (i < 1 || i > this.elements.length || j < 1 || j > this.elements[0].length) { return null; }
-	return this.elements[i - 1][j - 1];
-    },
-
-    // Returns row k of the matrix as a vector
-    row: function(i) {
-	if (i > this.elements.length) { return null; }
-	return $V(this.elements[i - 1]);
-    },
-
-    // Returns column k of the matrix as a vector
-    col: function(j) {
-	if (j > this.elements[0].length) { return null; }
-	var col = [], n = this.elements.length;
-	for (var i = 0; i < n; i++) { col.push(this.elements[i][j - 1]); }
-	return $V(col);
-    },
-
-    // Returns the number of rows/columns the matrix has
-    dimensions: function() {
-	return {rows: this.elements.length, cols: this.elements[0].length};
-    },
-
-    // Returns the number of rows in the matrix
-    rows: function() {
-	return this.elements.length;
-    },
-
-    // Returns the number of columns in the matrix
-    cols: function() {
-	return this.elements[0].length;
-    },
-
-    approxEql: function(matrix) {
-	return this.eql(matrix, Sylvester.approxPrecision);
-    },
-
-    // Returns true iff the matrix is equal to the argument. You can supply
-    // a vector as the argument, in which case the receiver must be a
-    // one-column matrix equal to the vector.
-    eql: function(matrix, precision) {
-	var M = matrix.elements || matrix;
-	if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
-	if (this.elements.length != M.length ||
-            this.elements[0].length != M[0].length) { return false; }
-	var i = this.elements.length, nj = this.elements[0].length, j;
-	while (i--) { j = nj;
-		      while (j--) {
-			  if (Math.abs(this.elements[i][j] - M[i][j]) > (precision || Sylvester.precision)) { return false; }
-		      }
-		    }
-	return true;
-    },
-
-    // Returns a copy of the matrix
-    dup: function() {
-	return Matrix.create(this.elements);
-    },
-
-    // Maps the matrix to another matrix (of the same dimensions) according to the given function
-    map: function(fn) {
-    var els = [], i = this.elements.length, nj = this.elements[0].length, j;
-	while (i--) { j = nj;
-		      els[i] = [];
-		      while (j--) {
-			  els[i][j] = fn(this.elements[i][j], i + 1, j + 1);
-		      }
-		    }
-	return Matrix.create(els);
-    },
-
-    // Returns true iff the argument has the same dimensions as the matrix
-    isSameSizeAs: function(matrix) {
-	var M = matrix.elements || matrix;
-	if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
-	return (this.elements.length == M.length &&
-		this.elements[0].length == M[0].length);
-    },
-
-    // Returns the result of adding the argument to the matrix
-    add: function(matrix) {
-	if(typeof(matrix) == 'number') {
-	    return this.map(function(x, i, j) { return x + matrix});
-	} else {
-	    var M = matrix.elements || matrix;
-	    if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
-	    if (!this.isSameSizeAs(M)) { return null; }
-	    return this.map(function(x, i, j) { return x + M[i - 1][j - 1]; });
-	}
-    },
-
-    // Returns the result of subtracting the argument from the matrix
-    subtract: function(matrix) {
-	if(typeof(matrix) == 'number') {
-	    return this.map(function(x, i, j) { return x - matrix});
-	} else {
-	    var M = matrix.elements || matrix;
-	    if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
-	    if (!this.isSameSizeAs(M)) { return null; }
-	    return this.map(function(x, i, j) { return x - M[i - 1][j - 1]; });
-	}
-    },
-
-    // Returns true iff the matrix can multiply the argument from the left
-    canMultiplyFromLeft: function(matrix) {
-	var M = matrix.elements || matrix;
-	if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
-	// this.columns should equal matrix.rows
-	return (this.elements[0].length == M.length);
-    },
-
-    // Returns the result of a multiplication-style operation the matrix from the right by the argument.
-    // If the argument is a scalar then just operate on all the elements. If the argument is
-    // a vector, a vector is returned, which saves you having to remember calling
-    // col(1) on the result.
-    mulOp: function(matrix, op) {
-	if (!matrix.elements) {
-	    return this.map(function(x) { return op(x, matrix); });
-	}
-
-	var returnVector = matrix.modulus ? true : false;
-	var M = matrix.elements || matrix;
-	if (typeof(M[0][0]) == 'undefined') 
-	    M = Matrix.create(M).elements;
-	if (!this.canMultiplyFromLeft(M)) 
-	    return null; 
-	var e = this.elements, rowThis, rowElem, elements = [],
-        sum, m = e.length, n = M[0].length, o = e[0].length, i = m, j, k;
-
-	while (i--) {
-            rowElem = [];
-            rowThis = e[i];
-            j = n;
-
-            while (j--) {
-		sum = 0;
-		k = o;
-
-		while (k--) {
-                    sum += op(rowThis[k], M[k][j]);
-		}
-
-		rowElem[j] = sum;
+        // TODO - move options and filtering
+        Sentencer._filterOpts = {
+            limit: limit,
+            placement: placement,
+            vowelPattern: {
+                "name": key, // arbitrary name for vowel set
+                "vowels": [ phoneme ], // vowel sounds
+                "target": array,
+                "examples": [  ] // example words for UI
             }
+        };
 
-            elements[i] = rowElem;
-	}
+        Sentencer.filterAdjectives();
 
-	var M = Matrix.create(elements);
-	return returnVector ? M.col(1) : M;
-    },
+        if (Sentencer._filteredAdjStack.length > 0) {
 
-    // Returns the result of dividing the matrix from the right by the argument.
-    // If the argument is a scalar then just divide all the elements. If the argument is
-    // a vector, a vector is returned, which saves you having to remember calling
-    // col(1) on the result.
-    div: function(matrix) {
-	return this.mulOp(matrix, function(x, y) { return x / y});
-    },
+            console.log(Sentencer._filterOpts.vowelPattern.target);
 
-    // Returns the result of multiplying the matrix from the right by the argument.
-    // If the argument is a scalar then just multiply all the elements. If the argument is
-    // a vector, a vector is returned, which saves you having to remember calling
-    // col(1) on the result.
-    multiply: function(matrix) {
-	return this.mulOp(matrix, function(x, y) { return x * y});
-    },
 
-    x: function(matrix) { return this.multiply(matrix); },
 
-    elementMultiply: function(v) {
-        return this.map(function(k, i, j) {
-            return v.e(i, j) * k;
+
+            // TODO - configure option on page to control number of sentences to generate
+
+            var randomText = '';
+            var backgroundStuff = "";
+
+            // TODO - configure option to control the number of sentences generated
+
+            var randomSentence = Sentencer.make(template);
+
+            randomText += randomSentence;
+
+            document.getElementById("response").innerHTML = randomText;
+            document.getElementById("filterOpts").innerHTML = backgroundStuff;
+
+        }
+
+});
+
+},{"Sentencer":152,"async":278}],278:[function(require,module,exports){
+(function (process,global){
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (factory((global.async = global.async || {})));
+}(this, (function (exports) { 'use strict';
+
+function slice(arrayLike, start) {
+    start = start|0;
+    var newLen = Math.max(arrayLike.length - start, 0);
+    var newArr = Array(newLen);
+    for(var idx = 0; idx < newLen; idx++)  {
+        newArr[idx] = arrayLike[start + idx];
+    }
+    return newArr;
+}
+
+var initialParams = function (fn) {
+    return function (/*...args, callback*/) {
+        var args = slice(arguments);
+        var callback = args.pop();
+        fn.call(this, args, callback);
+    };
+};
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+var hasSetImmediate = typeof setImmediate === 'function' && setImmediate;
+var hasNextTick = typeof process === 'object' && typeof process.nextTick === 'function';
+
+function fallback(fn) {
+    setTimeout(fn, 0);
+}
+
+function wrap(defer) {
+    return function (fn/*, ...args*/) {
+        var args = slice(arguments, 1);
+        defer(function () {
+            fn.apply(null, args);
         });
-    },
-
-    // sum all elements in the matrix
-    sum: function() {
-        var sum = 0;
-
-        this.map(function(x) { sum += x;});
-
-        return sum;
-    },
-
-    // Returns a Vector of each colum averaged.
-    mean: function() {
-      var dim = this.dimensions();
-      var r = [];
-      for (var i = 1; i <= dim.cols; i++) {
-        r.push(this.col(i).sum() / dim.rows);
-      }
-      return $V(r);
-    },
-
-    column: function(n) {
-	return this.col(n);
-    },
-
-    // element-wise log
-    log: function() {
-	return this.map(function(x) { return Math.log(x); });
-    },
-
-    // Returns a submatrix taken from the matrix
-    // Argument order is: start row, start col, nrows, ncols
-    // Element selection wraps if the required index is outside the matrix's bounds, so you could
-    // use this to perform row/column cycling or copy-augmenting.
-    minor: function(a, b, c, d) {
-	var elements = [], ni = c, i, nj, j;
-	var rows = this.elements.length, cols = this.elements[0].length;
-	while (ni--) {
-	    i = c - ni - 1;
-	    elements[i] = [];
-	    nj = d;
-	    while (nj--) {
-		j = d - nj - 1;
-		elements[i][j] = this.elements[(a + i - 1) % rows][(b + j - 1) % cols];
-	    }
-	}
-	return Matrix.create(elements);
-    },
-
-    // Returns the transpose of the matrix
-    transpose: function() {
-    var rows = this.elements.length, i, cols = this.elements[0].length, j;
-	var elements = [], i = cols;
-	while (i--) {
-	    j = rows;
-	    elements[i] = [];
-	    while (j--) {
-		elements[i][j] = this.elements[j][i];
-	    }
-	}
-	return Matrix.create(elements);
-    },
-
-    // Returns true iff the matrix is square
-    isSquare: function() {
-	return (this.elements.length == this.elements[0].length);
-    },
-
-    // Returns the (absolute) largest element of the matrix
-    max: function() {
-	var m = 0, i = this.elements.length, nj = this.elements[0].length, j;
-	while (i--) {
-	    j = nj;
-	    while (j--) {
-		if (Math.abs(this.elements[i][j]) > Math.abs(m)) { m = this.elements[i][j]; }
-	    }
-	}
-	return m;
-    },
-
-    // Returns the indeces of the first match found by reading row-by-row from left to right
-    indexOf: function(x) {
-	var index = null, ni = this.elements.length, i, nj = this.elements[0].length, j;
-	for (i = 0; i < ni; i++) {
-	    for (j = 0; j < nj; j++) {
-		if (this.elements[i][j] == x) { return {i: i + 1, j: j + 1}; }
-	    }
-	}
-	return null;
-    },
-
-    // If the matrix is square, returns the diagonal elements as a vector.
-    // Otherwise, returns null.
-    diagonal: function() {
-	if (!this.isSquare) { return null; }
-	var els = [], n = this.elements.length;
-	for (var i = 0; i < n; i++) {
-	    els.push(this.elements[i][i]);
-	}
-	return $V(els);
-    },
-
-    // Make the matrix upper (right) triangular by Gaussian elimination.
-    // This method only adds multiples of rows to other rows. No rows are
-    // scaled up or switched, and the determinant is preserved.
-    toRightTriangular: function() {
-	var M = this.dup(), els;
-	var n = this.elements.length, i, j, np = this.elements[0].length, p;
-	for (i = 0; i < n; i++) {
-	    if (M.elements[i][i] == 0) {
-		for (j = i + 1; j < n; j++) {
-		    if (M.elements[j][i] != 0) {
-			els = [];
-			for (p = 0; p < np; p++) { els.push(M.elements[i][p] + M.elements[j][p]); }
-			M.elements[i] = els;
-			break;
-		    }
-		}
-	    }
-	    if (M.elements[i][i] != 0) {
-		for (j = i + 1; j < n; j++) {
-		    var multiplier = M.elements[j][i] / M.elements[i][i];
-		    els = [];
-		    for (p = 0; p < np; p++) {
-			// Elements with column numbers up to an including the number
-			// of the row that we're subtracting can safely be set straight to
-			// zero, since that's the point of this routine and it avoids having
-			// to loop over and correct rounding errors later
-			els.push(p <= i ? 0 : M.elements[j][p] - M.elements[i][p] * multiplier);
-		    }
-		    M.elements[j] = els;
-		}
-	    }
-	}
-	return M;
-    },
-
-    toUpperTriangular: function() { return this.toRightTriangular(); },
-
-    // Returns the determinant for square matrices
-    determinant: function() {
-	if (!this.isSquare()) { return null; }
-	if (this.cols == 1 && this.rows == 1) { return this.row(1); }
-	if (this.cols == 0 && this.rows == 0) { return 1; }
-	var M = this.toRightTriangular();
-	var det = M.elements[0][0], n = M.elements.length;
-	for (var i = 1; i < n; i++) {
-	    det = det * M.elements[i][i];
-	}
-	return det;
-    },
-    det: function() { return this.determinant(); },
-
-    // Returns true iff the matrix is singular
-    isSingular: function() {
-	return (this.isSquare() && this.determinant() === 0);
-    },
-
-    // Returns the trace for square matrices
-    trace: function() {
-	if (!this.isSquare()) { return null; }
-	var tr = this.elements[0][0], n = this.elements.length;
-	for (var i = 1; i < n; i++) {
-	    tr += this.elements[i][i];
-	}
-	return tr;
-    },
-
-    tr: function() { return this.trace(); },
-
-    // Returns the rank of the matrix
-    rank: function() {
-	var M = this.toRightTriangular(), rank = 0;
-	var i = this.elements.length, nj = this.elements[0].length, j;
-	while (i--) {
-	    j = nj;
-	    while (j--) {
-		if (Math.abs(M.elements[i][j]) > Sylvester.precision) { rank++; break; }
-	    }
-	}
-	return rank;
-    },
-
-    rk: function() { return this.rank(); },
-
-    // Returns the result of attaching the given argument to the right-hand side of the matrix
-    augment: function(matrix) {
-	var M = matrix.elements || matrix;
-	if (typeof(M[0][0]) == 'undefined') { M = Matrix.create(M).elements; }
-	var T = this.dup(), cols = T.elements[0].length;
-	var i = T.elements.length, nj = M[0].length, j;
-	if (i != M.length) { return null; }
-	while (i--) {
-	    j = nj;
-	    while (j--) {
-		T.elements[i][cols + j] = M[i][j];
-	    }
-	}
-	return T;
-    },
-
-    // Returns the inverse (if one exists) using Gauss-Jordan
-    inverse: function() {
-	if (!this.isSquare() || this.isSingular()) { return null; }
-	var n = this.elements.length, i = n, j;
-	var M = this.augment(Matrix.I(n)).toRightTriangular();
-	var np = M.elements[0].length, p, els, divisor;
-	var inverse_elements = [], new_element;
-	// Matrix is non-singular so there will be no zeros on the diagonal
-	// Cycle through rows from last to first
-	while (i--) {
-	    // First, normalise diagonal elements to 1
-	    els = [];
-	    inverse_elements[i] = [];
-	    divisor = M.elements[i][i];
-	    for (p = 0; p < np; p++) {
-        new_element = M.elements[i][p] / divisor;
-		els.push(new_element);
-		// Shuffle off the current row of the right hand side into the results
-		// array as it will not be modified by later runs through this loop
-		if (p >= n) { inverse_elements[i].push(new_element); }
-	    }
-	    M.elements[i] = els;
-	    // Then, subtract this row from those above it to
-	    // give the identity matrix on the left hand side
-	    j = i;
-	    while (j--) {
-		els = [];
-		for (p = 0; p < np; p++) {
-		    els.push(M.elements[j][p] - M.elements[i][p] * M.elements[j][i]);
-		}
-		M.elements[j] = els;
-	    }
-	}
-	return Matrix.create(inverse_elements);
-    },
-
-    inv: function() { return this.inverse(); },
-
-    // Returns the result of rounding all the elements
-    round: function() {
-	return this.map(function(x) { return Math.round(x); });
-    },
-
-    // Returns a copy of the matrix with elements set to the given value if they
-    // differ from it by less than Sylvester.precision
-    snapTo: function(x) {
-	return this.map(function(p) {
-	    return (Math.abs(p - x) <= Sylvester.precision) ? x : p;
-	});
-    },
-
-    // Returns a string representation of the matrix
-    inspect: function() {
-	var matrix_rows = [];
-	var n = this.elements.length;
-	for (var i = 0; i < n; i++) {
-	    matrix_rows.push($V(this.elements[i]).inspect());
-	}
-	return matrix_rows.join('\n');
-    },
-
-    // Returns a array representation of the matrix
-    toArray: function() {
-    	var matrix_rows = [];
-    	var n = this.elements.length;
-    	for (var i = 0; i < n; i++) {
-        matrix_rows.push(this.elements[i]);
-    	}
-      return matrix_rows;
-    },
-
-
-    // Set the matrix's elements from an array. If the argument passed
-    // is a vector, the resulting matrix will be a single column.
-    setElements: function(els) {
-	var i, j, elements = els.elements || els;
-	if (typeof(elements[0][0]) != 'undefined') {
-	    i = elements.length;
-	    this.elements = [];
-	    while (i--) {
-		j = elements[i].length;
-		this.elements[i] = [];
-		while (j--) {
-		    this.elements[i][j] = elements[i][j];
-		}
-	    }
-	    return this;
-	}
-	var n = elements.length;
-	this.elements = [];
-	for (i = 0; i < n; i++) {
-	    this.elements.push([elements[i]]);
-	}
-	return this;
-    },
-
-    // return the indexes of the columns with the largest value
-    // for each row
-    maxColumnIndexes: function() {
-	var maxes = [];
-
-	for(var i = 1; i <= this.rows(); i++) {
-	    var max = null;
-	    var maxIndex = -1;
-
-	    for(var j = 1; j <= this.cols(); j++) {
-		if(max === null || this.e(i, j) > max) {
-		    max = this.e(i, j);
-		    maxIndex = j;
-		}
-	    }
-
-	    maxes.push(maxIndex);
-	}
-
-	return $V(maxes);
-    },
-
-    // return the largest values in each row
-    maxColumns: function() {
-	var maxes = [];
-
-	for(var i = 1; i <= this.rows(); i++) {
-	    var max = null;
-
-	    for(var j = 1; j <= this.cols(); j++) {
-		if(max === null || this.e(i, j) > max) {
-		    max = this.e(i, j);
-		}
-	    }
-
-	    maxes.push(max);
-	}
-
-	return $V(maxes);
-    },
-
-    // return the indexes of the columns with the smallest values
-    // for each row
-    minColumnIndexes: function() {
-	var mins = [];
-
-	for(var i = 1; i <= this.rows(); i++) {
-	    var min = null;
-	    var minIndex = -1;
-
-	    for(var j = 1; j <= this.cols(); j++) {
-		if(min === null || this.e(i, j) < min) {
-		    min = this.e(i, j);
-		    minIndex = j;
-		}
-	    }
-
-	    mins.push(minIndex);
-	}
-
-	return $V(mins);
-    },
-
-    // return the smallest values in each row
-    minColumns: function() {
-	var mins = [];
-
-	for(var i = 1; i <= this.rows(); i++) {
-	    var min = null;
-
-	    for(var j = 1; j <= this.cols(); j++) {
-		if(min === null || this.e(i, j) < min) {
-		    min = this.e(i, j);
-		}
-	    }
-
-	    mins.push(min);
-	}
-
-	return $V(mins);
-    },
-    
-    // perorm a partial pivot on the matrix. essentially move the largest
-    // row below-or-including the pivot and replace the pivot's row with it.
-    // a pivot matrix is returned so multiplication can perform the transform.
-    partialPivot: function(k, j, P, A, L) {
-	var maxIndex = 0;
-	var maxValue = 0;
-
-	for(var i = k; i <= A.rows(); i++) {
-	    if(Math.abs(A.e(i, j)) > maxValue) {
-		maxValue = Math.abs(A.e(k, j));
-		maxIndex = i;
-	    }
-	}
-
-	if(maxIndex != k) {
-	    var tmp = A.elements[k - 1];
-	    A.elements[k - 1] = A.elements[maxIndex - 1];
-	    A.elements[maxIndex - 1] = tmp;
-	    
-	    P.elements[k - 1][k - 1] = 0;
-	    P.elements[k - 1][maxIndex - 1] = 1;
-	    P.elements[maxIndex - 1][maxIndex - 1] = 0;
-	    P.elements[maxIndex - 1][k - 1] = 1;
-	}
-	
-	return P;
-    },
-
-    // solve lower-triangular matrix * x = b via forward substitution
-    forwardSubstitute: function(b) {
-	var xa = [];
-
-	for(var i = 1; i <= this.rows(); i++) {
-	    var w = 0;
-
-	    for(var j = 1; j < i; j++) {
-		w += this.e(i, j) * xa[j - 1];
-	    }
-
-	    xa.push((b.e(i) - w) / this.e(i, i));
-	}
-
-	return $V(xa);
-    },
-
-    // solve an upper-triangular matrix * x = b via back substitution
-    backSubstitute: function(b) {
-	var xa = [];
-
-	for(var i = this.rows(); i > 0; i--) {
-	    var w = 0;
-
-	    for(var j = this.cols(); j > i; j--) {
-		w += this.e(i, j) * xa[this.rows() - j];
-	    }
-
-	    xa.push((b.e(i) - w) / this.e(i, i));
-	}
-
-	return $V(xa.reverse());
-    },
-    
-    luPack: luPack,
-    luJs: luJs,
-    svdJs: svdJs,
-    svdPack: svdPack,
-    qrJs: qrJs,
-    qrPack: qrPack
-};
-
-// LU factorization from LAPACK
-function luPack() {
-    var lu = lapack.lu(this.elements);
-    return {
-	L: $M(lu.L),
-	U: $M(lu.U),
-	P: $M(lu.P)
-	// don't pass back IPIV
     };
 }
 
-var tolerance =  1.4901e-08;
+var _defer;
 
-// pure Javascript LU factorization
-function luJs() {
-    var A = this.dup();
-    var L = Matrix.I(A.rows());
-    var P = Matrix.I(A.rows());
-    var U = Matrix.Zeros(A.rows(), A.cols());
-    var p = 1;
-
-    for(var k = 1; k <= Math.min(A.cols(), A.rows()); k++) {
-	P = A.partialPivot(k, p, P, A, L);
-	
-	for(var i = k + 1; i <= A.rows(); i++) {
-	    var l = A.e(i, p) / A.e(k, p);
-	    L.elements[i - 1][k - 1] = l;
-	    
-	    for(var j = k + 1 ; j <= A.cols(); j++) {
-		A.elements[i - 1][j - 1] -= A.e(k, j) * l;
-	    }
-	}
-	
-	for(var j = k; j <= A.cols(); j++) {
-	    U.elements[k - 1][j - 1] = A.e(k, j);
-	}
-
-	if(p < A.cols())
-	    p++;
-    }    
-    
-    return {L: L, U: U, P: P};
-}
-
-function getLapack() {
-    try {
-	return require('lapack');
-    } catch(e) {}
-}
-
-var lapack;
-
-// if node-lapack is installed use the fast, native fortran routines
-if(lapack = getLapack()) {
-    Matrix.prototype.svd = svdPack;
-    Matrix.prototype.qr = qrPack;
-    Matrix.prototype.lu = luPack;
+if (hasSetImmediate) {
+    _defer = setImmediate;
+} else if (hasNextTick) {
+    _defer = process.nextTick;
 } else {
-    // otherwise use the slower pure Javascript versions
-    Matrix.prototype.svd = svdJs;
-    Matrix.prototype.qr = qrJs;
-    Matrix.prototype.lu = luJs;
+    _defer = fallback;
 }
 
-// Constructor function
-Matrix.create = function(aElements, ignoreLapack) {
-    var M = new Matrix().setElements(aElements);
-    return M;
-};
+var setImmediate$1 = wrap(_defer);
 
-// Identity matrix of size n
-Matrix.I = function(n) {
-    var els = [], i = n, j;
-    while (i--) {
-	j = n;
-	els[i] = [];
-	while (j--) {
-	    els[i][j] = (i == j) ? 1 : 0;
-	}
-    }
-    return Matrix.create(els);
-};
-
-Matrix.loadFile = function(file) {
-    var contents = fs.readFileSync(file, 'utf-8');
-    var matrix = [];
-
-    var rowArray = contents.split('\n');
-    for (var i = 0; i < rowArray.length; i++) {
-	var d = rowArray[i].split(',');
-	if (d.length > 1) {
-	    matrix.push(d);
-	}
-    }
-
-    var M = new Matrix();
-    return M.setElements(matrix);
-};
-
-// Diagonal matrix - all off-diagonal elements are zero
-Matrix.Diagonal = function(elements) {
-    var i = elements.length;
-    var M = Matrix.I(i);
-    while (i--) {
-	M.elements[i][i] = elements[i];
-    }
-    return M;
-};
-
-// Rotation matrix about some axis. If no axis is
-// supplied, assume we're after a 2D transform
-Matrix.Rotation = function(theta, a) {
-    if (!a) {
-	return Matrix.create([
-	    [Math.cos(theta), -Math.sin(theta)],
-	    [Math.sin(theta), Math.cos(theta)]
-	]);
-    }
-    var axis = a.dup();
-    if (axis.elements.length != 3) { return null; }
-    var mod = axis.modulus();
-    var x = axis.elements[0] / mod, y = axis.elements[1] / mod, z = axis.elements[2] / mod;
-    var s = Math.sin(theta), c = Math.cos(theta), t = 1 - c;
-    // Formula derived here: http://www.gamedev.net/reference/articles/article1199.asp
-    // That proof rotates the co-ordinate system so theta
-    // becomes -theta and sin becomes -sin here.
-    return Matrix.create([
-	[t * x * x + c, t * x * y - s * z, t * x * z + s * y],
-	[t * x * y + s * z, t * y * y + c, t * y * z - s * x],
-	[t * x * z - s * y, t * y * z + s * x, t * z * z + c]
-    ]);
-};
-
-// Special case rotations
-Matrix.RotationX = function(t) {
-    var c = Math.cos(t), s = Math.sin(t);
-    return Matrix.create([
-	[1, 0, 0],
-	[0, c, -s],
-	[0, s, c]
-    ]);
-};
-
-Matrix.RotationY = function(t) {
-    var c = Math.cos(t), s = Math.sin(t);
-    return Matrix.create([
-	[c, 0, s],
-	[0, 1, 0],
-	[-s, 0, c]
-    ]);
-};
-
-Matrix.RotationZ = function(t) {
-    var c = Math.cos(t), s = Math.sin(t);
-    return Matrix.create([
-	[c, -s, 0],
-	[s, c, 0],
-	[0, 0, 1]
-    ]);
-};
-
-// Random matrix of n rows, m columns
-Matrix.Random = function(n, m) {
-    if (arguments.length === 1) m = n;
-    return Matrix.Zero(n, m).map(
-	function() { return Math.random(); }
-  );
-};
-
-Matrix.Fill = function(n, m, v) {
-    if (arguments.length === 2) {
-	v = m;
-	m = n;
-    }
-
-    var els = [], i = n, j;
-
-    while (i--) {
-	j = m;
-	els[i] = [];
-
-	while (j--) {
-	    els[i][j] = v;
-	}
-    }
-
-    return Matrix.create(els);
-};
-
-// Matrix filled with zeros
-Matrix.Zero = function(n, m) {
-    return Matrix.Fill(n, m, 0);
-};
-
-// Matrix filled with zeros
-Matrix.Zeros = function(n, m) {
-    return Matrix.Zero(n, m);
-};
-
-// Matrix filled with ones
-Matrix.One = function(n, m) {
-    return Matrix.Fill(n, m, 1);
-};
-
-// Matrix filled with ones
-Matrix.Ones = function(n, m) {
-    return Matrix.One(n, m);
-};
-
-module.exports = Matrix;
-
-},{"./sylvester":578,"./vector":579,"fs":1,"lapack":172}],577:[function(require,module,exports){
-// Copyright (c) 2011, Chris Umbel, James Coglan
-// Plane class - depends on Vector. Some methods require Matrix and Line.
-var Vector = require('./vector');
-var Matrix = require('./matrix');
-var Line = require('./line');
-
-var Sylvester = require('./sylvester');
-
-function Plane() {}
-Plane.prototype = {
-
-  // Returns true iff the plane occupies the same space as the argument
-  eql: function(plane) {
-    return (this.contains(plane.anchor) && this.isParallelTo(plane));
-  },
-
-  // Returns a copy of the plane
-  dup: function() {
-    return Plane.create(this.anchor, this.normal);
-  },
-
-  // Returns the result of translating the plane by the given vector
-  translate: function(vector) {
-    var V = vector.elements || vector;
-    return Plane.create([
-      this.anchor.elements[0] + V[0],
-      this.anchor.elements[1] + V[1],
-      this.anchor.elements[2] + (V[2] || 0)
-    ], this.normal);
-  },
-
-  // Returns true iff the plane is parallel to the argument. Will return true
-  // if the planes are equal, or if you give a line and it lies in the plane.
-  isParallelTo: function(obj) {
-    var theta;
-    if (obj.normal) {
-      // obj is a plane
-      theta = this.normal.angleFrom(obj.normal);
-      return (Math.abs(theta) <= Sylvester.precision || Math.abs(Math.PI - theta) <= Sylvester.precision);
-    } else if (obj.direction) {
-      // obj is a line
-      return this.normal.isPerpendicularTo(obj.direction);
-    }
-    return null;
-  },
-
-  // Returns true iff the receiver is perpendicular to the argument
-  isPerpendicularTo: function(plane) {
-    var theta = this.normal.angleFrom(plane.normal);
-    return (Math.abs(Math.PI/2 - theta) <= Sylvester.precision);
-  },
-
-  // Returns the plane's distance from the given object (point, line or plane)
-  distanceFrom: function(obj) {
-    if (this.intersects(obj) || this.contains(obj)) { return 0; }
-    if (obj.anchor) {
-      // obj is a plane or line
-      var A = this.anchor.elements, B = obj.anchor.elements, N = this.normal.elements;
-      return Math.abs((A[0] - B[0]) * N[0] + (A[1] - B[1]) * N[1] + (A[2] - B[2]) * N[2]);
-    } else {
-      // obj is a point
-      var P = obj.elements || obj;
-      var A = this.anchor.elements, N = this.normal.elements;
-      return Math.abs((A[0] - P[0]) * N[0] + (A[1] - P[1]) * N[1] + (A[2] - (P[2] || 0)) * N[2]);
-    }
-  },
-
-  // Returns true iff the plane contains the given point or line
-  contains: function(obj) {
-    if (obj.normal) { return null; }
-    if (obj.direction) {
-      return (this.contains(obj.anchor) && this.contains(obj.anchor.add(obj.direction)));
-    } else {
-      var P = obj.elements || obj;
-      var A = this.anchor.elements, N = this.normal.elements;
-      var diff = Math.abs(N[0]*(A[0] - P[0]) + N[1]*(A[1] - P[1]) + N[2]*(A[2] - (P[2] || 0)));
-      return (diff <= Sylvester.precision);
-    }
-  },
-
-  // Returns true iff the plane has a unique point/line of intersection with the argument
-  intersects: function(obj) {
-    if (typeof(obj.direction) == 'undefined' && typeof(obj.normal) == 'undefined') { return null; }
-    return !this.isParallelTo(obj);
-  },
-
-  // Returns the unique intersection with the argument, if one exists. The result
-  // will be a vector if a line is supplied, and a line if a plane is supplied.
-  intersectionWith: function(obj) {
-    if (!this.intersects(obj)) { return null; }
-    if (obj.direction) {
-      // obj is a line
-      var A = obj.anchor.elements, D = obj.direction.elements,
-          P = this.anchor.elements, N = this.normal.elements;
-      var multiplier = (N[0]*(P[0]-A[0]) + N[1]*(P[1]-A[1]) + N[2]*(P[2]-A[2])) / (N[0]*D[0] + N[1]*D[1] + N[2]*D[2]);
-      return Vector.create([A[0] + D[0]*multiplier, A[1] + D[1]*multiplier, A[2] + D[2]*multiplier]);
-    } else if (obj.normal) {
-      // obj is a plane
-      var direction = this.normal.cross(obj.normal).toUnitVector();
-      // To find an anchor point, we find one co-ordinate that has a value
-      // of zero somewhere on the intersection, and remember which one we picked
-      var N = this.normal.elements, A = this.anchor.elements,
-          O = obj.normal.elements, B = obj.anchor.elements;
-      var solver = Matrix.Zero(2,2), i = 0;
-      while (solver.isSingular()) {
-        i++;
-        solver = Matrix.create([
-          [ N[i%3], N[(i+1)%3] ],
-          [ O[i%3], O[(i+1)%3]  ]
-        ]);
-      }
-      // Then we solve the simultaneous equations in the remaining dimensions
-      var inverse = solver.inverse().elements;
-      var x = N[0]*A[0] + N[1]*A[1] + N[2]*A[2];
-      var y = O[0]*B[0] + O[1]*B[1] + O[2]*B[2];
-      var intersection = [
-        inverse[0][0] * x + inverse[0][1] * y,
-        inverse[1][0] * x + inverse[1][1] * y
-      ];
-      var anchor = [];
-      for (var j = 1; j <= 3; j++) {
-        // This formula picks the right element from intersection by
-        // cycling depending on which element we set to zero above
-        anchor.push((i == j) ? 0 : intersection[(j + (5 - i)%3)%3]);
-      }
-      return Line.create(anchor, direction);
-    }
-  },
-
-  // Returns the point in the plane closest to the given point
-  pointClosestTo: function(point) {
-    var P = point.elements || point;
-    var A = this.anchor.elements, N = this.normal.elements;
-    var dot = (A[0] - P[0]) * N[0] + (A[1] - P[1]) * N[1] + (A[2] - (P[2] || 0)) * N[2];
-    return Vector.create([P[0] + N[0] * dot, P[1] + N[1] * dot, (P[2] || 0) + N[2] * dot]);
-  },
-
-  // Returns a copy of the plane, rotated by t radians about the given line
-  // See notes on Line#rotate.
-  rotate: function(t, line) {
-    var R = t.determinant ? t.elements : Matrix.Rotation(t, line.direction).elements;
-    var C = line.pointClosestTo(this.anchor).elements;
-    var A = this.anchor.elements, N = this.normal.elements;
-    var C1 = C[0], C2 = C[1], C3 = C[2], A1 = A[0], A2 = A[1], A3 = A[2];
-    var x = A1 - C1, y = A2 - C2, z = A3 - C3;
-    return Plane.create([
-      C1 + R[0][0] * x + R[0][1] * y + R[0][2] * z,
-      C2 + R[1][0] * x + R[1][1] * y + R[1][2] * z,
-      C3 + R[2][0] * x + R[2][1] * y + R[2][2] * z
-    ], [
-      R[0][0] * N[0] + R[0][1] * N[1] + R[0][2] * N[2],
-      R[1][0] * N[0] + R[1][1] * N[1] + R[1][2] * N[2],
-      R[2][0] * N[0] + R[2][1] * N[1] + R[2][2] * N[2]
-    ]);
-  },
-
-  // Returns the reflection of the plane in the given point, line or plane.
-  reflectionIn: function(obj) {
-    if (obj.normal) {
-      // obj is a plane
-      var A = this.anchor.elements, N = this.normal.elements;
-      var A1 = A[0], A2 = A[1], A3 = A[2], N1 = N[0], N2 = N[1], N3 = N[2];
-      var newA = this.anchor.reflectionIn(obj).elements;
-      // Add the plane's normal to its anchor, then mirror that in the other plane
-      var AN1 = A1 + N1, AN2 = A2 + N2, AN3 = A3 + N3;
-      var Q = obj.pointClosestTo([AN1, AN2, AN3]).elements;
-      var newN = [Q[0] + (Q[0] - AN1) - newA[0], Q[1] + (Q[1] - AN2) - newA[1], Q[2] + (Q[2] - AN3) - newA[2]];
-      return Plane.create(newA, newN);
-    } else if (obj.direction) {
-      // obj is a line
-      return this.rotate(Math.PI, obj);
-    } else {
-      // obj is a point
-      var P = obj.elements || obj;
-      return Plane.create(this.anchor.reflectionIn([P[0], P[1], (P[2] || 0)]), this.normal);
-    }
-  },
-
-  // Sets the anchor point and normal to the plane. If three arguments are specified,
-  // the normal is calculated by assuming the three points should lie in the same plane.
-  // If only two are sepcified, the second is taken to be the normal. Normal vector is
-  // normalised before storage.
-  setVectors: function(anchor, v1, v2) {
-    anchor = Vector.create(anchor);
-    anchor = anchor.to3D(); if (anchor === null) { return null; }
-    v1 = Vector.create(v1);
-    v1 = v1.to3D(); if (v1 === null) { return null; }
-    if (typeof(v2) == 'undefined') {
-      v2 = null;
-    } else {
-      v2 = Vector.create(v2);
-      v2 = v2.to3D(); if (v2 === null) { return null; }
-    }
-    var A1 = anchor.elements[0], A2 = anchor.elements[1], A3 = anchor.elements[2];
-    var v11 = v1.elements[0], v12 = v1.elements[1], v13 = v1.elements[2];
-    var normal, mod;
-    if (v2 !== null) {
-      var v21 = v2.elements[0], v22 = v2.elements[1], v23 = v2.elements[2];
-      normal = Vector.create([
-        (v12 - A2) * (v23 - A3) - (v13 - A3) * (v22 - A2),
-        (v13 - A3) * (v21 - A1) - (v11 - A1) * (v23 - A3),
-        (v11 - A1) * (v22 - A2) - (v12 - A2) * (v21 - A1)
-      ]);
-      mod = normal.modulus();
-      if (mod === 0) { return null; }
-      normal = Vector.create([normal.elements[0] / mod, normal.elements[1] / mod, normal.elements[2] / mod]);
-    } else {
-      mod = Math.sqrt(v11*v11 + v12*v12 + v13*v13);
-      if (mod === 0) { return null; }
-      normal = Vector.create([v1.elements[0] / mod, v1.elements[1] / mod, v1.elements[2] / mod]);
-    }
-    this.anchor = anchor;
-    this.normal = normal;
-    return this;
-  }
-};
-
-// Constructor function
-Plane.create = function(anchor, v1, v2) {
-  var P = new Plane();
-  return P.setVectors(anchor, v1, v2);
-};
-
-// X-Y-Z planes
-Plane.XY = Plane.create(Vector.Zero(3), Vector.k);
-Plane.YZ = Plane.create(Vector.Zero(3), Vector.i);
-Plane.ZX = Plane.create(Vector.Zero(3), Vector.j);
-Plane.YX = Plane.XY; Plane.ZY = Plane.YZ; Plane.XZ = Plane.ZX;
-
-// Returns the plane containing the given points (can be arrays as
-// well as vectors). If the points are not coplanar, returns null.
-Plane.fromPoints = function(points) {
-  var np = points.length, list = [], i, P, n, N, A, B, C, D, theta, prevN, totalN = Vector.Zero(3);
-  for (i = 0; i < np; i++) {
-    P = Vector.create(points[i]).to3D();
-    if (P === null) { return null; }
-    list.push(P);
-    n = list.length;
-    if (n > 2) {
-      // Compute plane normal for the latest three points
-      A = list[n-1].elements; B = list[n-2].elements; C = list[n-3].elements;
-      N = Vector.create([
-        (A[1] - B[1]) * (C[2] - B[2]) - (A[2] - B[2]) * (C[1] - B[1]),
-        (A[2] - B[2]) * (C[0] - B[0]) - (A[0] - B[0]) * (C[2] - B[2]),
-        (A[0] - B[0]) * (C[1] - B[1]) - (A[1] - B[1]) * (C[0] - B[0])
-      ]).toUnitVector();
-      if (n > 3) {
-        // If the latest normal is not (anti)parallel to the previous one, we've strayed off the plane.
-        // This might be a slightly long-winded way of doing things, but we need the sum of all the normals
-        // to find which way the plane normal should point so that the points form an anticlockwise list.
-        theta = N.angleFrom(prevN);
-        if (theta !== null) {
-          if (!(Math.abs(theta) <= Sylvester.precision || Math.abs(theta - Math.PI) <= Sylvester.precision)) { return null; }
+/**
+ * Take a sync function and make it async, passing its return value to a
+ * callback. This is useful for plugging sync functions into a waterfall,
+ * series, or other async functions. Any arguments passed to the generated
+ * function will be passed to the wrapped function (except for the final
+ * callback argument). Errors thrown will be passed to the callback.
+ *
+ * If the function passed to `asyncify` returns a Promise, that promises's
+ * resolved/rejected state will be used to call the callback, rather than simply
+ * the synchronous return value.
+ *
+ * This also means you can asyncify ES2017 `async` functions.
+ *
+ * @name asyncify
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @alias wrapSync
+ * @category Util
+ * @param {Function} func - The synchronous function, or Promise-returning
+ * function to convert to an {@link AsyncFunction}.
+ * @returns {AsyncFunction} An asynchronous wrapper of the `func`. To be
+ * invoked with `(args..., callback)`.
+ * @example
+ *
+ * // passing a regular synchronous function
+ * async.waterfall([
+ *     async.apply(fs.readFile, filename, "utf8"),
+ *     async.asyncify(JSON.parse),
+ *     function (data, next) {
+ *         // data is the result of parsing the text.
+ *         // If there was a parsing error, it would have been caught.
+ *     }
+ * ], callback);
+ *
+ * // passing a function returning a promise
+ * async.waterfall([
+ *     async.apply(fs.readFile, filename, "utf8"),
+ *     async.asyncify(function (contents) {
+ *         return db.model.create(contents);
+ *     }),
+ *     function (model, next) {
+ *         // `model` is the instantiated model object.
+ *         // If there was an error, this function would be skipped.
+ *     }
+ * ], callback);
+ *
+ * // es2017 example, though `asyncify` is not needed if your JS environment
+ * // supports async functions out of the box
+ * var q = async.queue(async.asyncify(async function(file) {
+ *     var intermediateStep = await processFile(file);
+ *     return await somePromise(intermediateStep)
+ * }));
+ *
+ * q.push(files);
+ */
+function asyncify(func) {
+    return initialParams(function (args, callback) {
+        var result;
+        try {
+            result = func.apply(this, args);
+        } catch (e) {
+            return callback(e);
         }
-      }
-      totalN = totalN.add(N);
-      prevN = N;
-    }
-  }
-  // We need to add in the normals at the start and end points, which the above misses out
-  A = list[1].elements; B = list[0].elements; C = list[n-1].elements; D = list[n-2].elements;
-  totalN = totalN.add(Vector.create([
-    (A[1] - B[1]) * (C[2] - B[2]) - (A[2] - B[2]) * (C[1] - B[1]),
-    (A[2] - B[2]) * (C[0] - B[0]) - (A[0] - B[0]) * (C[2] - B[2]),
-    (A[0] - B[0]) * (C[1] - B[1]) - (A[1] - B[1]) * (C[0] - B[0])
-  ]).toUnitVector()).add(Vector.create([
-    (B[1] - C[1]) * (D[2] - C[2]) - (B[2] - C[2]) * (D[1] - C[1]),
-    (B[2] - C[2]) * (D[0] - C[0]) - (B[0] - C[0]) * (D[2] - C[2]),
-    (B[0] - C[0]) * (D[1] - C[1]) - (B[1] - C[1]) * (D[0] - C[0])
-  ]).toUnitVector());
-  return Plane.create(list[0], totalN);
-};
-
-module.exports = Plane;
-
-},{"./line":574,"./matrix":576,"./sylvester":578,"./vector":579}],578:[function(require,module,exports){
-// Copyright (c) 2011, Chris Umbel, James Coglan
-// This file is required in order for any other classes to work. Some Vector methods work with the
-// other Sylvester classes and are useless unless they are included. Other classes such as Line and
-// Plane will not function at all without Vector being loaded first.           
-
-Math.sign = function(x) {
-    return x < 0 ? -1: 1;
-}
-                                              
-var Sylvester = {
-    precision: 1e-6,
-    approxPrecision: 1e-5
-};
-
-module.exports = Sylvester;
-
-},{}],579:[function(require,module,exports){
-// Copyright (c) 2011, Chris Umbel, James Coglan
-// This file is required in order for any other classes to work. Some Vector methods work with the
-// other Sylvester classes and are useless unless they are included. Other classes such as Line and
-// Plane will not function at all without Vector being loaded first.
-
-var Sylvester = require('./sylvester'),
-Matrix = require('./matrix');
-
-function Vector() {}
-Vector.prototype = {
-
-    norm: function() {
-	var n = this.elements.length;
-	var sum = 0;
-
-	while (n--) {
-	    sum += Math.pow(this.elements[n], 2);
-	}
-
-	return Math.sqrt(sum);
-    },
-
-    // Returns element i of the vector
-    e: function(i) {
-      return (i < 1 || i > this.elements.length) ? null : this.elements[i - 1];
-    },
-
-    // Returns the number of rows/columns the vector has
-    dimensions: function() {
-      return {rows: 1, cols: this.elements.length};
-    },
-
-    // Returns the number of rows in the vector
-    rows: function() {
-      return 1;
-    },
-
-    // Returns the number of columns in the vector
-    cols: function() {
-      return this.elements.length;
-    },
-
-    // Returns the modulus ('length') of the vector
-    modulus: function() {
-      return Math.sqrt(this.dot(this));
-    },
-
-    // Returns true iff the vector is equal to the argument
-    eql: function(vector) {
-    	var n = this.elements.length;
-    	var V = vector.elements || vector;
-    	if (n != V.length) { return false; }
-    	while (n--) {
-    	    if (Math.abs(this.elements[n] - V[n]) > Sylvester.precision) { return false; }
-    	}
-    	return true;
-    },
-
-    // Returns a copy of the vector
-    dup: function() {
-	    return Vector.create(this.elements);
-    },
-
-    // Maps the vector to another vector according to the given function
-    map: function(fn) {
-	var elements = [];
-	this.each(function(x, i) {
-	    elements.push(fn(x, i));
-	});
-	return Vector.create(elements);
-    },
-
-    // Calls the iterator for each element of the vector in turn
-    each: function(fn) {
-	var n = this.elements.length;
-	for (var i = 0; i < n; i++) {
-	    fn(this.elements[i], i + 1);
-	}
-    },
-
-    // Returns a new vector created by normalizing the receiver
-    toUnitVector: function() {
-	var r = this.modulus();
-	if (r === 0) { return this.dup(); }
-	return this.map(function(x) { return x / r; });
-    },
-
-    // Returns the angle between the vector and the argument (also a vector)
-    angleFrom: function(vector) {
-	var V = vector.elements || vector;
-	var n = this.elements.length, k = n, i;
-	if (n != V.length) { return null; }
-	var dot = 0, mod1 = 0, mod2 = 0;
-	// Work things out in parallel to save time
-	this.each(function(x, i) {
-	    dot += x * V[i - 1];
-	    mod1 += x * x;
-	    mod2 += V[i - 1] * V[i - 1];
-	});
-	mod1 = Math.sqrt(mod1); mod2 = Math.sqrt(mod2);
-	if (mod1 * mod2 === 0) { return null; }
-	var theta = dot / (mod1 * mod2);
-	if (theta < -1) { theta = -1; }
-	if (theta > 1) { theta = 1; }
-	return Math.acos(theta);
-    },
-
-    // Returns true iff the vector is parallel to the argument
-    isParallelTo: function(vector) {
-	var angle = this.angleFrom(vector);
-	return (angle === null) ? null : (angle <= Sylvester.precision);
-    },
-
-    // Returns true iff the vector is antiparallel to the argument
-    isAntiparallelTo: function(vector) {
-	var angle = this.angleFrom(vector);
-	return (angle === null) ? null : (Math.abs(angle - Math.PI) <= Sylvester.precision);
-    },
-
-    // Returns true iff the vector is perpendicular to the argument
-    isPerpendicularTo: function(vector) {
-	var dot = this.dot(vector);
-	return (dot === null) ? null : (Math.abs(dot) <= Sylvester.precision);
-    },
-
-    // Returns the result of adding the argument to the vector
-    add: function(value) {
-	var V = value.elements || value;
-
-	if (this.elements.length != V.length) 
-	    return this.map(function(v) { return v + value });
-	else
-	    return this.map(function(x, i) { return x + V[i - 1]; });
-    },
-
-    // Returns the result of subtracting the argument from the vector
-    subtract: function(v) {
-	if (typeof(v) == 'number')
-	    return this.map(function(k) { return k - v; });
-
-	var V = v.elements || v;
-	if (this.elements.length != V.length) { return null; }
-	return this.map(function(x, i) { return x - V[i - 1]; });
-    },
-
-    // Returns the result of multiplying the elements of the vector by the argument
-    multiply: function(k) {
-	return this.map(function(x) { return x * k; });
-    },
-
-    elementMultiply: function(v) {
-	return this.map(function(k, i) {
-	    return v.e(i) * k;
-	});
-    },
-
-    sum: function() {
-	var sum = 0;
-	this.map(function(x) { sum += x;});
-	return sum;
-    },
-
-    chomp: function(n) {
-	var elements = [];
-
-	for (var i = n; i < this.elements.length; i++) {
-	    elements.push(this.elements[i]);
-	}
-
-	return Vector.create(elements);
-    },
-
-    top: function(n) {
-	var elements = [];
-
-	for (var i = 0; i < n; i++) {
-	    elements.push(this.elements[i]);
-	}
-
-	return Vector.create(elements);
-    },
-
-    augment: function(elements) {
-	var newElements = this.elements;
-
-	for (var i = 0; i < elements.length; i++) {
-	    newElements.push(elements[i]);
-	}
-
-	return Vector.create(newElements);
-    },
-
-    x: function(k) { return this.multiply(k); },
-
-    log: function() {
-	return Vector.log(this);
-    },
-
-    elementDivide: function(vector) {
-	return this.map(function(v, i) {
-	    return v / vector.e(i);
-	});
-    },
-
-    product: function() {
-	var p = 1;
-
-	this.map(function(v) {
-	    p *= v;
-	});
-
-	return p;
-    },
-
-    // Returns the scalar product of the vector with the argument
-    // Both vectors must have equal dimensionality
-    dot: function(vector) {
-	var V = vector.elements || vector;
-	var i, product = 0, n = this.elements.length;	
-	if (n != V.length) { return null; }
-	while (n--) { product += this.elements[n] * V[n]; }
-	return product;
-    },
-
-    // Returns the vector product of the vector with the argument
-    // Both vectors must have dimensionality 3
-    cross: function(vector) {
-	var B = vector.elements || vector;
-	if (this.elements.length != 3 || B.length != 3) { return null; }
-	var A = this.elements;
-	return Vector.create([
-	    (A[1] * B[2]) - (A[2] * B[1]),
-	    (A[2] * B[0]) - (A[0] * B[2]),
-	    (A[0] * B[1]) - (A[1] * B[0])
-	]);
-    },
-
-    // Returns the (absolute) largest element of the vector
-    max: function() {
-	var m = 0, i = this.elements.length;
-	while (i--) {
-	    if (Math.abs(this.elements[i]) > Math.abs(m)) { m = this.elements[i]; }
-	}
-	return m;
-    },
-
-
-    maxIndex: function() {
-	var m = 0, i = this.elements.length;
-	var maxIndex = -1;
-
-	while (i--) {
-	    if (Math.abs(this.elements[i]) > Math.abs(m)) { 
-		m = this.elements[i]; 
-		maxIndex = i + 1;
-	    }
-	}
-
-	return maxIndex;
-    },
-
-
-    // Returns the index of the first match found
-    indexOf: function(x) {
-	var index = null, n = this.elements.length;
-	for (var i = 0; i < n; i++) {
-	    if (index === null && this.elements[i] == x) {
-		index = i + 1;
-	    }
-	}
-	return index;
-    },
-
-    // Returns a diagonal matrix with the vector's elements as its diagonal elements
-    toDiagonalMatrix: function() {
-	return Matrix.Diagonal(this.elements);
-    },
-
-    // Returns the result of rounding the elements of the vector
-    round: function() {
-	return this.map(function(x) { return Math.round(x); });
-    },
-
-    // Transpose a Vector, return a 1xn Matrix
-    transpose: function() {
-	var rows = this.elements.length;
-	var elements = [];
-
-	for (var i = 0; i < rows; i++) {
-	    elements.push([this.elements[i]]);
-	}
-	return Matrix.create(elements);
-    },
-
-    // Returns a copy of the vector with elements set to the given value if they
-    // differ from it by less than Sylvester.precision
-    snapTo: function(x) {
-	return this.map(function(y) {
-	    return (Math.abs(y - x) <= Sylvester.precision) ? x : y;
-	});
-    },
-
-    // Returns the vector's distance from the argument, when considered as a point in space
-    distanceFrom: function(obj) {
-	if (obj.anchor || (obj.start && obj.end)) { return obj.distanceFrom(this); }
-	var V = obj.elements || obj;
-	if (V.length != this.elements.length) { return null; }
-	var sum = 0, part;
-	this.each(function(x, i) {
-	    part = x - V[i - 1];
-	    sum += part * part;
-	});
-	return Math.sqrt(sum);
-    },
-
-    // Returns true if the vector is point on the given line
-    liesOn: function(line) {
-	return line.contains(this);
-    },
-
-    // Return true iff the vector is a point in the given plane
-    liesIn: function(plane) {
-	return plane.contains(this);
-    },
-
-    // Rotates the vector about the given object. The object should be a
-    // point if the vector is 2D, and a line if it is 3D. Be careful with line directions!
-    rotate: function(t, obj) {
-	var V, R = null, x, y, z;
-	if (t.determinant) { R = t.elements; }
-	switch (this.elements.length) {
-	case 2:
-            V = obj.elements || obj;
-            if (V.length != 2) { return null; }
-            if (!R) { R = Matrix.Rotation(t).elements; }
-            x = this.elements[0] - V[0];
-            y = this.elements[1] - V[1];
-            return Vector.create([
-		V[0] + R[0][0] * x + R[0][1] * y,
-		V[1] + R[1][0] * x + R[1][1] * y
-            ]);
-            break;
-	case 3:
-            if (!obj.direction) { return null; }
-            var C = obj.pointClosestTo(this).elements;
-            if (!R) { R = Matrix.Rotation(t, obj.direction).elements; }
-            x = this.elements[0] - C[0];
-            y = this.elements[1] - C[1];
-            z = this.elements[2] - C[2];
-            return Vector.create([
-		C[0] + R[0][0] * x + R[0][1] * y + R[0][2] * z,
-		C[1] + R[1][0] * x + R[1][1] * y + R[1][2] * z,
-		C[2] + R[2][0] * x + R[2][1] * y + R[2][2] * z
-            ]);
-            break;
-	default:
-            return null;
-	}
-    },
-
-    // Returns the result of reflecting the point in the given point, line or plane
-    reflectionIn: function(obj) {
-	if (obj.anchor) {
-	    // obj is a plane or line
-	    var P = this.elements.slice();
-	    var C = obj.pointClosestTo(P).elements;
-	    return Vector.create([C[0] + (C[0] - P[0]), C[1] + (C[1] - P[1]), C[2] + (C[2] - (P[2] || 0))]);
-	} else {
-	    // obj is a point
-	    var Q = obj.elements || obj;
-	    if (this.elements.length != Q.length) { return null; }
-	    return this.map(function(x, i) { return Q[i - 1] + (Q[i - 1] - x); });
-	}
-    },
-
-    // Utility to make sure vectors are 3D. If they are 2D, a zero z-component is added
-    to3D: function() {
-	var V = this.dup();
-	switch (V.elements.length) {
-	case 3: break;
-	case 2: V.elements.push(0); break;
-	default: return null;
-	}
-	return V;
-    },
-
-    // Returns a string representation of the vector
-    inspect: function() {
-	return '[' + this.elements.join(', ') + ']';
-    },
-
-    // Set vector's elements from an array
-    setElements: function(els) {
-	this.elements = (els.elements || els).slice();
-	return this;
-    }
-};
-
-// Constructor function
-Vector.create = function(elements) {
-    var V = new Vector();
-    return V.setElements(elements);
-};
-
-// i, j, k unit vectors
-Vector.i = Vector.create([1, 0, 0]);
-Vector.j = Vector.create([0, 1, 0]);
-Vector.k = Vector.create([0, 0, 1]);
-
-// Random vector of size n
-Vector.Random = function(n) {
-    var elements = [];
-    while (n--) { elements.push(Math.random()); }
-    return Vector.create(elements);
-};
-
-Vector.Fill = function(n, v) {
-    var elements = [];
-    while (n--) { elements.push(v); }
-    return Vector.create(elements);
-};
-
-// Vector filled with zeros
-Vector.Zero = function(n) {
-    return Vector.Fill(n, 0);
-};
-
-Vector.One = function(n) {
-    return Vector.Fill(n, 1);
-};
-
-Vector.log = function(v) {
-    return v.map(function(x) {
-	return Math.log(x);
-    });
-};
-
-module.exports = Vector;
-
-},{"./matrix":576,"./sylvester":578}],580:[function(require,module,exports){
-//     Underscore.js 1.8.3
-//     http://underscorejs.org
-//     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
-//     Underscore may be freely distributed under the MIT license.
-
-(function() {
-
-  // Baseline setup
-  // --------------
-
-  // Establish the root object, `window` in the browser, or `exports` on the server.
-  var root = this;
-
-  // Save the previous value of the `_` variable.
-  var previousUnderscore = root._;
-
-  // Save bytes in the minified (but not gzipped) version:
-  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
-
-  // Create quick reference variables for speed access to core prototypes.
-  var
-    push             = ArrayProto.push,
-    slice            = ArrayProto.slice,
-    toString         = ObjProto.toString,
-    hasOwnProperty   = ObjProto.hasOwnProperty;
-
-  // All **ECMAScript 5** native function implementations that we hope to use
-  // are declared here.
-  var
-    nativeIsArray      = Array.isArray,
-    nativeKeys         = Object.keys,
-    nativeBind         = FuncProto.bind,
-    nativeCreate       = Object.create;
-
-  // Naked function reference for surrogate-prototype-swapping.
-  var Ctor = function(){};
-
-  // Create a safe reference to the Underscore object for use below.
-  var _ = function(obj) {
-    if (obj instanceof _) return obj;
-    if (!(this instanceof _)) return new _(obj);
-    this._wrapped = obj;
-  };
-
-  // Export the Underscore object for **Node.js**, with
-  // backwards-compatibility for the old `require()` API. If we're in
-  // the browser, add `_` as a global object.
-  if (typeof exports !== 'undefined') {
-    if (typeof module !== 'undefined' && module.exports) {
-      exports = module.exports = _;
-    }
-    exports._ = _;
-  } else {
-    root._ = _;
-  }
-
-  // Current version.
-  _.VERSION = '1.8.3';
-
-  // Internal function that returns an efficient (for current engines) version
-  // of the passed-in callback, to be repeatedly applied in other Underscore
-  // functions.
-  var optimizeCb = function(func, context, argCount) {
-    if (context === void 0) return func;
-    switch (argCount == null ? 3 : argCount) {
-      case 1: return function(value) {
-        return func.call(context, value);
-      };
-      case 2: return function(value, other) {
-        return func.call(context, value, other);
-      };
-      case 3: return function(value, index, collection) {
-        return func.call(context, value, index, collection);
-      };
-      case 4: return function(accumulator, value, index, collection) {
-        return func.call(context, accumulator, value, index, collection);
-      };
-    }
-    return function() {
-      return func.apply(context, arguments);
-    };
-  };
-
-  // A mostly-internal function to generate callbacks that can be applied
-  // to each element in a collection, returning the desired result — either
-  // identity, an arbitrary callback, a property matcher, or a property accessor.
-  var cb = function(value, context, argCount) {
-    if (value == null) return _.identity;
-    if (_.isFunction(value)) return optimizeCb(value, context, argCount);
-    if (_.isObject(value)) return _.matcher(value);
-    return _.property(value);
-  };
-  _.iteratee = function(value, context) {
-    return cb(value, context, Infinity);
-  };
-
-  // An internal function for creating assigner functions.
-  var createAssigner = function(keysFunc, undefinedOnly) {
-    return function(obj) {
-      var length = arguments.length;
-      if (length < 2 || obj == null) return obj;
-      for (var index = 1; index < length; index++) {
-        var source = arguments[index],
-            keys = keysFunc(source),
-            l = keys.length;
-        for (var i = 0; i < l; i++) {
-          var key = keys[i];
-          if (!undefinedOnly || obj[key] === void 0) obj[key] = source[key];
-        }
-      }
-      return obj;
-    };
-  };
-
-  // An internal function for creating a new object that inherits from another.
-  var baseCreate = function(prototype) {
-    if (!_.isObject(prototype)) return {};
-    if (nativeCreate) return nativeCreate(prototype);
-    Ctor.prototype = prototype;
-    var result = new Ctor;
-    Ctor.prototype = null;
-    return result;
-  };
-
-  var property = function(key) {
-    return function(obj) {
-      return obj == null ? void 0 : obj[key];
-    };
-  };
-
-  // Helper for collection methods to determine whether a collection
-  // should be iterated as an array or as an object
-  // Related: http://people.mozilla.org/~jorendorff/es6-draft.html#sec-tolength
-  // Avoids a very nasty iOS 8 JIT bug on ARM-64. #2094
-  var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;
-  var getLength = property('length');
-  var isArrayLike = function(collection) {
-    var length = getLength(collection);
-    return typeof length == 'number' && length >= 0 && length <= MAX_ARRAY_INDEX;
-  };
-
-  // Collection Functions
-  // --------------------
-
-  // The cornerstone, an `each` implementation, aka `forEach`.
-  // Handles raw objects in addition to array-likes. Treats all
-  // sparse array-likes as if they were dense.
-  _.each = _.forEach = function(obj, iteratee, context) {
-    iteratee = optimizeCb(iteratee, context);
-    var i, length;
-    if (isArrayLike(obj)) {
-      for (i = 0, length = obj.length; i < length; i++) {
-        iteratee(obj[i], i, obj);
-      }
-    } else {
-      var keys = _.keys(obj);
-      for (i = 0, length = keys.length; i < length; i++) {
-        iteratee(obj[keys[i]], keys[i], obj);
-      }
-    }
-    return obj;
-  };
-
-  // Return the results of applying the iteratee to each element.
-  _.map = _.collect = function(obj, iteratee, context) {
-    iteratee = cb(iteratee, context);
-    var keys = !isArrayLike(obj) && _.keys(obj),
-        length = (keys || obj).length,
-        results = Array(length);
-    for (var index = 0; index < length; index++) {
-      var currentKey = keys ? keys[index] : index;
-      results[index] = iteratee(obj[currentKey], currentKey, obj);
-    }
-    return results;
-  };
-
-  // Create a reducing function iterating left or right.
-  function createReduce(dir) {
-    // Optimized iterator function as using arguments.length
-    // in the main function will deoptimize the, see #1991.
-    function iterator(obj, iteratee, memo, keys, index, length) {
-      for (; index >= 0 && index < length; index += dir) {
-        var currentKey = keys ? keys[index] : index;
-        memo = iteratee(memo, obj[currentKey], currentKey, obj);
-      }
-      return memo;
-    }
-
-    return function(obj, iteratee, memo, context) {
-      iteratee = optimizeCb(iteratee, context, 4);
-      var keys = !isArrayLike(obj) && _.keys(obj),
-          length = (keys || obj).length,
-          index = dir > 0 ? 0 : length - 1;
-      // Determine the initial value if none is provided.
-      if (arguments.length < 3) {
-        memo = obj[keys ? keys[index] : index];
-        index += dir;
-      }
-      return iterator(obj, iteratee, memo, keys, index, length);
-    };
-  }
-
-  // **Reduce** builds up a single result from a list of values, aka `inject`,
-  // or `foldl`.
-  _.reduce = _.foldl = _.inject = createReduce(1);
-
-  // The right-associative version of reduce, also known as `foldr`.
-  _.reduceRight = _.foldr = createReduce(-1);
-
-  // Return the first value which passes a truth test. Aliased as `detect`.
-  _.find = _.detect = function(obj, predicate, context) {
-    var key;
-    if (isArrayLike(obj)) {
-      key = _.findIndex(obj, predicate, context);
-    } else {
-      key = _.findKey(obj, predicate, context);
-    }
-    if (key !== void 0 && key !== -1) return obj[key];
-  };
-
-  // Return all the elements that pass a truth test.
-  // Aliased as `select`.
-  _.filter = _.select = function(obj, predicate, context) {
-    var results = [];
-    predicate = cb(predicate, context);
-    _.each(obj, function(value, index, list) {
-      if (predicate(value, index, list)) results.push(value);
-    });
-    return results;
-  };
-
-  // Return all the elements for which a truth test fails.
-  _.reject = function(obj, predicate, context) {
-    return _.filter(obj, _.negate(cb(predicate)), context);
-  };
-
-  // Determine whether all of the elements match a truth test.
-  // Aliased as `all`.
-  _.every = _.all = function(obj, predicate, context) {
-    predicate = cb(predicate, context);
-    var keys = !isArrayLike(obj) && _.keys(obj),
-        length = (keys || obj).length;
-    for (var index = 0; index < length; index++) {
-      var currentKey = keys ? keys[index] : index;
-      if (!predicate(obj[currentKey], currentKey, obj)) return false;
-    }
-    return true;
-  };
-
-  // Determine if at least one element in the object matches a truth test.
-  // Aliased as `any`.
-  _.some = _.any = function(obj, predicate, context) {
-    predicate = cb(predicate, context);
-    var keys = !isArrayLike(obj) && _.keys(obj),
-        length = (keys || obj).length;
-    for (var index = 0; index < length; index++) {
-      var currentKey = keys ? keys[index] : index;
-      if (predicate(obj[currentKey], currentKey, obj)) return true;
-    }
-    return false;
-  };
-
-  // Determine if the array or object contains a given item (using `===`).
-  // Aliased as `includes` and `include`.
-  _.contains = _.includes = _.include = function(obj, item, fromIndex, guard) {
-    if (!isArrayLike(obj)) obj = _.values(obj);
-    if (typeof fromIndex != 'number' || guard) fromIndex = 0;
-    return _.indexOf(obj, item, fromIndex) >= 0;
-  };
-
-  // Invoke a method (with arguments) on every item in a collection.
-  _.invoke = function(obj, method) {
-    var args = slice.call(arguments, 2);
-    var isFunc = _.isFunction(method);
-    return _.map(obj, function(value) {
-      var func = isFunc ? method : value[method];
-      return func == null ? func : func.apply(value, args);
-    });
-  };
-
-  // Convenience version of a common use case of `map`: fetching a property.
-  _.pluck = function(obj, key) {
-    return _.map(obj, _.property(key));
-  };
-
-  // Convenience version of a common use case of `filter`: selecting only objects
-  // containing specific `key:value` pairs.
-  _.where = function(obj, attrs) {
-    return _.filter(obj, _.matcher(attrs));
-  };
-
-  // Convenience version of a common use case of `find`: getting the first object
-  // containing specific `key:value` pairs.
-  _.findWhere = function(obj, attrs) {
-    return _.find(obj, _.matcher(attrs));
-  };
-
-  // Return the maximum element (or element-based computation).
-  _.max = function(obj, iteratee, context) {
-    var result = -Infinity, lastComputed = -Infinity,
-        value, computed;
-    if (iteratee == null && obj != null) {
-      obj = isArrayLike(obj) ? obj : _.values(obj);
-      for (var i = 0, length = obj.length; i < length; i++) {
-        value = obj[i];
-        if (value > result) {
-          result = value;
-        }
-      }
-    } else {
-      iteratee = cb(iteratee, context);
-      _.each(obj, function(value, index, list) {
-        computed = iteratee(value, index, list);
-        if (computed > lastComputed || computed === -Infinity && result === -Infinity) {
-          result = value;
-          lastComputed = computed;
-        }
-      });
-    }
-    return result;
-  };
-
-  // Return the minimum element (or element-based computation).
-  _.min = function(obj, iteratee, context) {
-    var result = Infinity, lastComputed = Infinity,
-        value, computed;
-    if (iteratee == null && obj != null) {
-      obj = isArrayLike(obj) ? obj : _.values(obj);
-      for (var i = 0, length = obj.length; i < length; i++) {
-        value = obj[i];
-        if (value < result) {
-          result = value;
-        }
-      }
-    } else {
-      iteratee = cb(iteratee, context);
-      _.each(obj, function(value, index, list) {
-        computed = iteratee(value, index, list);
-        if (computed < lastComputed || computed === Infinity && result === Infinity) {
-          result = value;
-          lastComputed = computed;
-        }
-      });
-    }
-    return result;
-  };
-
-  // Shuffle a collection, using the modern version of the
-  // [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
-  _.shuffle = function(obj) {
-    var set = isArrayLike(obj) ? obj : _.values(obj);
-    var length = set.length;
-    var shuffled = Array(length);
-    for (var index = 0, rand; index < length; index++) {
-      rand = _.random(0, index);
-      if (rand !== index) shuffled[index] = shuffled[rand];
-      shuffled[rand] = set[index];
-    }
-    return shuffled;
-  };
-
-  // Sample **n** random values from a collection.
-  // If **n** is not specified, returns a single random element.
-  // The internal `guard` argument allows it to work with `map`.
-  _.sample = function(obj, n, guard) {
-    if (n == null || guard) {
-      if (!isArrayLike(obj)) obj = _.values(obj);
-      return obj[_.random(obj.length - 1)];
-    }
-    return _.shuffle(obj).slice(0, Math.max(0, n));
-  };
-
-  // Sort the object's values by a criterion produced by an iteratee.
-  _.sortBy = function(obj, iteratee, context) {
-    iteratee = cb(iteratee, context);
-    return _.pluck(_.map(obj, function(value, index, list) {
-      return {
-        value: value,
-        index: index,
-        criteria: iteratee(value, index, list)
-      };
-    }).sort(function(left, right) {
-      var a = left.criteria;
-      var b = right.criteria;
-      if (a !== b) {
-        if (a > b || a === void 0) return 1;
-        if (a < b || b === void 0) return -1;
-      }
-      return left.index - right.index;
-    }), 'value');
-  };
-
-  // An internal function used for aggregate "group by" operations.
-  var group = function(behavior) {
-    return function(obj, iteratee, context) {
-      var result = {};
-      iteratee = cb(iteratee, context);
-      _.each(obj, function(value, index) {
-        var key = iteratee(value, index, obj);
-        behavior(result, value, key);
-      });
-      return result;
-    };
-  };
-
-  // Groups the object's values by a criterion. Pass either a string attribute
-  // to group by, or a function that returns the criterion.
-  _.groupBy = group(function(result, value, key) {
-    if (_.has(result, key)) result[key].push(value); else result[key] = [value];
-  });
-
-  // Indexes the object's values by a criterion, similar to `groupBy`, but for
-  // when you know that your index values will be unique.
-  _.indexBy = group(function(result, value, key) {
-    result[key] = value;
-  });
-
-  // Counts instances of an object that group by a certain criterion. Pass
-  // either a string attribute to count by, or a function that returns the
-  // criterion.
-  _.countBy = group(function(result, value, key) {
-    if (_.has(result, key)) result[key]++; else result[key] = 1;
-  });
-
-  // Safely create a real, live array from anything iterable.
-  _.toArray = function(obj) {
-    if (!obj) return [];
-    if (_.isArray(obj)) return slice.call(obj);
-    if (isArrayLike(obj)) return _.map(obj, _.identity);
-    return _.values(obj);
-  };
-
-  // Return the number of elements in an object.
-  _.size = function(obj) {
-    if (obj == null) return 0;
-    return isArrayLike(obj) ? obj.length : _.keys(obj).length;
-  };
-
-  // Split a collection into two arrays: one whose elements all satisfy the given
-  // predicate, and one whose elements all do not satisfy the predicate.
-  _.partition = function(obj, predicate, context) {
-    predicate = cb(predicate, context);
-    var pass = [], fail = [];
-    _.each(obj, function(value, key, obj) {
-      (predicate(value, key, obj) ? pass : fail).push(value);
-    });
-    return [pass, fail];
-  };
-
-  // Array Functions
-  // ---------------
-
-  // Get the first element of an array. Passing **n** will return the first N
-  // values in the array. Aliased as `head` and `take`. The **guard** check
-  // allows it to work with `_.map`.
-  _.first = _.head = _.take = function(array, n, guard) {
-    if (array == null) return void 0;
-    if (n == null || guard) return array[0];
-    return _.initial(array, array.length - n);
-  };
-
-  // Returns everything but the last entry of the array. Especially useful on
-  // the arguments object. Passing **n** will return all the values in
-  // the array, excluding the last N.
-  _.initial = function(array, n, guard) {
-    return slice.call(array, 0, Math.max(0, array.length - (n == null || guard ? 1 : n)));
-  };
-
-  // Get the last element of an array. Passing **n** will return the last N
-  // values in the array.
-  _.last = function(array, n, guard) {
-    if (array == null) return void 0;
-    if (n == null || guard) return array[array.length - 1];
-    return _.rest(array, Math.max(0, array.length - n));
-  };
-
-  // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
-  // Especially useful on the arguments object. Passing an **n** will return
-  // the rest N values in the array.
-  _.rest = _.tail = _.drop = function(array, n, guard) {
-    return slice.call(array, n == null || guard ? 1 : n);
-  };
-
-  // Trim out all falsy values from an array.
-  _.compact = function(array) {
-    return _.filter(array, _.identity);
-  };
-
-  // Internal implementation of a recursive `flatten` function.
-  var flatten = function(input, shallow, strict, startIndex) {
-    var output = [], idx = 0;
-    for (var i = startIndex || 0, length = getLength(input); i < length; i++) {
-      var value = input[i];
-      if (isArrayLike(value) && (_.isArray(value) || _.isArguments(value))) {
-        //flatten current level of array or arguments object
-        if (!shallow) value = flatten(value, shallow, strict);
-        var j = 0, len = value.length;
-        output.length += len;
-        while (j < len) {
-          output[idx++] = value[j++];
-        }
-      } else if (!strict) {
-        output[idx++] = value;
-      }
-    }
-    return output;
-  };
-
-  // Flatten out an array, either recursively (by default), or just one level.
-  _.flatten = function(array, shallow) {
-    return flatten(array, shallow, false);
-  };
-
-  // Return a version of the array that does not contain the specified value(s).
-  _.without = function(array) {
-    return _.difference(array, slice.call(arguments, 1));
-  };
-
-  // Produce a duplicate-free version of the array. If the array has already
-  // been sorted, you have the option of using a faster algorithm.
-  // Aliased as `unique`.
-  _.uniq = _.unique = function(array, isSorted, iteratee, context) {
-    if (!_.isBoolean(isSorted)) {
-      context = iteratee;
-      iteratee = isSorted;
-      isSorted = false;
-    }
-    if (iteratee != null) iteratee = cb(iteratee, context);
-    var result = [];
-    var seen = [];
-    for (var i = 0, length = getLength(array); i < length; i++) {
-      var value = array[i],
-          computed = iteratee ? iteratee(value, i, array) : value;
-      if (isSorted) {
-        if (!i || seen !== computed) result.push(value);
-        seen = computed;
-      } else if (iteratee) {
-        if (!_.contains(seen, computed)) {
-          seen.push(computed);
-          result.push(value);
-        }
-      } else if (!_.contains(result, value)) {
-        result.push(value);
-      }
-    }
-    return result;
-  };
-
-  // Produce an array that contains the union: each distinct element from all of
-  // the passed-in arrays.
-  _.union = function() {
-    return _.uniq(flatten(arguments, true, true));
-  };
-
-  // Produce an array that contains every item shared between all the
-  // passed-in arrays.
-  _.intersection = function(array) {
-    var result = [];
-    var argsLength = arguments.length;
-    for (var i = 0, length = getLength(array); i < length; i++) {
-      var item = array[i];
-      if (_.contains(result, item)) continue;
-      for (var j = 1; j < argsLength; j++) {
-        if (!_.contains(arguments[j], item)) break;
-      }
-      if (j === argsLength) result.push(item);
-    }
-    return result;
-  };
-
-  // Take the difference between one array and a number of other arrays.
-  // Only the elements present in just the first array will remain.
-  _.difference = function(array) {
-    var rest = flatten(arguments, true, true, 1);
-    return _.filter(array, function(value){
-      return !_.contains(rest, value);
-    });
-  };
-
-  // Zip together multiple lists into a single array -- elements that share
-  // an index go together.
-  _.zip = function() {
-    return _.unzip(arguments);
-  };
-
-  // Complement of _.zip. Unzip accepts an array of arrays and groups
-  // each array's elements on shared indices
-  _.unzip = function(array) {
-    var length = array && _.max(array, getLength).length || 0;
-    var result = Array(length);
-
-    for (var index = 0; index < length; index++) {
-      result[index] = _.pluck(array, index);
-    }
-    return result;
-  };
-
-  // Converts lists into objects. Pass either a single array of `[key, value]`
-  // pairs, or two parallel arrays of the same length -- one of keys, and one of
-  // the corresponding values.
-  _.object = function(list, values) {
-    var result = {};
-    for (var i = 0, length = getLength(list); i < length; i++) {
-      if (values) {
-        result[list[i]] = values[i];
-      } else {
-        result[list[i][0]] = list[i][1];
-      }
-    }
-    return result;
-  };
-
-  // Generator function to create the findIndex and findLastIndex functions
-  function createPredicateIndexFinder(dir) {
-    return function(array, predicate, context) {
-      predicate = cb(predicate, context);
-      var length = getLength(array);
-      var index = dir > 0 ? 0 : length - 1;
-      for (; index >= 0 && index < length; index += dir) {
-        if (predicate(array[index], index, array)) return index;
-      }
-      return -1;
-    };
-  }
-
-  // Returns the first index on an array-like that passes a predicate test
-  _.findIndex = createPredicateIndexFinder(1);
-  _.findLastIndex = createPredicateIndexFinder(-1);
-
-  // Use a comparator function to figure out the smallest index at which
-  // an object should be inserted so as to maintain order. Uses binary search.
-  _.sortedIndex = function(array, obj, iteratee, context) {
-    iteratee = cb(iteratee, context, 1);
-    var value = iteratee(obj);
-    var low = 0, high = getLength(array);
-    while (low < high) {
-      var mid = Math.floor((low + high) / 2);
-      if (iteratee(array[mid]) < value) low = mid + 1; else high = mid;
-    }
-    return low;
-  };
-
-  // Generator function to create the indexOf and lastIndexOf functions
-  function createIndexFinder(dir, predicateFind, sortedIndex) {
-    return function(array, item, idx) {
-      var i = 0, length = getLength(array);
-      if (typeof idx == 'number') {
-        if (dir > 0) {
-            i = idx >= 0 ? idx : Math.max(idx + length, i);
+        // if result is Promise object
+        if (isObject(result) && typeof result.then === 'function') {
+            result.then(function(value) {
+                invokeCallback(callback, null, value);
+            }, function(err) {
+                invokeCallback(callback, err.message ? err : new Error(err));
+            });
         } else {
-            length = idx >= 0 ? Math.min(idx + 1, length) : idx + length + 1;
+            callback(null, result);
         }
-      } else if (sortedIndex && idx && length) {
-        idx = sortedIndex(array, item);
-        return array[idx] === item ? idx : -1;
-      }
-      if (item !== item) {
-        idx = predicateFind(slice.call(array, i, length), _.isNaN);
-        return idx >= 0 ? idx + i : -1;
-      }
-      for (idx = dir > 0 ? i : length - 1; idx >= 0 && idx < length; idx += dir) {
-        if (array[idx] === item) return idx;
-      }
-      return -1;
-    };
-  }
+    });
+}
 
-  // Return the position of the first occurrence of an item in an array,
-  // or -1 if the item is not included in the array.
-  // If the array is large and already in sort order, pass `true`
-  // for **isSorted** to use binary search.
-  _.indexOf = createIndexFinder(1, _.findIndex, _.sortedIndex);
-  _.lastIndexOf = createIndexFinder(-1, _.findLastIndex);
-
-  // Generate an integer Array containing an arithmetic progression. A port of
-  // the native Python `range()` function. See
-  // [the Python documentation](http://docs.python.org/library/functions.html#range).
-  _.range = function(start, stop, step) {
-    if (stop == null) {
-      stop = start || 0;
-      start = 0;
+function invokeCallback(callback, error, value) {
+    try {
+        callback(error, value);
+    } catch (e) {
+        setImmediate$1(rethrow, e);
     }
-    step = step || 1;
+}
 
-    var length = Math.max(Math.ceil((stop - start) / step), 0);
-    var range = Array(length);
+function rethrow(error) {
+    throw error;
+}
 
-    for (var idx = 0; idx < length; idx++, start += step) {
-      range[idx] = start;
-    }
+var supportsSymbol = typeof Symbol === 'function';
 
-    return range;
-  };
+function isAsync(fn) {
+    return supportsSymbol && fn[Symbol.toStringTag] === 'AsyncFunction';
+}
 
-  // Function (ahem) Functions
-  // ------------------
+function wrapAsync(asyncFn) {
+    return isAsync(asyncFn) ? asyncify(asyncFn) : asyncFn;
+}
 
-  // Determines whether to execute a function as a constructor
-  // or a normal function with the provided arguments
-  var executeBound = function(sourceFunc, boundFunc, context, callingContext, args) {
-    if (!(callingContext instanceof boundFunc)) return sourceFunc.apply(context, args);
-    var self = baseCreate(sourceFunc.prototype);
-    var result = sourceFunc.apply(self, args);
-    if (_.isObject(result)) return result;
-    return self;
-  };
-
-  // Create a function bound to a given object (assigning `this`, and arguments,
-  // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
-  // available.
-  _.bind = function(func, context) {
-    if (nativeBind && func.bind === nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
-    if (!_.isFunction(func)) throw new TypeError('Bind must be called on a function');
-    var args = slice.call(arguments, 2);
-    var bound = function() {
-      return executeBound(func, bound, context, this, args.concat(slice.call(arguments)));
-    };
-    return bound;
-  };
-
-  // Partially apply a function by creating a version that has had some of its
-  // arguments pre-filled, without changing its dynamic `this` context. _ acts
-  // as a placeholder, allowing any combination of arguments to be pre-filled.
-  _.partial = function(func) {
-    var boundArgs = slice.call(arguments, 1);
-    var bound = function() {
-      var position = 0, length = boundArgs.length;
-      var args = Array(length);
-      for (var i = 0; i < length; i++) {
-        args[i] = boundArgs[i] === _ ? arguments[position++] : boundArgs[i];
-      }
-      while (position < arguments.length) args.push(arguments[position++]);
-      return executeBound(func, bound, this, this, args);
-    };
-    return bound;
-  };
-
-  // Bind a number of an object's methods to that object. Remaining arguments
-  // are the method names to be bound. Useful for ensuring that all callbacks
-  // defined on an object belong to it.
-  _.bindAll = function(obj) {
-    var i, length = arguments.length, key;
-    if (length <= 1) throw new Error('bindAll must be passed function names');
-    for (i = 1; i < length; i++) {
-      key = arguments[i];
-      obj[key] = _.bind(obj[key], obj);
-    }
-    return obj;
-  };
-
-  // Memoize an expensive function by storing its results.
-  _.memoize = function(func, hasher) {
-    var memoize = function(key) {
-      var cache = memoize.cache;
-      var address = '' + (hasher ? hasher.apply(this, arguments) : key);
-      if (!_.has(cache, address)) cache[address] = func.apply(this, arguments);
-      return cache[address];
-    };
-    memoize.cache = {};
-    return memoize;
-  };
-
-  // Delays a function for the given number of milliseconds, and then calls
-  // it with the arguments supplied.
-  _.delay = function(func, wait) {
-    var args = slice.call(arguments, 2);
-    return setTimeout(function(){
-      return func.apply(null, args);
-    }, wait);
-  };
-
-  // Defers a function, scheduling it to run after the current call stack has
-  // cleared.
-  _.defer = _.partial(_.delay, _, 1);
-
-  // Returns a function, that, when invoked, will only be triggered at most once
-  // during a given window of time. Normally, the throttled function will run
-  // as much as it can, without ever going more than once per `wait` duration;
-  // but if you'd like to disable the execution on the leading edge, pass
-  // `{leading: false}`. To disable execution on the trailing edge, ditto.
-  _.throttle = function(func, wait, options) {
-    var context, args, result;
-    var timeout = null;
-    var previous = 0;
-    if (!options) options = {};
-    var later = function() {
-      previous = options.leading === false ? 0 : _.now();
-      timeout = null;
-      result = func.apply(context, args);
-      if (!timeout) context = args = null;
-    };
-    return function() {
-      var now = _.now();
-      if (!previous && options.leading === false) previous = now;
-      var remaining = wait - (now - previous);
-      context = this;
-      args = arguments;
-      if (remaining <= 0 || remaining > wait) {
-        if (timeout) {
-          clearTimeout(timeout);
-          timeout = null;
+function applyEach$1(eachfn) {
+    return function(fns/*, ...args*/) {
+        var args = slice(arguments, 1);
+        var go = initialParams(function(args, callback) {
+            var that = this;
+            return eachfn(fns, function (fn, cb) {
+                wrapAsync(fn).apply(that, args.concat(cb));
+            }, callback);
+        });
+        if (args.length) {
+            return go.apply(this, args);
         }
-        previous = now;
-        result = func.apply(context, args);
-        if (!timeout) context = args = null;
-      } else if (!timeout && options.trailing !== false) {
-        timeout = setTimeout(later, remaining);
-      }
-      return result;
-    };
-  };
-
-  // Returns a function, that, as long as it continues to be invoked, will not
-  // be triggered. The function will be called after it stops being called for
-  // N milliseconds. If `immediate` is passed, trigger the function on the
-  // leading edge, instead of the trailing.
-  _.debounce = function(func, wait, immediate) {
-    var timeout, args, context, timestamp, result;
-
-    var later = function() {
-      var last = _.now() - timestamp;
-
-      if (last < wait && last >= 0) {
-        timeout = setTimeout(later, wait - last);
-      } else {
-        timeout = null;
-        if (!immediate) {
-          result = func.apply(context, args);
-          if (!timeout) context = args = null;
+        else {
+            return go;
         }
-      }
     };
+}
 
-    return function() {
-      context = this;
-      args = arguments;
-      timestamp = _.now();
-      var callNow = immediate && !timeout;
-      if (!timeout) timeout = setTimeout(later, wait);
-      if (callNow) {
-        result = func.apply(context, args);
-        context = args = null;
-      }
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
-      return result;
-    };
-  };
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
-  // Returns the first function passed as an argument to the second,
-  // allowing you to adjust arguments, run code before and after, and
-  // conditionally execute the original function.
-  _.wrap = function(func, wrapper) {
-    return _.partial(wrapper, func);
-  };
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
 
-  // Returns a negated version of the passed-in predicate.
-  _.negate = function(predicate) {
-    return function() {
-      return !predicate.apply(this, arguments);
-    };
-  };
+/** Built-in value references. */
+var Symbol$1 = root.Symbol;
 
-  // Returns a function that is the composition of a list of functions, each
-  // consuming the return value of the function that follows.
-  _.compose = function() {
-    var args = arguments;
-    var start = args.length - 1;
-    return function() {
-      var i = start;
-      var result = args[start].apply(this, arguments);
-      while (i--) result = args[i].call(this, result);
-      return result;
-    };
-  };
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
 
-  // Returns a function that will only be executed on and after the Nth call.
-  _.after = function(times, func) {
-    return function() {
-      if (--times < 1) {
-        return func.apply(this, arguments);
-      }
-    };
-  };
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
 
-  // Returns a function that will only be executed up to (but not including) the Nth call.
-  _.before = function(times, func) {
-    var memo;
-    return function() {
-      if (--times > 0) {
-        memo = func.apply(this, arguments);
-      }
-      if (times <= 1) func = null;
-      return memo;
-    };
-  };
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
 
-  // Returns a function that will be executed at most one time, no matter how
-  // often you call it. Useful for lazy initialization.
-  _.once = _.partial(_.before, 2);
+/** Built-in value references. */
+var symToStringTag$1 = Symbol$1 ? Symbol$1.toStringTag : undefined;
 
-  // Object Functions
-  // ----------------
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */
+function getRawTag(value) {
+  var isOwn = hasOwnProperty.call(value, symToStringTag$1),
+      tag = value[symToStringTag$1];
 
-  // Keys in IE < 9 that won't be iterated by `for key in ...` and thus missed.
-  var hasEnumBug = !{toString: null}.propertyIsEnumerable('toString');
-  var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',
-                      'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
+  try {
+    value[symToStringTag$1] = undefined;
+    var unmasked = true;
+  } catch (e) {}
 
-  function collectNonEnumProps(obj, keys) {
-    var nonEnumIdx = nonEnumerableProps.length;
-    var constructor = obj.constructor;
-    var proto = (_.isFunction(constructor) && constructor.prototype) || ObjProto;
-
-    // Constructor is a special case.
-    var prop = 'constructor';
-    if (_.has(obj, prop) && !_.contains(keys, prop)) keys.push(prop);
-
-    while (nonEnumIdx--) {
-      prop = nonEnumerableProps[nonEnumIdx];
-      if (prop in obj && obj[prop] !== proto[prop] && !_.contains(keys, prop)) {
-        keys.push(prop);
-      }
+  var result = nativeObjectToString.call(value);
+  if (unmasked) {
+    if (isOwn) {
+      value[symToStringTag$1] = tag;
+    } else {
+      delete value[symToStringTag$1];
     }
   }
+  return result;
+}
 
-  // Retrieve the names of an object's own properties.
-  // Delegates to **ECMAScript 5**'s native `Object.keys`
-  _.keys = function(obj) {
-    if (!_.isObject(obj)) return [];
-    if (nativeKeys) return nativeKeys(obj);
-    var keys = [];
-    for (var key in obj) if (_.has(obj, key)) keys.push(key);
-    // Ahem, IE < 9.
-    if (hasEnumBug) collectNonEnumProps(obj, keys);
-    return keys;
+/** Used for built-in method references. */
+var objectProto$1 = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString$1 = objectProto$1.toString;
+
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */
+function objectToString(value) {
+  return nativeObjectToString$1.call(value);
+}
+
+/** `Object#toString` result references. */
+var nullTag = '[object Null]';
+var undefinedTag = '[object Undefined]';
+
+/** Built-in value references. */
+var symToStringTag = Symbol$1 ? Symbol$1.toStringTag : undefined;
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  value = Object(value);
+  return (symToStringTag && symToStringTag in value)
+    ? getRawTag(value)
+    : objectToString(value);
+}
+
+/** `Object#toString` result references. */
+var asyncTag = '[object AsyncFunction]';
+var funcTag = '[object Function]';
+var genTag = '[object GeneratorFunction]';
+var proxyTag = '[object Proxy]';
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  if (!isObject(value)) {
+    return false;
+  }
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 9 which returns 'object' for typed arrays and other constructors.
+  var tag = baseGetTag(value);
+  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+// A temporary value used to identify if the loop should be broken.
+// See #1064, #1293
+var breakLoop = {};
+
+/**
+ * This method returns `undefined`.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.3.0
+ * @category Util
+ * @example
+ *
+ * _.times(2, _.noop);
+ * // => [undefined, undefined]
+ */
+function noop() {
+  // No operation performed.
+}
+
+function once(fn) {
+    return function () {
+        if (fn === null) return;
+        var callFn = fn;
+        fn = null;
+        callFn.apply(this, arguments);
+    };
+}
+
+var iteratorSymbol = typeof Symbol === 'function' && Symbol.iterator;
+
+var getIterator = function (coll) {
+    return iteratorSymbol && coll[iteratorSymbol] && coll[iteratorSymbol]();
+};
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return value != null && typeof value == 'object';
+}
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]';
+
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */
+function baseIsArguments(value) {
+  return isObjectLike(value) && baseGetTag(value) == argsTag;
+}
+
+/** Used for built-in method references. */
+var objectProto$3 = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty$2 = objectProto$3.hasOwnProperty;
+
+/** Built-in value references. */
+var propertyIsEnumerable = objectProto$3.propertyIsEnumerable;
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
+  return isObjectLike(value) && hasOwnProperty$2.call(value, 'callee') &&
+    !propertyIsEnumerable.call(value, 'callee');
+};
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+/** Detect free variable `exports`. */
+var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Built-in value references. */
+var Buffer = moduleExports ? root.Buffer : undefined;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */
+var isBuffer = nativeIsBuffer || stubFalse;
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER$1 = 9007199254740991;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER$1 : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+/** `Object#toString` result references. */
+var argsTag$1 = '[object Arguments]';
+var arrayTag = '[object Array]';
+var boolTag = '[object Boolean]';
+var dateTag = '[object Date]';
+var errorTag = '[object Error]';
+var funcTag$1 = '[object Function]';
+var mapTag = '[object Map]';
+var numberTag = '[object Number]';
+var objectTag = '[object Object]';
+var regexpTag = '[object RegExp]';
+var setTag = '[object Set]';
+var stringTag = '[object String]';
+var weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]';
+var dataViewTag = '[object DataView]';
+var float32Tag = '[object Float32Array]';
+var float64Tag = '[object Float64Array]';
+var int8Tag = '[object Int8Array]';
+var int16Tag = '[object Int16Array]';
+var int32Tag = '[object Int32Array]';
+var uint8Tag = '[object Uint8Array]';
+var uint8ClampedTag = '[object Uint8ClampedArray]';
+var uint16Tag = '[object Uint16Array]';
+var uint32Tag = '[object Uint32Array]';
+
+/** Used to identify `toStringTag` values of typed arrays. */
+var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag$1] = typedArrayTags[arrayTag] =
+typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+typedArrayTags[errorTag] = typedArrayTags[funcTag$1] =
+typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+typedArrayTags[setTag] = typedArrayTags[stringTag] =
+typedArrayTags[weakMapTag] = false;
+
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */
+function baseIsTypedArray(value) {
+  return isObjectLike(value) &&
+    isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
+}
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
   };
+}
 
-  // Retrieve all the property names of an object.
-  _.allKeys = function(obj) {
-    if (!_.isObject(obj)) return [];
-    var keys = [];
-    for (var key in obj) keys.push(key);
-    // Ahem, IE < 9.
-    if (hasEnumBug) collectNonEnumProps(obj, keys);
-    return keys;
-  };
+/** Detect free variable `exports`. */
+var freeExports$1 = typeof exports == 'object' && exports && !exports.nodeType && exports;
 
-  // Retrieve the values of an object's properties.
-  _.values = function(obj) {
-    var keys = _.keys(obj);
-    var length = keys.length;
-    var values = Array(length);
-    for (var i = 0; i < length; i++) {
-      values[i] = obj[keys[i]];
+/** Detect free variable `module`. */
+var freeModule$1 = freeExports$1 && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports$1 = freeModule$1 && freeModule$1.exports === freeExports$1;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports$1 && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    return freeProcess && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+/* Node.js helper references. */
+var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */
+var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+
+/** Used for built-in method references. */
+var objectProto$2 = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty$1 = objectProto$2.hasOwnProperty;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  var isArr = isArray(value),
+      isArg = !isArr && isArguments(value),
+      isBuff = !isArr && !isArg && isBuffer(value),
+      isType = !isArr && !isArg && !isBuff && isTypedArray(value),
+      skipIndexes = isArr || isArg || isBuff || isType,
+      result = skipIndexes ? baseTimes(value.length, String) : [],
+      length = result.length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty$1.call(value, key)) &&
+        !(skipIndexes && (
+           // Safari 9 has enumerable `arguments.length` in strict mode.
+           key == 'length' ||
+           // Node.js 0.10 has enumerable non-index properties on buffers.
+           (isBuff && (key == 'offset' || key == 'parent')) ||
+           // PhantomJS 2 has enumerable non-index properties on typed arrays.
+           (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||
+           // Skip index properties.
+           isIndex(key, length)
+        ))) {
+      result.push(key);
     }
-    return values;
-  };
+  }
+  return result;
+}
 
-  // Returns the results of applying the iteratee to each element of the object
-  // In contrast to _.map it returns an object
-  _.mapObject = function(obj, iteratee, context) {
-    iteratee = cb(iteratee, context);
-    var keys =  _.keys(obj),
-          length = keys.length,
-          results = {},
-          currentKey;
-      for (var index = 0; index < length; index++) {
-        currentKey = keys[index];
-        results[currentKey] = iteratee(obj[currentKey], currentKey, obj);
-      }
-      return results;
-  };
+/** Used for built-in method references. */
+var objectProto$5 = Object.prototype;
 
-  // Convert an object into a list of `[key, value]` pairs.
-  _.pairs = function(obj) {
-    var keys = _.keys(obj);
-    var length = keys.length;
-    var pairs = Array(length);
-    for (var i = 0; i < length; i++) {
-      pairs[i] = [keys[i], obj[keys[i]]];
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto$5;
+
+  return value === proto;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeKeys = overArg(Object.keys, Object);
+
+/** Used for built-in method references. */
+var objectProto$4 = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty$3 = objectProto$4.hasOwnProperty;
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!isPrototype(object)) {
+    return nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty$3.call(object, key) && key != 'constructor') {
+      result.push(key);
     }
-    return pairs;
-  };
+  }
+  return result;
+}
 
-  // Invert the keys and values of an object. The values must be serializable.
-  _.invert = function(obj) {
-    var result = {};
-    var keys = _.keys(obj);
-    for (var i = 0, length = keys.length; i < length; i++) {
-      result[obj[keys[i]]] = keys[i];
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+function createArrayIterator(coll) {
+    var i = -1;
+    var len = coll.length;
+    return function next() {
+        return ++i < len ? {value: coll[i], key: i} : null;
     }
-    return result;
-  };
+}
 
-  // Return a sorted list of the function names available on the object.
-  // Aliased as `methods`
-  _.functions = _.methods = function(obj) {
-    var names = [];
-    for (var key in obj) {
-      if (_.isFunction(obj[key])) names.push(key);
+function createES2015Iterator(iterator) {
+    var i = -1;
+    return function next() {
+        var item = iterator.next();
+        if (item.done)
+            return null;
+        i++;
+        return {value: item.value, key: i};
     }
-    return names.sort();
-  };
+}
 
-  // Extend a given object with all the properties in passed-in object(s).
-  _.extend = createAssigner(_.allKeys);
+function createObjectIterator(obj) {
+    var okeys = keys(obj);
+    var i = -1;
+    var len = okeys.length;
+    return function next() {
+        var key = okeys[++i];
+        return i < len ? {value: obj[key], key: key} : null;
+    };
+}
 
-  // Assigns a given object with all the own properties in the passed-in object(s)
-  // (https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
-  _.extendOwn = _.assign = createAssigner(_.keys);
-
-  // Returns the first key on an object that passes a predicate test
-  _.findKey = function(obj, predicate, context) {
-    predicate = cb(predicate, context);
-    var keys = _.keys(obj), key;
-    for (var i = 0, length = keys.length; i < length; i++) {
-      key = keys[i];
-      if (predicate(obj[key], key, obj)) return key;
-    }
-  };
-
-  // Return a copy of the object only containing the whitelisted properties.
-  _.pick = function(object, oiteratee, context) {
-    var result = {}, obj = object, iteratee, keys;
-    if (obj == null) return result;
-    if (_.isFunction(oiteratee)) {
-      keys = _.allKeys(obj);
-      iteratee = optimizeCb(oiteratee, context);
-    } else {
-      keys = flatten(arguments, false, false, 1);
-      iteratee = function(value, key, obj) { return key in obj; };
-      obj = Object(obj);
-    }
-    for (var i = 0, length = keys.length; i < length; i++) {
-      var key = keys[i];
-      var value = obj[key];
-      if (iteratee(value, key, obj)) result[key] = value;
-    }
-    return result;
-  };
-
-   // Return a copy of the object without the blacklisted properties.
-  _.omit = function(obj, iteratee, context) {
-    if (_.isFunction(iteratee)) {
-      iteratee = _.negate(iteratee);
-    } else {
-      var keys = _.map(flatten(arguments, false, false, 1), String);
-      iteratee = function(value, key) {
-        return !_.contains(keys, key);
-      };
-    }
-    return _.pick(obj, iteratee, context);
-  };
-
-  // Fill in a given object with default properties.
-  _.defaults = createAssigner(_.allKeys, true);
-
-  // Creates an object that inherits from the given prototype object.
-  // If additional properties are provided then they will be added to the
-  // created object.
-  _.create = function(prototype, props) {
-    var result = baseCreate(prototype);
-    if (props) _.extendOwn(result, props);
-    return result;
-  };
-
-  // Create a (shallow-cloned) duplicate of an object.
-  _.clone = function(obj) {
-    if (!_.isObject(obj)) return obj;
-    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
-  };
-
-  // Invokes interceptor with the obj, and then returns obj.
-  // The primary purpose of this method is to "tap into" a method chain, in
-  // order to perform operations on intermediate results within the chain.
-  _.tap = function(obj, interceptor) {
-    interceptor(obj);
-    return obj;
-  };
-
-  // Returns whether an object has a given set of `key:value` pairs.
-  _.isMatch = function(object, attrs) {
-    var keys = _.keys(attrs), length = keys.length;
-    if (object == null) return !length;
-    var obj = Object(object);
-    for (var i = 0; i < length; i++) {
-      var key = keys[i];
-      if (attrs[key] !== obj[key] || !(key in obj)) return false;
-    }
-    return true;
-  };
-
-
-  // Internal recursive comparison function for `isEqual`.
-  var eq = function(a, b, aStack, bStack) {
-    // Identical objects are equal. `0 === -0`, but they aren't identical.
-    // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
-    if (a === b) return a !== 0 || 1 / a === 1 / b;
-    // A strict comparison is necessary because `null == undefined`.
-    if (a == null || b == null) return a === b;
-    // Unwrap any wrapped objects.
-    if (a instanceof _) a = a._wrapped;
-    if (b instanceof _) b = b._wrapped;
-    // Compare `[[Class]]` names.
-    var className = toString.call(a);
-    if (className !== toString.call(b)) return false;
-    switch (className) {
-      // Strings, numbers, regular expressions, dates, and booleans are compared by value.
-      case '[object RegExp]':
-      // RegExps are coerced to strings for comparison (Note: '' + /a/i === '/a/i')
-      case '[object String]':
-        // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
-        // equivalent to `new String("5")`.
-        return '' + a === '' + b;
-      case '[object Number]':
-        // `NaN`s are equivalent, but non-reflexive.
-        // Object(NaN) is equivalent to NaN
-        if (+a !== +a) return +b !== +b;
-        // An `egal` comparison is performed for other numeric values.
-        return +a === 0 ? 1 / +a === 1 / b : +a === +b;
-      case '[object Date]':
-      case '[object Boolean]':
-        // Coerce dates and booleans to numeric primitive values. Dates are compared by their
-        // millisecond representations. Note that invalid dates with millisecond representations
-        // of `NaN` are not equivalent.
-        return +a === +b;
+function iterator(coll) {
+    if (isArrayLike(coll)) {
+        return createArrayIterator(coll);
     }
 
-    var areArrays = className === '[object Array]';
-    if (!areArrays) {
-      if (typeof a != 'object' || typeof b != 'object') return false;
+    var iterator = getIterator(coll);
+    return iterator ? createES2015Iterator(iterator) : createObjectIterator(coll);
+}
 
-      // Objects with different constructors are not equivalent, but `Object`s or `Array`s
-      // from different frames are.
-      var aCtor = a.constructor, bCtor = b.constructor;
-      if (aCtor !== bCtor && !(_.isFunction(aCtor) && aCtor instanceof aCtor &&
-                               _.isFunction(bCtor) && bCtor instanceof bCtor)
-                          && ('constructor' in a && 'constructor' in b)) {
-        return false;
-      }
+function onlyOnce(fn) {
+    return function() {
+        if (fn === null) throw new Error("Callback was already called.");
+        var callFn = fn;
+        fn = null;
+        callFn.apply(this, arguments);
+    };
+}
+
+function _eachOfLimit(limit) {
+    return function (obj, iteratee, callback) {
+        callback = once(callback || noop);
+        if (limit <= 0 || !obj) {
+            return callback(null);
+        }
+        var nextElem = iterator(obj);
+        var done = false;
+        var running = 0;
+
+        function iterateeCallback(err, value) {
+            running -= 1;
+            if (err) {
+                done = true;
+                callback(err);
+            }
+            else if (value === breakLoop || (done && running <= 0)) {
+                done = true;
+                return callback(null);
+            }
+            else {
+                replenish();
+            }
+        }
+
+        function replenish () {
+            while (running < limit && !done) {
+                var elem = nextElem();
+                if (elem === null) {
+                    done = true;
+                    if (running <= 0) {
+                        callback(null);
+                    }
+                    return;
+                }
+                running += 1;
+                iteratee(elem.value, elem.key, onlyOnce(iterateeCallback));
+            }
+        }
+
+        replenish();
+    };
+}
+
+/**
+ * The same as [`eachOf`]{@link module:Collections.eachOf} but runs a maximum of `limit` async operations at a
+ * time.
+ *
+ * @name eachOfLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.eachOf]{@link module:Collections.eachOf}
+ * @alias forEachOfLimit
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - An async function to apply to each
+ * item in `coll`. The `key` is the item's key, or index in the case of an
+ * array.
+ * Invoked with (item, key, callback).
+ * @param {Function} [callback] - A callback which is called when all
+ * `iteratee` functions have finished, or an error occurs. Invoked with (err).
+ */
+function eachOfLimit(coll, limit, iteratee, callback) {
+    _eachOfLimit(limit)(coll, wrapAsync(iteratee), callback);
+}
+
+function doLimit(fn, limit) {
+    return function (iterable, iteratee, callback) {
+        return fn(iterable, limit, iteratee, callback);
+    };
+}
+
+// eachOf implementation optimized for array-likes
+function eachOfArrayLike(coll, iteratee, callback) {
+    callback = once(callback || noop);
+    var index = 0,
+        completed = 0,
+        length = coll.length;
+    if (length === 0) {
+        callback(null);
     }
-    // Assume equality for cyclic structures. The algorithm for detecting cyclic
-    // structures is adapted from ES 5.1 section 15.12.3, abstract operation `JO`.
 
-    // Initializing stack of traversed objects.
-    // It's done here since we only need them for objects and arrays comparison.
-    aStack = aStack || [];
-    bStack = bStack || [];
-    var length = aStack.length;
+    function iteratorCallback(err, value) {
+        if (err) {
+            callback(err);
+        } else if ((++completed === length) || value === breakLoop) {
+            callback(null);
+        }
+    }
+
+    for (; index < length; index++) {
+        iteratee(coll[index], index, onlyOnce(iteratorCallback));
+    }
+}
+
+// a generic version of eachOf which can handle array, object, and iterator cases.
+var eachOfGeneric = doLimit(eachOfLimit, Infinity);
+
+/**
+ * Like [`each`]{@link module:Collections.each}, except that it passes the key (or index) as the second argument
+ * to the iteratee.
+ *
+ * @name eachOf
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @alias forEachOf
+ * @category Collection
+ * @see [async.each]{@link module:Collections.each}
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - A function to apply to each
+ * item in `coll`.
+ * The `key` is the item's key, or index in the case of an array.
+ * Invoked with (item, key, callback).
+ * @param {Function} [callback] - A callback which is called when all
+ * `iteratee` functions have finished, or an error occurs. Invoked with (err).
+ * @example
+ *
+ * var obj = {dev: "/dev.json", test: "/test.json", prod: "/prod.json"};
+ * var configs = {};
+ *
+ * async.forEachOf(obj, function (value, key, callback) {
+ *     fs.readFile(__dirname + value, "utf8", function (err, data) {
+ *         if (err) return callback(err);
+ *         try {
+ *             configs[key] = JSON.parse(data);
+ *         } catch (e) {
+ *             return callback(e);
+ *         }
+ *         callback();
+ *     });
+ * }, function (err) {
+ *     if (err) console.error(err.message);
+ *     // configs is now a map of JSON data
+ *     doSomethingWith(configs);
+ * });
+ */
+var eachOf = function(coll, iteratee, callback) {
+    var eachOfImplementation = isArrayLike(coll) ? eachOfArrayLike : eachOfGeneric;
+    eachOfImplementation(coll, wrapAsync(iteratee), callback);
+};
+
+function doParallel(fn) {
+    return function (obj, iteratee, callback) {
+        return fn(eachOf, obj, wrapAsync(iteratee), callback);
+    };
+}
+
+function _asyncMap(eachfn, arr, iteratee, callback) {
+    callback = callback || noop;
+    arr = arr || [];
+    var results = [];
+    var counter = 0;
+    var _iteratee = wrapAsync(iteratee);
+
+    eachfn(arr, function (value, _, callback) {
+        var index = counter++;
+        _iteratee(value, function (err, v) {
+            results[index] = v;
+            callback(err);
+        });
+    }, function (err) {
+        callback(err, results);
+    });
+}
+
+/**
+ * Produces a new collection of values by mapping each value in `coll` through
+ * the `iteratee` function. The `iteratee` is called with an item from `coll`
+ * and a callback for when it has finished processing. Each of these callback
+ * takes 2 arguments: an `error`, and the transformed item from `coll`. If
+ * `iteratee` passes an error to its callback, the main `callback` (for the
+ * `map` function) is immediately called with the error.
+ *
+ * Note, that since this function applies the `iteratee` to each item in
+ * parallel, there is no guarantee that the `iteratee` functions will complete
+ * in order. However, the results array will be in the same order as the
+ * original `coll`.
+ *
+ * If `map` is passed an Object, the results will be an Array.  The results
+ * will roughly be in the order of the original Objects' keys (but this can
+ * vary across JavaScript engines).
+ *
+ * @name map
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async function to apply to each item in
+ * `coll`.
+ * The iteratee should complete with the transformed item.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. Results is an Array of the
+ * transformed items from the `coll`. Invoked with (err, results).
+ * @example
+ *
+ * async.map(['file1','file2','file3'], fs.stat, function(err, results) {
+ *     // results is now an array of stats for each file
+ * });
+ */
+var map = doParallel(_asyncMap);
+
+/**
+ * Applies the provided arguments to each function in the array, calling
+ * `callback` after all functions have completed. If you only provide the first
+ * argument, `fns`, then it will return a function which lets you pass in the
+ * arguments as if it were a single function call. If more arguments are
+ * provided, `callback` is required while `args` is still optional.
+ *
+ * @name applyEach
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {Array|Iterable|Object} fns - A collection of {@link AsyncFunction}s
+ * to all call with the same arguments
+ * @param {...*} [args] - any number of separate arguments to pass to the
+ * function.
+ * @param {Function} [callback] - the final argument should be the callback,
+ * called when all functions have completed processing.
+ * @returns {Function} - If only the first argument, `fns`, is provided, it will
+ * return a function which lets you pass in the arguments as if it were a single
+ * function call. The signature is `(..args, callback)`. If invoked with any
+ * arguments, `callback` is required.
+ * @example
+ *
+ * async.applyEach([enableSearch, updateSchema], 'bucket', callback);
+ *
+ * // partial application example:
+ * async.each(
+ *     buckets,
+ *     async.applyEach([enableSearch, updateSchema]),
+ *     callback
+ * );
+ */
+var applyEach = applyEach$1(map);
+
+function doParallelLimit(fn) {
+    return function (obj, limit, iteratee, callback) {
+        return fn(_eachOfLimit(limit), obj, wrapAsync(iteratee), callback);
+    };
+}
+
+/**
+ * The same as [`map`]{@link module:Collections.map} but runs a maximum of `limit` async operations at a time.
+ *
+ * @name mapLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.map]{@link module:Collections.map}
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - An async function to apply to each item in
+ * `coll`.
+ * The iteratee should complete with the transformed item.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. Results is an array of the
+ * transformed items from the `coll`. Invoked with (err, results).
+ */
+var mapLimit = doParallelLimit(_asyncMap);
+
+/**
+ * The same as [`map`]{@link module:Collections.map} but runs only a single async operation at a time.
+ *
+ * @name mapSeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.map]{@link module:Collections.map}
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async function to apply to each item in
+ * `coll`.
+ * The iteratee should complete with the transformed item.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. Results is an array of the
+ * transformed items from the `coll`. Invoked with (err, results).
+ */
+var mapSeries = doLimit(mapLimit, 1);
+
+/**
+ * The same as [`applyEach`]{@link module:ControlFlow.applyEach} but runs only a single async operation at a time.
+ *
+ * @name applyEachSeries
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.applyEach]{@link module:ControlFlow.applyEach}
+ * @category Control Flow
+ * @param {Array|Iterable|Object} fns - A collection of {@link AsyncFunction}s to all
+ * call with the same arguments
+ * @param {...*} [args] - any number of separate arguments to pass to the
+ * function.
+ * @param {Function} [callback] - the final argument should be the callback,
+ * called when all functions have completed processing.
+ * @returns {Function} - If only the first argument is provided, it will return
+ * a function which lets you pass in the arguments as if it were a single
+ * function call.
+ */
+var applyEachSeries = applyEach$1(mapSeries);
+
+/**
+ * Creates a continuation function with some arguments already applied.
+ *
+ * Useful as a shorthand when combined with other control flow functions. Any
+ * arguments passed to the returned function are added to the arguments
+ * originally passed to apply.
+ *
+ * @name apply
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @category Util
+ * @param {Function} fn - The function you want to eventually apply all
+ * arguments to. Invokes with (arguments...).
+ * @param {...*} arguments... - Any number of arguments to automatically apply
+ * when the continuation is called.
+ * @returns {Function} the partially-applied function
+ * @example
+ *
+ * // using apply
+ * async.parallel([
+ *     async.apply(fs.writeFile, 'testfile1', 'test1'),
+ *     async.apply(fs.writeFile, 'testfile2', 'test2')
+ * ]);
+ *
+ *
+ * // the same process without using apply
+ * async.parallel([
+ *     function(callback) {
+ *         fs.writeFile('testfile1', 'test1', callback);
+ *     },
+ *     function(callback) {
+ *         fs.writeFile('testfile2', 'test2', callback);
+ *     }
+ * ]);
+ *
+ * // It's possible to pass any number of additional arguments when calling the
+ * // continuation:
+ *
+ * node> var fn = async.apply(sys.puts, 'one');
+ * node> fn('two', 'three');
+ * one
+ * two
+ * three
+ */
+var apply = function(fn/*, ...args*/) {
+    var args = slice(arguments, 1);
+    return function(/*callArgs*/) {
+        var callArgs = slice(arguments);
+        return fn.apply(null, args.concat(callArgs));
+    };
+};
+
+/**
+ * A specialized version of `_.forEach` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns `array`.
+ */
+function arrayEach(array, iteratee) {
+  var index = -1,
+      length = array == null ? 0 : array.length;
+
+  while (++index < length) {
+    if (iteratee(array[index], index, array) === false) {
+      break;
+    }
+  }
+  return array;
+}
+
+/**
+ * Creates a base function for methods like `_.forIn` and `_.forOwn`.
+ *
+ * @private
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */
+function createBaseFor(fromRight) {
+  return function(object, iteratee, keysFunc) {
+    var index = -1,
+        iterable = Object(object),
+        props = keysFunc(object),
+        length = props.length;
+
     while (length--) {
-      // Linear search. Performance is inversely proportional to the number of
-      // unique nested structures.
-      if (aStack[length] === a) return bStack[length] === b;
-    }
-
-    // Add the first object to the stack of traversed objects.
-    aStack.push(a);
-    bStack.push(b);
-
-    // Recursively compare objects and arrays.
-    if (areArrays) {
-      // Compare array lengths to determine if a deep comparison is necessary.
-      length = a.length;
-      if (length !== b.length) return false;
-      // Deep compare the contents, ignoring non-numeric properties.
-      while (length--) {
-        if (!eq(a[length], b[length], aStack, bStack)) return false;
-      }
-    } else {
-      // Deep compare objects.
-      var keys = _.keys(a), key;
-      length = keys.length;
-      // Ensure that both objects contain the same number of properties before comparing deep equality.
-      if (_.keys(b).length !== length) return false;
-      while (length--) {
-        // Deep compare each member
-        key = keys[length];
-        if (!(_.has(b, key) && eq(a[key], b[key], aStack, bStack))) return false;
+      var key = props[fromRight ? length : ++index];
+      if (iteratee(iterable[key], key, iterable) === false) {
+        break;
       }
     }
-    // Remove the first object from the stack of traversed objects.
-    aStack.pop();
-    bStack.pop();
-    return true;
+    return object;
   };
+}
 
-  // Perform a deep comparison to check if two objects are equal.
-  _.isEqual = function(a, b) {
-    return eq(a, b);
-  };
+/**
+ * The base implementation of `baseForOwn` which iterates over `object`
+ * properties returned by `keysFunc` and invokes `iteratee` for each property.
+ * Iteratee functions may exit iteration early by explicitly returning `false`.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @returns {Object} Returns `object`.
+ */
+var baseFor = createBaseFor();
 
-  // Is a given array, string, or object empty?
-  // An "empty" object has no enumerable own-properties.
-  _.isEmpty = function(obj) {
-    if (obj == null) return true;
-    if (isArrayLike(obj) && (_.isArray(obj) || _.isString(obj) || _.isArguments(obj))) return obj.length === 0;
-    return _.keys(obj).length === 0;
-  };
+/**
+ * The base implementation of `_.forOwn` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Object} Returns `object`.
+ */
+function baseForOwn(object, iteratee) {
+  return object && baseFor(object, iteratee, keys);
+}
 
-  // Is a given value a DOM element?
-  _.isElement = function(obj) {
-    return !!(obj && obj.nodeType === 1);
-  };
+/**
+ * The base implementation of `_.findIndex` and `_.findLastIndex` without
+ * support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {Function} predicate The function invoked per iteration.
+ * @param {number} fromIndex The index to search from.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function baseFindIndex(array, predicate, fromIndex, fromRight) {
+  var length = array.length,
+      index = fromIndex + (fromRight ? 1 : -1);
 
-  // Is a given value an array?
-  // Delegates to ECMA5's native Array.isArray
-  _.isArray = nativeIsArray || function(obj) {
-    return toString.call(obj) === '[object Array]';
-  };
-
-  // Is a given variable an object?
-  _.isObject = function(obj) {
-    var type = typeof obj;
-    return type === 'function' || type === 'object' && !!obj;
-  };
-
-  // Add some isType methods: isArguments, isFunction, isString, isNumber, isDate, isRegExp, isError.
-  _.each(['Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error'], function(name) {
-    _['is' + name] = function(obj) {
-      return toString.call(obj) === '[object ' + name + ']';
-    };
-  });
-
-  // Define a fallback version of the method in browsers (ahem, IE < 9), where
-  // there isn't any inspectable "Arguments" type.
-  if (!_.isArguments(arguments)) {
-    _.isArguments = function(obj) {
-      return _.has(obj, 'callee');
-    };
+  while ((fromRight ? index-- : ++index < length)) {
+    if (predicate(array[index], index, array)) {
+      return index;
+    }
   }
+  return -1;
+}
 
-  // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
-  // IE 11 (#1621), and in Safari 8 (#1929).
-  if (typeof /./ != 'function' && typeof Int8Array != 'object') {
-    _.isFunction = function(obj) {
-      return typeof obj == 'function' || false;
-    };
+/**
+ * The base implementation of `_.isNaN` without support for number objects.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
+ */
+function baseIsNaN(value) {
+  return value !== value;
+}
+
+/**
+ * A specialized version of `_.indexOf` which performs strict equality
+ * comparisons of values, i.e. `===`.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} fromIndex The index to search from.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function strictIndexOf(array, value, fromIndex) {
+  var index = fromIndex - 1,
+      length = array.length;
+
+  while (++index < length) {
+    if (array[index] === value) {
+      return index;
+    }
   }
+  return -1;
+}
 
-  // Is a given object a finite number?
-  _.isFinite = function(obj) {
-    return isFinite(obj) && !isNaN(parseFloat(obj));
-  };
+/**
+ * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} fromIndex The index to search from.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function baseIndexOf(array, value, fromIndex) {
+  return value === value
+    ? strictIndexOf(array, value, fromIndex)
+    : baseFindIndex(array, baseIsNaN, fromIndex);
+}
 
-  // Is the given value `NaN`? (NaN is the only number which does not equal itself).
-  _.isNaN = function(obj) {
-    return _.isNumber(obj) && obj !== +obj;
-  };
+/**
+ * Determines the best order for running the {@link AsyncFunction}s in `tasks`, based on
+ * their requirements. Each function can optionally depend on other functions
+ * being completed first, and each function is run as soon as its requirements
+ * are satisfied.
+ *
+ * If any of the {@link AsyncFunction}s pass an error to their callback, the `auto` sequence
+ * will stop. Further tasks will not execute (so any other functions depending
+ * on it will not run), and the main `callback` is immediately called with the
+ * error.
+ *
+ * {@link AsyncFunction}s also receive an object containing the results of functions which
+ * have completed so far as the first argument, if they have dependencies. If a
+ * task function has no dependencies, it will only be passed a callback.
+ *
+ * @name auto
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {Object} tasks - An object. Each of its properties is either a
+ * function or an array of requirements, with the {@link AsyncFunction} itself the last item
+ * in the array. The object's key of a property serves as the name of the task
+ * defined by that property, i.e. can be used when specifying requirements for
+ * other tasks. The function receives one or two arguments:
+ * * a `results` object, containing the results of the previously executed
+ *   functions, only passed if the task has any dependencies,
+ * * a `callback(err, result)` function, which must be called when finished,
+ *   passing an `error` (which can be `null`) and the result of the function's
+ *   execution.
+ * @param {number} [concurrency=Infinity] - An optional `integer` for
+ * determining the maximum number of tasks that can be run in parallel. By
+ * default, as many as possible.
+ * @param {Function} [callback] - An optional callback which is called when all
+ * the tasks have been completed. It receives the `err` argument if any `tasks`
+ * pass an error to their callback. Results are always returned; however, if an
+ * error occurs, no further `tasks` will be performed, and the results object
+ * will only contain partial results. Invoked with (err, results).
+ * @returns undefined
+ * @example
+ *
+ * async.auto({
+ *     // this function will just be passed a callback
+ *     readData: async.apply(fs.readFile, 'data.txt', 'utf-8'),
+ *     showData: ['readData', function(results, cb) {
+ *         // results.readData is the file's contents
+ *         // ...
+ *     }]
+ * }, callback);
+ *
+ * async.auto({
+ *     get_data: function(callback) {
+ *         console.log('in get_data');
+ *         // async code to get some data
+ *         callback(null, 'data', 'converted to array');
+ *     },
+ *     make_folder: function(callback) {
+ *         console.log('in make_folder');
+ *         // async code to create a directory to store a file in
+ *         // this is run at the same time as getting the data
+ *         callback(null, 'folder');
+ *     },
+ *     write_file: ['get_data', 'make_folder', function(results, callback) {
+ *         console.log('in write_file', JSON.stringify(results));
+ *         // once there is some data and the directory exists,
+ *         // write the data to a file in the directory
+ *         callback(null, 'filename');
+ *     }],
+ *     email_link: ['write_file', function(results, callback) {
+ *         console.log('in email_link', JSON.stringify(results));
+ *         // once the file is written let's email a link to it...
+ *         // results.write_file contains the filename returned by write_file.
+ *         callback(null, {'file':results.write_file, 'email':'user@example.com'});
+ *     }]
+ * }, function(err, results) {
+ *     console.log('err = ', err);
+ *     console.log('results = ', results);
+ * });
+ */
+var auto = function (tasks, concurrency, callback) {
+    if (typeof concurrency === 'function') {
+        // concurrency is optional, shift the args.
+        callback = concurrency;
+        concurrency = null;
+    }
+    callback = once(callback || noop);
+    var keys$$1 = keys(tasks);
+    var numTasks = keys$$1.length;
+    if (!numTasks) {
+        return callback(null);
+    }
+    if (!concurrency) {
+        concurrency = numTasks;
+    }
 
-  // Is a given value a boolean?
-  _.isBoolean = function(obj) {
-    return obj === true || obj === false || toString.call(obj) === '[object Boolean]';
-  };
+    var results = {};
+    var runningTasks = 0;
+    var hasError = false;
 
-  // Is a given value equal to null?
-  _.isNull = function(obj) {
-    return obj === null;
-  };
+    var listeners = Object.create(null);
 
-  // Is a given variable undefined?
-  _.isUndefined = function(obj) {
-    return obj === void 0;
-  };
+    var readyTasks = [];
 
-  // Shortcut function for checking if an object has a given property directly
-  // on itself (in other words, not on a prototype).
-  _.has = function(obj, key) {
-    return obj != null && hasOwnProperty.call(obj, key);
-  };
+    // for cycle detection:
+    var readyToCheck = []; // tasks that have been identified as reachable
+    // without the possibility of returning to an ancestor task
+    var uncheckedDependencies = {};
 
-  // Utility Functions
-  // -----------------
+    baseForOwn(tasks, function (task, key) {
+        if (!isArray(task)) {
+            // no dependencies
+            enqueueTask(key, [task]);
+            readyToCheck.push(key);
+            return;
+        }
 
-  // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
-  // previous owner. Returns a reference to the Underscore object.
-  _.noConflict = function() {
-    root._ = previousUnderscore;
+        var dependencies = task.slice(0, task.length - 1);
+        var remainingDependencies = dependencies.length;
+        if (remainingDependencies === 0) {
+            enqueueTask(key, task);
+            readyToCheck.push(key);
+            return;
+        }
+        uncheckedDependencies[key] = remainingDependencies;
+
+        arrayEach(dependencies, function (dependencyName) {
+            if (!tasks[dependencyName]) {
+                throw new Error('async.auto task `' + key +
+                    '` has a non-existent dependency `' +
+                    dependencyName + '` in ' +
+                    dependencies.join(', '));
+            }
+            addListener(dependencyName, function () {
+                remainingDependencies--;
+                if (remainingDependencies === 0) {
+                    enqueueTask(key, task);
+                }
+            });
+        });
+    });
+
+    checkForDeadlocks();
+    processQueue();
+
+    function enqueueTask(key, task) {
+        readyTasks.push(function () {
+            runTask(key, task);
+        });
+    }
+
+    function processQueue() {
+        if (readyTasks.length === 0 && runningTasks === 0) {
+            return callback(null, results);
+        }
+        while(readyTasks.length && runningTasks < concurrency) {
+            var run = readyTasks.shift();
+            run();
+        }
+
+    }
+
+    function addListener(taskName, fn) {
+        var taskListeners = listeners[taskName];
+        if (!taskListeners) {
+            taskListeners = listeners[taskName] = [];
+        }
+
+        taskListeners.push(fn);
+    }
+
+    function taskComplete(taskName) {
+        var taskListeners = listeners[taskName] || [];
+        arrayEach(taskListeners, function (fn) {
+            fn();
+        });
+        processQueue();
+    }
+
+
+    function runTask(key, task) {
+        if (hasError) return;
+
+        var taskCallback = onlyOnce(function(err, result) {
+            runningTasks--;
+            if (arguments.length > 2) {
+                result = slice(arguments, 1);
+            }
+            if (err) {
+                var safeResults = {};
+                baseForOwn(results, function(val, rkey) {
+                    safeResults[rkey] = val;
+                });
+                safeResults[key] = result;
+                hasError = true;
+                listeners = Object.create(null);
+
+                callback(err, safeResults);
+            } else {
+                results[key] = result;
+                taskComplete(key);
+            }
+        });
+
+        runningTasks++;
+        var taskFn = wrapAsync(task[task.length - 1]);
+        if (task.length > 1) {
+            taskFn(results, taskCallback);
+        } else {
+            taskFn(taskCallback);
+        }
+    }
+
+    function checkForDeadlocks() {
+        // Kahn's algorithm
+        // https://en.wikipedia.org/wiki/Topological_sorting#Kahn.27s_algorithm
+        // http://connalle.blogspot.com/2013/10/topological-sortingkahn-algorithm.html
+        var currentTask;
+        var counter = 0;
+        while (readyToCheck.length) {
+            currentTask = readyToCheck.pop();
+            counter++;
+            arrayEach(getDependents(currentTask), function (dependent) {
+                if (--uncheckedDependencies[dependent] === 0) {
+                    readyToCheck.push(dependent);
+                }
+            });
+        }
+
+        if (counter !== numTasks) {
+            throw new Error(
+                'async.auto cannot execute tasks due to a recursive dependency'
+            );
+        }
+    }
+
+    function getDependents(taskName) {
+        var result = [];
+        baseForOwn(tasks, function (task, key) {
+            if (isArray(task) && baseIndexOf(task, taskName, 0) >= 0) {
+                result.push(key);
+            }
+        });
+        return result;
+    }
+};
+
+/**
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */
+function arrayMap(array, iteratee) {
+  var index = -1,
+      length = array == null ? 0 : array.length,
+      result = Array(length);
+
+  while (++index < length) {
+    result[index] = iteratee(array[index], index, array);
+  }
+  return result;
+}
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && baseGetTag(value) == symbolTag);
+}
+
+/** Used as references for various `Number` constants. */
+var INFINITY = 1 / 0;
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol$1 ? Symbol$1.prototype : undefined;
+var symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */
+function baseToString(value) {
+  // Exit early for strings to avoid a performance hit in some environments.
+  if (typeof value == 'string') {
+    return value;
+  }
+  if (isArray(value)) {
+    // Recursively convert values (susceptible to call stack limits).
+    return arrayMap(value, baseToString) + '';
+  }
+  if (isSymbol(value)) {
+    return symbolToString ? symbolToString.call(value) : '';
+  }
+  var result = (value + '');
+  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+}
+
+/**
+ * The base implementation of `_.slice` without an iteratee call guard.
+ *
+ * @private
+ * @param {Array} array The array to slice.
+ * @param {number} [start=0] The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the slice of `array`.
+ */
+function baseSlice(array, start, end) {
+  var index = -1,
+      length = array.length;
+
+  if (start < 0) {
+    start = -start > length ? 0 : (length + start);
+  }
+  end = end > length ? length : end;
+  if (end < 0) {
+    end += length;
+  }
+  length = start > end ? 0 : ((end - start) >>> 0);
+  start >>>= 0;
+
+  var result = Array(length);
+  while (++index < length) {
+    result[index] = array[index + start];
+  }
+  return result;
+}
+
+/**
+ * Casts `array` to a slice if it's needed.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {number} start The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the cast slice.
+ */
+function castSlice(array, start, end) {
+  var length = array.length;
+  end = end === undefined ? length : end;
+  return (!start && end >= length) ? array : baseSlice(array, start, end);
+}
+
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last string symbol
+ * that is not found in the character symbols.
+ *
+ * @private
+ * @param {Array} strSymbols The string symbols to inspect.
+ * @param {Array} chrSymbols The character symbols to find.
+ * @returns {number} Returns the index of the last unmatched string symbol.
+ */
+function charsEndIndex(strSymbols, chrSymbols) {
+  var index = strSymbols.length;
+
+  while (index-- && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) {}
+  return index;
+}
+
+/**
+ * Used by `_.trim` and `_.trimStart` to get the index of the first string symbol
+ * that is not found in the character symbols.
+ *
+ * @private
+ * @param {Array} strSymbols The string symbols to inspect.
+ * @param {Array} chrSymbols The character symbols to find.
+ * @returns {number} Returns the index of the first unmatched string symbol.
+ */
+function charsStartIndex(strSymbols, chrSymbols) {
+  var index = -1,
+      length = strSymbols.length;
+
+  while (++index < length && baseIndexOf(chrSymbols, strSymbols[index], 0) > -1) {}
+  return index;
+}
+
+/**
+ * Converts an ASCII `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function asciiToArray(string) {
+  return string.split('');
+}
+
+/** Used to compose unicode character classes. */
+var rsAstralRange = '\\ud800-\\udfff';
+var rsComboMarksRange = '\\u0300-\\u036f\\ufe20-\\ufe23';
+var rsComboSymbolsRange = '\\u20d0-\\u20f0';
+var rsVarRange = '\\ufe0e\\ufe0f';
+
+/** Used to compose unicode capture groups. */
+var rsZWJ = '\\u200d';
+
+/** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */
+var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboMarksRange + rsComboSymbolsRange + rsVarRange + ']');
+
+/**
+ * Checks if `string` contains Unicode symbols.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {boolean} Returns `true` if a symbol is found, else `false`.
+ */
+function hasUnicode(string) {
+  return reHasUnicode.test(string);
+}
+
+/** Used to compose unicode character classes. */
+var rsAstralRange$1 = '\\ud800-\\udfff';
+var rsComboMarksRange$1 = '\\u0300-\\u036f\\ufe20-\\ufe23';
+var rsComboSymbolsRange$1 = '\\u20d0-\\u20f0';
+var rsVarRange$1 = '\\ufe0e\\ufe0f';
+
+/** Used to compose unicode capture groups. */
+var rsAstral = '[' + rsAstralRange$1 + ']';
+var rsCombo = '[' + rsComboMarksRange$1 + rsComboSymbolsRange$1 + ']';
+var rsFitz = '\\ud83c[\\udffb-\\udfff]';
+var rsModifier = '(?:' + rsCombo + '|' + rsFitz + ')';
+var rsNonAstral = '[^' + rsAstralRange$1 + ']';
+var rsRegional = '(?:\\ud83c[\\udde6-\\uddff]){2}';
+var rsSurrPair = '[\\ud800-\\udbff][\\udc00-\\udfff]';
+var rsZWJ$1 = '\\u200d';
+
+/** Used to compose unicode regexes. */
+var reOptMod = rsModifier + '?';
+var rsOptVar = '[' + rsVarRange$1 + ']?';
+var rsOptJoin = '(?:' + rsZWJ$1 + '(?:' + [rsNonAstral, rsRegional, rsSurrPair].join('|') + ')' + rsOptVar + reOptMod + ')*';
+var rsSeq = rsOptVar + reOptMod + rsOptJoin;
+var rsSymbol = '(?:' + [rsNonAstral + rsCombo + '?', rsCombo, rsRegional, rsSurrPair, rsAstral].join('|') + ')';
+
+/** Used to match [string symbols](https://mathiasbynens.be/notes/javascript-unicode). */
+var reUnicode = RegExp(rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq, 'g');
+
+/**
+ * Converts a Unicode `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function unicodeToArray(string) {
+  return string.match(reUnicode) || [];
+}
+
+/**
+ * Converts `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function stringToArray(string) {
+  return hasUnicode(string)
+    ? unicodeToArray(string)
+    : asciiToArray(string);
+}
+
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */
+function toString(value) {
+  return value == null ? '' : baseToString(value);
+}
+
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
+
+/**
+ * Removes leading and trailing whitespace or specified characters from `string`.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to trim.
+ * @param {string} [chars=whitespace] The characters to trim.
+ * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+ * @returns {string} Returns the trimmed string.
+ * @example
+ *
+ * _.trim('  abc  ');
+ * // => 'abc'
+ *
+ * _.trim('-_-abc-_-', '_-');
+ * // => 'abc'
+ *
+ * _.map(['  foo  ', '  bar  '], _.trim);
+ * // => ['foo', 'bar']
+ */
+function trim(string, chars, guard) {
+  string = toString(string);
+  if (string && (guard || chars === undefined)) {
+    return string.replace(reTrim, '');
+  }
+  if (!string || !(chars = baseToString(chars))) {
+    return string;
+  }
+  var strSymbols = stringToArray(string),
+      chrSymbols = stringToArray(chars),
+      start = charsStartIndex(strSymbols, chrSymbols),
+      end = charsEndIndex(strSymbols, chrSymbols) + 1;
+
+  return castSlice(strSymbols, start, end).join('');
+}
+
+var FN_ARGS = /^(?:async\s+)?(function)?\s*[^\(]*\(\s*([^\)]*)\)/m;
+var FN_ARG_SPLIT = /,/;
+var FN_ARG = /(=.+)?(\s*)$/;
+var STRIP_COMMENTS = /((\/\/.*$)|(\/\*[\s\S]*?\*\/))/mg;
+
+function parseParams(func) {
+    func = func.toString().replace(STRIP_COMMENTS, '');
+    func = func.match(FN_ARGS)[2].replace(' ', '');
+    func = func ? func.split(FN_ARG_SPLIT) : [];
+    func = func.map(function (arg){
+        return trim(arg.replace(FN_ARG, ''));
+    });
+    return func;
+}
+
+/**
+ * A dependency-injected version of the [async.auto]{@link module:ControlFlow.auto} function. Dependent
+ * tasks are specified as parameters to the function, after the usual callback
+ * parameter, with the parameter names matching the names of the tasks it
+ * depends on. This can provide even more readable task graphs which can be
+ * easier to maintain.
+ *
+ * If a final callback is specified, the task results are similarly injected,
+ * specified as named parameters after the initial error parameter.
+ *
+ * The autoInject function is purely syntactic sugar and its semantics are
+ * otherwise equivalent to [async.auto]{@link module:ControlFlow.auto}.
+ *
+ * @name autoInject
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.auto]{@link module:ControlFlow.auto}
+ * @category Control Flow
+ * @param {Object} tasks - An object, each of whose properties is an {@link AsyncFunction} of
+ * the form 'func([dependencies...], callback). The object's key of a property
+ * serves as the name of the task defined by that property, i.e. can be used
+ * when specifying requirements for other tasks.
+ * * The `callback` parameter is a `callback(err, result)` which must be called
+ *   when finished, passing an `error` (which can be `null`) and the result of
+ *   the function's execution. The remaining parameters name other tasks on
+ *   which the task is dependent, and the results from those tasks are the
+ *   arguments of those parameters.
+ * @param {Function} [callback] - An optional callback which is called when all
+ * the tasks have been completed. It receives the `err` argument if any `tasks`
+ * pass an error to their callback, and a `results` object with any completed
+ * task results, similar to `auto`.
+ * @example
+ *
+ * //  The example from `auto` can be rewritten as follows:
+ * async.autoInject({
+ *     get_data: function(callback) {
+ *         // async code to get some data
+ *         callback(null, 'data', 'converted to array');
+ *     },
+ *     make_folder: function(callback) {
+ *         // async code to create a directory to store a file in
+ *         // this is run at the same time as getting the data
+ *         callback(null, 'folder');
+ *     },
+ *     write_file: function(get_data, make_folder, callback) {
+ *         // once there is some data and the directory exists,
+ *         // write the data to a file in the directory
+ *         callback(null, 'filename');
+ *     },
+ *     email_link: function(write_file, callback) {
+ *         // once the file is written let's email a link to it...
+ *         // write_file contains the filename returned by write_file.
+ *         callback(null, {'file':write_file, 'email':'user@example.com'});
+ *     }
+ * }, function(err, results) {
+ *     console.log('err = ', err);
+ *     console.log('email_link = ', results.email_link);
+ * });
+ *
+ * // If you are using a JS minifier that mangles parameter names, `autoInject`
+ * // will not work with plain functions, since the parameter names will be
+ * // collapsed to a single letter identifier.  To work around this, you can
+ * // explicitly specify the names of the parameters your task function needs
+ * // in an array, similar to Angular.js dependency injection.
+ *
+ * // This still has an advantage over plain `auto`, since the results a task
+ * // depends on are still spread into arguments.
+ * async.autoInject({
+ *     //...
+ *     write_file: ['get_data', 'make_folder', function(get_data, make_folder, callback) {
+ *         callback(null, 'filename');
+ *     }],
+ *     email_link: ['write_file', function(write_file, callback) {
+ *         callback(null, {'file':write_file, 'email':'user@example.com'});
+ *     }]
+ *     //...
+ * }, function(err, results) {
+ *     console.log('err = ', err);
+ *     console.log('email_link = ', results.email_link);
+ * });
+ */
+function autoInject(tasks, callback) {
+    var newTasks = {};
+
+    baseForOwn(tasks, function (taskFn, key) {
+        var params;
+        var fnIsAsync = isAsync(taskFn);
+        var hasNoDeps =
+            (!fnIsAsync && taskFn.length === 1) ||
+            (fnIsAsync && taskFn.length === 0);
+
+        if (isArray(taskFn)) {
+            params = taskFn.slice(0, -1);
+            taskFn = taskFn[taskFn.length - 1];
+
+            newTasks[key] = params.concat(params.length > 0 ? newTask : taskFn);
+        } else if (hasNoDeps) {
+            // no dependencies, use the function as-is
+            newTasks[key] = taskFn;
+        } else {
+            params = parseParams(taskFn);
+            if (taskFn.length === 0 && !fnIsAsync && params.length === 0) {
+                throw new Error("autoInject task functions require explicit parameters.");
+            }
+
+            // remove callback param
+            if (!fnIsAsync) params.pop();
+
+            newTasks[key] = params.concat(newTask);
+        }
+
+        function newTask(results, taskCb) {
+            var newArgs = arrayMap(params, function (name) {
+                return results[name];
+            });
+            newArgs.push(taskCb);
+            wrapAsync(taskFn).apply(null, newArgs);
+        }
+    });
+
+    auto(newTasks, callback);
+}
+
+// Simple doubly linked list (https://en.wikipedia.org/wiki/Doubly_linked_list) implementation
+// used for queues. This implementation assumes that the node provided by the user can be modified
+// to adjust the next and last properties. We implement only the minimal functionality
+// for queue support.
+function DLL() {
+    this.head = this.tail = null;
+    this.length = 0;
+}
+
+function setInitial(dll, node) {
+    dll.length = 1;
+    dll.head = dll.tail = node;
+}
+
+DLL.prototype.removeLink = function(node) {
+    if (node.prev) node.prev.next = node.next;
+    else this.head = node.next;
+    if (node.next) node.next.prev = node.prev;
+    else this.tail = node.prev;
+
+    node.prev = node.next = null;
+    this.length -= 1;
+    return node;
+};
+
+DLL.prototype.empty = function () {
+    while(this.head) this.shift();
     return this;
-  };
+};
 
-  // Keep the identity function around for default iteratees.
-  _.identity = function(value) {
+DLL.prototype.insertAfter = function(node, newNode) {
+    newNode.prev = node;
+    newNode.next = node.next;
+    if (node.next) node.next.prev = newNode;
+    else this.tail = newNode;
+    node.next = newNode;
+    this.length += 1;
+};
+
+DLL.prototype.insertBefore = function(node, newNode) {
+    newNode.prev = node.prev;
+    newNode.next = node;
+    if (node.prev) node.prev.next = newNode;
+    else this.head = newNode;
+    node.prev = newNode;
+    this.length += 1;
+};
+
+DLL.prototype.unshift = function(node) {
+    if (this.head) this.insertBefore(this.head, node);
+    else setInitial(this, node);
+};
+
+DLL.prototype.push = function(node) {
+    if (this.tail) this.insertAfter(this.tail, node);
+    else setInitial(this, node);
+};
+
+DLL.prototype.shift = function() {
+    return this.head && this.removeLink(this.head);
+};
+
+DLL.prototype.pop = function() {
+    return this.tail && this.removeLink(this.tail);
+};
+
+DLL.prototype.toArray = function () {
+    var arr = Array(this.length);
+    var curr = this.head;
+    for(var idx = 0; idx < this.length; idx++) {
+        arr[idx] = curr.data;
+        curr = curr.next;
+    }
+    return arr;
+};
+
+DLL.prototype.remove = function (testFn) {
+    var curr = this.head;
+    while(!!curr) {
+        var next = curr.next;
+        if (testFn(curr)) {
+            this.removeLink(curr);
+        }
+        curr = next;
+    }
+    return this;
+};
+
+function queue(worker, concurrency, payload) {
+    if (concurrency == null) {
+        concurrency = 1;
+    }
+    else if(concurrency === 0) {
+        throw new Error('Concurrency must not be zero');
+    }
+
+    var _worker = wrapAsync(worker);
+    var numRunning = 0;
+    var workersList = [];
+
+    function _insert(data, insertAtFront, callback) {
+        if (callback != null && typeof callback !== 'function') {
+            throw new Error('task callback must be a function');
+        }
+        q.started = true;
+        if (!isArray(data)) {
+            data = [data];
+        }
+        if (data.length === 0 && q.idle()) {
+            // call drain immediately if there are no tasks
+            return setImmediate$1(function() {
+                q.drain();
+            });
+        }
+
+        for (var i = 0, l = data.length; i < l; i++) {
+            var item = {
+                data: data[i],
+                callback: callback || noop
+            };
+
+            if (insertAtFront) {
+                q._tasks.unshift(item);
+            } else {
+                q._tasks.push(item);
+            }
+        }
+        setImmediate$1(q.process);
+    }
+
+    function _next(tasks) {
+        return function(err){
+            numRunning -= 1;
+
+            for (var i = 0, l = tasks.length; i < l; i++) {
+                var task = tasks[i];
+                var index = baseIndexOf(workersList, task, 0);
+                if (index >= 0) {
+                    workersList.splice(index);
+                }
+
+                task.callback.apply(task, arguments);
+
+                if (err != null) {
+                    q.error(err, task.data);
+                }
+            }
+
+            if (numRunning <= (q.concurrency - q.buffer) ) {
+                q.unsaturated();
+            }
+
+            if (q.idle()) {
+                q.drain();
+            }
+            q.process();
+        };
+    }
+
+    var isProcessing = false;
+    var q = {
+        _tasks: new DLL(),
+        concurrency: concurrency,
+        payload: payload,
+        saturated: noop,
+        unsaturated:noop,
+        buffer: concurrency / 4,
+        empty: noop,
+        drain: noop,
+        error: noop,
+        started: false,
+        paused: false,
+        push: function (data, callback) {
+            _insert(data, false, callback);
+        },
+        kill: function () {
+            q.drain = noop;
+            q._tasks.empty();
+        },
+        unshift: function (data, callback) {
+            _insert(data, true, callback);
+        },
+        remove: function (testFn) {
+            q._tasks.remove(testFn);
+        },
+        process: function () {
+            // Avoid trying to start too many processing operations. This can occur
+            // when callbacks resolve synchronously (#1267).
+            if (isProcessing) {
+                return;
+            }
+            isProcessing = true;
+            while(!q.paused && numRunning < q.concurrency && q._tasks.length){
+                var tasks = [], data = [];
+                var l = q._tasks.length;
+                if (q.payload) l = Math.min(l, q.payload);
+                for (var i = 0; i < l; i++) {
+                    var node = q._tasks.shift();
+                    tasks.push(node);
+                    data.push(node.data);
+                }
+
+                numRunning += 1;
+                workersList.push(tasks[0]);
+
+                if (q._tasks.length === 0) {
+                    q.empty();
+                }
+
+                if (numRunning === q.concurrency) {
+                    q.saturated();
+                }
+
+                var cb = onlyOnce(_next(tasks));
+                _worker(data, cb);
+            }
+            isProcessing = false;
+        },
+        length: function () {
+            return q._tasks.length;
+        },
+        running: function () {
+            return numRunning;
+        },
+        workersList: function () {
+            return workersList;
+        },
+        idle: function() {
+            return q._tasks.length + numRunning === 0;
+        },
+        pause: function () {
+            q.paused = true;
+        },
+        resume: function () {
+            if (q.paused === false) { return; }
+            q.paused = false;
+            setImmediate$1(q.process);
+        }
+    };
+    return q;
+}
+
+/**
+ * A cargo of tasks for the worker function to complete. Cargo inherits all of
+ * the same methods and event callbacks as [`queue`]{@link module:ControlFlow.queue}.
+ * @typedef {Object} CargoObject
+ * @memberOf module:ControlFlow
+ * @property {Function} length - A function returning the number of items
+ * waiting to be processed. Invoke like `cargo.length()`.
+ * @property {number} payload - An `integer` for determining how many tasks
+ * should be process per round. This property can be changed after a `cargo` is
+ * created to alter the payload on-the-fly.
+ * @property {Function} push - Adds `task` to the `queue`. The callback is
+ * called once the `worker` has finished processing the task. Instead of a
+ * single task, an array of `tasks` can be submitted. The respective callback is
+ * used for every task in the list. Invoke like `cargo.push(task, [callback])`.
+ * @property {Function} saturated - A callback that is called when the
+ * `queue.length()` hits the concurrency and further tasks will be queued.
+ * @property {Function} empty - A callback that is called when the last item
+ * from the `queue` is given to a `worker`.
+ * @property {Function} drain - A callback that is called when the last item
+ * from the `queue` has returned from the `worker`.
+ * @property {Function} idle - a function returning false if there are items
+ * waiting or being processed, or true if not. Invoke like `cargo.idle()`.
+ * @property {Function} pause - a function that pauses the processing of tasks
+ * until `resume()` is called. Invoke like `cargo.pause()`.
+ * @property {Function} resume - a function that resumes the processing of
+ * queued tasks when the queue is paused. Invoke like `cargo.resume()`.
+ * @property {Function} kill - a function that removes the `drain` callback and
+ * empties remaining tasks from the queue forcing it to go idle. Invoke like `cargo.kill()`.
+ */
+
+/**
+ * Creates a `cargo` object with the specified payload. Tasks added to the
+ * cargo will be processed altogether (up to the `payload` limit). If the
+ * `worker` is in progress, the task is queued until it becomes available. Once
+ * the `worker` has completed some tasks, each callback of those tasks is
+ * called. Check out [these](https://camo.githubusercontent.com/6bbd36f4cf5b35a0f11a96dcd2e97711ffc2fb37/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313637363837312f36383130382f62626330636662302d356632392d313165322d393734662d3333393763363464633835382e676966) [animations](https://camo.githubusercontent.com/f4810e00e1c5f5f8addbe3e9f49064fd5d102699/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313637363837312f36383130312f38346339323036362d356632392d313165322d383134662d3964336430323431336266642e676966)
+ * for how `cargo` and `queue` work.
+ *
+ * While [`queue`]{@link module:ControlFlow.queue} passes only one task to one of a group of workers
+ * at a time, cargo passes an array of tasks to a single worker, repeating
+ * when the worker is finished.
+ *
+ * @name cargo
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.queue]{@link module:ControlFlow.queue}
+ * @category Control Flow
+ * @param {AsyncFunction} worker - An asynchronous function for processing an array
+ * of queued tasks. Invoked with `(tasks, callback)`.
+ * @param {number} [payload=Infinity] - An optional `integer` for determining
+ * how many tasks should be processed per round; if omitted, the default is
+ * unlimited.
+ * @returns {module:ControlFlow.CargoObject} A cargo object to manage the tasks. Callbacks can
+ * attached as certain properties to listen for specific events during the
+ * lifecycle of the cargo and inner queue.
+ * @example
+ *
+ * // create a cargo object with payload 2
+ * var cargo = async.cargo(function(tasks, callback) {
+ *     for (var i=0; i<tasks.length; i++) {
+ *         console.log('hello ' + tasks[i].name);
+ *     }
+ *     callback();
+ * }, 2);
+ *
+ * // add some items
+ * cargo.push({name: 'foo'}, function(err) {
+ *     console.log('finished processing foo');
+ * });
+ * cargo.push({name: 'bar'}, function(err) {
+ *     console.log('finished processing bar');
+ * });
+ * cargo.push({name: 'baz'}, function(err) {
+ *     console.log('finished processing baz');
+ * });
+ */
+function cargo(worker, payload) {
+    return queue(worker, 1, payload);
+}
+
+/**
+ * The same as [`eachOf`]{@link module:Collections.eachOf} but runs only a single async operation at a time.
+ *
+ * @name eachOfSeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.eachOf]{@link module:Collections.eachOf}
+ * @alias forEachOfSeries
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async function to apply to each item in
+ * `coll`.
+ * Invoked with (item, key, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. Invoked with (err).
+ */
+var eachOfSeries = doLimit(eachOfLimit, 1);
+
+/**
+ * Reduces `coll` into a single value using an async `iteratee` to return each
+ * successive step. `memo` is the initial state of the reduction. This function
+ * only operates in series.
+ *
+ * For performance reasons, it may make sense to split a call to this function
+ * into a parallel map, and then use the normal `Array.prototype.reduce` on the
+ * results. This function is for situations where each step in the reduction
+ * needs to be async; if you can get the data before reducing it, then it's
+ * probably a good idea to do so.
+ *
+ * @name reduce
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @alias inject
+ * @alias foldl
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {*} memo - The initial state of the reduction.
+ * @param {AsyncFunction} iteratee - A function applied to each item in the
+ * array to produce the next step in the reduction.
+ * The `iteratee` should complete with the next state of the reduction.
+ * If the iteratee complete with an error, the reduction is stopped and the
+ * main `callback` is immediately called with the error.
+ * Invoked with (memo, item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Result is the reduced value. Invoked with
+ * (err, result).
+ * @example
+ *
+ * async.reduce([1,2,3], 0, function(memo, item, callback) {
+ *     // pointless async:
+ *     process.nextTick(function() {
+ *         callback(null, memo + item)
+ *     });
+ * }, function(err, result) {
+ *     // result is now equal to the last value of memo, which is 6
+ * });
+ */
+function reduce(coll, memo, iteratee, callback) {
+    callback = once(callback || noop);
+    var _iteratee = wrapAsync(iteratee);
+    eachOfSeries(coll, function(x, i, callback) {
+        _iteratee(memo, x, function(err, v) {
+            memo = v;
+            callback(err);
+        });
+    }, function(err) {
+        callback(err, memo);
+    });
+}
+
+/**
+ * Version of the compose function that is more natural to read. Each function
+ * consumes the return value of the previous function. It is the equivalent of
+ * [compose]{@link module:ControlFlow.compose} with the arguments reversed.
+ *
+ * Each function is executed with the `this` binding of the composed function.
+ *
+ * @name seq
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.compose]{@link module:ControlFlow.compose}
+ * @category Control Flow
+ * @param {...AsyncFunction} functions - the asynchronous functions to compose
+ * @returns {Function} a function that composes the `functions` in order
+ * @example
+ *
+ * // Requires lodash (or underscore), express3 and dresende's orm2.
+ * // Part of an app, that fetches cats of the logged user.
+ * // This example uses `seq` function to avoid overnesting and error
+ * // handling clutter.
+ * app.get('/cats', function(request, response) {
+ *     var User = request.models.User;
+ *     async.seq(
+ *         _.bind(User.get, User),  // 'User.get' has signature (id, callback(err, data))
+ *         function(user, fn) {
+ *             user.getCats(fn);      // 'getCats' has signature (callback(err, data))
+ *         }
+ *     )(req.session.user_id, function (err, cats) {
+ *         if (err) {
+ *             console.error(err);
+ *             response.json({ status: 'error', message: err.message });
+ *         } else {
+ *             response.json({ status: 'ok', message: 'Cats found', data: cats });
+ *         }
+ *     });
+ * });
+ */
+function seq(/*...functions*/) {
+    var _functions = arrayMap(arguments, wrapAsync);
+    return function(/*...args*/) {
+        var args = slice(arguments);
+        var that = this;
+
+        var cb = args[args.length - 1];
+        if (typeof cb == 'function') {
+            args.pop();
+        } else {
+            cb = noop;
+        }
+
+        reduce(_functions, args, function(newargs, fn, cb) {
+            fn.apply(that, newargs.concat(function(err/*, ...nextargs*/) {
+                var nextargs = slice(arguments, 1);
+                cb(err, nextargs);
+            }));
+        },
+        function(err, results) {
+            cb.apply(that, [err].concat(results));
+        });
+    };
+}
+
+/**
+ * Creates a function which is a composition of the passed asynchronous
+ * functions. Each function consumes the return value of the function that
+ * follows. Composing functions `f()`, `g()`, and `h()` would produce the result
+ * of `f(g(h()))`, only this version uses callbacks to obtain the return values.
+ *
+ * Each function is executed with the `this` binding of the composed function.
+ *
+ * @name compose
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {...AsyncFunction} functions - the asynchronous functions to compose
+ * @returns {Function} an asynchronous function that is the composed
+ * asynchronous `functions`
+ * @example
+ *
+ * function add1(n, callback) {
+ *     setTimeout(function () {
+ *         callback(null, n + 1);
+ *     }, 10);
+ * }
+ *
+ * function mul3(n, callback) {
+ *     setTimeout(function () {
+ *         callback(null, n * 3);
+ *     }, 10);
+ * }
+ *
+ * var add1mul3 = async.compose(mul3, add1);
+ * add1mul3(4, function (err, result) {
+ *     // result now equals 15
+ * });
+ */
+var compose = function(/*...args*/) {
+    return seq.apply(null, slice(arguments).reverse());
+};
+
+function concat$1(eachfn, arr, fn, callback) {
+    var result = [];
+    eachfn(arr, function (x, index, cb) {
+        fn(x, function (err, y) {
+            result = result.concat(y || []);
+            cb(err);
+        });
+    }, function (err) {
+        callback(err, result);
+    });
+}
+
+/**
+ * Applies `iteratee` to each item in `coll`, concatenating the results. Returns
+ * the concatenated list. The `iteratee`s are called in parallel, and the
+ * results are concatenated as they return. There is no guarantee that the
+ * results array will be returned in the original order of `coll` passed to the
+ * `iteratee` function.
+ *
+ * @name concat
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - A function to apply to each item in `coll`,
+ * which should use an array as its result. Invoked with (item, callback).
+ * @param {Function} [callback(err)] - A callback which is called after all the
+ * `iteratee` functions have finished, or an error occurs. Results is an array
+ * containing the concatenated results of the `iteratee` function. Invoked with
+ * (err, results).
+ * @example
+ *
+ * async.concat(['dir1','dir2','dir3'], fs.readdir, function(err, files) {
+ *     // files is now a list of filenames that exist in the 3 directories
+ * });
+ */
+var concat = doParallel(concat$1);
+
+function doSeries(fn) {
+    return function (obj, iteratee, callback) {
+        return fn(eachOfSeries, obj, wrapAsync(iteratee), callback);
+    };
+}
+
+/**
+ * The same as [`concat`]{@link module:Collections.concat} but runs only a single async operation at a time.
+ *
+ * @name concatSeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.concat]{@link module:Collections.concat}
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - A function to apply to each item in `coll`.
+ * The iteratee should complete with an array an array of results.
+ * Invoked with (item, callback).
+ * @param {Function} [callback(err)] - A callback which is called after all the
+ * `iteratee` functions have finished, or an error occurs. Results is an array
+ * containing the concatenated results of the `iteratee` function. Invoked with
+ * (err, results).
+ */
+var concatSeries = doSeries(concat$1);
+
+/**
+ * Returns a function that when called, calls-back with the values provided.
+ * Useful as the first function in a [`waterfall`]{@link module:ControlFlow.waterfall}, or for plugging values in to
+ * [`auto`]{@link module:ControlFlow.auto}.
+ *
+ * @name constant
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @category Util
+ * @param {...*} arguments... - Any number of arguments to automatically invoke
+ * callback with.
+ * @returns {AsyncFunction} Returns a function that when invoked, automatically
+ * invokes the callback with the previous given arguments.
+ * @example
+ *
+ * async.waterfall([
+ *     async.constant(42),
+ *     function (value, next) {
+ *         // value === 42
+ *     },
+ *     //...
+ * ], callback);
+ *
+ * async.waterfall([
+ *     async.constant(filename, "utf8"),
+ *     fs.readFile,
+ *     function (fileData, next) {
+ *         //...
+ *     }
+ *     //...
+ * ], callback);
+ *
+ * async.auto({
+ *     hostname: async.constant("https://server.net/"),
+ *     port: findFreePort,
+ *     launchServer: ["hostname", "port", function (options, cb) {
+ *         startServer(options, cb);
+ *     }],
+ *     //...
+ * }, callback);
+ */
+var constant = function(/*...values*/) {
+    var values = slice(arguments);
+    var args = [null].concat(values);
+    return function (/*...ignoredArgs, callback*/) {
+        var callback = arguments[arguments.length - 1];
+        return callback.apply(this, args);
+    };
+};
+
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */
+function identity(value) {
+  return value;
+}
+
+function _createTester(check, getResult) {
+    return function(eachfn, arr, iteratee, cb) {
+        cb = cb || noop;
+        var testPassed = false;
+        var testResult;
+        eachfn(arr, function(value, _, callback) {
+            iteratee(value, function(err, result) {
+                if (err) {
+                    callback(err);
+                } else if (check(result) && !testResult) {
+                    testPassed = true;
+                    testResult = getResult(true, value);
+                    callback(null, breakLoop);
+                } else {
+                    callback();
+                }
+            });
+        }, function(err) {
+            if (err) {
+                cb(err);
+            } else {
+                cb(null, testPassed ? testResult : getResult(false));
+            }
+        });
+    };
+}
+
+function _findGetResult(v, x) {
+    return x;
+}
+
+/**
+ * Returns the first value in `coll` that passes an async truth test. The
+ * `iteratee` is applied in parallel, meaning the first iteratee to return
+ * `true` will fire the detect `callback` with that result. That means the
+ * result might not be the first item in the original `coll` (in terms of order)
+ * that passes the test.
+
+ * If order within the original `coll` is important, then look at
+ * [`detectSeries`]{@link module:Collections.detectSeries}.
+ *
+ * @name detect
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @alias find
+ * @category Collections
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - A truth test to apply to each item in `coll`.
+ * The iteratee must complete with a boolean value as its result.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called as soon as any
+ * iteratee returns `true`, or after all the `iteratee` functions have finished.
+ * Result will be the first item in the array that passes the truth test
+ * (iteratee) or the value `undefined` if none passed. Invoked with
+ * (err, result).
+ * @example
+ *
+ * async.detect(['file1','file2','file3'], function(filePath, callback) {
+ *     fs.access(filePath, function(err) {
+ *         callback(null, !err)
+ *     });
+ * }, function(err, result) {
+ *     // result now equals the first file in the list that exists
+ * });
+ */
+var detect = doParallel(_createTester(identity, _findGetResult));
+
+/**
+ * The same as [`detect`]{@link module:Collections.detect} but runs a maximum of `limit` async operations at a
+ * time.
+ *
+ * @name detectLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.detect]{@link module:Collections.detect}
+ * @alias findLimit
+ * @category Collections
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - A truth test to apply to each item in `coll`.
+ * The iteratee must complete with a boolean value as its result.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called as soon as any
+ * iteratee returns `true`, or after all the `iteratee` functions have finished.
+ * Result will be the first item in the array that passes the truth test
+ * (iteratee) or the value `undefined` if none passed. Invoked with
+ * (err, result).
+ */
+var detectLimit = doParallelLimit(_createTester(identity, _findGetResult));
+
+/**
+ * The same as [`detect`]{@link module:Collections.detect} but runs only a single async operation at a time.
+ *
+ * @name detectSeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.detect]{@link module:Collections.detect}
+ * @alias findSeries
+ * @category Collections
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - A truth test to apply to each item in `coll`.
+ * The iteratee must complete with a boolean value as its result.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called as soon as any
+ * iteratee returns `true`, or after all the `iteratee` functions have finished.
+ * Result will be the first item in the array that passes the truth test
+ * (iteratee) or the value `undefined` if none passed. Invoked with
+ * (err, result).
+ */
+var detectSeries = doLimit(detectLimit, 1);
+
+function consoleFunc(name) {
+    return function (fn/*, ...args*/) {
+        var args = slice(arguments, 1);
+        args.push(function (err/*, ...args*/) {
+            var args = slice(arguments, 1);
+            if (typeof console === 'object') {
+                if (err) {
+                    if (console.error) {
+                        console.error(err);
+                    }
+                } else if (console[name]) {
+                    arrayEach(args, function (x) {
+                        console[name](x);
+                    });
+                }
+            }
+        });
+        wrapAsync(fn).apply(null, args);
+    };
+}
+
+/**
+ * Logs the result of an [`async` function]{@link AsyncFunction} to the
+ * `console` using `console.dir` to display the properties of the resulting object.
+ * Only works in Node.js or in browsers that support `console.dir` and
+ * `console.error` (such as FF and Chrome).
+ * If multiple arguments are returned from the async function,
+ * `console.dir` is called on each argument in order.
+ *
+ * @name dir
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @category Util
+ * @param {AsyncFunction} function - The function you want to eventually apply
+ * all arguments to.
+ * @param {...*} arguments... - Any number of arguments to apply to the function.
+ * @example
+ *
+ * // in a module
+ * var hello = function(name, callback) {
+ *     setTimeout(function() {
+ *         callback(null, {hello: name});
+ *     }, 1000);
+ * };
+ *
+ * // in the node repl
+ * node> async.dir(hello, 'world');
+ * {hello: 'world'}
+ */
+var dir = consoleFunc('dir');
+
+/**
+ * The post-check version of [`during`]{@link module:ControlFlow.during}. To reflect the difference in
+ * the order of operations, the arguments `test` and `fn` are switched.
+ *
+ * Also a version of [`doWhilst`]{@link module:ControlFlow.doWhilst} with asynchronous `test` function.
+ * @name doDuring
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.during]{@link module:ControlFlow.during}
+ * @category Control Flow
+ * @param {AsyncFunction} fn - An async function which is called each time
+ * `test` passes. Invoked with (callback).
+ * @param {AsyncFunction} test - asynchronous truth test to perform before each
+ * execution of `fn`. Invoked with (...args, callback), where `...args` are the
+ * non-error args from the previous callback of `fn`.
+ * @param {Function} [callback] - A callback which is called after the test
+ * function has failed and repeated execution of `fn` has stopped. `callback`
+ * will be passed an error if one occurred, otherwise `null`.
+ */
+function doDuring(fn, test, callback) {
+    callback = onlyOnce(callback || noop);
+    var _fn = wrapAsync(fn);
+    var _test = wrapAsync(test);
+
+    function next(err/*, ...args*/) {
+        if (err) return callback(err);
+        var args = slice(arguments, 1);
+        args.push(check);
+        _test.apply(this, args);
+    }
+
+    function check(err, truth) {
+        if (err) return callback(err);
+        if (!truth) return callback(null);
+        _fn(next);
+    }
+
+    check(null, true);
+
+}
+
+/**
+ * The post-check version of [`whilst`]{@link module:ControlFlow.whilst}. To reflect the difference in
+ * the order of operations, the arguments `test` and `iteratee` are switched.
+ *
+ * `doWhilst` is to `whilst` as `do while` is to `while` in plain JavaScript.
+ *
+ * @name doWhilst
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.whilst]{@link module:ControlFlow.whilst}
+ * @category Control Flow
+ * @param {AsyncFunction} iteratee - A function which is called each time `test`
+ * passes. Invoked with (callback).
+ * @param {Function} test - synchronous truth test to perform after each
+ * execution of `iteratee`. Invoked with any non-error callback results of
+ * `iteratee`.
+ * @param {Function} [callback] - A callback which is called after the test
+ * function has failed and repeated execution of `iteratee` has stopped.
+ * `callback` will be passed an error and any arguments passed to the final
+ * `iteratee`'s callback. Invoked with (err, [results]);
+ */
+function doWhilst(iteratee, test, callback) {
+    callback = onlyOnce(callback || noop);
+    var _iteratee = wrapAsync(iteratee);
+    var next = function(err/*, ...args*/) {
+        if (err) return callback(err);
+        var args = slice(arguments, 1);
+        if (test.apply(this, args)) return _iteratee(next);
+        callback.apply(null, [null].concat(args));
+    };
+    _iteratee(next);
+}
+
+/**
+ * Like ['doWhilst']{@link module:ControlFlow.doWhilst}, except the `test` is inverted. Note the
+ * argument ordering differs from `until`.
+ *
+ * @name doUntil
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.doWhilst]{@link module:ControlFlow.doWhilst}
+ * @category Control Flow
+ * @param {AsyncFunction} iteratee - An async function which is called each time
+ * `test` fails. Invoked with (callback).
+ * @param {Function} test - synchronous truth test to perform after each
+ * execution of `iteratee`. Invoked with any non-error callback results of
+ * `iteratee`.
+ * @param {Function} [callback] - A callback which is called after the test
+ * function has passed and repeated execution of `iteratee` has stopped. `callback`
+ * will be passed an error and any arguments passed to the final `iteratee`'s
+ * callback. Invoked with (err, [results]);
+ */
+function doUntil(iteratee, test, callback) {
+    doWhilst(iteratee, function() {
+        return !test.apply(this, arguments);
+    }, callback);
+}
+
+/**
+ * Like [`whilst`]{@link module:ControlFlow.whilst}, except the `test` is an asynchronous function that
+ * is passed a callback in the form of `function (err, truth)`. If error is
+ * passed to `test` or `fn`, the main callback is immediately called with the
+ * value of the error.
+ *
+ * @name during
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.whilst]{@link module:ControlFlow.whilst}
+ * @category Control Flow
+ * @param {AsyncFunction} test - asynchronous truth test to perform before each
+ * execution of `fn`. Invoked with (callback).
+ * @param {AsyncFunction} fn - An async function which is called each time
+ * `test` passes. Invoked with (callback).
+ * @param {Function} [callback] - A callback which is called after the test
+ * function has failed and repeated execution of `fn` has stopped. `callback`
+ * will be passed an error, if one occurred, otherwise `null`.
+ * @example
+ *
+ * var count = 0;
+ *
+ * async.during(
+ *     function (callback) {
+ *         return callback(null, count < 5);
+ *     },
+ *     function (callback) {
+ *         count++;
+ *         setTimeout(callback, 1000);
+ *     },
+ *     function (err) {
+ *         // 5 seconds have passed
+ *     }
+ * );
+ */
+function during(test, fn, callback) {
+    callback = onlyOnce(callback || noop);
+    var _fn = wrapAsync(fn);
+    var _test = wrapAsync(test);
+
+    function next(err) {
+        if (err) return callback(err);
+        _test(check);
+    }
+
+    function check(err, truth) {
+        if (err) return callback(err);
+        if (!truth) return callback(null);
+        _fn(next);
+    }
+
+    _test(check);
+}
+
+function _withoutIndex(iteratee) {
+    return function (value, index, callback) {
+        return iteratee(value, callback);
+    };
+}
+
+/**
+ * Applies the function `iteratee` to each item in `coll`, in parallel.
+ * The `iteratee` is called with an item from the list, and a callback for when
+ * it has finished. If the `iteratee` passes an error to its `callback`, the
+ * main `callback` (for the `each` function) is immediately called with the
+ * error.
+ *
+ * Note, that since this function applies `iteratee` to each item in parallel,
+ * there is no guarantee that the iteratee functions will complete in order.
+ *
+ * @name each
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @alias forEach
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async function to apply to
+ * each item in `coll`. Invoked with (item, callback).
+ * The array index is not passed to the iteratee.
+ * If you need the index, use `eachOf`.
+ * @param {Function} [callback] - A callback which is called when all
+ * `iteratee` functions have finished, or an error occurs. Invoked with (err).
+ * @example
+ *
+ * // assuming openFiles is an array of file names and saveFile is a function
+ * // to save the modified contents of that file:
+ *
+ * async.each(openFiles, saveFile, function(err){
+ *   // if any of the saves produced an error, err would equal that error
+ * });
+ *
+ * // assuming openFiles is an array of file names
+ * async.each(openFiles, function(file, callback) {
+ *
+ *     // Perform operation on file here.
+ *     console.log('Processing file ' + file);
+ *
+ *     if( file.length > 32 ) {
+ *       console.log('This file name is too long');
+ *       callback('File name too long');
+ *     } else {
+ *       // Do work to process file here
+ *       console.log('File processed');
+ *       callback();
+ *     }
+ * }, function(err) {
+ *     // if any of the file processing produced an error, err would equal that error
+ *     if( err ) {
+ *       // One of the iterations produced an error.
+ *       // All processing will now stop.
+ *       console.log('A file failed to process');
+ *     } else {
+ *       console.log('All files have been processed successfully');
+ *     }
+ * });
+ */
+function eachLimit(coll, iteratee, callback) {
+    eachOf(coll, _withoutIndex(wrapAsync(iteratee)), callback);
+}
+
+/**
+ * The same as [`each`]{@link module:Collections.each} but runs a maximum of `limit` async operations at a time.
+ *
+ * @name eachLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.each]{@link module:Collections.each}
+ * @alias forEachLimit
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - An async function to apply to each item in
+ * `coll`.
+ * The array index is not passed to the iteratee.
+ * If you need the index, use `eachOfLimit`.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called when all
+ * `iteratee` functions have finished, or an error occurs. Invoked with (err).
+ */
+function eachLimit$1(coll, limit, iteratee, callback) {
+    _eachOfLimit(limit)(coll, _withoutIndex(wrapAsync(iteratee)), callback);
+}
+
+/**
+ * The same as [`each`]{@link module:Collections.each} but runs only a single async operation at a time.
+ *
+ * @name eachSeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.each]{@link module:Collections.each}
+ * @alias forEachSeries
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async function to apply to each
+ * item in `coll`.
+ * The array index is not passed to the iteratee.
+ * If you need the index, use `eachOfSeries`.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called when all
+ * `iteratee` functions have finished, or an error occurs. Invoked with (err).
+ */
+var eachSeries = doLimit(eachLimit$1, 1);
+
+/**
+ * Wrap an async function and ensure it calls its callback on a later tick of
+ * the event loop.  If the function already calls its callback on a next tick,
+ * no extra deferral is added. This is useful for preventing stack overflows
+ * (`RangeError: Maximum call stack size exceeded`) and generally keeping
+ * [Zalgo](http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony)
+ * contained. ES2017 `async` functions are returned as-is -- they are immune
+ * to Zalgo's corrupting influences, as they always resolve on a later tick.
+ *
+ * @name ensureAsync
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @category Util
+ * @param {AsyncFunction} fn - an async function, one that expects a node-style
+ * callback as its last argument.
+ * @returns {AsyncFunction} Returns a wrapped function with the exact same call
+ * signature as the function passed in.
+ * @example
+ *
+ * function sometimesAsync(arg, callback) {
+ *     if (cache[arg]) {
+ *         return callback(null, cache[arg]); // this would be synchronous!!
+ *     } else {
+ *         doSomeIO(arg, callback); // this IO would be asynchronous
+ *     }
+ * }
+ *
+ * // this has a risk of stack overflows if many results are cached in a row
+ * async.mapSeries(args, sometimesAsync, done);
+ *
+ * // this will defer sometimesAsync's callback if necessary,
+ * // preventing stack overflows
+ * async.mapSeries(args, async.ensureAsync(sometimesAsync), done);
+ */
+function ensureAsync(fn) {
+    if (isAsync(fn)) return fn;
+    return initialParams(function (args, callback) {
+        var sync = true;
+        args.push(function () {
+            var innerArgs = arguments;
+            if (sync) {
+                setImmediate$1(function () {
+                    callback.apply(null, innerArgs);
+                });
+            } else {
+                callback.apply(null, innerArgs);
+            }
+        });
+        fn.apply(this, args);
+        sync = false;
+    });
+}
+
+function notId(v) {
+    return !v;
+}
+
+/**
+ * Returns `true` if every element in `coll` satisfies an async test. If any
+ * iteratee call returns `false`, the main `callback` is immediately called.
+ *
+ * @name every
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @alias all
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async truth test to apply to each item
+ * in the collection in parallel.
+ * The iteratee must complete with a boolean result value.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Result will be either `true` or `false`
+ * depending on the values of the async tests. Invoked with (err, result).
+ * @example
+ *
+ * async.every(['file1','file2','file3'], function(filePath, callback) {
+ *     fs.access(filePath, function(err) {
+ *         callback(null, !err)
+ *     });
+ * }, function(err, result) {
+ *     // if result is true then every file exists
+ * });
+ */
+var every = doParallel(_createTester(notId, notId));
+
+/**
+ * The same as [`every`]{@link module:Collections.every} but runs a maximum of `limit` async operations at a time.
+ *
+ * @name everyLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.every]{@link module:Collections.every}
+ * @alias allLimit
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - An async truth test to apply to each item
+ * in the collection in parallel.
+ * The iteratee must complete with a boolean result value.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Result will be either `true` or `false`
+ * depending on the values of the async tests. Invoked with (err, result).
+ */
+var everyLimit = doParallelLimit(_createTester(notId, notId));
+
+/**
+ * The same as [`every`]{@link module:Collections.every} but runs only a single async operation at a time.
+ *
+ * @name everySeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.every]{@link module:Collections.every}
+ * @alias allSeries
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async truth test to apply to each item
+ * in the collection in series.
+ * The iteratee must complete with a boolean result value.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Result will be either `true` or `false`
+ * depending on the values of the async tests. Invoked with (err, result).
+ */
+var everySeries = doLimit(everyLimit, 1);
+
+/**
+ * The base implementation of `_.property` without support for deep paths.
+ *
+ * @private
+ * @param {string} key The key of the property to get.
+ * @returns {Function} Returns the new accessor function.
+ */
+function baseProperty(key) {
+  return function(object) {
+    return object == null ? undefined : object[key];
+  };
+}
+
+function filterArray(eachfn, arr, iteratee, callback) {
+    var truthValues = new Array(arr.length);
+    eachfn(arr, function (x, index, callback) {
+        iteratee(x, function (err, v) {
+            truthValues[index] = !!v;
+            callback(err);
+        });
+    }, function (err) {
+        if (err) return callback(err);
+        var results = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (truthValues[i]) results.push(arr[i]);
+        }
+        callback(null, results);
+    });
+}
+
+function filterGeneric(eachfn, coll, iteratee, callback) {
+    var results = [];
+    eachfn(coll, function (x, index, callback) {
+        iteratee(x, function (err, v) {
+            if (err) {
+                callback(err);
+            } else {
+                if (v) {
+                    results.push({index: index, value: x});
+                }
+                callback();
+            }
+        });
+    }, function (err) {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null, arrayMap(results.sort(function (a, b) {
+                return a.index - b.index;
+            }), baseProperty('value')));
+        }
+    });
+}
+
+function _filter(eachfn, coll, iteratee, callback) {
+    var filter = isArrayLike(coll) ? filterArray : filterGeneric;
+    filter(eachfn, coll, wrapAsync(iteratee), callback || noop);
+}
+
+/**
+ * Returns a new array of all the values in `coll` which pass an async truth
+ * test. This operation is performed in parallel, but the results array will be
+ * in the same order as the original.
+ *
+ * @name filter
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @alias select
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {Function} iteratee - A truth test to apply to each item in `coll`.
+ * The `iteratee` is passed a `callback(err, truthValue)`, which must be called
+ * with a boolean argument once it has completed. Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Invoked with (err, results).
+ * @example
+ *
+ * async.filter(['file1','file2','file3'], function(filePath, callback) {
+ *     fs.access(filePath, function(err) {
+ *         callback(null, !err)
+ *     });
+ * }, function(err, results) {
+ *     // results now equals an array of the existing files
+ * });
+ */
+var filter = doParallel(_filter);
+
+/**
+ * The same as [`filter`]{@link module:Collections.filter} but runs a maximum of `limit` async operations at a
+ * time.
+ *
+ * @name filterLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.filter]{@link module:Collections.filter}
+ * @alias selectLimit
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {Function} iteratee - A truth test to apply to each item in `coll`.
+ * The `iteratee` is passed a `callback(err, truthValue)`, which must be called
+ * with a boolean argument once it has completed. Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Invoked with (err, results).
+ */
+var filterLimit = doParallelLimit(_filter);
+
+/**
+ * The same as [`filter`]{@link module:Collections.filter} but runs only a single async operation at a time.
+ *
+ * @name filterSeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.filter]{@link module:Collections.filter}
+ * @alias selectSeries
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {Function} iteratee - A truth test to apply to each item in `coll`.
+ * The `iteratee` is passed a `callback(err, truthValue)`, which must be called
+ * with a boolean argument once it has completed. Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Invoked with (err, results)
+ */
+var filterSeries = doLimit(filterLimit, 1);
+
+/**
+ * Calls the asynchronous function `fn` with a callback parameter that allows it
+ * to call itself again, in series, indefinitely.
+
+ * If an error is passed to the callback then `errback` is called with the
+ * error, and execution stops, otherwise it will never be called.
+ *
+ * @name forever
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {AsyncFunction} fn - an async function to call repeatedly.
+ * Invoked with (next).
+ * @param {Function} [errback] - when `fn` passes an error to it's callback,
+ * this function will be called, and execution stops. Invoked with (err).
+ * @example
+ *
+ * async.forever(
+ *     function(next) {
+ *         // next is suitable for passing to things that need a callback(err [, whatever]);
+ *         // it will result in this function being called again.
+ *     },
+ *     function(err) {
+ *         // if next is called with a value in its first parameter, it will appear
+ *         // in here as 'err', and execution will stop.
+ *     }
+ * );
+ */
+function forever(fn, errback) {
+    var done = onlyOnce(errback || noop);
+    var task = wrapAsync(ensureAsync(fn));
+
+    function next(err) {
+        if (err) return done(err);
+        task(next);
+    }
+    next();
+}
+
+/**
+ * The same as [`groupBy`]{@link module:Collections.groupBy} but runs a maximum of `limit` async operations at a time.
+ *
+ * @name groupByLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.groupBy]{@link module:Collections.groupBy}
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - An async function to apply to each item in
+ * `coll`.
+ * The iteratee should complete with a `key` to group the value under.
+ * Invoked with (value, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. Result is an `Object` whoses
+ * properties are arrays of values which returned the corresponding key.
+ */
+var groupByLimit = function(coll, limit, iteratee, callback) {
+    callback = callback || noop;
+    var _iteratee = wrapAsync(iteratee);
+    mapLimit(coll, limit, function(val, callback) {
+        _iteratee(val, function(err, key) {
+            if (err) return callback(err);
+            return callback(null, {key: key, val: val});
+        });
+    }, function(err, mapResults) {
+        var result = {};
+        // from MDN, handle object having an `hasOwnProperty` prop
+        var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+        for (var i = 0; i < mapResults.length; i++) {
+            if (mapResults[i]) {
+                var key = mapResults[i].key;
+                var val = mapResults[i].val;
+
+                if (hasOwnProperty.call(result, key)) {
+                    result[key].push(val);
+                } else {
+                    result[key] = [val];
+                }
+            }
+        }
+
+        return callback(err, result);
+    });
+};
+
+/**
+ * Returns a new object, where each value corresponds to an array of items, from
+ * `coll`, that returned the corresponding key. That is, the keys of the object
+ * correspond to the values passed to the `iteratee` callback.
+ *
+ * Note: Since this function applies the `iteratee` to each item in parallel,
+ * there is no guarantee that the `iteratee` functions will complete in order.
+ * However, the values for each key in the `result` will be in the same order as
+ * the original `coll`. For Objects, the values will roughly be in the order of
+ * the original Objects' keys (but this can vary across JavaScript engines).
+ *
+ * @name groupBy
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async function to apply to each item in
+ * `coll`.
+ * The iteratee should complete with a `key` to group the value under.
+ * Invoked with (value, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. Result is an `Object` whoses
+ * properties are arrays of values which returned the corresponding key.
+ * @example
+ *
+ * async.groupBy(['userId1', 'userId2', 'userId3'], function(userId, callback) {
+ *     db.findById(userId, function(err, user) {
+ *         if (err) return callback(err);
+ *         return callback(null, user.age);
+ *     });
+ * }, function(err, result) {
+ *     // result is object containing the userIds grouped by age
+ *     // e.g. { 30: ['userId1', 'userId3'], 42: ['userId2']};
+ * });
+ */
+var groupBy = doLimit(groupByLimit, Infinity);
+
+/**
+ * The same as [`groupBy`]{@link module:Collections.groupBy} but runs only a single async operation at a time.
+ *
+ * @name groupBySeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.groupBy]{@link module:Collections.groupBy}
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - An async function to apply to each item in
+ * `coll`.
+ * The iteratee should complete with a `key` to group the value under.
+ * Invoked with (value, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. Result is an `Object` whoses
+ * properties are arrays of values which returned the corresponding key.
+ */
+var groupBySeries = doLimit(groupByLimit, 1);
+
+/**
+ * Logs the result of an `async` function to the `console`. Only works in
+ * Node.js or in browsers that support `console.log` and `console.error` (such
+ * as FF and Chrome). If multiple arguments are returned from the async
+ * function, `console.log` is called on each argument in order.
+ *
+ * @name log
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @category Util
+ * @param {AsyncFunction} function - The function you want to eventually apply
+ * all arguments to.
+ * @param {...*} arguments... - Any number of arguments to apply to the function.
+ * @example
+ *
+ * // in a module
+ * var hello = function(name, callback) {
+ *     setTimeout(function() {
+ *         callback(null, 'hello ' + name);
+ *     }, 1000);
+ * };
+ *
+ * // in the node repl
+ * node> async.log(hello, 'world');
+ * 'hello world'
+ */
+var log = consoleFunc('log');
+
+/**
+ * The same as [`mapValues`]{@link module:Collections.mapValues} but runs a maximum of `limit` async operations at a
+ * time.
+ *
+ * @name mapValuesLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.mapValues]{@link module:Collections.mapValues}
+ * @category Collection
+ * @param {Object} obj - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - A function to apply to each value and key
+ * in `coll`.
+ * The iteratee should complete with the transformed value as its result.
+ * Invoked with (value, key, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. `result` is a new object consisting
+ * of each key from `obj`, with each transformed value on the right-hand side.
+ * Invoked with (err, result).
+ */
+function mapValuesLimit(obj, limit, iteratee, callback) {
+    callback = once(callback || noop);
+    var newObj = {};
+    var _iteratee = wrapAsync(iteratee);
+    eachOfLimit(obj, limit, function(val, key, next) {
+        _iteratee(val, key, function (err, result) {
+            if (err) return next(err);
+            newObj[key] = result;
+            next();
+        });
+    }, function (err) {
+        callback(err, newObj);
+    });
+}
+
+/**
+ * A relative of [`map`]{@link module:Collections.map}, designed for use with objects.
+ *
+ * Produces a new Object by mapping each value of `obj` through the `iteratee`
+ * function. The `iteratee` is called each `value` and `key` from `obj` and a
+ * callback for when it has finished processing. Each of these callbacks takes
+ * two arguments: an `error`, and the transformed item from `obj`. If `iteratee`
+ * passes an error to its callback, the main `callback` (for the `mapValues`
+ * function) is immediately called with the error.
+ *
+ * Note, the order of the keys in the result is not guaranteed.  The keys will
+ * be roughly in the order they complete, (but this is very engine-specific)
+ *
+ * @name mapValues
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @category Collection
+ * @param {Object} obj - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - A function to apply to each value and key
+ * in `coll`.
+ * The iteratee should complete with the transformed value as its result.
+ * Invoked with (value, key, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. `result` is a new object consisting
+ * of each key from `obj`, with each transformed value on the right-hand side.
+ * Invoked with (err, result).
+ * @example
+ *
+ * async.mapValues({
+ *     f1: 'file1',
+ *     f2: 'file2',
+ *     f3: 'file3'
+ * }, function (file, key, callback) {
+ *   fs.stat(file, callback);
+ * }, function(err, result) {
+ *     // result is now a map of stats for each file, e.g.
+ *     // {
+ *     //     f1: [stats for file1],
+ *     //     f2: [stats for file2],
+ *     //     f3: [stats for file3]
+ *     // }
+ * });
+ */
+
+var mapValues = doLimit(mapValuesLimit, Infinity);
+
+/**
+ * The same as [`mapValues`]{@link module:Collections.mapValues} but runs only a single async operation at a time.
+ *
+ * @name mapValuesSeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.mapValues]{@link module:Collections.mapValues}
+ * @category Collection
+ * @param {Object} obj - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - A function to apply to each value and key
+ * in `coll`.
+ * The iteratee should complete with the transformed value as its result.
+ * Invoked with (value, key, callback).
+ * @param {Function} [callback] - A callback which is called when all `iteratee`
+ * functions have finished, or an error occurs. `result` is a new object consisting
+ * of each key from `obj`, with each transformed value on the right-hand side.
+ * Invoked with (err, result).
+ */
+var mapValuesSeries = doLimit(mapValuesLimit, 1);
+
+function has(obj, key) {
+    return key in obj;
+}
+
+/**
+ * Caches the results of an async function. When creating a hash to store
+ * function results against, the callback is omitted from the hash and an
+ * optional hash function can be used.
+ *
+ * If no hash function is specified, the first argument is used as a hash key,
+ * which may work reasonably if it is a string or a data type that converts to a
+ * distinct string. Note that objects and arrays will not behave reasonably.
+ * Neither will cases where the other arguments are significant. In such cases,
+ * specify your own hash function.
+ *
+ * The cache of results is exposed as the `memo` property of the function
+ * returned by `memoize`.
+ *
+ * @name memoize
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @category Util
+ * @param {AsyncFunction} fn - The async function to proxy and cache results from.
+ * @param {Function} hasher - An optional function for generating a custom hash
+ * for storing results. It has all the arguments applied to it apart from the
+ * callback, and must be synchronous.
+ * @returns {AsyncFunction} a memoized version of `fn`
+ * @example
+ *
+ * var slow_fn = function(name, callback) {
+ *     // do something
+ *     callback(null, result);
+ * };
+ * var fn = async.memoize(slow_fn);
+ *
+ * // fn can now be used as if it were slow_fn
+ * fn('some name', function() {
+ *     // callback
+ * });
+ */
+function memoize(fn, hasher) {
+    var memo = Object.create(null);
+    var queues = Object.create(null);
+    hasher = hasher || identity;
+    var _fn = wrapAsync(fn);
+    var memoized = initialParams(function memoized(args, callback) {
+        var key = hasher.apply(null, args);
+        if (has(memo, key)) {
+            setImmediate$1(function() {
+                callback.apply(null, memo[key]);
+            });
+        } else if (has(queues, key)) {
+            queues[key].push(callback);
+        } else {
+            queues[key] = [callback];
+            _fn.apply(null, args.concat(function(/*args*/) {
+                var args = slice(arguments);
+                memo[key] = args;
+                var q = queues[key];
+                delete queues[key];
+                for (var i = 0, l = q.length; i < l; i++) {
+                    q[i].apply(null, args);
+                }
+            }));
+        }
+    });
+    memoized.memo = memo;
+    memoized.unmemoized = fn;
+    return memoized;
+}
+
+/**
+ * Calls `callback` on a later loop around the event loop. In Node.js this just
+ * calls `setImmediate`.  In the browser it will use `setImmediate` if
+ * available, otherwise `setTimeout(callback, 0)`, which means other higher
+ * priority events may precede the execution of `callback`.
+ *
+ * This is used internally for browser-compatibility purposes.
+ *
+ * @name nextTick
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @alias setImmediate
+ * @category Util
+ * @param {Function} callback - The function to call on a later loop around
+ * the event loop. Invoked with (args...).
+ * @param {...*} args... - any number of additional arguments to pass to the
+ * callback on the next tick.
+ * @example
+ *
+ * var call_order = [];
+ * async.nextTick(function() {
+ *     call_order.push('two');
+ *     // call_order now equals ['one','two']
+ * });
+ * call_order.push('one');
+ *
+ * async.setImmediate(function (a, b, c) {
+ *     // a, b, and c equal 1, 2, and 3
+ * }, 1, 2, 3);
+ */
+var _defer$1;
+
+if (hasNextTick) {
+    _defer$1 = process.nextTick;
+} else if (hasSetImmediate) {
+    _defer$1 = setImmediate;
+} else {
+    _defer$1 = fallback;
+}
+
+var nextTick = wrap(_defer$1);
+
+function _parallel(eachfn, tasks, callback) {
+    callback = callback || noop;
+    var results = isArrayLike(tasks) ? [] : {};
+
+    eachfn(tasks, function (task, key, callback) {
+        wrapAsync(task)(function (err, result) {
+            if (arguments.length > 2) {
+                result = slice(arguments, 1);
+            }
+            results[key] = result;
+            callback(err);
+        });
+    }, function (err) {
+        callback(err, results);
+    });
+}
+
+/**
+ * Run the `tasks` collection of functions in parallel, without waiting until
+ * the previous function has completed. If any of the functions pass an error to
+ * its callback, the main `callback` is immediately called with the value of the
+ * error. Once the `tasks` have completed, the results are passed to the final
+ * `callback` as an array.
+ *
+ * **Note:** `parallel` is about kicking-off I/O tasks in parallel, not about
+ * parallel execution of code.  If your tasks do not use any timers or perform
+ * any I/O, they will actually be executed in series.  Any synchronous setup
+ * sections for each task will happen one after the other.  JavaScript remains
+ * single-threaded.
+ *
+ * **Hint:** Use [`reflect`]{@link module:Utils.reflect} to continue the
+ * execution of other tasks when a task fails.
+ *
+ * It is also possible to use an object instead of an array. Each property will
+ * be run as a function and the results will be passed to the final `callback`
+ * as an object instead of an array. This can be a more readable way of handling
+ * results from {@link async.parallel}.
+ *
+ * @name parallel
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {Array|Iterable|Object} tasks - A collection of
+ * [async functions]{@link AsyncFunction} to run.
+ * Each async function can complete with any number of optional `result` values.
+ * @param {Function} [callback] - An optional callback to run once all the
+ * functions have completed successfully. This function gets a results array
+ * (or object) containing all the result arguments passed to the task callbacks.
+ * Invoked with (err, results).
+ *
+ * @example
+ * async.parallel([
+ *     function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 'one');
+ *         }, 200);
+ *     },
+ *     function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 'two');
+ *         }, 100);
+ *     }
+ * ],
+ * // optional callback
+ * function(err, results) {
+ *     // the results array will equal ['one','two'] even though
+ *     // the second function had a shorter timeout.
+ * });
+ *
+ * // an example using an object instead of an array
+ * async.parallel({
+ *     one: function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 1);
+ *         }, 200);
+ *     },
+ *     two: function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 2);
+ *         }, 100);
+ *     }
+ * }, function(err, results) {
+ *     // results is now equals to: {one: 1, two: 2}
+ * });
+ */
+function parallelLimit(tasks, callback) {
+    _parallel(eachOf, tasks, callback);
+}
+
+/**
+ * The same as [`parallel`]{@link module:ControlFlow.parallel} but runs a maximum of `limit` async operations at a
+ * time.
+ *
+ * @name parallelLimit
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.parallel]{@link module:ControlFlow.parallel}
+ * @category Control Flow
+ * @param {Array|Iterable|Object} tasks - A collection of
+ * [async functions]{@link AsyncFunction} to run.
+ * Each async function can complete with any number of optional `result` values.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {Function} [callback] - An optional callback to run once all the
+ * functions have completed successfully. This function gets a results array
+ * (or object) containing all the result arguments passed to the task callbacks.
+ * Invoked with (err, results).
+ */
+function parallelLimit$1(tasks, limit, callback) {
+    _parallel(_eachOfLimit(limit), tasks, callback);
+}
+
+/**
+ * A queue of tasks for the worker function to complete.
+ * @typedef {Object} QueueObject
+ * @memberOf module:ControlFlow
+ * @property {Function} length - a function returning the number of items
+ * waiting to be processed. Invoke with `queue.length()`.
+ * @property {boolean} started - a boolean indicating whether or not any
+ * items have been pushed and processed by the queue.
+ * @property {Function} running - a function returning the number of items
+ * currently being processed. Invoke with `queue.running()`.
+ * @property {Function} workersList - a function returning the array of items
+ * currently being processed. Invoke with `queue.workersList()`.
+ * @property {Function} idle - a function returning false if there are items
+ * waiting or being processed, or true if not. Invoke with `queue.idle()`.
+ * @property {number} concurrency - an integer for determining how many `worker`
+ * functions should be run in parallel. This property can be changed after a
+ * `queue` is created to alter the concurrency on-the-fly.
+ * @property {Function} push - add a new task to the `queue`. Calls `callback`
+ * once the `worker` has finished processing the task. Instead of a single task,
+ * a `tasks` array can be submitted. The respective callback is used for every
+ * task in the list. Invoke with `queue.push(task, [callback])`,
+ * @property {Function} unshift - add a new task to the front of the `queue`.
+ * Invoke with `queue.unshift(task, [callback])`.
+ * @property {Function} remove - remove items from the queue that match a test
+ * function.  The test function will be passed an object with a `data` property,
+ * and a `priority` property, if this is a
+ * [priorityQueue]{@link module:ControlFlow.priorityQueue} object.
+ * Invoked with `queue.remove(testFn)`, where `testFn` is of the form
+ * `function ({data, priority}) {}` and returns a Boolean.
+ * @property {Function} saturated - a callback that is called when the number of
+ * running workers hits the `concurrency` limit, and further tasks will be
+ * queued.
+ * @property {Function} unsaturated - a callback that is called when the number
+ * of running workers is less than the `concurrency` & `buffer` limits, and
+ * further tasks will not be queued.
+ * @property {number} buffer - A minimum threshold buffer in order to say that
+ * the `queue` is `unsaturated`.
+ * @property {Function} empty - a callback that is called when the last item
+ * from the `queue` is given to a `worker`.
+ * @property {Function} drain - a callback that is called when the last item
+ * from the `queue` has returned from the `worker`.
+ * @property {Function} error - a callback that is called when a task errors.
+ * Has the signature `function(error, task)`.
+ * @property {boolean} paused - a boolean for determining whether the queue is
+ * in a paused state.
+ * @property {Function} pause - a function that pauses the processing of tasks
+ * until `resume()` is called. Invoke with `queue.pause()`.
+ * @property {Function} resume - a function that resumes the processing of
+ * queued tasks when the queue is paused. Invoke with `queue.resume()`.
+ * @property {Function} kill - a function that removes the `drain` callback and
+ * empties remaining tasks from the queue forcing it to go idle. Invoke with `queue.kill()`.
+ */
+
+/**
+ * Creates a `queue` object with the specified `concurrency`. Tasks added to the
+ * `queue` are processed in parallel (up to the `concurrency` limit). If all
+ * `worker`s are in progress, the task is queued until one becomes available.
+ * Once a `worker` completes a `task`, that `task`'s callback is called.
+ *
+ * @name queue
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {AsyncFunction} worker - An async function for processing a queued task.
+ * If you want to handle errors from an individual task, pass a callback to
+ * `q.push()`. Invoked with (task, callback).
+ * @param {number} [concurrency=1] - An `integer` for determining how many
+ * `worker` functions should be run in parallel.  If omitted, the concurrency
+ * defaults to `1`.  If the concurrency is `0`, an error is thrown.
+ * @returns {module:ControlFlow.QueueObject} A queue object to manage the tasks. Callbacks can
+ * attached as certain properties to listen for specific events during the
+ * lifecycle of the queue.
+ * @example
+ *
+ * // create a queue object with concurrency 2
+ * var q = async.queue(function(task, callback) {
+ *     console.log('hello ' + task.name);
+ *     callback();
+ * }, 2);
+ *
+ * // assign a callback
+ * q.drain = function() {
+ *     console.log('all items have been processed');
+ * };
+ *
+ * // add some items to the queue
+ * q.push({name: 'foo'}, function(err) {
+ *     console.log('finished processing foo');
+ * });
+ * q.push({name: 'bar'}, function (err) {
+ *     console.log('finished processing bar');
+ * });
+ *
+ * // add some items to the queue (batch-wise)
+ * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err) {
+ *     console.log('finished processing item');
+ * });
+ *
+ * // add some items to the front of the queue
+ * q.unshift({name: 'bar'}, function (err) {
+ *     console.log('finished processing bar');
+ * });
+ */
+var queue$1 = function (worker, concurrency) {
+    var _worker = wrapAsync(worker);
+    return queue(function (items, cb) {
+        _worker(items[0], cb);
+    }, concurrency, 1);
+};
+
+/**
+ * The same as [async.queue]{@link module:ControlFlow.queue} only tasks are assigned a priority and
+ * completed in ascending priority order.
+ *
+ * @name priorityQueue
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.queue]{@link module:ControlFlow.queue}
+ * @category Control Flow
+ * @param {AsyncFunction} worker - An async function for processing a queued task.
+ * If you want to handle errors from an individual task, pass a callback to
+ * `q.push()`.
+ * Invoked with (task, callback).
+ * @param {number} concurrency - An `integer` for determining how many `worker`
+ * functions should be run in parallel.  If omitted, the concurrency defaults to
+ * `1`.  If the concurrency is `0`, an error is thrown.
+ * @returns {module:ControlFlow.QueueObject} A priorityQueue object to manage the tasks. There are two
+ * differences between `queue` and `priorityQueue` objects:
+ * * `push(task, priority, [callback])` - `priority` should be a number. If an
+ *   array of `tasks` is given, all tasks will be assigned the same priority.
+ * * The `unshift` method was removed.
+ */
+var priorityQueue = function(worker, concurrency) {
+    // Start with a normal queue
+    var q = queue$1(worker, concurrency);
+
+    // Override push to accept second parameter representing priority
+    q.push = function(data, priority, callback) {
+        if (callback == null) callback = noop;
+        if (typeof callback !== 'function') {
+            throw new Error('task callback must be a function');
+        }
+        q.started = true;
+        if (!isArray(data)) {
+            data = [data];
+        }
+        if (data.length === 0) {
+            // call drain immediately if there are no tasks
+            return setImmediate$1(function() {
+                q.drain();
+            });
+        }
+
+        priority = priority || 0;
+        var nextNode = q._tasks.head;
+        while (nextNode && priority >= nextNode.priority) {
+            nextNode = nextNode.next;
+        }
+
+        for (var i = 0, l = data.length; i < l; i++) {
+            var item = {
+                data: data[i],
+                priority: priority,
+                callback: callback
+            };
+
+            if (nextNode) {
+                q._tasks.insertBefore(nextNode, item);
+            } else {
+                q._tasks.push(item);
+            }
+        }
+        setImmediate$1(q.process);
+    };
+
+    // Remove unshift function
+    delete q.unshift;
+
+    return q;
+};
+
+/**
+ * Runs the `tasks` array of functions in parallel, without waiting until the
+ * previous function has completed. Once any of the `tasks` complete or pass an
+ * error to its callback, the main `callback` is immediately called. It's
+ * equivalent to `Promise.race()`.
+ *
+ * @name race
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {Array} tasks - An array containing [async functions]{@link AsyncFunction}
+ * to run. Each function can complete with an optional `result` value.
+ * @param {Function} callback - A callback to run once any of the functions have
+ * completed. This function gets an error or result from the first function that
+ * completed. Invoked with (err, result).
+ * @returns undefined
+ * @example
+ *
+ * async.race([
+ *     function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 'one');
+ *         }, 200);
+ *     },
+ *     function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 'two');
+ *         }, 100);
+ *     }
+ * ],
+ * // main callback
+ * function(err, result) {
+ *     // the result will be equal to 'two' as it finishes earlier
+ * });
+ */
+function race(tasks, callback) {
+    callback = once(callback || noop);
+    if (!isArray(tasks)) return callback(new TypeError('First argument to race must be an array of functions'));
+    if (!tasks.length) return callback();
+    for (var i = 0, l = tasks.length; i < l; i++) {
+        wrapAsync(tasks[i])(callback);
+    }
+}
+
+/**
+ * Same as [`reduce`]{@link module:Collections.reduce}, only operates on `array` in reverse order.
+ *
+ * @name reduceRight
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.reduce]{@link module:Collections.reduce}
+ * @alias foldr
+ * @category Collection
+ * @param {Array} array - A collection to iterate over.
+ * @param {*} memo - The initial state of the reduction.
+ * @param {AsyncFunction} iteratee - A function applied to each item in the
+ * array to produce the next step in the reduction.
+ * The `iteratee` should complete with the next state of the reduction.
+ * If the iteratee complete with an error, the reduction is stopped and the
+ * main `callback` is immediately called with the error.
+ * Invoked with (memo, item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Result is the reduced value. Invoked with
+ * (err, result).
+ */
+function reduceRight (array, memo, iteratee, callback) {
+    var reversed = slice(array).reverse();
+    reduce(reversed, memo, iteratee, callback);
+}
+
+/**
+ * Wraps the async function in another function that always completes with a
+ * result object, even when it errors.
+ *
+ * The result object has either the property `error` or `value`.
+ *
+ * @name reflect
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @category Util
+ * @param {AsyncFunction} fn - The async function you want to wrap
+ * @returns {Function} - A function that always passes null to it's callback as
+ * the error. The second argument to the callback will be an `object` with
+ * either an `error` or a `value` property.
+ * @example
+ *
+ * async.parallel([
+ *     async.reflect(function(callback) {
+ *         // do some stuff ...
+ *         callback(null, 'one');
+ *     }),
+ *     async.reflect(function(callback) {
+ *         // do some more stuff but error ...
+ *         callback('bad stuff happened');
+ *     }),
+ *     async.reflect(function(callback) {
+ *         // do some more stuff ...
+ *         callback(null, 'two');
+ *     })
+ * ],
+ * // optional callback
+ * function(err, results) {
+ *     // values
+ *     // results[0].value = 'one'
+ *     // results[1].error = 'bad stuff happened'
+ *     // results[2].value = 'two'
+ * });
+ */
+function reflect(fn) {
+    var _fn = wrapAsync(fn);
+    return initialParams(function reflectOn(args, reflectCallback) {
+        args.push(function callback(error, cbArg) {
+            if (error) {
+                reflectCallback(null, { error: error });
+            } else {
+                var value;
+                if (arguments.length <= 2) {
+                    value = cbArg;
+                } else {
+                    value = slice(arguments, 1);
+                }
+                reflectCallback(null, { value: value });
+            }
+        });
+
+        return _fn.apply(this, args);
+    });
+}
+
+function reject$1(eachfn, arr, iteratee, callback) {
+    _filter(eachfn, arr, function(value, cb) {
+        iteratee(value, function(err, v) {
+            cb(err, !v);
+        });
+    }, callback);
+}
+
+/**
+ * The opposite of [`filter`]{@link module:Collections.filter}. Removes values that pass an `async` truth test.
+ *
+ * @name reject
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.filter]{@link module:Collections.filter}
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {Function} iteratee - An async truth test to apply to each item in
+ * `coll`.
+ * The should complete with a boolean value as its `result`.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Invoked with (err, results).
+ * @example
+ *
+ * async.reject(['file1','file2','file3'], function(filePath, callback) {
+ *     fs.access(filePath, function(err) {
+ *         callback(null, !err)
+ *     });
+ * }, function(err, results) {
+ *     // results now equals an array of missing files
+ *     createFiles(results);
+ * });
+ */
+var reject = doParallel(reject$1);
+
+/**
+ * A helper function that wraps an array or an object of functions with `reflect`.
+ *
+ * @name reflectAll
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @see [async.reflect]{@link module:Utils.reflect}
+ * @category Util
+ * @param {Array|Object|Iterable} tasks - The collection of
+ * [async functions]{@link AsyncFunction} to wrap in `async.reflect`.
+ * @returns {Array} Returns an array of async functions, each wrapped in
+ * `async.reflect`
+ * @example
+ *
+ * let tasks = [
+ *     function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 'one');
+ *         }, 200);
+ *     },
+ *     function(callback) {
+ *         // do some more stuff but error ...
+ *         callback(new Error('bad stuff happened'));
+ *     },
+ *     function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 'two');
+ *         }, 100);
+ *     }
+ * ];
+ *
+ * async.parallel(async.reflectAll(tasks),
+ * // optional callback
+ * function(err, results) {
+ *     // values
+ *     // results[0].value = 'one'
+ *     // results[1].error = Error('bad stuff happened')
+ *     // results[2].value = 'two'
+ * });
+ *
+ * // an example using an object instead of an array
+ * let tasks = {
+ *     one: function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 'one');
+ *         }, 200);
+ *     },
+ *     two: function(callback) {
+ *         callback('two');
+ *     },
+ *     three: function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 'three');
+ *         }, 100);
+ *     }
+ * };
+ *
+ * async.parallel(async.reflectAll(tasks),
+ * // optional callback
+ * function(err, results) {
+ *     // values
+ *     // results.one.value = 'one'
+ *     // results.two.error = 'two'
+ *     // results.three.value = 'three'
+ * });
+ */
+function reflectAll(tasks) {
+    var results;
+    if (isArray(tasks)) {
+        results = arrayMap(tasks, reflect);
+    } else {
+        results = {};
+        baseForOwn(tasks, function(task, key) {
+            results[key] = reflect.call(this, task);
+        });
+    }
+    return results;
+}
+
+/**
+ * The same as [`reject`]{@link module:Collections.reject} but runs a maximum of `limit` async operations at a
+ * time.
+ *
+ * @name rejectLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.reject]{@link module:Collections.reject}
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {Function} iteratee - An async truth test to apply to each item in
+ * `coll`.
+ * The should complete with a boolean value as its `result`.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Invoked with (err, results).
+ */
+var rejectLimit = doParallelLimit(reject$1);
+
+/**
+ * The same as [`reject`]{@link module:Collections.reject} but runs only a single async operation at a time.
+ *
+ * @name rejectSeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.reject]{@link module:Collections.reject}
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {Function} iteratee - An async truth test to apply to each item in
+ * `coll`.
+ * The should complete with a boolean value as its `result`.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Invoked with (err, results).
+ */
+var rejectSeries = doLimit(rejectLimit, 1);
+
+/**
+ * Creates a function that returns `value`.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {*} value The value to return from the new function.
+ * @returns {Function} Returns the new constant function.
+ * @example
+ *
+ * var objects = _.times(2, _.constant({ 'a': 1 }));
+ *
+ * console.log(objects);
+ * // => [{ 'a': 1 }, { 'a': 1 }]
+ *
+ * console.log(objects[0] === objects[1]);
+ * // => true
+ */
+function constant$1(value) {
+  return function() {
     return value;
   };
+}
 
-  // Predicate-generating functions. Often useful outside of Underscore.
-  _.constant = function(value) {
-    return function() {
-      return value;
+/**
+ * Attempts to get a successful response from `task` no more than `times` times
+ * before returning an error. If the task is successful, the `callback` will be
+ * passed the result of the successful task. If all attempts fail, the callback
+ * will be passed the error and result (if any) of the final attempt.
+ *
+ * @name retry
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @see [async.retryable]{@link module:ControlFlow.retryable}
+ * @param {Object|number} [opts = {times: 5, interval: 0}| 5] - Can be either an
+ * object with `times` and `interval` or a number.
+ * * `times` - The number of attempts to make before giving up.  The default
+ *   is `5`.
+ * * `interval` - The time to wait between retries, in milliseconds.  The
+ *   default is `0`. The interval may also be specified as a function of the
+ *   retry count (see example).
+ * * `errorFilter` - An optional synchronous function that is invoked on
+ *   erroneous result. If it returns `true` the retry attempts will continue;
+ *   if the function returns `false` the retry flow is aborted with the current
+ *   attempt's error and result being returned to the final callback.
+ *   Invoked with (err).
+ * * If `opts` is a number, the number specifies the number of times to retry,
+ *   with the default interval of `0`.
+ * @param {AsyncFunction} task - An async function to retry.
+ * Invoked with (callback).
+ * @param {Function} [callback] - An optional callback which is called when the
+ * task has succeeded, or after the final failed attempt. It receives the `err`
+ * and `result` arguments of the last attempt at completing the `task`. Invoked
+ * with (err, results).
+ *
+ * @example
+ *
+ * // The `retry` function can be used as a stand-alone control flow by passing
+ * // a callback, as shown below:
+ *
+ * // try calling apiMethod 3 times
+ * async.retry(3, apiMethod, function(err, result) {
+ *     // do something with the result
+ * });
+ *
+ * // try calling apiMethod 3 times, waiting 200 ms between each retry
+ * async.retry({times: 3, interval: 200}, apiMethod, function(err, result) {
+ *     // do something with the result
+ * });
+ *
+ * // try calling apiMethod 10 times with exponential backoff
+ * // (i.e. intervals of 100, 200, 400, 800, 1600, ... milliseconds)
+ * async.retry({
+ *   times: 10,
+ *   interval: function(retryCount) {
+ *     return 50 * Math.pow(2, retryCount);
+ *   }
+ * }, apiMethod, function(err, result) {
+ *     // do something with the result
+ * });
+ *
+ * // try calling apiMethod the default 5 times no delay between each retry
+ * async.retry(apiMethod, function(err, result) {
+ *     // do something with the result
+ * });
+ *
+ * // try calling apiMethod only when error condition satisfies, all other
+ * // errors will abort the retry control flow and return to final callback
+ * async.retry({
+ *   errorFilter: function(err) {
+ *     return err.message === 'Temporary error'; // only retry on a specific error
+ *   }
+ * }, apiMethod, function(err, result) {
+ *     // do something with the result
+ * });
+ *
+ * // It can also be embedded within other control flow functions to retry
+ * // individual methods that are not as reliable, like this:
+ * async.auto({
+ *     users: api.getUsers.bind(api),
+ *     payments: async.retryable(3, api.getPayments.bind(api))
+ * }, function(err, results) {
+ *     // do something with the results
+ * });
+ *
+ */
+function retry(opts, task, callback) {
+    var DEFAULT_TIMES = 5;
+    var DEFAULT_INTERVAL = 0;
+
+    var options = {
+        times: DEFAULT_TIMES,
+        intervalFunc: constant$1(DEFAULT_INTERVAL)
     };
-  };
 
-  _.noop = function(){};
+    function parseTimes(acc, t) {
+        if (typeof t === 'object') {
+            acc.times = +t.times || DEFAULT_TIMES;
 
-  _.property = property;
+            acc.intervalFunc = typeof t.interval === 'function' ?
+                t.interval :
+                constant$1(+t.interval || DEFAULT_INTERVAL);
 
-  // Generates a function for a given object that returns a given property.
-  _.propertyOf = function(obj) {
-    return obj == null ? function(){} : function(key) {
-      return obj[key];
-    };
-  };
-
-  // Returns a predicate for checking whether an object has a given set of
-  // `key:value` pairs.
-  _.matcher = _.matches = function(attrs) {
-    attrs = _.extendOwn({}, attrs);
-    return function(obj) {
-      return _.isMatch(obj, attrs);
-    };
-  };
-
-  // Run a function **n** times.
-  _.times = function(n, iteratee, context) {
-    var accum = Array(Math.max(0, n));
-    iteratee = optimizeCb(iteratee, context, 1);
-    for (var i = 0; i < n; i++) accum[i] = iteratee(i);
-    return accum;
-  };
-
-  // Return a random integer between min and max (inclusive).
-  _.random = function(min, max) {
-    if (max == null) {
-      max = min;
-      min = 0;
-    }
-    return min + Math.floor(Math.random() * (max - min + 1));
-  };
-
-  // A (possibly faster) way to get the current timestamp as an integer.
-  _.now = Date.now || function() {
-    return new Date().getTime();
-  };
-
-   // List of HTML entities for escaping.
-  var escapeMap = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#x27;',
-    '`': '&#x60;'
-  };
-  var unescapeMap = _.invert(escapeMap);
-
-  // Functions for escaping and unescaping strings to/from HTML interpolation.
-  var createEscaper = function(map) {
-    var escaper = function(match) {
-      return map[match];
-    };
-    // Regexes for identifying a key that needs to be escaped
-    var source = '(?:' + _.keys(map).join('|') + ')';
-    var testRegexp = RegExp(source);
-    var replaceRegexp = RegExp(source, 'g');
-    return function(string) {
-      string = string == null ? '' : '' + string;
-      return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;
-    };
-  };
-  _.escape = createEscaper(escapeMap);
-  _.unescape = createEscaper(unescapeMap);
-
-  // If the value of the named `property` is a function then invoke it with the
-  // `object` as context; otherwise, return it.
-  _.result = function(object, property, fallback) {
-    var value = object == null ? void 0 : object[property];
-    if (value === void 0) {
-      value = fallback;
-    }
-    return _.isFunction(value) ? value.call(object) : value;
-  };
-
-  // Generate a unique integer id (unique within the entire client session).
-  // Useful for temporary DOM ids.
-  var idCounter = 0;
-  _.uniqueId = function(prefix) {
-    var id = ++idCounter + '';
-    return prefix ? prefix + id : id;
-  };
-
-  // By default, Underscore uses ERB-style template delimiters, change the
-  // following template settings to use alternative delimiters.
-  _.templateSettings = {
-    evaluate    : /<%([\s\S]+?)%>/g,
-    interpolate : /<%=([\s\S]+?)%>/g,
-    escape      : /<%-([\s\S]+?)%>/g
-  };
-
-  // When customizing `templateSettings`, if you don't want to define an
-  // interpolation, evaluation or escaping regex, we need one that is
-  // guaranteed not to match.
-  var noMatch = /(.)^/;
-
-  // Certain characters need to be escaped so that they can be put into a
-  // string literal.
-  var escapes = {
-    "'":      "'",
-    '\\':     '\\',
-    '\r':     'r',
-    '\n':     'n',
-    '\u2028': 'u2028',
-    '\u2029': 'u2029'
-  };
-
-  var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
-
-  var escapeChar = function(match) {
-    return '\\' + escapes[match];
-  };
-
-  // JavaScript micro-templating, similar to John Resig's implementation.
-  // Underscore templating handles arbitrary delimiters, preserves whitespace,
-  // and correctly escapes quotes within interpolated code.
-  // NB: `oldSettings` only exists for backwards compatibility.
-  _.template = function(text, settings, oldSettings) {
-    if (!settings && oldSettings) settings = oldSettings;
-    settings = _.defaults({}, settings, _.templateSettings);
-
-    // Combine delimiters into one regular expression via alternation.
-    var matcher = RegExp([
-      (settings.escape || noMatch).source,
-      (settings.interpolate || noMatch).source,
-      (settings.evaluate || noMatch).source
-    ].join('|') + '|$', 'g');
-
-    // Compile the template source, escaping string literals appropriately.
-    var index = 0;
-    var source = "__p+='";
-    text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
-      source += text.slice(index, offset).replace(escaper, escapeChar);
-      index = offset + match.length;
-
-      if (escape) {
-        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";
-      } else if (interpolate) {
-        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
-      } else if (evaluate) {
-        source += "';\n" + evaluate + "\n__p+='";
-      }
-
-      // Adobe VMs need the match returned to produce the correct offest.
-      return match;
-    });
-    source += "';\n";
-
-    // If a variable is not specified, place data values in local scope.
-    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
-
-    source = "var __t,__p='',__j=Array.prototype.join," +
-      "print=function(){__p+=__j.call(arguments,'');};\n" +
-      source + 'return __p;\n';
-
-    try {
-      var render = new Function(settings.variable || 'obj', '_', source);
-    } catch (e) {
-      e.source = source;
-      throw e;
+            acc.errorFilter = t.errorFilter;
+        } else if (typeof t === 'number' || typeof t === 'string') {
+            acc.times = +t || DEFAULT_TIMES;
+        } else {
+            throw new Error("Invalid arguments for async.retry");
+        }
     }
 
-    var template = function(data) {
-      return render.call(this, data, _);
-    };
+    if (arguments.length < 3 && typeof opts === 'function') {
+        callback = task || noop;
+        task = opts;
+    } else {
+        parseTimes(options, opts);
+        callback = callback || noop;
+    }
 
-    // Provide the compiled source as a convenience for precompilation.
-    var argument = settings.variable || 'obj';
-    template.source = 'function(' + argument + '){\n' + source + '}';
+    if (typeof task !== 'function') {
+        throw new Error("Invalid arguments for async.retry");
+    }
 
-    return template;
-  };
+    var _task = wrapAsync(task);
 
-  // Add a "chain" function. Start chaining a wrapped Underscore object.
-  _.chain = function(obj) {
-    var instance = _(obj);
-    instance._chain = true;
-    return instance;
-  };
+    var attempt = 1;
+    function retryAttempt() {
+        _task(function(err) {
+            if (err && attempt++ < options.times &&
+                (typeof options.errorFilter != 'function' ||
+                    options.errorFilter(err))) {
+                setTimeout(retryAttempt, options.intervalFunc(attempt));
+            } else {
+                callback.apply(null, arguments);
+            }
+        });
+    }
 
-  // OOP
-  // ---------------
-  // If Underscore is called as a function, it returns a wrapped object that
-  // can be used OO-style. This wrapper holds altered versions of all the
-  // underscore functions. Wrapped objects may be chained.
+    retryAttempt();
+}
 
-  // Helper function to continue chaining intermediate results.
-  var result = function(instance, obj) {
-    return instance._chain ? _(obj).chain() : obj;
-  };
+/**
+ * A close relative of [`retry`]{@link module:ControlFlow.retry}.  This method
+ * wraps a task and makes it retryable, rather than immediately calling it
+ * with retries.
+ *
+ * @name retryable
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.retry]{@link module:ControlFlow.retry}
+ * @category Control Flow
+ * @param {Object|number} [opts = {times: 5, interval: 0}| 5] - optional
+ * options, exactly the same as from `retry`
+ * @param {AsyncFunction} task - the asynchronous function to wrap.
+ * This function will be passed any arguments passed to the returned wrapper.
+ * Invoked with (...args, callback).
+ * @returns {AsyncFunction} The wrapped function, which when invoked, will
+ * retry on an error, based on the parameters specified in `opts`.
+ * This function will accept the same parameters as `task`.
+ * @example
+ *
+ * async.auto({
+ *     dep1: async.retryable(3, getFromFlakyService),
+ *     process: ["dep1", async.retryable(3, function (results, cb) {
+ *         maybeProcessData(results.dep1, cb);
+ *     })]
+ * }, callback);
+ */
+var retryable = function (opts, task) {
+    if (!task) {
+        task = opts;
+        opts = null;
+    }
+    var _task = wrapAsync(task);
+    return initialParams(function (args, callback) {
+        function taskFn(cb) {
+            _task.apply(null, args.concat(cb));
+        }
 
-  // Add your own custom functions to the Underscore object.
-  _.mixin = function(obj) {
-    _.each(_.functions(obj), function(name) {
-      var func = _[name] = obj[name];
-      _.prototype[name] = function() {
-        var args = [this._wrapped];
-        push.apply(args, arguments);
-        return result(this, func.apply(_, args));
-      };
+        if (opts) retry(opts, taskFn, callback);
+        else retry(taskFn, callback);
+
     });
-  };
+};
 
-  // Add all of the Underscore functions to the wrapper object.
-  _.mixin(_);
+/**
+ * Run the functions in the `tasks` collection in series, each one running once
+ * the previous function has completed. If any functions in the series pass an
+ * error to its callback, no more functions are run, and `callback` is
+ * immediately called with the value of the error. Otherwise, `callback`
+ * receives an array of results when `tasks` have completed.
+ *
+ * It is also possible to use an object instead of an array. Each property will
+ * be run as a function, and the results will be passed to the final `callback`
+ * as an object instead of an array. This can be a more readable way of handling
+ *  results from {@link async.series}.
+ *
+ * **Note** that while many implementations preserve the order of object
+ * properties, the [ECMAScript Language Specification](http://www.ecma-international.org/ecma-262/5.1/#sec-8.6)
+ * explicitly states that
+ *
+ * > The mechanics and order of enumerating the properties is not specified.
+ *
+ * So if you rely on the order in which your series of functions are executed,
+ * and want this to work on all platforms, consider using an array.
+ *
+ * @name series
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {Array|Iterable|Object} tasks - A collection containing
+ * [async functions]{@link AsyncFunction} to run in series.
+ * Each function can complete with any number of optional `result` values.
+ * @param {Function} [callback] - An optional callback to run once all the
+ * functions have completed. This function gets a results array (or object)
+ * containing all the result arguments passed to the `task` callbacks. Invoked
+ * with (err, result).
+ * @example
+ * async.series([
+ *     function(callback) {
+ *         // do some stuff ...
+ *         callback(null, 'one');
+ *     },
+ *     function(callback) {
+ *         // do some more stuff ...
+ *         callback(null, 'two');
+ *     }
+ * ],
+ * // optional callback
+ * function(err, results) {
+ *     // results is now equal to ['one', 'two']
+ * });
+ *
+ * async.series({
+ *     one: function(callback) {
+ *         setTimeout(function() {
+ *             callback(null, 1);
+ *         }, 200);
+ *     },
+ *     two: function(callback){
+ *         setTimeout(function() {
+ *             callback(null, 2);
+ *         }, 100);
+ *     }
+ * }, function(err, results) {
+ *     // results is now equal to: {one: 1, two: 2}
+ * });
+ */
+function series(tasks, callback) {
+    _parallel(eachOfSeries, tasks, callback);
+}
 
-  // Add all mutator Array functions to the wrapper.
-  _.each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
-    var method = ArrayProto[name];
-    _.prototype[name] = function() {
-      var obj = this._wrapped;
-      method.apply(obj, arguments);
-      if ((name === 'shift' || name === 'splice') && obj.length === 0) delete obj[0];
-      return result(this, obj);
-    };
-  });
+/**
+ * Returns `true` if at least one element in the `coll` satisfies an async test.
+ * If any iteratee call returns `true`, the main `callback` is immediately
+ * called.
+ *
+ * @name some
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @alias any
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async truth test to apply to each item
+ * in the collections in parallel.
+ * The iteratee should complete with a boolean `result` value.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called as soon as any
+ * iteratee returns `true`, or after all the iteratee functions have finished.
+ * Result will be either `true` or `false` depending on the values of the async
+ * tests. Invoked with (err, result).
+ * @example
+ *
+ * async.some(['file1','file2','file3'], function(filePath, callback) {
+ *     fs.access(filePath, function(err) {
+ *         callback(null, !err)
+ *     });
+ * }, function(err, result) {
+ *     // if result is true then at least one of the files exists
+ * });
+ */
+var some = doParallel(_createTester(Boolean, identity));
 
-  // Add all accessor Array functions to the wrapper.
-  _.each(['concat', 'join', 'slice'], function(name) {
-    var method = ArrayProto[name];
-    _.prototype[name] = function() {
-      return result(this, method.apply(this._wrapped, arguments));
-    };
-  });
+/**
+ * The same as [`some`]{@link module:Collections.some} but runs a maximum of `limit` async operations at a time.
+ *
+ * @name someLimit
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.some]{@link module:Collections.some}
+ * @alias anyLimit
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - An async truth test to apply to each item
+ * in the collections in parallel.
+ * The iteratee should complete with a boolean `result` value.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called as soon as any
+ * iteratee returns `true`, or after all the iteratee functions have finished.
+ * Result will be either `true` or `false` depending on the values of the async
+ * tests. Invoked with (err, result).
+ */
+var someLimit = doParallelLimit(_createTester(Boolean, identity));
 
-  // Extracts the result from a wrapped and chained object.
-  _.prototype.value = function() {
-    return this._wrapped;
-  };
+/**
+ * The same as [`some`]{@link module:Collections.some} but runs only a single async operation at a time.
+ *
+ * @name someSeries
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @see [async.some]{@link module:Collections.some}
+ * @alias anySeries
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async truth test to apply to each item
+ * in the collections in series.
+ * The iteratee should complete with a boolean `result` value.
+ * Invoked with (item, callback).
+ * @param {Function} [callback] - A callback which is called as soon as any
+ * iteratee returns `true`, or after all the iteratee functions have finished.
+ * Result will be either `true` or `false` depending on the values of the async
+ * tests. Invoked with (err, result).
+ */
+var someSeries = doLimit(someLimit, 1);
 
-  // Provide unwrapping proxy for some methods used in engine operations
-  // such as arithmetic and JSON stringification.
-  _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;
-
-  _.prototype.toString = function() {
-    return '' + this._wrapped;
-  };
-
-  // AMD registration happens at the end for compatibility with AMD loaders
-  // that may not enforce next-turn semantics on modules. Even though general
-  // practice for AMD registration is to be anonymous, underscore registers
-  // as a named module because, like jQuery, it is a base library that is
-  // popular enough to be bundled in a third party lib, but not be part of
-  // an AMD load request. Those cases could generate an error when an
-  // anonymous define() is called outside of a loader request.
-  if (typeof define === 'function' && define.amd) {
-    define('underscore', [], function() {
-      return _;
+/**
+ * Sorts a list by the results of running each `coll` value through an async
+ * `iteratee`.
+ *
+ * @name sortBy
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {AsyncFunction} iteratee - An async function to apply to each item in
+ * `coll`.
+ * The iteratee should complete with a value to use as the sort criteria as
+ * its `result`.
+ * Invoked with (item, callback).
+ * @param {Function} callback - A callback which is called after all the
+ * `iteratee` functions have finished, or an error occurs. Results is the items
+ * from the original `coll` sorted by the values returned by the `iteratee`
+ * calls. Invoked with (err, results).
+ * @example
+ *
+ * async.sortBy(['file1','file2','file3'], function(file, callback) {
+ *     fs.stat(file, function(err, stats) {
+ *         callback(err, stats.mtime);
+ *     });
+ * }, function(err, results) {
+ *     // results is now the original array of files sorted by
+ *     // modified date
+ * });
+ *
+ * // By modifying the callback parameter the
+ * // sorting order can be influenced:
+ *
+ * // ascending order
+ * async.sortBy([1,9,3,5], function(x, callback) {
+ *     callback(null, x);
+ * }, function(err,result) {
+ *     // result callback
+ * });
+ *
+ * // descending order
+ * async.sortBy([1,9,3,5], function(x, callback) {
+ *     callback(null, x*-1);    //<- x*-1 instead of x, turns the order around
+ * }, function(err,result) {
+ *     // result callback
+ * });
+ */
+function sortBy (coll, iteratee, callback) {
+    var _iteratee = wrapAsync(iteratee);
+    map(coll, function (x, callback) {
+        _iteratee(x, function (err, criteria) {
+            if (err) return callback(err);
+            callback(null, {value: x, criteria: criteria});
+        });
+    }, function (err, results) {
+        if (err) return callback(err);
+        callback(null, arrayMap(results.sort(comparator), baseProperty('value')));
     });
+
+    function comparator(left, right) {
+        var a = left.criteria, b = right.criteria;
+        return a < b ? -1 : a > b ? 1 : 0;
+    }
+}
+
+/**
+ * Sets a time limit on an asynchronous function. If the function does not call
+ * its callback within the specified milliseconds, it will be called with a
+ * timeout error. The code property for the error object will be `'ETIMEDOUT'`.
+ *
+ * @name timeout
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @category Util
+ * @param {AsyncFunction} asyncFn - The async function to limit in time.
+ * @param {number} milliseconds - The specified time limit.
+ * @param {*} [info] - Any variable you want attached (`string`, `object`, etc)
+ * to timeout Error for more information..
+ * @returns {AsyncFunction} Returns a wrapped function that can be used with any
+ * of the control flow functions.
+ * Invoke this function with the same parameters as you would `asyncFunc`.
+ * @example
+ *
+ * function myFunction(foo, callback) {
+ *     doAsyncTask(foo, function(err, data) {
+ *         // handle errors
+ *         if (err) return callback(err);
+ *
+ *         // do some stuff ...
+ *
+ *         // return processed data
+ *         return callback(null, data);
+ *     });
+ * }
+ *
+ * var wrapped = async.timeout(myFunction, 1000);
+ *
+ * // call `wrapped` as you would `myFunction`
+ * wrapped({ bar: 'bar' }, function(err, data) {
+ *     // if `myFunction` takes < 1000 ms to execute, `err`
+ *     // and `data` will have their expected values
+ *
+ *     // else `err` will be an Error with the code 'ETIMEDOUT'
+ * });
+ */
+function timeout(asyncFn, milliseconds, info) {
+    var fn = wrapAsync(asyncFn);
+
+    return initialParams(function (args, callback) {
+        var timedOut = false;
+        var timer;
+
+        function timeoutCallback() {
+            var name = asyncFn.name || 'anonymous';
+            var error  = new Error('Callback function "' + name + '" timed out.');
+            error.code = 'ETIMEDOUT';
+            if (info) {
+                error.info = info;
+            }
+            timedOut = true;
+            callback(error);
+        }
+
+        args.push(function () {
+            if (!timedOut) {
+                callback.apply(null, arguments);
+                clearTimeout(timer);
+            }
+        });
+
+        // setup timer and call original function
+        timer = setTimeout(timeoutCallback, milliseconds);
+        fn.apply(null, args);
+    });
+}
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeCeil = Math.ceil;
+var nativeMax = Math.max;
+
+/**
+ * The base implementation of `_.range` and `_.rangeRight` which doesn't
+ * coerce arguments.
+ *
+ * @private
+ * @param {number} start The start of the range.
+ * @param {number} end The end of the range.
+ * @param {number} step The value to increment or decrement by.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Array} Returns the range of numbers.
+ */
+function baseRange(start, end, step, fromRight) {
+  var index = -1,
+      length = nativeMax(nativeCeil((end - start) / (step || 1)), 0),
+      result = Array(length);
+
+  while (length--) {
+    result[fromRight ? length : ++index] = start;
+    start += step;
   }
-}.call(this));
+  return result;
+}
 
-},{}]},{},[147]);
+/**
+ * The same as [times]{@link module:ControlFlow.times} but runs a maximum of `limit` async operations at a
+ * time.
+ *
+ * @name timesLimit
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.times]{@link module:ControlFlow.times}
+ * @category Control Flow
+ * @param {number} count - The number of times to run the function.
+ * @param {number} limit - The maximum number of async operations at a time.
+ * @param {AsyncFunction} iteratee - The async function to call `n` times.
+ * Invoked with the iteration index and a callback: (n, next).
+ * @param {Function} callback - see [async.map]{@link module:Collections.map}.
+ */
+function timeLimit(count, limit, iteratee, callback) {
+    var _iteratee = wrapAsync(iteratee);
+    mapLimit(baseRange(0, count, 1), limit, _iteratee, callback);
+}
+
+/**
+ * Calls the `iteratee` function `n` times, and accumulates results in the same
+ * manner you would use with [map]{@link module:Collections.map}.
+ *
+ * @name times
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.map]{@link module:Collections.map}
+ * @category Control Flow
+ * @param {number} n - The number of times to run the function.
+ * @param {AsyncFunction} iteratee - The async function to call `n` times.
+ * Invoked with the iteration index and a callback: (n, next).
+ * @param {Function} callback - see {@link module:Collections.map}.
+ * @example
+ *
+ * // Pretend this is some complicated async factory
+ * var createUser = function(id, callback) {
+ *     callback(null, {
+ *         id: 'user' + id
+ *     });
+ * };
+ *
+ * // generate 5 users
+ * async.times(5, function(n, next) {
+ *     createUser(n, function(err, user) {
+ *         next(err, user);
+ *     });
+ * }, function(err, users) {
+ *     // we should now have 5 users
+ * });
+ */
+var times = doLimit(timeLimit, Infinity);
+
+/**
+ * The same as [times]{@link module:ControlFlow.times} but runs only a single async operation at a time.
+ *
+ * @name timesSeries
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.times]{@link module:ControlFlow.times}
+ * @category Control Flow
+ * @param {number} n - The number of times to run the function.
+ * @param {AsyncFunction} iteratee - The async function to call `n` times.
+ * Invoked with the iteration index and a callback: (n, next).
+ * @param {Function} callback - see {@link module:Collections.map}.
+ */
+var timesSeries = doLimit(timeLimit, 1);
+
+/**
+ * A relative of `reduce`.  Takes an Object or Array, and iterates over each
+ * element in series, each step potentially mutating an `accumulator` value.
+ * The type of the accumulator defaults to the type of collection passed in.
+ *
+ * @name transform
+ * @static
+ * @memberOf module:Collections
+ * @method
+ * @category Collection
+ * @param {Array|Iterable|Object} coll - A collection to iterate over.
+ * @param {*} [accumulator] - The initial state of the transform.  If omitted,
+ * it will default to an empty Object or Array, depending on the type of `coll`
+ * @param {AsyncFunction} iteratee - A function applied to each item in the
+ * collection that potentially modifies the accumulator.
+ * Invoked with (accumulator, item, key, callback).
+ * @param {Function} [callback] - A callback which is called after all the
+ * `iteratee` functions have finished. Result is the transformed accumulator.
+ * Invoked with (err, result).
+ * @example
+ *
+ * async.transform([1,2,3], function(acc, item, index, callback) {
+ *     // pointless async:
+ *     process.nextTick(function() {
+ *         acc.push(item * 2)
+ *         callback(null)
+ *     });
+ * }, function(err, result) {
+ *     // result is now equal to [2, 4, 6]
+ * });
+ *
+ * @example
+ *
+ * async.transform({a: 1, b: 2, c: 3}, function (obj, val, key, callback) {
+ *     setImmediate(function () {
+ *         obj[key] = val * 2;
+ *         callback();
+ *     })
+ * }, function (err, result) {
+ *     // result is equal to {a: 2, b: 4, c: 6}
+ * })
+ */
+function transform (coll, accumulator, iteratee, callback) {
+    if (arguments.length <= 3) {
+        callback = iteratee;
+        iteratee = accumulator;
+        accumulator = isArray(coll) ? [] : {};
+    }
+    callback = once(callback || noop);
+    var _iteratee = wrapAsync(iteratee);
+
+    eachOf(coll, function(v, k, cb) {
+        _iteratee(accumulator, v, k, cb);
+    }, function(err) {
+        callback(err, accumulator);
+    });
+}
+
+/**
+ * It runs each task in series but stops whenever any of the functions were
+ * successful. If one of the tasks were successful, the `callback` will be
+ * passed the result of the successful task. If all tasks fail, the callback
+ * will be passed the error and result (if any) of the final attempt.
+ *
+ * @name tryEach
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {Array|Iterable|Object} tasks - A collection containing functions to
+ * run, each function is passed a `callback(err, result)` it must call on
+ * completion with an error `err` (which can be `null`) and an optional `result`
+ * value.
+ * @param {Function} [callback] - An optional callback which is called when one
+ * of the tasks has succeeded, or all have failed. It receives the `err` and
+ * `result` arguments of the last attempt at completing the `task`. Invoked with
+ * (err, results).
+ * @example
+ * async.try([
+ *     function getDataFromFirstWebsite(callback) {
+ *         // Try getting the data from the first website
+ *         callback(err, data);
+ *     },
+ *     function getDataFromSecondWebsite(callback) {
+ *         // First website failed,
+ *         // Try getting the data from the backup website
+ *         callback(err, data);
+ *     }
+ * ],
+ * // optional callback
+ * function(err, results) {
+ *     Now do something with the data.
+ * });
+ *
+ */
+function tryEach(tasks, callback) {
+    var error = null;
+    var result;
+    callback = callback || noop;
+    eachSeries(tasks, function(task, callback) {
+        wrapAsync(task)(function (err, res/*, ...args*/) {
+            if (arguments.length > 2) {
+                result = slice(arguments, 1);
+            } else {
+                result = res;
+            }
+            error = err;
+            callback(!err);
+        });
+    }, function () {
+        callback(error, result);
+    });
+}
+
+/**
+ * Undoes a [memoize]{@link module:Utils.memoize}d function, reverting it to the original,
+ * unmemoized form. Handy for testing.
+ *
+ * @name unmemoize
+ * @static
+ * @memberOf module:Utils
+ * @method
+ * @see [async.memoize]{@link module:Utils.memoize}
+ * @category Util
+ * @param {AsyncFunction} fn - the memoized function
+ * @returns {AsyncFunction} a function that calls the original unmemoized function
+ */
+function unmemoize(fn) {
+    return function () {
+        return (fn.unmemoized || fn).apply(null, arguments);
+    };
+}
+
+/**
+ * Repeatedly call `iteratee`, while `test` returns `true`. Calls `callback` when
+ * stopped, or an error occurs.
+ *
+ * @name whilst
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {Function} test - synchronous truth test to perform before each
+ * execution of `iteratee`. Invoked with ().
+ * @param {AsyncFunction} iteratee - An async function which is called each time
+ * `test` passes. Invoked with (callback).
+ * @param {Function} [callback] - A callback which is called after the test
+ * function has failed and repeated execution of `iteratee` has stopped. `callback`
+ * will be passed an error and any arguments passed to the final `iteratee`'s
+ * callback. Invoked with (err, [results]);
+ * @returns undefined
+ * @example
+ *
+ * var count = 0;
+ * async.whilst(
+ *     function() { return count < 5; },
+ *     function(callback) {
+ *         count++;
+ *         setTimeout(function() {
+ *             callback(null, count);
+ *         }, 1000);
+ *     },
+ *     function (err, n) {
+ *         // 5 seconds have passed, n = 5
+ *     }
+ * );
+ */
+function whilst(test, iteratee, callback) {
+    callback = onlyOnce(callback || noop);
+    var _iteratee = wrapAsync(iteratee);
+    if (!test()) return callback(null);
+    var next = function(err/*, ...args*/) {
+        if (err) return callback(err);
+        if (test()) return _iteratee(next);
+        var args = slice(arguments, 1);
+        callback.apply(null, [null].concat(args));
+    };
+    _iteratee(next);
+}
+
+/**
+ * Repeatedly call `iteratee` until `test` returns `true`. Calls `callback` when
+ * stopped, or an error occurs. `callback` will be passed an error and any
+ * arguments passed to the final `iteratee`'s callback.
+ *
+ * The inverse of [whilst]{@link module:ControlFlow.whilst}.
+ *
+ * @name until
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @see [async.whilst]{@link module:ControlFlow.whilst}
+ * @category Control Flow
+ * @param {Function} test - synchronous truth test to perform before each
+ * execution of `iteratee`. Invoked with ().
+ * @param {AsyncFunction} iteratee - An async function which is called each time
+ * `test` fails. Invoked with (callback).
+ * @param {Function} [callback] - A callback which is called after the test
+ * function has passed and repeated execution of `iteratee` has stopped. `callback`
+ * will be passed an error and any arguments passed to the final `iteratee`'s
+ * callback. Invoked with (err, [results]);
+ */
+function until(test, iteratee, callback) {
+    whilst(function() {
+        return !test.apply(this, arguments);
+    }, iteratee, callback);
+}
+
+/**
+ * Runs the `tasks` array of functions in series, each passing their results to
+ * the next in the array. However, if any of the `tasks` pass an error to their
+ * own callback, the next function is not executed, and the main `callback` is
+ * immediately called with the error.
+ *
+ * @name waterfall
+ * @static
+ * @memberOf module:ControlFlow
+ * @method
+ * @category Control Flow
+ * @param {Array} tasks - An array of [async functions]{@link AsyncFunction}
+ * to run.
+ * Each function should complete with any number of `result` values.
+ * The `result` values will be passed as arguments, in order, to the next task.
+ * @param {Function} [callback] - An optional callback to run once all the
+ * functions have completed. This will be passed the results of the last task's
+ * callback. Invoked with (err, [results]).
+ * @returns undefined
+ * @example
+ *
+ * async.waterfall([
+ *     function(callback) {
+ *         callback(null, 'one', 'two');
+ *     },
+ *     function(arg1, arg2, callback) {
+ *         // arg1 now equals 'one' and arg2 now equals 'two'
+ *         callback(null, 'three');
+ *     },
+ *     function(arg1, callback) {
+ *         // arg1 now equals 'three'
+ *         callback(null, 'done');
+ *     }
+ * ], function (err, result) {
+ *     // result now equals 'done'
+ * });
+ *
+ * // Or, with named functions:
+ * async.waterfall([
+ *     myFirstFunction,
+ *     mySecondFunction,
+ *     myLastFunction,
+ * ], function (err, result) {
+ *     // result now equals 'done'
+ * });
+ * function myFirstFunction(callback) {
+ *     callback(null, 'one', 'two');
+ * }
+ * function mySecondFunction(arg1, arg2, callback) {
+ *     // arg1 now equals 'one' and arg2 now equals 'two'
+ *     callback(null, 'three');
+ * }
+ * function myLastFunction(arg1, callback) {
+ *     // arg1 now equals 'three'
+ *     callback(null, 'done');
+ * }
+ */
+var waterfall = function(tasks, callback) {
+    callback = once(callback || noop);
+    if (!isArray(tasks)) return callback(new Error('First argument to waterfall must be an array of functions'));
+    if (!tasks.length) return callback();
+    var taskIndex = 0;
+
+    function nextTask(args) {
+        var task = wrapAsync(tasks[taskIndex++]);
+        args.push(onlyOnce(next));
+        task.apply(null, args);
+    }
+
+    function next(err/*, ...args*/) {
+        if (err || taskIndex === tasks.length) {
+            return callback.apply(null, arguments);
+        }
+        nextTask(slice(arguments, 1));
+    }
+
+    nextTask([]);
+};
+
+/**
+ * An "async function" in the context of Async is an asynchronous function with
+ * a variable number of parameters, with the final parameter being a callback.
+ * (`function (arg1, arg2, ..., callback) {}`)
+ * The final callback is of the form `callback(err, results...)`, which must be
+ * called once the function is completed.  The callback should be called with a
+ * Error as its first argument to signal that an error occurred.
+ * Otherwise, if no error occurred, it should be called with `null` as the first
+ * argument, and any additional `result` arguments that may apply, to signal
+ * successful completion.
+ * The callback must be called exactly once, ideally on a later tick of the
+ * JavaScript event loop.
+ *
+ * This type of function is also referred to as a "Node-style async function",
+ * or a "continuation passing-style function" (CPS). Most of the methods of this
+ * library are themselves CPS/Node-style async functions, or functions that
+ * return CPS/Node-style async functions.
+ *
+ * Wherever we accept a Node-style async function, we also directly accept an
+ * [ES2017 `async` function]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function}.
+ * In this case, the `async` function will not be passed a final callback
+ * argument, and any thrown error will be used as the `err` argument of the
+ * implicit callback, and the return value will be used as the `result` value.
+ * (i.e. a `rejected` of the returned Promise becomes the `err` callback
+ * argument, and a `resolved` value becomes the `result`.)
+ *
+ * Note, due to JavaScript limitations, we can only detect native `async`
+ * functions and not transpilied implementations.
+ * Your environment must have `async`/`await` support for this to work.
+ * (e.g. Node > v7.6, or a recent version of a modern browser).
+ * If you are using `async` functions through a transpiler (e.g. Babel), you
+ * must still wrap the function with [asyncify]{@link module:Utils.asyncify},
+ * because the `async function` will be compiled to an ordinary function that
+ * returns a promise.
+ *
+ * @typedef {Function} AsyncFunction
+ * @static
+ */
+
+/**
+ * Async is a utility module which provides straight-forward, powerful functions
+ * for working with asynchronous JavaScript. Although originally designed for
+ * use with [Node.js](http://nodejs.org) and installable via
+ * `npm install --save async`, it can also be used directly in the browser.
+ * @module async
+ * @see AsyncFunction
+ */
+
+
+/**
+ * A collection of `async` functions for manipulating collections, such as
+ * arrays and objects.
+ * @module Collections
+ */
+
+/**
+ * A collection of `async` functions for controlling the flow through a script.
+ * @module ControlFlow
+ */
+
+/**
+ * A collection of `async` utility functions.
+ * @module Utils
+ */
+
+var index = {
+    applyEach: applyEach,
+    applyEachSeries: applyEachSeries,
+    apply: apply,
+    asyncify: asyncify,
+    auto: auto,
+    autoInject: autoInject,
+    cargo: cargo,
+    compose: compose,
+    concat: concat,
+    concatSeries: concatSeries,
+    constant: constant,
+    detect: detect,
+    detectLimit: detectLimit,
+    detectSeries: detectSeries,
+    dir: dir,
+    doDuring: doDuring,
+    doUntil: doUntil,
+    doWhilst: doWhilst,
+    during: during,
+    each: eachLimit,
+    eachLimit: eachLimit$1,
+    eachOf: eachOf,
+    eachOfLimit: eachOfLimit,
+    eachOfSeries: eachOfSeries,
+    eachSeries: eachSeries,
+    ensureAsync: ensureAsync,
+    every: every,
+    everyLimit: everyLimit,
+    everySeries: everySeries,
+    filter: filter,
+    filterLimit: filterLimit,
+    filterSeries: filterSeries,
+    forever: forever,
+    groupBy: groupBy,
+    groupByLimit: groupByLimit,
+    groupBySeries: groupBySeries,
+    log: log,
+    map: map,
+    mapLimit: mapLimit,
+    mapSeries: mapSeries,
+    mapValues: mapValues,
+    mapValuesLimit: mapValuesLimit,
+    mapValuesSeries: mapValuesSeries,
+    memoize: memoize,
+    nextTick: nextTick,
+    parallel: parallelLimit,
+    parallelLimit: parallelLimit$1,
+    priorityQueue: priorityQueue,
+    queue: queue$1,
+    race: race,
+    reduce: reduce,
+    reduceRight: reduceRight,
+    reflect: reflect,
+    reflectAll: reflectAll,
+    reject: reject,
+    rejectLimit: rejectLimit,
+    rejectSeries: rejectSeries,
+    retry: retry,
+    retryable: retryable,
+    seq: seq,
+    series: series,
+    setImmediate: setImmediate$1,
+    some: some,
+    someLimit: someLimit,
+    someSeries: someSeries,
+    sortBy: sortBy,
+    timeout: timeout,
+    times: times,
+    timesLimit: timeLimit,
+    timesSeries: timesSeries,
+    transform: transform,
+    tryEach: tryEach,
+    unmemoize: unmemoize,
+    until: until,
+    waterfall: waterfall,
+    whilst: whilst,
+
+    // aliases
+    all: every,
+    any: some,
+    forEach: eachLimit,
+    forEachSeries: eachSeries,
+    forEachLimit: eachLimit$1,
+    forEachOf: eachOf,
+    forEachOfSeries: eachOfSeries,
+    forEachOfLimit: eachOfLimit,
+    inject: reduce,
+    foldl: reduce,
+    foldr: reduceRight,
+    select: filter,
+    selectLimit: filterLimit,
+    selectSeries: filterSeries,
+    wrapSync: asyncify
+};
+
+exports['default'] = index;
+exports.applyEach = applyEach;
+exports.applyEachSeries = applyEachSeries;
+exports.apply = apply;
+exports.asyncify = asyncify;
+exports.auto = auto;
+exports.autoInject = autoInject;
+exports.cargo = cargo;
+exports.compose = compose;
+exports.concat = concat;
+exports.concatSeries = concatSeries;
+exports.constant = constant;
+exports.detect = detect;
+exports.detectLimit = detectLimit;
+exports.detectSeries = detectSeries;
+exports.dir = dir;
+exports.doDuring = doDuring;
+exports.doUntil = doUntil;
+exports.doWhilst = doWhilst;
+exports.during = during;
+exports.each = eachLimit;
+exports.eachLimit = eachLimit$1;
+exports.eachOf = eachOf;
+exports.eachOfLimit = eachOfLimit;
+exports.eachOfSeries = eachOfSeries;
+exports.eachSeries = eachSeries;
+exports.ensureAsync = ensureAsync;
+exports.every = every;
+exports.everyLimit = everyLimit;
+exports.everySeries = everySeries;
+exports.filter = filter;
+exports.filterLimit = filterLimit;
+exports.filterSeries = filterSeries;
+exports.forever = forever;
+exports.groupBy = groupBy;
+exports.groupByLimit = groupByLimit;
+exports.groupBySeries = groupBySeries;
+exports.log = log;
+exports.map = map;
+exports.mapLimit = mapLimit;
+exports.mapSeries = mapSeries;
+exports.mapValues = mapValues;
+exports.mapValuesLimit = mapValuesLimit;
+exports.mapValuesSeries = mapValuesSeries;
+exports.memoize = memoize;
+exports.nextTick = nextTick;
+exports.parallel = parallelLimit;
+exports.parallelLimit = parallelLimit$1;
+exports.priorityQueue = priorityQueue;
+exports.queue = queue$1;
+exports.race = race;
+exports.reduce = reduce;
+exports.reduceRight = reduceRight;
+exports.reflect = reflect;
+exports.reflectAll = reflectAll;
+exports.reject = reject;
+exports.rejectLimit = rejectLimit;
+exports.rejectSeries = rejectSeries;
+exports.retry = retry;
+exports.retryable = retryable;
+exports.seq = seq;
+exports.series = series;
+exports.setImmediate = setImmediate$1;
+exports.some = some;
+exports.someLimit = someLimit;
+exports.someSeries = someSeries;
+exports.sortBy = sortBy;
+exports.timeout = timeout;
+exports.times = times;
+exports.timesLimit = timeLimit;
+exports.timesSeries = timesSeries;
+exports.transform = transform;
+exports.tryEach = tryEach;
+exports.unmemoize = unmemoize;
+exports.until = until;
+exports.waterfall = waterfall;
+exports.whilst = whilst;
+exports.all = every;
+exports.allLimit = everyLimit;
+exports.allSeries = everySeries;
+exports.any = some;
+exports.anyLimit = someLimit;
+exports.anySeries = someSeries;
+exports.find = detect;
+exports.findLimit = detectLimit;
+exports.findSeries = detectSeries;
+exports.forEach = eachLimit;
+exports.forEachSeries = eachSeries;
+exports.forEachLimit = eachLimit$1;
+exports.forEachOf = eachOf;
+exports.forEachOfSeries = eachOfSeries;
+exports.forEachOfLimit = eachOfLimit;
+exports.inject = reduce;
+exports.foldl = reduce;
+exports.foldr = reduceRight;
+exports.select = filter;
+exports.selectLimit = filterLimit;
+exports.selectSeries = filterSeries;
+exports.wrapSync = asyncify;
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"_process":114}]},{},[276]);
